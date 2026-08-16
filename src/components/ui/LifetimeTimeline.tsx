@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Card } from './Card';
 import { Compass, Sparkles, Award, Network, TrendingUp, RefreshCw } from 'lucide-react';
