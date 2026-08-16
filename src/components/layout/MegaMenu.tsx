@@ -1,0 +1,83 @@
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { MegaMenuSection } from '@/lib/navigation';
+import { Button } from '@/components/ui/Button';
+import { ArrowRight } from 'lucide-react';
+
+interface MegaMenuProps {
+  section: MegaMenuSection;
+  onClose: () => void;
+}
+
+export function MegaMenu({ section, onClose }: MegaMenuProps) {
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
+  return (
+    <div
+      ref={menuRef}
+      className="mega-menu animate-in fade-in slide-in-from-top-1 duration-150"
+      role="region"
+      aria-label={`${section.label} Submenu`}
+    >
+      <div className="container-site">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
+          {section.groups.map((group) => (
+            <div key={group.label} className="space-y-4">
+              <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] border-b border-[var(--color-border-default)] pb-2">
+                {group.label}
+              </h4>
+              <ul className="space-y-2.5">
+                {group.items.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={onClose}
+                      className="group block p-2 -mx-2 rounded-lg hover:bg-[var(--color-surface-interactive)] transition-colors"
+                    >
+                      <div className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-brand-600)] dark:group-hover:text-[var(--color-brand-400)] transition-colors flex items-center justify-between">
+                        <span>{item.label}</span>
+                        <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0.5 transition-all text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)]" />
+                      </div>
+                      {item.description && (
+                        <p className="text-xs text-[var(--color-text-tertiary)] line-clamp-1 mt-0.5">
+                          {item.description}
+                        </p>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {section.cta && (
+          <div className="pt-4 border-t border-[var(--color-border-default)] flex items-center justify-between">
+            <span className="text-xs text-[var(--color-text-tertiary)]">
+              Infrastructure designed for lifelong career mobility.
+            </span>
+            <Link
+              href={section.cta.href}
+              onClick={onClose}
+              className="inline-flex items-center justify-center px-3 py-1.5 text-xs font-medium rounded-md gap-1.5 bg-[var(--color-brand-600)] text-white hover:bg-[var(--color-brand-700)] transition-colors"
+            >
+              {section.cta.label}
+            </Link>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
