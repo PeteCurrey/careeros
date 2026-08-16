@@ -1,136 +1,136 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Building2, Cpu, CheckCircle, ShieldAlert, Users, ArrowRight } from 'lucide-react';
+import { MEDIA_ASSETS } from '@/lib/media';
+import { Building2, ShieldCheck, Users, Sparkles, CheckCircle2, ArrowRight, Award } from 'lucide-react';
 
 export default function ForEmployersPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Enterprise & Talent Leaders
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Intelligent talent discovery. Not a vacancy board.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Replace the broken paradigm of keyword-filtered résumé piles with verified evidence matching and explainable Employer Agent intelligence. Designed from first principles around candidate dignity, transparency, and human accountability.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="md">
-              Become a Launch Employer
-            </Button>
-            <Button href={ROUTES.PRODUCT_EMPLOYER_AGENT} variant="secondary" size="md">
-              Explore Employer Agent
-            </Button>
+    <div className="flex flex-col w-full">
+      {/* Hero Section */}
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-6 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs font-mono font-bold text-[var(--color-brand-600)]">
+                <Building2 className="w-3.5 h-3.5" /> EMPLOYERS & HIRING TEAMS
+              </div>
+
+              <h1 className="text-display-section text-[var(--color-text-primary)]">
+                Find people by potential, evidence and fit — not just keywords on a résumé.
+              </h1>
+
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Move beyond flat CV screening and keyword algorithms. Discover candidate capability through verified project evidence, demonstrable competency, and explainable decision support.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="lg" className="shadow-card">
+                  Become a Launch Employer <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button href={ROUTES.PRODUCT_EMPLOYER_AGENT} variant="secondary" size="lg">
+                  Employer Agent Vision
+                </Button>
+              </div>
+
+              <div className="pt-4 flex items-center gap-6 text-xs text-[var(--color-text-tertiary)] font-medium">
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[var(--color-brand-600)]" /> NYC LL144 & EU AI Act Aligned
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-verified)]" /> Human in the loop
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 relative">
+              <div className="rounded-3xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial aspect-16/10 relative">
+                <Image
+                  src={MEDIA_ASSETS.audiences.employers.src}
+                  alt={MEDIA_ASSETS.audiences.employers.alt}
+                  width={MEDIA_ASSETS.audiences.employers.width}
+                  height={MEDIA_ASSETS.audiences.employers.height}
+                  priority
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
+      </section>
 
-        {/* The Model Shift */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="p-8 space-y-4 border-l-4 border-l-[var(--color-brand-600)]">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              The Future: Agent ↔ Agent Discovery
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Instead of posting generic vacancies and receiving hundreds of hallucinated résumés, Employer Agents coordinate with candidate Career Agents to evaluate verified capability, genuine alignment, and mutual parameters before human conversations begin.
+      {/* 3 Pillars of Responsible Hiring */}
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide space-y-12">
+          <div className="max-w-3xl space-y-3">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              Intelligent matching anchored in verified competency.
+            </h2>
+            <p className="text-body-editorial text-[var(--color-text-secondary)]">
+              Keyword matching rejects non-traditional high-potential talent. Career OS evaluates demonstrated evidence and verified capability bridges.
             </p>
-            <ul className="space-y-2 text-xs text-[var(--color-text-secondary)] pt-2">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[var(--color-success)]" />
-                <span>Verified skills backed by authentic project evidence</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[var(--color-success)]" />
-                <span>Explainable matching rationale with clear decision factors</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[var(--color-success)]" />
-                <span>Respectful candidate engagement with zero ghosting</span>
-              </li>
-            </ul>
-          </Card>
+          </div>
 
-          <Card className="p-8 space-y-4 border-l-4 border-l-[var(--color-border-strong)]">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Responsible AI Non-Negotiables
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              We reject black-box autonomous hiring. In employment workflows, Career OS AI systems are strictly scoped to discovery, matching, and recommendation support. All final hiring decisions remain with human recruiters and hiring managers.
-            </p>
-            <ul className="space-y-2 text-xs text-[var(--color-text-secondary)] pt-2">
-              <li className="flex items-center gap-2">
-                <ShieldAlert className="w-4 h-4 text-[var(--color-brand-600)]" />
-                <span>No automated rejection algorithms without human review</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <ShieldAlert className="w-4 h-4 text-[var(--color-brand-600)]" />
-                <span>NYC Local Law 144 and EEOC alignment readiness</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <ShieldAlert className="w-4 h-4 text-[var(--color-brand-600)]" />
-                <span>Full audit provenance recorded for every matching event</span>
-              </li>
-            </ul>
-          </Card>
-        </div>
-
-        {/* Talent Discovery Modules */}
-        <div className="border-t border-[var(--color-border-default)] pt-12">
-          <SectionHeading
-            eyebrow="Capabilities"
-            heading="Modern talent intelligence for progressive organisations."
-            description="Build diverse, capable teams across early-career apprenticeships, university graduates, and seasoned lateral specialists."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-            <div className="p-6 rounded-lg bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <h4 className="font-bold text-sm text-[var(--color-text-primary)]">
-                Early Careers & Apprenticeships
-              </h4>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Verified Evidence Review
+              </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Connect directly with high-potential students from diverse educational pathways before traditional graduation cycles.
+                Review candidate credentials, verified project deliverables, and authentic apprenticeship certifications without guessing whether bullet points are exaggerated.
               </p>
             </div>
-            <div className="p-6 rounded-lg bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <h4 className="font-bold text-sm text-[var(--color-text-primary)]">
-                Evidence-Based Lateral Hiring
-              </h4>
+
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Explainable Decision Support
+              </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Evaluate professionals through their verified Career Passport credentials and capstone work rather than pedigree filters.
+                Employer Agent provides transparent alignment factors and capability overlap analysis, strictly preserving human agency in every final hiring decision.
               </p>
             </div>
-            <div className="p-6 rounded-lg bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <h4 className="font-bold text-sm text-[var(--color-text-primary)]">
-                Employer Workspace Governance
-              </h4>
+
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Users className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Early-Career & Non-Traditional Talent
+              </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Role-based access controls for recruiting teams, hiring managers, and HR compliance officers with audit logging.
+                Directly discover high-aptitude graduates, trade apprentices, and career switchers whose genuine capabilities are overlooked by legacy ATS software.
               </p>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* CTA */}
-        <Card className="p-8 sm:p-12 bg-[var(--color-surface-sunken)] border-[var(--color-border-default)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-xl">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Partner with Career OS as a launch employer
+      {/* Become a Launch Employer Partner Banner */}
+      <section className="section-editorial bg-[var(--color-neutral-950)] text-white">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-2 max-w-2xl">
+            <h3 className="text-2xl font-bold text-white">
+              Become a Career OS Launch Employer
             </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Join leading organisations testing the next generation of evidence-based talent discovery.
+            <p className="text-sm text-white/70">
+              Work with us to establish responsible, evidence-based talent pipelines for your organization.
             </p>
           </div>
-          <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="md">
-            Talk to Our Enterprise Team <ArrowRight className="w-4 h-4 ml-1.5" />
+          <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="lg" className="bg-white text-[var(--color-neutral-950)] hover:bg-white/90 font-bold shrink-0">
+            Enquire About Launch Program <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-        </Card>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

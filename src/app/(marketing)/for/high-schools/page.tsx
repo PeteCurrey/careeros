@@ -1,121 +1,136 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { School, ShieldCheck, Award, Users, BookOpen, Lock, ArrowRight } from 'lucide-react';
+import { MEDIA_ASSETS } from '@/lib/media';
+import { School, ShieldCheck, Compass, Users, CheckCircle2, ArrowRight, BookOpen } from 'lucide-react';
 
 export default function ForHighSchoolsPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Header */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Educational Institutions & Districts
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            High Schools: Equal pathways, student safety, and lifelong readiness.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Give every young person access to high-quality personalised career development while enabling schools and districts to understand student engagement, pathway readiness, and long-term outcomes without compromising privacy.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="md">
-              Become a Launch School
-            </Button>
-            <Button href={ROUTES.TRUST_SAFEGUARDING} variant="secondary" size="md">
-              Student Safety Architecture
-            </Button>
+    <div className="flex flex-col w-full">
+      {/* Hero Section */}
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-6 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs font-mono font-bold text-[var(--color-brand-600)]">
+                <School className="w-3.5 h-3.5" /> HIGH SCHOOLS & DISTRICTS
+              </div>
+
+              <h1 className="text-display-section text-[var(--color-text-primary)]">
+                Personalised career development for every student.
+              </h1>
+
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Empower career counsellors, support college, trade, and apprenticeship pathways with equal prestige, and protect minors under strict FERPA, COPPA, and state student safeguarding standards.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="lg" className="shadow-card">
+                  Become a Launch School <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button href={ROUTES.TRUST_SAFEGUARDING} variant="secondary" size="lg">
+                  Student Safeguarding
+                </Button>
+              </div>
+
+              <div className="pt-4 flex items-center gap-6 text-xs text-[var(--color-text-tertiary)] font-medium">
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[var(--color-brand-600)]" /> FERPA & COPPA Aligned
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-verified)]" /> Zero 3rd-party advertising
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 relative">
+              <div className="rounded-3xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial aspect-16/10 relative">
+                <Image
+                  src={MEDIA_ASSETS.audiences.schools.src}
+                  alt={MEDIA_ASSETS.audiences.schools.alt}
+                  width={MEDIA_ASSETS.audiences.schools.width}
+                  height={MEDIA_ASSETS.audiences.schools.height}
+                  priority
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
+      </section>
 
-        {/* Pathway Parity Pillar */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Award className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Non-Hierarchical Pathways
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              University is not positioned as the sole definition of success. Career OS provides equal standing, discovery, and capability tracking for 4-year degrees, community colleges, vocational routes, registered apprenticeships, technical trades, direct employment, and entrepreneurship.
+      {/* 3 Pillars of School Partnerships */}
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide space-y-12">
+          <div className="max-w-3xl space-y-3">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              Equitable guidance at institutional scale.
+            </h2>
+            <p className="text-body-editorial text-[var(--color-text-secondary)]">
+              School counsellors face student-to-counsellor ratios exceeding 400:1. Career OS provides high-fidelity, unbiased mentoring that amplifies educator impact.
             </p>
-          </Card>
+          </div>
 
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Safeguarding & Minor Controls
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Engineered with FERPA and COPPA principles at the core. Full support for age bands, institutional consent workflows, parent/guardian relationships, and strict student visibility restrictions preventing unsolicited commercial access.
-            </p>
-          </Card>
-
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Users className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Counsellor & District Intelligence
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Amplify career counsellors with actionable cohort insights, pathway distribution analysis, and readiness indicators, eliminating administrative friction so educators can focus on meaningful 1-on-1 human guidance.
-            </p>
-          </Card>
-        </div>
-
-        {/* Institutional Features */}
-        <div className="border-t border-[var(--color-border-default)] pt-12">
-          <SectionHeading
-            eyebrow="Capabilities"
-            heading="Designed for educators, administrators, and student success."
-            description="Career OS provides educational institutions with modern infrastructure that stays with students as they transition into higher education or the workforce."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-            <div className="space-y-4">
-              <h4 className="text-base font-bold text-[var(--color-text-primary)] flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-[var(--color-brand-600)]" />
-                Curricular & Project Evidence
-              </h4>
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                Students translate coursework, technical certifications, and capstone projects into verifiable evidence records in their portable Career Passport, replacing self-reported bullet points with tangible demonstrations of skill.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Compass className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Equal Pathway Parity
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Provide comprehensive, un-siloed discovery across university, technical trades, apprenticeships, and community college without steering students into one predetermined route.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-base font-bold text-[var(--color-text-primary)] flex items-center gap-2">
-                <Lock className="w-4 h-4 text-[var(--color-brand-600)]" />
-                Institutional Data Sovereignty
-              </h4>
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                Schools retain full administrative governance over institutional workspaces. Student data is never commingled with advertising networks or monetized without consent.
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Minor Safeguarding & Privacy
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Zero behavioral ad targeting. Full parental / guardian consent controls for students under age thresholds. Strict isolation of student records.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Users className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Permanent Asset for Alumni
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Unlike district software that students lose on graduation day, Career OS transitions seamlessly with them into higher education, apprenticeships, and employment.
               </p>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* CTA Card */}
-        <Card className="p-8 sm:p-12 bg-[var(--color-surface-sunken)] border-[var(--color-border-default)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-xl">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Partner with Career OS as a launch school
+      {/* Become a Launch School Partner Banner */}
+      <section className="section-editorial bg-[var(--color-neutral-950)] text-white">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-2 max-w-2xl">
+            <h3 className="text-2xl font-bold text-white">
+              Become a Career OS Launch School
             </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              We are working closely with pioneering school districts to deploy next-generation career infrastructure.
+            <p className="text-sm text-white/70">
+              Partner with our team to shape modern, equitable career infrastructure for your high school, academy, or district.
             </p>
           </div>
-          <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="md">
-            Talk to Our Education Team <ArrowRight className="w-4 h-4 ml-1.5" />
+          <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="lg" className="bg-white text-[var(--color-neutral-950)] hover:bg-white/90 font-bold shrink-0">
+            Enquire About Partnership <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-        </Card>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

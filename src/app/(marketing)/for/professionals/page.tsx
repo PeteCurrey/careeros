@@ -1,118 +1,136 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Briefcase, TrendingUp, RefreshCw, Globe, Shield, ArrowRight } from 'lucide-react';
+import { MEDIA_ASSETS } from '@/lib/media';
+import { Briefcase, TrendingUp, RefreshCw, Compass, ShieldCheck, ArrowRight, CheckCircle2, Award } from 'lucide-react';
 
 export default function ForProfessionalsPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Professionals & Leaders
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            A strategic operating system for your entire working life.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Career OS is not a product you only visit during sudden job searches. It is personal infrastructure for continuous skill compounding, compensation progression, lateral industry pivots, leadership growth, and international mobility.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.SIGNUP} variant="primary" size="md">
-              Start Free Account
-            </Button>
-            <Button href={ROUTES.PRODUCT_CAREER_TWIN} variant="secondary" size="md">
-              Explore Career Twin
-            </Button>
+    <div className="flex flex-col w-full">
+      {/* Hero Section */}
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-6 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs font-mono font-bold text-[var(--color-brand-600)]">
+                <Briefcase className="w-3.5 h-3.5" /> PROFESSIONALS & LEADERS
+              </div>
+
+              <h1 className="text-display-section text-[var(--color-text-primary)]">
+                Your next role is only one part of your career.
+              </h1>
+
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Compound your capability, execute strategic lateral industry pivots, benchmark market compensation, or prepare for entrepreneurship and global mobility with your complete professional foundation.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="shadow-card">
+                  Start Your Career OS <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button href={ROUTES.PRODUCT_AI_CAREER_MENTOR} variant="secondary" size="lg">
+                  Explore Career Mentor
+                </Button>
+              </div>
+
+              <div className="pt-4 flex items-center gap-6 text-xs text-[var(--color-text-tertiary)] font-medium">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-verified)]" /> Private & Autonomous
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[var(--color-brand-600)]" /> Zero employer discovery leaks
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 relative">
+              <div className="rounded-3xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial aspect-16/10 relative">
+                <Image
+                  src={MEDIA_ASSETS.audiences.professionals.src}
+                  alt={MEDIA_ASSETS.audiences.professionals.alt}
+                  width={MEDIA_ASSETS.audiences.professionals.width}
+                  height={MEDIA_ASSETS.audiences.professionals.height}
+                  priority
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
+      </section>
 
-        {/* Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <TrendingUp className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Progression & Compensation Intelligence
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Track skill accumulation, market benchmark alignment, and leadership development. Understand what capabilities drive promotion and compensation growth in your field without opaque corporate guesswork.
+      {/* 3 Pillars of Professional Advancement */}
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide space-y-12">
+          <div className="max-w-3xl space-y-3">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              Strategic career compounding over decades.
+            </h2>
+            <p className="text-body-editorial text-[var(--color-text-secondary)]">
+              Traditional employment is transactional. Career OS is compounding professional capital that stays under your control across every company transition.
             </p>
-          </Card>
+          </div>
 
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <RefreshCw className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Strategic Industry Pivots
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Pivoting sectors should not mean starting from zero. Your Career Graph highlights transferable capabilities, identifies adjacent domains, and charts the bridge required to execute credible lateral moves.
-            </p>
-          </Card>
-
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Globe className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              International Mobility & Venture Building
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Prepare for global relocation with multi-jurisdiction qualification mappings, or leverage your Career Twin to assemble co-founders, advisors, and capabilities for entrepreneurial ventures.
-            </p>
-          </Card>
-        </div>
-
-        {/* Granular Control */}
-        <div className="border-t border-[var(--color-border-default)] pt-12">
-          <SectionHeading
-            eyebrow="Privacy & Independence"
-            heading="You own your career data. Never your employer."
-            description="Your Career Twin and Career Passport belong strictly to you. Granular access controls ensure your current employer, prospective recruiters, and network only ever see what you explicitly choose to disclose."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-            <div className="space-y-3">
-              <h4 className="text-base font-bold text-[var(--color-text-primary)]">
-                Field-Level Visibility Control
-              </h4>
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                Configure separate access permissions for your system mentor, direct connections, verified prospective employers, or public credentials ledger. Revoke access grants at any time.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <TrendingUp className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Next Move Strategic Advisory
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Benchmark capability requirements against actual market expectations. Receive targeted advisory on closing gaps before applying for executive or staff-level promotions.
               </p>
             </div>
-            <div className="space-y-3">
-              <h4 className="text-base font-bold text-[var(--color-text-primary)]">
-                Redundancy & Re-entry Resilience
-              </h4>
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                If corporate restructuring occurs, your career foundation remains fully intact. You maintain an uncompromised record of your verified achievements, artifacts, and network connections.
+
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <RefreshCw className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Lateral Pivots & Reinvention
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Transition across industries with confidence. The Career Graph maps transferable competencies so you don&apos;t start from scratch when pivoting into new sectors.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Autonomous Opportunity Agent
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Set private compensation, culture, and alignment parameters. Let high-trust opportunities reach you directly without broadcasting your search publicly.
               </p>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* CTA */}
-        <Card className="p-8 sm:p-12 bg-[var(--color-surface-sunken)] border-[var(--color-border-default)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-xl">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Take ownership of your career operating system
+      {/* Final Action Banner */}
+      <section className="section-editorial bg-[var(--color-neutral-950)] text-white">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-2 max-w-2xl">
+            <h3 className="text-2xl font-bold text-white">
+              Take complete control of your professional trajectory.
             </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Free forever for individuals. Serious infrastructure designed to compound over your entire professional life.
+            <p className="text-sm text-white/70">
+              Free forever for individual professionals. Own your evidence, credentials, and career intelligence.
             </p>
           </div>
-          <Button href={ROUTES.SIGNUP} variant="primary" size="md">
-            Start Your Career OS (Free) <ArrowRight className="w-4 h-4 ml-1.5" />
+          <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="bg-white text-[var(--color-neutral-950)] hover:bg-white/90 font-bold shrink-0">
+            Start Free Account <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-        </Card>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

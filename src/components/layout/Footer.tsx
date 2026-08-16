@@ -6,22 +6,22 @@ import { ROUTES } from '@/lib/routes';
 export function Footer() {
   return (
     <footer className="bg-[var(--color-surface-sunken)] border-t border-[var(--color-border-default)] pt-16 pb-12 transition-colors">
-      <div className="container-site">
+      <div className="container-wide">
         {/* Brand Top Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-[var(--color-border-default)]">
           <div className="lg:col-span-4 space-y-4">
             <Link href={ROUTES.HOME} className="flex items-center gap-2.5 font-bold text-lg text-[var(--color-text-primary)]">
-              <div className="w-7 h-7 rounded-md bg-[var(--color-brand-600)] flex items-center justify-center text-white text-xs font-mono font-bold">
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-brand-600)] flex items-center justify-center text-white text-xs font-mono font-bold shadow-xs">
                 OS
               </div>
-              <span>Career OS</span>
+              <span className="font-extrabold text-xl">Career OS</span>
             </Link>
             <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-sm">
               The operating system for your working life. Free for individuals, built on verified evidence, privacy-first architecture, and explainable decision support.
             </p>
             <div className="pt-2">
-              <span className="inline-flex items-center text-xs px-2.5 py-1 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-[var(--color-text-tertiary)] font-mono">
-                Jurisdiction: United States (Launch Architecture)
+              <span className="inline-flex items-center text-xs px-3 py-1 rounded-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-[var(--color-text-tertiary)] font-mono">
+                Jurisdiction: United States (Global Portability Architecture)
               </span>
             </div>
           </div>
@@ -75,7 +75,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-[var(--color-text-tertiary)] gap-4">
           <p>
-            &copy; {new Date().getFullYear()} Career OS Inc. All rights reserved. Platform architecture designed for global portability.
+            &copy; {new Date().getFullYear()} Career OS Inc. All rights reserved. Built as universal professional infrastructure.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <Link href={ROUTES.LEGAL_PRIVACY} className="hover:text-[var(--color-text-primary)] transition-colors">

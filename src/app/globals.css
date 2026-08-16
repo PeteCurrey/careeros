@@ -1,118 +1,119 @@
 @import "tailwindcss";
 
 /* ============================================================
-   CAREER OS DESIGN TOKENS
+   CAREER OS DESIGN SYSTEM TOKENS (2026 Editorial Reset)
    
-   Brand Philosophy: Serious professional infrastructure.
-   Premium, sophisticated, human — not neon AI startup.
-   One primary brand accent. Semantic colour tokens.
+   Aesthetic: Premium consumer tech + modern editorial publication
+   + serious professional infrastructure.
+   Light, warm, human-first, visually grounded.
    ============================================================ */
 
 @theme {
   /* --- Typography --- */
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
-  /* --- Brand Palette --- */
-  /* Primary brand accent: a precise, distinctive indigo-blue */
-  /* Not generic cyan. Not neon. Authoritative and distinctive. */
-  --color-brand-50: oklch(97% 0.02 255);
-  --color-brand-100: oklch(93% 0.05 255);
-  --color-brand-200: oklch(86% 0.10 255);
-  --color-brand-300: oklch(76% 0.15 255);
-  --color-brand-400: oklch(65% 0.20 255);
+  /* --- Brand Accent (Authoritative Cobalt / Deep Indigo) --- */
+  --color-brand-50: oklch(98% 0.015 255);
+  --color-brand-100: oklch(94% 0.04 255);
+  --color-brand-200: oklch(88% 0.08 255);
+  --color-brand-300: oklch(78% 0.14 255);
+  --color-brand-400: oklch(66% 0.19 255);
   --color-brand-500: oklch(55% 0.24 255);
-  --color-brand-600: oklch(48% 0.26 255);
-  --color-brand-700: oklch(41% 0.24 255);
-  --color-brand-800: oklch(33% 0.20 255);
-  --color-brand-900: oklch(25% 0.15 255);
-  --color-brand-950: oklch(17% 0.10 255);
+  --color-brand-600: oklch(47% 0.25 255);
+  --color-brand-700: oklch(40% 0.22 255);
+  --color-brand-800: oklch(32% 0.18 255);
+  --color-brand-900: oklch(24% 0.14 255);
+  --color-brand-950: oklch(16% 0.09 255);
 
-  /* --- Neutral Palette (Slate-based, cool) --- */
-  --color-neutral-50: oklch(98.5% 0.003 264);
-  --color-neutral-100: oklch(96% 0.005 264);
-  --color-neutral-200: oklch(92% 0.008 264);
-  --color-neutral-300: oklch(86% 0.012 264);
-  --color-neutral-400: oklch(70% 0.018 264);
-  --color-neutral-500: oklch(55% 0.022 264);
-  --color-neutral-600: oklch(44% 0.020 264);
-  --color-neutral-700: oklch(36% 0.018 264);
-  --color-neutral-800: oklch(27% 0.014 264);
-  --color-neutral-900: oklch(20% 0.010 264);
-  --color-neutral-950: oklch(13% 0.007 264);
+  /* --- Warm Human Neutrals (Stone / Off-white / Charcoal) --- */
+  --color-neutral-25: oklch(99.4% 0.003 85);
+  --color-neutral-50: oklch(98.5% 0.004 85);
+  --color-neutral-100: oklch(96.2% 0.006 85);
+  --color-neutral-200: oklch(91.8% 0.008 85);
+  --color-neutral-300: oklch(86.5% 0.012 85);
+  --color-neutral-400: oklch(70% 0.016 85);
+  --color-neutral-500: oklch(54% 0.018 85);
+  --color-neutral-600: oklch(42% 0.016 85);
+  --color-neutral-700: oklch(32% 0.014 85);
+  --color-neutral-800: oklch(22% 0.012 85);
+  --color-neutral-900: oklch(15% 0.010 85);
+  --color-neutral-950: oklch(11% 0.008 85);
 
-  /* --- Semantic Tokens --- */
-  --color-success: oklch(55% 0.18 155);
-  --color-success-light: oklch(92% 0.06 155);
-  --color-verified: oklch(52% 0.20 155);
-  --color-verified-light: oklch(93% 0.06 155);
-  --color-warning: oklch(72% 0.18 75);
-  --color-warning-light: oklch(95% 0.06 75);
+  /* --- Semantic Accents --- */
+  --color-success: oklch(54% 0.17 155);
+  --color-success-light: oklch(95% 0.05 155);
+  --color-verified: oklch(50% 0.19 155);
+  --color-verified-light: oklch(94% 0.05 155);
+  --color-warning: oklch(70% 0.17 75);
+  --color-warning-light: oklch(96% 0.05 75);
   --color-danger: oklch(55% 0.22 25);
-  --color-danger-light: oklch(94% 0.06 25);
-  --color-info: oklch(58% 0.20 225);
-  --color-info-light: oklch(94% 0.05 225);
+  --color-danger-light: oklch(95% 0.05 25);
 
-  /* --- Surface Tokens (Light mode) --- */
-  --color-surface-base: oklch(99% 0.002 264);
-  --color-surface-raised: oklch(100% 0 0);
-  --color-surface-overlay: oklch(97% 0.003 264);
-  --color-surface-sunken: oklch(95% 0.004 264);
-  --color-surface-interactive: oklch(93% 0.006 264);
+  /* --- Surfaces --- */
+  --color-surface-base: var(--color-neutral-25);
+  --color-surface-raised: #ffffff;
+  --color-surface-warm: oklch(98% 0.005 85);
+  --color-surface-sunken: oklch(95.5% 0.006 85);
+  --color-surface-interactive: oklch(93.5% 0.008 85);
 
-  /* --- Text Tokens --- */
-  --color-text-primary: oklch(15% 0.01 264);
-  --color-text-secondary: oklch(38% 0.015 264);
-  --color-text-tertiary: oklch(55% 0.015 264);
-  --color-text-disabled: oklch(72% 0.010 264);
-  --color-text-inverse: oklch(99% 0.002 264);
+  /* --- Text Hierarchy --- */
+  --color-text-primary: oklch(16% 0.01 85);
+  --color-text-secondary: oklch(38% 0.015 85);
+  --color-text-tertiary: oklch(54% 0.014 85);
+  --color-text-disabled: oklch(72% 0.010 85);
+  --color-text-inverse: oklch(99% 0.002 85);
   --color-text-brand: var(--color-brand-600);
 
-  /* --- Border Tokens --- */
-  --color-border-default: oklch(88% 0.008 264);
-  --color-border-strong: oklch(76% 0.014 264);
+  /* --- Borders & Outlines --- */
+  --color-border-default: oklch(90% 0.007 85);
+  --color-border-subtle: oklch(94% 0.005 85);
+  --color-border-strong: oklch(76% 0.012 85);
   --color-border-brand: var(--color-brand-400);
 
-  /* --- Focus Token (accessibility) --- */
+  /* --- Accessibility Focus --- */
   --color-focus: var(--color-brand-500);
-  --focus-ring: 0 0 0 3px oklch(55% 0.24 255 / 0.4);
 
-  /* --- Spacing Scale --- */
-  --spacing-section: 6rem;
-  --spacing-section-lg: 8rem;
+  /* --- Radii --- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+  --radius-full: 9999px;
 
-  /* --- Border Radius --- */
-  --radius-card: 0.75rem;
-  --radius-button: 0.5rem;
-  --radius-badge: 9999px;
-
-  /* --- Transitions --- */
-  --transition-fast: 120ms ease;
-  --transition-base: 200ms ease;
-  --transition-slow: 300ms ease;
+  /* --- Elevations --- */
+  --shadow-subtle: 0 1px 3px oklch(15% 0.01 85 / 0.04), 0 1px 2px oklch(15% 0.01 85 / 0.02);
+  --shadow-card: 0 4px 20px -2px oklch(15% 0.01 85 / 0.06), 0 2px 6px -1px oklch(15% 0.01 85 / 0.03);
+  --shadow-editorial: 0 20px 40px -15px oklch(15% 0.01 85 / 0.08), 0 8px 16px -6px oklch(15% 0.01 85 / 0.04);
+  --shadow-floating: 0 25px 60px -15px oklch(15% 0.01 85 / 0.12);
 }
 
 /* ============================================================
-   DARK MODE OVERRIDES
+   DARK MODE
    ============================================================ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-surface-base: oklch(14% 0.010 264);
-    --color-surface-raised: oklch(18% 0.010 264);
-    --color-surface-overlay: oklch(20% 0.012 264);
-    --color-surface-sunken: oklch(11% 0.008 264);
-    --color-surface-interactive: oklch(22% 0.012 264);
-    --color-text-primary: oklch(95% 0.004 264);
-    --color-text-secondary: oklch(72% 0.012 264);
-    --color-text-tertiary: oklch(55% 0.015 264);
+    --color-surface-base: oklch(13% 0.010 264);
+    --color-surface-raised: oklch(17% 0.010 264);
+    --color-surface-warm: oklch(15% 0.010 264);
+    --color-surface-sunken: oklch(10% 0.008 264);
+    --color-surface-interactive: oklch(21% 0.012 264);
+    --color-text-primary: oklch(96% 0.004 264);
+    --color-text-secondary: oklch(74% 0.012 264);
+    --color-text-tertiary: oklch(56% 0.014 264);
     --color-text-disabled: oklch(38% 0.012 264);
-    --color-border-default: oklch(28% 0.012 264);
-    --color-border-strong: oklch(38% 0.016 264);
+    --color-border-default: oklch(26% 0.012 264);
+    --color-border-subtle: oklch(20% 0.010 264);
+    --color-border-strong: oklch(36% 0.016 264);
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-card: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
+    --shadow-editorial: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
   }
 }
 
 /* ============================================================
-   BASE STYLES
+   BASE & RESET
    ============================================================ */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -144,184 +145,135 @@ body {
   min-height: 100vh;
 }
 
-/* Focus visible — global accessible focus ring */
+/* Accessibility Focus Visible */
 *:focus-visible {
-  outline: 3px solid var(--color-focus);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
-/* Remove focus ring for mouse users */
 *:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Skip link — accessibility */
+/* Skip link */
 .skip-link {
   position: absolute;
   top: -100%;
-  left: 1rem;
+  left: 1.5rem;
   z-index: 9999;
   padding: 0.75rem 1.5rem;
-  background: var(--color-brand-600);
-  color: var(--color-text-inverse);
+  background: var(--color-text-primary);
+  color: var(--color-surface-raised);
   font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: 0 0 var(--radius-button) var(--radius-button);
+  font-size: 0.875rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
   text-decoration: none;
-  transition: top var(--transition-fast);
+  transition: top 150ms ease;
 }
 
 .skip-link:focus {
   top: 0;
-  outline: 3px solid var(--color-brand-300);
-  outline-offset: 2px;
 }
 
 /* ============================================================
-   TYPOGRAPHY
+   EDITORIAL TYPOGRAPHY UTILITIES
    ============================================================ */
-.text-display {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+.text-display-hero {
+  font-size: clamp(2.75rem, 5.5vw, 4.75rem);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--color-text-primary);
+}
+
+.text-display-section {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+}
+
+.text-headline-editorial {
+  font-size: clamp(1.65rem, 2.75vw, 2.25rem);
+  font-weight: 650;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
 }
 
-.text-headline {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-  color: var(--color-text-primary);
+.text-lead {
+  font-size: clamp(1.125rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  font-weight: 400;
 }
 
-.text-title {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  color: var(--color-text-primary);
-}
-
-.text-body-lg {
-  font-size: 1.125rem;
+.text-body-editorial {
+  font-size: 1.0625rem;
   line-height: 1.7;
   color: var(--color-text-secondary);
 }
 
-.text-body {
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--color-text-secondary);
-}
-
-.text-small {
+.text-caption-editorial {
   font-size: 0.875rem;
   line-height: 1.5;
   color: var(--color-text-tertiary);
 }
 
-.text-eyebrow {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-brand);
-}
-
 /* ============================================================
-   LAYOUT UTILITIES
+   CONTAINER TIERS & SPACING
    ============================================================ */
 .container-site {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin-inline: auto;
-  padding-inline: clamp(1rem, 4vw, 2rem);
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
 }
 
-.section-padding {
-  padding-block: var(--spacing-section);
+.container-wide {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3.5rem);
 }
 
-.section-padding-lg {
-  padding-block: var(--spacing-section-lg);
+.container-narrow {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.section-editorial {
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+}
+
+.section-editorial-lg {
+  padding-block: clamp(6rem, 11vw, 11rem);
 }
 
 /* ============================================================
-   COMPONENT BASE STYLES
+   ATMOSPHERIC & EDITORIAL GRADIENTS
    ============================================================ */
+.hero-editorial-backdrop {
+  background: 
+    radial-gradient(ellipse 65% 50% at 75% 20%, oklch(55% 0.24 255 / 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, oklch(54% 0.17 155 / 0.03) 0%, transparent 60%),
+    linear-gradient(180deg, var(--color-surface-base) 0%, var(--color-surface-warm) 100%);
+}
 
-/* Card surface */
-.card {
+.editorial-surface-card {
   background: var(--color-surface-raised);
   border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-card);
-  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms ease;
 }
 
-.card-interactive {
-  transition: border-color var(--transition-base), box-shadow var(--transition-base);
-}
-
-.card-interactive:hover {
-  border-color: var(--color-border-brand);
-  box-shadow: 0 4px 20px oklch(55% 0.24 255 / 0.08);
-}
-
-/* Divider */
-.divider {
-  border: none;
-  border-top: 1px solid var(--color-border-default);
-  margin-block: 2rem;
-}
-
-/* Link */
-a.link {
-  color: var(--color-text-brand);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color var(--transition-fast);
-}
-
-a.link:hover {
-  color: var(--color-brand-700);
-}
-
-/* ============================================================
-   MEGA MENU STYLES
-   ============================================================ */
-.mega-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: var(--color-surface-raised);
-  border-top: 1px solid var(--color-border-default);
-  border-bottom: 1px solid var(--color-border-default);
-  box-shadow: 0 16px 40px oklch(13% 0.007 264 / 0.12);
-  z-index: 50;
-  padding-block: 2rem;
-}
-
-/* ============================================================
-   HERO PATTERN
-   ============================================================ */
-.hero-pattern {
-  background-image: 
-    radial-gradient(ellipse at 30% 0%, oklch(55% 0.24 255 / 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, oklch(48% 0.26 255 / 0.04) 0%, transparent 50%);
-}
-
-/* ============================================================
-   CAREER GRAPH MOTIF (subtle node/edge pattern)
-   ============================================================ */
-.graph-pattern {
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    oklch(55% 0.24 255 / 0.12) 1px,
-    transparent 0
-  );
-  background-size: 40px 40px;
+.editorial-surface-card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-editorial);
+  transform: translateY(-2px);
 }

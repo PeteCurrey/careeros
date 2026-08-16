@@ -1,84 +1,133 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { GraduationCap, Compass, Award, Shield, Sparkles, ArrowRight } from 'lucide-react';
+import { MEDIA_ASSETS } from '@/lib/media';
+import { GraduationCap, Compass, Award, ShieldCheck, Sparkles, ArrowRight, CheckCircle2, BookOpen } from 'lucide-react';
 
 export default function ForStudentsPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Students & Early Career
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Discover what fits. Prove what you can do. Keep your OS for life.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Determine who you are, what you are genuinely suited to, and what it takes to get there. From first internships and apprenticeships to graduation and beyond — your Career OS stays with you everywhere you go.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.SIGNUP} variant="primary" size="md">
-              Start Free Account
-            </Button>
-            <Button href={ROUTES.PRODUCT_CAREER_PASSPORT} variant="secondary" size="md">
-              See Career Passport
-            </Button>
+    <div className="flex flex-col w-full">
+      {/* Hero Section with Editorial Photography */}
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-6 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs font-mono font-bold text-[var(--color-brand-600)]">
+                <GraduationCap className="w-3.5 h-3.5" /> STUDENTS & EARLY CAREERS
+              </div>
+
+              <h1 className="text-display-section text-[var(--color-text-primary)]">
+                Work out where you&apos;re going — and what it takes to get there.
+              </h1>
+
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Understand what you are genuinely suited to, build verifiable evidence through real projects, and carry your Career OS beyond graduation into your entire working life.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="shadow-card">
+                  Start Free Account <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button href={ROUTES.PRODUCT_CAREER_PASSPORT} variant="secondary" size="lg">
+                  Explore Career Passport
+                </Button>
+              </div>
+
+              <div className="pt-4 flex items-center gap-6 text-xs text-[var(--color-text-tertiary)] font-medium">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-verified)]" /> 100% Free for individuals
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[var(--color-brand-600)]" /> You own your portfolio
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 relative">
+              <div className="rounded-3xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial aspect-16/10 relative">
+                <Image
+                  src={MEDIA_ASSETS.audiences.students.src}
+                  alt={MEDIA_ASSETS.audiences.students.alt}
+                  width={MEDIA_ASSETS.audiences.students.width}
+                  height={MEDIA_ASSETS.audiences.students.height}
+                  priority
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
+      </section>
 
-        {/* Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Compass className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Suitability & Possibilities
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Explore diverse career trajectories based on your strengths, problem-solving preferences, and emerging interests. Understand the real day-to-day reality of roles before committing years to preparation.
+      {/* 3 Pillars of Student Empowerment */}
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide space-y-12">
+          <div className="max-w-3xl space-y-3">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              Built for how modern careers actually start.
+            </h2>
+            <p className="text-body-editorial text-[var(--color-text-secondary)]">
+              No generic questionnaires or superficial personality quizzes. A structured operating system that bridges learning to employment.
             </p>
-          </Card>
+          </div>
 
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Sparkles className="w-5 h-5" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Compass className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Suitability & Possibilities
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Explore viable pathways across university, college, apprenticeships, and trades. Understand the day-to-day reality of roles before committing years of preparation.
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Skills Gaps & Actionable Steps
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              See the exact bridge between where you are today and target opportunities. Identify high-leverage coursework, technical certifications, and project work needed to become genuinely competitive.
-            </p>
-          </Card>
 
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Award className="w-5 h-5" />
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Skills Gaps & Actionable Steps
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                Identify the exact capability bridge between where you are today and your target opportunities. Get curated project guidance that closes competency gaps.
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Portable Evidence That Outlasts School
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              When you graduate, your school login disappears — but your Career OS does not. Your Career Passport is your permanent asset, holding your verified credentials, capstone projects, and milestones forever.
-            </p>
-          </Card>
+
+            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                Evidence That Outlasts School
+              </h3>
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                When you graduate, your school login disappears — but your Career OS does not. Your Career Passport is your permanent asset, holding verified credentials forever.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Pathways Support */}
-        <div className="border-t border-[var(--color-border-default)] pt-12">
-          <SectionHeading
-            eyebrow="All Destinations Supported"
-            heading="Your path is yours to build."
-            description="Whether your journey leads to a 4-year university, a skilled trade, an apprenticeship, community college, or direct venture creation, Career OS provides the exact same high-calibre intelligence."
-          />
+      {/* Pathways Parity Grid */}
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
+        <div className="container-wide space-y-10">
+          <div className="max-w-3xl space-y-3">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              All career destinations supported equally.
+            </h2>
+            <p className="text-body-editorial text-[var(--color-text-secondary)]">
+              Career OS provides identical high-calibre mentoring across vocational trades, technical apprenticeships, and university degrees.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 pt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
             {[
               { name: 'Apprenticeships', href: ROUTES.PATHWAYS_APPRENTICESHIPS },
               { name: 'Technical Trades', href: ROUTES.PATHWAYS_TRADES },
@@ -87,32 +136,34 @@ export default function ForStudentsPage() {
               { name: 'First Employment', href: ROUTES.PATHWAYS_FIRST_JOB },
               { name: 'Entrepreneurship', href: ROUTES.PATHWAYS_ENTREPRENEURSHIP },
             ].map((p) => (
-              <a
+              <Link
                 key={p.name}
                 href={p.href}
-                className="p-4 rounded-lg bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-400)] text-center text-xs font-semibold text-[var(--color-text-primary)] transition-colors block"
+                className="p-5 rounded-2xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-500)] text-center text-xs font-bold text-[var(--color-text-primary)] transition-all block shadow-xs"
               >
                 {p.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* CTA */}
-        <Card className="p-8 sm:p-12 bg-[var(--color-surface-sunken)] border-[var(--color-border-default)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-xl">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Build your Career OS today (100% Free)
+      {/* Final Action Banner */}
+      <section className="section-editorial bg-[var(--color-neutral-950)] text-white">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-2 max-w-2xl">
+            <h3 className="text-2xl font-bold text-white">
+              Start building your Career OS today (100% Free)
             </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Individual access is completely free. No credit card, no subscription lock-in.
+            <p className="text-sm text-white/70">
+              Individual accounts are free forever. No credit card, no subscription lock-in.
             </p>
           </div>
-          <Button href={ROUTES.SIGNUP} variant="primary" size="md">
-            Create Free Account <ArrowRight className="w-4 h-4 ml-1.5" />
+          <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="bg-white text-[var(--color-neutral-950)] hover:bg-white/90 font-bold shrink-0">
+            Create Free Account <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-        </Card>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
