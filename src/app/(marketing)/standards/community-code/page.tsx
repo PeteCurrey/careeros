@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Community Code — Standards | Career OS",
+  description: "Career OS Standards community Code. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/standards/community-code",
+  },
+};
+
 export default function StandardsCommunityCodePage() {
   return (
     <EditorialSubpage

@@ -3,6 +3,16 @@ import { ROUTES } from '@/lib/routes';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Regulatory | Career OS",
+  description: "Career OS Regulatory. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/regulatory",
+  },
+};
+
 export default function Page() {
   return (
     <div className="section-padding">

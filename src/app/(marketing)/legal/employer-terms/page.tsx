@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Employer Terms — Legal | Career OS",
+  description: "Career OS Legal employer Terms. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/legal/employer-terms",
+  },
+};
+
 export default function LegalEmployerTermsPage() {
   return (
     <EditorialSubpage

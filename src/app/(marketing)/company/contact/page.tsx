@@ -5,6 +5,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Mail, Globe, MessageSquare, Building2 } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact — Company | Career OS",
+  description: "Career OS Company contact. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/company/contact",
+  },
+};
+
 export default function ContactPage() {
   return (
     <div className="section-padding">

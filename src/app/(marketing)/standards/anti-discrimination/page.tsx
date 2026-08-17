@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Anti Discrimination — Standards | Career OS",
+  description: "Career OS Standards anti Discrimination. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/standards/anti-discrimination",
+  },
+};
+
 export default function StandardsAntiDiscriminationPage() {
   return (
     <EditorialSubpage

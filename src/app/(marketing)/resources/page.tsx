@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { BookOpen, Compass, Layers, ShieldCheck, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Resources | Career OS",
+  description: "Career OS Resources. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/resources",
+  },
+};
+
 export default function ResourcesPage() {
   const resources = [
     {

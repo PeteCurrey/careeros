@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Verification — Trust | Career OS",
+  description: "Career OS Trust verification. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust/verification",
+  },
+};
+
 export default function TrustVerificationPage() {
   return (
     <EditorialSubpage

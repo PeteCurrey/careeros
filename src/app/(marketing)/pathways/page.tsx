@@ -62,6 +62,16 @@ const PATHWAYS: PathwayItem[] = [
   },
 ];
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Pathways | Career OS",
+  description: "Career OS Pathways. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/pathways",
+  },
+};
+
 export default function PathwaysPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">

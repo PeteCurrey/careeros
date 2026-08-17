@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Building2, ShieldAlert, CheckCircle, Users, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Employer Agent — Product | Career OS",
+  description: "Career OS Product employer Agent. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/product/employer-agent",
+  },
+};
+
 export default function EmployerAgentPage() {
   return (
     <div className="section-padding">

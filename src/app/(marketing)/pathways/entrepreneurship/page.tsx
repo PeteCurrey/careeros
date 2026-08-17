@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Entrepreneurship — Pathways | Career OS",
+  description: "Career OS Pathways entrepreneurship. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/pathways/entrepreneurship",
+  },
+};
+
 export default function EntrepreneurshipPathwayPage() {
   return (
     <EditorialSubpage

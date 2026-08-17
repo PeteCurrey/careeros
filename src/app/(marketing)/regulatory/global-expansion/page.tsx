@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Global Expansion — Regulatory | Career OS",
+  description: "Career OS Regulatory global Expansion. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/regulatory/global-expansion",
+  },
+};
+
 export default function RegulatoryGlobalExpansionPage() {
   return (
     <EditorialSubpage

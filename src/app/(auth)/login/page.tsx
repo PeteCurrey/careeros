@@ -6,6 +6,13 @@ import { ROUTES } from '@/lib/routes';
 import { Button } from '@/components/ui/Button';
 import { Eye, EyeOff } from 'lucide-react';
 
+// NOTE(pre-launch): This login page is scaffolding only. The handleSubmit below
+// simulates a 1-second delay and then shows a "check your email" message, but NO
+// actual magic link or session is created. Wire this to supabase.auth.signInWithOtp
+// (magic link) and supabase.auth.signInWithPassword (password) before launch.
+// The UI copy must not change until real auth is wired — do not promise users
+// something that doesn't happen.
+
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [authMethod, setAuthMethod] = useState<'password' | 'magic_link'>('magic_link');
@@ -16,7 +23,10 @@ export default function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
-    // Auth integration placeholder — will connect to Supabase auth middleware
+    // TODO(pre-launch): Replace this fake delay with real Supabase auth calls:
+    // Magic link: await supabase.auth.signInWithOtp({ email })
+    // Password:   await supabase.auth.signInWithPassword({ email, password })
+    // The success screen shown below implies an email was sent — it was NOT.
     await new Promise((r) => setTimeout(r, 1000));
     if (authMethod === 'magic_link') {
       setStatus('magic_sent');

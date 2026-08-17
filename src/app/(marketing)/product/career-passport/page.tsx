@@ -7,6 +7,16 @@ import { Badge } from '@/components/ui/Badge';
 import { VerificationBadge, VerificationState } from '@/components/ui/VerificationBadge';
 import { Award, Shield, FileCheck, Share2, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Career Passport — Product | Career OS",
+  description: "Career OS Product career Passport. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/product/career-passport",
+  },
+};
+
 export default function CareerPassportPage() {
   const verificationStates: VerificationState[] = [
     'SELF_DECLARED',

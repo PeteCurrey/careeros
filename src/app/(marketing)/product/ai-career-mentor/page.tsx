@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Cpu, ShieldCheck, Eye, History, Sparkles, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Ai Career Mentor — Product | Career OS",
+  description: "Career OS Product ai Career Mentor. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/product/ai-career-mentor",
+  },
+};
+
 export default function AICareerMentorPage() {
   return (
     <div className="section-padding">

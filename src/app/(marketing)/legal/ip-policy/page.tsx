@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Ip Policy — Legal | Career OS",
+  description: "Career OS Legal ip Policy. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/legal/ip-policy",
+  },
+};
+
 export default function LegalIpPolicyPage() {
   return (
     <EditorialSubpage

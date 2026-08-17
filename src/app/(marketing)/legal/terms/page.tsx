@@ -1,6 +1,16 @@
 import React from 'react';
 import { LegalPage } from '@/components/layout/LegalPage';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Terms — Legal | Career OS",
+  description: "Career OS Legal terms. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/legal/terms",
+  },
+};
+
 export default function TermsOfServicePage() {
   return (
     <LegalPage

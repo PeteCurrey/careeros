@@ -5,6 +5,16 @@ import { Button } from '@/components/ui/Button';
 import { MEDIA_ASSETS } from '@/lib/media';
 import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Employers — For | Career OS",
+  description: "Career OS For employers. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/for/employers",
+  },
+};
+
 export default function ForEmployersPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">

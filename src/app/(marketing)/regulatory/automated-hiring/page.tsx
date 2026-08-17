@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Automated Hiring — Regulatory | Career OS",
+  description: "Career OS Regulatory automated Hiring. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/regulatory/automated-hiring",
+  },
+};
+
 export default function RegulatoryAutomatedHiringPage() {
   return (
     <EditorialSubpage

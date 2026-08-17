@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Responsible Hiring — Employers | Career OS",
+  description: "Career OS Employers responsible Hiring. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/employers/responsible-hiring",
+  },
+};
+
 export default function EmployersResponsibleHiringPage() {
   return (
     <EditorialSubpage

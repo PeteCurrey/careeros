@@ -4,6 +4,16 @@ import { Button } from '@/components/ui/Button';
 import { ProductEngineCard } from '@/components/ui/ProductEngineCard';
 import { ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Product | Career OS",
+  description: "Career OS Product. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/product",
+  },
+};
+
 export default function ProductOverviewPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">

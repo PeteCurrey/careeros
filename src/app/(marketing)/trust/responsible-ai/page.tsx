@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Eye, ShieldCheck, CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Responsible Ai — Trust | Career OS",
+  description: "Career OS Trust responsible Ai. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust/responsible-ai",
+  },
+};
+
 export default function ResponsibleAIPage() {
   return (
     <div className="section-padding">

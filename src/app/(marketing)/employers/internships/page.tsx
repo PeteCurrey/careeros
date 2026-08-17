@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Internships — Employers | Career OS",
+  description: "Career OS Employers internships. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/employers/internships",
+  },
+};
+
 export default function EmployersInternshipsPage() {
   return (
     <EditorialSubpage

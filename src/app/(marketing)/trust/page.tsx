@@ -3,6 +3,16 @@ import { ROUTES } from '@/lib/routes';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Trust | Career OS",
+  description: "Career OS Trust. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust",
+  },
+};
+
 export default function Page() {
   return (
     <div className="section-padding">

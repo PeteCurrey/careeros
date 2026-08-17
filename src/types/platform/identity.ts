@@ -22,9 +22,25 @@ export type AuthProvider =
 export type AccountStatus =
   | 'ACTIVE'
   | 'PENDING_VERIFICATION'
+  | 'PENDING_GUARDIAN_CONSENT'
+  | 'PURGE_SCHEDULED'
   | 'SUSPENDED'
   | 'DEACTIVATED'
   | 'DELETED';
+
+/** Age classification for COPPA/FERPA and minor consent branching */
+export type AgeBracket =
+  | 'UNDER_13'
+  | 'MINOR_13_17'
+  | 'ADULT_18_PLUS';
+
+/** Minor consent lifecycle state */
+export type ConsentState =
+  | 'NOT_REQUIRED'
+  | 'PENDING'
+  | 'GRANTED'
+  | 'DENIED'
+  | 'EXPIRED';
 
 /** Retention classification for data lifecycle management */
 export type RetentionClass =
@@ -45,6 +61,11 @@ export interface Profile {
   timezone: string | null; // IANA timezone
   country_code: string | null; // ISO 3166-1 alpha-2
   status: AccountStatus;
+  date_of_birth?: string | null;
+  age_bracket?: AgeBracket | null;
+  guardian_email?: string | null;
+  consent_state?: ConsentState;
+  purge_scheduled_at?: string | null;
   created_at: string;
   updated_at: string;
   archived_at: string | null;

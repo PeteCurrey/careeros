@@ -25,6 +25,8 @@ export const viewport: Viewport = {
   ],
 };
 
+const IS_PRODUCTION = process.env.NEXT_PUBLIC_SITE_ENV === 'production';
+
 export const metadata: Metadata = {
   title: {
     default: 'Career OS — The Operating System for Your Working Life',
@@ -47,17 +49,23 @@ export const metadata: Metadata = {
   authors: [{ name: 'Career OS' }],
   creator: 'Career OS Inc.',
   publisher: 'Career OS Inc.',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  robots: IS_PRODUCTION
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      }
+    : {
+        index: false,
+        follow: false,
+        googleBot: { index: false, follow: false },
+      },
   openGraph: {
     type: 'website',
     locale: 'en_US',

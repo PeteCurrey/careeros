@@ -3,6 +3,16 @@ import { ROUTES } from '@/lib/routes';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Company | Career OS",
+  description: "Career OS Company. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/company",
+  },
+};
+
 export default function Page() {
   return (
     <div className="section-padding">

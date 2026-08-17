@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Dpa — Legal | Career OS",
+  description: "Career OS Legal dpa. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/legal/dpa",
+  },
+};
+
 export default function LegalDpaPage() {
   return (
     <EditorialSubpage

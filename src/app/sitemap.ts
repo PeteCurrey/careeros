@@ -76,8 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/company/press`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/company/partners`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
 
-    // Auth (low priority for indexing)
-    { url: `${BASE_URL}/login`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
-    { url: `${BASE_URL}/signup`, lastModified: now, changeFrequency: 'yearly', priority: 0.5 },
+    // /login and /signup are disallowed in robots.ts and not indexable.
+    // Do not include them in the sitemap.
   ];
 }

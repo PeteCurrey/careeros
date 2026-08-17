@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Acceptable Use — Legal | Career OS",
+  description: "Career OS Legal acceptable Use. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/legal/acceptable-use",
+  },
+};
+
 export default function LegalAcceptableUsePage() {
   return (
     <EditorialSubpage

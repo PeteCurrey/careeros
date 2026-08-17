@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { ShieldCheck, Users, Lock, EyeOff, FileText, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Safeguarding — Trust | Career OS",
+  description: "Career OS Trust safeguarding. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust/safeguarding",
+  },
+};
+
 export default function SafeguardingPage() {
   return (
     <div className="section-padding">

@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Human Oversight — Trust | Career OS",
+  description: "Career OS Trust human Oversight. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust/human-oversight",
+  },
+};
+
 export default function TrustHumanOversightPage() {
   return (
     <EditorialSubpage

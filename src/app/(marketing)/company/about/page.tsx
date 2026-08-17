@@ -5,6 +5,16 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About — Company | Career OS",
+  description: "Career OS Company about. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/company/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <div className="section-padding">

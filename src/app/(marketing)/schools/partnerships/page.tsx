@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Partnerships — Schools | Career OS",
+  description: "Career OS Schools partnerships. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/schools/partnerships",
+  },
+};
+
 export default function SchoolsPartnershipsPage() {
   return (
     <EditorialSubpage

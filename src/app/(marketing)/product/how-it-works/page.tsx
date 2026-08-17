@@ -7,6 +7,16 @@ import { Badge } from '@/components/ui/Badge';
 import { LifetimeTimeline } from '@/components/ui/LifetimeTimeline';
 import { Layers, ShieldCheck, UserCheck, Award, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "How It Works — Product | Career OS",
+  description: "Career OS Product how It Works. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/product/how-it-works",
+  },
+};
+
 export default function HowItWorksPage() {
   return (
     <div className="section-padding">

@@ -5,6 +5,16 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Standards | Career OS",
+  description: "Career OS Standards. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/standards",
+  },
+};
+
 export default function Page() {
   return (
     <div className="section-padding">

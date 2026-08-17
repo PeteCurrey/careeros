@@ -18,7 +18,7 @@ const PASSPORT_RECORDS: PassportRecord[] = [
   {
     type: 'Degree / Qualification',
     title: 'BSc Computer Science & Systems Engineering',
-    issuer: 'University of Edinburgh &bull; Faculty of Engineering',
+    issuer: 'MIT • School of Engineering',
     date: 'July 2022',
     status: 'VERIFIED',
     proofType: 'Cryptographic Institutional Anchor',
@@ -26,7 +26,7 @@ const PASSPORT_RECORDS: PassportRecord[] = [
   {
     type: 'Vocational Credential',
     title: 'Advanced Electro-Mechanical Systems Certificate',
-    issuer: 'National Apprenticeship Council',
+    issuer: 'NIMS • Certified Metalworking Skills Standard',
     date: 'March 2023',
     status: 'VERIFIED',
     proofType: 'Verified Trade Assessment Registry',
@@ -79,7 +79,7 @@ export function CareerPassportSection() {
                 </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-normal tracking-tight text-white">
-                Alexander Chen &bull; Passport #COS-8891-GB
+                Alexander Chen &bull; Passport #COS-8891-US
               </h3>
             </div>
             <div className="flex items-center gap-3">

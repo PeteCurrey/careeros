@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Lock, Shield, Eye, Database, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Data Ethics — Trust | Career OS",
+  description: "Career OS Trust data Ethics. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust/data-ethics",
+  },
+};
+
 export default function DataEthicsPage() {
   return (
     <div className="section-padding">

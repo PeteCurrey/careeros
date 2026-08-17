@@ -3,6 +3,16 @@ import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 import Link from 'next/link';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "College — Pathways | Career OS",
+  description: "Career OS Pathways college. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/pathways/college",
+  },
+};
+
 export default function CollegePathwayPage() {
   return (
     <EditorialSubpage

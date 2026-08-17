@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Early Careers — Employers | Career OS",
+  description: "Career OS Employers early Careers. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/employers/early-careers",
+  },
+};
+
 export default function EmployersEarlyCareersPage() {
   return (
     <EditorialSubpage

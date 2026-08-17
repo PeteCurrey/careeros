@@ -27,11 +27,19 @@ export const MEDIA_ASSETS = {
   mentors: {
     marcus: {
       src: '/media/mentors/mentor_marcus.jpg',
-      alt: 'Marcus Thorne — Senior Technology & Engineering Leadership Mentor',
+      alt: 'Marcus Thorne — AI Career Mentor in Technology & Engineering Leadership (Stylized AI Persona)',
       width: 1200,
       height: 900,
-      caption: 'Marcus Thorne — System-assigned Technology Leadership Mentor',
+      caption: 'Marcus Thorne — AI Mentor Persona (Technology & Engineering Leadership)',
     },
+  },
+  aiAdvisor: {
+    // Abstract AI advisor interface visual — not a human photograph
+    src: '/media/ai/advisor_interface.png',
+    alt: 'Career OS AI Mentor — abstract intelligence interface visualization',
+    width: 1200,
+    height: 900,
+    caption: 'Career OS AI Mentor — evidence-grounded, always transparent',
   },
   audiences: {
     students: {

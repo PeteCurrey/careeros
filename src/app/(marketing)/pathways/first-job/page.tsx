@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "First Job — Pathways | Career OS",
+  description: "Career OS Pathways first Job. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/pathways/first-job",
+  },
+};
+
 export default function FirstJobPathwayPage() {
   return (
     <EditorialSubpage

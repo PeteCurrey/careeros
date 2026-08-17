@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Privacy — Schools | Career OS",
+  description: "Career OS Schools privacy. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/schools/privacy",
+  },
+};
+
 export default function SchoolsPrivacyPage() {
   return (
     <EditorialSubpage

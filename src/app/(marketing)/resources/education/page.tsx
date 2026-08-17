@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Education — Resources | Career OS",
+  description: "Career OS Resources education. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/resources/education",
+  },
+};
+
 export default function ResourcesEducationPage() {
   return (
     <EditorialSubpage

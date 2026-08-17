@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Copyright — Legal | Career OS",
+  description: "Career OS Legal copyright. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/legal/copyright",
+  },
+};
+
 export default function LegalCopyrightPage() {
   return (
     <EditorialSubpage

@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Accessibility — Trust | Career OS",
+  description: "Career OS Trust accessibility. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust/accessibility",
+  },
+};
+
 export default function AccessibilityPage() {
   return (
     <div className="section-padding">

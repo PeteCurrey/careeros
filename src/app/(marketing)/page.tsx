@@ -14,6 +14,16 @@ import { ComparisonTableSection } from '@/components/marketing/ComparisonTableSe
 import { MissionSection } from '@/components/marketing/MissionSection';
 import { FinalCtaSection } from '@/components/marketing/FinalCtaSection';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Career OS — The Operating System for Your Working Life",
+  description: "Career OS platform. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com",
+  },
+};
+
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full overflow-hidden bg-[var(--color-ivory-base)]">

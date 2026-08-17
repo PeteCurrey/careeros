@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Mentor Code — Standards | Career OS",
+  description: "Career OS Standards mentor Code. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/standards/mentor-code",
+  },
+};
+
 export default function StandardsMentorCodePage() {
   return (
     <EditorialSubpage

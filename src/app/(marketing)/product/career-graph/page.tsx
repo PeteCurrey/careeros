@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Compass, Network, GitFork, ArrowUpRight, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Career Graph — Product | Career OS",
+  description: "Career OS Product career Graph. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/product/career-graph",
+  },
+};
+
 export default function CareerGraphPage() {
   return (
     <div className="section-padding">

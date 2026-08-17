@@ -94,3 +94,19 @@ export interface PolicyAcceptance {
   user_agent_hash: string | null; // hashed for privacy
   method: 'EXPLICIT_CLICK' | 'DIGITAL_SIGNATURE' | 'API' | 'IMPORT';
 }
+
+/** Phase 0 Extensible Consent Audit Log Table Record */
+export interface ConsentAuditLog {
+  id: string;
+  profile_id: string;
+  age_bracket: 'UNDER_13' | 'MINOR_13_17' | 'ADULT_18_PLUS';
+  consent_state: 'NOT_REQUIRED' | 'PENDING' | 'GRANTED' | 'DENIED' | 'EXPIRED';
+  /** Verification method (left open/nullable for Phase 1 verification mechanisms) */
+  verification_method: string | null;
+  verification_metadata: Record<string, unknown> | null;
+  ip_address_hash: string | null;
+  user_agent_hash: string | null;
+  notes: string | null;
+  created_at: string;
+}
+

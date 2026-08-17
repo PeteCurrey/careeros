@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Ai Transparency — Trust | Career OS",
+  description: "Career OS Trust ai Transparency. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/trust/ai-transparency",
+  },
+};
+
 export default function TrustAiTransparencyPage() {
   return (
     <EditorialSubpage

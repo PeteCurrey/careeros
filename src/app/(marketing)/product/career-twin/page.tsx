@@ -6,6 +6,16 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { UserCheck, Lock, Layers, Eye, Shield, ArrowRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Career Twin — Product | Career OS",
+  description: "Career OS Product career Twin. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/product/career-twin",
+  },
+};
+
 export default function CareerTwinPage() {
   return (
     <div className="section-padding">

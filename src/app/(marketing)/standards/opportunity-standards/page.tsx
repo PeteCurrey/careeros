@@ -2,6 +2,16 @@ import React from 'react';
 import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
 import { ROUTES } from '@/lib/routes';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Opportunity Standards — Standards | Career OS",
+  description: "Career OS Standards opportunity Standards. Verified evidence, persistent career intelligence, and absolute privacy.",
+  alternates: {
+    canonical: "https://career-os.com/standards/opportunity-standards",
+  },
+};
+
 export default function StandardsOpportunityStandardsPage() {
   return (
     <EditorialSubpage

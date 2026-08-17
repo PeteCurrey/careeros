@@ -44,8 +44,8 @@ const PRIVACY_FIELDS: PrivacyField[] = [
     label: "Target Compensation Expectation",
     category: "Parameters",
     visibility: {
-      MY_VIEW: { state: "£140,000 – £160,000 + Equity", note: "Full access", visible: true },
-      MENTOR_VIEW: { state: "£140,000 – £160,000 (Calibrated)", note: "Benchmarked for negotiation", visible: true },
+      MY_VIEW: { state: "$180,000 – $200,000 + Equity", note: "Full access", visible: true },
+      MENTOR_VIEW: { state: "$180,000 – $200,000 (Calibrated)", note: "Benchmarked for negotiation", visible: true },
       EMPLOYER_VIEW: { state: "Matched against Budget Floor", note: "Evaluated autonomously without disclosure", visible: false },
       PUBLIC_VIEW: { state: "[REDACTED]", note: "Strictly confidential", visible: false },
     },
