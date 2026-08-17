@@ -38,8 +38,8 @@ export function Header() {
       className={cn(
         'sticky top-0 z-40 w-full transition-all duration-300',
         scrolled
-          ? 'bg-[var(--color-surface-base)]/85 backdrop-blur-md border-b border-[var(--color-border-default)] shadow-xs'
-          : 'bg-[var(--color-surface-base)]/90 backdrop-blur-sm border-b border-[var(--color-border-subtle)]'
+          ? 'bg-[var(--color-surface-base)]/75 backdrop-blur-md border-b border-[var(--color-border-default)] shadow-xs'
+          : 'bg-transparent border-b border-transparent'
       )}
     >
       <div className="container-editorial">
