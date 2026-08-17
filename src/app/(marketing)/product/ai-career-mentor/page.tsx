@@ -7,6 +7,9 @@ import { MEDIA_ASSETS } from '@/lib/media';
 import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { HeroMentorInterface } from '@/components/marketing/ai-career-mentor/HeroMentorInterface';
+import { InteractiveMentorDemo } from '@/components/marketing/ai-career-mentor/InteractiveMentorDemo';
+import { ProductBridgeSection } from '@/components/marketing/ai-career-mentor/ProductBridgeSection';
+import { ChatbotComparisonSection } from '@/components/marketing/ai-career-mentor/ChatbotComparisonSection';
 import { ContextSystemDiagram } from '@/components/marketing/ai-career-mentor/ContextSystemDiagram';
 import { LifetimeTimelineInteractive } from '@/components/marketing/ai-career-mentor/LifetimeTimelineInteractive';
 import { QuestionSelectorInteractive } from '@/components/marketing/ai-career-mentor/QuestionSelectorInteractive';
@@ -214,95 +217,14 @@ export default function AICareerMentorPage() {
         </div>
       </section>
 
-      {/* ── SECTION 02: NOT ANOTHER CHATBOT ────────────────────────── */}
-      <section id="not-another-chatbot" className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-raised)]">
-        <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">PERSISTENT SYSTEM vs TRANSACTIONAL CHAT</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
-              Career advice shouldn&apos;t reset every time you open a chat.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              Generic AI chatbots treat every visit as a isolated interaction. Career OS is designed as a persistent professional guidance system that remembers your history, references your evidence, and tracks your multi-year trajectory.
-            </p>
-          </div>
+      {/* ── SECTION 02: INTERACTIVE MENTOR DEMONSTRATION ───────────────── */}
+      <InteractiveMentorDemo />
 
-          {/* Editorial Comparison Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Generic AI Chatbot */}
-            <div className="p-8 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
-              <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
-                <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                  <XCircle className="w-5 h-5 text-red-600" />
-                  Generic AI Chatbots
-                </h3>
-                <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-red-50 text-red-800 border border-red-200 font-bold">
-                  TRANSACTIONAL
-                </span>
-              </div>
+      {/* ── SECTION 02B: PRODUCT BRIDGE (TWIN, PASSPORT, GRAPH) ────────── */}
+      <ProductBridgeSection />
 
-              <ul className="space-y-4 text-xs text-[var(--color-text-secondary)]">
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                  <span>Starts from scratch every time you open a session.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                  <span>Zero knowledge of your past verified skills or achievements.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                  <span>Recommendations are disconnected from real evidence and job markets.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                  <span>No persistent Career Passport or structured skill record.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                  <span>Can hallucinate advice without surfacing decision factors.</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Career OS AI Mentor */}
-            <div className="p-8 bg-[var(--color-surface-warm)] border-2 border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-6 shadow-subtle">
-              <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
-                <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                  Career OS AI Mentor
-                </h3>
-                <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold">
-                  PERSISTENT &amp; GROUNDED
-                </span>
-              </div>
-
-              <ul className="space-y-4 text-xs text-[var(--color-charcoal-deep)]">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Maintains continuous multi-year developmental context in your Career Twin.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Grounds every recommendation in your verified Passport evidence.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Connects actions directly to live market pathways in Career Graph.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Updates recommendations dynamically as you log new achievements.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Surfaces explicit decision rationale and uncertainty for full transparency.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ── SECTION 02C: WHY THIS IS DIFFERENT FROM A BLANK CHATBOT ───── */}
+      <ChatbotComparisonSection />
 
       {/* ── SECTION 03: WHAT YOUR MENTOR UNDERSTANDS ────────────────── */}
       <section className="section-editorial border-b border-[var(--color-border-default)]">

@@ -1,7 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ROUTES } from '@/lib/routes';
+import { MEDIA_ASSETS } from '@/lib/media';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -127,10 +129,49 @@ export default function CareerTwinPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
       {/* =================================================================== */}
-      {/* SECTION 01 — HERO                                                   */}
+      {/* SECTION 01 — HERO WITH BREATHTAKING CITY HORIZON                    */}
       {/* =================================================================== */}
-      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-24">
-        <div className="container-editorial space-y-12">
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-ivory-base)] py-16 lg:py-24">
+        {/* Breathtaking City & Horizon Background Image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src={MEDIA_ASSETS.hero.cityHorizon.src}
+            alt={MEDIA_ASSETS.hero.cityHorizon.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+
+          {/* Editorial Scrim: Ivory Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to right, #F7F5EC 0%, rgba(247, 245, 236, 0.96) 38%, rgba(247, 245, 236, 0.88) 55%, rgba(247, 245, 236, 0.42) 78%, rgba(247, 245, 236, 0.18) 100%)`,
+            }}
+          />
+
+          {/* Top Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to bottom, #F7F5EC 0%, transparent 100%)`,
+            }}
+          />
+
+          {/* Bottom Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to top, #F7F5EC 0%, transparent 100%)`,
+            }}
+          />
+        </div>
+
+        <div className="container-editorial relative z-10 space-y-12">
           <div className="max-w-4xl space-y-6">
             <span className="section-label">CORE SUBSYSTEM &bull; CAREER TWIN</span>
 
@@ -153,7 +194,7 @@ export default function CareerTwinPage() {
               </Button>
               <a
                 href="#career-twin-visual"
-                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-charcoal-deep)] hover:text-[var(--color-taupe-700)] transition-colors px-4 py-3 border border-[var(--color-border-default)] rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]"
+                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-charcoal-deep)] hover:text-[var(--color-taupe-700)] transition-colors px-4 py-3 border border-[var(--color-border-default)] rounded-[var(--radius-card)] bg-white/70 backdrop-blur-xs"
               >
                 <span>See a Career Twin in action</span>
                 <ChevronDown className="w-4 h-4" />
