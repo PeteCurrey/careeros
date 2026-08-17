@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 
 const OUT_DIR = '/Users/petercurrey/.gemini/antigravity/brain/4e75bf25-01a7-4e56-9949-8fafa11a325a';
-const URL = 'http://localhost:3001/product/ai-career-mentor#not-another-chatbot';
+const URL = 'http://localhost:3006/product/ai-career-mentor#not-another-chatbot';
 
 async function run() {
   const browser = await chromium.launch({
@@ -14,7 +14,7 @@ async function run() {
     const context = await browser.newContext({ viewport: { width: 1440, height: 1100 } });
     const page = await context.newPage();
     console.log('Navigating to', URL);
-    await page.goto(URL, { waitUntil: 'networkidle' });
+    await page.goto(URL, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1500);
 
     const demoSection = page.locator('#not-another-chatbot');
@@ -44,7 +44,7 @@ async function run() {
   {
     const context = await browser.newContext({ viewport: { width: 390, height: 900 } });
     const page = await context.newPage();
-    await page.goto(URL, { waitUntil: 'networkidle' });
+    await page.goto(URL, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1500);
 
     const demoSection = page.locator('#not-another-chatbot');

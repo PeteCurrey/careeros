@@ -60,7 +60,7 @@ export function InteractiveMentorDemo() {
     <section
       id="not-another-chatbot"
       aria-labelledby="mentor-demo-heading"
-      className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]"
+      className="scroll-mt-20 lg:scroll-mt-24 pt-20 lg:pt-28 pb-16 lg:pb-24 border-b border-[var(--color-border-default)] bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]"
     >
       <div className="container-editorial space-y-12">
         {/* Section Header */}
