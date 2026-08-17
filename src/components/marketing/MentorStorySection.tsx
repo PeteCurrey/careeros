@@ -44,7 +44,6 @@ export function MentorStorySection() {
               <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1 bg-[var(--color-charcoal-deep)]/90 backdrop-blur-sm border border-[var(--color-lavender-base)]/40 rounded-[var(--radius-sm)] text-xs text-[var(--color-lavender-light)] font-bold shadow-md">
                 <Bot className="w-3.5 h-3.5 text-[var(--color-lavender-base)]" />
                 <span>AI MENTOR</span>
-                <span className="text-[10px] opacity-70 font-normal ml-1">• Stylized Illustration</span>
               </div>
 
               {/* Stylized AI Portrait Image */}

@@ -27,10 +27,10 @@ export const MEDIA_ASSETS = {
   mentors: {
     marcus: {
       src: '/media/mentors/mentor_marcus.jpg',
-      alt: 'Marcus Thorne — AI Career Mentor in Technology & Engineering Leadership (Stylized AI Persona)',
+      alt: 'Marcus Thorne — AI Career Mentor in Technology & Engineering Leadership',
       width: 1200,
       height: 900,
-      caption: 'Marcus Thorne — AI Mentor Persona (Technology & Engineering Leadership)',
+      caption: 'Marcus Thorne — Technology & Engineering Leadership Specialization',
     },
   },
   aiAdvisor: {
