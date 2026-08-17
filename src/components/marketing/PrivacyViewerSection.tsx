@@ -113,7 +113,7 @@ export function PrivacyViewerSection() {
         </div>
 
         {/* The Interactive Viewer Card */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-8">
+        <div className="p-8 sm:p-12 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-8">
           
           {/* Viewer Tabs */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-6">
@@ -140,7 +140,7 @@ export function PrivacyViewerSection() {
                     key={tab.id}
                     onClick={() => setPerspective(tab.id as ViewPerspective)}
                     className={cn(
-                      'px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2',
+                      'px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-2',
                       isSelected
                         ? 'bg-[var(--color-brand-600)] text-white shadow-xs'
                         : 'bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-border-default)]'
@@ -155,7 +155,7 @@ export function PrivacyViewerSection() {
           </div>
 
           {/* Active Perspective Explanation Banner */}
-          <div className="p-4 rounded-xl bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] flex items-start gap-3">
+          <div className="p-4 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] flex items-start gap-3">
             <PerspectiveIcon className="w-5 h-5 text-[var(--color-brand-600)] shrink-0 mt-0.5" />
             <div className="text-xs">
               <h4 className="font-bold text-[var(--color-text-primary)]">{info.title}</h4>
@@ -171,7 +171,7 @@ export function PrivacyViewerSection() {
                 <div
                   key={idx}
                   className={cn(
-                    'p-4 sm:p-5 rounded-xl border transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4',
+                    'p-4 sm:p-5 rounded-lg border transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4',
                     isVisible
                       ? 'bg-[var(--color-surface-base)] border-[var(--color-border-default)] opacity-100'
                       : 'bg-[var(--color-surface-warm)] border-[var(--color-border-subtle)] opacity-40'

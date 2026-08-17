@@ -96,7 +96,7 @@ export function HeroMentorSection() {
 
           {/* Right Column: Panoramic Mentor Team Hero Visual */}
           <div className="lg:col-span-7 relative">
-            <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[var(--color-border-default)] shadow-floating bg-[var(--color-surface-raised)] group">
+            <div className="relative rounded-xl md:rounded-2xl overflow-hidden border border-[var(--color-border-default)] shadow-floating bg-[var(--color-surface-raised)] group">
               <Image
                 src={MEDIA_ASSETS.hero.mentorTeam.src}
                 alt={MEDIA_ASSETS.hero.mentorTeam.alt}

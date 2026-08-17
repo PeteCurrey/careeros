@@ -84,7 +84,7 @@ export function CareerTwinSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left: The Legacy Flat Résumé (Faded / Inadequate) */}
-          <div className="lg:col-span-4 p-8 rounded-3xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] flex flex-col justify-between opacity-80">
+          <div className="lg:col-span-4 p-8 rounded-xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] flex flex-col justify-between opacity-80">
             <div className="space-y-4">
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-text-tertiary)]">
                 The 1980s Format
@@ -97,13 +97,13 @@ export function CareerTwinSection() {
               </p>
               
               <div className="space-y-3 pt-4 border-t border-[var(--color-border-subtle)] text-xs text-[var(--color-text-tertiary)] font-mono">
-                <div className="p-3 bg-[var(--color-surface-base)] rounded-lg border border-[var(--color-border-subtle)] line-through">
+                <div className="p-3 bg-[var(--color-surface-base)] rounded-md border border-[var(--color-border-subtle)] line-through">
                   &bull; &ldquo;Self-starter with excellent communication skills&rdquo;
                 </div>
-                <div className="p-3 bg-[var(--color-surface-base)] rounded-lg border border-[var(--color-border-subtle)] line-through">
+                <div className="p-3 bg-[var(--color-surface-base)] rounded-md border border-[var(--color-border-subtle)] line-through">
                   &bull; &ldquo;Proficient in all major tools&rdquo;
                 </div>
-                <div className="p-3 bg-[var(--color-surface-base)] rounded-lg border border-[var(--color-border-subtle)] line-through">
+                <div className="p-3 bg-[var(--color-surface-base)] rounded-md border border-[var(--color-border-subtle)] line-through">
                   &bull; Blindly parsed by keyword ATS black-boxes
                 </div>
               </div>
@@ -115,7 +115,7 @@ export function CareerTwinSection() {
           </div>
 
           {/* Right: The Modern Dynamic Career Twin */}
-          <div className="lg:col-span-8 p-8 sm:p-10 rounded-3xl bg-[var(--color-surface-raised)] border-2 border-[var(--color-brand-400)] dark:border-[var(--color-brand-600)] shadow-editorial space-y-6 flex flex-col justify-between">
+          <div className="lg:col-span-8 p-8 sm:p-10 rounded-xl bg-[var(--color-surface-raised)] border-2 border-[var(--color-brand-400)] dark:border-[var(--color-brand-600)] shadow-editorial space-y-6 flex flex-col justify-between">
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-6">
                 <div>
@@ -140,7 +140,7 @@ export function CareerTwinSection() {
                     key={dim.id}
                     onClick={() => setSelectedDimension(dim.id)}
                     className={cn(
-                      'px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2',
+                      'px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-2',
                       selectedDimension === dim.id
                         ? 'bg-[var(--color-brand-600)] text-white shadow-xs'
                         : 'bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-border-default)]'
@@ -159,7 +159,7 @@ export function CareerTwinSection() {
                 {activeData.items.map((item, i) => (
                   <div
                     key={i}
-                    className="p-4 rounded-xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] space-y-1 hover:border-[var(--color-brand-300)] transition-colors"
+                    className="p-4 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] space-y-1 hover:border-[var(--color-brand-300)] transition-colors"
                   >
                     <div className="flex items-center justify-between">
                       <h4 className="text-xs font-bold text-[var(--color-text-primary)]">

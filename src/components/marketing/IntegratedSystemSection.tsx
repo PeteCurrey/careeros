@@ -129,7 +129,7 @@ export function IntegratedSystemSection() {
           </div>
 
           {/* Right: Active Subsystem Deep Dive Panel */}
-          <div className="lg:col-span-6 p-8 sm:p-12 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-6">
+          <div className="lg:col-span-6 p-8 sm:p-12 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-6">
             <div className="flex items-center justify-between">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] border border-[var(--color-brand-200)] dark:border-[var(--color-brand-800)] text-xs font-bold text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)]">
                 <ActiveIcon className="w-4 h-4" /> {activeNode.name}

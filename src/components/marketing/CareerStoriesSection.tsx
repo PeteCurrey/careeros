@@ -60,7 +60,7 @@ export function CareerStoriesSection() {
           {STORIES.map((story, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card flex flex-col justify-between space-y-6"
+              className="p-8 sm:p-10 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card flex flex-col justify-between space-y-6"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">

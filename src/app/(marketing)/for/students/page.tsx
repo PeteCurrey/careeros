@@ -47,7 +47,7 @@ export default function ForStudentsPage() {
             </div>
 
             <div className="lg:col-span-6 relative">
-              <div className="rounded-3xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial aspect-16/10 relative">
+              <div className="rounded-xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial aspect-16/10 relative">
                 <Image
                   src={MEDIA_ASSETS.audiences.students.src}
                   alt={MEDIA_ASSETS.audiences.students.alt}
@@ -76,8 +76,8 @@ export default function ForStudentsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+            <div className="p-8 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-lg bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
                 <Compass className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
@@ -88,8 +88,8 @@ export default function ForStudentsPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+            <div className="p-8 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-lg bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
                 <Sparkles className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
@@ -100,8 +100,8 @@ export default function ForStudentsPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
+            <div className="p-8 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-card space-y-4">
+              <div className="w-10 h-10 rounded-lg bg-[var(--color-brand-50)] text-[var(--color-brand-600)] flex items-center justify-center font-bold">
                 <Award className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
@@ -139,7 +139,7 @@ export default function ForStudentsPage() {
               <Link
                 key={p.name}
                 href={p.href}
-                className="p-5 rounded-2xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-500)] text-center text-xs font-bold text-[var(--color-text-primary)] transition-all block shadow-xs"
+                className="p-5 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-500)] text-center text-xs font-bold text-[var(--color-text-primary)] transition-all block shadow-xs"
               >
                 {p.name}
               </Link>

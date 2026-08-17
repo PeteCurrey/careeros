@@ -121,7 +121,7 @@ export function AudienceEditorialPanels() {
             return (
               <div
                 key={panel.id}
-                className="p-8 sm:p-12 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+                className="p-8 sm:p-12 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
               >
                 {/* Text Content */}
                 <div className={`space-y-6 ${isReversed ? 'lg:col-span-6 lg:order-2' : 'lg:col-span-6'}`}>
@@ -153,7 +153,7 @@ export function AudienceEditorialPanels() {
 
                 {/* Photography Asset */}
                 <div className={`relative ${isReversed ? 'lg:col-span-6 lg:order-1' : 'lg:col-span-6'}`}>
-                  <div className="rounded-2xl overflow-hidden border border-[var(--color-border-default)] shadow-card aspect-16/10 relative group">
+                  <div className="rounded-lg overflow-hidden border border-[var(--color-border-default)] shadow-card aspect-16/10 relative group">
                     <Image
                       src={panel.image.src}
                       alt={panel.image.alt}

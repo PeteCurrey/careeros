@@ -66,7 +66,7 @@ export function CareerPassportSection() {
         </div>
 
         {/* Digital Career Passport Interface Shell */}
-        <div className="rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial overflow-hidden">
+        <div className="rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial overflow-hidden">
           
           {/* Passport Header Bar */}
           <div className="bg-[var(--color-neutral-900)] text-white p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -94,7 +94,7 @@ export function CareerPassportSection() {
               {PASSPORT_ITEMS.map((item, i) => (
                 <div
                   key={i}
-                  className="p-6 rounded-2xl bg-[var(--color-surface-base)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-400)] transition-all space-y-4"
+                  className="p-6 rounded-lg bg-[var(--color-surface-base)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-400)] transition-all space-y-4"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-mono font-bold tracking-wider text-[var(--color-text-tertiary)] uppercase">

@@ -28,7 +28,7 @@ export function MentorStorySection() {
           
           {/* Left: Art-Directed Mentor Portrait */}
           <div className="lg:col-span-5 relative">
-            <div className="rounded-3xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial bg-[var(--color-surface-raised)] relative aspect-4/3 lg:aspect-auto lg:h-[540px]">
+            <div className="rounded-xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial bg-[var(--color-surface-raised)] relative aspect-4/3 lg:aspect-auto lg:h-[540px]">
               <Image
                 src={MEDIA_ASSETS.mentors.marcus.src}
                 alt={MEDIA_ASSETS.mentors.marcus.alt}
@@ -56,7 +56,7 @@ export function MentorStorySection() {
           <div className="lg:col-span-7 space-y-6">
             
             {/* The Conversational Insight Block */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-6">
+            <div className="p-8 sm:p-10 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-6">
               
               <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
                 <div className="flex items-center gap-3">
@@ -79,13 +79,13 @@ export function MentorStorySection() {
 
               {/* Natural Advisory Dialog */}
               <div className="space-y-4">
-                <div className="p-5 rounded-2xl bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] text-sm sm:text-base text-[var(--color-text-primary)] leading-relaxed">
+                <div className="p-5 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] text-sm sm:text-base text-[var(--color-text-primary)] leading-relaxed">
                   &ldquo;You said leadership is your next priority. You&apos;ve now built the technical architecture evidence in your Passport, but demonstrable cross-functional management exposure is still missing for a Staff role.&rdquo;
                 </div>
               </div>
 
               {/* Next Move Actionable Recommendation Card */}
-              <div className="p-6 rounded-2xl bg-[var(--color-surface-base)] border-2 border-[var(--color-brand-300)] dark:border-[var(--color-brand-700)] space-y-4">
+              <div className="p-6 rounded-lg bg-[var(--color-surface-base)] border-2 border-[var(--color-brand-300)] dark:border-[var(--color-brand-700)] space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)]">
                     RECOMMENDED NEXT MOVE

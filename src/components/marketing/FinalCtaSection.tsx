@@ -57,7 +57,7 @@ export function FinalCtaSection() {
 
         {/* Institutional Partner Invitation Sub-Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto pt-8 border-t border-white/15">
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 flex flex-col justify-between">
+          <div className="p-6 rounded-xl bg-white/5 border border-white/10 space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs font-mono font-bold text-[var(--color-brand-400)] uppercase">
                 <School className="w-4 h-4" /> Educational Institutions
@@ -77,7 +77,7 @@ export function FinalCtaSection() {
             </Link>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 flex flex-col justify-between">
+          <div className="p-6 rounded-xl bg-white/5 border border-white/10 space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs font-mono font-bold text-[var(--color-brand-400)] uppercase">
                 <Building2 className="w-4 h-4" /> Forward-Thinking Employers

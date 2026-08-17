@@ -57,7 +57,7 @@ export function OpportunityIntelligenceSection() {
           
           {/* Left Narrative Pillar */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] space-y-4">
+            <div className="p-8 rounded-xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] space-y-4">
               <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
                 Autonomous, Private Matching
               </h3>
@@ -90,7 +90,7 @@ export function OpportunityIntelligenceSection() {
             {MATCHES.map((match, i) => (
               <div
                 key={i}
-                className="p-6 sm:p-8 rounded-3xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-400)] transition-all shadow-card space-y-5"
+                className="p-6 sm:p-8 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-400)] transition-all shadow-card space-y-5"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[var(--color-border-subtle)] pb-4">
                   <div>

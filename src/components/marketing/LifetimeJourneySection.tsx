@@ -149,7 +149,7 @@ export function LifetimeJourneySection() {
           </div>
 
           {/* Active Stage Detailed Spotlight */}
-          <div className="p-8 sm:p-10 rounded-2xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="p-8 sm:p-10 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] border border-[var(--color-brand-200)] dark:border-[var(--color-brand-800)] text-xs font-bold text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)]">
                 <StageIcon className="w-3.5 h-3.5" /> Stage {stage.num}: {stage.name}
@@ -162,7 +162,7 @@ export function LifetimeJourneySection() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 bg-[var(--color-surface-warm)] p-6 rounded-xl border border-[var(--color-border-subtle)] space-y-3">
+            <div className="lg:col-span-5 bg-[var(--color-surface-warm)] p-6 rounded-lg border border-[var(--color-border-subtle)] space-y-3">
               <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-text-tertiary)]">
                 Generated Intelligence & Artifacts
               </p>
