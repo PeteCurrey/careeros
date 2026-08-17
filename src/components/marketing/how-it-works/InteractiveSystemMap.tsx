@@ -35,12 +35,12 @@ export function InteractiveSystemMap() {
   return (
     <div
       id="system-map"
-      className="w-full bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-2xl space-y-0"
+      className="w-full bg-[var(--background-dark-deep)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-2xl space-y-0"
       role="region"
       aria-label="Interactive Career OS System Map"
     >
       {/* Header bar */}
-      <div className="p-6 sm:p-8 bg-black/40 border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
           <span className="text-[11px] font-mono uppercase tracking-widest text-[var(--color-taupe-300)] flex items-center gap-1.5">
             <Layers className="w-3.5 h-3.5 text-purple-400" />
@@ -50,7 +50,7 @@ export function InteractiveSystemMap() {
             You at the centre. One evolving system.
           </h3>
         </div>
-        <span className="text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/60 text-[var(--color-text-tertiary)] self-start sm:self-auto">
+        <span className="text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/60 backdrop-blur-sm text-[var(--color-text-tertiary)] self-start sm:self-auto">
           Interactive System Explorer
         </span>
       </div>
@@ -58,7 +58,7 @@ export function InteractiveSystemMap() {
       {/* Main Grid: Visual Topology Canvas (Left) + Detail Inspector (Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] border-b border-[var(--color-border-default)]">
         {/* Left: Human-Centric System Canvas */}
-        <div className="p-6 sm:p-10 relative flex flex-col items-center justify-center bg-[var(--color-surface-base)] border-b lg:border-b-0 lg:border-r border-[var(--color-border-default)] min-h-[460px]">
+        <div className="p-6 sm:p-10 relative flex flex-col items-center justify-center bg-[var(--color-surface-base)]/60 backdrop-blur-sm border-b lg:border-b-0 lg:border-r border-[var(--color-border-default)] min-h-[460px]">
           {/* Subtle background coordinate grid */}
           <div
             className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -243,7 +243,7 @@ export function InteractiveSystemMap() {
               {activeNode.description}
             </p>
 
-            <div className="p-4 rounded-lg bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-1.5">
+            <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-1.5">
               <div className="flex items-center gap-1.5 text-xs font-semibold text-white">
                 <Shield className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Role in the Connected Operating System</span>
@@ -281,7 +281,7 @@ export function InteractiveSystemMap() {
       </div>
 
       {/* Bottom Nav Tabs for direct switching */}
-      <div className="p-4 bg-black/40 flex items-center justify-center gap-2 flex-wrap text-xs">
+      <div className="p-4 bg-black/30 backdrop-blur-sm flex items-center justify-center gap-2 flex-wrap text-xs">
         <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase mr-2">
           Explore System:
         </span>

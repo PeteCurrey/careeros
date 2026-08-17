@@ -74,7 +74,7 @@ export function HeroOpportunityFlow() {
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border-default)] bg-[var(--background-dark-deep)] border-beam-container border-beam-slow"
+      className="relative w-full overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border-default)] bg-[var(--background-dark-deep)]/75 backdrop-blur-md border-beam-container border-beam-slow"
       style={{ minHeight: '420px' }}
       role="img"
       aria-label="Illustrative Opportunity Agent concept showing relevant opportunities surfacing toward a career profile"
@@ -239,7 +239,7 @@ export function HeroOpportunityFlow() {
       {/* Rationale panel — why this surfaced */}
       <div
         className={cn(
-          'absolute right-6 top-1/2 -translate-y-1/2 max-w-[280px] bg-[var(--color-surface-raised)]/90 backdrop-blur border border-[var(--color-border-default)] rounded-lg p-5 space-y-3 transition-all duration-700',
+          'absolute right-6 top-1/2 -translate-y-1/2 max-w-[280px] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-lg p-5 space-y-3 transition-all duration-700 shadow-xl',
           showRationale ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
         )}
         aria-live="polite"

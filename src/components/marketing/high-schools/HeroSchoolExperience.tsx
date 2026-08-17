@@ -74,10 +74,10 @@ export function HeroSchoolExperience() {
       </div>
 
       {/* Main Dual-View Stage */}
-      <div className="w-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-editorial border-beam-container border-beam-slow">
+      <div className="w-full bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-editorial border-beam-container border-beam-slow">
         
         {/* Top Window Bar */}
-        <div className="px-5 py-3 bg-[var(--color-surface-sunken)] border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+        <div className="px-5 py-3 bg-[var(--color-surface-sunken)]/60 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <div className="flex items-center gap-2.5 text-[var(--color-text-secondary)]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#2F8FFF] shadow-[0_0_8px_rgba(47,143,255,0.6)]" />
             <span className="font-semibold text-white">CAREER OS &bull; INSTITUTIONAL ENVIRONMENT</span>
@@ -110,7 +110,7 @@ export function HeroSchoolExperience() {
               </div>
 
               {/* AI Career Mentor Dialogue Preview */}
-              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-3">
+              <div className="p-4 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono text-[var(--color-text-tertiary)]">
                   <span className="flex items-center gap-1.5 text-white font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF]" />
@@ -122,17 +122,17 @@ export function HeroSchoolExperience() {
                   &quot;You mentioned enjoying hands-on electronics diagnostics and mathematics. We can compare an <strong className="text-white">Electro-Mechanical Degree Apprenticeship</strong> with a <strong className="text-white">BSc Electrical Engineering</strong> route so you understand entry requirements, costs, and day-to-day differences.&quot;
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
-                  <span className="px-2 py-0.5 text-[11px] bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded text-[var(--color-text-primary)] font-medium">
+                  <span className="px-2 py-0.5 text-[11px] bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded text-[var(--color-text-primary)] font-medium">
                     Comparing 2 Pathways
                   </span>
-                  <span className="px-2 py-0.5 text-[11px] bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded text-[var(--color-text-primary)] font-medium">
+                  <span className="px-2 py-0.5 text-[11px] bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded text-[var(--color-text-primary)] font-medium">
                     Robotics Club Evidence Linked
                   </span>
                 </div>
               </div>
 
               {/* Student Next Action Card */}
-              <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] flex items-center justify-between gap-3 text-xs">
+              <div className="p-4 bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] flex items-center justify-between gap-3 text-xs">
                 <div className="space-y-0.5">
                   <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] font-semibold block">
                     Student Stated Intention
@@ -148,11 +148,11 @@ export function HeroSchoolExperience() {
 
               {/* Student Status Summary */}
               <div className="grid grid-cols-2 gap-3 pt-1 text-xs">
-                <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-1">
+                <div className="p-3 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-1">
                   <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Explored Routes</span>
                   <p className="font-semibold text-white">Apprenticeship &amp; BEng</p>
                 </div>
-                <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-1">
+                <div className="p-3 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-1">
                   <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Evidence In Passport</span>
                   <p className="font-semibold text-white">3 School Projects Logged</p>
                 </div>
@@ -180,7 +180,7 @@ export function HeroSchoolExperience() {
               </div>
 
               {/* Follow-up Queue Item (No surveillance, pure context) */}
-              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-3">
+              <div className="p-4 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-3">
                 <div className="flex items-center justify-between text-xs">
                   <div className="flex items-center gap-2">
                     <span className="w-6 h-6 rounded bg-white/15 text-white font-mono text-[10px] font-bold flex items-center justify-center">
@@ -220,26 +220,26 @@ export function HeroSchoolExperience() {
               </div>
 
               {/* Aggregate Cohort Overview */}
-              <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] space-y-2.5">
+              <div className="p-4 bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] space-y-2.5">
                 <div className="flex items-center justify-between text-xs font-semibold text-white">
                   <span>Year 11 Exploration Distribution (Aggregate)</span>
                   <span className="text-[10px] font-mono text-[var(--color-text-tertiary)]">148 Students</span>
                 </div>
                 
                 <div className="grid grid-cols-4 gap-1.5 pt-1 text-center font-mono text-[10px]">
-                  <div className="p-2 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded">
+                  <div className="p-2 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded">
                     <span className="block font-bold text-white">44%</span>
                     <span className="text-[var(--color-text-tertiary)]">University</span>
                   </div>
-                  <div className="p-2 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded">
+                  <div className="p-2 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded">
                     <span className="block font-bold text-white">31%</span>
                     <span className="text-[var(--color-text-tertiary)]">Apprentice</span>
                   </div>
-                  <div className="p-2 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded">
+                  <div className="p-2 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded">
                     <span className="block font-bold text-white">16%</span>
                     <span className="text-[var(--color-text-tertiary)]">Trades/Voc</span>
                   </div>
-                  <div className="p-2 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded">
+                  <div className="p-2 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded">
                     <span className="block font-bold text-white">9%</span>
                     <span className="text-[var(--color-text-tertiary)]">Direct Emp</span>
                   </div>

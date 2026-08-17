@@ -15,7 +15,7 @@ export function HeroTwinInterface() {
   ];
 
   return (
-    <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)] backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 border-beam-container border-beam-slow">
+    <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 border-beam-container border-beam-slow">
       {/* Visual Header Badge */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[var(--color-border-subtle)] pb-4">
         <div className="flex items-center gap-2">
@@ -24,7 +24,7 @@ export function HeroTwinInterface() {
             Career Twin &bull; Active Context Layer
           </span>
         </div>
-        <span className="font-mono text-[11px] px-2.5 py-0.5 rounded bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-[var(--color-taupe-700)]">
+        <span className="font-mono text-[11px] px-2.5 py-0.5 rounded bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-default)] text-[var(--color-taupe-700)]">
           Illustrative Career OS interface
         </span>
       </div>
@@ -32,7 +32,7 @@ export function HeroTwinInterface() {
       {/* Central Visual Stage */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         {/* Profile & Context Topology Graphic */}
-        <div className="lg:col-span-7 relative p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] min-h-[300px] flex flex-col justify-center items-center overflow-hidden">
+        <div className="lg:col-span-7 relative p-6 bg-[var(--color-surface-base)]/65 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] min-h-[300px] flex flex-col justify-center items-center overflow-hidden">
           {/* Background Career Path Lines */}
           <div className="absolute inset-0 opacity-15 pointer-events-none flex items-center justify-center">
             <div className="w-64 h-64 border border-dashed border-[var(--color-taupe-600)] rounded-full animate-spin-slow" />
@@ -87,7 +87,7 @@ export function HeroTwinInterface() {
           {(() => {
             const current = (layers.find((l) => l.id === activeLayer) || layers[0])!;
             return (
-              <div className="p-5 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
+              <div className="p-5 bg-[var(--color-surface-warm)]/65 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
                 <div className="flex items-center justify-between">
                   <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                     {current.label}

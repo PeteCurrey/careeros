@@ -7,7 +7,7 @@ export function HeroPassportInterface() {
   const [activeTab, setActiveTab] = useState<'qualifications' | 'projects' | 'licences'>('qualifications');
 
   return (
-    <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)] backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 text-[var(--color-text-primary)] border-beam-container border-beam-fast">
+    <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 text-[var(--color-text-primary)] border-beam-container border-beam-fast">
       {/* Top Passport Header Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-5">
         <div className="flex items-center gap-3">
@@ -30,10 +30,10 @@ export function HeroPassportInterface() {
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[11px] px-2.5 py-1 rounded bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-[var(--color-taupe-700)]">
+          <span className="font-mono text-[11px] px-2.5 py-1 rounded bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-default)] text-[var(--color-taupe-700)]">
             Illustrative Career OS interface
           </span>
-          <span className="font-mono text-[11px] px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700 flex items-center gap-1">
+          <span className="font-mono text-[11px] px-2.5 py-1 rounded bg-slate-100/80 backdrop-blur-sm border border-slate-300 text-slate-700 flex items-center gap-1">
             <Calendar className="w-3 h-3 text-slate-500" /> Updated 3d ago
           </span>
         </div>

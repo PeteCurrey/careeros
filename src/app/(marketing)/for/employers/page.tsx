@@ -56,7 +56,7 @@ export default function ForEmployersPage() {
             </div>
 
             <div className="lg:col-span-6 relative">
-              <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle aspect-16/10 relative">
+              <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md rounded-[var(--radius-card)] overflow-hidden shadow-subtle aspect-16/10 relative">
                 <Image
                   src={MEDIA_ASSETS.audiences.employers.src}
                   alt={MEDIA_ASSETS.audiences.employers.alt}

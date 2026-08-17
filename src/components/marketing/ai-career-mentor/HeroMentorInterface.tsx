@@ -7,9 +7,9 @@ import { Sparkles, ShieldCheck, Layers, CheckCircle2, Info } from 'lucide-react'
 
 export function HeroMentorInterface() {
   return (
-    <div className="w-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans border-beam-container border-beam-slow">
+    <div className="w-full bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans border-beam-container border-beam-slow">
       {/* Interface Bar */}
-      <div className="px-4 py-3 bg-[var(--color-surface-sunken)] border-b border-[var(--color-border-default)] flex items-center justify-between gap-2 text-xs">
+      <div className="px-4 py-3 bg-[var(--color-surface-sunken)]/60 backdrop-blur-sm border-b border-[var(--color-border-default)] flex items-center justify-between gap-2 text-xs">
         <div className="flex items-center gap-2 font-mono text-[11px] text-[var(--color-text-secondary)]">
           <span className="w-2 h-2 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.7)]" />
           <span>CAREER OS MENTOR</span>
@@ -55,7 +55,7 @@ export function HeroMentorInterface() {
         </div>
 
         {/* Live Recommendation Card */}
-        <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4">
+        <div className="p-5 bg-[var(--color-surface-base)]/70 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4">
           <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-3">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#2F8FFF]" />
@@ -63,7 +63,7 @@ export function HeroMentorInterface() {
                 Recommendation Rationale
               </span>
             </div>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-bold">
               RELEVANT EVIDENCE
             </span>
           </div>
@@ -78,7 +78,7 @@ export function HeroMentorInterface() {
               </p>
             </div>
 
-            <div className="p-3 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded space-y-1.5">
+            <div className="p-3 bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-subtle)] rounded space-y-1.5">
               <span className="font-bold text-[var(--color-text-primary)] text-xs block">
                 Suggested Next Action:
               </span>

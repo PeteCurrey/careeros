@@ -53,9 +53,9 @@ export function HeroEmployerAgentInterface() {
   ];
 
   return (
-    <div className="w-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans border-beam-container border-beam-reverse">
+    <div className="w-full bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans border-beam-container border-beam-reverse">
       {/* Interface Window Bar */}
-      <div className="px-4 py-3 bg-[var(--color-surface-sunken)] border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div className="px-4 py-3 bg-[var(--color-surface-sunken)]/60 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2 font-mono text-[11px] text-[var(--color-text-secondary)]">
           <span className="w-2 h-2 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.7)]" />
           <span className="font-semibold text-white">CAREER OS &bull; EMPLOYER AGENT</span>
@@ -88,7 +88,7 @@ export function HeroEmployerAgentInterface() {
           </div>
 
           <div className="lg:col-span-5 grid grid-cols-2 gap-3 text-xs">
-            <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1">
+            <div className="p-3 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1">
               <span className="text-[10px] font-mono uppercase text-[var(--color-text-tertiary)] block">
                 Non-Negotiable Criteria
               </span>
@@ -99,7 +99,7 @@ export function HeroEmployerAgentInterface() {
                 <CheckCircle2 className="w-3 h-3" /> Mandatory Licence
               </span>
             </div>
-            <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1">
+            <div className="p-3 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1">
               <span className="text-[10px] font-mono uppercase text-[var(--color-text-tertiary)] block">
                 Work Arrangement
               </span>
@@ -115,7 +115,7 @@ export function HeroEmployerAgentInterface() {
 
         {/* Structured Capability & Evidence Matrix */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+          <div className="p-4 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#6BB8FF] font-semibold flex items-center gap-1.5">
               <Cpu className="w-3.5 h-3.5" /> Required Capabilities
             </span>
@@ -139,7 +139,7 @@ export function HeroEmployerAgentInterface() {
             </ul>
           </div>
 
-          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+          <div className="p-4 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-300 font-semibold flex items-center gap-1.5">
               <FileCheck className="w-3.5 h-3.5" /> High-Signal Evidence
             </span>
@@ -163,7 +163,7 @@ export function HeroEmployerAgentInterface() {
             </ul>
           </div>
 
-          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+          <div className="p-4 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-semibold flex items-center gap-1.5">
               <Compass className="w-3.5 h-3.5" /> Career Graph Discovery
             </span>
@@ -192,7 +192,7 @@ export function HeroEmployerAgentInterface() {
             {candidatePathways.map((p, idx) => (
               <div
                 key={p.title}
-                className="p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-3"
+                className="p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-3"
               >
                 <div className="space-y-1.5">
                   <span className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded bg-white/5 text-[var(--color-taupe-300)] border border-white/10 inline-block">

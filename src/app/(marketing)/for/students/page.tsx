@@ -118,7 +118,7 @@ export default function ForStudentsPage() {
 
             {/* Hero Media Composition */}
             <div className="lg:col-span-6 relative">
-              <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] shadow-2xl group">
+              <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl group">
                 <Image
                   src="/media/students/student_hero_futures.jpg"
                   alt="Young student looking forward with diverse vocational pavilions behind: bioresearch, aerospace engineering, design studio, skilled electrical trades, and healthcare simulation."
@@ -128,7 +128,7 @@ export default function ForStudentsPage() {
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background-dark-deep)]/90 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded bg-[var(--color-surface-base)]/80 backdrop-blur-md border border-[var(--color-border-default)] flex items-center justify-between">
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded bg-[var(--color-surface-base)]/75 backdrop-blur-md border border-[var(--color-border-default)] flex items-center justify-between">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-blue)] font-semibold">
                       One Starting Point &bull; Many Possible Futures

@@ -26,9 +26,9 @@ export function HeroCareerGraphInterface() {
   };
 
   return (
-    <div className="w-full bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-2xl transition-all duration-300 border-beam-container border-beam-slow">
+    <div className="w-full bg-[var(--background-dark-deep)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-2xl transition-all duration-300 border-beam-container border-beam-slow">
       {/* Top Header Bar */}
-      <div className="px-5 py-3.5 bg-black/40 border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div className="px-5 py-3.5 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2">
           <span className="inline-block w-2 h-2 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.7)]" />
           <span className="font-mono font-semibold tracking-wider text-[var(--color-text-primary)] uppercase">
@@ -44,7 +44,7 @@ export function HeroCareerGraphInterface() {
       </div>
 
       {/* Role Switcher Tabs */}
-      <div className="px-4 py-2.5 bg-black/20 border-b border-[var(--color-border-default)] flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+      <div className="px-4 py-2.5 bg-black/20 backdrop-blur-sm border-b border-[var(--color-border-default)] flex items-center gap-1.5 overflow-x-auto no-scrollbar">
         <span className="text-[11px] font-mono text-[var(--color-text-tertiary)] uppercase tracking-wider pr-2 shrink-0">
           Select Career:
         </span>
@@ -174,7 +174,7 @@ export function HeroCareerGraphInterface() {
           </div>
 
           {/* Active Pathway Detail Box */}
-          <div className="p-4 rounded-lg bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-3 mt-4">
+          <div className="p-4 rounded-lg bg-[var(--color-surface-raised)]/65 backdrop-blur-sm border border-[var(--color-border-default)] space-y-3 mt-4">
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--color-border-default)] pb-2.5">
               <div className="space-y-0.5">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-taupe-300)]">
