@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalCandidatePrivacyPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; CANDIDATE PRIVACY"
       title="Candidate Privacy Notice"
       description="How Career OS collects, processes, stores, and protects your personal career data when you use the platform as an individual."

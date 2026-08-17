@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalDpaPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; DPA"
       title="Data Protection Addendum"
       description="Supplementary data protection terms for enterprise and institutional partners requiring specific contractual data protection commitments."

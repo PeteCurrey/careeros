@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function RegulatoryFairEmploymentPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="REGULATORY &bull; FAIR EMPLOYMENT"
       title="Fair Employment & Equal Opportunity Compliance"
       description="EEOC Uniform Guidelines, Title VII, ADA, ADEA, and international equal employment legislation compliance across all hiring surfaces."

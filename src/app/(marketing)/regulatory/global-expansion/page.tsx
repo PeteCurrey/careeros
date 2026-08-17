@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function RegulatoryGlobalExpansionPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="REGULATORY &bull; GLOBAL MARKETS"
       title="Global Regulatory Expansion Framework"
       description="Career OS&apos;s systematic approach to UK GDPR, EU AI Act, Canadian PIPEDA, Australian Privacy Act, and upcoming markets regulatory preparation."

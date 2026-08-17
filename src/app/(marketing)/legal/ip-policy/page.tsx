@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalIpPolicyPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; IP POLICY"
       title="Intellectual Property Policy"
       description="Rules governing proprietary platform technology, user-generated content ownership, third-party IP, and DMCA takedown procedures."

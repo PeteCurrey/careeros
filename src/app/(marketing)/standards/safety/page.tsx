@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function StandardsSafetyPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="STANDARDS &bull; SAFETY"
       title="Platform Safety & Incident Response"
       description="Protocols for reporting harmful content, responding to safety incidents, and maintaining a secure environment for all users."

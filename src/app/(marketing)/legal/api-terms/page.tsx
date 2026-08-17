@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalApiTermsPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; API"
       title="API Terms of Service"
       description="Terms governing programmatic access to Career OS APIs for integration partners, institutional SIS integrations, and credential verification services."

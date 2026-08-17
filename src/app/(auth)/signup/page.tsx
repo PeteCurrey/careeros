@@ -4,20 +4,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ROUTES } from "@/lib/routes";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, AlertTriangle, ShieldAlert, Clock } from "lucide-react";
+import { CheckCircle2, AlertTriangle, ShieldAlert, Clock, ShieldCheck } from "lucide-react";
 import { createClient } from "@supabase/supabase-js";
 import { evaluateAgeBracket, AgeCalculationResult } from "@/lib/auth/age-gating";
-
-// TODO(legal): The minimum-age gate here has been upgraded to a real Date-of-Birth
-// calculation branching flow (Phase 0). Before CareerOS accepts signups from users
-// under 18 in the United States, outside counsel MUST answer the Section 5.2 questions
-// in LEGAL_HANDOFF_MEMORANDUM_MINORS_CONSENT.md regarding:
-//   1. COPPA Third-Party Disclosure determination for Opportunity Agent employer introductions.
-//   2. Texas SCOPE Act (HB 18) and California CCPA minor opt-in consent verification strength requirements.
-//   3. California AADC age-estimation compliance obligations for self-reported DOB.
-//   4. FERPA "School Official" Model DPA terms across CA, TX, NY, FL, and IL.
-//   5. AI Mentor Chat log inspection rights for school-linked accounts under FERPA.
-// This is a PRE-LAUNCH BLOCKER for Phase 1 live minor account activation.
+import { DIRECT_ACCOUNT_MIN_AGE } from "@/lib/config/age-policy";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
@@ -41,7 +31,7 @@ export default function SignupPage() {
     }
 
     if (ageEvaluation.requiresGuardianConsent && !guardianEmail) {
-      setErrorMessage("Parent or guardian email is required for users ages 13–17.");
+      setErrorMessage("Parent or guardian email is required for users ages 13–15.");
       return;
     }
 
@@ -52,8 +42,8 @@ export default function SignupPage() {
       if (SUPABASE_URL && SUPABASE_ANON_KEY) {
         const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-        if (ageEvaluation.ageBracket === "MINOR_13_17") {
-          // Phase 0: 13–17 accounts land in PENDING_GUARDIAN_CONSENT state
+        if (ageEvaluation.requiresGuardianConsent) {
+          // 13–15 accounts land in PENDING_GUARDIAN_CONSENT state
           const { error } = await supabase.from("profiles").insert({
             email,
             date_of_birth: dateOfBirth,
@@ -64,11 +54,11 @@ export default function SignupPage() {
           });
           if (error && error.code !== "23505") throw error;
         } else {
-          // 18+ adult account
-          const { error } = await supabase.from("waitlist").insert({
+          // 16+ direct account (including 16–17 minor direct and 18+ adult)
+          const { error } = await supabase.from("profiles").insert({
             email,
             date_of_birth: dateOfBirth,
-            age_bracket: "ADULT_18_PLUS",
+            age_bracket: ageEvaluation.ageBracket,
             status: "ACTIVE",
             consent_state: "NOT_REQUIRED",
           });
@@ -76,7 +66,7 @@ export default function SignupPage() {
         }
       }
 
-      if (ageEvaluation.ageBracket === "MINOR_13_17") {
+      if (ageEvaluation.requiresGuardianConsent) {
         setStatus("pending_guardian");
       } else {
         setStatus("success");
@@ -97,7 +87,7 @@ export default function SignupPage() {
             Start your Career OS
           </h1>
           <p className="text-xs text-[var(--color-text-tertiary)]">
-            Free for individuals. Persistent, sovereign career operating system.
+            Free for individuals. Persistent, private career operating system.
           </p>
         </div>
 
@@ -107,14 +97,14 @@ export default function SignupPage() {
             <ShieldAlert className="w-10 h-10 text-[var(--color-danger)] mx-auto" />
             <div className="space-y-1">
               <h2 className="text-sm font-bold text-[var(--color-text-primary)]">
-                Under-13 Signups Restricted
+                Under-13 Direct Registration Restricted
               </h2>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Career OS requires a <strong>school or district-issued account</strong> for students under 13 under federal COPPA guidelines.
+                Career OS does not provide open consumer registration for children under 13 under COPPA guidelines. Access is limited to <strong>verified school arrangements</strong>.
               </p>
             </div>
             <div className="text-[11px] text-[var(--color-text-tertiary)] bg-[var(--color-surface-base)] p-3 rounded border border-[var(--color-border-default)] text-left space-y-1">
-              <p className="font-semibold text-[var(--color-text-primary)]">What to do next:</p>
+              <p className="font-semibold text-[var(--color-text-primary)]">School Enrollment Required:</p>
               <p>Please contact your school administrator or teacher to request an institutional Career OS account invitation.</p>
             </div>
             <Link
@@ -125,15 +115,15 @@ export default function SignupPage() {
             </Link>
           </div>
         ) : status === "pending_guardian" ? (
-          /* SCREEN 2: 13-17 PENDING GUARDIAN CONSENT STATE */
+          /* SCREEN 2: 13-15 PENDING GUARDIAN CONSENT STATE */
           <div className="text-center space-y-4 py-4">
             <Clock className="w-12 h-12 text-[var(--color-brand-600)] mx-auto animate-pulse" />
             <div className="space-y-1">
               <h2 className="text-base font-bold text-[var(--color-text-primary)]">
-                Guardian Approval Pending
+                Parent / Guardian Consent Required
               </h2>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Your account for <strong>{email}</strong> has been created in <strong>Pending Mode</strong>.
+                Users ages 13–15 require a verified parent/guardian consent arrangement or school account.
               </p>
             </div>
 
@@ -143,19 +133,18 @@ export default function SignupPage() {
                 <span>Restricted Feature Access</span>
               </div>
               <ul className="list-disc list-inside space-y-1 text-[11px] text-[var(--color-text-tertiary)]">
-                <li>Opportunity Agent employer matching is disabled</li>
-                <li>Public Passport sharing is disabled</li>
-                <li>Account will purge if unverified within 30 days</li>
+                <li>Employer matching disabled until consent verified</li>
+                <li>Public Passport sharing disabled</li>
+                <li>Account purges if unverified within 30 days</li>
               </ul>
             </div>
 
             <p className="text-xs text-[var(--color-text-tertiary)]">
-              Guardian contact recorded: <strong>{guardianEmail}</strong>.<br />
-              (Phase 1 verification dispatch will occur upon legal sign-off).
+              Guardian contact recorded: <strong>{guardianEmail}</strong>.
             </p>
           </div>
         ) : status === "success" ? (
-          /* SCREEN 3: ADULT SUCCESS SCREEN */
+          /* SCREEN 3: SUCCESS SCREEN */
           <div className="text-center space-y-3 py-4">
             <CheckCircle2 className="w-12 h-12 text-[var(--color-success)] mx-auto" />
             <p className="text-sm font-semibold text-[var(--color-text-primary)]">
@@ -166,7 +155,7 @@ export default function SignupPage() {
             </p>
           </div>
         ) : (
-          /* SCREEN 4: SIGNUP FORM WITH REAL DOB AGE-GATE */
+          /* SCREEN 4: SIGNUP FORM */
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1">
               <label htmlFor="signup-email" className="text-xs font-semibold text-[var(--color-text-primary)]">
@@ -198,18 +187,24 @@ export default function SignupPage() {
                 className="w-full px-3 py-2.5 text-sm rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-base)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)] transition-shadow"
               />
               {ageEvaluation && (
-                <p className="text-[11px] text-[var(--color-text-tertiary)] pt-0.5">
-                  Age: {ageEvaluation.age} &bull; Classification: {ageEvaluation.ageBracket}
-                </p>
+                <div className="text-[11px] text-[var(--color-text-tertiary)] pt-1 space-y-1">
+                  <p>Age: {ageEvaluation.age} &bull; Policy State: <span className="font-mono text-[var(--color-text-primary)]">{ageEvaluation.agePolicyState}</span></p>
+                  {ageEvaluation.isMinor && ageEvaluation.hasDirectAccountEligibility && (
+                    <div className="p-2 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded text-[10px] text-[var(--color-text-secondary)] flex items-start gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-[var(--color-success)] shrink-0 mt-0.5" />
+                      <span>Direct account eligible ({DIRECT_ACCOUNT_MIN_AGE}+ policy). Minor safeguarding controls active (profile default-private, restricted employer contact).</span>
+                    </div>
+                  )}
+                </div>
               )}
             </div>
 
-            {/* GUARDIAN EMAIL FIELD FOR 13-17 MINORS */}
+            {/* GUARDIAN EMAIL FIELD FOR AGES 13-15 */}
             {ageEvaluation?.requiresGuardianConsent && (
               <div className="space-y-1 p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-lg">
                 <label htmlFor="signup-guardian-email" className="text-xs font-semibold text-[var(--color-text-primary)] flex items-center gap-1">
                   <span>Parent / Guardian Email</span>
-                  <span className="text-[10px] text-[var(--color-brand-600)] uppercase font-bold">(Required for Ages 13–17)</span>
+                  <span className="text-[10px] text-[var(--color-brand-600)] uppercase font-bold">(Required for Ages 13–15)</span>
                 </label>
                 <input
                   id="signup-guardian-email"
@@ -221,7 +216,7 @@ export default function SignupPage() {
                   className="w-full px-3 py-2 text-sm rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-disabled)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)]"
                 />
                 <p className="text-[10px] text-[var(--color-text-tertiary)]">
-                  Account activates upon guardian verification per minor privacy guidelines.
+                  Users ages 13–15 require a verified parent/guardian consent arrangement or school account.
                 </p>
               </div>
             )}

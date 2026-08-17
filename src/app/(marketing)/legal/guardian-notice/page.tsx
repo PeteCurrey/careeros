@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalGuardianNoticePage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; GUARDIAN"
       title="Guardian Notice for Minor Users"
       description="Summary notice for guardians whose minor dependants access Career OS independently, outside of a school institutional partnership."

@@ -54,7 +54,7 @@ export function HeroMentorSection() {
             <div className="pt-6 border-t border-[var(--color-border-default)] flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[var(--color-text-secondary)] font-medium">
               <span>Free for individuals</span>
               <span className="text-[var(--color-taupe-300)]">&bull;</span>
-              <span>You own your data</span>
+              <span>You control your data &amp; privacy</span>
               <span className="text-[var(--color-taupe-300)]">&bull;</span>
               <span>Lifelong compounding</span>
             </div>

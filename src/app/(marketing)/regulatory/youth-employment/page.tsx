@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function RegulatoryYouthEmploymentPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="REGULATORY &bull; YOUTH EMPLOYMENT"
       title="Youth Employment Law Compliance"
       description="Adherence to federal and state child labor laws, working hour restrictions, hazardous occupation prohibitions, and parental consent requirements."

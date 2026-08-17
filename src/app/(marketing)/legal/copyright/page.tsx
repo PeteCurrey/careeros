@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalCopyrightPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; COPYRIGHT"
       title="Copyright & Intellectual Property"
       description="Ownership of Career OS platform content, user-generated career evidence, and the rules governing platform content reproduction."

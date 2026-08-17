@@ -1,133 +1,102 @@
-import React from 'react';
-import { LegalPage } from '@/components/layout/LegalPage';
-
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Privacy — Legal | Career OS",
-  description: "Career OS Legal privacy. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/legal/privacy",
-  },
-};
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
 export default function PrivacyPolicyPage() {
+  const meta = GOVERNANCE_MANIFEST["privacy"]!;
+
+  const toc = [
+    { id: "overview", title: "1. Overview & Data Control Commitment" },
+    { id: "age-policy", title: "2. Canonical Age Architecture & Youth Privacy" },
+    { id: "ferpa-coppa", title: "3. Educational Records, FERPA & COPPA" },
+    { id: "data-collection", title: "4. Information Collected & Processing Purposes" },
+    { id: "data-sharing", title: "5. Information Sharing & Employer Interaction Controls" },
+    { id: "security-rls", title: "6. Security Architecture & Row-Level Authorization" },
+    { id: "user-rights", title: "7. User Rights & Data Portability" },
+    { id: "contact", title: "8. Governance & Privacy Contacts" },
+  ];
+
   return (
-    <LegalPage
-      title="Privacy Policy"
-      subtitle="How Career OS collects, processes, stores, and protects your personal and career information across all platform contexts."
-      effectiveDate="1 September 2026"
-    >
-      <section>
-        <h2>1. Overview and Privacy Principles</h2>
+    <GovernancePageLayout meta={meta} subtitle="Operative privacy policy governing data collection, youth privacy protections, FERPA alignment, and user data control." toc={toc}>
+      <section id="overview" className="space-y-4">
+        <h2>1. Overview &amp; Data Control Commitment</h2>
         <p>
-          Career OS is designed around the principle that your career data is a consequential personal asset that deserves strong protection. Our core privacy commitments are:
+          Career OS is built on the core principle of individual data control: <em>You control how your Career OS information is used and shared. You retain rights in the content and evidence you provide, subject to applicable Terms and this Privacy Policy.</em>
+        </p>
+        <p>
+          We do not monetize candidate data through third-party advertising networks, sell personal profiles to data brokers, or conduct unexamined algorithmic profiling.
+        </p>
+      </section>
+
+      <section id="age-policy" className="space-y-4">
+        <h2>2. Canonical Age Architecture &amp; Youth Privacy</h2>
+        <p>
+          Career OS enforces an age-banded privacy architecture aligned with statutory requirements in the United States:
         </p>
         <ul>
-          <li>Private Career Twin information and student records will not be sold to advertisers</li>
-          <li>Private career information will not be disclosed to employers without an explicit user, institutional, or legal permission basis</li>
-          <li>You maintain granular, field-level control over who can access specific parts of your professional profile</li>
-          <li>AI recommendations are powered by your data to serve you, not to profile you for third-party advertising</li>
+          <li>
+            <strong>Age 16 or Older (Direct Account Eligibility):</strong> Persons aged 16 or older are eligible to open a direct individual Career OS account. This is a product eligibility rule. Users aged 16–17 remain legal minors where applicable law treats them as minors and receive minor safeguarding protections (default-private profiles, restricted employer contact).
+          </li>
+          <li>
+            <strong>Ages 13–15 (Verified Relationship Required):</strong> Registration for users aged 13–15 requires a verified school institutional arrangement or verified parent/guardian consent. Unrestricted self-service registration without a verified relationship is prohibited.
+          </li>
+          <li>
+            <strong>Under Age 13 (Institutional Enrollment Only):</strong> Direct consumer registration for children under 13 is prohibited under COPPA. Access is enabled solely through verified educational institution agreements for legitimate educational purposes.
+          </li>
         </ul>
       </section>
 
-      <section>
-        <h2>2. Information We Collect</h2>
-        <h3>2.1 Account Information</h3>
+      <section id="ferpa-coppa" className="space-y-4">
+        <h2>3. Educational Records, FERPA &amp; COPPA</h2>
         <p>
-          Name, email address, and authentication credentials provided during registration. For institutional accounts, additional organisational details may be required.
+          Where a participating educational institution engages Career OS under an arrangement that relies on FERPA&apos;s school-official exception (34 CFR § 99.31(a)(1)), the institution and Career OS will structure the service and applicable agreement to satisfy the requirements relevant to that arrangement. We do not claim that the school-official exception applies to every Career OS deployment automatically.
         </p>
-        <h3>2.2 Career Profile Information</h3>
         <p>
-          Skills, qualifications, work experience, educational credentials, project evidence, career preferences, and goals you voluntarily add to your Career Twin and Career Passport. This is your data, under your control.
-        </p>
-        <h3>2.3 Usage Information</h3>
-        <p>
-          Interaction patterns with Platform features used to improve recommendation quality and platform performance. This data is processed in aggregated, anonymised form where possible.
-        </p>
-        <h3>2.4 Technical Information</h3>
-        <p>
-          IP addresses (stored as hashed values, not raw IPs), browser type, device information, and session data required for security and fraud prevention.
+          Under FERPA, rights regarding education records transfer to the student when the student reaches age 18 OR attends a postsecondary institution at any age. Dual-enrollment students exercise FERPA rights directly with respect to their postsecondary records.
         </p>
       </section>
 
-      <section>
-        <h2>3. How We Use Your Information</h2>
+      <section id="data-collection" className="space-y-4">
+        <h2>4. Information Collected &amp; Processing Purposes</h2>
+        <p>
+          We collect personal information necessary to deliver career intelligence, credential verification, and pathway guidance:
+        </p>
         <ul>
-          <li>Providing and improving core platform features</li>
-          <li>Generating AI Career Mentor recommendations with your explicit consent</li>
-          <li>Processing employer matching requests you initiate or approve</li>
-          <li>Sending essential service communications (security alerts, policy updates)</li>
-          <li>Detecting fraud, abuse, and security threats</li>
-          <li>Complying with legal obligations</li>
+          <li><strong>Identity &amp; Profile Data:</strong> Name, contact details, date of birth, age classification, locale.</li>
+          <li><strong>Career Twin &amp; Skill Data:</strong> Self-declared skills, verified achievements, work preferences, learning ambitions.</li>
+          <li><strong>Evidence &amp; Artifacts:</strong> Work samples, certificates, capstone project links.</li>
+          <li><strong>System Audit Data:</strong> AI interaction audit logs, consent ledger timestamps.</li>
         </ul>
-        <p className="mt-3">
-          We do not use your career data for behavioural advertising. We do not build advertising profiles. We do not sell data to data brokers.
+      </section>
+
+      <section id="data-sharing" className="space-y-4">
+        <h2>5. Information Sharing &amp; Employer Interaction Controls</h2>
+        <p>
+          Candidate profiles are default-private. Employer interactions require explicit candidate consent or institution-controlled program matching. Unrestricted recruiter browsing of minor profiles and cold commercial solicitation of school-age users are strictly prohibited.
         </p>
       </section>
 
-      <section>
-        <h2>4. Data Sharing</h2>
-        <h3>4.1 With Other Users</h3>
+      <section id="security-rls" className="space-y-4">
+        <h2>6. Security Architecture &amp; Row-Level Authorization</h2>
         <p>
-          Only information you explicitly choose to share via your privacy settings or Data Access Grants is visible to other platform users. Employers never receive access to your Career Twin without a specific grant.
-        </p>
-        <h3>4.2 With Service Providers</h3>
-        <p>
-          We engage vetted third-party service providers for infrastructure, AI model access, and security operations. All service providers are bound by data processing agreements restricting them from using your data for their own purposes.
-        </p>
-        <h3>4.3 Legal Requirements</h3>
-        <p>
-          We may disclose information when legally required by valid court order, law enforcement request, or regulatory obligation. We will notify you of any such disclosure where legally permitted.
+          Career OS implements multi-layer technical safeguards, including TLS encryption in transit, AES-256 encryption at rest, and PostgreSQL Row-Level Security (RLS) policies enforcing database authorization boundaries between tenants. PostgreSQL RLS operates as an database access-control and authorization mechanism.
         </p>
       </section>
 
-      <section>
-        <h2>5. Student Privacy (FERPA and COPPA)</h2>
+      <section id="user-rights" className="space-y-4">
+        <h2>7. User Rights &amp; Data Portability</h2>
         <p>
-          For students in educational institutions, we operate as a school official under FERPA and maintain strict protections consistent with COPPA for users under 13 who access the platform through verified institutional arrangements.
-        </p>
-        <p className="mt-3">
-          Student records shared with Career OS through institutional agreements are used only for the educational purpose for which they were shared and are never sold or used for advertising.
+          You have the right to access, inspect, export, correct, and request deletion of your Career OS personal data. Your Career Twin and Passport assets remain portable across educational and employment transitions.
         </p>
       </section>
 
-      <section>
-        <h2>6. Data Retention</h2>
+      <section id="contact" className="space-y-4">
+        <h2>8. Governance &amp; Privacy Contacts</h2>
         <p>
-          Active account data is retained for the duration of your account. Certain consent records and audit logs are retained for longer periods to satisfy legal and regulatory obligations. You may request deletion of your career data at any time through your account settings.
+          For privacy inquiries or to exercise data rights, contact our Data Privacy Officer at <a href={`mailto:${LEGAL_CONFIG.privacyEmail}`}>{LEGAL_CONFIG.privacyEmail}</a> or legal team at <a href={`mailto:${LEGAL_CONFIG.legalEmail}`}>{LEGAL_CONFIG.legalEmail}</a>.
         </p>
       </section>
-
-      <section>
-        <h2>7. Your Rights</h2>
-        <p>Depending on your jurisdiction, you may have rights to:</p>
-        <ul>
-          <li>Access and receive a copy of your personal data</li>
-          <li>Correct inaccurate personal data</li>
-          <li>Request deletion of your personal data</li>
-          <li>Object to processing or request restriction</li>
-          <li>Data portability in machine-readable format</li>
-          <li>Withdraw consent at any time for consent-based processing</li>
-        </ul>
-        <p className="mt-3">
-          To exercise any of these rights, contact: privacy@career-os.com
-        </p>
-      </section>
-
-      <section>
-        <h2>8. International Transfers</h2>
-        <p>
-          Career OS operates from the United States. If you access our Platform from outside the US, your data may be transferred to and processed in the United States. We implement appropriate safeguards for such transfers in accordance with applicable data protection laws.
-        </p>
-      </section>
-
-      <section>
-        <h2>9. Contact</h2>
-        <p>
-          Privacy questions or requests: privacy@career-os.com
-        </p>
-      </section>
-    </LegalPage>
+    </GovernancePageLayout>
   );
 }

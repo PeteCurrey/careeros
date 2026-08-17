@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function StandardsAntiDiscriminationPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="STANDARDS &bull; EQUALITY"
       title="Anti-Discrimination & Equal Opportunity Policy"
       description="Zero tolerance for discrimination based on race, gender, age, disability, sexual orientation, socio-economic background, or non-traditional educational path."

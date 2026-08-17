@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalAccessibilityPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; ACCESSIBILITY"
       title="Accessibility Statement"
       description="Career OS commitment to WCAG 2.2 AA conformance, keyboard navigation, screen reader support, and inclusive design across all platform surfaces."

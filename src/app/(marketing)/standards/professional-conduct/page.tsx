@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function StandardsProfessionalConductPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="STANDARDS &bull; CONDUCT"
       title="Professional Conduct & Communications"
       description="Guidelines for constructive communications, meeting decorum, interview professionalism, and data handling among platform participants."

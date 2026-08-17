@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function StandardsOpportunityStandardsPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="STANDARDS &bull; OPPORTUNITY VETTING"
       title="Opportunity Vetting & Quality Standards"
       description="Systematic screening protocols to eliminate predatory recruiting, multi-level marketing scams, and fraudulent job postings."

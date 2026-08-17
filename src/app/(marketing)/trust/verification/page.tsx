@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function TrustVerificationPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="TRUST &bull; VERIFICATION"
       title="W3C Verifiable Credentials & Provenance"
       description="Cryptographic proof of degrees, trade licenses, apprenticeship hours, and capstone project artifacts that belong entirely to you."

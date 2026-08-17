@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function TrustAiTransparencyPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="TRUST &bull; AI TRANSPARENCY"
       title="AI Model Transparency & Factor Provenance"
       description="Understand how AI Career Mentor and Opportunity Agent generate recommendations, compute capability matches, and explain every output."

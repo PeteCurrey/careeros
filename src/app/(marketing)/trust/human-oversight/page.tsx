@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function TrustHumanOversightPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="TRUST &bull; HUMAN OVERSIGHT"
       title="Human Agency & Oversight Architecture"
       description="Preserving human agency, accountability, and the final word in every career decision, promotion milestone, and hiring choice."

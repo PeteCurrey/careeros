@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalAcceptableUsePage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; ACCEPTABLE USE"
       title="Acceptable Use Policy"
       description="Permitted and prohibited uses of the Career OS platform, services, and professional networking capabilities."

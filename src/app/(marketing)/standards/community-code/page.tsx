@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function StandardsCommunityCodePage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="STANDARDS &bull; COMMUNITY CODE"
       title="Community Code of Conduct"
       description="The foundational expectations of integrity, mutual respect, constructive engagement, and honest capability reporting across the Career OS network."

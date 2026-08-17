@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalSchoolTermsPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; SCHOOL TERMS"
       title="School & Institution Agreement"
       description="Terms governing Career OS deployment within schools, multi-academy trusts, and district educational authorities."

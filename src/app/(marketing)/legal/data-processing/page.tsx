@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalDataProcessingPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; DATA PROCESSING"
       title="Data Processing Agreement (DPA)"
       description="GDPR Article 28-compliant data processing agreement for institutional and enterprise partners deploying Career OS."

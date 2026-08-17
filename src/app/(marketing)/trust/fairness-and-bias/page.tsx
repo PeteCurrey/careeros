@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function TrustFairnessBiasPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="TRUST &bull; FAIRNESS & BIAS"
       title="Fairness, Anti-Bias & Algorithmic Parity"
       description="Proactive bias auditing, demographic masking during initial screening, and continuous testing against adverse impact across all matching models."

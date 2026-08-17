@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function StandardsMentorCodePage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="STANDARDS &bull; MENTOR CODE"
       title="Mentor Ethics & Guidance Code"
       description="Ethical obligations for human mentors and AI guidance models: conflict of interest prevention, safeguarding, and objective advisory."

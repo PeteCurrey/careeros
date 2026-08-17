@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function StandardsEmployerCodePage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="STANDARDS &bull; EMPLOYER CODE"
       title="Employer Code of Integrity"
       description="Requirements for participating hiring organizations: genuine hiring intent, transparent salary bands, prompt candidate communication, and respectful evaluation."

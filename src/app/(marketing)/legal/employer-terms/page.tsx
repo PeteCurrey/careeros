@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function LegalEmployerTermsPage() {
   return (
     <EditorialSubpage
+      hideCta={true}
       badge="LEGAL &bull; EMPLOYER TERMS"
       title="Employer Platform Terms of Service"
       description="Terms governing employer and hiring organisation use of Career OS talent discovery, Employer Agent, and opportunity matching services."
