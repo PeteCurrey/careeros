@@ -76,7 +76,7 @@ export function HeroMentorSection() {
           priority
           sizes="(min-width: 1920px) 1152px, (min-width: 1440px) 864px, (min-width: 1024px) 60vw"
           className="object-cover object-center"
-          style={{ objectPosition: '35% center' }}
+          style={{ objectPosition: '48% center' }}
         />
 
         {/* Left-edge ivory dissolve — matches exact bg colour */}
@@ -245,12 +245,12 @@ export function HeroMentorSection() {
       >
         <Image
           src={MEDIA_ASSETS.hero.mentorTeam.src}
-          alt="Career OS multidisciplinary mentor team spanning technology, engineering, healthcare, business and creative professions"
+          alt={MEDIA_ASSETS.hero.mentorTeam.alt}
           fill
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: '38% center' }}
+          style={{ objectPosition: '50% center' }}
         />
         {/* Top fade into ivory */}
         <div

@@ -18,7 +18,7 @@ export const MEDIA_ASSETS = {
   hero: {
     mentorTeam: {
       src: '/media/hero/mentor_team_hero.jpg',
-      alt: 'Career OS Multidisciplinary Mentor Team representing engineering, executive leadership, skilled trades, healthcare, and technology',
+      alt: 'Career OS Multidisciplinary Council representing military service, emergency response, skilled trades, healthcare, corporate business, and legal professions',
       width: 1920,
       height: 1080,
       caption: 'The Career OS multidisciplinary mentor ecosystem.',
