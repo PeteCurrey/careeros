@@ -17,17 +17,27 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">Company</Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            About Career OS
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Career OS was founded on a single conviction: that every person deserves professional infrastructure of the same quality that was previously accessible only to privileged networks.
-          </p>
+    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+      {/* Full Screen Hero */}
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
+        <div className="container-editorial">
+          <div className="max-w-4xl space-y-6">
+            <span className="section-label">
+              Company
+            </span>
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+              About Career OS
+            </h1>
+            <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+              Career OS was founded on a single conviction: that every person deserves professional infrastructure of the same quality that was previously accessible only to privileged networks.
+            </p>
+          </div>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="section-editorial">
+        <div className="container-editorial space-y-16">
 
         <div className="max-w-3xl space-y-6 text-body text-[var(--color-text-secondary)] leading-relaxed">
           <p>
@@ -59,5 +69,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
