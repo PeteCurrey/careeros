@@ -4,6 +4,7 @@ export interface NavItem {
   label: string;
   href: string;
   description?: string;
+  badge?: string;
 }
 
 export interface NavGroup {
@@ -11,15 +12,24 @@ export interface NavGroup {
   items: NavItem[];
 }
 
+export interface PromoteCard {
+  title: string;
+  copy: string;
+  ctaText: string;
+  ctaHref: string;
+}
+
 export interface MegaMenuSection {
   id: string;
   label: string;
   groups: NavGroup[];
   cta?: NavItem;
+  promoteCard?: PromoteCard;
 }
 
 /** Primary desktop navigation items */
 export const primaryNav: NavItem[] = [
+  { label: 'Events', href: ROUTES.EVENTS },
   { label: 'Product', href: ROUTES.PRODUCT },
   { label: "Who It's For", href: ROUTES.FOR_PROFESSIONALS },
   { label: 'Pathways', href: ROUTES.PATHWAYS },
@@ -30,6 +40,75 @@ export const primaryNav: NavItem[] = [
 
 /** Mega menu content by section key */
 export const megaMenuContent: Record<string, MegaMenuSection> = {
+  events: {
+    id: 'events',
+    label: 'Events',
+    groups: [
+      {
+        label: 'Explore Events',
+        items: [
+          { label: 'All Events', href: ROUTES.EVENTS, description: 'Discover career fairs, recruitment days and workshops.' },
+          { label: 'Near Me', href: ROUTES.EVENTS_NEAR_ME, description: 'Opportunities happening in your local region.' },
+          { label: 'Online Events', href: ROUTES.EVENTS_ONLINE, description: 'Virtual career sessions, webinars and livestreams.' },
+          { label: 'This Week', href: ROUTES.EVENTS_THIS_WEEK, description: 'Upcoming sessions happening this week.' },
+          { label: 'This Month', href: ROUTES.EVENTS_THIS_MONTH, description: 'Plan your professional development calendar.' },
+          { label: 'Featured Events', href: ROUTES.EVENTS_FEATURED, description: 'Curated flagship events from verified partners.' },
+        ],
+      },
+      {
+        label: 'Careers & Employers',
+        items: [
+          { label: 'Career Fairs', href: ROUTES.EVENTS_CAREER_FAIRS, description: 'Multi-employer recruitment and hiring halls.' },
+          { label: 'Meet the Employer', href: ROUTES.EVENTS_MEET_THE_EMPLOYER, description: 'Company culture spotlights and live team Q&As.' },
+          { label: 'Employer Open Days', href: ROUTES.EVENTS_EMPLOYER_OPEN_DAYS, description: 'On-site facility tours and studio walk-throughs.' },
+          { label: 'Recruitment Events', href: ROUTES.EVENTS_RECRUITMENT, description: 'Direct hiring pipelines and candidate screenings.' },
+          { label: 'Hiring Days', href: ROUTES.EVENTS_HIRING_DAYS, description: 'Fast-track interviews and on-the-spot assessments.' },
+          { label: 'Graduate Recruitment', href: ROUTES.EVENTS_GRADUATE_RECRUITMENT, description: 'Rotational programmes for university leavers.' },
+          { label: 'Apprenticeship Events', href: ROUTES.EVENTS_APPRENTICESHIPS, description: 'Degree & Advanced apprenticeships across industries.' },
+        ],
+      },
+      {
+        label: 'Learning & Development',
+        items: [
+          { label: 'Workshops', href: ROUTES.EVENTS_WORKSHOPS, description: 'Hands-on practical skill sessions and portfolio clinics.' },
+          { label: 'Skills Sessions', href: ROUTES.EVENTS_SKILLS_SESSIONS, description: 'Targeted upskilling in high-demand disciplines.' },
+          { label: 'Webinars', href: ROUTES.EVENTS_WEBINARS, description: 'Expert industry briefings and market forecasts.' },
+          { label: 'Masterclasses', href: ROUTES.EVENTS_MASTERCLASSES, description: 'Advanced strategies led by distinguished practitioners.' },
+          { label: 'Career Talks', href: ROUTES.EVENTS_CAREER_TALKS, description: 'Candid stories of non-linear professional journeys.' },
+          { label: 'CV & Interview Clinics', href: ROUTES.EVENTS_CV_CLINICS, description: 'Resume audits and simulated behavioral interviews.' },
+          { label: 'Networking Events', href: ROUTES.EVENTS_NETWORKING, description: 'Meaningful sector mixers and community meetups.' },
+        ],
+      },
+      {
+        label: 'Education & Early Careers',
+        items: [
+          { label: 'School & College Events', href: ROUTES.EVENTS_SCHOOL_COLLEGE, description: 'Safe career exploration for secondary students.' },
+          { label: 'University Events', href: ROUTES.EVENTS_UNIVERSITY, description: 'Campus panels, academic fairs and faculty events.' },
+          { label: 'Graduate Events', href: ROUTES.EVENTS_GRADUATE, description: 'Transition support and early career momentum.' },
+          { label: 'Apprenticeships', href: ROUTES.EVENTS_APPRENTICESHIPS, description: 'Earn-as-you-learn technical and corporate tracks.' },
+          { label: 'Internships & Placements', href: ROUTES.EVENTS_INTERNSHIPS, description: 'Summer internships and industrial placement years.' },
+          { label: 'Campus Recruitment', href: ROUTES.EVENTS_CAMPUS_RECRUITMENT, description: 'Employer milkrounds and technical coding days.' },
+        ],
+      },
+      {
+        label: 'Entrepreneurship',
+        items: [
+          { label: 'Founder Events', href: ROUTES.EVENTS_FOUNDERS, description: 'Roundtables, co-founder meetups and peer circles.' },
+          { label: 'Startup Events', href: ROUTES.EVENTS_STARTUPS, description: 'Demo days, pitch nights and early-stage hiring.' },
+          { label: 'Business Workshops', href: ROUTES.EVENTS_BUSINESS_WORKSHOPS, description: 'IP, legal frameworks, cashflow and sales clinics.' },
+          { label: 'Funding & Investor Events', href: ROUTES.EVENTS_FUNDING_INVESTORS, description: 'Angel forums, grant clinics and VC panels.' },
+          { label: 'Entrepreneurship Hub', href: ROUTES.EVENTS_ENTREPRENEURSHIP, description: 'Venture creation as part of a lifelong career.' },
+        ],
+      },
+    ],
+    promoteCard: {
+      title: 'Promote an Event',
+      copy: 'Reach people actively building their careers.',
+      ctaText: 'List an Event',
+      ctaHref: ROUTES.EVENTS_PROMOTE,
+    },
+    cta: { label: 'Explore All Career Events', href: ROUTES.EVENTS },
+  },
   product: {
     id: 'product',
     label: 'Product',
@@ -157,6 +236,19 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
 
 /** Footer navigation groups */
 export const footerNav: NavGroup[] = [
+  {
+    label: 'Events',
+    items: [
+      { label: 'All Events Hub', href: ROUTES.EVENTS },
+      { label: 'Career Fairs', href: ROUTES.EVENTS_CAREER_FAIRS },
+      { label: 'Apprenticeship Events', href: ROUTES.EVENTS_APPRENTICESHIPS },
+      { label: 'Workshops & Skills', href: ROUTES.EVENTS_WORKSHOPS },
+      { label: 'Meet Employers', href: ROUTES.EVENTS_MEET_THE_EMPLOYER },
+      { label: 'Founder & Startup Events', href: ROUTES.EVENTS_FOUNDERS },
+      { label: 'Promote an Event', href: ROUTES.EVENTS_PROMOTE },
+      { label: 'Organiser Portal', href: ROUTES.EVENTS_ORGANISERS_DASHBOARD },
+    ],
+  },
   {
     label: 'Product',
     items: [
