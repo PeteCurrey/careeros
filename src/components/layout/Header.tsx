@@ -7,12 +7,13 @@ import { ROUTES } from '@/lib/routes';
 import { primaryNav, megaMenuContent } from '@/lib/navigation';
 import { Button } from '@/components/ui/Button';
 import { MegaMenu } from './MegaMenu';
-import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function Header() {
   const [activeMenuKey, setActiveMenuKey] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileEventsOpen, setMobileEventsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -38,14 +39,14 @@ export function Header() {
       className={cn(
         'sticky top-0 z-40 w-full transition-all duration-300',
         scrolled
-          ? 'bg-[var(--color-surface-base)]/75 backdrop-blur-md border-b border-[var(--color-border-default)] shadow-xs'
+          ? 'bg-[var(--color-surface-base)]/85 backdrop-blur-md border-b border-[var(--color-border-default)] shadow-xs'
           : 'bg-transparent border-b border-transparent'
       )}
     >
       <div className="container-editorial">
         <div className="flex items-center justify-between h-20">
           
-          {/* Brand Wordmark (Editorial & Dignified) */}
+          {/* Brand Wordmark */}
           <Link
             href={ROUTES.HOME}
             className="flex items-center gap-2.5 text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--color-focus)] px-1"
@@ -77,7 +78,8 @@ export function Header() {
                       'inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium transition-colors cursor-pointer rounded-[var(--radius-button)]',
                       isCurrent
                         ? 'text-[var(--color-text-primary)] bg-white/10'
-                        : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5'
+                        : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5',
+                      item.label === 'Events' && 'text-white font-semibold'
                     )}
                   >
                     <span>{item.label}</span>
@@ -105,6 +107,13 @@ export function Header() {
 
           {/* Right Action Area */}
           <div className="hidden lg:flex items-center gap-4">
+            <Link
+              href={ROUTES.EVENTS_PROMOTE}
+              className="text-xs font-medium text-[var(--color-text-secondary)] hover:text-[var(--accent-blue)] transition-colors px-2 py-1 flex items-center gap-1.5"
+            >
+              <Sparkles className="w-3 h-3 text-[var(--accent-blue)]" />
+              <span>Host an Event</span>
+            </Link>
             <Link
               href={ROUTES.LOGIN}
               className="text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors px-2 py-1"
@@ -137,10 +146,63 @@ export function Header() {
         />
       )}
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer with Accordion */}
       {mobileOpen && (
         <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[var(--color-surface-base)] z-50 overflow-y-auto p-6 flex flex-col justify-between border-t border-[var(--color-border-default)]">
           <div className="space-y-6">
+            
+            {/* Events Accordion */}
+            <div className="p-4 bg-[var(--color-surface-raised)] border border-[rgba(47,143,255,0.2)] rounded-[var(--radius-card)] space-y-3">
+              <div className="flex items-center justify-between">
+                <Link
+                  href={ROUTES.EVENTS}
+                  className="text-sm font-bold text-[var(--color-text-primary)] flex items-center gap-2"
+                >
+                  <Calendar className="w-4 h-4 text-[var(--accent-blue)]" />
+                  <span>Events Platform</span>
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setMobileEventsOpen(!mobileEventsOpen)}
+                  className="p-1 text-xs text-[var(--color-text-secondary)] hover:text-white"
+                  aria-label="Toggle Events Submenu"
+                >
+                  <ChevronDown className={cn('w-4 h-4 transition-transform', mobileEventsOpen && 'rotate-180')} />
+                </button>
+              </div>
+
+              {mobileEventsOpen && (
+                <div className="pt-2 border-t border-[var(--color-border-default)] space-y-4">
+                  {megaMenuContent.events.groups.map((grp) => (
+                    <div key={grp.label} className="space-y-1.5">
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-300)]">
+                        {grp.label}
+                      </div>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        {grp.items.map((it) => (
+                          <Link
+                            key={it.href}
+                            href={it.href}
+                            className="p-2 bg-[var(--color-surface-base)] text-[11px] text-[var(--color-text-primary)] rounded-[var(--radius-sm)] hover:border-zinc-500 border border-[var(--color-border-default)] line-clamp-1"
+                          >
+                            {it.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+
+                  <Link
+                    href={ROUTES.EVENTS_PROMOTE}
+                    className="block p-3 bg-white text-zinc-900 text-xs font-bold rounded-[var(--radius-button)] text-center shadow-xs"
+                  >
+                    List an Event on CareerOS →
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Who Career OS is For */}
             <div className="space-y-2">
               <span className="section-label">
                 Who Career OS is For
@@ -173,6 +235,7 @@ export function Header() {
               </div>
             </div>
 
+            {/* Platform Foundations */}
             <div className="space-y-2 pt-2 border-t border-[var(--color-border-default)]">
               <span className="section-label">
                 Platform Foundations
@@ -232,4 +295,3 @@ export function Header() {
     </header>
   );
 }
-
