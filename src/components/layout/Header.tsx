@@ -38,8 +38,8 @@ export function Header() {
       className={cn(
         'sticky top-0 z-40 w-full transition-all duration-300',
         scrolled
-          ? 'bg-[var(--color-ivory-base)]/80 backdrop-blur-md border-b border-[var(--color-border-default)] shadow-xs'
-          : 'bg-[var(--color-ivory-base)]/90 backdrop-blur-sm border-b border-[var(--color-border-subtle)]'
+          ? 'bg-[var(--color-surface-base)]/85 backdrop-blur-md border-b border-[var(--color-border-default)] shadow-xs'
+          : 'bg-[var(--color-surface-base)]/90 backdrop-blur-sm border-b border-[var(--color-border-subtle)]'
       )}
     >
       <div className="container-editorial">
@@ -48,12 +48,12 @@ export function Header() {
           {/* Brand Wordmark (Editorial & Dignified) */}
           <Link
             href={ROUTES.HOME}
-            className="flex items-center gap-2.5 text-[var(--color-charcoal-deep)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--color-focus)] px-1"
+            className="flex items-center gap-2.5 text-[var(--color-text-primary)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--color-focus)] px-1"
           >
             <span className="text-xl font-bold tracking-tight">
               Career OS
             </span>
-            <span className="hidden sm:inline-block text-[11px] uppercase tracking-widest text-[var(--color-taupe-600)] font-medium pl-2 border-l border-[var(--color-border-default)]">
+            <span className="hidden sm:inline-block text-[11px] uppercase tracking-widest text-[var(--color-taupe-300)] font-medium pl-2 border-l border-[var(--color-border-default)]">
               Platform
             </span>
           </Link>
@@ -75,8 +75,8 @@ export function Header() {
                     className={cn(
                       'inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium transition-colors cursor-pointer rounded-[var(--radius-button)]',
                       isCurrent
-                        ? 'text-[var(--color-charcoal-deep)] bg-[var(--color-surface-interactive)]'
-                        : 'text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)] hover:bg-[var(--color-surface-interactive)]/60'
+                        ? 'text-[var(--color-text-primary)] bg-white/10'
+                        : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5'
                     )}
                   >
                     <span>{item.label}</span>
@@ -94,7 +94,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="px-3.5 py-2 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)] hover:bg-[var(--color-surface-interactive)]/60 rounded-[var(--radius-button)] transition-colors"
+                  className="px-3.5 py-2 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5 rounded-[var(--radius-button)] transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -106,7 +106,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href={ROUTES.LOGIN}
-              className="text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)] transition-colors px-2 py-1"
+              className="text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors px-2 py-1"
             >
               Log In
             </Link>
@@ -121,7 +121,7 @@ export function Header() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? 'Close main menu' : 'Open main menu'}
-            className="lg:hidden p-2 text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)] rounded-[var(--radius-button)]"
+            className="lg:hidden p-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] rounded-[var(--radius-button)]"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -138,7 +138,7 @@ export function Header() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[var(--color-ivory-base)] z-50 overflow-y-auto p-6 flex flex-col justify-between border-t border-[var(--color-border-default)]">
+        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[var(--color-surface-base)] z-50 overflow-y-auto p-6 flex flex-col justify-between border-t border-[var(--color-border-default)]">
           <div className="space-y-6">
             <div className="space-y-2">
               <span className="section-label">
@@ -147,25 +147,25 @@ export function Header() {
               <div className="grid grid-cols-2 gap-2 pt-2">
                 <Link
                   href={ROUTES.FOR_STUDENTS}
-                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-charcoal-deep)] rounded-[var(--radius-sm)]"
+                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-text-primary)] rounded-[var(--radius-sm)] hover:border-[var(--color-border-strong)]"
                 >
                   Students
                 </Link>
                 <Link
                   href={ROUTES.FOR_PROFESSIONALS}
-                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-charcoal-deep)] rounded-[var(--radius-sm)]"
+                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-text-primary)] rounded-[var(--radius-sm)] hover:border-[var(--color-border-strong)]"
                 >
                   Professionals
                 </Link>
                 <Link
                   href={ROUTES.FOR_HIGH_SCHOOLS}
-                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-charcoal-deep)] rounded-[var(--radius-sm)]"
+                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-text-primary)] rounded-[var(--radius-sm)] hover:border-[var(--color-border-strong)]"
                 >
                   High Schools
                 </Link>
                 <Link
                   href={ROUTES.FOR_EMPLOYERS}
-                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-charcoal-deep)] rounded-[var(--radius-sm)]"
+                  className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-semibold text-[var(--color-text-primary)] rounded-[var(--radius-sm)] hover:border-[var(--color-border-strong)]"
                 >
                   Employers
                 </Link>
@@ -178,27 +178,27 @@ export function Header() {
               </span>
               <ul className="space-y-2 pt-1 text-sm font-medium">
                 <li>
-                  <Link href={ROUTES.PRODUCT_AI_CAREER_MENTOR} className="block py-1 text-[var(--color-charcoal-deep)] hover:text-[var(--color-mauve-base)]">
+                  <Link href={ROUTES.PRODUCT_AI_CAREER_MENTOR} className="block py-1 text-[var(--color-text-primary)] hover:text-[var(--color-mauve-base)]">
                     AI Career Mentor
                   </Link>
                 </li>
                 <li>
-                  <Link href={ROUTES.PRODUCT_CAREER_TWIN} className="block py-1 text-[var(--color-charcoal-deep)] hover:text-[var(--color-mauve-base)]">
+                  <Link href={ROUTES.PRODUCT_CAREER_TWIN} className="block py-1 text-[var(--color-text-primary)] hover:text-[var(--color-mauve-base)]">
                     Career Twin
                   </Link>
                 </li>
                 <li>
-                  <Link href={ROUTES.PRODUCT_CAREER_PASSPORT} className="block py-1 text-[var(--color-charcoal-deep)] hover:text-[var(--color-mauve-base)]">
+                  <Link href={ROUTES.PRODUCT_CAREER_PASSPORT} className="block py-1 text-[var(--color-text-primary)] hover:text-[var(--color-mauve-base)]">
                     Career Passport
                   </Link>
                 </li>
                 <li>
-                  <Link href={ROUTES.PRODUCT_CAREER_GRAPH} className="block py-1 text-[var(--color-charcoal-deep)] hover:text-[var(--color-mauve-base)]">
+                  <Link href={ROUTES.PRODUCT_CAREER_GRAPH} className="block py-1 text-[var(--color-text-primary)] hover:text-[var(--color-mauve-base)]">
                     Career Graph
                   </Link>
                 </li>
                 <li>
-                  <Link href={ROUTES.PRODUCT_OPPORTUNITY_AGENT} className="block py-1 text-[var(--color-charcoal-deep)] hover:text-[var(--color-mauve-base)]">
+                  <Link href={ROUTES.PRODUCT_OPPORTUNITY_AGENT} className="block py-1 text-[var(--color-text-primary)] hover:text-[var(--color-mauve-base)]">
                     Opportunity Agent
                   </Link>
                 </li>
@@ -206,13 +206,13 @@ export function Header() {
             </div>
 
             <div className="pt-2 border-t border-[var(--color-border-default)] space-y-2 text-sm font-medium text-[var(--color-text-secondary)]">
-              <Link href={ROUTES.TRUST} className="block py-1 hover:text-[var(--color-charcoal-deep)]">
+              <Link href={ROUTES.TRUST} className="block py-1 hover:text-[var(--color-text-primary)]">
                 Trust Centre & Responsible AI
               </Link>
-              <Link href={ROUTES.PATHWAYS} className="block py-1 hover:text-[var(--color-charcoal-deep)]">
+              <Link href={ROUTES.PATHWAYS} className="block py-1 hover:text-[var(--color-text-primary)]">
                 Pathways Directory
               </Link>
-              <Link href={ROUTES.COMPANY_ABOUT} className="block py-1 hover:text-[var(--color-charcoal-deep)]">
+              <Link href={ROUTES.COMPANY_ABOUT} className="block py-1 hover:text-[var(--color-text-primary)]">
                 About Career OS
               </Link>
             </div>

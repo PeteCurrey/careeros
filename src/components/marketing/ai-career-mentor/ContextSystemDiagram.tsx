@@ -24,7 +24,7 @@ export function ContextSystemDiagram() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-[var(--color-border-default)]">
           <div>
             <span className="section-label">System Architecture</span>
-            <h3 className="text-xl font-bold font-serif text-[var(--color-charcoal-deep)] mt-1">
+            <h3 className="text-xl font-bold font-serif text-[var(--color-text-primary)] mt-1">
               Context-Engine Interconnection Topology
             </h3>
           </div>
@@ -36,14 +36,14 @@ export function ContextSystemDiagram() {
         {/* System Diagram Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
           {/* Node 1: Career Twin */}
-          <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
+          <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] font-bold text-[var(--color-taupe-700)] uppercase tracking-wider">
                 INPUT SUBSYSTEM
               </span>
               <span className="w-2 h-2 rounded-full bg-blue-500" />
             </div>
-            <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+            <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
               Career Twin
             </h4>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -52,14 +52,14 @@ export function ContextSystemDiagram() {
           </div>
 
           {/* Center Node: AI Career Mentor */}
-          <div className="p-5 bg-[var(--color-surface-warm)] border-2 border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-3 shadow-subtle relative">
+          <div className="p-5 bg-[var(--color-surface-warm)] border-2 border-white/15 rounded-[var(--radius-card)] space-y-3 shadow-subtle relative">
             <div className="flex items-center justify-between">
-              <span className="font-mono text-[10px] font-bold text-[var(--color-charcoal-deep)] uppercase tracking-wider">
+              <span className="font-mono text-[10px] font-bold text-[var(--color-text-primary)] uppercase tracking-wider">
                 GUIDANCE LAYER
               </span>
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
             </div>
-            <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+            <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
               AI Career Mentor
             </h4>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -68,14 +68,14 @@ export function ContextSystemDiagram() {
           </div>
 
           {/* Node 3: Output Engines */}
-          <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
+          <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] font-bold text-[var(--color-taupe-700)] uppercase tracking-wider">
                 PROOF &amp; PATHWAYS
               </span>
               <span className="w-2 h-2 rounded-full bg-purple-500" />
             </div>
-            <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+            <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
               Passport &amp; Graph
             </h4>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -106,11 +106,11 @@ export function ContextSystemDiagram() {
           {contextCategories.map((cat, idx) => {
             const Icon = cat.icon;
             return (
-              <div key={idx} className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 hover:border-[var(--color-charcoal-base)] transition-colors">
-                <div className="w-8 h-8 rounded bg-[var(--color-taupe-100)] text-[var(--color-charcoal-deep)] flex items-center justify-center mb-2">
+              <div key={idx} className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 hover:border-white/20 transition-colors">
+                <div className="w-8 h-8 rounded bg-white/10 text-[var(--color-text-primary)] flex items-center justify-center mb-2">
                   <Icon className="w-4 h-4" />
                 </div>
-                <h4 className="font-bold text-sm text-[var(--color-charcoal-deep)] font-serif">
+                <h4 className="font-bold text-sm text-[var(--color-text-primary)] font-serif">
                   {cat.title}
                 </h4>
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">

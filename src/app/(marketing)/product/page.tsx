@@ -16,14 +16,14 @@ export const metadata: Metadata = {
 
 export default function ProductOverviewPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Header */}
-      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial space-y-6 max-w-4xl">
           <span className="section-label">
             Product Architecture & Subsystems
           </span>
-          <h1 className="text-display-section text-[var(--color-charcoal-deep)]">
+          <h1 className="text-display-section text-[var(--color-text-primary)]">
             A comprehensive operating system for lifelong career development.
           </h1>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -33,7 +33,7 @@ export default function ProductOverviewPage() {
       </section>
 
       {/* Engine Grid */}
-      <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProductEngineCard
@@ -89,13 +89,13 @@ export default function ProductOverviewPage() {
       </section>
 
       {/* System Principles */}
-      <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-3">
             <span className="section-label">
               Architectural Integrity
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               Engineered as infrastructure, not disposable software.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
@@ -106,7 +106,7 @@ export default function ProductOverviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <span className="section-label text-[10px]">Pillar 01</span>
-              <h4 className="font-semibold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-semibold text-base text-[var(--color-text-primary)]">
                 Permanent Data Portability
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -115,7 +115,7 @@ export default function ProductOverviewPage() {
             </div>
             <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <span className="section-label text-[10px]">Pillar 02</span>
-              <h4 className="font-semibold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-semibold text-base text-[var(--color-text-primary)]">
                 Model-Agnostic AI Execution
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -124,7 +124,7 @@ export default function ProductOverviewPage() {
             </div>
             <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <span className="section-label text-[10px]">Pillar 03</span>
-              <h4 className="font-semibold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-semibold text-base text-[var(--color-text-primary)]">
                 Multi-Tenant Isolation
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -136,17 +136,17 @@ export default function ProductOverviewPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-editorial bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] border-t border-[var(--color-charcoal-border)]">
+      <section className="section-editorial bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border-t border-[var(--color-border-default)]">
         <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="space-y-2 max-w-xl">
             <h3 className="text-2xl font-normal text-white tracking-tight">
               Get started with Career OS
             </h3>
-            <p className="text-sm text-[var(--color-text-inverse-muted)] leading-relaxed">
+            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
               Create your free account today and start building your lifetime professional record.
             </p>
           </div>
-          <Button href={ROUTES.SIGNUP} variant="dark" size="lg" className="shrink-0">
+          <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="shrink-0">
             Start Your Career <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

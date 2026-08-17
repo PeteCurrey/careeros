@@ -4,7 +4,7 @@ import React from "react";
 
 export function TheProblemSection() {
   return (
-    <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-12">
         <div className="space-y-3">
           <span className="section-label">
@@ -14,9 +14,9 @@ export function TheProblemSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-8 space-y-8">
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)] max-w-3xl leading-[1.08]">
+            <h2 className="text-display-section text-[var(--color-text-primary)] max-w-3xl leading-[1.08]">
               Careers aren't linear anymore. <br />
-              <span className="text-[var(--color-taupe-600)] font-normal">
+              <span className="text-[var(--color-taupe-300)] font-normal">
                 Career support shouldn't be either.
               </span>
             </h2>
@@ -34,20 +34,20 @@ export function TheProblemSection() {
           </div>
 
           <div className="lg:col-span-4 p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
-            <div className="text-xs uppercase tracking-widest text-[var(--color-taupe-600)] font-semibold">
+            <div className="text-xs uppercase tracking-widest text-[var(--color-taupe-300)] font-semibold">
               The Reality Gap
             </div>
             <div className="space-y-4 text-xs text-[var(--color-text-secondary)]">
               <div className="pb-3 border-b border-[var(--color-border-subtle)]">
-                <span className="font-semibold text-[var(--color-charcoal-deep)] block text-sm mb-0.5">5.7 Career Changes</span>
+                <span className="font-semibold text-[var(--color-text-primary)] block text-sm mb-0.5">5.7 Career Changes</span>
                 Average career pivots an individual will make over their working lifetime.
               </div>
               <div className="pb-3 border-b border-[var(--color-border-subtle)]">
-                <span className="font-semibold text-[var(--color-charcoal-deep)] block text-sm mb-0.5">85% Unverified Résumés</span>
+                <span className="font-semibold text-[var(--color-text-primary)] block text-sm mb-0.5">85% Unverified Résumés</span>
                 Self-reported claims on job boards that lack verifiable evidence provenance.
               </div>
               <div>
-                <span className="font-semibold text-[var(--color-charcoal-deep)] block text-sm mb-0.5">1 Platform</span>
+                <span className="font-semibold text-[var(--color-text-primary)] block text-sm mb-0.5">1 Platform</span>
                 Career OS unites discovery, mentoring, evidence, and progression in one sovereign home.
               </div>
             </div>

@@ -124,20 +124,20 @@ export function TwinLayersGraphic() {
                 onClick={() => setActiveId(dim.id)}
                 className={`p-4 rounded-[var(--radius-card)] border text-left transition-all flex items-start justify-between gap-3 ${
                   isSelected
-                    ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)] shadow-subtle'
-                    : 'bg-[var(--color-surface-raised)] text-[var(--color-charcoal-deep)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+                    ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15 shadow-subtle'
+                    : 'bg-[var(--color-surface-raised)] text-[var(--color-text-primary)] border-[var(--color-border-default)] hover:border-white/20'
                 }`}
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <Icon className={`w-4 h-4 ${isSelected ? 'text-[var(--color-ivory-base)]' : 'text-[var(--color-taupe-600)]'}`} />
+                    <Icon className={`w-4 h-4 ${isSelected ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-taupe-600)]'}`} />
                     <span className="font-bold text-xs">{dim.title}</span>
                   </div>
                   <span className={`text-[10px] font-mono block ${isSelected ? 'text-[var(--color-taupe-300)]' : 'text-[var(--color-taupe-700)]'}`}>
                     {dim.category}
                   </span>
                 </div>
-                <ChevronRight className={`w-4 h-4 shrink-0 mt-1 transition-transform ${isSelected ? 'translate-x-0.5 text-[var(--color-ivory-base)]' : 'text-[var(--color-taupe-400)]'}`} />
+                <ChevronRight className={`w-4 h-4 shrink-0 mt-1 transition-transform ${isSelected ? 'translate-x-0.5 text-[var(--color-text-primary)]' : 'text-[var(--color-taupe-400)]'}`} />
               </button>
             );
           })}
@@ -147,7 +147,7 @@ export function TwinLayersGraphic() {
         <div className="lg:col-span-5 sticky top-24">
           <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-5 shadow-subtle">
             <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-charcoal-deep)]">
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-text-primary)]">
                 Dimension Inspector
               </span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[var(--color-surface-warm)] text-[var(--color-taupe-700)] border border-[var(--color-border-default)]">
@@ -157,11 +157,11 @@ export function TwinLayersGraphic() {
 
             <div className="space-y-4 text-xs">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] flex items-center justify-center">
+                <div className="w-10 h-10 rounded bg-white/15 text-[var(--color-text-primary)] flex items-center justify-center">
                   <activeDim.icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+                  <h4 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                     {activeDim.title}
                   </h4>
                   <span className="text-[11px] text-[var(--color-text-tertiary)] font-mono">
@@ -174,11 +174,11 @@ export function TwinLayersGraphic() {
                 {activeDim.description}
               </p>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
                 <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-700)] block">
                   Illustrative Field Items in Profile:
                 </span>
-                <ul className="space-y-1.5 text-xs text-[var(--color-charcoal-deep)] font-mono">
+                <ul className="space-y-1.5 text-xs text-[var(--color-text-primary)] font-mono">
                   {activeDim.sampleItems.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-taupe-600)]" />
@@ -191,7 +191,7 @@ export function TwinLayersGraphic() {
 
             <div className="p-3 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded text-[11px] text-[var(--color-text-secondary)]">
               <p className="leading-snug">
-                <strong className="text-[var(--color-charcoal-deep)]">Product Note:</strong> Career Twin dimensions shown here are illustrative of the product concept and may evolve as the platform develops.
+                <strong className="text-[var(--color-text-primary)]">Product Note:</strong> Career Twin dimensions shown here are illustrative of the product concept and may evolve as the platform develops.
               </p>
             </div>
           </div>

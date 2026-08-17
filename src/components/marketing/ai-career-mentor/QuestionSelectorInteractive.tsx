@@ -162,8 +162,8 @@ export function QuestionSelectorInteractive() {
                 onClick={() => setSelectedId(item.id)}
                 className={`w-full text-left p-4 rounded-[var(--radius-card)] border text-xs transition-all flex items-start justify-between gap-3 ${
                   isSelected
-                    ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)] shadow-subtle'
-                    : 'bg-[var(--color-surface-raised)] text-[var(--color-charcoal-deep)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+                    ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15 shadow-subtle'
+                    : 'bg-[var(--color-surface-raised)] text-[var(--color-text-primary)] border-[var(--color-border-default)] hover:border-white/20'
                 }`}
               >
                 <div className="space-y-1">
@@ -172,7 +172,7 @@ export function QuestionSelectorInteractive() {
                   </span>
                   <p className="font-semibold leading-snug">{item.question}</p>
                 </div>
-                <ArrowRight className={`w-4 h-4 shrink-0 mt-1 transition-transform ${isSelected ? 'translate-x-1 text-[var(--color-ivory-base)]' : 'text-[var(--color-taupe-400)]'}`} />
+                <ArrowRight className={`w-4 h-4 shrink-0 mt-1 transition-transform ${isSelected ? 'translate-x-1 text-[var(--color-text-primary)]' : 'text-[var(--color-taupe-400)]'}`} />
               </button>
             );
           })}
@@ -184,11 +184,11 @@ export function QuestionSelectorInteractive() {
             <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[var(--color-taupe-600)]" />
-                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-charcoal-deep)]">
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-text-primary)]">
                   Illustrative Mentor Guidance Output
                 </span>
               </div>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[var(--color-taupe-100)] text-[var(--color-charcoal-deep)] font-semibold border border-[var(--color-border-default)]">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-[var(--color-text-primary)] font-semibold border border-[var(--color-border-default)]">
                 CATEGORY: {activeQ.category.toUpperCase()}
               </span>
             </div>
@@ -198,13 +198,13 @@ export function QuestionSelectorInteractive() {
                 <span className="font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wider text-[10px] block mb-1">
                   User Prompt
                 </span>
-                <p className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+                <p className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                   {activeQ.question}
                 </p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-                <span className="font-bold text-[var(--color-charcoal-deep)] text-xs block flex items-center gap-1.5">
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+                <span className="font-bold text-[var(--color-text-primary)] text-xs block flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                   Mentor Recommendation:
                 </span>
@@ -220,7 +220,7 @@ export function QuestionSelectorInteractive() {
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="font-semibold text-[var(--color-text-tertiary)] shrink-0 w-24">Action Step:</span>
-                  <span className="text-[var(--color-charcoal-deep)] font-semibold">{activeQ.actionableStep}</span>
+                  <span className="text-[var(--color-text-primary)] font-semibold">{activeQ.actionableStep}</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="font-semibold text-[var(--color-text-tertiary)] shrink-0 w-24">Passport Link:</span>

@@ -134,11 +134,11 @@ export default function CareerPassportPage() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* =================================================================== */}
       {/* SECTION 01 — HERO WITH BREATHTAKING CITY HORIZON                    */}
       {/* =================================================================== */}
-      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-ivory-base)] py-16 lg:py-24">
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-16 lg:py-24">
         {/* City & Horizon Background Image */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <Image
@@ -150,12 +150,12 @@ export default function CareerPassportPage() {
             className="object-cover object-center"
           />
 
-          {/* Editorial Scrim: Ivory Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
+          {/* Editorial Scrim: Charcoal Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(to right, #F7F5EC 0%, rgba(247, 245, 236, 0.96) 38%, rgba(247, 245, 236, 0.88) 55%, rgba(247, 245, 236, 0.42) 78%, rgba(247, 245, 236, 0.18) 100%)`,
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
             }}
           />
 
@@ -164,7 +164,7 @@ export default function CareerPassportPage() {
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-28 pointer-events-none"
             style={{
-              background: `linear-gradient(to bottom, #F7F5EC 0%, transparent 100%)`,
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
             }}
           />
 
@@ -173,7 +173,7 @@ export default function CareerPassportPage() {
             aria-hidden="true"
             className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
             style={{
-              background: `linear-gradient(to top, #F7F5EC 0%, transparent 100%)`,
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
             }}
           />
         </div>
@@ -182,7 +182,7 @@ export default function CareerPassportPage() {
           <div className="max-w-4xl space-y-6">
             <span className="section-label">CORE SUBSYSTEM &bull; CAREER PASSPORT</span>
 
-            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">
               Don’t just say what you can do.{' '}
               <span className="italic font-normal block sm:inline">
                 Carry the evidence.
@@ -201,14 +201,14 @@ export default function CareerPassportPage() {
               </Button>
               <a
                 href="#career-passport-visual"
-                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-charcoal-deep)] hover:text-[var(--color-taupe-700)] transition-colors px-4 py-3 border border-[var(--color-border-default)] rounded-[var(--radius-card)] bg-white/70 backdrop-blur-xs"
+                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-text-primary)] hover:text-white transition-colors px-4 py-3 border border-[var(--color-border-default)] rounded-[var(--radius-card)] bg-white/10 backdrop-blur-xs"
               >
                 <span>See an example Passport</span>
                 <ChevronDown className="w-4 h-4" />
               </a>
             </div>
 
-            <div className="flex items-center gap-4 text-xs font-mono text-[var(--color-taupe-700)] pt-2">
+            <div className="flex items-center gap-4 text-xs font-mono text-[var(--color-taupe-300)] pt-2">
               <span>&bull; Free for individuals</span>
               <span>&bull; User-controlled selective sharing</span>
               <span>&bull; Portable across employers</span>
@@ -229,7 +229,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">THE EVIDENCE GAP</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               A résumé compresses your career. Evidence adds the detail back.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -250,7 +250,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">EVIDENCE CATEGORIES</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Your career produces more evidence than fits on two pages.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -270,7 +270,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">VERIFICATION TRANSPARENCY</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Evidence has a status.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -284,19 +284,19 @@ export default function CareerPassportPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
             <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block">Self-Declared</strong>
+              <strong className="text-[var(--color-text-primary)] block">Self-Declared</strong>
               <span className="text-[var(--color-text-secondary)]">User provided data; transparently marked as an unverified candidate statement.</span>
             </div>
             <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block">Evidence Attached</strong>
+              <strong className="text-[var(--color-text-primary)] block">Evidence Attached</strong>
               <span className="text-[var(--color-text-secondary)]">Supporting artifact attached (PDF, report, repo); viewable by authorized reviewers.</span>
             </div>
             <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block">Issuer Verified</strong>
+              <strong className="text-[var(--color-text-primary)] block">Issuer Verified</strong>
               <span className="text-[var(--color-text-secondary)]">Confirmed directly by the issuing educational board, university, or trade body.</span>
             </div>
             <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block">Expired / Revoked</strong>
+              <strong className="text-[var(--color-text-primary)] block">Expired / Revoked</strong>
               <span className="text-[var(--color-text-secondary)]">Time-bounded licences automatically update when renewal windows expire.</span>
             </div>
           </div>
@@ -310,7 +310,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">MULTIDISCIPLINARY REPRESENTATION</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Professional evidence looks different in different careers.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -330,7 +330,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">USER-CONTROLLED PRIVACY</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Proof doesn&apos;t mean publishing your whole career.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -351,7 +351,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">PRACTICAL WORKED EXAMPLE</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               What would this look like in the real world?
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -372,16 +372,16 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">PLATFORM SYNERGY</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               The Passport shows the evidence. The Twin provides the context.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
               Your Career Passport stores the verified artifacts and credentials you carry. Your{' '}
-              <Link href="/product/career-twin" className="text-emerald-800 font-semibold hover:underline">
+              <Link href="/product/career-twin" className="text-emerald-400 font-semibold hover:underline">
                 Career Twin
               </Link>{' '}
               interprets that evidence to understand your overall capability profile, allowing your{' '}
-              <Link href="/product/ai-career-mentor" className="text-emerald-800 font-semibold hover:underline">
+              <Link href="/product/ai-career-mentor" className="text-emerald-400 font-semibold hover:underline">
                 AI Career Mentor
               </Link>{' '}
               to recommend high-leverage next moves.
@@ -390,11 +390,11 @@ export default function CareerPassportPage() {
 
           {/* Integrated Subsystem Architecture Flow */}
           <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] grid grid-cols-1 md:grid-cols-4 gap-4 items-stretch shadow-subtle text-xs">
-            <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-mono text-[10px] font-bold text-emerald-800 uppercase block">
+            <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+              <span className="font-mono text-[10px] font-bold text-emerald-400 uppercase block">
                 01 &bull; CAREER PASSPORT
               </span>
-              <strong className="font-serif font-bold text-sm text-[var(--color-charcoal-deep)] block">
+              <strong className="font-serif font-bold text-sm text-[var(--color-text-primary)] block">
                 Evidence &amp; Proof
               </strong>
               <p className="text-[11px] text-[var(--color-text-secondary)]">
@@ -402,11 +402,11 @@ export default function CareerPassportPage() {
               </p>
             </div>
 
-            <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-mono text-[10px] font-bold text-purple-800 uppercase block">
+            <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+              <span className="font-mono text-[10px] font-bold text-purple-400 uppercase block">
                 02 &bull; CAREER TWIN
               </span>
-              <strong className="font-serif font-bold text-sm text-[var(--color-charcoal-deep)] block">
+              <strong className="font-serif font-bold text-sm text-[var(--color-text-primary)] block">
                 Professional Context
               </strong>
               <p className="text-[11px] text-[var(--color-text-secondary)]">
@@ -414,11 +414,11 @@ export default function CareerPassportPage() {
               </p>
             </div>
 
-            <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-mono text-[10px] font-bold text-blue-800 uppercase block">
+            <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+              <span className="font-mono text-[10px] font-bold text-blue-400 uppercase block">
                 03 &bull; AI CAREER MENTOR
               </span>
-              <strong className="font-serif font-bold text-sm text-[var(--color-charcoal-deep)] block">
+              <strong className="font-serif font-bold text-sm text-[var(--color-text-primary)] block">
                 Actionable Guidance
               </strong>
               <p className="text-[11px] text-[var(--color-text-secondary)]">
@@ -426,11 +426,11 @@ export default function CareerPassportPage() {
               </p>
             </div>
 
-            <div className="p-5 bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-2">
+            <div className="p-5 bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <span className="font-mono text-[10px] font-bold text-[var(--color-taupe-300)] uppercase block">
                 04 &bull; CAREER GRAPH
               </span>
-              <strong className="font-serif font-bold text-sm text-[var(--color-ivory-base)] block">
+              <strong className="font-serif font-bold text-sm text-white block">
                 Market Possibility
               </strong>
               <p className="text-[11px] text-[var(--color-taupe-300)]">
@@ -448,7 +448,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-8">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">PORTABILITY &amp; INDEPENDENCE</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Your professional record shouldn&apos;t belong to one employer.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -460,7 +460,7 @@ export default function CareerPassportPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Job Transitions
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -469,7 +469,7 @@ export default function CareerPassportPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Apprenticeships &amp; Trades
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -478,7 +478,7 @@ export default function CareerPassportPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Lifelong Learning
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -496,7 +496,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">LIFETIME EVOLUTION</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Start with what you&apos;ve built so far.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -508,44 +508,44 @@ export default function CareerPassportPage() {
 
           {/* Illustrative Lifetime Evolution Timeline */}
           <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6 shadow-subtle">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-700)] block">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-300)] block">
               ILLUSTRATIVE PASSPORT TIMELINE &bull; CAREER PROGRESSION OVER TIME
             </span>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
-                <span className="font-mono font-bold text-xs text-[var(--color-taupe-700)] block">AGE 16</span>
-                <strong className="text-[var(--color-charcoal-deep)] block">School STEM Project</strong>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
+                <span className="font-mono font-bold text-xs text-[var(--color-taupe-300)] block">AGE 16</span>
+                <strong className="text-[var(--color-text-primary)] block">School STEM Project</strong>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Robotics capstone report attached.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
-                <span className="font-mono font-bold text-xs text-[var(--color-taupe-700)] block">AGE 18</span>
-                <strong className="text-[var(--color-charcoal-deep)] block">Apprenticeship Log</strong>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
+                <span className="font-mono font-bold text-xs text-[var(--color-taupe-300)] block">AGE 18</span>
+                <strong className="text-[var(--color-text-primary)] block">Apprenticeship Log</strong>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Workshop practical hours confirmed.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
-                <span className="font-mono font-bold text-xs text-emerald-700 block">AGE 21</span>
-                <strong className="text-[var(--color-charcoal-deep)] block">NVQ Level 3 Cert</strong>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
+                <span className="font-mono font-bold text-xs text-emerald-400 block">AGE 21</span>
+                <strong className="text-[var(--color-text-primary)] block">NVQ Level 3 Cert</strong>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Issuer verified credential token.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
-                <span className="font-mono font-bold text-xs text-blue-700 block">AGE 24</span>
-                <strong className="text-[var(--color-charcoal-deep)] block">High-Voltage EV Licence</strong>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
+                <span className="font-mono font-bold text-xs text-blue-400 block">AGE 24</span>
+                <strong className="text-[var(--color-text-primary)] block">High-Voltage EV Licence</strong>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Specialist certification added.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
-                <span className="font-mono font-bold text-xs text-purple-700 block">AGE 29</span>
-                <strong className="text-[var(--color-charcoal-deep)] block">Plant Retrofit Lead</strong>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
+                <span className="font-mono font-bold text-xs text-purple-400 block">AGE 29</span>
+                <strong className="text-[var(--color-text-primary)] block">Plant Retrofit Lead</strong>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Employer verified project sign-off.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-1.5 text-xs shadow-subtle">
+              <div className="p-4 bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs shadow-subtle">
                 <span className="font-mono font-bold text-xs text-[var(--color-taupe-300)] block">AGE 35</span>
-                <strong className="text-[var(--color-ivory-base)] block">Operations Director</strong>
+                <strong className="text-white block">Operations Director</strong>
                 <p className="text-[11px] text-[var(--color-taupe-300)]">Executive leadership evidence.</p>
               </div>
             </div>
@@ -560,7 +560,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">TRANSFERABLE PROOF</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Your old career may contain evidence for your next one.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -581,7 +581,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-8">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">EMPLOYER PERSPECTIVE</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Better evidence. Still under your control.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -593,8 +593,8 @@ export default function CareerPassportPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                   What Employers Receive
                 </h3>
               </div>
@@ -607,8 +607,8 @@ export default function CareerPassportPage() {
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
               <div className="flex items-center gap-2">
-                <Lock className="w-5 h-5 text-amber-700" />
-                <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+                <Lock className="w-5 h-5 text-amber-400" />
+                <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                   What Remains Private
                 </h3>
               </div>
@@ -629,7 +629,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-8">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">REALISTIC BOUNDARIES</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Verified doesn&apos;t mean guaranteed.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -641,7 +641,7 @@ export default function CareerPassportPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block text-sm font-serif">
+              <strong className="text-[var(--color-text-primary)] block text-sm font-serif">
                 Authenticity &ne; Suitability
               </strong>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -650,7 +650,7 @@ export default function CareerPassportPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block text-sm font-serif">
+              <strong className="text-[var(--color-text-primary)] block text-sm font-serif">
                 Experience &ne; Future Success
               </strong>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -659,7 +659,7 @@ export default function CareerPassportPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block text-sm font-serif">
+              <strong className="text-[var(--color-text-primary)] block text-sm font-serif">
                 No Automated Hiring
               </strong>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -677,7 +677,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-8">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">STANDARDS &amp; ARCHITECTURE</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Built with portability in mind.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -688,10 +688,10 @@ export default function CareerPassportPage() {
           </div>
 
           <div className="p-6 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 text-xs">
-            <span className="font-mono text-[10px] font-bold text-[var(--color-taupe-700)] uppercase block">
+            <span className="font-mono text-[10px] font-bold text-[var(--color-taupe-300)] uppercase block">
               PORTABILITY PRINCIPLES
             </span>
-            <p className="text-[var(--color-charcoal-deep)] leading-relaxed">
+            <p className="text-[var(--color-text-primary)] leading-relaxed">
               You retain the right to export your structured records, download your uploaded project artifacts, and
               share your verified credentials with any third party at any time.
             </p>
@@ -706,7 +706,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-8">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">SECURITY &amp; AUDIT</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Professional evidence only works if people can trust the record.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -717,7 +717,7 @@ export default function CareerPassportPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block font-serif text-sm">
+              <strong className="text-[var(--color-text-primary)] block font-serif text-sm">
                 Encrypted Vault Storage
               </strong>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -726,7 +726,7 @@ export default function CareerPassportPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block font-serif text-sm">
+              <strong className="text-[var(--color-text-primary)] block font-serif text-sm">
                 Immutable Audit Trail
               </strong>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -735,7 +735,7 @@ export default function CareerPassportPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 text-xs">
-              <strong className="text-[var(--color-charcoal-deep)] block font-serif text-sm">
+              <strong className="text-[var(--color-text-primary)] block font-serif text-sm">
                 Granular Access Grants
               </strong>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -753,7 +753,7 @@ export default function CareerPassportPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">FREQUENTLY ASKED QUESTIONS</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Questions about Career Passport.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -767,8 +767,8 @@ export default function CareerPassportPage() {
                 key={idx}
                 className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 shadow-xs"
               >
-                <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)] flex items-start gap-2">
-                  <HelpCircle className="w-4 h-4 text-[var(--color-taupe-600)] shrink-0 mt-1" />
+                <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)] flex items-start gap-2">
+                  <HelpCircle className="w-4 h-4 text-[var(--color-taupe-300)] shrink-0 mt-1" />
                   <span>{faq.q}</span>
                 </h3>
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed pl-6">
@@ -785,15 +785,15 @@ export default function CareerPassportPage() {
       {/* =================================================================== */}
       <section className="section-editorial bg-[var(--color-surface-raised)]">
         <div className="container-editorial">
-          <div className="p-10 lg:p-16 bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] rounded-[var(--radius-card)] space-y-8 shadow-editorial">
+          <div className="p-10 lg:p-16 bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 shadow-editorial">
             <div className="max-w-3xl space-y-4">
               <span className="text-xs font-mono font-bold text-[var(--color-taupe-300)] uppercase tracking-wider block">
                 CAREER OS &bull; CAREER PASSPORT
               </span>
-              <h2 className="text-display-section font-serif font-normal text-[var(--color-ivory-base)] tracking-tight">
+              <h2 className="text-display-section font-serif font-normal text-white tracking-tight">
                 Your career is more than a list of claims.
               </h2>
-              <p className="text-lead text-[var(--color-taupe-300)] leading-relaxed">
+              <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
                 Build a professional record that can grow with your qualifications, experience, evidence and achievements.
               </p>
             </div>

@@ -74,14 +74,14 @@ export const metadata: Metadata = {
 
 export default function PathwaysPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)]">
       {/* Header */}
-      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial space-y-6 max-w-4xl">
           <span className="section-label">
             Universal Career Pathways
           </span>
-          <h1 className="text-display-section text-[var(--color-charcoal-deep)]">
+          <h1 className="text-display-section text-[var(--color-text-primary)]">
             Every career route supported with equal prestige and depth.
           </h1>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -91,27 +91,27 @@ export default function PathwaysPage() {
       </section>
 
       {/* Pathways Directory Grid */}
-      <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {PATHWAYS.map((p) => (
               <Link
                 key={p.name}
                 href={p.href}
-                className="group flex flex-col justify-between p-7 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-[var(--color-charcoal-base)] transition-all shadow-subtle min-h-[220px]"
+                className="group flex flex-col justify-between p-7 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-white/20 transition-all shadow-subtle min-h-[220px]"
               >
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase font-semibold text-[var(--color-taupe-600)] tracking-wider">
                     {p.category}
                   </span>
-                  <h3 className="text-base font-semibold text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors">
+                  <h3 className="text-base font-semibold text-[var(--color-text-primary)] group-hover:text-white transition-colors">
                     {p.name}
                   </h3>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed pt-1">
                     {p.description}
                   </p>
                 </div>
-                <div className="flex items-center text-xs font-semibold text-[var(--color-charcoal-deep)] pt-4 border-t border-[var(--color-border-subtle)]">
+                <div className="flex items-center text-xs font-semibold text-[var(--color-text-primary)] pt-4 border-t border-[var(--color-border-subtle)]">
                   <span>Explore pathway</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -122,17 +122,17 @@ export default function PathwaysPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-editorial bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] border-t border-[var(--color-charcoal-border)]">
+      <section className="section-editorial bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border-t border-[var(--color-border-default)]">
         <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="space-y-2 max-w-xl">
             <h3 className="text-2xl font-normal text-white tracking-tight">
               Begin exploring your pathway on Career OS
             </h3>
-            <p className="text-sm text-[var(--color-text-inverse-muted)] leading-relaxed">
+            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
               Free for individual core accounts. Start discovering and building verified evidence today.
             </p>
           </div>
-          <Button href={ROUTES.SIGNUP} variant="dark" size="lg" className="shrink-0">
+          <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="shrink-0">
             Start Free <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

@@ -49,7 +49,7 @@ export function ResumeVsPassportComparison() {
             </div>
             <div>
               <span className="section-label">THE SUMMARY LAYER</span>
-              <h3 className="font-serif font-bold text-xl text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-xl text-[var(--color-text-primary)]">
                 The Traditional Résumé
               </h3>
             </div>
@@ -74,17 +74,17 @@ export function ResumeVsPassportComparison() {
         </div>
 
         {/* Career Passport Card */}
-        <div className="p-8 bg-[var(--color-surface-raised)] border-2 border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-5 shadow-subtle relative overflow-hidden">
-          <div className="absolute top-0 right-0 px-4 py-1 bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] font-mono text-[10px] font-bold uppercase tracking-wider rounded-bl">
+        <div className="p-8 bg-[var(--color-surface-raised)] border-2 border-white/15 rounded-[var(--radius-card)] space-y-5 shadow-subtle relative overflow-hidden">
+          <div className="absolute top-0 right-0 px-4 py-1 bg-white/15 text-[var(--color-text-primary)] font-mono text-[10px] font-bold uppercase tracking-wider rounded-bl">
             Supporting Evidence Record
           </div>
           <div className="flex items-center gap-3 border-b border-[var(--color-border-subtle)] pb-4">
-            <div className="w-10 h-10 rounded bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] flex items-center justify-center">
+            <div className="w-10 h-10 rounded bg-white/15 text-[var(--color-text-primary)] flex items-center justify-center">
               <FileCheck className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
               <span className="section-label">THE VERIFIABLE RECORD</span>
-              <h3 className="font-serif font-bold text-xl text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-xl text-[var(--color-text-primary)]">
                 The Career Passport
               </h3>
             </div>
@@ -93,15 +93,15 @@ export function ResumeVsPassportComparison() {
             The supporting record behind your career—bringing together verified credentials, project artifacts, and work history that you control and carry anywhere.
           </p>
           <ul className="space-y-3 pt-2 text-xs">
-            <li className="flex items-start gap-2 text-[var(--color-charcoal-deep)] font-medium">
+            <li className="flex items-start gap-2 text-[var(--color-text-primary)] font-medium">
               <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Holds genuine project documentation, technical reports, and credentials.</span>
             </li>
-            <li className="flex items-start gap-2 text-[var(--color-charcoal-deep)] font-medium">
+            <li className="flex items-start gap-2 text-[var(--color-text-primary)] font-medium">
               <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Displays transparent verification states from self-declared to issuer verified.</span>
             </li>
-            <li className="flex items-start gap-2 text-[var(--color-charcoal-deep)] font-medium">
+            <li className="flex items-start gap-2 text-[var(--color-text-primary)] font-medium">
               <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Supports selective sharing so you only reveal evidence relevant to the recipient.</span>
             </li>
@@ -110,7 +110,7 @@ export function ResumeVsPassportComparison() {
       </div>
 
       {/* Editorial Quotation Banner */}
-      <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] text-center text-xs text-[var(--color-charcoal-deep)] font-medium">
+      <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] text-center text-xs text-[var(--color-text-primary)] font-medium">
         <span className="font-serif italic text-sm">
           “The résumé can remain the summary. The Passport becomes the supporting record.”
         </span>
@@ -123,19 +123,19 @@ export function ResumeVsPassportComparison() {
             <tr className="bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] font-mono uppercase text-[10px] text-[var(--color-taupe-700)]">
               <th className="p-4 font-bold">Comparison Area</th>
               <th className="p-4 font-bold text-[var(--color-text-tertiary)]">Traditional Résumé</th>
-              <th className="p-4 font-bold text-[var(--color-charcoal-deep)]">Career OS Career Passport</th>
+              <th className="p-4 font-bold text-[var(--color-text-primary)]">Career OS Career Passport</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[var(--color-border-subtle)]">
             {comparisonData.map((row, idx) => (
               <tr key={idx} className="hover:bg-[var(--color-surface-warm)] transition-colors">
-                <td className="p-4 font-bold text-[var(--color-charcoal-deep)] whitespace-nowrap font-mono text-[11px]">
+                <td className="p-4 font-bold text-[var(--color-text-primary)] whitespace-nowrap font-mono text-[11px]">
                   {row.criterion}
                 </td>
                 <td className="p-4 text-[var(--color-text-secondary)] leading-relaxed max-w-xs">
                   {row.resume}
                 </td>
-                <td className="p-4 text-[var(--color-charcoal-deep)] font-medium leading-relaxed max-w-xs bg-[var(--color-ivory-base)]/40">
+                <td className="p-4 text-[var(--color-text-primary)] font-medium leading-relaxed max-w-xs bg-[var(--color-surface-base)]/40">
                   {row.passport}
                 </td>
               </tr>

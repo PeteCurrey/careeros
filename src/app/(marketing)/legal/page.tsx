@@ -66,7 +66,7 @@ export default function LegalHubPage() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Editorial Header */}
       <section className="pt-16 pb-12 border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-6 max-w-4xl">
@@ -77,7 +77,7 @@ export default function LegalHubPage() {
             </span>
           </div>
 
-          <h1 className="text-display-section text-[var(--color-charcoal-deep)] font-serif font-normal tracking-tight">
+          <h1 className="text-display-section text-[var(--color-text-primary)] font-serif font-normal tracking-tight">
             Career OS Legal &amp; Compliance Centre
           </h1>
 
@@ -86,30 +86,30 @@ export default function LegalHubPage() {
           </p>
 
           <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] text-xs text-[var(--color-text-secondary)] space-y-1">
-            <div className="flex items-center gap-1.5 font-semibold text-[var(--color-charcoal-deep)]">
+            <div className="flex items-center gap-1.5 font-semibold text-[var(--color-text-primary)]">
               <Shield className="w-4 h-4 text-[var(--color-taupe-600)]" />
               <span>Contractual Precision &amp; Document Versioning:</span>
             </div>
             <p>
-              All documents in this Centre are active pre-launch governance specifications. Changes are tracked with semantic versioning and published to the <Link href="/legal/version-history" className="text-[var(--color-charcoal-deep)] font-semibold underline">Version History Archive</Link>. Superseded versions remain permanently accessible.
+              All documents in this Centre are active pre-launch governance specifications. Changes are tracked with semantic versioning and published to the <Link href="/legal/version-history" className="text-[var(--color-text-primary)] font-semibold underline">Version History Archive</Link>. Superseded versions remain permanently accessible.
             </p>
           </div>
         </div>
       </section>
 
       {/* Document Directory Grid */}
-      <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-16">
           {sections.map((sec) => {
             const Icon = sec.icon;
             return (
               <div key={sec.title} className="space-y-6">
                 <div className="flex items-center gap-3 pb-3 border-b border-[var(--color-border-default)]">
-                  <div className="w-8 h-8 rounded-[var(--radius-sm)] bg-[var(--color-taupe-100)] flex items-center justify-center text-[var(--color-charcoal-deep)]">
+                  <div className="w-8 h-8 rounded-[var(--radius-sm)] bg-white/8 flex items-center justify-center text-[var(--color-text-secondary)]">
                     <Icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold font-serif text-[var(--color-charcoal-deep)]">{sec.title}</h2>
+                    <h2 className="text-xl font-bold font-serif text-[var(--color-text-primary)]">{sec.title}</h2>
                     <p className="text-xs text-[var(--color-text-secondary)]">{sec.description}</p>
                   </div>
                 </div>
@@ -119,11 +119,11 @@ export default function LegalHubPage() {
                     <Link
                       key={doc.href}
                       href={doc.href}
-                      className="group p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-[var(--color-charcoal-base)] transition-all flex flex-col justify-between space-y-3"
+                      className="group p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-white/20 transition-all flex flex-col justify-between space-y-3"
                     >
                       <div className="space-y-1.5">
                         <div className="flex items-center justify-between">
-                          <span className="font-semibold text-sm text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors flex items-center gap-1.5">
+                          <span className="font-semibold text-sm text-[var(--color-text-primary)] group-hover:text-white transition-colors flex items-center gap-1.5">
                             <FileText className="w-3.5 h-3.5 text-[var(--color-taupe-600)]" />
                             {doc.title}
                           </span>
@@ -136,7 +136,7 @@ export default function LegalHubPage() {
                         </p>
                       </div>
 
-                      <div className="flex items-center text-xs font-semibold text-[var(--color-charcoal-deep)] group-hover:translate-x-0.5 transition-transform">
+                      <div className="flex items-center text-xs font-semibold text-[var(--color-text-primary)] group-hover:translate-x-0.5 transition-transform">
                         <span>View Document</span>
                         <ArrowRight className="w-3.5 h-3.5 ml-1" />
                       </div>
@@ -156,21 +156,21 @@ export default function LegalHubPage() {
             <div>
               <span className="section-label block mb-2">Legal Enquiries</span>
               <p>Contractual terms, governance, and institutional agreement queries:</p>
-              <a href={`mailto:${LEGAL_CONFIG.legalEmail}`} className="font-mono text-[var(--color-charcoal-deep)] font-semibold hover:underline block mt-1">
+              <a href={`mailto:${LEGAL_CONFIG.legalEmail}`} className="font-mono text-[var(--color-text-primary)] font-semibold hover:underline block mt-1">
                 {LEGAL_CONFIG.legalEmail}
               </a>
             </div>
             <div>
               <span className="section-label block mb-2">Privacy &amp; Data Rights</span>
               <p>Data protection, COPPA/FERPA questions, and data subject requests:</p>
-              <a href={`mailto:${LEGAL_CONFIG.privacyEmail}`} className="font-mono text-[var(--color-charcoal-deep)] font-semibold hover:underline block mt-1">
+              <a href={`mailto:${LEGAL_CONFIG.privacyEmail}`} className="font-mono text-[var(--color-text-primary)] font-semibold hover:underline block mt-1">
                 {LEGAL_CONFIG.privacyEmail}
               </a>
             </div>
             <div>
               <span className="section-label block mb-2">Youth Safeguarding</span>
               <p>Minor candidate protection and safety concern escalation:</p>
-              <a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`} className="font-mono text-[var(--color-charcoal-deep)] font-semibold hover:underline block mt-1">
+              <a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`} className="font-mono text-[var(--color-text-primary)] font-semibold hover:underline block mt-1">
                 {LEGAL_CONFIG.safeguardingEmail}
               </a>
             </div>

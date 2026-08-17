@@ -32,18 +32,18 @@ export function GovernancePageLayout({
   };
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Header & Metadata Banner */}
-      <header className="pt-12 pb-10 border-b border-[var(--color-border-default)] bg-[var(--color-ivory-base)]">
+      <header className="pt-12 pb-10 border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
         <div className="container-editorial space-y-6">
           
           {/* Category Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-taupe-600)]" aria-label="Breadcrumb">
-            <Link href={categoryHrefs[meta.category] || "/legal"} className="hover:text-[var(--color-charcoal-deep)] transition-colors">
+          <nav className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-taupe-300)]" aria-label="Breadcrumb">
+            <Link href={categoryHrefs[meta.category] || "/legal"} className="hover:text-[var(--color-text-primary)] transition-colors">
               {categoryLabels[meta.category] || "Governance"}
             </Link>
             <span>/</span>
-            <span className="text-[var(--color-charcoal-deep)]">{meta.title}</span>
+            <span className="text-[var(--color-text-primary)]">{meta.title}</span>
           </nav>
 
           {/* Title & Subtitle */}
@@ -61,7 +61,7 @@ export function GovernancePageLayout({
               </span>
             </div>
 
-            <h1 className="text-display-section text-[var(--color-charcoal-deep)] font-serif font-normal tracking-tight">
+            <h1 className="text-display-section text-[var(--color-text-primary)] font-serif font-normal tracking-tight">
               {meta.title}
             </h1>
 
@@ -75,20 +75,20 @@ export function GovernancePageLayout({
           {/* Key Document Parameters Bar */}
           <div className="pt-4 border-t border-[var(--color-border-subtle)] grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">Effective Date</span>
-              <span className="font-mono text-[var(--color-charcoal-deep)]">{meta.effectiveDate}</span>
+              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Effective Date</span>
+              <span className="font-mono text-[var(--color-text-primary)]">{meta.effectiveDate}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">Jurisdiction</span>
-              <span className="text-[var(--color-charcoal-deep)]">{meta.jurisdiction}</span>
+              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Jurisdiction</span>
+              <span className="text-[var(--color-text-primary)]">{meta.jurisdiction}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">Document Owner</span>
-              <span className="text-[var(--color-charcoal-deep)]">{meta.owner}</span>
+              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Document Owner</span>
+              <span className="text-[var(--color-text-primary)]">{meta.owner}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">Last Reviewed</span>
-              <span className="font-mono text-[var(--color-charcoal-deep)]">{meta.lastReviewedDate}</span>
+              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Last Reviewed</span>
+              <span className="font-mono text-[var(--color-text-primary)]">{meta.lastReviewedDate}</span>
             </div>
           </div>
 
@@ -96,7 +96,7 @@ export function GovernancePageLayout({
       </header>
 
       {/* Main Content Body */}
-      <div className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+      <div className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -112,7 +112,7 @@ export function GovernancePageLayout({
                       <a
                         key={item.id}
                         href={`#${item.id}`}
-                        className="block text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)] font-normal transition-colors line-clamp-2"
+                        className="block text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-normal transition-colors line-clamp-2"
                       >
                         {item.title}
                       </a>
@@ -124,14 +124,14 @@ export function GovernancePageLayout({
 
             {/* Substantive Document Reading Column (760-860px wide) */}
             <main className={toc && toc.length > 0 ? "lg:col-span-9 order-1 lg:order-2 max-w-4xl" : "lg:col-span-12 max-w-4xl mx-auto"}>
-              <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 prose prose-slate max-w-none text-[var(--color-text-secondary)] leading-relaxed font-sans text-base [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-normal [&_h2]:text-[var(--color-charcoal-deep)] [&_h2]:pt-6 [&_h2]:border-t [&_h2]:border-[var(--color-border-subtle)] [&_h3]:font-semibold [&_h3]:text-lg [&_h3]:text-[var(--color-charcoal-deep)] [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_strong]:text-[var(--color-charcoal-deep)]">
+              <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 prose prose-invert max-w-none text-[var(--color-text-secondary)] leading-relaxed font-sans text-base [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-normal [&_h2]:text-[var(--color-text-primary)] [&_h2]:pt-6 [&_h2]:border-t [&_h2]:border-[var(--color-border-subtle)] [&_h3]:font-semibold [&_h3]:text-lg [&_h3]:text-[var(--color-text-primary)] [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_strong]:text-[var(--color-text-primary)]">
                 {children}
               </div>
 
               {/* Substantive Change Summary Banner */}
               {meta.changeSummary && (
                 <div className="mt-8 p-5 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] text-xs text-[var(--color-text-secondary)] space-y-1">
-                  <span className="font-semibold text-[var(--color-charcoal-deep)] block">Revision Summary (Version {meta.version}):</span>
+                  <span className="font-semibold text-[var(--color-text-primary)] block">Revision Summary (Version {meta.version}):</span>
                   <p>{meta.changeSummary}</p>
                 </div>
               )}
@@ -142,7 +142,7 @@ export function GovernancePageLayout({
       </div>
 
       {/* Governance Footer (Strictly NO Sales CTAs per Requirement 17) */}
-      <footer className="py-12 bg-[var(--color-surface-sunken)] border-t border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)]">
+      <footer className="py-12 bg-[var(--background-dark-deep)] border-t border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)]">
         <div className="container-editorial space-y-10">
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -154,8 +154,8 @@ export function GovernancePageLayout({
                 <ul className="space-y-2">
                   {meta.relatedDocuments.map((doc) => (
                     <li key={doc.href}>
-                      <Link href={doc.href} className="inline-flex items-center gap-1.5 text-[var(--color-charcoal-deep)] font-medium hover:underline">
-                        <FileText className="w-3.5 h-3.5 text-[var(--color-taupe-600)]" />
+                      <Link href={doc.href} className="inline-flex items-center gap-1.5 text-[var(--color-text-primary)] font-medium hover:underline">
+                        <FileText className="w-3.5 h-3.5 text-[var(--color-taupe-300)]" />
                         <span>{doc.title}</span>
                       </Link>
                     </li>
@@ -171,7 +171,7 @@ export function GovernancePageLayout({
                 <ul className="space-y-2">
                   {meta.sources.map((src, i) => (
                     <li key={i} className="space-y-0.5">
-                      <span className="font-medium text-[var(--color-charcoal-deep)] block">{src.title}</span>
+                      <span className="font-medium text-[var(--color-text-primary)] block">{src.title}</span>
                       <span className="font-mono text-[11px] text-[var(--color-text-tertiary)] block">{src.citation}</span>
                     </li>
                   ))}
@@ -184,23 +184,23 @@ export function GovernancePageLayout({
               <h4 className="section-label">Governance &amp; Privacy Contacts</h4>
               <ul className="space-y-2">
                 <li className="flex items-center gap-1.5">
-                  <Mail className="w-3.5 h-3.5 text-[var(--color-taupe-600)]" />
+                  <Mail className="w-3.5 h-3.5 text-[var(--color-taupe-300)]" />
                   <span>Legal Enquiries:</span>
-                  <a href={`mailto:${LEGAL_CONFIG.legalEmail}`} className="font-mono text-[var(--color-charcoal-deep)] hover:underline">
+                  <a href={`mailto:${LEGAL_CONFIG.legalEmail}`} className="font-mono text-[var(--color-text-primary)] hover:underline">
                     {LEGAL_CONFIG.legalEmail}
                   </a>
                 </li>
                 <li className="flex items-center gap-1.5">
-                  <Shield className="w-3.5 h-3.5 text-[var(--color-taupe-600)]" />
+                  <Shield className="w-3.5 h-3.5 text-[var(--color-taupe-300)]" />
                   <span>Privacy Officer:</span>
-                  <a href={`mailto:${LEGAL_CONFIG.privacyEmail}`} className="font-mono text-[var(--color-charcoal-deep)] hover:underline">
+                  <a href={`mailto:${LEGAL_CONFIG.privacyEmail}`} className="font-mono text-[var(--color-text-primary)] hover:underline">
                     {LEGAL_CONFIG.privacyEmail}
                   </a>
                 </li>
                 <li className="flex items-center gap-1.5">
-                  <Scale className="w-3.5 h-3.5 text-[var(--color-taupe-600)]" />
+                  <Scale className="w-3.5 h-3.5 text-[var(--color-taupe-300)]" />
                   <span>Youth Safeguarding:</span>
-                  <a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`} className="font-mono text-[var(--color-charcoal-deep)] hover:underline">
+                  <a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`} className="font-mono text-[var(--color-text-primary)] hover:underline">
                     {LEGAL_CONFIG.safeguardingEmail}
                   </a>
                 </li>
@@ -213,7 +213,7 @@ export function GovernancePageLayout({
           <div className="pt-6 border-t border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-4">
             <Link
               href={categoryHrefs[meta.category] || "/legal"}
-              className="inline-flex items-center gap-1.5 font-semibold text-[var(--color-charcoal-deep)] hover:underline"
+              className="inline-flex items-center gap-1.5 font-semibold text-[var(--color-text-primary)] hover:underline"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to {categoryLabels[meta.category] || "Governance Centre"}</span>

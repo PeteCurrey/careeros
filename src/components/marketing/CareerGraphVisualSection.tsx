@@ -102,7 +102,7 @@ export function CareerGraphVisualSection() {
   const topology = TOPOLOGIES.find((t) => t.id === activeTopologyId) || TOPOLOGIES[0]!;
 
   return (
-    <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Header */}
@@ -111,7 +111,7 @@ export function CareerGraphVisualSection() {
             <span className="section-label">
               Dynamic Labor Economy Topology
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               Careers are dynamic graphs, not straight ladders.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -128,7 +128,7 @@ export function CareerGraphVisualSection() {
                   key={t.id}
                   type="button"
                   onClick={() => setActiveTopologyId(t.id)}
-                  className={"px-4 py-2 text-xs font-semibold rounded-[var(--radius-sm)] border transition-all cursor-pointer " + (isSelected ? "bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]" : "bg-[var(--color-ivory-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-[var(--color-surface-interactive)]")}
+                  className={"px-4 py-2 text-xs font-semibold rounded-[var(--radius-sm)] border transition-all cursor-pointer " + (isSelected ? "bg-[#F4F3EF] text-[#202020] border-[#F4F3EF]" : "bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-white/10")}
                 >
                   {t.originTitle}
                 </button>
@@ -143,23 +143,23 @@ export function CareerGraphVisualSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Origin Node on Left */}
-            <div className="lg:col-span-4 p-6 bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] rounded-[var(--radius-sm)] border border-[var(--color-charcoal-border)] space-y-3">
+            <div className="lg:col-span-4 p-6 bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] rounded-[var(--radius-sm)] border border-[var(--color-border-default)] space-y-3">
               <span className="section-label-light text-[10px]">
                 Origin Node &bull; {topology.originDomain}
               </span>
               <h3 className="text-2xl font-normal text-white">
                 {topology.originTitle}
               </h3>
-              <p className="text-xs text-[var(--color-text-inverse-muted)]">
+              <p className="text-xs text-[var(--color-text-secondary)]">
                 {topology.originSub}
               </p>
-              <div className="pt-2 border-t border-[var(--color-border-charcoal)] text-[11px] text-[var(--color-gold-light)] font-medium">
+              <div className="pt-2 border-t border-[var(--color-border-default)] text-[11px] text-[var(--color-gold-light)] font-medium">
                 5 High-Probability Adjacent Bridges Active
               </div>
             </div>
 
             {/* Connecting Indicator */}
-            <div className="lg:col-span-1 hidden lg:flex items-center justify-center text-[var(--color-taupe-400)]">
+            <div className="lg:col-span-1 hidden lg:flex items-center justify-center text-[var(--color-taupe-300)]">
               <div className="h-[1px] w-full bg-[var(--color-border-default)] relative">
                 <span className="absolute right-0 top-1/2 -translate-y-1/2 text-xs">&rarr;</span>
               </div>
@@ -170,15 +170,15 @@ export function CareerGraphVisualSection() {
               {topology.branches.map((b) => (
                 <div
                   key={b.title}
-                  className="p-4 bg-[var(--color-ivory-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] hover:border-[var(--color-charcoal-base)] transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                  className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] hover:border-[var(--color-border-strong)] transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3"
                 >
                   <div className="space-y-0.5">
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] uppercase font-semibold text-[var(--color-taupe-600)]">
+                      <span className="text-[10px] uppercase font-semibold text-[var(--color-taupe-300)]">
                         {b.domain}
                       </span>
                     </div>
-                    <h4 className="text-sm font-semibold text-[var(--color-charcoal-deep)]">
+                    <h4 className="text-sm font-semibold text-[var(--color-text-primary)]">
                       {b.title}
                     </h4>
                     <p className="text-xs text-[var(--color-text-secondary)]">
@@ -186,7 +186,7 @@ export function CareerGraphVisualSection() {
                     </p>
                   </div>
 
-                  <span className="shrink-0 text-xs font-semibold px-2.5 py-1 bg-[var(--color-surface-raised)] text-[var(--color-charcoal-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)]">
+                  <span className="shrink-0 text-xs font-semibold px-2.5 py-1 bg-[var(--color-surface-raised)] text-[var(--color-text-primary)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)]">
                     {b.match}
                   </span>
                 </div>
@@ -201,7 +201,7 @@ export function CareerGraphVisualSection() {
             </span>
             <Link
               href={ROUTES.PRODUCT_CAREER_GRAPH}
-              className="font-semibold text-[var(--color-charcoal-deep)] hover:text-black inline-flex items-center gap-1 underline underline-offset-4"
+              className="font-semibold text-[var(--color-text-primary)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4"
             >
               Explore Career Graph <ArrowRight className="w-3.5 h-3.5" />
             </Link>

@@ -127,11 +127,11 @@ export default function CareerTwinPage() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* =================================================================== */}
       {/* SECTION 01 — HERO WITH BREATHTAKING CITY HORIZON                    */}
       {/* =================================================================== */}
-      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-ivory-base)] py-16 lg:py-24">
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-16 lg:py-24">
         {/* Expansive Future Pathways & Horizon Background Image */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <Image
@@ -144,12 +144,12 @@ export default function CareerTwinPage() {
             className="object-cover object-center"
           />
 
-          {/* Editorial Scrim: Ivory Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
+          {/* Editorial Scrim: Charcoal Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(to right, #F7F5EC 0%, rgba(247, 245, 236, 0.96) 38%, rgba(247, 245, 236, 0.88) 55%, rgba(247, 245, 236, 0.42) 78%, rgba(247, 245, 236, 0.18) 100%)`,
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
             }}
           />
 
@@ -158,7 +158,7 @@ export default function CareerTwinPage() {
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-28 pointer-events-none"
             style={{
-              background: `linear-gradient(to bottom, #F7F5EC 0%, transparent 100%)`,
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
             }}
           />
 
@@ -167,7 +167,7 @@ export default function CareerTwinPage() {
             aria-hidden="true"
             className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
             style={{
-              background: `linear-gradient(to top, #F7F5EC 0%, transparent 100%)`,
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
             }}
           />
         </div>
@@ -176,7 +176,7 @@ export default function CareerTwinPage() {
           <div className="max-w-4xl space-y-6">
             <span className="section-label">CORE SUBSYSTEM &bull; CAREER TWIN</span>
 
-            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">
               Your résumé shows where you’ve been.{' '}
               <span className="italic font-normal block sm:inline">
                 Your Career Twin helps reveal where you could go.
@@ -195,14 +195,14 @@ export default function CareerTwinPage() {
               </Button>
               <a
                 href="#career-twin-visual"
-                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-charcoal-deep)] hover:text-[var(--color-taupe-700)] transition-colors px-4 py-3 border border-[var(--color-border-default)] rounded-[var(--radius-card)] bg-white/70 backdrop-blur-xs"
+                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-text-primary)] hover:text-white transition-colors px-4 py-3 border border-[var(--color-border-default)] rounded-[var(--radius-card)] bg-white/10 backdrop-blur-xs"
               >
                 <span>See a Career Twin in action</span>
                 <ChevronDown className="w-4 h-4" />
               </a>
             </div>
 
-            <div className="flex items-center gap-4 text-xs font-mono text-[var(--color-taupe-700)] pt-2">
+            <div className="flex items-center gap-4 text-xs font-mono text-[var(--color-taupe-300)] pt-2">
               <span>&bull; Free for individuals</span>
               <span>&bull; User-controlled privacy</span>
               <span>&bull; Compounding lifetime context</span>
@@ -259,10 +259,10 @@ export default function CareerTwinPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="font-mono text-xs font-bold text-amber-800 uppercase tracking-wider block">
+              <span className="font-mono text-xs font-bold text-amber-400 uppercase tracking-wider block">
                 01 &bull; YOU PROVIDE
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Self-Declared Context
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -271,10 +271,10 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="font-mono text-xs font-bold text-blue-800 uppercase tracking-wider block">
+              <span className="font-mono text-xs font-bold text-blue-400 uppercase tracking-wider block">
                 02 &bull; EVIDENCE YOU ADD
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Project Vault Artifacts
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -283,10 +283,10 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="font-mono text-xs font-bold text-emerald-800 uppercase tracking-wider block">
+              <span className="font-mono text-xs font-bold text-emerald-400 uppercase tracking-wider block">
                 03 &bull; VERIFIED SOURCES
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Independent Third Parties
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -297,10 +297,10 @@ export default function CareerTwinPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
             <div className="p-6 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-mono text-xs font-bold text-purple-800 uppercase tracking-wider block">
+              <span className="font-mono text-xs font-bold text-purple-400 uppercase tracking-wider block">
                 04 &bull; DERIVED INSIGHTS
               </span>
-              <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Career OS Derived Context
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -309,10 +309,10 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-mono text-xs font-bold text-slate-800 uppercase tracking-wider block">
+              <span className="font-mono text-xs font-bold text-slate-300 uppercase tracking-wider block">
                 05 &bull; CONNECTED SERVICES
               </span>
-              <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Authorized Platform Integrations
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -365,44 +365,44 @@ export default function CareerTwinPage() {
           />
 
           <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
-            <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-taupe-700)] block">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-taupe-300)] block">
               ILLUSTRATIVE CAREER TIMELINE EVOLUTION
             </span>
 
             <div className="grid grid-cols-1 md:grid-cols-6 gap-4 text-xs relative">
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded space-y-1">
-                <span className="font-mono text-[10px] font-bold text-amber-800">AGE 17</span>
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">Student</h4>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
+                <span className="font-mono text-[10px] font-bold text-amber-400">AGE 17</span>
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">Student</h4>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">STEM subjects & micro-projects logged.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded space-y-1">
-                <span className="font-mono text-[10px] font-bold text-blue-800">AGE 19</span>
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">Apprentice</h4>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
+                <span className="font-mono text-[10px] font-bold text-blue-400">AGE 19</span>
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">Apprentice</h4>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Trade coursework & logbook evidence.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded space-y-1">
-                <span className="font-mono text-[10px] font-bold text-emerald-800">AGE 23</span>
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">Technician</h4>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
+                <span className="font-mono text-[10px] font-bold text-emerald-400">AGE 23</span>
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">Technician</h4>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">NVQ Level 3 verified; plant shut-downs.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded space-y-1">
-                <span className="font-mono text-[10px] font-bold text-purple-800">AGE 28</span>
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">Supervisor</h4>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
+                <span className="font-mono text-[10px] font-bold text-purple-400">AGE 28</span>
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">Supervisor</h4>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Crew leadership & safety audit proof.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded space-y-1">
-                <span className="font-mono text-[10px] font-bold text-indigo-800">AGE 34</span>
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">Manager</h4>
+              <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
+                <span className="font-mono text-[10px] font-bold text-indigo-400">AGE 34</span>
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">Manager</h4>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">OPEX budget & reliability engineering.</p>
               </div>
 
-              <div className="p-4 bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] rounded space-y-1">
+              <div className="p-4 bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] rounded space-y-1 border border-[var(--color-border-default)]">
                 <span className="font-mono text-[10px] font-bold text-amber-300">AGE 41</span>
-                <h4 className="font-bold text-xs text-[var(--color-ivory-base)]">Founder</h4>
+                <h4 className="font-bold text-xs text-white">Founder</h4>
                 <p className="text-[11px] text-[var(--color-taupe-300)]">Engineering services firm launched.</p>
               </div>
             </div>
@@ -437,7 +437,7 @@ export default function CareerTwinPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6 space-y-6">
               <span className="section-label">SYSTEM SYNERGY</span>
-              <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+              <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
                 The Twin holds context. The Mentor helps you use it.
               </h2>
               <p className="text-body text-[var(--color-text-secondary)] leading-relaxed">
@@ -449,7 +449,7 @@ export default function CareerTwinPage() {
               <div className="pt-2">
                 <Link
                   href={ROUTES.PRODUCT_AI_CAREER_MENTOR}
-                  className="inline-flex items-center gap-2 font-mono text-xs font-bold text-[var(--color-charcoal-deep)] hover:text-[var(--color-taupe-700)] transition-colors underline underline-offset-4"
+                  className="inline-flex items-center gap-2 font-mono text-xs font-bold text-[var(--color-text-primary)] hover:text-white transition-colors underline underline-offset-4"
                 >
                   <span>Meet the AI Career Mentor</span>
                   <ArrowRight className="w-4 h-4" />
@@ -459,15 +459,15 @@ export default function CareerTwinPage() {
 
             <div className="lg:col-span-6 p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 shadow-subtle">
               <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-3">
-                <span className="font-mono text-xs font-bold text-purple-900 flex items-center gap-1.5">
-                  <Sparkles className="w-4 h-4 text-purple-600" />
+                <span className="font-mono text-xs font-bold text-purple-400 flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4 text-purple-400" />
                   MENTOR RECOMMENDATION RATIONALE
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 bg-purple-50 text-purple-800 rounded border border-purple-200">
+                <span className="text-[10px] font-mono px-2 py-0.5 bg-purple-950/60 text-purple-300 rounded border border-purple-800">
                   Twin-Informed Output
                 </span>
               </div>
-              <p className="text-xs text-[var(--color-charcoal-deep)] leading-relaxed font-serif font-bold text-sm">
+              <p className="text-xs text-[var(--color-text-primary)] leading-relaxed font-serif font-bold text-sm">
                 “Based on your Career Twin, you already have 5 years of diagnostics proof. You don’t need another technical certificate first. The larger gap for senior roles is leadership evidence.”
               </p>
               <p className="text-[11px] text-[var(--color-text-secondary)] font-mono">
@@ -490,14 +490,14 @@ export default function CareerTwinPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-[var(--color-surface-raised)] border-2 border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-3">
-              <div className="w-10 h-10 rounded bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] flex items-center justify-center">
+            <div className="p-6 bg-[var(--color-surface-raised)] border-2 border-[var(--color-border-strong)] rounded-[var(--radius-card)] space-y-3">
+              <div className="w-10 h-10 rounded bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] flex items-center justify-center border border-[var(--color-border-default)]">
                 <Cpu className="w-5 h-5" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-purple-800 uppercase tracking-wider block">
+              <span className="font-mono text-[10px] font-bold text-purple-400 uppercase tracking-wider block">
                 UNDERSTANDING
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Career Twin
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -506,13 +506,13 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <div className="w-10 h-10 rounded bg-[var(--color-surface-warm)] text-[var(--color-taupe-800)] flex items-center justify-center">
+              <div className="w-10 h-10 rounded bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] flex items-center justify-center border border-[var(--color-border-default)]">
                 <FileCheck className="w-5 h-5" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-emerald-800 uppercase tracking-wider block">
+              <span className="font-mono text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">
                 EVIDENCE & PORTABILITY
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Career Passport
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -521,13 +521,13 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <div className="w-10 h-10 rounded bg-[var(--color-surface-warm)] text-[var(--color-taupe-800)] flex items-center justify-center">
+              <div className="w-10 h-10 rounded bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] flex items-center justify-center border border-[var(--color-border-default)]">
                 <Network className="w-5 h-5" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-amber-800 uppercase tracking-wider block">
+              <span className="font-mono text-[10px] font-bold text-amber-400 uppercase tracking-wider block">
                 POSSIBILITY
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Career Graph
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -536,13 +536,13 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <div className="w-10 h-10 rounded bg-[var(--color-surface-warm)] text-[var(--color-taupe-800)] flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-purple-600" />
+              <div className="w-10 h-10 rounded bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] flex items-center justify-center border border-[var(--color-border-default)]">
+                <Sparkles className="w-5 h-5 text-purple-400" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-blue-800 uppercase tracking-wider block">
+              <span className="font-mono text-[10px] font-bold text-blue-400 uppercase tracking-wider block">
                 ACTION
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 AI Career Mentor
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -576,7 +576,7 @@ export default function CareerTwinPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-6">
               <span className="section-label">LIFELONG PORTABILITY</span>
-              <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+              <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
                 Your professional record shouldn’t disappear at graduation.
               </h2>
               <p className="text-body text-[var(--color-text-secondary)] leading-relaxed">
@@ -588,13 +588,13 @@ export default function CareerTwinPage() {
               <div className="flex flex-wrap gap-4 pt-2 text-xs font-mono">
                 <Link
                   href={ROUTES.REGULATORY_STUDENT_PRIVACY}
-                  className="text-emerald-700 font-bold hover:underline"
+                  className="text-emerald-400 font-bold hover:underline"
                 >
                   Student Privacy Policy &rarr;
                 </Link>
                 <Link
                   href={ROUTES.PRODUCT_CAREER_PASSPORT}
-                  className="text-[var(--color-charcoal-deep)] font-bold hover:underline"
+                  className="text-[var(--color-text-primary)] hover:text-white font-bold hover:underline"
                 >
                   Explore Career Passport &rarr;
                 </Link>
@@ -602,10 +602,10 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="lg:col-span-5 p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4">
-              <span className="font-mono text-xs font-bold text-amber-800 uppercase tracking-wider block">
+              <span className="font-mono text-xs font-bold text-amber-400 uppercase tracking-wider block">
                 INSTITUTIONAL RECORD SEPARATION
               </span>
-              <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 User-Owned Material vs School Records
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -629,7 +629,7 @@ export default function CareerTwinPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Edit & Update
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -638,7 +638,7 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Challenge Inferences
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -647,7 +647,7 @@ export default function CareerTwinPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+              <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                 Revoke & Delete
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -713,8 +713,8 @@ export default function CareerTwinPage() {
                 className="p-6 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2"
               >
                 <div className="flex items-center gap-2">
-                  <AlertCircle className="w-4 h-4 text-amber-700 shrink-0" />
-                  <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+                  <AlertCircle className="w-4 h-4 text-amber-500 shrink-0" />
+                  <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                     {item.title}
                   </h4>
                 </div>
@@ -745,8 +745,8 @@ export default function CareerTwinPage() {
                 className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3"
               >
                 <div className="flex items-start gap-2">
-                  <HelpCircle className="w-4 h-4 text-[var(--color-taupe-700)] shrink-0 mt-0.5" />
-                  <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
+                  <HelpCircle className="w-4 h-4 text-[var(--color-taupe-300)] shrink-0 mt-0.5" />
+                  <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)]">
                     {faq.q}
                   </h4>
                 </div>
@@ -766,7 +766,7 @@ export default function CareerTwinPage() {
         <div className="container-editorial text-center space-y-8 max-w-3xl">
           <span className="section-label">BUILD YOUR CONTEXT</span>
 
-          <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+          <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
             Build the context behind your next move.
           </h2>
 
@@ -784,7 +784,7 @@ export default function CareerTwinPage() {
             </Button>
           </div>
 
-          <p className="text-xs font-mono text-[var(--color-taupe-700)]">
+          <p className="text-xs font-mono text-[var(--color-taupe-300)]">
             Free for individuals. Built around user control, privacy and portability.
           </p>
         </div>

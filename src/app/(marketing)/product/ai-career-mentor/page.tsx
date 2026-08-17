@@ -118,11 +118,11 @@ export default function AICareerMentorPage() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* ── SECTION 01: FULL-SCREEN HERO WITH BREATHTAKING CITY HORIZON ──────────────── */}
       <section
         aria-labelledby="hero-title"
-        className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-ivory-base)] py-20 lg:py-0"
+        className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-20 lg:py-0"
       >
         {/* Breathtaking City & Horizon Background Image */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
@@ -135,12 +135,12 @@ export default function AICareerMentorPage() {
             className="object-cover object-center"
           />
 
-          {/* Editorial Scrim: Ivory Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
+          {/* Editorial Scrim: Charcoal Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(to right, #F7F5EC 0%, rgba(247, 245, 236, 0.96) 38%, rgba(247, 245, 236, 0.88) 55%, rgba(247, 245, 236, 0.42) 78%, rgba(247, 245, 236, 0.18) 100%)`,
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
             }}
           />
 
@@ -149,7 +149,7 @@ export default function AICareerMentorPage() {
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-28 pointer-events-none"
             style={{
-              background: `linear-gradient(to bottom, #F7F5EC 0%, transparent 100%)`,
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
             }}
           />
 
@@ -158,7 +158,7 @@ export default function AICareerMentorPage() {
             aria-hidden="true"
             className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
             style={{
-              background: `linear-gradient(to top, #F7F5EC 0%, transparent 100%)`,
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
             }}
           />
         </div>
@@ -170,15 +170,15 @@ export default function AICareerMentorPage() {
             <div className="lg:col-span-6 space-y-6 max-w-2xl">
               <div className="space-y-2">
                 <span className="section-label">THE CAREER OPERATING SYSTEM</span>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/85 backdrop-blur-sm border border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)] font-mono shadow-xs">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-surface-raised)]/85 backdrop-blur-sm border border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)] font-mono shadow-xs">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   <span>AI-powered. System-assigned. Always clearly identified as AI.</span>
                 </div>
               </div>
 
               <h1
                 id="hero-title"
-                className="text-display-hero font-serif font-normal text-[var(--color-charcoal-deep)] tracking-tight"
+                className="text-display-hero font-serif font-normal text-[var(--color-text-primary)] tracking-tight"
               >
                 A career mentor that learns where you&apos;re trying to go.
               </h1>
@@ -194,7 +194,7 @@ export default function AICareerMentorPage() {
                   </Button>
                   <a
                     href="#not-another-chatbot"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-charcoal-deep)] hover:underline underline-offset-4 bg-white/60 backdrop-blur-xs px-3 py-2 rounded"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-text-primary)] hover:text-white hover:underline underline-offset-4 bg-white/10 backdrop-blur-xs px-3 py-2 rounded"
                   >
                     <span>See the Mentor in action</span>
                     <ArrowRight className="w-4 h-4" />
@@ -209,7 +209,7 @@ export default function AICareerMentorPage() {
 
             {/* Right: High-Fidelity Interactive Hero Mentor Preview */}
             <div className="lg:col-span-6">
-              <div className="shadow-editorial rounded-[var(--radius-card)] overflow-hidden bg-white/95 backdrop-blur-md">
+              <div className="shadow-editorial rounded-[var(--radius-card)] overflow-hidden bg-[var(--color-surface-raised)]/95 backdrop-blur-md border border-[var(--color-border-default)]">
                 <HeroMentorInterface />
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">CONTEXT ENGINE</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Better advice starts with better context.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -248,7 +248,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">LIFETIME CONTINUITY</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               The question changes. Your Career OS stays.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -265,7 +265,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">PRACTICAL GUIDANCE EXAMPLES</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Start with the question that&apos;s actually on your mind.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -282,7 +282,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">ACTION &amp; EVIDENCE ENGINE</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Advice is useful. Progress is better.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -299,7 +299,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">TRANSPARENCY &amp; PROVENANCE</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               You should be able to understand why something was recommended.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -310,26 +310,26 @@ export default function AICareerMentorPage() {
           {/* Human-Readable Recommendation Breakdown */}
           <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[var(--color-border-default)] pb-4">
-              <span className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <span className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Illustrative Recommendation Breakdown
               </span>
-              <span className="font-mono text-xs px-2.5 py-1 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded">
+              <span className="font-mono text-xs px-2.5 py-1 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded text-[var(--color-text-secondary)]">
                 Example Scenario
               </span>
             </div>
 
-            <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded space-y-2">
-              <span className="text-xs font-mono font-bold text-[var(--color-taupe-700)] uppercase tracking-wider block">
+            <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-2">
+              <span className="text-xs font-mono font-bold text-[var(--color-taupe-300)] uppercase tracking-wider block">
                 PROPOSED NEXT STEP
               </span>
-              <p className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <p className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 &quot;Seek project leadership responsibility before applying for Engineering Manager roles.&quot;
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs">
               <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded space-y-2">
-                <span className="font-bold text-[var(--color-charcoal-deep)] block">1. Relevant Factors</span>
+                <span className="font-bold text-[var(--color-text-primary)] block">1. Relevant Factors</span>
                 <ul className="space-y-1 text-[var(--color-text-secondary)]">
                   <li>&bull; Strong technical evidence</li>
                   <li>&bull; Limited team lead evidence</li>
@@ -338,7 +338,7 @@ export default function AICareerMentorPage() {
               </div>
 
               <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded space-y-2">
-                <span className="font-bold text-[var(--color-charcoal-deep)] block">2. Input Sources</span>
+                <span className="font-bold text-[var(--color-text-primary)] block">2. Input Sources</span>
                 <ul className="space-y-1 text-[var(--color-text-secondary)]">
                   <li>&bull; Career Twin profile</li>
                   <li>&bull; Passport credentials</li>
@@ -347,14 +347,14 @@ export default function AICareerMentorPage() {
               </div>
 
               <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded space-y-2">
-                <span className="font-bold text-[var(--color-charcoal-deep)] block">3. Uncertainty</span>
+                <span className="font-bold text-[var(--color-text-primary)] block">3. Uncertainty</span>
                 <p className="text-[var(--color-text-secondary)]">
                   Career OS cannot know internal hiring requirements for every specific employer.
                 </p>
               </div>
 
               <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded space-y-2">
-                <span className="font-bold text-[var(--color-charcoal-deep)] block">4. Your Control</span>
+                <span className="font-bold text-[var(--color-text-primary)] block">4. Your Control</span>
                 <ul className="space-y-1 text-[var(--color-text-secondary)]">
                   <li>&bull; Accept suggestion</li>
                   <li>&bull; Challenge / Ignore</li>
@@ -365,12 +365,12 @@ export default function AICareerMentorPage() {
 
             {/* Expandable Technical Provenance Drawer */}
             <details className="group pt-4 border-t border-[var(--color-border-default)]">
-              <summary className="cursor-pointer font-mono text-xs font-bold text-[var(--color-charcoal-deep)] flex items-center justify-between p-3 bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)] rounded hover:bg-[var(--color-taupe-100)] transition-colors">
+              <summary className="cursor-pointer font-mono text-xs font-bold text-[var(--color-text-primary)] flex items-center justify-between p-3 bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)] rounded hover:bg-white/5 transition-colors">
                 <span>// FOR DEVELOPERS &amp; PROCUREMENT: VIEW TECHNICAL EXECUTION RECORD</span>
                 <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
               </summary>
               <div className="mt-3 p-5 bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)] rounded font-mono text-xs text-[var(--color-text-secondary)] overflow-x-auto space-y-1">
-                <p className="text-emerald-700 font-bold">// Illustrative Provenance Structure — Not a Live Execution Record</p>
+                <p className="text-emerald-400 font-bold">// Illustrative Provenance Structure — Not a Live Execution Record</p>
                 <p>ai_execution_id: &quot;[execution_identifier]&quot;</p>
                 <p>provider_class: &quot;approved_ai_provider&quot; | model_id: &quot;recorded_at_execution&quot;</p>
                 <p>policy_version: &quot;[recorded_policy_version]&quot;</p>
@@ -390,7 +390,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">ECOSYSTEM INTEGRATION</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Your Mentor and Career Twin work together.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -401,12 +401,12 @@ export default function AICareerMentorPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link
               href={ROUTES.PRODUCT_CAREER_TWIN}
-              className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-charcoal-base)] transition-all group"
+              className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-border-strong)] transition-all group"
             >
-              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-700)]">
+              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-300)]">
                 CONTEXT REPRESENTATION
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors flex items-center justify-between">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)] group-hover:text-white transition-colors flex items-center justify-between">
                 <span>Career Twin</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </h3>
@@ -417,12 +417,12 @@ export default function AICareerMentorPage() {
 
             <Link
               href={ROUTES.PRODUCT_CAREER_PASSPORT}
-              className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-charcoal-base)] transition-all group"
+              className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-border-strong)] transition-all group"
             >
-              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-700)]">
+              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-300)]">
                 EVIDENCE &amp; CREDENTIALS
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors flex items-center justify-between">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)] group-hover:text-white transition-colors flex items-center justify-between">
                 <span>Career Passport</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </h3>
@@ -433,12 +433,12 @@ export default function AICareerMentorPage() {
 
             <Link
               href={ROUTES.PRODUCT_CAREER_GRAPH}
-              className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-charcoal-base)] transition-all group"
+              className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-border-strong)] transition-all group"
             >
-              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-700)]">
+              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-300)]">
                 CAREER GRAPH PATHWAYS
               </span>
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors flex items-center justify-between">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)] group-hover:text-white transition-colors flex items-center justify-between">
                 <span>Career Graph</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </h3>
@@ -455,7 +455,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">DATA PRIVACY BOUNDARIES</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Your Mentor can know more than an employer ever needs to.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -466,10 +466,10 @@ export default function AICareerMentorPage() {
           <PrivacySimulatorInteractive />
 
           <div className="flex flex-wrap items-center gap-6 pt-2 text-xs">
-            <Link href={ROUTES.TRUST_DATA_ETHICS} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.TRUST_DATA_ETHICS} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               How Career OS Privacy Works &rarr;
             </Link>
-            <Link href={ROUTES.LEGAL_CANDIDATE_PRIVACY} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.LEGAL_CANDIDATE_PRIVACY} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               Candidate Privacy Policy &rarr;
             </Link>
           </div>
@@ -481,7 +481,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">YOUTH SAFEGUARDING &bull; AGE MODEL</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Career guidance should grow with you.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -490,25 +490,25 @@ export default function AICareerMentorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="font-mono text-xs font-bold text-[var(--color-taupe-700)]">AGE 16+ DIRECT ACCESS</span>
-              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">Direct Individual Accounts</h3>
+            <div className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
+              <span className="font-mono text-xs font-bold text-[var(--color-taupe-300)]">AGE 16+ DIRECT ACCESS</span>
+              <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">Direct Individual Accounts</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                 Direct consumer signup permitted at age 16 with minor safeguards active for ages 16&ndash;17, including default-private profiles.
               </p>
             </div>
 
-            <div className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="font-mono text-xs font-bold text-[var(--color-taupe-700)]">AGES 13–15 VERIFIED</span>
-              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">Verified Relationships</h3>
+            <div className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
+              <span className="font-mono text-xs font-bold text-[var(--color-taupe-300)]">AGES 13–15 VERIFIED</span>
+              <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">Verified Relationships</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                 Access for ages 13&ndash;15 requires a verified K-12 school arrangement or verified parent/guardian consent.
               </p>
             </div>
 
-            <div className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="font-mono text-xs font-bold text-[var(--color-taupe-700)]">UNDER 13 — INSTITUTIONAL ONLY</span>
-              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">School Institutional Only</h3>
+            <div className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
+              <span className="font-mono text-xs font-bold text-[var(--color-taupe-300)]">UNDER 13 — INSTITUTIONAL ONLY</span>
+              <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)]">School Institutional Only</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                 Career OS does not offer open under-13 consumer registration. Any under-13 deployment requires an approved institutional arrangement and applicable notices and safeguards.
               </p>
@@ -516,16 +516,16 @@ export default function AICareerMentorPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6 text-xs pt-2">
-            <Link href={ROUTES.LEGAL_STUDENT_TERMS} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.LEGAL_STUDENT_TERMS} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               Student Terms &rarr;
             </Link>
-            <Link href={ROUTES.LEGAL_PARENT_GUARDIAN} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.LEGAL_PARENT_GUARDIAN} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               Parent &amp; Guardian Notice &rarr;
             </Link>
-            <Link href={ROUTES.TRUST_SAFEGUARDING} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.TRUST_SAFEGUARDING} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               Youth Safeguarding &rarr;
             </Link>
-            <Link href={ROUTES.REGULATORY_STUDENT_PRIVACY} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.REGULATORY_STUDENT_PRIVACY} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               Student Privacy Alignment &rarr;
             </Link>
           </div>
@@ -537,7 +537,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">SYSTEM BOUNDARIES &amp; TRUST</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Good guidance includes knowing the limits.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -547,8 +547,8 @@ export default function AICareerMentorPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-bold text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+              <span className="font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-red-400 shrink-0" />
                 No Guaranteed Hiring or Salary Promises
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -557,8 +557,8 @@ export default function AICareerMentorPage() {
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-bold text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+              <span className="font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-red-400 shrink-0" />
                 No Autonomous Hiring Decisions
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -567,8 +567,8 @@ export default function AICareerMentorPage() {
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-bold text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+              <span className="font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-red-400 shrink-0" />
                 No Replacement for Legal or Medical Advice
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -577,8 +577,8 @@ export default function AICareerMentorPage() {
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-bold text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+              <span className="font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-red-400 shrink-0" />
                 No Evidence Fabrication
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -587,8 +587,8 @@ export default function AICareerMentorPage() {
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-bold text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+              <span className="font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-red-400 shrink-0" />
                 No Pretense of Human Identity
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -597,8 +597,8 @@ export default function AICareerMentorPage() {
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <span className="font-bold text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+              <span className="font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-red-400 shrink-0" />
                 No Private Data Selling
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -608,13 +608,13 @@ export default function AICareerMentorPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6 text-xs pt-2">
-            <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               Responsible AI Framework &rarr;
             </Link>
-            <Link href={ROUTES.LEGAL_AI_TERMS} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.LEGAL_AI_TERMS} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               AI Terms of Use &rarr;
             </Link>
-            <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="font-semibold text-[var(--color-charcoal-deep)] underline underline-offset-4">
+            <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4">
               Human Oversight Policy &rarr;
             </Link>
           </div>
@@ -626,7 +626,7 @@ export default function AICareerMentorPage() {
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">FREQUENTLY ASKED QUESTIONS</span>
-            <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Everything you need to know about the AI Career Mentor.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -638,10 +638,10 @@ export default function AICareerMentorPage() {
             {faqList.map((faq, idx) => (
               <div
                 key={idx}
-                className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2"
+                className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2"
               >
-                <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)] flex items-start gap-2">
-                  <HelpCircle className="w-4 h-4 text-[var(--color-taupe-600)] shrink-0 mt-1" />
+                <h3 className="font-serif font-bold text-base text-[var(--color-text-primary)] flex items-start gap-2">
+                  <HelpCircle className="w-4 h-4 text-[var(--color-taupe-300)] shrink-0 mt-1" />
                   <span>{faq.q}</span>
                 </h3>
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed pl-6">
@@ -654,10 +654,10 @@ export default function AICareerMentorPage() {
       </section>
 
       {/* ── SECTION 13: FINAL CTA ───────────────────────────────────── */}
-      <section className="py-20 bg-[var(--color-ivory-base)]">
+      <section className="py-20 bg-[var(--color-surface-base)]">
         <div className="container-editorial text-center space-y-8 max-w-3xl">
           <span className="section-label">BEGIN YOUR CAREER COMPOUNDING</span>
-          <h2 className="text-display-hero font-serif font-normal text-[var(--color-charcoal-deep)]">
+          <h2 className="text-display-hero font-serif font-normal text-[var(--color-text-primary)]">
             Your next career question is probably already in your head.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -670,7 +670,7 @@ export default function AICareerMentorPage() {
             </Button>
             <Link
               href={ROUTES.PRODUCT_CAREER_TWIN}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-charcoal-deep)] hover:underline underline-offset-4"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4"
             >
               <span>Explore Career Twin</span>
               <ArrowRight className="w-4 h-4" />

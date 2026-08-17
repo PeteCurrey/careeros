@@ -48,11 +48,11 @@ export function MegaMenu({ section, onClose }: MegaMenuProps) {
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className="group block p-2 -mx-2 hover:bg-[var(--color-surface-interactive)]/60 rounded-[var(--radius-sm)] transition-colors"
+                      className="group block p-2 -mx-2 hover:bg-white/5 rounded-[var(--radius-sm)] transition-colors"
                     >
-                      <div className="text-sm font-semibold text-[var(--color-charcoal-deep)] group-hover:text-[var(--color-charcoal-base)] transition-colors flex items-center justify-between">
+                      <div className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-white transition-colors flex items-center justify-between">
                         <span>{item.label}</span>
-                        <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0.5 transition-all text-[var(--color-taupe-600)]" />
+                        <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0.5 transition-all text-[var(--color-taupe-300)]" />
                       </div>
                       {item.description && (
                         <p className="text-xs text-[var(--color-text-secondary)] line-clamp-1 mt-0.5 font-normal">
@@ -75,7 +75,7 @@ export function MegaMenu({ section, onClose }: MegaMenuProps) {
             <Link
               href={section.cta.href}
               onClick={onClose}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-charcoal-deep)] hover:text-black transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-text-primary)] hover:text-white transition-colors"
             >
               <span>{section.cta.label}</span>
               <ArrowRight className="w-3.5 h-3.5" />

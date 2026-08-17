@@ -3,11 +3,11 @@ import { CheckCircle2, Info } from 'lucide-react';
 
 export function ChatbotComparisonSection() {
   return (
-    <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-raised)] text-[var(--color-charcoal-deep)]">
+    <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-raised)] text-[var(--color-text-primary)]">
       <div className="container-editorial space-y-12">
         <div className="max-w-3xl space-y-4">
           <span className="section-label">ARCHITECTURAL DISTINCTION</span>
-          <h2 className="text-display-section font-serif font-normal text-[var(--color-charcoal-deep)] tracking-tight">
+          <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)] tracking-tight">
             Why this is different from opening a blank chatbot.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
@@ -18,13 +18,13 @@ export function ChatbotComparisonSection() {
         {/* Editorial Comparison Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* General-Purpose AI */}
-          <div className="p-8 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
+          <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
             <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] flex items-center gap-2">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)] flex items-center gap-2">
                 <Info className="w-5 h-5 text-[var(--color-taupe-600)]" />
                 General-Purpose AI Services
               </h3>
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-[var(--color-taupe-100)] text-[var(--color-taupe-800)] border border-[var(--color-border-default)] font-bold">
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-white/10 text-[var(--color-taupe-800)] border border-[var(--color-border-default)] font-bold">
                 GENERAL ASSISTANT
               </span>
             </div>
@@ -64,9 +64,9 @@ export function ChatbotComparisonSection() {
           </div>
 
           {/* Career OS AI Mentor */}
-          <div className="p-8 bg-[var(--color-surface-warm)] border-2 border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-6 shadow-subtle">
+          <div className="p-8 bg-[var(--color-surface-warm)] border-2 border-white/15 rounded-[var(--radius-card)] space-y-6 shadow-subtle">
             <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] flex items-center gap-2">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)] flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600" />
                 Career OS AI Mentor
               </h3>
@@ -75,16 +75,16 @@ export function ChatbotComparisonSection() {
               </span>
             </div>
 
-            <p className="text-xs text-[var(--color-charcoal-deep)] leading-relaxed">
+            <p className="text-xs text-[var(--color-text-primary)] leading-relaxed">
               Purpose-built around ongoing professional development. Designed to connect career context,
               evidence records, developmental milestones, and pathway intelligence.
             </p>
 
             <div className="space-y-3 pt-2">
-              <span className="font-mono text-[10px] font-bold text-[var(--color-charcoal-deep)] uppercase tracking-wider block">
+              <span className="font-mono text-[10px] font-bold text-[var(--color-text-primary)] uppercase tracking-wider block">
                 Natively Engineered To Connect:
               </span>
-              <ul className="space-y-2.5 text-xs text-[var(--color-charcoal-deep)]">
+              <ul className="space-y-2.5 text-xs text-[var(--color-text-primary)]">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span><strong>Career Context:</strong> Structured model of strengths, goals &amp; parameters</span>

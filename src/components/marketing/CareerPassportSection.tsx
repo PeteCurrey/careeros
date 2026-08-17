@@ -51,7 +51,7 @@ const PASSPORT_RECORDS: PassportRecord[] = [
 
 export function CareerPassportSection() {
   return (
-    <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Section Header */}
@@ -59,7 +59,7 @@ export function CareerPassportSection() {
           <span className="section-label">
             Sovereign Evidence Vault
           </span>
-          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+          <h2 className="text-display-section text-[var(--color-text-primary)]">
             Take the evidence with you.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -71,7 +71,7 @@ export function CareerPassportSection() {
         <div className="bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle">
           
           {/* Document Header Bar */}
-          <div className="bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-charcoal-border)]">
+          <div className="bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-default)]">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <span className="section-label-light text-[10px]">
@@ -95,10 +95,10 @@ export function CareerPassportSection() {
               {PASSPORT_RECORDS.map((item, i) => (
                 <div
                   key={i}
-                  className="p-6 bg-[var(--color-ivory-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-4"
+                  className="p-6 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-4"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] uppercase tracking-wider text-[var(--color-taupe-600)] font-semibold">
+                    <span className="text-[11px] uppercase tracking-wider text-[var(--color-taupe-300)] font-semibold">
                       {item.type}
                     </span>
                     {item.status === 'VERIFIED' ? (
@@ -106,14 +106,14 @@ export function CareerPassportSection() {
                         <CheckCircle2 className="w-3 h-3" /> Verified Record
                       </span>
                     ) : (
-                      <span className="px-2.5 py-0.5 bg-[var(--color-lavender-subtle)] text-[var(--color-charcoal-deep)] text-[10px] font-semibold rounded-[var(--radius-sm)] border border-[var(--color-lavender-base)]/40 flex items-center gap-1">
+                      <span className="px-2.5 py-0.5 bg-[var(--color-lavender-base)]/20 text-[var(--color-lavender-light)] text-[10px] font-semibold rounded-[var(--radius-sm)] border border-[var(--color-lavender-base)]/40 flex items-center gap-1">
                         <FileText className="w-3 h-3" /> Evidenced Artifact
                       </span>
                     )}
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-sm sm:text-base text-[var(--color-charcoal-deep)]">
+                    <h4 className="font-semibold text-sm sm:text-base text-[var(--color-text-primary)]">
                       {item.title}
                     </h4>
                     <p
@@ -136,13 +136,13 @@ export function CareerPassportSection() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="bg-[var(--color-ivory-base)] px-6 sm:px-10 py-4 border-t border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+          <div className="bg-[var(--color-surface-base)] px-6 sm:px-10 py-4 border-t border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
             <span className="text-[var(--color-text-secondary)]">
               Exportable as standard W3C verifiable credentials &bull; Zero vendor lock-in
             </span>
             <Link
               href={ROUTES.PRODUCT_CAREER_PASSPORT}
-              className="font-semibold text-[var(--color-charcoal-deep)] hover:text-black inline-flex items-center gap-1 underline underline-offset-4"
+              className="font-semibold text-[var(--color-text-primary)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4"
             >
               Explore Career Passport <ArrowRight className="w-3.5 h-3.5" />
             </Link>

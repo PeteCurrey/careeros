@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function OpportunityAgentPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Full Screen Hero */}
       <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial">
@@ -26,7 +26,7 @@ export default function OpportunityAgentPage() {
             <span className="section-label">
               Future Intelligence Vision
             </span>
-            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">
               Opportunity Agent: Your career agent will find you.
             </h1>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">

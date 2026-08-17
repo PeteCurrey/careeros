@@ -41,11 +41,11 @@ export function CareerPathLines({
     }
   }, [animate]);
 
-  // Stroke colours — muted, editorial
-  const GOLD   = 'rgba(176, 155, 91, 0.22)';
-  const MAUVE  = 'rgba(139, 117, 141, 0.17)';
-  const TAUPE  = 'rgba(122, 109, 96, 0.15)';
-  const STONE  = 'rgba(160, 148, 132, 0.13)';
+  // Stroke colours — muted, editorial for dark charcoal canvas
+  const GOLD   = 'rgba(221, 211, 109, 0.25)';
+  const MAUVE  = 'rgba(205, 187, 210, 0.22)';
+  const TAUPE  = 'rgba(194, 187, 179, 0.18)';
+  const STONE  = 'rgba(232, 223, 233, 0.15)';
 
   // Each path has a total approximate length for dashoffset reveal
   const paths = [

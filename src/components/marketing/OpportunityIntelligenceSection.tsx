@@ -35,7 +35,7 @@ const MATCHES: MatchedOpportunity[] = [
 
 export function OpportunityIntelligenceSection() {
   return (
-    <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Section Header */}
@@ -44,13 +44,13 @@ export function OpportunityIntelligenceSection() {
             <span className="section-label">
               Autonomous Discovery Intelligence
             </span>
-            <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)] px-2 py-0.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)]">
+            <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)] px-2 py-0.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)]">
               Platform Direction
             </span>
           </div>
-          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+          <h2 className="text-display-section text-[var(--color-text-primary)]">
             What if the right opportunity found you first? <br />
-            <span className="text-[var(--color-taupe-600)] font-normal">
+            <span className="text-[var(--color-taupe-300)] font-normal">
               Your career agent will find you.
             </span>
           </h2>
@@ -68,14 +68,14 @@ export function OpportunityIntelligenceSection() {
               <span className="section-label">
                 Zero Public Broadcasting
               </span>
-              <h3 className="text-xl font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-xl font-semibold text-[var(--color-text-primary)]">
                 Autonomous, Private Evaluation
               </h3>
               <p className="text-body-editorial text-[var(--color-text-secondary)] leading-relaxed">
                 Opportunities evaluate against your Career Twin under your explicit consent ledger. Your identity and employment status remain entirely private until you choose to accept an introduction.
               </p>
               
-              <ul className="space-y-3 text-xs text-[var(--color-charcoal-deep)] pt-2 font-medium">
+              <ul className="space-y-3 text-xs text-[var(--color-text-primary)] pt-2 font-medium">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] shrink-0 mt-0.5" />
                   <span>Zero public broadcasting of job-search status to your current employer</span>
@@ -105,10 +105,10 @@ export function OpportunityIntelligenceSection() {
               >
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-[var(--color-border-subtle)]">
                   <div className="space-y-1">
-                    <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">
+                    <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">
                       Autonomous Direct Match
                     </span>
-                    <h4 className="text-base sm:text-lg font-semibold text-[var(--color-charcoal-deep)]">
+                    <h4 className="text-base sm:text-lg font-semibold text-[var(--color-text-primary)]">
                       {match.role}
                     </h4>
                     <p
@@ -122,14 +122,14 @@ export function OpportunityIntelligenceSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-[11px] uppercase tracking-wider text-[var(--color-taupe-600)] font-semibold">
+                  <p className="text-[11px] uppercase tracking-wider text-[var(--color-taupe-300)] font-semibold">
                     Explainable Matching Provenance
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {match.factors.map((f) => (
                       <span
                         key={f}
-                        className="text-xs px-3 py-1 bg-[var(--color-ivory-warm)] text-[var(--color-charcoal-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] font-medium"
+                        className="text-xs px-3 py-1 bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] font-medium"
                       >
                         &bull; {f}
                       </span>
@@ -142,7 +142,7 @@ export function OpportunityIntelligenceSection() {
             <div className="pt-2 flex justify-end">
               <Link
                 href={ROUTES.PRODUCT_OPPORTUNITY_AGENT}
-                className="text-xs font-semibold text-[var(--color-charcoal-deep)] hover:text-black inline-flex items-center gap-1 underline underline-offset-4"
+                className="text-xs font-semibold text-[var(--color-text-primary)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4"
               >
                 Learn about Opportunity Agent <ArrowRight className="w-3.5 h-3.5" />
               </Link>

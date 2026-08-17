@@ -93,7 +93,7 @@ const AUDIENCES: AudienceFeature[] = [
 
 export function AudienceEditorialPanels() {
   return (
-    <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-24">
         
         {/* Section Header */}
@@ -101,7 +101,7 @@ export function AudienceEditorialPanels() {
           <span className="section-label">
             Ecosystem Audiences
           </span>
-          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+          <h2 className="text-display-section text-[var(--color-text-primary)]">
             Four career worlds. One operating system.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -121,7 +121,7 @@ export function AudienceEditorialPanels() {
                 {/* Narrative Column */}
                 <div className={`space-y-6 ${isReversed ? 'lg:col-span-6 lg:order-2' : 'lg:col-span-6'}`}>
                   <div className="flex items-center gap-3">
-                    <span className="text-sm font-semibold text-[var(--color-taupe-600)]">
+                    <span className="text-sm font-semibold text-[var(--color-taupe-300)]">
                       {aud.num}
                     </span>
                     <span className="text-[var(--color-border-strong)]">/</span>
@@ -130,7 +130,7 @@ export function AudienceEditorialPanels() {
                     </span>
                   </div>
 
-                  <h3 className="text-display-section text-[var(--color-charcoal-deep)] text-2xl sm:text-3xl lg:text-4xl leading-tight">
+                  <h3 className="text-display-section text-[var(--color-text-primary)] text-2xl sm:text-3xl lg:text-4xl leading-tight">
                     {aud.headline}
                   </h3>
 
@@ -138,10 +138,10 @@ export function AudienceEditorialPanels() {
                     {aud.description}
                   </p>
 
-                  <ul className="space-y-2.5 pt-2 text-xs text-[var(--color-charcoal-deep)] font-medium">
+                  <ul className="space-y-2.5 pt-2 text-xs text-[var(--color-text-primary)] font-medium">
                     {aud.points.map((p, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5">
-                        <span className="text-[var(--color-taupe-600)] font-bold text-sm leading-none">&bull;</span>
+                        <span className="text-[var(--color-taupe-300)] font-bold text-sm leading-none">&bull;</span>
                         <span dangerouslySetInnerHTML={{ __html: p }} />
                       </li>
                     ))}
@@ -150,7 +150,7 @@ export function AudienceEditorialPanels() {
                   <div className="pt-4">
                     <Link
                       href={aud.href}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-charcoal-deep)] hover:text-black underline underline-offset-4"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4"
                     >
                       <span>{aud.ctaText}</span>
                       <ArrowRight className="w-4 h-4" />

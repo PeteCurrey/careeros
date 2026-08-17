@@ -62,7 +62,7 @@ export function CareerTwinSection() {
   const activeData = TWIN_DIMENSIONS.find((d) => d.id === selectedDimension) ?? TWIN_DIMENSIONS[0]!;
 
   return (
-    <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Section Header */}
@@ -71,9 +71,9 @@ export function CareerTwinSection() {
             <span className="section-label">
               Dynamic Self-Model
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               Your résumé tells people where you&apos;ve been. <br />
-              <span className="text-[var(--color-taupe-600)] font-normal">
+              <span className="text-[var(--color-taupe-300)] font-normal">
                 Your Career Twin helps understand where you could go.
               </span>
             </h2>
@@ -90,12 +90,12 @@ export function CareerTwinSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left: The Legacy Flat Résumé */}
-          <div className="lg:col-span-4 p-8 bg-[var(--color-ivory-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col justify-between opacity-75">
+          <div className="lg:col-span-4 p-8 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col justify-between opacity-75">
             <div className="space-y-4">
               <span className="section-label">
                 The Legacy Artifact
               </span>
-              <h3 className="text-lg font-medium text-[var(--color-charcoal-deep)] line-through decoration-[var(--color-danger)]">
+              <h3 className="text-lg font-medium text-[var(--color-text-primary)] line-through decoration-[var(--color-danger)]">
                 The Static Résumé
               </h3>
               <p className="text-xs text-[var(--color-text-tertiary)] leading-relaxed">
@@ -128,7 +128,7 @@ export function CareerTwinSection() {
                   <span className="section-label">
                     Sovereign Intelligence Model
                   </span>
-                  <h3 className="text-xl font-semibold text-[var(--color-charcoal-deep)] mt-1">
+                  <h3 className="text-xl font-semibold text-[var(--color-text-primary)] mt-1">
                     The Dynamic Career Twin
                   </h3>
                 </div>
@@ -151,12 +151,12 @@ export function CareerTwinSection() {
                       className={cn(
                         'px-4 py-2 text-xs font-semibold rounded-[var(--radius-sm)] transition-all cursor-pointer flex items-center gap-2 border',
                         isSelected
-                          ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]'
-                          : 'bg-[var(--color-ivory-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-[var(--color-surface-interactive)]'
+                          ? 'bg-[#F4F3EF] text-[#202020] border-[#F4F3EF]'
+                          : 'bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-white/10'
                       )}
                     >
                       <span>{dim.name}</span>
-                      <span className={cn('text-[10px] px-1.5 py-0.5 rounded-[var(--radius-sm)]', isSelected ? 'bg-white/20 text-white' : 'bg-[var(--color-border-default)] text-[var(--color-text-tertiary)]')}>
+                      <span className={cn('text-[10px] px-1.5 py-0.5 rounded-[var(--radius-sm)]', isSelected ? 'bg-[#202020]/20 text-[#202020]' : 'bg-[var(--color-border-default)] text-[var(--color-text-tertiary)]')}>
                         {dim.count}
                       </span>
                     </button>
@@ -169,10 +169,10 @@ export function CareerTwinSection() {
                 {activeData.items.map((item, i) => (
                   <div
                     key={i}
-                    className="p-4 bg-[var(--color-ivory-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-1"
+                    className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-1"
                   >
                     <div className="flex items-center justify-between">
-                      <h4 className="text-xs font-bold text-[var(--color-charcoal-deep)]">
+                      <h4 className="text-xs font-bold text-[var(--color-text-primary)]">
                         {item.title}
                       </h4>
                       {item.verified && (
@@ -194,7 +194,7 @@ export function CareerTwinSection() {
               </span>
               <Link
                 href={ROUTES.PRODUCT_CAREER_TWIN}
-                className="font-semibold text-[var(--color-charcoal-deep)] hover:text-black inline-flex items-center gap-1 underline underline-offset-4"
+                className="font-semibold text-[var(--color-text-primary)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4"
               >
                 Learn about Career Twin <ArrowRight className="w-3.5 h-3.5" />
               </Link>

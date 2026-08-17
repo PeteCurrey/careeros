@@ -88,7 +88,7 @@ export default function AutomatedHiringRegulatoryPage() {
           {aiTaxonomy.map((item) => (
             <div key={item.role} className="p-4 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
               <div className="flex items-center justify-between">
-                <span className="font-mono font-bold text-sm text-[var(--color-charcoal-deep)]">{item.role}</span>
+                <span className="font-mono font-bold text-sm text-[var(--color-text-primary)]">{item.role}</span>
                 <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
                   item.inScopeForCareerOS
                     ? "bg-[var(--color-success-light)] text-[var(--color-success)] border border-[var(--color-success)]/20"

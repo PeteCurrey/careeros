@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col w-full overflow-hidden bg-[var(--color-ivory-base)]">
+    <div className="flex flex-col w-full overflow-hidden bg-[var(--color-surface-base)]">
       {/* 01. Hero — Multidisciplinary Mentor Team + Career Transition Panorama */}
       <HeroMentorSection />
 

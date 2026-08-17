@@ -69,7 +69,7 @@ export function LifetimeJourneySection() {
   const stage = LIFETIME_STAGES[activeStage] ?? LIFETIME_STAGES[0]!;
 
   return (
-    <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Section Header */}
@@ -78,7 +78,7 @@ export function LifetimeJourneySection() {
             <span className="section-label">
               The Continuous Lifetime Model
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               One system. Your whole working life.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -102,15 +102,15 @@ export function LifetimeJourneySection() {
                 className={cn(
                   'p-6 text-left transition-all cursor-pointer flex flex-col justify-between min-h-[160px]',
                   isActive
-                    ? 'bg-[var(--color-ivory-deep)] border-b-2 border-b-[var(--color-charcoal-deep)]'
-                    : 'hover:bg-[var(--color-surface-interactive)]/50'
+                    ? 'bg-[var(--color-surface-sunken)] border-b-2 border-b-[var(--color-text-primary)]'
+                    : 'hover:bg-white/5'
                 )}
               >
-                <span className={cn('text-xs font-semibold', isActive ? 'text-[var(--color-charcoal-deep)]' : 'text-[var(--color-taupe-400)]')}>
+                <span className={cn('text-xs font-semibold', isActive ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-taupe-400)]')}>
                   {item.num}
                 </span>
                 <div className="mt-4">
-                  <h3 className="font-semibold text-sm text-[var(--color-charcoal-deep)] tracking-tight">
+                  <h3 className="font-semibold text-sm text-[var(--color-text-primary)] tracking-tight">
                     {item.name}
                   </h3>
                   <p className="text-xs text-[var(--color-text-tertiary)] line-clamp-2 mt-1">
@@ -129,7 +129,7 @@ export function LifetimeJourneySection() {
               <span className="section-label">
                 Phase {stage.num} &bull; {stage.environment}
               </span>
-              <h3 className="text-headline-editorial text-[var(--color-charcoal-deep)]">
+              <h3 className="text-headline-editorial text-[var(--color-text-primary)]">
                 {stage.tagline}
               </h3>
             </div>
@@ -140,18 +140,18 @@ export function LifetimeJourneySection() {
 
             <div className="pt-4 border-t border-[var(--color-border-subtle)] flex items-center gap-4 text-xs text-[var(--color-text-tertiary)]">
               <span>Environment Context:</span>
-              <span className="font-semibold text-[var(--color-charcoal-deep)]">{stage.environment}</span>
+              <span className="font-semibold text-[var(--color-text-primary)]">{stage.environment}</span>
             </div>
           </div>
 
-          <div className="lg:col-span-5 bg-[var(--color-ivory-warm)] p-7 border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] space-y-4">
+          <div className="lg:col-span-5 bg-[var(--color-surface-warm)] p-7 border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] space-y-4">
             <p className="section-label">
               Compounding Career Artifacts
             </p>
             <ul className="space-y-3 pt-1">
               {stage.milestones.map((m) => (
-                <li key={m} className="flex items-start gap-2.5 text-xs text-[var(--color-charcoal-deep)] font-medium">
-                  <span className="text-[var(--color-taupe-600)] font-bold text-sm leading-none">&bull;</span>
+                <li key={m} className="flex items-start gap-2.5 text-xs text-[var(--color-text-primary)] font-medium">
+                  <span className="text-[var(--color-taupe-300)] font-bold text-sm leading-none">&bull;</span>
                   <span>{m}</span>
                 </li>
               ))}

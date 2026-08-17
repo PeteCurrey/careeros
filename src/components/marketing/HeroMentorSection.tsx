@@ -8,8 +8,8 @@ import { MEDIA_ASSETS } from '@/lib/media';
 import { CareerAtmosphere } from '@/components/brand/CareerAtmosphere';
 import { CareerPathLines } from '@/components/brand/CareerPathLines';
 
-// The exact hex of --color-ivory-base used in the CSS dissolve overlay
-const IVORY = '#F7F5EC';
+// The exact hex of --background-dark used in the CSS dissolve overlay
+const CHARCOAL = '#393939';
 
 export function HeroMentorSection() {
   const [mounted, setMounted] = useState(false);
@@ -46,7 +46,7 @@ export function HeroMentorSection() {
       className="relative overflow-hidden border-b border-[var(--color-border-default)] min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center"
       style={{
         minHeight: '100vh',
-        backgroundColor: IVORY,
+        backgroundColor: CHARCOAL,
       }}
     >
       {/* ── Layer 1: Career Atmosphere ──────────────────────────────── */}
@@ -79,12 +79,12 @@ export function HeroMentorSection() {
           style={{ objectPosition: '48% center' }}
         />
 
-        {/* Left-edge ivory dissolve — matches exact bg colour */}
+        {/* Left-edge charcoal dissolve — matches exact bg colour */}
         <div
           aria-hidden="true"
           className="absolute inset-y-0 left-0 z-10 w-[55%] pointer-events-none"
           style={{
-            background: `linear-gradient(to right, ${IVORY} 0%, ${IVORY} 8%, rgba(247,245,236,0.9) 28%, rgba(247,245,236,0.55) 50%, rgba(247,245,236,0.12) 72%, transparent 100%)`,
+            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 8%, rgba(57,57,57,0.92) 28%, rgba(57,57,57,0.55) 50%, rgba(57,57,57,0.12) 72%, transparent 100%)`,
           }}
         />
 
@@ -93,7 +93,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-x-0 top-0 z-10 h-[18%] pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, ${IVORY} 0%, rgba(247,245,236,0.6) 40%, transparent 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(57,57,57,0.6) 40%, transparent 100%)`,
           }}
         />
 
@@ -102,19 +102,19 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-x-0 bottom-0 z-10 h-[14%] pointer-events-none"
           style={{
-            background: `linear-gradient(to top, ${IVORY} 0%, rgba(247,245,236,0.5) 40%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(57,57,57,0.5) 40%, transparent 100%)`,
           }}
         />
       </div>
 
       {/* ── Layer 4: Left-side foreground vignette ─────────────────── */}
-      {/* Keeps copy area crisp ivory regardless of atmosphere */}
+      {/* Keeps copy area crisp charcoal canvas regardless of atmosphere */}
       <div
         aria-hidden="true"
         className="hidden lg:block absolute inset-y-0 left-0 z-[3] pointer-events-none"
         style={{
           width: '52%',
-          background: `radial-gradient(ellipse at 0% 50%, rgba(247,245,236,0.7) 0%, transparent 75%)`,
+          background: `radial-gradient(ellipse at 0% 50%, rgba(57,57,57,0.7) 0%, transparent 75%)`,
         }}
       />
 
@@ -139,7 +139,7 @@ export function HeroMentorSection() {
               id="hero-headline"
               className="text-display-hero mb-8"
               style={{
-                color: 'var(--color-charcoal-deep)',
+                color: 'var(--color-text-primary)',
                 maxWidth: '14ch',
               }}
             >
@@ -151,7 +151,7 @@ export function HeroMentorSection() {
               <span
                 className="block mt-3"
                 style={{
-                  color: 'var(--color-charcoal-base)',
+                  color: 'var(--color-text-secondary)',
                   fontWeight: 350,
                 }}
               >
@@ -180,10 +180,10 @@ export function HeroMentorSection() {
                 {/* Primary button */}
                 <Link
                   href={ROUTES.SIGNUP}
-                  className="inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base transition-all duration-200 focus-visible:outline-offset-4 hover:opacity-90 active:scale-[0.98]"
+                  className="inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base transition-all duration-200 focus-visible:outline-offset-4 hover:bg-white active:scale-[0.98] shadow-xs"
                   style={{
-                    backgroundColor: 'var(--color-charcoal-deep)',
-                    color: 'var(--color-ivory-base)',
+                    backgroundColor: '#F4F3EF',
+                    color: '#202020',
                     borderRadius: 'var(--radius-button)',
                     letterSpacing: '-0.01em',
                   }}
@@ -194,11 +194,10 @@ export function HeroMentorSection() {
                 {/* Secondary text link */}
                 <Link
                   href="#how-it-works"
-                  className="inline-flex items-center gap-1.5 text-[0.9375rem] font-medium transition-colors duration-150 hover:opacity-80"
-                  style={{ color: 'var(--color-charcoal-base)' }}
+                  className="inline-flex items-center gap-1.5 text-[0.9375rem] font-medium transition-colors duration-150 text-[var(--color-text-primary)] hover:text-white"
                 >
                   See how Career OS works
-                  <span aria-hidden="true" className="text-[var(--color-taupe-400)]">→</span>
+                  <span aria-hidden="true" className="text-[var(--color-taupe-300)]">→</span>
                 </Link>
               </div>
 
@@ -219,14 +218,14 @@ export function HeroMentorSection() {
               <span>For institutions:</span>
               <Link
                 href={ROUTES.FOR_HIGH_SCHOOLS}
-                className="ml-2 underline underline-offset-4 hover:text-[var(--color-charcoal-deep)] transition-colors"
+                className="ml-2 underline underline-offset-4 hover:text-[var(--color-text-primary)] transition-colors"
               >
                 Schools
               </Link>
               <span className="mx-1 opacity-50">&middot;</span>
               <Link
                 href={ROUTES.FOR_EMPLOYERS}
-                className="underline underline-offset-4 hover:text-[var(--color-charcoal-deep)] transition-colors"
+                className="underline underline-offset-4 hover:text-[var(--color-text-primary)] transition-colors"
               >
                 Employers
               </Link>
@@ -252,12 +251,12 @@ export function HeroMentorSection() {
           className="object-cover"
           style={{ objectPosition: '50% center' }}
         />
-        {/* Top fade into ivory */}
+        {/* Top fade into charcoal */}
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-0 h-[22%] pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, ${IVORY} 0%, transparent 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, transparent 100%)`,
           }}
         />
       </div>

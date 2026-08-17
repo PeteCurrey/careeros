@@ -58,7 +58,7 @@ export function VerificationJourneyInteractive() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-6">
         <div className="space-y-1">
           <span className="section-label">CREDENTIAL LIFECYCLE &bull; ILLUSTRATIVE WORKFLOW</span>
-          <h3 className="text-2xl font-serif font-bold text-[var(--color-charcoal-deep)]">
+          <h3 className="text-2xl font-serif font-bold text-[var(--color-text-primary)]">
             How a Credential Evolves Through Verification States
           </h3>
         </div>
@@ -81,8 +81,8 @@ export function VerificationJourneyInteractive() {
               onClick={() => setActiveStageIndex(idx)}
               className={`p-4 rounded-[var(--radius-card)] text-left border transition-all space-y-2 ${
                 isActive
-                  ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)] shadow-sm'
-                  : 'bg-[var(--color-surface-warm)] text-[var(--color-charcoal-deep)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+                  ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15 shadow-sm'
+                  : 'bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] border-[var(--color-border-default)] hover:border-white/20'
               }`}
             >
               <div className="flex items-center justify-between">
@@ -104,7 +104,7 @@ export function VerificationJourneyInteractive() {
       </div>
 
       {/* Active Stage Detail Panel */}
-      <div className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+      <div className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         <div className="lg:col-span-8 space-y-3">
           <div className="flex items-center gap-3">
             <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded border ${activeStage.badgeColor}`}>
@@ -115,7 +115,7 @@ export function VerificationJourneyInteractive() {
             </span>
           </div>
 
-          <h4 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+          <h4 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
             Stage {activeStage.stepNum}: {activeStage.title}
           </h4>
 
@@ -123,7 +123,7 @@ export function VerificationJourneyInteractive() {
             {activeStage.description}
           </p>
 
-          <p className="text-[11px] text-[var(--color-charcoal-deep)] font-medium pt-1 border-t border-[var(--color-border-subtle)]">
+          <p className="text-[11px] text-[var(--color-text-primary)] font-medium pt-1 border-t border-[var(--color-border-subtle)]">
             <strong>System Audit Note:</strong> {activeStage.auditNote}
           </p>
         </div>
@@ -132,7 +132,7 @@ export function VerificationJourneyInteractive() {
           <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-700)] block">
             LIFECYCLE LEDGER RECORD
           </span>
-          <div className="space-y-1 text-[11px] text-[var(--color-charcoal-deep)]">
+          <div className="space-y-1 text-[11px] text-[var(--color-text-primary)]">
             <p><strong>Item:</strong> Hybrid Diagnostics Cert</p>
             <p><strong>Issuer:</strong> IMI Automotive (#EV-9402)</p>
             <p><strong>Current Status:</strong> {activeStage.title}</p>

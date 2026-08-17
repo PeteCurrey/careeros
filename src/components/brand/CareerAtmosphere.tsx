@@ -33,10 +33,10 @@ export function CareerAtmosphere({
       className={`pointer-events-none select-none ${className}`}
       aria-hidden="true"
     >
-      {/* Warm ivory base — full fill */}
+      {/* Dark charcoal base — full fill */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: '#F7F5EC' }}
+        style={{ backgroundColor: '#393939' }}
       />
 
       {/* Soft lavender atmosphere — upper-right, behind where image sits */}
@@ -48,11 +48,11 @@ export function CareerAtmosphere({
           right: '-5%',
           width: '70%',
           height: '85%',
-          background: `radial-gradient(ellipse at 60% 30%, rgba(205, 187, 210, ${o(0.22)}) 0%, transparent 68%)`,
+          background: `radial-gradient(ellipse at 60% 30%, rgba(205, 187, 210, ${o(0.12)}) 0%, transparent 68%)`,
         }}
       />
 
-      {/* Pale stone / taupe — mid-lower right, behind mentor feet */}
+      {/* Deep charcoal depth — mid-lower right */}
       <div
         className={animate ? 'atmosphere-field atmosphere-field--taupe' : ''}
         style={{
@@ -61,7 +61,7 @@ export function CareerAtmosphere({
           right: '5%',
           width: '60%',
           height: '70%',
-          background: `radial-gradient(ellipse at 50% 70%, rgba(200, 192, 178, ${o(0.16)}) 0%, transparent 65%)`,
+          background: `radial-gradient(ellipse at 50% 70%, rgba(48, 48, 48, ${o(0.60)}) 0%, transparent 65%)`,
         }}
       />
 
@@ -74,11 +74,11 @@ export function CareerAtmosphere({
           right: '-8%',
           width: '45%',
           height: '55%',
-          background: `radial-gradient(ellipse at 80% 80%, rgba(210, 197, 152, ${o(0.13)}) 0%, transparent 60%)`,
+          background: `radial-gradient(ellipse at 80% 80%, rgba(221, 211, 109, ${o(0.08)}) 0%, transparent 60%)`,
         }}
       />
 
-      {/* Return to ivory — strong center-left, anchors the copy area */}
+      {/* Return to solid charcoal — strong center-left, anchors the copy area */}
       <div
         style={{
           position: 'absolute',
@@ -86,11 +86,11 @@ export function CareerAtmosphere({
           left: '-10%',
           width: '58%',
           height: '90%',
-          background: `radial-gradient(ellipse at 25% 40%, rgba(247, 245, 236, ${o(0.85)}) 0%, transparent 72%)`,
+          background: `radial-gradient(ellipse at 25% 40%, rgba(57, 57, 57, ${o(0.95)}) 0%, transparent 72%)`,
         }}
       />
 
-      {/* Very faint warm blush — upper-left above headline */}
+      {/* Soft elevated charcoal ambient — upper-left above headline */}
       <div
         className={animate ? 'atmosphere-field atmosphere-field--blush' : ''}
         style={{
@@ -99,7 +99,7 @@ export function CareerAtmosphere({
           left: '5%',
           width: '40%',
           height: '50%',
-          background: `radial-gradient(ellipse at 30% 20%, rgba(234, 229, 219, ${o(0.2)}) 0%, transparent 60%)`,
+          background: `radial-gradient(ellipse at 30% 20%, rgba(65, 65, 65, ${o(0.40)}) 0%, transparent 60%)`,
         }}
       />
     </div>

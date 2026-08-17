@@ -21,7 +21,7 @@ export function PrivacySimulatorInteractive() {
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-[var(--color-border-default)] pb-6">
         <div>
           <span className="section-label">INTERACTIVE PRIVACY BOUNDARY SIMULATOR</span>
-          <h3 className="text-xl font-serif font-bold text-[var(--color-charcoal-deep)] mt-1">
+          <h3 className="text-xl font-serif font-bold text-[var(--color-text-primary)] mt-1">
             See Exactly What Is Visible Across Roles
           </h3>
           <p className="text-xs text-[var(--color-text-secondary)] font-mono mt-1">
@@ -35,8 +35,8 @@ export function PrivacySimulatorInteractive() {
             onClick={() => setViewMode('MY_VIEW')}
             className={`px-3 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 transition-all ${
               viewMode === 'MY_VIEW'
-                ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] shadow-sm'
-                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)]'
+                ? 'bg-white/15 text-[var(--color-text-primary)] shadow-sm'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
             }`}
           >
             <User className="w-3.5 h-3.5" /> MY VIEW
@@ -45,8 +45,8 @@ export function PrivacySimulatorInteractive() {
             onClick={() => setViewMode('MENTOR_VIEW')}
             className={`px-3 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 transition-all ${
               viewMode === 'MENTOR_VIEW'
-                ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] shadow-sm'
-                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)]'
+                ? 'bg-white/15 text-[var(--color-text-primary)] shadow-sm'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
             }`}
           >
             <ShieldCheck className="w-3.5 h-3.5" /> MENTOR VIEW
@@ -55,8 +55,8 @@ export function PrivacySimulatorInteractive() {
             onClick={() => setViewMode('EMPLOYER_VIEW')}
             className={`px-3 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 transition-all ${
               viewMode === 'EMPLOYER_VIEW'
-                ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] shadow-sm'
-                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)]'
+                ? 'bg-white/15 text-[var(--color-text-primary)] shadow-sm'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
             }`}
           >
             <Briefcase className="w-3.5 h-3.5" /> EMPLOYER VIEW
@@ -65,8 +65,8 @@ export function PrivacySimulatorInteractive() {
             onClick={() => setViewMode('PUBLIC_VIEW')}
             className={`px-3 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 transition-all ${
               viewMode === 'PUBLIC_VIEW'
-                ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] shadow-sm'
-                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-charcoal-deep)]'
+                ? 'bg-white/15 text-[var(--color-text-primary)] shadow-sm'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
             }`}
           >
             <Globe className="w-3.5 h-3.5" /> PUBLIC VIEW
@@ -75,7 +75,7 @@ export function PrivacySimulatorInteractive() {
       </div>
 
       {/* Simulator Description Banner */}
-      <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded text-xs text-[var(--color-text-secondary)] flex items-center gap-3">
+      <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded text-xs text-[var(--color-text-secondary)] flex items-center gap-3">
         <Info className="w-4 h-4 text-[var(--color-taupe-600)] shrink-0" />
         <div>
           {viewMode === 'MY_VIEW' && (
@@ -117,8 +117,8 @@ export function PrivacySimulatorInteractive() {
 
             return (
               <div key={idx} className="grid grid-cols-12 p-3.5 items-center">
-                <div className="col-span-5 font-semibold text-[var(--color-charcoal-deep)] flex items-center gap-2">
-                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[var(--color-taupe-100)] text-[var(--color-taupe-700)]">
+                <div className="col-span-5 font-semibold text-[var(--color-text-primary)] flex items-center gap-2">
+                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-[var(--color-taupe-300)]">
                     {f.category}
                   </span>
                   <span>{f.name}</span>

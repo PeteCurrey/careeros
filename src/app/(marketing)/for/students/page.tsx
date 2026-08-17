@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 
 export default function ForStudentsPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Hero Section with Editorial Photography */}
-      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -29,7 +29,7 @@ export default function ForStudentsPage() {
                 Students & Early Careers
               </span>
 
-              <h1 className="text-display-section text-[var(--color-charcoal-deep)]">
+              <h1 className="text-display-section text-[var(--color-text-primary)]">
                 You shouldn&apos;t have to know your whole future at 17.
               </h1>
 
@@ -74,13 +74,13 @@ export default function ForStudentsPage() {
       </section>
 
       {/* 3 Pillars of Student Empowerment */}
-      <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-3">
             <span className="section-label">
               Empowerment Foundations
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               Built for how modern careers actually start.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
@@ -93,7 +93,7 @@ export default function ForStudentsPage() {
               <span className="section-label text-[10px]">
                 Dimension 01
               </span>
-              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 Suitability & Possibilities
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -105,7 +105,7 @@ export default function ForStudentsPage() {
               <span className="section-label text-[10px]">
                 Dimension 02
               </span>
-              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 Skills Gaps & Actionable Steps
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -117,7 +117,7 @@ export default function ForStudentsPage() {
               <span className="section-label text-[10px]">
                 Dimension 03
               </span>
-              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 Evidence That Outlasts School
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -129,13 +129,13 @@ export default function ForStudentsPage() {
       </section>
 
       {/* Pathways Parity Grid */}
-      <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-10">
           <div className="max-w-3xl space-y-3">
             <span className="section-label">
               Universal Pathway Support
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               All career destinations supported equally.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
@@ -155,7 +155,7 @@ export default function ForStudentsPage() {
               <Link
                 key={p.name}
                 href={p.href}
-                className="p-5 bg-[var(--color-ivory-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)] text-center text-xs font-semibold text-[var(--color-charcoal-deep)] transition-all block rounded-[var(--radius-sm)]"
+                className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-white/20 text-center text-xs font-semibold text-[var(--color-text-primary)] transition-all block rounded-[var(--radius-sm)]"
               >
                 {p.name}
               </Link>
@@ -165,17 +165,17 @@ export default function ForStudentsPage() {
       </section>
 
       {/* Final Action Banner */}
-      <section className="section-editorial bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] border-t border-[var(--color-charcoal-border)]">
+      <section className="section-editorial bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border-t border-[var(--color-border-default)]">
         <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="space-y-2 max-w-2xl">
             <h3 className="text-2xl font-normal text-white tracking-tight">
               Start building your Career OS today (100% Free)
             </h3>
-            <p className="text-sm text-[var(--color-text-inverse-muted)]">
+            <p className="text-sm text-[var(--color-text-secondary)]">
               Individual core accounts are free for individuals. No credit card required.
             </p>
           </div>
-          <Button href={ROUTES.SIGNUP} variant="dark" size="lg" className="shrink-0">
+          <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="shrink-0">
             Create Free Account <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>

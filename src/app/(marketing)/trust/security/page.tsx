@@ -50,7 +50,7 @@ export default function SecurityPage() {
           {controls.map((c) => (
             <div key={c.control} className="p-4 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1 text-xs">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--color-border-subtle)] pb-1">
-                <span className="font-bold text-sm text-[var(--color-charcoal-deep)]">{c.control}</span>
+                <span className="font-bold text-sm text-[var(--color-text-primary)]">{c.control}</span>
                 <span className={`font-mono text-[10px] px-2 py-0.5 rounded uppercase font-bold ${c.status === "IMPLEMENTED" ? "bg-[var(--color-success-light)] text-[var(--color-success)] border border-[var(--color-success)]/30" : "bg-blue-50 text-blue-800 border border-blue-200"}`}>
                   {c.status}
                 </span>

@@ -21,7 +21,7 @@ export function LegalPage({ title, subtitle, effectiveDate, children }: LegalPag
               Effective Date: {effectiveDate}
             </p>
           </div>
-          <div className="prose prose-sm max-w-none space-y-8 text-[var(--color-text-secondary)] leading-relaxed [&_h2]:text-[var(--color-text-primary)] [&_h2]:font-bold [&_h2]:text-lg [&_h2]:mt-8 [&_h2]:mb-3 [&_h3]:text-[var(--color-text-primary)] [&_h3]:font-semibold [&_h3]:text-base [&_h3]:mt-5 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:ml-5 [&_ul]:space-y-1">
+          <div className="prose prose-invert prose-sm max-w-none space-y-8 text-[var(--color-text-secondary)] leading-relaxed [&_h2]:text-[var(--color-text-primary)] [&_h2]:font-bold [&_h2]:text-lg [&_h2]:mt-8 [&_h2]:mb-3 [&_h3]:text-[var(--color-text-primary)] [&_h3]:font-semibold [&_h3]:text-base [&_h3]:mt-5 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:ml-5 [&_ul]:space-y-1">
             {children}
           </div>
         </div>

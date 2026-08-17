@@ -85,7 +85,7 @@ export function TwinPrivacySimulator() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-5">
         <div className="space-y-1">
           <span className="section-label">INTERACTIVE PRIVACY SIMULATOR</span>
-          <h3 className="text-xl font-serif font-bold text-[var(--color-charcoal-deep)]">
+          <h3 className="text-xl font-serif font-bold text-[var(--color-text-primary)]">
             One Twin. Four Distinct Permission Views.
           </h3>
         </div>
@@ -104,8 +104,8 @@ export function TwinPrivacySimulator() {
               onClick={() => setViewMode(mode.id as ViewMode)}
               className={`p-3 rounded-[var(--radius-card)] text-left border transition-all space-y-1 ${
                 isActive
-                  ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)] shadow-sm'
-                  : 'bg-[var(--color-surface-warm)] text-[var(--color-charcoal-deep)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+                  ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15 shadow-sm'
+                  : 'bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] border-[var(--color-border-default)] hover:border-white/20'
               }`}
             >
               <span className="font-mono text-xs font-bold block">{mode.label}</span>
@@ -118,8 +118,8 @@ export function TwinPrivacySimulator() {
       </div>
 
       {/* Field Visibility Table */}
-      <div className="border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden bg-[var(--color-ivory-base)]">
-        <div className="p-4 bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] flex items-center justify-between text-xs font-mono font-bold text-[var(--color-charcoal-deep)]">
+      <div className="border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden bg-[var(--color-surface-base)]">
+        <div className="p-4 bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] flex items-center justify-between text-xs font-mono font-bold text-[var(--color-text-primary)]">
           <span>CAREER TWIN FIELD NAME</span>
           <span>CURRENT VISIBILITY ({viewMode.replace('_', ' ')})</span>
         </div>
@@ -133,7 +133,7 @@ export function TwinPrivacySimulator() {
                   <span className="text-[10px] font-mono font-semibold text-[var(--color-taupe-700)] uppercase tracking-wider block">
                     {field.category}
                   </span>
-                  <p className="font-bold text-[var(--color-charcoal-deep)]">{field.fieldName}</p>
+                  <p className="font-bold text-[var(--color-text-primary)]">{field.fieldName}</p>
                 </div>
 
                 <div className="sm:text-right">

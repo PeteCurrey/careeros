@@ -7,15 +7,15 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] hover:bg-[var(--color-charcoal-deep)] active:bg-black border border-transparent shadow-xs',
+    'bg-[#F4F3EF] text-[#202020] hover:bg-white active:bg-[#E5E4DE] border border-transparent shadow-xs font-semibold',
   secondary:
-    'bg-transparent text-[var(--color-charcoal-deep)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-border-strong)] hover:border-[var(--color-charcoal-base)]',
+    'bg-transparent text-[#F4F3EF] hover:bg-white/10 active:bg-white/15 border border-white/20 hover:border-white/40 font-medium',
   dark:
-    'bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)] hover:bg-white active:bg-[var(--color-ivory-deep)] border border-transparent shadow-xs font-semibold',
+    'bg-[#303030] text-[#F4F3EF] hover:bg-[#414141] active:bg-[#474747] border border-white/10 shadow-xs font-semibold',
   ghost:
-    'bg-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-interactive)] border border-transparent',
+    'bg-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5 border border-transparent',
   outline:
-    'bg-transparent text-[var(--color-charcoal-base)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-charcoal-base)]',
+    'bg-transparent text-[var(--color-text-primary)] hover:bg-white/5 border border-white/20 hover:border-white/40',
   destructive:
     'bg-[var(--color-danger)] text-white hover:opacity-90 border border-transparent',
 };

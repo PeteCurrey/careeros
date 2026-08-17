@@ -5,19 +5,19 @@ import { ROUTES } from '@/lib/routes';
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] border-t border-[var(--color-charcoal-border)] pt-20 pb-14 transition-colors">
+    <footer className="bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border-t border-[var(--color-border-default)] pt-20 pb-14 transition-colors">
       <div className="container-editorial">
         {/* Brand Top Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-[var(--color-border-charcoal)]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-[var(--color-border-default)]">
           <div className="lg:col-span-4 space-y-4">
-            <Link href={ROUTES.HOME} className="flex items-center gap-2.5 text-[var(--color-ivory-base)]">
+            <Link href={ROUTES.HOME} className="flex items-center gap-2.5 text-[var(--color-text-primary)]">
               <span className="font-bold text-2xl tracking-tight">Career OS</span>
             </Link>
-            <p className="text-sm text-[var(--color-text-inverse-muted)] leading-relaxed max-w-sm font-normal">
+            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-sm font-normal">
               The operating system for your working life. Built around career context, evidence, user control, and responsible decision support.
             </p>
             <div className="pt-2">
-              <span className="inline-block text-xs py-1 text-[var(--color-text-inverse-muted)] opacity-70">
+              <span className="inline-block text-xs py-1 text-[var(--color-text-tertiary)]">
                 Universal Career Infrastructure &bull; User-Controlled Privacy
               </span>
             </div>
@@ -34,7 +34,7 @@ export function Footer() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="text-xs text-[var(--color-text-inverse-muted)] hover:text-white transition-colors"
+                        className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -47,7 +47,7 @@ export function Footer() {
         </div>
 
         {/* Second Row of Footer Links */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 py-12 border-b border-[var(--color-border-charcoal)]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 py-12 border-b border-[var(--color-border-default)]">
           {footerNav.slice(5).map((group) => (
             <div key={group.label} className="space-y-3">
               <h4 className="section-label-light">
@@ -58,7 +58,7 @@ export function Footer() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-xs text-[var(--color-text-inverse-muted)] hover:text-white transition-colors"
+                      className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -70,21 +70,21 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-10 flex flex-col md:flex-row items-start md:items-center justify-between text-xs text-[var(--color-text-inverse-muted)]/70 gap-4">
+        <div className="pt-10 flex flex-col md:flex-row items-start md:items-center justify-between text-xs text-[var(--color-text-tertiary)] gap-4">
           <p>
             &copy; {new Date().getFullYear()} Career OS Inc. All rights reserved. Built as universal career infrastructure.
           </p>
           <div className="flex flex-wrap items-center gap-6">
-            <Link href={ROUTES.LEGAL_PRIVACY} className="hover:text-white transition-colors">
+            <Link href={ROUTES.LEGAL_PRIVACY} className="hover:text-[var(--color-text-primary)] transition-colors">
               Privacy Policy
             </Link>
-            <Link href={ROUTES.LEGAL_TERMS} className="hover:text-white transition-colors">
+            <Link href={ROUTES.LEGAL_TERMS} className="hover:text-[var(--color-text-primary)] transition-colors">
               Terms of Service
             </Link>
-            <Link href={ROUTES.TRUST_DATA_ETHICS} className="hover:text-white transition-colors">
+            <Link href={ROUTES.TRUST_DATA_ETHICS} className="hover:text-[var(--color-text-primary)] transition-colors">
               Data Ethics
             </Link>
-            <Link href={ROUTES.TRUST_ACCESSIBILITY} className="hover:text-white transition-colors">
+            <Link href={ROUTES.TRUST_ACCESSIBILITY} className="hover:text-[var(--color-text-primary)] transition-colors">
               Accessibility
             </Link>
           </div>

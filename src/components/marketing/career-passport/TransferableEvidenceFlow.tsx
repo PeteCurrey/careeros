@@ -66,8 +66,8 @@ export function TransferableEvidenceFlow() {
             onClick={() => setActivePivotId(p.id)}
             className={`px-4 py-2 rounded-[var(--radius-card)] text-xs font-mono font-semibold transition-all border ${
               p.id === activePivotId
-                ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]'
-                : 'bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+                ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15'
+                : 'bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-white/20'
             }`}
           >
             {p.sourceRole}
@@ -78,12 +78,12 @@ export function TransferableEvidenceFlow() {
       {/* 4-Step Linear Transfer Flow */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-stretch">
         {/* Step 1: Past Role */}
-        <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between">
+        <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between">
           <div className="space-y-1">
             <span className="text-[10px] font-mono font-bold text-[var(--color-taupe-700)] uppercase block">
               01 &bull; PAST ROLE
             </span>
-            <h4 className="font-serif font-bold text-sm text-[var(--color-charcoal-deep)]">
+            <h4 className="font-serif font-bold text-sm text-[var(--color-text-primary)]">
               {current.sourceRole}
             </h4>
           </div>
@@ -93,7 +93,7 @@ export function TransferableEvidenceFlow() {
         </div>
 
         {/* Step 2: Passport Evidence */}
-        <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between">
+        <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between">
           <div className="space-y-1">
             <span className="text-[10px] font-mono font-bold text-emerald-800 uppercase flex items-center gap-1">
               <FileCheck className="w-3.5 h-3.5" /> 02 &bull; PASSPORT EVIDENCE
@@ -108,7 +108,7 @@ export function TransferableEvidenceFlow() {
         </div>
 
         {/* Step 3: Underlying Capability */}
-        <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between">
+        <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between">
           <div className="space-y-1">
             <span className="text-[10px] font-mono font-bold text-purple-800 uppercase flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5" /> 03 &bull; TRANSFERABLE SKILL
@@ -123,12 +123,12 @@ export function TransferableEvidenceFlow() {
         </div>
 
         {/* Step 4: New Target Direction */}
-        <div className="p-5 bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between shadow-subtle">
+        <div className="p-5 bg-white/15 text-[var(--color-text-primary)] border border-white/15 rounded-[var(--radius-card)] space-y-2 flex flex-col justify-between shadow-subtle">
           <div className="space-y-1">
             <span className="text-[10px] font-mono font-bold text-[var(--color-taupe-300)] uppercase block">
               04 &bull; NEW TARGET MOVE
             </span>
-            <h4 className="font-serif font-bold text-sm text-[var(--color-ivory-base)]">
+            <h4 className="font-serif font-bold text-sm text-[var(--color-text-primary)]">
               {current.targetRole}
             </h4>
           </div>

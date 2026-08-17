@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 export default function ForEmployersPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -28,7 +28,7 @@ export default function ForEmployersPage() {
                 Employers & Hiring Teams
               </span>
 
-              <h1 className="text-display-section text-[var(--color-charcoal-deep)]">
+              <h1 className="text-display-section text-[var(--color-text-primary)]">
                 Find more than the right résumé.
               </h1>
 
@@ -73,13 +73,13 @@ export default function ForEmployersPage() {
       </section>
 
       {/* 3 Pillars of Responsible Hiring */}
-      <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-3">
             <span className="section-label">
               Evidence-Based Talent
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               Intelligent matching anchored in verified competency.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
@@ -92,7 +92,7 @@ export default function ForEmployersPage() {
               <span className="section-label text-[10px]">
                 Dimension 01
               </span>
-              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 Verified Evidence Review
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -104,7 +104,7 @@ export default function ForEmployersPage() {
               <span className="section-label text-[10px]">
                 Dimension 02
               </span>
-              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 Explainable Decision Support
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -116,7 +116,7 @@ export default function ForEmployersPage() {
               <span className="section-label text-[10px]">
                 Dimension 03
               </span>
-              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 Early-Career & Non-Traditional Talent
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -128,17 +128,17 @@ export default function ForEmployersPage() {
       </section>
 
       {/* Become a Launch Employer Partner Banner */}
-      <section className="section-editorial bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] border-t border-[var(--color-charcoal-border)]">
+      <section className="section-editorial bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border-t border-[var(--color-border-default)]">
         <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="space-y-2 max-w-2xl">
             <h3 className="text-2xl font-normal text-white tracking-tight">
               Become a Career OS Launch Employer
             </h3>
-            <p className="text-sm text-[var(--color-text-inverse-muted)]">
+            <p className="text-sm text-[var(--color-text-secondary)]">
               Work with us to establish responsible, evidence-based talent pipelines for your organization.
             </p>
           </div>
-          <Button href={ROUTES.COMPANY_CONTACT} variant="dark" size="lg" className="shrink-0">
+          <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="lg" className="shrink-0">
             Enquire About Launch Program <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>

@@ -39,7 +39,7 @@ export function SelectiveSharingSimulator() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-5">
         <div className="space-y-1">
           <span className="section-label">INTERACTIVE SELECTIVE SHARING DEMO</span>
-          <h3 className="text-xl font-serif font-bold text-[var(--color-charcoal-deep)]">
+          <h3 className="text-xl font-serif font-bold text-[var(--color-text-primary)]">
             Tailor Your Shared Passport Package
           </h3>
         </div>
@@ -64,7 +64,7 @@ export function SelectiveSharingSimulator() {
                 onClick={() => toggleItem(item.id)}
                 className={`p-3.5 rounded-[var(--radius-card)] border cursor-pointer transition-all flex items-center justify-between gap-3 ${
                   isChecked
-                    ? 'bg-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)] shadow-xs'
+                    ? 'bg-[var(--color-surface-base)] border-white/15 shadow-xs'
                     : 'bg-[var(--color-surface-warm)] border-[var(--color-border-default)] opacity-60 hover:opacity-100'
                 }`}
               >
@@ -72,7 +72,7 @@ export function SelectiveSharingSimulator() {
                   <div
                     className={`w-5 h-5 rounded flex items-center justify-center text-xs font-bold transition-colors ${
                       isChecked
-                        ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)]'
+                        ? 'bg-white/15 text-[var(--color-text-primary)]'
                         : 'border border-[var(--color-border-default)] bg-white text-transparent'
                     }`}
                   >
@@ -82,7 +82,7 @@ export function SelectiveSharingSimulator() {
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[var(--color-taupe-700)] block">
                       {item.category}
                     </span>
-                    <h5 className="font-bold text-xs text-[var(--color-charcoal-deep)] leading-tight">
+                    <h5 className="font-bold text-xs text-[var(--color-text-primary)] leading-tight">
                       {item.name}
                     </h5>
                   </div>
@@ -103,8 +103,8 @@ export function SelectiveSharingSimulator() {
           <div className="p-6 bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4">
             <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-3">
               <div className="flex items-center gap-2">
-                <Building2 className="w-4 h-4 text-[var(--color-charcoal-deep)]" />
-                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-charcoal-deep)]">
+                <Building2 className="w-4 h-4 text-[var(--color-text-primary)]" />
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-text-primary)]">
                   Employer Recipient View
                 </span>
               </div>
@@ -121,7 +121,7 @@ export function SelectiveSharingSimulator() {
                     key={item.id}
                     className="p-3 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded flex items-center justify-between gap-3 text-xs"
                   >
-                    <span className="font-medium text-[var(--color-charcoal-deep)]">{item.name}</span>
+                    <span className="font-medium text-[var(--color-text-primary)]">{item.name}</span>
                     {isShared ? (
                       <span className="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 shrink-0">
                         Visible &amp; Verified

@@ -141,20 +141,20 @@ export function PassportRecordExplorer() {
                 onClick={() => setSelectedId(cat.id)}
                 className={`p-4 rounded-[var(--radius-card)] border text-left transition-all flex items-start justify-between gap-3 ${
                   isSelected
-                    ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)] shadow-subtle'
-                    : 'bg-[var(--color-surface-raised)] text-[var(--color-charcoal-deep)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+                    ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15 shadow-subtle'
+                    : 'bg-[var(--color-surface-raised)] text-[var(--color-text-primary)] border-[var(--color-border-default)] hover:border-white/20'
                 }`}
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <Icon className={`w-4 h-4 ${isSelected ? 'text-[var(--color-ivory-base)]' : 'text-[var(--color-taupe-600)]'}`} />
+                    <Icon className={`w-4 h-4 ${isSelected ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-taupe-600)]'}`} />
                     <span className="font-bold text-xs">{cat.title}</span>
                   </div>
                   <span className={`text-[10px] font-mono block ${isSelected ? 'text-[var(--color-taupe-300)]' : 'text-[var(--color-taupe-700)]'}`}>
                     {cat.count}
                   </span>
                 </div>
-                <ChevronRight className={`w-4 h-4 shrink-0 mt-1 transition-transform ${isSelected ? 'translate-x-0.5 text-[var(--color-ivory-base)]' : 'text-[var(--color-taupe-400)]'}`} />
+                <ChevronRight className={`w-4 h-4 shrink-0 mt-1 transition-transform ${isSelected ? 'translate-x-0.5 text-[var(--color-text-primary)]' : 'text-[var(--color-taupe-400)]'}`} />
               </button>
             );
           })}
@@ -165,8 +165,8 @@ export function PassportRecordExplorer() {
           <div className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-5 shadow-subtle">
             <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
               <div className="flex items-center gap-2">
-                <activeCat.icon className="w-5 h-5 text-[var(--color-charcoal-deep)]" />
-                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-charcoal-deep)]">
+                <activeCat.icon className="w-5 h-5 text-[var(--color-text-primary)]" />
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-text-primary)]">
                   {activeCat.title}
                 </span>
               </div>
@@ -184,9 +184,9 @@ export function PassportRecordExplorer() {
                 Sample Passport Vault Entries:
               </span>
               {activeCat.sampleItems.map((item, idx) => (
-                <div key={idx} className="p-3.5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
+                <div key={idx} className="p-3.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
                   <div className="flex items-center justify-between gap-2">
-                    <h5 className="font-bold text-[var(--color-charcoal-deep)] leading-tight">{item.name}</h5>
+                    <h5 className="font-bold text-[var(--color-text-primary)] leading-tight">{item.name}</h5>
                     <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded border shrink-0 ${item.verificationClass}`}>
                       {item.verification}
                     </span>

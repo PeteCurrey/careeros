@@ -70,7 +70,7 @@ export default function CookiePolicyPage() {
           {storageItems.map((item) => (
             <div key={item.name} className="p-4 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1 text-xs">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--color-border-subtle)] pb-1.5">
-                <span className="font-mono font-bold text-sm text-[var(--color-charcoal-deep)]">{item.name}</span>
+                <span className="font-mono font-bold text-sm text-[var(--color-text-primary)]">{item.name}</span>
                 <span className="px-2 py-0.5 rounded text-[10px] font-mono uppercase bg-[var(--color-surface-sunken)] text-[var(--color-text-secondary)] border border-[var(--color-border-default)]">
                   {item.category}
                 </span>

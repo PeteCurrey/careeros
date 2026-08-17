@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 /* ============================================================
-   CAREER OS DESIGN SYSTEM TOKENS (Editorial Venture Reset)
+   CAREER OS DESIGN SYSTEM TOKENS (Premium Charcoal System)
    
    Aesthetic: Bespoke editorial publishing + modern technology
    + serious global career infrastructure.
-   Warm Ivory surfaces, Charcoal contrast, Taupe neutrals,
-   restrained Lavender/Gold accents, thin 1px rules, flat geometry.
+   Soft graphite / charcoal canvas (#393939), subtle tonal depth,
+   off-white typography (#F4F3EF), restrained accents, thin 1px rules.
    ============================================================ */
 
 @theme {
@@ -15,82 +15,88 @@
   --font-serif: var(--font-serif), 'Newsreader', Georgia, 'Times New Roman', serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  /* --- Career Ivory Family (Core Editorial Light Backgrounds) --- */
-  --color-ivory-base: #F6F6EE;
-  --color-ivory-warm: #FAFAF5;
-  --color-ivory-deep: #F0EFE7;
-  --color-ivory-border: #E5E4D8;
+  /* --- Career Charcoal Canvas Family (Primary Dark System) --- */
+  --background-dark-deep: #303030;
+  --background-dark: #393939;
+  --background-dark-soft: #414141;
+  --background-dark-elevated: #474747;
 
-  /* --- Career Charcoal Family (Strong High-Contrast Dark & Text) --- */
-  --color-charcoal-base: #343434;
-  --color-charcoal-deep: #202020;
-  --color-charcoal-light: #4A4A4A;
-  --color-charcoal-border: #444444;
+  /* --- Charcoal Core Tokens --- */
+  --color-charcoal-base: #393939;
+  --color-charcoal-deep: #303030;
+  --color-charcoal-light: #414141;
+  --color-charcoal-border: rgba(255, 255, 255, 0.08);
 
-  /* --- Career Taupe Family (Warm Editorial Neutrals & Diagrams) --- */
-  --color-taupe-600: #7A6D60;
-  --color-taupe-500: #8A8177;
-  --color-taupe-400: #A59D94;
+  /* --- Legacy Ivory Aliases mapped to new charcoal system --- */
+  --color-ivory-base: #393939;
+  --color-ivory-warm: #414141;
+  --color-ivory-deep: #303030;
+  --color-ivory-border: rgba(255, 255, 255, 0.08);
+
+  /* --- Career Taupe Family (Muted Neutrals on Dark) --- */
+  --color-taupe-600: #C2BBB3;
+  --color-taupe-500: #B5ADA4;
+  --color-taupe-400: #9E9D98;
   --color-taupe-300: #C2BBB3;
-  --color-taupe-100: #EBE7E2;
-  --color-taupe-50: #F5F3F0;
+  --color-taupe-100: #474747;
+  --color-taupe-50: #393939;
 
   /* --- Career Lavender Family (Identity, Discovery & Reflection) --- */
   --color-lavender-base: #CDBBD2;
   --color-lavender-light: #E8DFE9;
   --color-lavender-deep: #B49CB9;
-  --color-lavender-subtle: #F3EEF4;
+  --color-lavender-subtle: rgba(205, 187, 210, 0.15);
 
   /* --- Career Mauve Family (Restrained Accent & Emphasis) --- */
-  --color-mauve-base: #8B758D;
-  --color-mauve-strong: #9250A0;
-  --color-mauve-light: #A38DA5;
+  --color-mauve-base: #CDBBD2;
+  --color-mauve-strong: #D8B4E2;
+  --color-mauve-light: #E8DFE9;
 
   /* --- Career Gold Family (Opportunity, Progression & Highlights) --- */
   --color-gold-base: #DDD36D;
   --color-gold-light: #EFE9B8;
   --color-gold-deep: #C7BC54;
-  --color-gold-subtle: #FAF7E6;
+  --color-gold-subtle: rgba(221, 211, 109, 0.15);
 
   /* --- Semantic Accents --- */
-  --color-success: #2E7D56;
-  --color-success-light: #EBF5F0;
-  --color-verified: #2E7D56;
-  --color-verified-light: #EBF5F0;
-  --color-warning: #B27B1A;
-  --color-warning-light: #FDF8EB;
-  --color-danger: #BA3D34;
-  --color-danger-light: #FBEFEF;
+  --color-success: #34D399;
+  --color-success-light: rgba(52, 211, 153, 0.15);
+  --color-verified: #34D399;
+  --color-verified-light: rgba(52, 211, 153, 0.15);
+  --color-warning: #FBBF24;
+  --color-warning-light: rgba(251, 191, 36, 0.15);
+  --color-danger: #F87171;
+  --color-danger-light: rgba(248, 113, 113, 0.15);
 
   /* --- Active Surfaces Mapping --- */
-  --color-surface-base: var(--color-ivory-base);
-  --color-surface-raised: #FFFFFF;
-  --color-surface-warm: var(--color-ivory-warm);
-  --color-surface-sunken: var(--color-ivory-deep);
-  --color-surface-taupe: var(--color-taupe-50);
-  --color-surface-interactive: #EBEAE0;
-  --color-surface-dark: var(--color-charcoal-base);
-  --color-surface-dark-deep: var(--color-charcoal-deep);
+  --color-surface-base: #393939;
+  --color-surface-raised: #414141;
+  --color-surface-warm: #414141;
+  --color-surface-sunken: #303030;
+  --color-surface-taupe: #3d3d3d;
+  --color-surface-interactive: #4a4a4a;
+  --color-surface-dark: #303030;
+  --color-surface-dark-deep: #262626;
 
-  /* --- Text Hierarchy --- */
-  --color-text-primary: var(--color-charcoal-deep);
-  --color-text-secondary: #55514D;
-  --color-text-tertiary: #7D7974;
-  --color-text-disabled: #A6A29C;
-  --color-text-inverse: var(--color-ivory-base);
-  --color-text-inverse-muted: #D1CFBF;
-  --color-text-accent: var(--color-taupe-600);
-  --color-text-mauve: var(--color-mauve-base);
+  /* --- Text Hierarchy (Light Typography against Dark Charcoal) --- */
+  --color-text-primary: #F4F3EF;
+  --color-text-secondary: #C9C8C3;
+  --color-text-tertiary: #9E9D98;
+  --color-text-disabled: #787773;
+  --color-text-inverse: #202020;
+  --color-text-inverse-muted: #55514D;
+  --color-text-accent: #DDD36D;
+  --color-text-mauve: #CDBBD2;
 
   /* --- Thin Rules & Borders --- */
-  --color-border-default: #E2E1D4;
-  --color-border-subtle: #EBEAE0;
-  --color-border-strong: #BCBAAA;
-  --color-border-charcoal: rgba(255, 255, 255, 0.12);
-  --color-border-taupe: #C2BBB3;
+  --color-border-default: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-border-charcoal: rgba(255, 255, 255, 0.08);
+  --color-border-taupe: rgba(255, 255, 255, 0.12);
 
   /* --- Accessibility Focus --- */
-  --color-focus: var(--color-charcoal-base);
+  --color-focus: #F4F3EF;
 
   /* --- Minimal Radii System (Squared-Edge Editorial Design) --- */
   --radius-none: 0px;
@@ -102,10 +108,10 @@
   --radius-full: 9999px;
 
   /* --- Flat Editorial Elevations (Subtle & Restrained) --- */
-  --shadow-subtle: 0 1px 2px rgba(52, 52, 52, 0.04);
-  --shadow-card: 0 2px 8px -2px rgba(52, 52, 52, 0.05);
-  --shadow-editorial: 0 16px 36px -12px rgba(52, 52, 52, 0.08);
-  --shadow-floating: 0 24px 50px -16px rgba(32, 32, 32, 0.12);
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 2px 8px -2px rgba(0, 0, 0, 0.20);
+  --shadow-editorial: 0 16px 36px -12px rgba(0, 0, 0, 0.35);
+  --shadow-floating: 0 24px 50px -16px rgba(0, 0, 0, 0.50);
 }
 
 /* ============================================================
@@ -161,8 +167,8 @@ body {
   left: 1.5rem;
   z-index: 9999;
   padding: 0.75rem 1.5rem;
-  background: var(--color-charcoal-deep);
-  color: var(--color-ivory-base);
+  background: var(--color-text-primary);
+  color: var(--color-text-inverse);
   font-weight: 600;
   font-size: 0.875rem;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
@@ -237,7 +243,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-taupe-600);
+  color: var(--color-taupe-300);
 }
 
 .section-label-light {
@@ -245,8 +251,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-ivory-warm);
-  opacity: 0.8;
+  color: var(--color-text-primary);
+  opacity: 0.85;
 }
 
 /* ============================================================
@@ -314,7 +320,7 @@ body {
 .editorial-rule-dark {
   height: 1px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .editorial-surface-flat {
@@ -330,8 +336,8 @@ body {
 }
 
 .editorial-surface-dark {
-  background-color: var(--color-charcoal-base);
-  color: var(--color-ivory-base);
+  background-color: var(--color-surface-sunken);
+  color: var(--color-text-primary);
   border-radius: var(--radius-none);
 }
 
@@ -341,9 +347,9 @@ body {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: var(--color-ivory-base);
+  background-color: var(--color-surface-base);
   border-bottom: 1px solid var(--color-border-default);
-  box-shadow: 0 20px 40px -10px rgba(52, 52, 52, 0.08);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.40);
   padding-top: 2rem;
   padding-bottom: 2rem;
   z-index: 50;

@@ -90,11 +90,11 @@ export function CrossCareerEvidenceGrid() {
           >
             <div className="space-y-3">
               <div className="flex items-center gap-3 border-b border-[var(--color-border-subtle)] pb-3">
-                <div className="w-10 h-10 rounded bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded bg-white/15 text-[var(--color-text-primary)] flex items-center justify-center shrink-0">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)] leading-tight">
+                  <h4 className="font-serif font-bold text-base text-[var(--color-text-primary)] leading-tight">
                     {c.role}
                   </h4>
                   <span className="text-[10px] font-mono text-[var(--color-taupe-700)] block">
@@ -107,7 +107,7 @@ export function CrossCareerEvidenceGrid() {
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-700)] block">
                   Typical Passport Evidence Artifacts:
                 </span>
-                <ul className="space-y-2 text-xs text-[var(--color-charcoal-deep)] font-medium">
+                <ul className="space-y-2 text-xs text-[var(--color-text-primary)] font-medium">
                   {c.evidenceItems.map((item, itemIdx) => (
                     <li key={itemIdx} className="flex items-start gap-2">
                       <FileCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />

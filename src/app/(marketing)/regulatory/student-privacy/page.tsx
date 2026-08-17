@@ -70,15 +70,15 @@ export default function StudentPrivacyRegulatoryPage() {
         <h2>5. Current Readiness Status</h2>
         <div className="space-y-2 text-xs">
           <div className="p-3 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded">
-            <span className="font-semibold text-[var(--color-charcoal-deep)] block">FERPA Alignment: READY (Conditional Model DPA)</span>
+            <span className="font-semibold text-[var(--color-text-primary)] block">FERPA Alignment: READY (Conditional Model DPA)</span>
             <p className="text-[var(--color-text-secondary)]">Structured to support FERPA School Official DPAs executed with participating districts.</p>
           </div>
           <div className="p-3 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded">
-            <span className="font-semibold text-[var(--color-charcoal-deep)] block">COPPA Alignment: READY (School Enrollment Pathway)</span>
+            <span className="font-semibold text-[var(--color-text-primary)] block">COPPA Alignment: READY (School Enrollment Pathway)</span>
             <p className="text-[var(--color-text-secondary)]">Under-13 consumer registration hard-blocked. School-administered onboarding supported.</p>
           </div>
           <div className="p-3 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded">
-            <span className="font-semibold text-[var(--color-charcoal-deep)] block">SOPIPA &amp; State Student Privacy: IN PROGRESS</span>
+            <span className="font-semibold text-[var(--color-text-primary)] block">SOPIPA &amp; State Student Privacy: IN PROGRESS</span>
             <p className="text-[var(--color-text-secondary)]">Core advertising prohibitions active; state-specific DPA addenda undergoing counsel review.</p>
           </div>
         </div>

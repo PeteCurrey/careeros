@@ -68,7 +68,7 @@ export function HowCareerOSUnderstandsYou() {
   const activeData = DIMENSIONS.find((d) => d.id === activeDim) || DIMENSIONS[0]!;
 
   return (
-    <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Section Header */}
@@ -77,7 +77,7 @@ export function HowCareerOSUnderstandsYou() {
             <span className="section-label">
               Career Intelligence Model
             </span>
-            <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
               A career is more than a job title.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -100,15 +100,15 @@ export function HowCareerOSUnderstandsYou() {
                 onClick={() => setActiveDim(dim.id)}
                 className={`text-left p-6 sm:p-7 transition-all cursor-pointer flex flex-col justify-between min-h-[220px] ${
                   isSelected
-                    ? "bg-[var(--color-ivory-warm)] border-b-2 border-b-[var(--color-charcoal-deep)]"
-                    : "hover:bg-[var(--color-surface-interactive)]/40"
+                    ? "bg-[var(--color-surface-warm)] border-b-2 border-b-[var(--color-text-primary)]"
+                    : "hover:bg-white/5"
                 }`}
               >
                 <div className="space-y-2">
-                  <span className={`text-xs font-semibold ${isSelected ? "text-[var(--color-charcoal-deep)]" : "text-[var(--color-taupe-400)]"}`}>
+                  <span className={`text-xs font-semibold ${isSelected ? "text-[var(--color-text-primary)]" : "text-[var(--color-taupe-400)]"}`}>
                     {dim.num}
                   </span>
-                  <h3 className="text-lg font-medium text-[var(--color-charcoal-deep)]">
+                  <h3 className="text-lg font-medium text-[var(--color-text-primary)]">
                     {dim.name}
                   </h3>
                 </div>
@@ -127,7 +127,7 @@ export function HowCareerOSUnderstandsYou() {
               <span className="section-label">
                 Dimension {activeData.num} &bull; {activeData.name}
               </span>
-              <h3 className="text-headline-editorial text-[var(--color-charcoal-deep)]">
+              <h3 className="text-headline-editorial text-[var(--color-text-primary)]">
                 {activeData.question}
               </h3>
             </div>
@@ -140,7 +140,7 @@ export function HowCareerOSUnderstandsYou() {
               {activeData.signals.map((sig) => (
                 <span
                   key={sig}
-                  className="text-xs px-3 py-1.5 bg-[var(--color-ivory-warm)] text-[var(--color-charcoal-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] font-medium"
+                  className="text-xs px-3 py-1.5 bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] font-medium"
                 >
                   &bull; {sig}
                 </span>
@@ -148,8 +148,8 @@ export function HowCareerOSUnderstandsYou() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 p-6 bg-[var(--color-ivory-warm)] border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] space-y-4">
-            <div className="text-[11px] uppercase tracking-wider text-[var(--color-taupe-600)] font-semibold">
+          <div className="lg:col-span-5 p-6 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] space-y-4">
+            <div className="text-[11px] uppercase tracking-wider text-[var(--color-taupe-300)] font-semibold">
               How Career OS Synthesizes This
             </div>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">

@@ -49,7 +49,7 @@ export default function TrustHubPage() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial space-y-6 max-w-4xl">
           <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ export default function TrustHubPage() {
             </span>
           </div>
 
-          <h1 className="text-display-section text-[var(--color-charcoal-deep)] font-serif font-normal tracking-tight">
+          <h1 className="text-display-section text-[var(--color-text-primary)] font-serif font-normal tracking-tight">
             Career OS Trust &amp; Ethics Centre
           </h1>
 
@@ -69,7 +69,7 @@ export default function TrustHubPage() {
 
           {/* Control Status Taxonomy Bar */}
           <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 text-xs">
-            <div className="font-semibold text-[var(--color-charcoal-deep)] flex items-center gap-1.5">
+            <div className="font-semibold text-[var(--color-text-primary)] flex items-center gap-1.5">
               <Lock className="w-4 h-4 text-[var(--color-taupe-600)]" />
               <span>Control Implementation Taxonomy:</span>
             </div>
@@ -83,18 +83,18 @@ export default function TrustHubPage() {
         </div>
       </section>
 
-      <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+      <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           {trustSections.map((sec) => {
             const Icon = sec.icon;
             return (
               <div key={sec.title} className="space-y-6">
                 <div className="flex items-center gap-3 pb-3 border-b border-[var(--color-border-default)]">
-                  <div className="w-8 h-8 rounded-[var(--radius-sm)] bg-[var(--color-taupe-100)] flex items-center justify-center text-[var(--color-charcoal-deep)]">
+                  <div className="w-8 h-8 rounded-[var(--radius-sm)] bg-white/8 flex items-center justify-center text-[var(--color-text-secondary)]">
                     <Icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold font-serif text-[var(--color-charcoal-deep)]">{sec.title}</h2>
+                    <h2 className="text-xl font-bold font-serif text-[var(--color-text-primary)]">{sec.title}</h2>
                     <p className="text-xs text-[var(--color-text-secondary)]">{sec.desc}</p>
                   </div>
                 </div>
@@ -104,10 +104,10 @@ export default function TrustHubPage() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="group p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-[var(--color-charcoal-base)] transition-all flex flex-col justify-between space-y-3"
+                      className="group p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-white/20 transition-all flex flex-col justify-between space-y-3"
                     >
                       <div className="space-y-1.5">
-                        <span className="font-semibold text-sm text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors flex items-center gap-1.5">
+                        <span className="font-semibold text-sm text-[var(--color-text-primary)] group-hover:text-white transition-colors flex items-center gap-1.5">
                           <FileCheck className="w-3.5 h-3.5 text-[var(--color-taupe-600)]" />
                           {link.title}
                         </span>
@@ -115,7 +115,7 @@ export default function TrustHubPage() {
                           {link.desc}
                         </p>
                       </div>
-                      <div className="flex items-center text-xs font-semibold text-[var(--color-charcoal-deep)] group-hover:translate-x-0.5 transition-transform">
+                      <div className="flex items-center text-xs font-semibold text-[var(--color-text-primary)] group-hover:translate-x-0.5 transition-transform">
                         <span>Read Standard</span>
                         <ArrowRight className="w-3.5 h-3.5 ml-1" />
                       </div>

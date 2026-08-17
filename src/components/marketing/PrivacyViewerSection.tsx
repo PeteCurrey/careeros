@@ -66,7 +66,7 @@ export function PrivacyViewerSection() {
   const [activeView, setActiveView] = useState<ViewMode>("MY_VIEW");
 
   return (
-    <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Section Header */}
@@ -74,7 +74,7 @@ export function PrivacyViewerSection() {
           <span className="section-label">
             Granular Access & Consent Architecture
           </span>
-          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+          <h2 className="text-display-section text-[var(--color-text-primary)]">
             Your career data belongs in your hands.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -90,7 +90,7 @@ export function PrivacyViewerSection() {
               <span className="section-label">
                 Interactive Permission Simulator
               </span>
-              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 Select a perspective to verify real-time redaction:
               </h3>
             </div>
@@ -112,8 +112,8 @@ export function PrivacyViewerSection() {
                     className={cn(
                       "px-3.5 py-2 text-xs font-semibold rounded-[var(--radius-sm)] border transition-all cursor-pointer",
                       isSelected
-                        ? "bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]"
-                        : "bg-[var(--color-ivory-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-[var(--color-surface-interactive)]"
+                        ? "bg-[#F4F3EF] text-[#202020] border-[#F4F3EF]"
+                        : "bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-white/10"
                     )}
                   >
                     {tab.label}
@@ -133,10 +133,10 @@ export function PrivacyViewerSection() {
                   className="py-5 grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
                 >
                   <div className="md:col-span-4 space-y-0.5">
-                    <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">
+                    <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">
                       {field.category}
                     </span>
-                    <h4 className="text-sm font-semibold text-[var(--color-charcoal-deep)]">
+                    <h4 className="text-sm font-semibold text-[var(--color-text-primary)]">
                       {field.label}
                     </h4>
                   </div>
@@ -145,7 +145,7 @@ export function PrivacyViewerSection() {
                     <span
                       className={cn(
                         "text-xs sm:text-sm font-medium",
-                        current.visible ? "text-[var(--color-charcoal-deep)]" : "text-[var(--color-danger)] font-mono"
+                        current.visible ? "text-[var(--color-text-primary)]" : "text-[var(--color-danger)] font-mono"
                       )}
                     >
                       {current.state}
@@ -157,7 +157,7 @@ export function PrivacyViewerSection() {
                       className={cn(
                         "text-[11px] px-2.5 py-1 rounded-[var(--radius-sm)] font-medium border",
                         current.visible
-                          ? "bg-[var(--color-ivory-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)]"
+                          ? "bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)]"
                           : "bg-[var(--color-danger-light)] text-[var(--color-danger)] border-[var(--color-danger)]/20"
                       )}
                     >
@@ -177,7 +177,7 @@ export function PrivacyViewerSection() {
             </div>
             <Link
               href={ROUTES.TRUST_DATA_ETHICS}
-              className="font-semibold text-[var(--color-charcoal-deep)] hover:text-black inline-flex items-center gap-1 underline underline-offset-4 shrink-0"
+              className="font-semibold text-[var(--color-text-primary)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4 shrink-0"
             >
               Data Ethics Architecture <ArrowRight className="w-3.5 h-3.5" />
             </Link>

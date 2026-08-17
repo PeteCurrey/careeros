@@ -7,16 +7,16 @@ export function HeroPassportInterface() {
   const [activeTab, setActiveTab] = useState<'qualifications' | 'projects' | 'licences'>('qualifications');
 
   return (
-    <div className="w-full p-6 sm:p-8 bg-white/95 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 text-[var(--color-charcoal-deep)]">
+    <div className="w-full p-6 sm:p-8 bg-white/95 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 text-[var(--color-text-primary)]">
       {/* Top Passport Header Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-5">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] flex items-center justify-center font-serif font-bold text-lg">
+          <div className="w-12 h-12 rounded bg-white/15 text-[var(--color-text-primary)] flex items-center justify-center font-serif font-bold text-lg">
             JM
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-lg text-[var(--color-text-primary)]">
                 Jordan Morgan
               </h3>
               <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 border border-emerald-300">
@@ -45,8 +45,8 @@ export function HeroPassportInterface() {
           onClick={() => setActiveTab('qualifications')}
           className={`px-4 py-2 rounded-[var(--radius-card)] text-xs font-mono font-semibold transition-all border ${
             activeTab === 'qualifications'
-              ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]'
-              : 'bg-[var(--color-surface-raised)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+              ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15'
+              : 'bg-[var(--color-surface-raised)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-white/20'
           }`}
         >
           Qualifications (4)
@@ -55,8 +55,8 @@ export function HeroPassportInterface() {
           onClick={() => setActiveTab('projects')}
           className={`px-4 py-2 rounded-[var(--radius-card)] text-xs font-mono font-semibold transition-all border ${
             activeTab === 'projects'
-              ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]'
-              : 'bg-[var(--color-surface-raised)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+              ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15'
+              : 'bg-[var(--color-surface-raised)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-white/20'
           }`}
         >
           Project Evidence (6)
@@ -65,8 +65,8 @@ export function HeroPassportInterface() {
           onClick={() => setActiveTab('licences')}
           className={`px-4 py-2 rounded-[var(--radius-card)] text-xs font-mono font-semibold transition-all border ${
             activeTab === 'licences'
-              ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]'
-              : 'bg-[var(--color-surface-raised)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+              ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15'
+              : 'bg-[var(--color-surface-raised)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-white/20'
           }`}
         >
           Licences & Safety (3)
@@ -76,11 +76,11 @@ export function HeroPassportInterface() {
       {/* Tab Content Display */}
       {activeTab === 'qualifications' && (
         <div className="space-y-3">
-          <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <Award className="w-4 h-4 text-emerald-700" />
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
                   NVQ Level 3 Electrical Installation
                 </h4>
               </div>
@@ -95,11 +95,11 @@ export function HeroPassportInterface() {
             </div>
           </div>
 
-          <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <Wrench className="w-4 h-4 text-blue-700" />
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
                   Siemens S7-1200 PLC Automation Certificate
                 </h4>
               </div>
@@ -114,11 +114,11 @@ export function HeroPassportInterface() {
             </div>
           </div>
 
-          <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <Briefcase className="w-4 h-4 text-amber-700" />
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
                   Lean Manufacturing & 5S Operational Practice
                 </h4>
               </div>
@@ -137,9 +137,9 @@ export function HeroPassportInterface() {
 
       {activeTab === 'projects' && (
         <div className="space-y-3">
-          <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
             <div className="flex items-center justify-between">
-              <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)] flex items-center gap-2">
+              <h4 className="font-bold text-xs text-[var(--color-text-primary)] flex items-center gap-2">
                 <FileCheck className="w-4 h-4 text-emerald-700" />
                 Conveyor Line Automation Retrofit (#PRJ-2024-09)
               </h4>
@@ -157,9 +157,9 @@ export function HeroPassportInterface() {
             </div>
           </div>
 
-          <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
             <div className="flex items-center justify-between">
-              <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)] flex items-center gap-2">
+              <h4 className="font-bold text-xs text-[var(--color-text-primary)] flex items-center gap-2">
                 <FileCheck className="w-4 h-4 text-blue-700" />
                 Hydraulic Press Overhaul & Diagnostics
               </h4>
@@ -179,11 +179,11 @@ export function HeroPassportInterface() {
 
       {activeTab === 'licences' && (
         <div className="space-y-3">
-          <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-700" />
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
                   OSHA 30-Hour General Industry Safety Certification
                 </h4>
               </div>
@@ -196,11 +196,11 @@ export function HeroPassportInterface() {
             </span>
           </div>
 
-          <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-slate-500" />
-                <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+                <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
                   Forklift & Telehandler Operator Card
                 </h4>
               </div>
@@ -222,7 +222,7 @@ export function HeroPassportInterface() {
           <span>Clear verification states distinguish user claims from third-party proof.</span>
         </div>
         <div className="flex items-center gap-2 shrink-0">
-          <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-white border border-[var(--color-border-default)] text-[var(--color-charcoal-deep)] font-semibold">
+          <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-white border border-[var(--color-border-default)] text-[var(--color-text-primary)] font-semibold">
             Selective Sharing Active
           </span>
         </div>

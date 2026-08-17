@@ -88,7 +88,7 @@ export function EditorialSubpage({
             
             {/* Main Column (Flat Editorial Surface) */}
             <div className={sidebar ? "lg:col-span-8" : "lg:col-span-12"}>
-              <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 prose prose-slate max-w-none text-[var(--color-text-secondary)]">
+              <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 prose prose-invert max-w-none text-[var(--color-text-secondary)]">
                 {children}
               </div>
             </div>
@@ -108,17 +108,17 @@ export function EditorialSubpage({
 
       {/* Footer CTA Banner (Omitted when hideCta is true for Governance pages per Requirement 17) */}
       {!hideCta && (
-        <section className="py-16 bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] border-t border-[var(--color-charcoal-border)]">
+        <section className="py-16 bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border-t border-[var(--color-border-default)]">
           <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="space-y-1">
-              <h3 className="text-2xl font-normal text-white tracking-tight">
+              <h3 className="text-2xl font-normal text-[var(--color-text-primary)] tracking-tight">
                 Ready to begin with Career OS?
               </h3>
-              <p className="text-sm text-[var(--color-text-inverse-muted)] font-normal">
+              <p className="text-sm text-[var(--color-text-secondary)] font-normal">
                 Free forever for individuals &bull; Universal professional infrastructure
               </p>
             </div>
-            <Button href={ctaHref} variant="dark" size="md" className="shrink-0">
+            <Button href={ctaHref} variant="primary" size="md" className="shrink-0">
               {ctaText} <ArrowRight className="w-4 h-4 ml-1.5" />
             </Button>
           </div>

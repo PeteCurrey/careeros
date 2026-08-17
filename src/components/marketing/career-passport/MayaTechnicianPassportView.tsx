@@ -9,12 +9,12 @@ export function MayaTechnicianPassportView() {
       {/* Profile Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-6">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] flex items-center justify-center font-serif font-bold text-lg">
+          <div className="w-12 h-12 rounded bg-white/15 text-[var(--color-text-primary)] flex items-center justify-center font-serif font-bold text-lg">
             MC
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="font-serif font-bold text-xl text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-xl text-[var(--color-text-primary)]">
                 Maya Chen
               </h3>
               <span className="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-900 border border-blue-300">
@@ -35,7 +35,7 @@ export function MayaTechnicianPassportView() {
       {/* Structured Passport Entries */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Entry 1: Core Qualification */}
-        <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+        <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-700)] flex items-center gap-1.5">
               <Award className="w-3.5 h-3.5 text-emerald-700" /> Qualification
@@ -44,7 +44,7 @@ export function MayaTechnicianPassportView() {
               Issuer Verified
             </span>
           </div>
-          <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+          <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
             NVQ Level 3 Light Vehicle Maintenance &amp; Repair
           </h4>
           <p className="text-[11px] text-[var(--color-text-secondary)]">
@@ -53,7 +53,7 @@ export function MayaTechnicianPassportView() {
         </div>
 
         {/* Entry 2: High-Voltage EV Training */}
-        <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+        <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-700)] flex items-center gap-1.5">
               <Wrench className="w-3.5 h-3.5 text-blue-700" /> Specialist Training
@@ -62,7 +62,7 @@ export function MayaTechnicianPassportView() {
               Issuer Verified
             </span>
           </div>
-          <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+          <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
             IMI Level 3 Award in Electric / Hybrid Vehicle System Repair
           </h4>
           <p className="text-[11px] text-[var(--color-text-secondary)]">
@@ -71,7 +71,7 @@ export function MayaTechnicianPassportView() {
         </div>
 
         {/* Entry 3: Complex Project Evidence */}
-        <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+        <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-700)] flex items-center gap-1.5">
               <FileCheck className="w-3.5 h-3.5 text-emerald-700" /> Project Evidence
@@ -80,7 +80,7 @@ export function MayaTechnicianPassportView() {
               Evidence Attached
             </span>
           </div>
-          <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+          <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
             CAN-Bus Intermittent Signal Loss Resolution (#EV-LOG-48)
           </h4>
           <p className="text-[11px] text-[var(--color-text-secondary)]">
@@ -89,7 +89,7 @@ export function MayaTechnicianPassportView() {
         </div>
 
         {/* Entry 4: Verified Employment */}
-        <div className="p-4 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+        <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-700)] flex items-center gap-1.5">
               <Briefcase className="w-3.5 h-3.5 text-amber-700" /> Employment History
@@ -98,7 +98,7 @@ export function MayaTechnicianPassportView() {
               Employer Verified
             </span>
           </div>
-          <h4 className="font-bold text-xs text-[var(--color-charcoal-deep)]">
+          <h4 className="font-bold text-xs text-[var(--color-text-primary)]">
             Senior Workshop Technician &bull; Vantage Automotive Ltd (3 Years)
           </h4>
           <p className="text-[11px] text-[var(--color-text-secondary)]">
@@ -109,21 +109,21 @@ export function MayaTechnicianPassportView() {
 
       {/* How Career OS Leverages This Passport Record */}
       <div className="p-5 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-charcoal-deep)] flex items-center gap-2">
+        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-text-primary)] flex items-center gap-2">
           <Compass className="w-4 h-4 text-emerald-700" />
           How Maya&apos;s Career Passport Powers the Rest of Career OS:
         </span>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
           <div className="p-3 bg-white border border-[var(--color-border-subtle)] rounded space-y-1">
-            <strong className="text-[var(--color-charcoal-deep)] block">Career Twin Context:</strong>
+            <strong className="text-[var(--color-text-primary)] block">Career Twin Context:</strong>
             <span className="text-[var(--color-text-secondary)] text-[11px]">Maps high-voltage EV expertise as a premium capability cluster.</span>
           </div>
           <div className="p-3 bg-white border border-[var(--color-border-subtle)] rounded space-y-1">
-            <strong className="text-[var(--color-charcoal-deep)] block">AI Mentor Guidance:</strong>
+            <strong className="text-[var(--color-text-primary)] block">AI Mentor Guidance:</strong>
             <span className="text-[var(--color-text-secondary)] text-[11px]">Recommends supervisory management module to unlock Foreman role.</span>
           </div>
           <div className="p-3 bg-white border border-[var(--color-border-subtle)] rounded space-y-1">
-            <strong className="text-[var(--color-charcoal-deep)] block">Employer Discovery:</strong>
+            <strong className="text-[var(--color-text-primary)] block">Employer Discovery:</strong>
             <span className="text-[var(--color-text-secondary)] text-[11px]">Proves EV credentials to fleet operators without manual resume screening.</span>
           </div>
         </div>

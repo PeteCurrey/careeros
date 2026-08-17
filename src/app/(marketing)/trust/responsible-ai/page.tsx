@@ -38,7 +38,7 @@ export default function ResponsibleAiPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
           {principles.map((p, idx) => (
             <div key={idx} className="p-3 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] text-xs text-[var(--color-text-secondary)] flex items-start gap-2">
-              <span className="font-mono font-bold text-[var(--color-charcoal-deep)] text-xs">{idx + 1}.</span>
+              <span className="font-mono font-bold text-[var(--color-text-primary)] text-xs">{idx + 1}.</span>
               <span>{p}</span>
             </div>
           ))}

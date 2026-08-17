@@ -20,8 +20,8 @@ const serifFont = Newsreader({
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F6F6EE' },
-    { media: '(prefers-color-scheme: dark)', color: '#202020' },
+    { media: '(prefers-color-scheme: light)', color: '#393939' },
+    { media: '(prefers-color-scheme: dark)', color: '#303030' },
   ],
 };
 

@@ -55,7 +55,7 @@ const ROWS: ComparisonRow[] = [
 
 export function ComparisonTableSection() {
   return (
-    <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
       <div className="container-editorial space-y-16">
         
         {/* Section Header */}
@@ -63,7 +63,7 @@ export function ComparisonTableSection() {
           <span className="section-label">
             Architectural Comparison
           </span>
-          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+          <h2 className="text-display-section text-[var(--color-text-primary)]">
             Built as infrastructure, not a transactional tool.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -76,17 +76,17 @@ export function ComparisonTableSection() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-[var(--color-border-default)] bg-[var(--color-ivory-warm)] text-xs text-[var(--color-charcoal-deep)] font-semibold">
+                <tr className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-warm)] text-xs text-[var(--color-text-primary)] font-semibold">
                   <th className="p-5 sm:p-6 font-semibold w-1/3">Core Capability</th>
                   <th className="p-5 sm:p-6 font-medium text-[var(--color-text-tertiary)] w-1/5">Traditional Quizzes</th>
                   <th className="p-5 sm:p-6 font-medium text-[var(--color-text-tertiary)] w-1/5">Job Boards</th>
-                  <th className="p-5 sm:p-6 font-bold text-white bg-[var(--color-charcoal-base)] w-1/4">Career OS</th>
+                  <th className="p-5 sm:p-6 font-bold text-white bg-[var(--background-dark-deep)] w-1/4">Career OS</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--color-border-default)] text-xs sm:text-sm">
                 {ROWS.map((row) => (
-                  <tr key={row.capability} className="hover:bg-[var(--color-ivory-warm)]/40 transition-colors">
-                    <td className="p-5 sm:p-6 font-semibold text-[var(--color-charcoal-deep)]">
+                  <tr key={row.capability} className="hover:bg-white/5 transition-colors">
+                    <td className="p-5 sm:p-6 font-semibold text-[var(--color-text-primary)]">
                       {row.capability}
                     </td>
                     <td className="p-5 sm:p-6 text-[var(--color-text-secondary)]">
@@ -95,7 +95,7 @@ export function ComparisonTableSection() {
                     <td className="p-5 sm:p-6 text-[var(--color-text-secondary)]">
                       {row.jobBoards}
                     </td>
-                    <td className="p-5 sm:p-6 font-semibold text-[var(--color-charcoal-deep)] bg-[var(--color-ivory-deep)]/40 border-l border-r border-[var(--color-border-default)]">
+                    <td className="p-5 sm:p-6 font-semibold text-[var(--color-text-primary)] bg-white/[0.03] border-l border-r border-[var(--color-border-default)]">
                       <div className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-[var(--color-success)] shrink-0" />
                         <span>{row.careerOS}</span>

@@ -33,7 +33,7 @@ export default function VerificationPage() {
         <div className="space-y-2 pt-2">
           {states.map((s) => (
             <div key={s.state} className="p-3 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] text-xs space-y-1">
-              <span className="font-mono font-bold text-[var(--color-charcoal-deep)]">{s.state}</span>
+              <span className="font-mono font-bold text-[var(--color-text-primary)]">{s.state}</span>
               <p className="text-[var(--color-text-secondary)]">{s.desc}</p>
             </div>
           ))}

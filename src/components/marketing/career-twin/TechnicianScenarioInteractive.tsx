@@ -104,7 +104,7 @@ export function TechnicianScenarioInteractive() {
               Illustrative Persona: Alex Morgan
             </span>
           </div>
-          <h3 className="text-2xl font-serif font-bold text-[var(--color-charcoal-deep)]">
+          <h3 className="text-2xl font-serif font-bold text-[var(--color-text-primary)]">
             How Alex’s Career Twin Models 4 Different Futures
           </h3>
         </div>
@@ -123,8 +123,8 @@ export function TechnicianScenarioInteractive() {
               onClick={() => setActiveTargetId(t.id)}
               className={`p-4 rounded-[var(--radius-card)] text-left border transition-all space-y-1 ${
                 isActive
-                  ? 'bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)] shadow-sm'
-                  : 'bg-[var(--color-surface-warm)] text-[var(--color-charcoal-deep)] border-[var(--color-border-default)] hover:border-[var(--color-charcoal-base)]'
+                  ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15 shadow-sm'
+                  : 'bg-[var(--color-surface-warm)] text-[var(--color-text-primary)] border-[var(--color-border-default)] hover:border-white/20'
               }`}
             >
               <span className={`text-[10px] font-mono uppercase tracking-wider block ${isActive ? 'text-[var(--color-taupe-300)]' : 'text-[var(--color-taupe-700)]'}`}>
@@ -141,12 +141,12 @@ export function TechnicianScenarioInteractive() {
         {/* Left Column: Strengths & Bridge Requirements */}
         <div className="lg:col-span-6 space-y-6">
           {/* Transferable Strengths */}
-          <div className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-            <h4 className="font-serif font-bold text-sm text-[var(--color-charcoal-deep)] flex items-center gap-2">
+          <div className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
+            <h4 className="font-serif font-bold text-sm text-[var(--color-text-primary)] flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
               Existing Transferable Strengths (In Twin):
             </h4>
-            <ul className="space-y-2 text-xs text-[var(--color-charcoal-deep)]">
+            <ul className="space-y-2 text-xs text-[var(--color-text-primary)]">
               {activeTarget.transferableStrengths.map((str, idx) => (
                 <li key={idx} className="flex items-center gap-2 font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
@@ -158,11 +158,11 @@ export function TechnicianScenarioInteractive() {
 
           {/* Bridge Requirements */}
           <div className="p-6 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-            <h4 className="font-serif font-bold text-sm text-[var(--color-charcoal-deep)] flex items-center gap-2">
+            <h4 className="font-serif font-bold text-sm text-[var(--color-text-primary)] flex items-center gap-2">
               <AlertTriangle className="w-4 h-4 text-amber-600" />
               Bridge Gaps Needed for This Direction:
             </h4>
-            <ul className="space-y-2 text-xs text-[var(--color-charcoal-deep)]">
+            <ul className="space-y-2 text-xs text-[var(--color-text-primary)]">
               {activeTarget.bridgeRequirements.map((req, idx) => (
                 <li key={idx} className="flex items-center gap-2 font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-600" />
@@ -176,7 +176,7 @@ export function TechnicianScenarioInteractive() {
         {/* Right Column: Platform Synergy (Mentor, Graph, Passport) */}
         <div className="lg:col-span-6 space-y-4">
           {/* Mentor Advice Box */}
-          <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
+          <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[var(--color-taupe-700)] flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-purple-600" />
               AI Career Mentor Guidance Output:
@@ -191,7 +191,7 @@ export function TechnicianScenarioInteractive() {
             <span className="font-mono text-[10px] font-bold uppercase text-[var(--color-taupe-700)] block">
               CAREER GRAPH MARKET INSIGHT:
             </span>
-            <p className="text-[var(--color-charcoal-deep)] font-medium">
+            <p className="text-[var(--color-text-primary)] font-medium">
               {activeTarget.graphConnection}
             </p>
           </div>
@@ -201,7 +201,7 @@ export function TechnicianScenarioInteractive() {
             <span className="font-mono text-[10px] font-bold uppercase text-[var(--color-taupe-700)] block">
               PASSPORT EVIDENCE REQUIRED:
             </span>
-            <p className="text-[var(--color-charcoal-deep)] font-medium font-mono text-[11px]">
+            <p className="text-[var(--color-text-primary)] font-medium font-mono text-[11px]">
               {activeTarget.passportEvidenceNeeded}
             </p>
           </div>

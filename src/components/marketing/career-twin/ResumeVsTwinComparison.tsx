@@ -48,7 +48,7 @@ export function ResumeVsTwinComparison() {
             </div>
             <div>
               <span className="section-label">TRADITIONAL FORMAT</span>
-              <h3 className="font-serif font-bold text-xl text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-xl text-[var(--color-text-primary)]">
                 The Résumé
               </h3>
             </div>
@@ -73,17 +73,17 @@ export function ResumeVsTwinComparison() {
         </div>
 
         {/* Right Card: The Career Twin */}
-        <div className="p-8 bg-[var(--color-surface-raised)] border-2 border-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] space-y-5 shadow-subtle relative overflow-hidden">
-          <div className="absolute top-0 right-0 px-4 py-1 bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] font-mono text-[10px] font-bold uppercase tracking-wider rounded-bl">
+        <div className="p-8 bg-[var(--color-surface-raised)] border-2 border-white/15 rounded-[var(--radius-card)] space-y-5 shadow-subtle relative overflow-hidden">
+          <div className="absolute top-0 right-0 px-4 py-1 bg-white/15 text-[var(--color-text-primary)] font-mono text-[10px] font-bold uppercase tracking-wider rounded-bl">
             Career OS Core Model
           </div>
           <div className="flex items-center gap-3 border-b border-[var(--color-border-subtle)] pb-4">
-            <div className="w-10 h-10 rounded bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] flex items-center justify-center">
+            <div className="w-10 h-10 rounded bg-white/15 text-[var(--color-text-primary)] flex items-center justify-center">
               <Cpu className="w-5 h-5" />
             </div>
             <div>
               <span className="section-label">CAREER OS ARCHITECTURE</span>
-              <h3 className="font-serif font-bold text-xl text-[var(--color-charcoal-deep)]">
+              <h3 className="font-serif font-bold text-xl text-[var(--color-text-primary)]">
                 The Career Twin
               </h3>
             </div>
@@ -92,15 +92,15 @@ export function ResumeVsTwinComparison() {
             A living representation of your full professional context—connecting what you can do, what you have built, and where you want to go.
           </p>
           <ul className="space-y-3 pt-2 text-xs">
-            <li className="flex items-start gap-2 text-[var(--color-charcoal-deep)] font-medium">
+            <li className="flex items-start gap-2 text-[var(--color-text-primary)] font-medium">
               <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Compounds lifelong context so you never start from zero during career transitions.</span>
             </li>
-            <li className="flex items-start gap-2 text-[var(--color-charcoal-deep)] font-medium">
+            <li className="flex items-start gap-2 text-[var(--color-text-primary)] font-medium">
               <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Links verified evidence and project artifacts directly to your capability profile.</span>
             </li>
-            <li className="flex items-start gap-2 text-[var(--color-charcoal-deep)] font-medium">
+            <li className="flex items-start gap-2 text-[var(--color-text-primary)] font-medium">
               <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Protects private goals and salary targets behind strict field-level permission controls.</span>
             </li>
@@ -115,19 +115,19 @@ export function ResumeVsTwinComparison() {
             <tr className="bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] font-mono uppercase text-[10px] text-[var(--color-taupe-700)]">
               <th className="p-4 font-bold">Dimension</th>
               <th className="p-4 font-bold text-[var(--color-text-tertiary)]">Traditional Résumé</th>
-              <th className="p-4 font-bold text-[var(--color-charcoal-deep)]">Career OS Career Twin</th>
+              <th className="p-4 font-bold text-[var(--color-text-primary)]">Career OS Career Twin</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[var(--color-border-subtle)]">
             {comparisonItems.map((row, idx) => (
               <tr key={idx} className="hover:bg-[var(--color-surface-warm)] transition-colors">
-                <td className="p-4 font-bold text-[var(--color-charcoal-deep)] whitespace-nowrap font-mono text-[11px]">
+                <td className="p-4 font-bold text-[var(--color-text-primary)] whitespace-nowrap font-mono text-[11px]">
                   {row.attribute}
                 </td>
                 <td className="p-4 text-[var(--color-text-secondary)] leading-relaxed max-w-xs">
                   {row.resume}
                 </td>
-                <td className="p-4 text-[var(--color-charcoal-deep)] font-medium leading-relaxed max-w-xs bg-[var(--color-ivory-base)]/40">
+                <td className="p-4 text-[var(--color-text-primary)] font-medium leading-relaxed max-w-xs bg-[var(--color-surface-base)]/40">
                   {row.twin}
                 </td>
               </tr>
