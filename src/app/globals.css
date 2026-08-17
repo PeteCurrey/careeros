@@ -348,3 +348,46 @@ body {
   padding-bottom: 2rem;
   z-index: 50;
 }
+
+/* ============================================================
+   CAREER ATMOSPHERE — ambient field drift animation
+   Used by CareerAtmosphere brand component.
+   Each variant offsets timing so fields move independently.
+   All motion disabled by prefers-reduced-motion.
+   ============================================================ */
+@keyframes atmosphereDrift {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(9px, 13px) scale(1.03); }
+}
+
+@keyframes atmosphereDriftB {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(-7px, 10px) scale(0.98); }
+}
+
+@keyframes atmosphereDriftC {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(5px, -8px) scale(1.02); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .atmosphere-field {
+    will-change: transform;
+  }
+  .atmosphere-field--lavender {
+    animation: atmosphereDrift 20s ease-in-out infinite alternate;
+  }
+  .atmosphere-field--taupe {
+    animation: atmosphereDriftB 24s ease-in-out infinite alternate;
+    animation-delay: -6s;
+  }
+  .atmosphere-field--gold {
+    animation: atmosphereDriftC 18s ease-in-out infinite alternate;
+    animation-delay: -10s;
+  }
+  .atmosphere-field--blush {
+    animation: atmosphereDrift 26s ease-in-out infinite alternate;
+    animation-delay: -3s;
+  }
+}
+
