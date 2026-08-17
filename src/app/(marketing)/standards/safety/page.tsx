@@ -1,44 +1,38 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function SafetyStandardPage() {
+  const meta = GOVERNANCE_MANIFEST["safety"]!;
+  const toc = [
+    { id: "cross-platform", title: "1. Cross-Platform Safety Principles" },
+    { id: "youth-enhanced", title: "2. Enhanced Safeguards for Youth & Students" },
+    { id: "reporting-channel", title: "3. Emergency Safety Reporting & Incident Response" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Safety — Standards | Career OS",
-  description: "Career OS Standards safety. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/standards/safety",
-  },
-};
-
-export default function StandardsSafetyPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="STANDARDS &bull; SAFETY"
-      title="Platform Safety & Incident Response"
-      description="Protocols for reporting harmful content, responding to safety incidents, and maintaining a secure environment for all users."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Standards', href: ROUTES.STANDARDS },
-        { label: 'Safety', href: ROUTES.STANDARDS_SAFETY },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Zero Tolerance for Harm</h2>
+    <GovernancePageLayout meta={meta} subtitle="Cross-platform safety standard covering students, candidates, educators, employers, and network users." toc={toc}>
+      <section id="cross-platform" className="space-y-4">
+        <h2>1. Cross-Platform Safety Principles</h2>
         <p>
-          Career OS operates a 24/7 trust and safety function dedicated to maintaining a professional, secure environment for every participant — from high school students to senior executives.
+          Career OS maintains a safe environment across all user populations. Safety controls prevent malicious intrusion, financial fraud, impersonation, and harassment.
         </p>
+      </section>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Safety Mechanisms</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>In-Platform Reporting:</strong> One-click report flow for harassment, fraudulent listings, and inappropriate contact.</li>
-          <li><strong>Response SLA:</strong> Safety incidents reviewed within 24 hours; critical safeguarding issues escalated within 4 hours.</li>
-          <li><strong>Proactive Monitoring:</strong> Automated semantic screening for predatory recruitment patterns and unsolicited commercial contact.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+      <section id="youth-enhanced" className="space-y-4">
+        <h2>2. Enhanced Safeguards for Youth &amp; Students</h2>
+        <p>
+          Students and minor candidates receive enhanced protections including default-private profiles, recruiter hard-blocks, anti-grooming monitoring, and school counselor visibility.
+        </p>
+      </section>
+
+      <section id="reporting-channel" className="space-y-4">
+        <h2>3. Emergency Safety Reporting &amp; Incident Response</h2>
+        <p>
+          Safety concerns can be reported 24/7 to <a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`}>{LEGAL_CONFIG.safeguardingEmail}</a>. Immediate account restrictions are applied during active safety investigations.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

@@ -1,77 +1,38 @@
-import React from 'react';
-import { ROUTES } from '@/lib/routes';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Lock, Shield, Eye, Database, ArrowRight } from 'lucide-react';
-
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Data Ethics — Trust | Career OS",
-  description: "Career OS Trust data Ethics. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/trust/data-ethics",
-  },
-};
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
 export default function DataEthicsPage() {
+  const meta = GOVERNANCE_MANIFEST["data-ethics"]!;
+  const toc = [
+    { id: "minimisation", title: "1. Data Minimisation & Purpose Limitation" },
+    { id: "access-grants", title: "2. Private Twin Control & Access Grants" },
+    { id: "no-ad-sales", title: "3. Zero Advertising Sales & No Shadow Dossiers" },
+  ];
+
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Data Ethics & Sovereignty
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Your career data belongs to you. Always.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            We treat your Career Twin, skills record, and personal development history as consequential private assets. We separate data ownership from matching eligibility, ensuring you retain total sovereignty.
-          </p>
-        </div>
+    <GovernancePageLayout meta={meta} subtitle="Data ethics principles prohibiting shadow candidate dossiers, ad network tracking, and unauthorized recruiter access." toc={toc}>
+      <section id="minimisation" className="space-y-4">
+        <h2>1. Data Minimisation &amp; Purpose Limitation</h2>
+        <p>
+          Career OS collects only the data necessary to deliver career guidance and skill verification. We do not collect unnecessary sensitive personal attributes or track browsing activity across external websites.
+        </p>
+      </section>
 
-        {/* Ethical Foundations */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Shield className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              No Advertising Data Sales
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              We do not monetize user attention by selling private career records, student profiles, or compensation expectations to behavioral ad networks.
-            </p>
-          </Card>
+      <section id="access-grants" className="space-y-4">
+        <h2>2. Private Twin Control &amp; Access Grants</h2>
+        <p>
+          Your Career Twin is default-private. Employers, mentors, and institutions access your profile solely when you grant explicit permission through a candidate Data Access Grant.
+        </p>
+      </section>
 
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Eye className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Granular Data Access Grants
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Access to specific Career Twin fields requires an explicit, revocable grant. An employer receiving access to your portfolio cannot see your internal mentor reflections.
-            </p>
-          </Card>
-
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Database className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Export & Lifecycle Rights
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Export your Career Passport and Twin data at any time in open, structured formats. Full support for account deletion and data lifecycle purging.
-            </p>
-          </Card>
-        </div>
-      </div>
-    </div>
+      <section id="no-ad-sales" className="space-y-4">
+        <h2>3. Zero Advertising Sales &amp; No Shadow Dossiers</h2>
+        <p>
+          We do not sell student or job-seeker data to third-party data brokers, ad networks, or credit agencies. We strictly prohibit building shadow candidate dossiers or unauthorized profile enrichment.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

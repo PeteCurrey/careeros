@@ -89,9 +89,12 @@ export const ROUTES = {
   REGULATORY: '/regulatory',
   REGULATORY_UNITED_STATES: '/regulatory/united-states',
   REGULATORY_STUDENT_PRIVACY: '/regulatory/student-privacy',
+  REGULATORY_STUDENT_ASSESSMENTS: '/regulatory/student-assessments',
   REGULATORY_YOUTH_EMPLOYMENT: '/regulatory/youth-employment',
   REGULATORY_FAIR_EMPLOYMENT: '/regulatory/fair-employment',
   REGULATORY_AUTOMATED_HIRING: '/regulatory/automated-hiring',
+  REGULATORY_FCRA: '/regulatory/fcra-and-employment-reports',
+  REGULATORY_STATE_PRIVACY: '/regulatory/state-privacy',
   REGULATORY_GLOBAL_EXPANSION: '/regulatory/global-expansion',
 
   // Legal

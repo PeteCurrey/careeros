@@ -172,7 +172,7 @@ export default function ForStudentsPage() {
               Start building your Career OS today (100% Free)
             </h3>
             <p className="text-sm text-[var(--color-text-inverse-muted)]">
-              Individual accounts are free forever. No credit card, no subscription lock-in.
+              Individual core accounts are free for individuals. No credit card required.
             </p>
           </div>
           <Button href={ROUTES.SIGNUP} variant="dark" size="lg" className="shrink-0">

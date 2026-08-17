@@ -43,8 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Trust Centre
     { url: `${BASE_URL}/trust`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/trust/responsible-ai`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE_URL}/trust/safeguarding`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE_URL}/trust/ai-transparency`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE_URL}/trust/human-oversight`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE_URL}/trust/data-ethics`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE_URL}/trust/fairness-and-bias`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE_URL}/trust/safeguarding`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${BASE_URL}/trust/security`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE_URL}/trust/accessibility`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE_URL}/trust/verification`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${BASE_URL}/trust/transparency`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
@@ -52,14 +56,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Standards
     { url: `${BASE_URL}/standards`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/standards/community-code`, lastModified: now, changeFrequency: 'yearly', priority: 0.65 },
+    { url: `${BASE_URL}/standards/mentor-code`, lastModified: now, changeFrequency: 'yearly', priority: 0.65 },
     { url: `${BASE_URL}/standards/employer-code`, lastModified: now, changeFrequency: 'yearly', priority: 0.65 },
+    { url: `${BASE_URL}/standards/opportunity-standards`, lastModified: now, changeFrequency: 'yearly', priority: 0.65 },
     { url: `${BASE_URL}/standards/anti-discrimination`, lastModified: now, changeFrequency: 'yearly', priority: 0.65 },
+    { url: `${BASE_URL}/standards/professional-conduct`, lastModified: now, changeFrequency: 'yearly', priority: 0.65 },
+    { url: `${BASE_URL}/standards/safety`, lastModified: now, changeFrequency: 'yearly', priority: 0.65 },
 
     // Regulatory
     { url: `${BASE_URL}/regulatory`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/regulatory/united-states`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
     { url: `${BASE_URL}/regulatory/student-privacy`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${BASE_URL}/regulatory/student-assessments`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${BASE_URL}/regulatory/youth-employment`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${BASE_URL}/regulatory/fair-employment`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
     { url: `${BASE_URL}/regulatory/automated-hiring`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${BASE_URL}/regulatory/fcra-and-employment-reports`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${BASE_URL}/regulatory/state-privacy`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${BASE_URL}/regulatory/global-expansion`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
 
     // Legal
     { url: `${BASE_URL}/legal`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },

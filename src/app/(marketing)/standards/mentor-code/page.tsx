@@ -1,44 +1,38 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function MentorCodePage() {
+  const meta = GOVERNANCE_MANIFEST["mentor-code"]!;
+  const toc = [
+    { id: "ai-boundaries", title: "1. AI Mentor Disclosure & Non-Impersonation" },
+    { id: "ethical-limits", title: "2. Dependency Engineering & Romantic Prohibitions" },
+    { id: "human-specialists", title: "3. Future Human Specialist Mentorship Rules" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Mentor Code — Standards | Career OS",
-  description: "Career OS Standards mentor Code. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/standards/mentor-code",
-  },
-};
-
-export default function StandardsMentorCodePage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="STANDARDS &bull; MENTOR CODE"
-      title="Mentor Ethics & Guidance Code"
-      description="Ethical obligations for human mentors and AI guidance models: conflict of interest prevention, safeguarding, and objective advisory."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Standards', href: ROUTES.STANDARDS },
-        { label: 'Mentor Code', href: ROUTES.STANDARDS_MENTOR_CODE },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Fiduciary Duty to Candidate Advancement</h2>
+    <GovernancePageLayout meta={meta} subtitle="Ethical standards for AI mentor personas and future human guidance specialists." toc={toc}>
+      <section id="ai-boundaries" className="space-y-4">
+        <h2>1. AI Mentor Disclosure &amp; Non-Impersonation</h2>
         <p>
-          Career mentors — whether human advisors or AI personas — operate with a fiduciary obligation to the long-term well-being and autonomous potential of the mentee.
+          The AI Career Mentor is an automated software tool. AI personas surface system identity disclosures and never impersonate real living individuals or fabricate human relationships.
         </p>
+      </section>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Mentor Commitments</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Unbiased Advice:</strong> Mentors do not receive kickbacks or undisclosed incentives for directing candidates to specific institutions.</li>
-          <li><strong>Safeguarding Protocol:</strong> Strict adherence to minor safeguarding rules, background vetting, and transparent communication records.</li>
-          <li><strong>Constructive Candor:</strong> Delivering honest, actionable assessments of capability gaps paired with realistic roadmaps to close them.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+      <section id="ethical-limits" className="space-y-4">
+        <h2>2. Dependency Engineering &amp; Romantic Prohibitions</h2>
+        <p>
+          AI mentor personas strictly avoid emotional manipulation, companion framing, romantic language, or dependency engineering. Mentor conversations focus exclusively on professional development, skill acquisition, and educational guidance.
+        </p>
+      </section>
+
+      <section id="human-specialists" className="space-y-4">
+        <h2>3. Future Human Specialist Mentorship Rules</h2>
+        <p>
+          Where human specialists participate in mentorship programs, they are bound by strict professional boundaries, confidentiality rules, and conflict-of-interest disclosures.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

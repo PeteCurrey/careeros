@@ -1,44 +1,38 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function AntiDiscriminationPage() {
+  const meta = GOVERNANCE_MANIFEST["anti-discrimination"]!;
+  const toc = [
+    { id: "civil-rights", title: "1. Civil Rights Principles & Protected Characteristics" },
+    { id: "proxy-prohibitions", title: "2. Prohibition of Proxy Variable Discrimination" },
+    { id: "accommodations", title: "3. Candidate Disability Accommodations" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Anti Discrimination — Standards | Career OS",
-  description: "Career OS Standards anti Discrimination. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/standards/anti-discrimination",
-  },
-};
-
-export default function StandardsAntiDiscriminationPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="STANDARDS &bull; EQUALITY"
-      title="Anti-Discrimination & Equal Opportunity Policy"
-      description="Zero tolerance for discrimination based on race, gender, age, disability, sexual orientation, socio-economic background, or non-traditional educational path."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Standards', href: ROUTES.STANDARDS },
-        { label: 'Anti-Discrimination', href: ROUTES.STANDARDS_ANTI_DISCRIMINATION },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Universal Access and Systemic Equity</h2>
+    <GovernancePageLayout meta={meta} subtitle="Prohibiting discrimination, protected characteristic targeting, and proxy variable misuse across all platform matching." toc={toc}>
+      <section id="civil-rights" className="space-y-4">
+        <h2>1. Civil Rights Principles &amp; Protected Characteristics</h2>
         <p>
-          Career OS prohibits all forms of unlawful and unethical discrimination in matching, mentoring, opportunity posting, and candidate evaluation.
+          Career OS prohibits discrimination based on race, color, religion, sex, national origin, age, disability, genetic information, veteran status, or sexual orientation in compliance with federal Title VII, ADA, and ADEA statutes.
         </p>
+      </section>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Policy Dimensions</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Protected Characteristics:</strong> Complete protection across age, race, ethnicity, gender identity, religion, veteran status, and disability.</li>
-          <li><strong>Pathway Parity:</strong> Equal opportunity matching regardless of whether skills were acquired through vocational apprenticeship or university study.</li>
-          <li><strong>Reporting & Enforcement:</strong> Rapid investigation and immediate suspension of accounts that violate anti-discrimination policies.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+      <section id="proxy-prohibitions" className="space-y-4">
+        <h2>2. Prohibition of Proxy Variable Discrimination</h2>
+        <p>
+          Employers and matching algorithms are strictly prohibited from using proxy criteria (such as geographic zip codes or institutional prestige filters) to systematically exclude protected groups.
+        </p>
+      </section>
+
+      <section id="accommodations" className="space-y-4">
+        <h2>3. Candidate Disability Accommodations</h2>
+        <p>
+          Employers using Career OS must provide reasonable application accommodations for candidates with disabilities.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

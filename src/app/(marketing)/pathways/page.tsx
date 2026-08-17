@@ -129,7 +129,7 @@ export default function PathwaysPage() {
               Begin exploring your pathway on Career OS
             </h3>
             <p className="text-sm text-[var(--color-text-inverse-muted)] leading-relaxed">
-              100% free forever for individuals. Start discovering and building verified evidence today.
+              Free for individual core accounts. Start discovering and building verified evidence today.
             </p>
           </div>
           <Button href={ROUTES.SIGNUP} variant="dark" size="lg" className="shrink-0">

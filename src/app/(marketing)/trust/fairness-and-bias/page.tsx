@@ -1,44 +1,38 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function FairnessAndBiasPage() {
+  const meta = GOVERNANCE_MANIFEST["fairness-and-bias"]!;
+  const toc = [
+    { id: "parity", title: "1. Pathway Parity (University, Trades & Apprenticeships)" },
+    { id: "protected-characteristics", title: "2. Protected Characteristics & Proxy Variable Controls" },
+    { id: "bias-testing", title: "3. Continuous Bias Testing & Mitigation" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Fairness And Bias — Trust | Career OS",
-  description: "Career OS Trust fairness And Bias. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/trust/fairness-and-bias",
-  },
-};
-
-export default function TrustFairnessBiasPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="TRUST &bull; FAIRNESS & BIAS"
-      title="Fairness, Anti-Bias & Algorithmic Parity"
-      description="Proactive bias auditing, demographic masking during initial screening, and continuous testing against adverse impact across all matching models."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Trust', href: ROUTES.TRUST },
-        { label: 'Fairness & Bias', href: ROUTES.TRUST_FAIRNESS_BIAS },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Systemic Equity in Career Discovery</h2>
+    <GovernancePageLayout meta={meta} subtitle="Algorithmic fairness testing, pathway parity across trades and universities, and bias mitigation protocols." toc={toc}>
+      <section id="parity" className="space-y-4">
+        <h2>1. Pathway Parity (University, Trades &amp; Apprenticeships)</h2>
         <p>
-          Historical hiring data contains entrenched socio-economic and demographic biases. Career OS actively mitigates these systemic distortions through continuous statistical auditing and blind candidate representation during initial matching stages.
+          Career OS algorithms enforce equal dignity across all legitimate career pathways. Recommendations do not systematically steer students toward traditional four-year universities while undervaluing skilled trades, vocational academies, or registered apprenticeships.
         </p>
+      </section>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Mitigation Methodologies</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Four-Fifths Rule Statistical Audits:</strong> Regular selection rate parity verification across gender, racial, and age groups.</li>
-          <li><strong>Demographic Masking:</strong> Anonymized presentation of candidate profiles until an interview or introduction is formally agreed upon.</li>
-          <li><strong>Non-Traditional Pathway Parity:</strong> Explicit weighting of trade certifications, military experience, and open-source contributions equal to traditional 4-year degrees.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+      <section id="protected-characteristics" className="space-y-4">
+        <h2>2. Protected Characteristics &amp; Proxy Variable Controls</h2>
+        <p>
+          Career OS matching algorithms do not evaluate race, gender, ethnicity, religion, age, or sexual orientation. We actively audit matching models to prevent proxy variables (e.g. zip code, school prestige) from introducing unlawful bias.
+        </p>
+      </section>
+
+      <section id="bias-testing" className="space-y-4">
+        <h2>3. Continuous Bias Testing &amp; Mitigation</h2>
+        <p>
+          We conduct continuous statistical fairness audits (evaluating adverse impact ratios) to ensure talent discovery algorithms operate equitably across diverse candidate populations. We do not claim Career OS is categorically &quot;bias-free&quot;—we commit to ongoing testing and mitigation.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

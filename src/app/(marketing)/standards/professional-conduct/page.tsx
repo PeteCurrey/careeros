@@ -1,44 +1,38 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function ProfessionalConductPage() {
+  const meta = GOVERNANCE_MANIFEST["professional-conduct"]!;
+  const toc = [
+    { id: "evidence-honesty", title: "1. Evidence & Qualification Honesty" },
+    { id: "trade-secrets", title: "2. Respect for Employer Trade Secrets" },
+    { id: "ai-assisted-apps", title: "3. Transparent AI-Assisted Job Applications" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Professional Conduct — Standards | Career OS",
-  description: "Career OS Standards professional Conduct. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/standards/professional-conduct",
-  },
-};
-
-export default function StandardsProfessionalConductPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="STANDARDS &bull; CONDUCT"
-      title="Professional Conduct & Communications"
-      description="Guidelines for constructive communications, meeting decorum, interview professionalism, and data handling among platform participants."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Standards', href: ROUTES.STANDARDS },
-        { label: 'Professional Conduct', href: ROUTES.STANDARDS_PROFESSIONAL_CONDUCT },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Fostering a Culture of Professionalism</h2>
+    <GovernancePageLayout meta={meta} subtitle="Standards for evidence honesty, reference integrity, trade secret protection, and AI-assisted job applications." toc={toc}>
+      <section id="evidence-honesty" className="space-y-4">
+        <h2>1. Evidence &amp; Qualification Honesty</h2>
         <p>
-          High-trust professional networks rely on clear expectations regarding communication decorum, punctuality, intellectual property respect, and confidentiality.
+          Candidates agree to represent their skills, project work, degrees, and employment dates truthfully without forging credentials or misrepresenting contributions.
         </p>
+      </section>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Standards of Conduct</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Confidentiality:</strong> Respect for proprietary business information and private candidate records.</li>
-          <li><strong>Punctuality & Reliability:</strong> Adhering to scheduled advisory sessions and technical interviews.</li>
-          <li><strong>Professional Tone:</strong> Constructive, courteous, and inclusive discourse across all collaborative spaces.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+      <section id="trade-secrets" className="space-y-4">
+        <h2>2. Respect for Employer Trade Secrets</h2>
+        <p>
+          Candidates and professionals agree NOT to upload proprietary employer code, confidential documents, or non-disclosed intellectual property as portfolio evidence on Career OS.
+        </p>
+      </section>
+
+      <section id="ai-assisted-apps" className="space-y-4">
+        <h2>3. Transparent AI-Assisted Job Applications</h2>
+        <p>
+          While candidates may use AI tools to refine resumes or cover letters, automated bot spamming of employer job openings is strictly prohibited.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

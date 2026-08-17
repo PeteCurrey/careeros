@@ -1,83 +1,41 @@
-import React from 'react';
-import { ROUTES } from '@/lib/routes';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function TrustAccessibilityPage() {
+  const meta = GOVERNANCE_MANIFEST["trust-accessibility"]!;
+  const toc = [
+    { id: "philosophy", title: "1. Inclusive Design Philosophy" },
+    { id: "wcag-target", title: "2. WCAG 2.2 AA Engineering Features" },
+    { id: "ai-a11y", title: "3. Accessible AI Interfaces & Support" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Accessibility — Trust | Career OS",
-  description: "Career OS Trust accessibility. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/trust/accessibility",
-  },
-};
-
-export default function AccessibilityPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Inclusive Design
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Accessibility: WCAG 2.2 AA by design.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Career infrastructure must be genuinely accessible to everyone. We build accessibility into our core component design tokens, semantic markup, and keyboard interaction models from day one.
-          </p>
-        </div>
+    <GovernancePageLayout meta={meta} subtitle="Product design approach, screen reader support, keyboard navigation, and WCAG 2.2 AA engineering standards." toc={toc}>
+      <section id="philosophy" className="space-y-4">
+        <h2>1. Inclusive Design Philosophy</h2>
+        <p>
+          Career OS is engineered to ensure every individual—regardless of visual, auditory, motor, or cognitive ability—can access career guidance and build a portable professional record.
+        </p>
+      </section>
 
-        {/* Core Accessibility Standards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="p-8 space-y-4">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Implemented Technical Foundations
-            </h3>
-            <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] mt-0.5" />
-                <span><strong>Semantic HTML Structure:</strong> Strictly ordered heading hierarchy and landmark regions across all pages.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] mt-0.5" />
-                <span><strong>Full Keyboard Navigation:</strong> Accessible skip links, roving focus, and trap-safe modal dialogs.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] mt-0.5" />
-                <span><strong>Visible Focus Rings:</strong> Distinct 3px focus indicators respecting user-driven focus-visible states.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] mt-0.5" />
-                <span><strong>Contrast Compliance:</strong> Design tokens calibrated to exceed WCAG 2.2 AA 4.5:1 text contrast ratios.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] mt-0.5" />
-                <span><strong>Reduced Motion Support:</strong> Global respect for user prefers-reduced-motion operating system preferences.</span>
-              </li>
-            </ul>
-          </Card>
+      <section id="wcag-target" className="space-y-4">
+        <h2>2. WCAG 2.2 AA Engineering Features</h2>
+        <ul>
+          <li><strong>Keyboard Operability:</strong> Complete focus control with visible 2px outlines.</li>
+          <li><strong>Screen Reader Optimization:</strong> ARIA live regions for dynamic AI mentor streaming.</li>
+          <li><strong>Contrast &amp; Text:</strong> High-contrast editorial palette meeting 4.5:1 ratio targets.</li>
+          <li><strong>Reduced Motion:</strong> Respects user system preference settings for animations.</li>
+        </ul>
+      </section>
 
-          <Card className="p-8 space-y-4">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Ongoing Testing & Feedback
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              We continually validate our interfaces using automated accessibility sweep engines (Axe-core), screen reader testing (NVDA, VoiceOver), and assistive technology feedback.
-            </p>
-            <div className="pt-2">
-              <Button href={ROUTES.COMPANY_CONTACT} variant="secondary" size="md">
-                Submit Accessibility Feedback
-              </Button>
-            </div>
-          </Card>
-        </div>
-      </div>
-    </div>
+      <section id="ai-a11y" className="space-y-4">
+        <h2>3. Accessible AI Interfaces &amp; Support</h2>
+        <p>
+          AI mentor outputs are formatted in accessible, screen-reader friendly typography with semantic headings and plain text options.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

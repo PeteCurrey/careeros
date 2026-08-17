@@ -1,92 +1,43 @@
-import React from 'react';
-import { ROUTES } from '@/lib/routes';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { ShieldCheck, Users, Lock, EyeOff, FileText, ArrowRight } from 'lucide-react';
-
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Safeguarding — Trust | Career OS",
-  description: "Career OS Trust safeguarding. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/trust/safeguarding",
-  },
-};
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
 export default function SafeguardingPage() {
+  const meta = GOVERNANCE_MANIFEST["safeguarding"]!;
+  const toc = [
+    { id: "canonical-age", title: "1. Canonical Age Model & Access Controls" },
+    { id: "recruiter-hardblock", title: "2. Recruiter Contact Hard-Blocks & Default-Private Minor Profiles" },
+    { id: "safety-controls", title: "3. Anti-Grooming, Exploitation & Emergency Escalation" },
+  ];
+
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Student & Youth Safety
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Safeguarding architecture for students and minors.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Protecting high school students and young people requires elevated technical and institutional safeguards. We enforce age-banded visibility, parent/guardian relationship models, and strict institutional boundaries.
-          </p>
-        </div>
+    <GovernancePageLayout meta={meta} subtitle="Substantial youth safeguarding framework governing minor profiles, employer contact restrictions, and safety escalations." toc={toc}>
+      <section id="canonical-age" className="space-y-4">
+        <h2>1. Canonical Age Model &amp; Access Controls</h2>
+        <p>
+          Career OS enforces age-banded safeguards:
+        </p>
+        <ul>
+          <li><strong>Age 16+:</strong> Direct individual accounts permitted. Users aged 16–17 remain legal minors and receive active minor safeguarding protections.</li>
+          <li><strong>Ages 13–15:</strong> Access enabled solely through a verified school arrangement or verified parent/guardian consent arrangement.</li>
+          <li><strong>Under Age 13:</strong> Direct consumer signup prohibited. Institutional access only under FERPA school-official exception.</li>
+        </ul>
+      </section>
 
-        {/* Safeguarding Controls */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <EyeOff className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              No Unsolicited Commercial Access
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Student profiles are never accessible to third-party commercial recruiters without explicit school district or guardian authorization.
-            </p>
-          </Card>
+      <section id="recruiter-hardblock" className="space-y-4">
+        <h2>2. Recruiter Contact Hard-Blocks &amp; Default-Private Minor Profiles</h2>
+        <p>
+          Commercial recruiters cannot search or browse minor candidate profiles. Direct cold messaging from recruiters to minor users is hard-blocked at the system level. Minor participation in employer programs is restricted to school-approved, counselor-overseen programs.
+        </p>
+      </section>
 
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Users className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Guardian Relationship Models
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Integrated parent/guardian relationship tracking allows verified guardians to review policy consents and data-sharing preferences for minors.
-            </p>
-          </Card>
-
-          <Card className="p-7 space-y-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] mb-3">
-              <Lock className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-bold text-[var(--color-text-primary)]">
-              Strict Under-13 Protection
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              We do not launch open consumer registration for children under 13, adhering strictly to COPPA guidelines and verified school institutional arrangements.
-            </p>
-          </Card>
-        </div>
-
-        {/* CTA */}
-        <Card className="p-8 sm:p-12 bg-[var(--color-surface-sunken)] border-[var(--color-border-default)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-xl">
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-              Questions about school safeguarding?
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Our education compliance team is available to review district data protection agreements.
-            </p>
-          </div>
-          <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="md">
-            Contact Safety Team <ArrowRight className="w-4 h-4 ml-1.5" />
-          </Button>
-        </Card>
-      </div>
-    </div>
+      <section id="safety-controls" className="space-y-4">
+        <h2>3. Anti-Grooming, Exploitation &amp; Emergency Escalation</h2>
+        <p>
+          We maintain automated guardrails against grooming, sexual exploitation, harassment, and bullying. Safety violations trigger immediate account restriction and referral to our Youth Safeguarding Officer (<a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`}>{LEGAL_CONFIG.safeguardingEmail}</a>) and relevant authorities.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

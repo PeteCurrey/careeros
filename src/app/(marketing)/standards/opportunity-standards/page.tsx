@@ -1,44 +1,38 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function OpportunityStandardsPage() {
+  const meta = GOVERNANCE_MANIFEST["opportunity-standards"]!;
+  const toc = [
+    { id: "authenticity", title: "1. Authentic Opportunity Requirements" },
+    { id: "prohibited-schemes", title: "2. Prohibition of Advance Fees & Pyramids" },
+    { id: "youth-eligibility", title: "3. Youth Opportunity Safety Standards" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Opportunity Standards — Standards | Career OS",
-  description: "Career OS Standards opportunity Standards. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/standards/opportunity-standards",
-  },
-};
-
-export default function StandardsOpportunityStandardsPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="STANDARDS &bull; OPPORTUNITY VETTING"
-      title="Opportunity Vetting & Quality Standards"
-      description="Systematic screening protocols to eliminate predatory recruiting, multi-level marketing scams, and fraudulent job postings."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Standards', href: ROUTES.STANDARDS },
-        { label: 'Opportunity Standards', href: ROUTES.STANDARDS_OPPORTUNITY_STANDARDS },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Zero Tolerance for Predatory Listings</h2>
+    <GovernancePageLayout meta={meta} subtitle="Standards for jobs, internships, apprenticeships, trades, and higher education opportunities." toc={toc}>
+      <section id="authenticity" className="space-y-4">
+        <h2>1. Authentic Opportunity Requirements</h2>
         <p>
-          Every opportunity matched through Career OS undergoes cryptographic entity verification and automated semantic vetting to ensure legitimate employment terms, verified business registry, and compliant wage offerings.
+          All opportunities posted on Career OS (jobs, apprenticeships, degree programs, trade certifications) must be verified, active, and accurately described with location, compensation, and prerequisite details.
         </p>
+      </section>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Vetting Criteria</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Entity Verification:</strong> Employer tax ID and registered business identity verified prior to listing opportunities.</li>
-          <li><strong>Prohibited Categories:</strong> Zero tolerance for commission-only Multi-Level Marketing (MLM), upfront training fee requirements, or pay-to-work schemes.</li>
-          <li><strong>Wage Law Compliance:</strong> Guaranteed adherence to prevailing local, state, and national minimum wage mandates.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+      <section id="prohibited-schemes" className="space-y-4">
+        <h2>2. Prohibition of Advance Fees &amp; Pyramids</h2>
+        <p>
+          Career OS strictly prohibits multi-level marketing (MLM) schemes, pyramid recruitment, opportunities requiring candidate placement fees, or deceptive self-employment offers.
+        </p>
+      </section>
+
+      <section id="youth-eligibility" className="space-y-4">
+        <h2>3. Youth Opportunity Safety Standards</h2>
+        <p>
+          Work-based learning and early career opportunities involving minors must conform to state child labor laws, hazardous occupation rules, and school-day hour limits.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }
