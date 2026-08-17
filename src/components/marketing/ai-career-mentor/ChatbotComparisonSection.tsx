@@ -11,7 +11,7 @@ export function ChatbotComparisonSection() {
             Why this is different from opening a blank chatbot.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-            General AI models are powerful conversational tools. But a career is not a single prompt session&mdash;it is a multi-decade progression of capability, verified work, and changing market pathways.
+            General AI models are powerful conversational tools. But a career is not a single prompt session&mdash;it is a multi-decade progression of capability, structured evidence, and changing market pathways.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export function ChatbotComparisonSection() {
 
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
               Built to assist across thousands of unrelated subjects—from writing emails to debugging code.
-              Career context depends on whatever text has been manually typed into that individual chat session.
+              Career context depends on what the user provides, what that service retains, available integrations, and the particular account configuration.
             </p>
 
             <div className="space-y-3 pt-2">
@@ -41,19 +41,19 @@ export function ChatbotComparisonSection() {
               <ul className="space-y-2.5 text-xs text-[var(--color-text-secondary)]">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[var(--color-taupe-600)] font-mono">&mdash;</span>
-                  <span>Living, multi-dimensional Career Twin models</span>
+                  <span>Structured, multi-dimensional Career Twin models</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[var(--color-taupe-600)] font-mono">&mdash;</span>
-                  <span>Tamper-evident Career Passport project evidence</span>
+                  <span>Organized Career Passport project evidence and credentials</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[var(--color-taupe-600)] font-mono">&mdash;</span>
-                  <span>Formal cryptographic verification states &amp; institutional issuers</span>
+                  <span>Career OS evidence states, issuer confirmations and verification tiers</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[var(--color-taupe-600)] font-mono">&mdash;</span>
-                  <span>Real-time occupational transition graphs (Career Graph)</span>
+                  <span>Career OS-specific Career Graph pathways and market models</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[var(--color-taupe-600)] font-mono">&mdash;</span>
@@ -77,7 +77,7 @@ export function ChatbotComparisonSection() {
 
             <p className="text-xs text-[var(--color-charcoal-deep)] leading-relaxed">
               Purpose-built around ongoing professional development. Designed to connect career context,
-              verified project proof, developmental milestones, and labor market intelligence.
+              evidence records, developmental milestones, and pathway intelligence.
             </p>
 
             <div className="space-y-3 pt-2">
@@ -87,15 +87,15 @@ export function ChatbotComparisonSection() {
               <ul className="space-y-2.5 text-xs text-[var(--color-charcoal-deep)]">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>Career Context:</strong> Persistent history of strengths, goals &amp; parameters</span>
+                  <span><strong>Career Context:</strong> Structured model of strengths, goals &amp; parameters</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>Evidence &amp; Proof:</strong> Grounded in verified capstones &amp; credentials</span>
+                  <span><strong>Evidence &amp; Proof:</strong> Grounded in Career Twin context &amp; relevant Passport records</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>Pathways:</strong> Real market mobility data from Career Graph</span>
+                  <span><strong>Pathways:</strong> Pathway models and occupational connections from Career Graph</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -103,7 +103,7 @@ export function ChatbotComparisonSection() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>Strict Privacy:</strong> Zero model training on PII &amp; user-owned data boundaries</span>
+                  <span><strong>Strict Privacy:</strong> Private data handled under Career OS AI controls &amp; user boundaries</span>
                 </li>
               </ul>
             </div>

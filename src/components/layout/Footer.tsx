@@ -14,11 +14,11 @@ export function Footer() {
               <span className="font-bold text-2xl tracking-tight">Career OS</span>
             </Link>
             <p className="text-sm text-[var(--color-text-inverse-muted)] leading-relaxed max-w-sm font-normal">
-              The operating system for your working life. Free for individuals, built on verified evidence, privacy-first architecture, and explainable decision support.
+              The operating system for your working life. Built around career context, evidence, user control, and responsible decision support.
             </p>
             <div className="pt-2">
               <span className="inline-block text-xs py-1 text-[var(--color-text-inverse-muted)] opacity-70">
-                Universal Architecture &bull; Global Data Sovereignty
+                Universal Career Infrastructure &bull; User-Controlled Privacy
               </span>
             </div>
           </div>

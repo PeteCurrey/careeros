@@ -6,11 +6,11 @@ import { HelpCircle, Brain, Sparkles, CheckSquare, Award, RefreshCcw, Repeat } f
 export function ActionLoopDiagram() {
   const steps = [
     { num: '01', title: 'ASK', icon: HelpCircle, desc: 'Bring a real career question, gap, or target milestone to your AI Mentor.' },
-    { num: '02', title: 'UNDERSTAND', icon: Brain, desc: 'Career OS synthesizes your Career Twin, Passport evidence, and labor market data.' },
+    { num: '02', title: 'UNDERSTAND', icon: Brain, desc: 'Career OS synthesizes relevant Career Twin context and available Passport evidence.' },
     { num: '03', title: 'RECOMMEND', icon: Sparkles, desc: 'Mentor surfaces a clear next move alongside decision factors and uncertainty notes.' },
     { num: '04', title: 'ACT', icon: CheckSquare, desc: 'You choose whether to accept, adjust, or challenge the proposed step.' },
-    { num: '05', title: 'CAPTURE EVIDENCE', icon: Award, desc: 'Completed learning, capstone projects, or leadership achievements are logged in your Passport.' },
-    { num: '06', title: 'UPDATE TWIN', icon: RefreshCcw, desc: 'Your structured Career Twin profile evolves automatically with your verified evidence.' },
+    { num: '05', title: 'CAPTURE', icon: Award, desc: 'Completed learning, project artifacts, or leadership deliverables can be contributed to your Passport.' },
+    { num: '06', title: 'UPDATE', icon: RefreshCcw, desc: 'Your Career Twin is designed to evolve as relevant career information and evidence are added or updated.' },
     { num: '07', title: 'REASSESS', icon: Repeat, desc: 'Future guidance starts from your newly strengthened baseline.' },
   ];
 
@@ -18,13 +18,13 @@ export function ActionLoopDiagram() {
     <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-[var(--color-border-default)] pb-6">
         <div>
-          <span className="section-label">CONTINUOUS FEEDBACK LOOP</span>
+          <span className="section-label">CONTINUOUS FEEDBACK MODEL</span>
           <h3 className="text-xl font-serif font-bold text-[var(--color-charcoal-deep)] mt-1">
             From Conversation to Compounding Progress
           </h3>
         </div>
         <span className="font-mono text-xs text-[var(--color-text-secondary)] px-3 py-1 bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)] rounded">
-          7-Step Action &amp; Evidence Cycle
+          Career OS Action Model
         </span>
       </div>
 
@@ -57,7 +57,7 @@ export function ActionLoopDiagram() {
       </div>
 
       <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded text-xs text-[var(--color-text-secondary)] text-center">
-        <span className="font-bold text-[var(--color-charcoal-deep)]">The Career OS Advantage:</span> Unlike generic chat tools where advice vanishes when you close the tab, every action taken in Career OS builds permanent, verified evidence that strengthens all future recommendations.
+        <span className="font-bold text-[var(--color-charcoal-deep)]">Career OS Model:</span> Career OS is designed to move beyond conversation by turning useful guidance into actions that can contribute evidence and updated career context.
       </div>
     </div>
   );

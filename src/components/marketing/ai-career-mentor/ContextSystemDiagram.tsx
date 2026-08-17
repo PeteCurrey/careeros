@@ -7,8 +7,8 @@ export function ContextSystemDiagram() {
   const contextCategories = [
     { title: "Goals", icon: Target, desc: "What you are actively trying to achieve, from short-term skill acquisition to multi-year leadership targets." },
     { title: "Career History", icon: Briefcase, desc: "Past roles, responsibilities, projects, and cross-functional experience across industries." },
-    { title: "Skills & Competencies", icon: Cpu, desc: "Verified technical capabilities, domain knowledge, and practical working proficiencies." },
-    { title: "Evidence Spectrum", icon: Award, desc: "Work artifacts, capstone projects, code repos, certifications, and peer/employer verifications." },
+    { title: "Skills & Competencies", icon: Cpu, desc: "Technical capabilities, domain knowledge, and practical working proficiencies." },
+    { title: "Evidence Spectrum", icon: Award, desc: "Work artifacts, capstone projects, code repos, certifications, and peer or issuer confirmations." },
     { title: "Education & Learning", icon: GraduationCap, desc: "Formal degrees, vocational trade credentials, specialized courses, and self-directed study." },
     { title: "Interests & Passions", icon: Heart, desc: "Fields, problems, and causes that naturally attract your curiosity and intrinsic motivation." },
     { title: "Work Preferences", icon: Sliders, desc: "Environment, team structure, remote vs on-site, compensation targets, and autonomy preferences." },
@@ -47,7 +47,7 @@ export function ContextSystemDiagram() {
               Career Twin
             </h4>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-              Structured digital representation of your professional context, credentials, history, and goals.
+              Structured representation of your professional context, credentials, history, and goals.
             </p>
           </div>
 
@@ -57,13 +57,13 @@ export function ContextSystemDiagram() {
               <span className="font-mono text-[10px] font-bold text-[var(--color-charcoal-deep)] uppercase tracking-wider">
                 GUIDANCE LAYER
               </span>
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
             </div>
             <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
               AI Career Mentor
             </h4>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-              Interprets Twin context, maps potential pathways, and formulates evidence-backed next actions.
+              Interprets Twin context, maps potential pathways, and formulates context-grounded next actions.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export function ContextSystemDiagram() {
           <div className="p-5 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] font-bold text-[var(--color-taupe-700)] uppercase tracking-wider">
-                VERIFICATION &amp; PATHWAYS
+                PROOF &amp; PATHWAYS
               </span>
               <span className="w-2 h-2 rounded-full bg-purple-500" />
             </div>
@@ -79,7 +79,7 @@ export function ContextSystemDiagram() {
               Passport &amp; Graph
             </h4>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-              Stores verified achievement evidence and navigates real-world labor market career pathways.
+              Stores portable achievement evidence and connects relevant career pathways.
             </p>
           </div>
         </div>
@@ -87,29 +87,39 @@ export function ContextSystemDiagram() {
         {/* Diagram Flow Lines Note */}
         <div className="text-center pt-2">
           <p className="text-xs text-[var(--color-text-tertiary)] italic">
-            Continuous bidirectional data synchronization &mdash; advice updates dynamically as your Career Twin and Passport evidence evolve.
+            The long-term architecture is designed so Mentor guidance, Career Twin context and Career Passport evidence can inform one another without collapsing into one public profile.
           </p>
         </div>
       </div>
 
-      {/* 10 Context Categories Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        {contextCategories.map((cat, idx) => {
-          const Icon = cat.icon;
-          return (
-            <div key={idx} className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 hover:border-[var(--color-charcoal-base)] transition-colors">
-              <div className="w-8 h-8 rounded bg-[var(--color-taupe-100)] text-[var(--color-charcoal-deep)] flex items-center justify-center mb-2">
-                <Icon className="w-4 h-4" />
+      {/* Context Categories Grid */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <span className="font-mono text-xs font-bold text-[var(--color-taupe-700)] uppercase tracking-wider">
+            ILLUSTRATIVE CONTEXT DIMENSIONS
+          </span>
+          <span className="text-[11px] font-mono text-[var(--color-text-tertiary)]">
+            Conceptual model &bull; May evolve as platform develops
+          </span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {contextCategories.map((cat, idx) => {
+            const Icon = cat.icon;
+            return (
+              <div key={idx} className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2 hover:border-[var(--color-charcoal-base)] transition-colors">
+                <div className="w-8 h-8 rounded bg-[var(--color-taupe-100)] text-[var(--color-charcoal-deep)] flex items-center justify-center mb-2">
+                  <Icon className="w-4 h-4" />
+                </div>
+                <h4 className="font-bold text-sm text-[var(--color-charcoal-deep)] font-serif">
+                  {cat.title}
+                </h4>
+                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                  {cat.desc}
+                </p>
               </div>
-              <h4 className="font-bold text-sm text-[var(--color-charcoal-deep)] font-serif">
-                {cat.title}
-              </h4>
-              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                {cat.desc}
-              </p>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

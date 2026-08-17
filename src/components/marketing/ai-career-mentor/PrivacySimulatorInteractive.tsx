@@ -7,12 +7,12 @@ export function PrivacySimulatorInteractive() {
   const [viewMode, setViewMode] = useState<'MY_VIEW' | 'MENTOR_VIEW' | 'EMPLOYER_VIEW' | 'PUBLIC_VIEW'>('MY_VIEW');
 
   const fields = [
-    { name: 'Full Legal Name & DOB', myView: 'Visible (Private)', mentorView: 'Age bracket verified (e.g. 24)', employerView: 'Verified Name only', publicView: 'Public Handle / Name', category: 'Identity' },
-    { name: 'Career Ambitions & Target Roles', myView: 'Seeking Senior Lead ($160k)', mentorView: 'Targeting Lead Roles ($160k)', employerView: 'HIDDEN (Private Intent)', publicView: 'HIDDEN (Private Intent)', category: 'Strategy' },
-    { name: 'Private Career Uncertainty / Doubts', myView: '“Unsure about management track”', mentorView: 'Active Developmental Context', employerView: 'REDACTED / CONFIDENTIAL', publicView: 'REDACTED / CONFIDENTIAL', category: 'Private Context' },
+    { name: 'Professional Name & Qualifications', myView: 'Visible (Account)', mentorView: 'Visible for Context', employerView: 'Shared on Application', publicView: 'Public Handle / Name', category: 'Identity' },
+    { name: 'Career Ambitions & Target Roles', myView: 'Targeting Lead Roles ($160k)', mentorView: 'Targeting Lead Roles ($160k)', employerView: 'HIDDEN (Private Intent)', publicView: 'HIDDEN (Private Intent)', category: 'Strategy' },
+    { name: 'Private Career Uncertainty / Doubts', myView: '“Unsure about management track”', mentorView: 'Active Guidance Context', employerView: 'NOT ACCESSIBLE', publicView: 'NOT ACCESSIBLE', category: 'Private Context' },
     { name: 'Current Salary & Compensation Targets', myView: '$135,000 / Target $160,000', mentorView: 'Benchmark Target $160k', employerView: 'HIDDEN (Private Data)', publicView: 'HIDDEN (Private Data)', category: 'Compensation' },
-    { name: 'Verified Passport Evidence', myView: '8 Capstones & Credentials', mentorView: '8 Capstones & Credentials', employerView: 'Selected 3 Granted Capstones', publicView: '2 Public Verifications', category: 'Evidence' },
-    { name: 'Current Job Search Status', myView: 'Passively Exploring Opportunities', mentorView: 'Exploring Opportunities', employerView: 'HIDDEN to Current Employer', publicView: 'HIDDEN (Private Status)', category: 'Status' },
+    { name: 'Passport Evidence Records', myView: '8 Project & Credential Records', mentorView: '8 Project & Credential Records', employerView: 'Explicitly Shared Records', publicView: 'Selected Public Proof', category: 'Evidence' },
+    { name: 'Opportunity Status', myView: 'Exploring Opportunities', mentorView: 'Exploring Opportunities', employerView: 'HIDDEN by Default', publicView: 'HIDDEN (Private Status)', category: 'Status' },
   ];
 
   return (
@@ -24,6 +24,9 @@ export function PrivacySimulatorInteractive() {
           <h3 className="text-xl font-serif font-bold text-[var(--color-charcoal-deep)] mt-1">
             See Exactly What Is Visible Across Roles
           </h3>
+          <p className="text-xs text-[var(--color-text-secondary)] font-mono mt-1">
+            Illustrative privacy view &bull; Conceptual permission model
+          </p>
         </div>
 
         {/* View Mode Tabs */}
@@ -76,16 +79,16 @@ export function PrivacySimulatorInteractive() {
         <Info className="w-4 h-4 text-[var(--color-taupe-600)] shrink-0" />
         <div>
           {viewMode === 'MY_VIEW' && (
-            <span><strong>My View:</strong> You retain full visibility over all your private career data, notes, targets, and raw Passport evidence.</span>
+            <span><strong>My View:</strong> You retain full visibility over all your private career data, notes, targets, and evidence records.</span>
           )}
           {viewMode === 'MENTOR_VIEW' && (
-            <span><strong>Mentor View:</strong> Your AI Mentor accesses relevant developmental context to tailor recommendations under zero model training promises.</span>
+            <span><strong>Mentor View:</strong> Your AI Mentor accesses relevant developmental context to tailor recommendations under Career OS data controls.</span>
           )}
           {viewMode === 'EMPLOYER_VIEW' && (
-            <span><strong>Employer View:</strong> Employers see ONLY evidence and profile fields you explicitly grant permission to share. Private career uncertainty and salary targets are strictly redacted.</span>
+            <span><strong>Employer View:</strong> Employers see only evidence and profile fields you explicitly grant permission to share. Private career uncertainty and salary targets are not shared.</span>
           )}
           {viewMode === 'PUBLIC_VIEW' && (
-            <span><strong>Public View:</strong> Public visitors see only basic public verifications you choose to make publicly visible on your Career Passport.</span>
+            <span><strong>Public View:</strong> Public visitors see only verified records you choose to make publicly visible on your Career Passport.</span>
           )}
         </div>
       </div>

@@ -26,7 +26,7 @@ export function LifetimeTimelineInteractive() {
       title: 'Early Career',
       icon: TrendingUp,
       question: '“How do I stop being stuck at entry level?”',
-      mentorResponse: 'Identifies high-leverage skill gaps, targets stretch assignments, and helps you log verified achievements in your Passport.',
+      mentorResponse: 'Identifies high-leverage skill gaps, targets stretch assignments, and helps you log concrete achievements in your Passport.',
       actions: ['Identify core competency bottlenecks', 'Request high-visibility projects', 'Establish cross-functional relationships'],
     },
     {
@@ -100,14 +100,14 @@ export function LifetimeTimelineInteractive() {
             </h3>
           </div>
           <span className="font-mono text-xs px-3 py-1 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded text-[var(--color-charcoal-deep)] shrink-0">
-            Persistent Mentor Context
+            Illustrative Lifetime Model
           </span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4">
             <h4 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">
-              How Your Mentor Adapts:
+              How Your Mentor Is Designed to Adapt:
             </h4>
             <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
               {activeStage.mentorResponse}
@@ -137,7 +137,7 @@ export function LifetimeTimelineInteractive() {
               One Operating System Through Many Careers
             </h5>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-              Unlike static resumes or disconnected advisors, your Career OS record compiles lifelong compounding evidence so you never have to start from scratch when changing roles or industries.
+              Career OS is being built around continuity across education, employment, advancement, career change and entrepreneurship so your professional context stays with you.
             </p>
           </div>
         </div>

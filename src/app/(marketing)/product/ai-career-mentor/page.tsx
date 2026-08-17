@@ -33,14 +33,14 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "AI Career Mentor for Career Planning & Progression | Career OS",
+  title: "AI Career Mentor for Career Planning & Progression",
   description: "Meet the Career OS AI Career Mentor — career guidance designed around your goals, evidence, skills and progress from education through advancement and career change.",
   alternates: {
     canonical: "https://career-os.com/product/ai-career-mentor",
   },
   openGraph: {
     title: "AI Career Mentor | Career OS",
-    description: "Persistent, context-aware career guidance grounded in your goals, verified evidence, and market intelligence.",
+    description: "Context-aware career guidance designed around your goals, evidence records, and pathway intelligence.",
     url: "https://career-os.com/product/ai-career-mentor",
   },
 };
@@ -49,71 +49,71 @@ export default function AICareerMentorPage() {
   const faqList = [
     {
       q: "What is an AI Career Mentor?",
-      a: "An AI Career Mentor is a system-assigned guidance layer inside Career OS. It analyzes your structured Career Twin context—including your goals, verified Passport evidence, and skills—to provide personalized, evidence-backed career guidance and next steps over years.",
+      a: "An AI Career Mentor is a system-assigned guidance layer inside Career OS. It is designed to interpret structured Career Twin context—including your goals, skills, and available Career Passport records—to provide personalized, evidence-grounded career guidance and next steps.",
     },
     {
       q: "Is the Career Mentor a real person?",
-      a: "No. The AI Career Mentor is an advanced artificial intelligence system built on enterprise-grade large language models and proprietary Career OS domain logic. It is always clearly identified as AI and never pretends to be human.",
+      a: "No. The AI Career Mentor is an artificial intelligence system built into Career OS with specific product logic and policy controls. It is always clearly identified as AI and never pretends to be human.",
     },
     {
       q: "Do I choose my Mentor?",
-      a: "No. Mentors are system-assigned based on your selected domain focus and career goals. We intentionally do not offer 'celebrity' personality avatars or gimmicky chatbot choices, focusing strictly on objective, evidence-grounded career intelligence.",
+      a: "The product model uses system-assigned Mentors rather than celebrity or personality selection. Assignment logic will use relevant career context as the Mentor system develops, focusing on objective, evidence-grounded guidance.",
     },
     {
       q: "What does the Mentor know about me?",
-      a: "Your Mentor accesses only the structured context in your private Career Twin—such as expressed career goals, verified Passport credentials, skill history, and work preferences. It accesses what you choose to share and operates under strict data minimisation.",
+      a: "Your Mentor is designed to access only the structured context in your private Career Twin—such as expressed career goals, Career Passport credentials, skill history, and work preferences that you choose to include under data minimisation principles.",
     },
     {
       q: "How is this different from a generic AI chatbot?",
-      a: "Generic AI chatbots operate transactionally—they forget your history when you close the browser and give generic advice disconnected from your actual credentials. The Career OS Mentor maintains persistent multi-year context, references verified project evidence, and maps actions to real market pathways in Career Graph.",
+      a: "General-purpose AI assists across many domains, but career context depends on manual prompting or specific account tools. The Career OS Mentor is purpose-built to connect structured Career Twin context, available evidence records in Career Passport, and occupational pathways in Career Graph.",
     },
     {
       q: "Does it remember previous conversations?",
-      a: "Yes. Within Career OS, developmental context persists across sessions. Your goals, milestone progress, and previous guidance outputs build a continuous thread of professional growth.",
+      a: "Career OS is being designed to maintain relevant developmental context across sessions rather than treating career guidance as isolated conversations.",
     },
     {
       q: "Can my employer see what I tell my Mentor?",
-      a: "No. Conversations with your AI Mentor and your private career uncertainties (e.g., job search intent, salary targets) are strictly confidential and stored in your private Career Twin. Employers only see information you explicitly grant permission to share on job applications.",
+      a: "Private Mentor conversation content is not intended to become employer-visible profile information merely because it exists in Career OS. Any sharing follows explicit permissions, applicable account relationships, and our Candidate Privacy Policy.",
     },
     {
       q: "Can the Mentor help me change careers?",
-      a: "Yes. The Mentor analyzes your existing verified evidence in your Career Passport to identify transferable skill overlaps in target industries, helping you pivot without starting your career from scratch.",
+      a: "That is a core Career OS use case. The Mentor is designed to use transferable skills, available evidence, and Career Graph context to support career-change planning.",
     },
     {
       q: "Can it help with promotions and leadership?",
-      a: "Yes. By benchmarking your current evidence against senior role requirements in Career Graph, the Mentor identifies specific high-impact projects or leadership milestones needed to demonstrate readiness for promotion.",
+      a: "Yes. By comparing your current evidence profile against role expectations in Career Graph, the Mentor is designed to identify high-impact projects or leadership milestones needed to demonstrate readiness for promotion.",
     },
     {
       q: "Can it help me start a business?",
-      a: "Yes. The Mentor supports entrepreneurial pathways by evaluating venture readiness, identifying co-founder skill gaps, and mapping operational learning steps.",
+      a: "Entrepreneurship is part of Career OS's long-term career model. Founder-specific mentoring and capability resources are planned as the platform expands.",
     },
     {
       q: "Can students use the AI Career Mentor?",
-      a: "Yes. Students aged 16+ can register directly. Users aged 13–15 access the platform under approved school or guardian consent arrangements. All minor accounts feature default-private profiles and hard-blocks on direct employer outreach.",
+      a: "Yes. Students aged 16+ can register for direct individual accounts. Users aged 13–15 access the platform under approved school or guardian arrangements. Direct consumer registration under 13 is not offered; institutional use requires approved institutional agreements.",
     },
     {
       q: "Does it write CVs and applications?",
-      a: "The Mentor assists you in structuring and tailoring resume content based on your verified Career Passport evidence. However, it will never fabricate experiences or generate false statements.",
+      a: "Career OS is intended to support CV and application preparation using information you have provided and evidence available in your Career OS record, while prohibiting fabricated experience or credentials.",
     },
     {
       q: "How does it decide what to recommend?",
-      a: "Recommendations are formulated by matching your Career Twin profile against real-world labor market data in Career Graph and verified evidence thresholds in your Passport, surfacing transparent decision factors for every suggestion.",
+      a: "Career OS's recommendation architecture is being designed to combine relevant user context, evidence, selected career directions, and appropriate external labour-market intelligence, surfacing transparent decision factors where appropriate.",
     },
     {
       q: "Can the Mentor be wrong?",
-      a: "Yes. AI models can misinterpret nuance or rely on incomplete data. That is why every recommendation surfaces explicit decision factors and uncertainty notes, giving you full control to accept, challenge, or correct any advice.",
+      a: "Better recommendations depend on better context. AI systems infer, estimate, and can make errors. Career OS is designed to make relevant inputs, factors, and uncertainty visible so you can accept, challenge, or correct any advice.",
     },
     {
       q: "Can I correct inaccurate information?",
-      a: "Absolutely. You retain full control over your Career Twin data. You can edit, update, or remove any context item at any time, and future recommendations will immediately reflect your updates.",
+      a: "Yes. You retain full control over your Career Twin data. Corrections feed into future guidance once the relevant Career OS context has been updated.",
     },
     {
       q: "What happens to my data?",
-      a: "Your data is stored securely in encrypted databases under strict Row-Level Security. We enforce zero model training agreements with our AI LLM providers, ensuring your private career information is never used to train foundation models.",
+      a: "Career OS is being built around controlled access, data minimisation, and permissioned sharing. Database row-level access controls protect private data tables, and our policy is not to sell private Career Twin or Mentor content to advertisers.",
     },
     {
       q: "Is Career OS free for individuals?",
-      a: "Yes. Individual core accounts—including the AI Career Mentor, Career Twin, and Career Passport—are free for individuals.",
+      a: "Individual core access is currently free.",
     },
   ];
 
@@ -202,7 +202,7 @@ export default function AICareerMentorPage() {
                 </div>
 
                 <p className="text-xs text-[var(--color-text-tertiary)]">
-                  Free for individual core accounts.&ensp;&middot;&ensp;Grounded in your private evidence.
+                  Individual core access is currently free.&ensp;&middot;&ensp;Grounded in your private context.
                 </p>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function AICareerMentorPage() {
               Better advice starts with better context.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              Your AI Mentor does not guess. It interprets 10 core categories of professional context structured within your Career Twin to deliver tailored, highly relevant guidance.
+              Better advice starts with better context. Career OS is designed to bring together multiple types of professional context structured within your Career Twin to deliver tailored, relevant guidance.
             </p>
           </div>
 
@@ -252,7 +252,7 @@ export default function AICareerMentorPage() {
               The question changes. Your Career OS stays.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              From high school pathway discovery through entry-level employment, advancement, career change, and business founding &mdash; your Mentor provides continuous intelligence across every career phase.
+              Career OS is being built around continuity across education, employment, advancement, career change, and business founding &mdash; providing continuous intelligence as your career develops.
             </p>
           </div>
 
@@ -269,7 +269,7 @@ export default function AICareerMentorPage() {
               Start with the question that&apos;s actually on your mind.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              Explore real-world questions across discovery, skill progression, compensation, transition, and entrepreneurship to see how your Mentor responds.
+              Explore illustrative questions across discovery, skill progression, compensation, transition, and entrepreneurship to see how your Mentor is designed to respond.
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function AICareerMentorPage() {
               Advice is useful. Progress is better.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              The Mentor does not exist merely for chat volume. Every interaction feeds into a continuous 7-step action loop that builds verified evidence in your Passport.
+              The Mentor does not exist merely for chat volume. Career OS is designed to move beyond conversation by turning useful guidance into actions that can contribute evidence and updated career context.
             </p>
           </div>
 
@@ -303,7 +303,7 @@ export default function AICareerMentorPage() {
               You should be able to understand why something was recommended.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              We never treat AI recommendations as unexaminable black boxes. Every suggestion breaks down the contributing factors, source data, uncertainty notes, and user control options.
+              We never treat AI recommendations as unexaminable black boxes. Career OS is designed to make meaningful recommendations accompanied by useful rationale, relevant factors, source context, and uncertainty where appropriate.
             </p>
           </div>
 
@@ -370,15 +370,15 @@ export default function AICareerMentorPage() {
                 <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
               </summary>
               <div className="mt-3 p-5 bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)] rounded font-mono text-xs text-[var(--color-text-secondary)] overflow-x-auto space-y-1">
-                <p className="text-emerald-700 font-bold">// Conceptual AI Execution Record (Structured Provenance)</p>
-                <p>ai_execution_id: &quot;8f4d92a1-3c5e-4b2a-9e1f-7a8b9c0d1e2f&quot;</p>
-                <p>provider: &quot;google&quot; | model: &quot;gemini-pro&quot; | model_version: &quot;1.5&quot;</p>
-                <p>policy_version: &quot;2026.08-responsible-ai-standard&quot;</p>
+                <p className="text-emerald-700 font-bold">// Illustrative Provenance Structure — Not a Live Execution Record</p>
+                <p>ai_execution_id: &quot;[execution_identifier]&quot;</p>
+                <p>provider_class: &quot;approved_ai_provider&quot; | model_id: &quot;recorded_at_execution&quot;</p>
+                <p>policy_version: &quot;[recorded_policy_version]&quot;</p>
                 <p>input_sources: [&quot;career_twin.skills&quot;, &quot;career_passport.credentials&quot;, &quot;career_graph.market_data&quot;]</p>
-                <p>user_facing_rationale: &quot;Recommended project leadership step based on verified Kubernetes evidence and targeted engineering management pathway.&quot;</p>
-                <p>key_factors: [&quot;Strong technical programming foundation&quot;, &quot;Expressed interest in team management&quot;, &quot;Regional market demand&quot;]</p>
-                <p>confidence_or_uncertainty: &#123; level: &quot;HIGH&quot;, explanation: &quot;High overlap with 3 completed capstone projects&quot; &#125;</p>
-                <p>human_action: &#123; action_type: &quot;ACCEPTED&quot;, acted_at: &quot;2026-08-17T21:00:00Z&quot; &#125;</p>
+                <p>user_facing_rationale: &quot;Illustrative recommendation rationale based on technical evidence and target pathway.&quot;</p>
+                <p>key_factors: [&quot;Technical capability foundation&quot;, &quot;Target role milestones&quot;, &quot;Pathway context&quot;]</p>
+                <p>confidence_or_uncertainty: &#123; level: &quot;ILLUSTRATIVE&quot;, explanation: &quot;Contextual factor evaluation&quot; &#125;</p>
+                <p>human_action: &#123; action_type: &quot;[accepted | modified | ignored | challenged]&quot;, acted_at: &quot;[timestamp]&quot; &#125;</p>
               </div>
             </details>
           </div>
@@ -394,7 +394,7 @@ export default function AICareerMentorPage() {
               Your Mentor and Career Twin work together.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              The AI Mentor is not a isolated feature &mdash; it is the intelligence layer operating on top of your Career Twin, Passport evidence, and Graph market data.
+              The AI Mentor is not an isolated feature &mdash; it is the intelligence layer designed to work with your Career Twin, Passport evidence, and Graph pathways.
             </p>
           </div>
 
@@ -420,14 +420,14 @@ export default function AICareerMentorPage() {
               className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-charcoal-base)] transition-all group"
             >
               <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-700)]">
-                VERIFIED EVIDENCE LEDGER
+                EVIDENCE &amp; CREDENTIALS
               </span>
               <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors flex items-center justify-between">
                 <span>Career Passport</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Your portable credential record containing verified project artifacts, degrees, and certifications.
+                Your portable credential record containing project artifacts, degrees, and confirmed credentials.
               </p>
             </Link>
 
@@ -436,14 +436,14 @@ export default function AICareerMentorPage() {
               className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3 hover:border-[var(--color-charcoal-base)] transition-all group"
             >
               <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-700)]">
-                LABOR MARKET MAP
+                CAREER GRAPH PATHWAYS
               </span>
               <h3 className="font-serif font-bold text-lg text-[var(--color-charcoal-deep)] group-hover:text-black transition-colors flex items-center justify-between">
                 <span>Career Graph</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Real-world labor market intelligence mapping skill demand, role requirements, and transition routes.
+                Career Graph is being designed to connect roles, capabilities, pathways, and relevant labour-market information.
               </p>
             </Link>
           </div>
@@ -459,7 +459,7 @@ export default function AICareerMentorPage() {
               Your Mentor can know more than an employer ever needs to.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              You can discuss private career uncertainty, salary ambitions, or skill weaknesses with your Mentor without fear. Career OS strictly segregates private mentor context from employer-visible candidate profile views.
+              You can discuss private career uncertainty, salary ambitions, or skill weaknesses with your Mentor in confidence. Career OS is designed to keep private Mentor context separate from employer-facing candidate views.
             </p>
           </div>
 
@@ -485,7 +485,7 @@ export default function AICareerMentorPage() {
               Career guidance should grow with you.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              The AI Mentor enforces age-appropriate safeguards aligned with our canonical US age model. Young people receive guidance without exposure to commercial risks or un-vetted contact.
+              Career OS&apos;s youth product architecture is designed around age-appropriate safeguards aligned with our canonical US age model. Young people receive guidance without exposure to commercial risks or un-vetted contact.
             </p>
           </div>
 
@@ -507,10 +507,10 @@ export default function AICareerMentorPage() {
             </div>
 
             <div className="p-6 bg-[var(--color-ivory-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="font-mono text-xs font-bold text-[var(--color-taupe-700)]">UNDER 13 HARD-BLOCK</span>
-              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">School Official Only</h3>
+              <span className="font-mono text-xs font-bold text-[var(--color-taupe-700)]">UNDER 13 — INSTITUTIONAL ONLY</span>
+              <h3 className="font-serif font-bold text-base text-[var(--color-charcoal-deep)]">School Institutional Only</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Direct registration under 13 is hard-blocked. Access operates solely via FERPA/COPPA school institutional consent.
+                Career OS does not offer open under-13 consumer registration. Any under-13 deployment requires an approved institutional arrangement and applicable notices and safeguards.
               </p>
             </div>
           </div>
@@ -552,7 +552,7 @@ export default function AICareerMentorPage() {
                 No Guaranteed Hiring or Salary Promises
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                The Mentor provides evidence-based trajectory guidance, but cannot guarantee job offers, interview invites, or specific compensation outcomes.
+                The Mentor provides guidance on development pathways, but cannot guarantee job offers, interview invites, or specific compensation outcomes.
               </p>
             </div>
 
@@ -562,7 +562,7 @@ export default function AICareerMentorPage() {
                 No Autonomous Hiring Decisions
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                The Mentor never makes automated candidate selection or rejection decisions for corporate employers. Human hiring managers retain 100% decision authority.
+                Career OS&apos;s Employer Agent product direction is decision-support oriented. Career OS does not intend the Mentor itself to make final candidate-selection or rejection decisions on behalf of employers.
               </p>
             </div>
 
@@ -599,10 +599,10 @@ export default function AICareerMentorPage() {
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <span className="font-bold text-[var(--color-charcoal-deep)] flex items-center gap-2">
                 <XCircle className="w-4 h-4 text-red-600 shrink-0" />
-                No Private Data Leakage to Employers
+                No Private Data Selling
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                Your private career uncertainties and mentor prompt histories are strictly confidential and never shared with employers or 3rd-party ad networks.
+                Private Mentor conversation content is not intended to become employer-visible profile information merely because it exists in Career OS. Career OS&apos;s current policy is not to sell private Career Twin or Mentor content to advertisers.
               </p>
             </div>
           </div>
@@ -678,7 +678,7 @@ export default function AICareerMentorPage() {
           </div>
 
           <p className="text-xs text-[var(--color-text-tertiary)] pt-2">
-            Free for individual core accounts.&ensp;&middot;&ensp;Grounded in your private evidence.
+            Individual core access is currently free.&ensp;&middot;&ensp;Grounded in your private context.
           </p>
         </div>
       </section>

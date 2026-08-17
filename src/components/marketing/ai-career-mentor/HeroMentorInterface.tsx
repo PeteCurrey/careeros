@@ -11,8 +11,8 @@ export function HeroMentorInterface() {
       {/* Interface Bar */}
       <div className="px-4 py-3 bg-[var(--color-surface-sunken)] border-b border-[var(--color-border-default)] flex items-center justify-between gap-2 text-xs">
         <div className="flex items-center gap-2 font-mono text-[11px] text-[var(--color-text-secondary)]">
-          <span className="w-2 h-2 rounded-full bg-[var(--color-success)] animate-pulse" />
-          <span>CAREER OS MENTOR ENGINE v2.4</span>
+          <span className="w-2 h-2 rounded-full bg-[var(--color-success)]" />
+          <span>CAREER OS MENTOR</span>
         </div>
         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[var(--radius-sm)] bg-[var(--color-taupe-100)] text-[var(--color-charcoal-deep)] text-[10px] uppercase font-bold tracking-wider border border-[var(--color-border-default)]">
           <Info className="w-3 h-3 text-[var(--color-taupe-600)]" />
@@ -27,7 +27,7 @@ export function HeroMentorInterface() {
           <div className="relative w-14 h-14 rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] shrink-0">
             <Image
               src={MEDIA_ASSETS.mentors.marcus.src}
-              alt="System-assigned AI Mentor representation"
+              alt="Illustrative AI Mentor representation"
               fill
               className="object-cover"
             />
@@ -46,10 +46,10 @@ export function HeroMentorInterface() {
             </p>
             <div className="flex items-center gap-3 pt-0.5 text-[11px] text-[var(--color-text-tertiary)] font-mono">
               <span className="flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Grounded in Passport Evidence
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Context &amp; Evidence Grounding
               </span>
               <span>&bull;</span>
-              <span>Zero Model Training on PII</span>
+              <span>Private career data handled under Career OS data controls</span>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export function HeroMentorInterface() {
               </span>
             </div>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold">
-              94% EVIDENCE OVERLAP
+              RELEVANT EVIDENCE
             </span>
           </div>
 

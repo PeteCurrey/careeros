@@ -88,7 +88,7 @@ export const MENTOR_DEMO_BRANCHES: Stage1Branch[] = [
           hearing: "You're driven by tangible output—seeing something functional and original exist that you designed, built, or brought to life.",
           nextMove: "Build one public, verifiable project artifact in your target medium.",
           nextMoveDetail: "For example: an open-source tool, physical prototype, architectural portfolio, or product design.",
-          why: "In creative and builder disciplines, verified project artifacts and demonstrable capability open far more doors than credentials alone.",
+          why: "In creative and builder disciplines, tangible project artifacts and demonstrable capability open far more doors than credentials alone.",
           factors: [
             { label: "Existing inclination", value: "Creative design, engineering builds, or product fabrication" },
             { label: "Current gap", value: "Publicly auditable capstone evidence in your Passport" },
@@ -112,7 +112,7 @@ export const MENTOR_DEMO_BRANCHES: Stage1Branch[] = [
           hearing: "You recognize a technical or specialist capability threshold separating you from senior peers in your target tier.",
           nextMove: "Identify the 2–3 highest-leverage capabilities rather than enrolling in broad courses.",
           nextMoveDetail: "Benchmark your profile against Career Graph requirements for senior positions.",
-          why: "Progression accelerates when skill acquisition is surgical, focused, and directly linked to verified work deliverables.",
+          why: "Progression accelerates when skill acquisition is surgical, focused, and directly linked to concrete work deliverables.",
           factors: [
             { label: "Existing capability", value: "Solid foundational execution and domain familiarity" },
             { label: "Current gap", value: "Advanced system architecture or specialist credentials" },
@@ -126,12 +126,12 @@ export const MENTOR_DEMO_BRANCHES: Stage1Branch[] = [
         text: 'I have the skills but not the evidence',
         response: {
           hearing: "You are already delivering at the next level informally, but your achievements aren't structured into verifiable proof that decision-makers can evaluate.",
-          nextMove: "Anchor three high-impact project outcomes in your Career Passport with verified endorsements.",
+          nextMove: "Anchor three high-impact project outcomes in your Career Passport with confirmed project evidence.",
           nextMoveDetail: "Document quantifiable business impact, system improvements, or revenue influence.",
           why: "Promotions and senior hires are unlocked by verifiable evidence of past impact, not unverified claims on a résumé.",
           factors: [
             { label: "Existing capability", value: "Proven ability to deliver high-level work" },
-            { label: "Current gap", value: "Tamper-evident verification and documented case studies" },
+            { label: "Current gap", value: "Structured evidence records and documented case studies" },
             { label: "Target direction", value: "Formal promotion, title adjustment, or market benchmarking" },
           ],
           wantToKnowNext: "Which completed projects represent your best work, who can verify your deliverables, and what compensation tier you're benchmarking.",

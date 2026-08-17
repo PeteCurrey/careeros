@@ -14,8 +14,8 @@ export function ProductBridgeSection() {
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
             In this demonstration, you saw how an illustrative Mentor turns an initial question into
-            deliberate guidance. Inside a live Career OS account, the Mentor doesn&apos;t rely on isolated
-            prompts—it coordinates with your permanent professional context.
+            deliberate guidance. Inside Career OS, the Mentor is designed to coordinate with your structured
+            professional context rather than relying on isolated prompts.
           </p>
         </div>
 
@@ -36,8 +36,8 @@ export function ProductBridgeSection() {
                 </h3>
               </div>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Adds your living, structured professional context—active development goals, preferred
-                working environments, compensation parameters, and physical constraints.
+                Represents your structured professional context—active development goals, preferred
+                working environments, compensation parameters, and practical constraints.
               </p>
             </div>
 
@@ -67,8 +67,8 @@ export function ProductBridgeSection() {
                 </h3>
               </div>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Adds verifiable evidence and cryptographic verification states—linking actual project
-                artifacts, assessed capstones, and institutional credentials to every claim.
+                Maintains structured evidence records—linking actual project artifacts, completed coursework,
+                and institutional credentials to relevant career claims.
               </p>
             </div>
 
@@ -98,8 +98,8 @@ export function ProductBridgeSection() {
                 </h3>
               </div>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Adds possible pathways, real-time market capability relationships, and external labor
-                market data across university, trade, and corporate domains.
+                Career Graph is being designed to connect career context with roles, skills, pathways
+                and relevant labour-market intelligence.
               </p>
             </div>
 
@@ -125,7 +125,7 @@ export function ProductBridgeSection() {
           </div>
 
           <span className="text-xs font-mono text-[var(--color-taupe-700)]">
-            Persistent &bull; Grounded &bull; Explainable
+            Contextual &bull; Grounded &bull; Explainable
           </span>
         </div>
       </div>
