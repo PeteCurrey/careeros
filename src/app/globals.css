@@ -119,6 +119,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* 80px offset for sticky header */
   background-color: var(--color-surface-base);
 }
 
@@ -289,6 +290,10 @@ body {
 
 .section-editorial-lg {
   padding-block: clamp(6.5rem, 12vw, 12.5rem);
+}
+
+.section-padding {
+  padding-block: clamp(4rem, 7vw, 7.5rem);
 }
 
 /* ============================================================
