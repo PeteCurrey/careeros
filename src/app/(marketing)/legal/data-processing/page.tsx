@@ -1,47 +1,62 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function DataProcessingAddendumPage() {
+  const meta = GOVERNANCE_MANIFEST["data-processing"]!;
+  const toc = [
+    { id: "roles", title: "1. Controller & Processor Roles" },
+    { id: "instructions", title: "2. Processing Scope & Subject Instructions" },
+    { id: "security-annex", title: "3. Technical Security Annex (TLS & Encryption)" },
+    { id: "subprocessors", title: "4. Subprocessor Authorization & 30-Day Notice" },
+    { id: "incidents", title: "5. Security Incident Notification (24 Hours)" },
+    { id: "retention-deletion", title: "6. Data Return & Deletion Obligations" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Data Processing — Legal | Career OS",
-  description: "Career OS Legal data Processing. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/legal/data-processing",
-  },
-};
-
-export default function LegalDataProcessingPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="LEGAL &bull; DATA PROCESSING"
-      title="Data Processing Agreement (DPA)"
-      description="GDPR Article 28-compliant data processing agreement for institutional and enterprise partners deploying Career OS."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Legal', href: ROUTES.LEGAL },
-        { label: 'Data Processing', href: ROUTES.LEGAL_DATA_PROCESSING },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">GDPR-Compliant Processing Framework</h2>
+    <GovernancePageLayout meta={meta} subtitle="Standardized Data Processing Addendum (DPA) for institutional school districts and enterprise employer customers." toc={toc}>
+      <section id="roles" className="space-y-4">
+        <h2>1. Controller &amp; Processor Roles</h2>
         <p>
-          This Data Processing Agreement governs the relationship between Career OS (as Data Processor) and institutional partners (as Data Controllers) under GDPR Article 28 and UK GDPR Schedule 2 requirements.
+          This Data Processing Addendum (&quot;DPA&quot;) supplements institutional and commercial agreements executed with {LEGAL_CONFIG.legalEntityName}. Where an Educational Institution or Employer acts as Data Controller, Career OS acts as Data Processor under applicable US and international privacy laws.
         </p>
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Processing Conditions</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Purpose Limitation:</strong> Data processed exclusively for the career development and matching services described in the partnership agreement.</li>
-          <li><strong>Sub-processors:</strong> Full list of approved sub-processors (cloud infrastructure, authentication, analytics) maintained and updated with 30-days notice.</li>
-          <li><strong>International Transfers:</strong> Standard Contractual Clauses applied for any data transfers outside the EEA or UK.</li>
-          <li><strong>Security Measures:</strong> Technical and organisational security controls documented and updated annually.</li>
-        </ul>
-        <p className="text-xs text-[var(--color-text-tertiary)] pt-4">
-          Institutional partners requiring a signed DPA should contact our legal team via the contact page.
+      </section>
+
+      <section id="instructions" className="space-y-4">
+        <h2>2. Processing Scope &amp; Subject Instructions</h2>
+        <p>
+          Career OS processes personal data solely to fulfill obligations under the principal agreement, in accordance with the Controller&apos;s documented instructions, and in compliance with FERPA, COPPA, CCPA, and applicable state statutes.
         </p>
-      </div>
-    </EditorialSubpage>
+      </section>
+
+      <section id="security-annex" className="space-y-4">
+        <h2>3. Technical Security Annex (TLS &amp; Encryption)</h2>
+        <p>
+          Career OS maintains technical and organizational measures including TLS 1.3 in-transit encryption, AES-256 at-rest volume encryption, PostgreSQL Row-Level Security tenant isolation, and strict role-based access control (RBAC).
+        </p>
+      </section>
+
+      <section id="subprocessors" className="space-y-4">
+        <h2>4. Subprocessor Authorization &amp; 30-Day Notice</h2>
+        <p>
+          Controller authorizes Career OS to engage approved sub-processors listed on our <a href="/legal/subprocessors">Approved Subprocessor List</a>. Career OS provides 30 days prior notice for sub-processor changes.
+        </p>
+      </section>
+
+      <section id="incidents" className="space-y-4">
+        <h2>5. Security Incident Notification (24 Hours)</h2>
+        <p>
+          Career OS will notify affected Controllers without undue delay and no later than 24 hours after confirming a security breach involving Controller personal data.
+        </p>
+      </section>
+
+      <section id="retention-deletion" className="space-y-4">
+        <h2>6. Data Return &amp; Deletion Obligations</h2>
+        <p>
+          Upon contract termination, Career OS will, at Controller&apos;s election, return or securely delete all Controller personal data within 30 days, subject to statutory audit retention schedules.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

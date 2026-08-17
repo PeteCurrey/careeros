@@ -1,51 +1,62 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function CandidatePrivacyNoticePage() {
+  const meta = GOVERNANCE_MANIFEST["candidate-privacy"]!;
+  const toc = [
+    { id: "profile-visibility", title: "1. Candidate Profile Visibility Controls" },
+    { id: "hash-ids", title: "2. Candidate Hash IDs & Identity Protection" },
+    { id: "matching-rationale", title: "3. Matching Rationale & AI Role" },
+    { id: "access-grants", title: "4. Candidate Access Grants & Revocation" },
+    { id: "aedt-readiness", title: "5. AEDT Automated Hiring Regulations" },
+    { id: "fcra-scope", title: "6. FCRA Scope & Background Screening Notice" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Candidate Privacy — Legal | Career OS",
-  description: "Career OS Legal candidate Privacy. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/legal/candidate-privacy",
-  },
-};
-
-export default function LegalCandidatePrivacyPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="LEGAL &bull; CANDIDATE PRIVACY"
-      title="Candidate Privacy Notice"
-      description="How Career OS collects, processes, stores, and protects your personal career data when you use the platform as an individual."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Legal', href: ROUTES.LEGAL },
-        { label: 'Candidate Privacy', href: ROUTES.LEGAL_CANDIDATE_PRIVACY },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Your Career Data, Your Control</h2>
+    <GovernancePageLayout meta={meta} subtitle="Information for job candidates regarding profile visibility, Candidate Hash IDs, employer access grants, and matching controls." toc={toc}>
+      <section id="profile-visibility" className="space-y-4">
+        <h2>1. Candidate Profile Visibility Controls</h2>
         <p>
-          This notice explains in plain language how we handle your personal information as a Career OS user. Your Career Twin, Career Passport, and all advisory records belong to you and are stored under your cryptographic access control.
+          As a candidate on Career OS, your profile is default-private. You control when, how, and with whom your professional evidence and contact details are shared.
         </p>
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Data We Collect</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Profile Information:</strong> Name, contact details, educational history, and professional experience you enter.</li>
-          <li><strong>Career Activity:</strong> Pathway explorations, mentor sessions, skills assessments, and project submissions.</li>
-          <li><strong>Opportunity Matching:</strong> Your stated preferences, consent grants, and introduction responses.</li>
-          <li><strong>Technical Data:</strong> Device type, session metadata, and anonymised usage analytics.</li>
-        </ul>
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Your Rights</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li>Access and download all your personal data at any time via Settings → Privacy.</li>
-          <li>Correct inaccurate records immediately within your profile.</li>
-          <li>Request complete account and data deletion with a 30-day processing window.</li>
-          <li>Withdraw any consent grant (including employer access) at any time.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+      </section>
+
+      <section id="hash-ids" className="space-y-4">
+        <h2>2. Candidate Hash IDs &amp; Identity Protection</h2>
+        <p>
+          During initial opportunity discovery, employers view candidate skill summaries associated with an anonymous Candidate Hash ID (e.g. Candidate #CAND-8F4D92A1). Your real name, email address, phone number, and physical address are withheld.
+        </p>
+      </section>
+
+      <section id="matching-rationale" className="space-y-4">
+        <h2>3. Matching Rationale &amp; AI Role</h2>
+        <p>
+          Opportunity matches surface transparent key decision factors based on verified skills and expressed career preferences. AI matching is advisory—it does not auto-reject candidates or make autonomous hiring decisions.
+        </p>
+      </section>
+
+      <section id="access-grants" className="space-y-4">
+        <h2>4. Candidate Access Grants &amp; Revocation</h2>
+        <p>
+          When an employer expresses interest in your profile, your contact details are shared ONLY if you explicitly accept the match. You may revoke access grants at any time in your privacy settings.
+        </p>
+      </section>
+
+      <section id="aedt-readiness" className="space-y-4">
+        <h2>5. AEDT Automated Hiring Regulations</h2>
+        <p>
+          Career OS aligns with emerging Automated Employment Decision Tool (AEDT) laws (NYC Local Law 144, EU AI Act) by enforcing explainable match factors and human hiring manager oversight.
+        </p>
+      </section>
+
+      <section id="fcra-scope" className="space-y-4">
+        <h2>6. FCRA Scope &amp; Background Screening Notice</h2>
+        <p>
+          Career OS is a self-directed career twin and evidence ledger. Career OS is not a consumer reporting agency under the Fair Credit Reporting Act (FCRA). Employers conducting formal background checks must utilize accredited FCRA consumer reporting agencies.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

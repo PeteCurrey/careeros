@@ -1,44 +1,53 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function CopyrightPolicyPage() {
+  const meta = GOVERNANCE_MANIFEST["copyright"]!;
+  const toc = [
+    { id: "ip-ownership", title: "1. Career OS IP & User Content Rights" },
+    { id: "dmca-takedown", title: "2. DMCA Takedown Notice Procedure" },
+    { id: "counter-notice", title: "3. Counter-Notice & Restoration Procedure" },
+    { id: "repeat-infringers", title: "4. Repeat Infringer Policy" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Copyright — Legal | Career OS",
-  description: "Career OS Legal copyright. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/legal/copyright",
-  },
-};
-
-export default function LegalCopyrightPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="LEGAL &bull; COPYRIGHT"
-      title="Copyright & Intellectual Property"
-      description="Ownership of Career OS platform content, user-generated career evidence, and the rules governing platform content reproduction."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Legal', href: ROUTES.LEGAL },
-        { label: 'Copyright', href: ROUTES.LEGAL_COPYRIGHT },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Platform Content & User Ownership</h2>
+    <GovernancePageLayout meta={meta} subtitle="Intellectual property ownership terms, DMCA copyright takedown notice procedure, and counter-notice rules." toc={toc}>
+      <section id="ip-ownership" className="space-y-4">
+        <h2>1. Career OS IP &amp; User Content Rights</h2>
         <p>
-          Career OS owns and operates the platform software, design system, and editorial content. However, all career evidence, project deliverables, credentials, and professional records you create remain your exclusive intellectual property.
+          {LEGAL_CONFIG.legalEntityName} respects intellectual property rights. Users retain copyright in their original project code, text, and portfolio evidence. By uploading content, you warrant that you hold all necessary rights.
         </p>
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Ownership Summary</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Platform IP:</strong> Career OS software architecture, AI models, matching algorithms, and editorial content are proprietary.</li>
-          <li><strong>User Content:</strong> Your Career Twin data, project submissions, and Passport credentials are solely owned by you.</li>
-          <li><strong>Licence Grant:</strong> You grant Career OS a limited, non-exclusive licence to process your content solely to provide platform services.</li>
-          <li><strong>DMCA:</strong> We respect intellectual property rights. Copyright notices may be submitted to our legal team via the contact page.</li>
+      </section>
+
+      <section id="dmca-takedown" className="space-y-4">
+        <h2>2. DMCA Takedown Notice Procedure</h2>
+        <p>
+          Under the Digital Millennium Copyright Act (17 U.S.C. § 512(c)), copyright owners may submit written takedown notices to our Designated Copyright Agent at <a href={`mailto:${LEGAL_CONFIG.legalEmail}`}>{LEGAL_CONFIG.legalEmail}</a> including:
+        </p>
+        <ul>
+          <li>Identification of the copyrighted work claimed to be infringed;</li>
+          <li>Identification of the material to be removed and URL location;</li>
+          <li>Contact information of the complaining party;</li>
+          <li>A statement of good-faith belief that use is unauthorized;</li>
+          <li>A statement under penalty of perjury that information is accurate.</li>
         </ul>
-      </div>
-    </EditorialSubpage>
+      </section>
+
+      <section id="counter-notice" className="space-y-4">
+        <h2>3. Counter-Notice &amp; Restoration Procedure</h2>
+        <p>
+          If material you posted was removed in error, you may submit a written counter-notice to <a href={`mailto:${LEGAL_CONFIG.legalEmail}`}>{LEGAL_CONFIG.legalEmail}</a> pursuant to 17 U.S.C. § 512(g)(3).
+        </p>
+      </section>
+
+      <section id="repeat-infringers" className="space-y-4">
+        <h2>4. Repeat Infringer Policy</h2>
+        <p>
+          Career OS terminates user accounts determined to be repeat copyright infringers.
+        </p>
+      </section>
+    </GovernancePageLayout>
   );
 }

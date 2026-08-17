@@ -113,6 +113,9 @@ export const ROUTES = {
   LEGAL_IP_POLICY: '/legal/ip-policy',
   LEGAL_GUARDIAN_NOTICE: '/legal/guardian-notice',
   LEGAL_API_TERMS: '/legal/api-terms',
+  LEGAL_SUBPROCESSORS: '/legal/subprocessors',
+  LEGAL_DATA_RETENTION: '/legal/data-retention',
+  LEGAL_VERSION_HISTORY: '/legal/version-history',
 
   // Company
   COMPANY_ABOUT: '/company/about',

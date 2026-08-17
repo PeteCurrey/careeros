@@ -1,47 +1,41 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
+import React from "react";
+import { GovernancePageLayout } from "@/components/layout/GovernancePageLayout";
+import { GOVERNANCE_MANIFEST } from "@/content/governance/manifest";
+import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 
-import type { Metadata } from 'next';
+export default function DpaGuidePage() {
+  const meta = GOVERNANCE_MANIFEST["dpa"]!;
+  const toc = [
+    { id: "overview", title: "1. Institutional DPA Overview" },
+    { id: "state-exhibits", title: "2. Supported State DPA Exhibits (CA, NY, IL, TX)" },
+    { id: "execution-process", title: "3. Execution Process for School Districts" },
+  ];
 
-export const metadata: Metadata = {
-  title: "Dpa — Legal | Career OS",
-  description: "Career OS Legal dpa. Verified evidence, persistent career intelligence, and absolute privacy.",
-  alternates: {
-    canonical: "https://career-os.com/legal/dpa",
-  },
-};
-
-export default function LegalDpaPage() {
   return (
-    <EditorialSubpage
-      hideCta={true}
-      badge="LEGAL &bull; DPA"
-      title="Data Protection Addendum"
-      description="Supplementary data protection terms for enterprise and institutional partners requiring specific contractual data protection commitments."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Legal', href: ROUTES.LEGAL },
-        { label: 'DPA', href: ROUTES.LEGAL_DPA },
-      ]}
-      lastUpdated="August 2026"
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Enterprise Data Protection Addendum</h2>
+    <GovernancePageLayout meta={meta} subtitle="Guide for school district administrators on executing standardized state Data Protection Agreements." toc={toc}>
+      <section id="overview" className="space-y-4">
+        <h2>1. Institutional DPA Overview</h2>
         <p>
-          This Data Protection Addendum supplements the standard Career OS Terms of Service for enterprise customers and institutional partners who require specific contractual commitments in accordance with GDPR, UK GDPR, CCPA, or other applicable data protection legislation.
+          Career OS provides pre-signed, standardized Data Protection Agreements (DPAs) designed specifically for US public school districts and educational authorities.
         </p>
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Addendum Scope</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Lawful Basis:</strong> Confirmation of the processing lawful basis applicable to institutional deployments.</li>
-          <li><strong>Data Residency:</strong> Options for EU, UK, or US data residency based on institutional requirements.</li>
-          <li><strong>Retention Schedules:</strong> Agreed data retention and destruction timelines tailored to institutional policies.</li>
-          <li><strong>Incident Notification:</strong> 72-hour breach notification commitment in accordance with GDPR Article 33.</li>
+      </section>
+
+      <section id="state-exhibits" className="space-y-4">
+        <h2>2. Supported State DPA Exhibits (CA, NY, IL, TX)</h2>
+        <ul>
+          <li><strong>California CSPA DPA:</strong> California Student Privacy Alliance standardized exhibit.</li>
+          <li><strong>New York Ed Law § 2-d:</strong> Includes mandatory Exhibit E Parents&apos; Bill of Rights.</li>
+          <li><strong>Illinois SDPC DPA:</strong> Illinois Student Data Privacy Consortium agreement.</li>
+          <li><strong>Texas SCOPE Act (HB 18):</strong> Digital service provider compliance agreement.</li>
         </ul>
-        <p className="text-xs text-[var(--color-text-tertiary)] pt-4">
-          To request an executed DPA, please contact our legal team. Standard DPA turnaround is 5 business days.
+      </section>
+
+      <section id="execution-process" className="space-y-4">
+        <h2>3. Execution Process for School Districts</h2>
+        <p>
+          To request an executed DPA for your school district, email <a href={`mailto:${LEGAL_CONFIG.legalEmail}`}>{LEGAL_CONFIG.legalEmail}</a> with your district name and state.
         </p>
-      </div>
-    </EditorialSubpage>
+      </section>
+    </GovernancePageLayout>
   );
 }
