@@ -25,6 +25,7 @@ export default function SchoolsHubPage() {
       ]}
       ctaText="Become a Launch School"
       ctaHref={ROUTES.COMPANY_CONTACT}
+      fullScreenHero={true}
     >
       <div className="space-y-6">
         <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Institutional Infrastructure for Modern Guidance</h2>

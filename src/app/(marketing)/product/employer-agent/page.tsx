@@ -18,28 +18,35 @@ export const metadata: Metadata = {
 
 export default function EmployerAgentPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="outline" size="md">
-            Future Intelligence Vision
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Employer Agent: Responsible talent discovery and matching.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Intelligent candidate-role matching for progressive organisations. Grounded in verified evidence, transparent decision factors, and non-negotiable human accountability.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="md">
-              Become a Launch Employer
-            </Button>
-            <Button href={ROUTES.TRUST_RESPONSIBLE_AI} variant="secondary" size="md">
-              Responsible AI Governance
-            </Button>
+    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+      {/* Full Screen Hero */}
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
+        <div className="container-editorial">
+          <div className="max-w-4xl space-y-6">
+            <span className="section-label">
+              Future Intelligence Vision
+            </span>
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+              Employer Agent: Responsible talent discovery and matching.
+            </h1>
+            <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+              Intelligent candidate-role matching for progressive organisations. Grounded in verified evidence, transparent decision factors, and non-negotiable human accountability.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button href={ROUTES.COMPANY_CONTACT} variant="primary" size="lg">
+                Become a Launch Employer
+              </Button>
+              <Button href={ROUTES.TRUST_RESPONSIBLE_AI} variant="secondary" size="lg">
+                Responsible AI Governance
+              </Button>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="section-editorial">
+        <div className="container-editorial space-y-16">
 
         {/* AI Scoping & Human Oversight */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -84,5 +91,6 @@ export default function EmployerAgentPage() {
         </Card>
       </div>
     </div>
+  </div>
   );
 }

@@ -47,7 +47,7 @@ export default function StandardsHubPage() {
 
   return (
     <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
-      <section className="pt-16 pb-12 border-b border-[var(--color-border-default)]">
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial space-y-6 max-w-4xl">
           <div className="flex items-center gap-2">
             <span className="section-label">Platform Conduct Standards</span>

@@ -25,6 +25,7 @@ export default function EmployersHubPage() {
       ]}
       ctaText="Become a Launch Employer"
       ctaHref={ROUTES.COMPANY_CONTACT}
+      fullScreenHero={true}
     >
       <div className="space-y-6">
         <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Hiring on Evidence, Not Keyword Filtering</h2>

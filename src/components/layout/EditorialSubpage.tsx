@@ -20,6 +20,7 @@ export interface EditorialSubpageProps {
   ctaHref?: string;
   sidebar?: React.ReactNode;
   hideCta?: boolean;
+  fullScreenHero?: boolean;
 }
 
 export function EditorialSubpage({
@@ -33,11 +34,18 @@ export function EditorialSubpage({
   ctaHref = ROUTES.SIGNUP,
   sidebar,
   hideCta = false,
+  fullScreenHero = false,
 }: EditorialSubpageProps) {
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)]">
       {/* Header */}
-      <section className="pt-16 pb-14 border-b border-[var(--color-border-default)]">
+      <section
+        className={`border-b border-[var(--color-border-default)] ${
+          fullScreenHero
+            ? "min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center py-20 lg:py-0"
+            : "pt-16 pb-14"
+        }`}
+      >
         <div className="container-editorial space-y-6">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]" aria-label="Breadcrumb">

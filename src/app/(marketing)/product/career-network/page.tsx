@@ -18,28 +18,35 @@ export const metadata: Metadata = {
 
 export default function CareerNetworkPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="outline" size="md">
-            Future Network Architecture
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Career Network: Built on verified evidence, not social vanity.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            We reject the social-media mechanics that have corrupted professional networking. No follower counts, no algorithmic engagement bait, no endless feed spam. Just high-trust connections centered on practice, authentic mentorship, and shared projects.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.SIGNUP} variant="primary" size="md">
-              Start Free Account
-            </Button>
-            <Button href={ROUTES.STANDARDS_COMMUNITY_CODE} variant="secondary" size="md">
-              Community Standards
-            </Button>
+    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+      {/* Full Screen Hero */}
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
+        <div className="container-editorial">
+          <div className="max-w-4xl space-y-6">
+            <span className="section-label">
+              Future Network Architecture
+            </span>
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+              Career Network: Built on verified evidence, not social vanity.
+            </h1>
+            <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+              We reject the social-media mechanics that have corrupted professional networking. No follower counts, no algorithmic engagement bait, no endless feed spam. Just high-trust connections centered on practice, authentic mentorship, and shared projects.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+                Start Free Account
+              </Button>
+              <Button href={ROUTES.STANDARDS_COMMUNITY_CODE} variant="secondary" size="lg">
+                Community Standards
+              </Button>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="section-editorial">
+        <div className="container-editorial space-y-16">
 
         {/* Core Differentiation */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -96,5 +103,6 @@ export default function CareerNetworkPage() {
         </Card>
       </div>
     </div>
+  </div>
   );
 }

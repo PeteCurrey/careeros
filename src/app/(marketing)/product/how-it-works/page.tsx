@@ -19,28 +19,35 @@ export const metadata: Metadata = {
 
 export default function HowItWorksPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Lifecycle Guide
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            How Career OS Works: From discovery to lifelong advancement.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            Understand how our platform engines coordinate to provide persistent guidance, evidence verification, and proactive opportunity discovery throughout your working life.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.SIGNUP} variant="primary" size="md">
-              Start Free Account
-            </Button>
-            <Button href={ROUTES.PRODUCT} variant="secondary" size="md">
-              Product Systems
-            </Button>
+    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+      {/* Full Screen Hero */}
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
+        <div className="container-editorial">
+          <div className="max-w-4xl space-y-6">
+            <span className="section-label">
+              Lifecycle Guide
+            </span>
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+              How Career OS Works: From discovery to lifelong advancement.
+            </h1>
+            <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+              Understand how our platform engines coordinate to provide persistent guidance, evidence verification, and proactive opportunity discovery throughout your working life.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+                Start Free Account
+              </Button>
+              <Button href={ROUTES.PRODUCT} variant="secondary" size="lg">
+                Product Systems
+              </Button>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="section-editorial">
+        <div className="container-editorial space-y-16">
 
         {/* The 6 Phases Detailed */}
         <div className="border-t border-[var(--color-border-default)] pt-12">
@@ -104,5 +111,6 @@ export default function HowItWorksPage() {
         </Card>
       </div>
     </div>
+  </div>
   );
 }

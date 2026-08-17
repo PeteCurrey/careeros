@@ -43,9 +43,9 @@ export function HeroMentorSection() {
   return (
     <section
       aria-labelledby="hero-headline"
-      className="relative overflow-hidden border-b border-[var(--color-border-default)]"
+      className="relative overflow-hidden border-b border-[var(--color-border-default)] min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center"
       style={{
-        minHeight: 'max(820px, 88vh)',
+        minHeight: '100vh',
         backgroundColor: IVORY,
       }}
     >

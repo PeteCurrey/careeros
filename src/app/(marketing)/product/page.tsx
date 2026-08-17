@@ -18,7 +18,7 @@ export default function ProductOverviewPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-ivory-base)]">
       {/* Header */}
-      <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
         <div className="container-editorial space-y-6 max-w-4xl">
           <span className="section-label">
             Product Architecture & Subsystems

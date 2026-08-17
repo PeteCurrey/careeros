@@ -18,28 +18,35 @@ export const metadata: Metadata = {
 
 export default function OpportunityAgentPage() {
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="outline" size="md">
-            Future Intelligence Vision
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Opportunity Agent: Your career agent will find you.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            The long-term vision of Career OS is proactive matching. Instead of requiring individuals to spend dozens of hours searching through vacancy boards, your personal Opportunity Agent will identify and surface relevant opportunities directly to you.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button href={ROUTES.SIGNUP} variant="primary" size="md">
-              Join Early Access
-            </Button>
-            <Button href={ROUTES.PRODUCT_EMPLOYER_AGENT} variant="secondary" size="md">
-              Employer Agent Architecture
-            </Button>
+    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+      {/* Full Screen Hero */}
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
+        <div className="container-editorial">
+          <div className="max-w-4xl space-y-6">
+            <span className="section-label">
+              Future Intelligence Vision
+            </span>
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+              Opportunity Agent: Your career agent will find you.
+            </h1>
+            <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+              The long-term vision of Career OS is proactive matching. Instead of requiring individuals to spend dozens of hours searching through vacancy boards, your personal Opportunity Agent will identify and surface relevant opportunities directly to you.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+                Join Early Access
+              </Button>
+              <Button href={ROUTES.PRODUCT_EMPLOYER_AGENT} variant="secondary" size="lg">
+                Employer Agent Architecture
+              </Button>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="section-editorial">
+        <div className="container-editorial space-y-16">
 
         {/* Vision Statement Callout */}
         <Card className="p-8 border-l-4 border-l-[var(--color-brand-600)] bg-[var(--color-surface-raised)] space-y-3">
@@ -109,5 +116,6 @@ export default function OpportunityAgentPage() {
         </Card>
       </div>
     </div>
+  </div>
   );
 }

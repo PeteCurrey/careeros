@@ -41,23 +41,28 @@ export default function ResourcesPage() {
   ];
 
   return (
-    <div className="section-padding">
-      <div className="container-site space-y-16">
-        {/* Hero */}
-        <div className="max-w-3xl space-y-4">
-          <Badge variant="brand" size="md">
-            Knowledge & Frameworks
-          </Badge>
-          <h1 className="text-display font-bold tracking-tight text-[var(--color-text-primary)]">
-            Career Intelligence & Open Frameworks.
-          </h1>
-          <p className="text-body-lg text-[var(--color-text-secondary)] leading-relaxed">
-            In-depth guides, occupational research, skill taxonomies, and governance standards developed by Career OS researchers and partner institutions.
-          </p>
+    <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
+      {/* Full Screen Hero */}
+      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-0">
+        <div className="container-editorial">
+          <div className="max-w-4xl space-y-6">
+            <span className="section-label">
+              Knowledge &amp; Frameworks
+            </span>
+            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-charcoal-deep)]">
+              Career Intelligence &amp; Open Frameworks.
+            </h1>
+            <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+              In-depth guides, occupational research, skill taxonomies, and governance standards developed by Career OS researchers and partner institutions.
+            </p>
+          </div>
         </div>
+      </section>
 
-        {/* Resources Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Resources Grid */}
+      <div className="section-editorial">
+        <div className="container-editorial space-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {resources.map((res) => (
             <Card key={res.title} className="p-7 space-y-3 hover:border-[var(--color-brand-400)] transition-all">
               <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)]">
@@ -89,5 +94,6 @@ export default function ResourcesPage() {
         </Card>
       </div>
     </div>
+  </div>
   );
 }

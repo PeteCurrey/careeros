@@ -1,7 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ROUTES } from '@/lib/routes';
+import { MEDIA_ASSETS } from '@/lib/media';
 import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { HeroMentorInterface } from '@/components/marketing/ai-career-mentor/HeroMentorInterface';
@@ -114,15 +116,58 @@ export default function AICareerMentorPage() {
 
   return (
     <div className="flex flex-col w-full bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)]">
-      {/* ── SECTION 01: SUBSTANTIAL HERO ─────────────────────────────── */}
-      <section aria-labelledby="hero-title" className="pt-16 pb-20 border-b border-[var(--color-border-default)]">
-        <div className="container-editorial">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* ── SECTION 01: FULL-SCREEN HERO WITH BREATHTAKING CITY HORIZON ──────────────── */}
+      <section
+        aria-labelledby="hero-title"
+        className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-ivory-base)] py-20 lg:py-0"
+      >
+        {/* Breathtaking City & Horizon Background Image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src={MEDIA_ASSETS.hero.cityHorizon.src}
+            alt={MEDIA_ASSETS.hero.cityHorizon.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+
+          {/* Editorial Scrim: Ivory Wash on Left for Ultra-Crisp Legibility + Open View of Horizon on Right */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to right, #F7F5EC 0%, rgba(247, 245, 236, 0.96) 38%, rgba(247, 245, 236, 0.88) 55%, rgba(247, 245, 236, 0.42) 78%, rgba(247, 245, 236, 0.18) 100%)`,
+            }}
+          />
+
+          {/* Top Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to bottom, #F7F5EC 0%, transparent 100%)`,
+            }}
+          />
+
+          {/* Bottom Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to top, #F7F5EC 0%, transparent 100%)`,
+            }}
+          />
+        </div>
+
+        {/* Content Container */}
+        <div className="container-editorial relative z-10 w-full py-12 lg:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
             {/* Left: Editorial Hero Content */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-6 max-w-2xl">
               <div className="space-y-2">
                 <span className="section-label">THE CAREER OPERATING SYSTEM</span>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)] font-mono">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/85 backdrop-blur-sm border border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)] font-mono shadow-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                   <span>AI-powered. System-assigned. Always clearly identified as AI.</span>
                 </div>
@@ -146,7 +191,7 @@ export default function AICareerMentorPage() {
                   </Button>
                   <a
                     href="#not-another-chatbot"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-charcoal-deep)] hover:underline underline-offset-4"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-charcoal-deep)] hover:underline underline-offset-4 bg-white/60 backdrop-blur-xs px-3 py-2 rounded"
                   >
                     <span>See the Mentor in action</span>
                     <ArrowRight className="w-4 h-4" />
@@ -161,7 +206,9 @@ export default function AICareerMentorPage() {
 
             {/* Right: High-Fidelity Interactive Hero Mentor Preview */}
             <div className="lg:col-span-6">
-              <HeroMentorInterface />
+              <div className="shadow-editorial rounded-[var(--radius-card)] overflow-hidden bg-white/95 backdrop-blur-md">
+                <HeroMentorInterface />
+              </div>
             </div>
           </div>
         </div>

@@ -23,6 +23,21 @@ export const MEDIA_ASSETS = {
       height: 1080,
       caption: 'The Career OS multidisciplinary mentor ecosystem.',
     },
+    cityHorizon: {
+      src: '/media/hero/city_horizon_hero.jpg',
+      alt: 'Breathtaking panoramic metropolitan skyline overlooking the glowing sunset ocean horizon',
+      width: 1920,
+      height: 1080,
+      caption: 'Career OS — Global career intelligence with expansive horizons.',
+    },
+  },
+  product: {
+    aiMentorCity: {
+      src: '/media/product/ai_mentor_hero_city.jpg',
+      alt: 'Expansive panoramic city skyline looking toward the sunset horizon',
+      width: 1920,
+      height: 1080,
+    },
   },
   mentors: {
     marcus: {
