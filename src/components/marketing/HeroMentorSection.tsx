@@ -130,7 +130,8 @@ export function HeroMentorSection() {
             style={heroEnter}
           >
             {/* Section label */}
-            <p className="section-label mb-6">
+            <p className="section-label mb-6 flex items-center gap-2">
+              <span className="accent-blue-dot accent-blue-dot-pulse" />
               The Career Operating System
             </p>
 
@@ -180,7 +181,7 @@ export function HeroMentorSection() {
                 {/* Primary button */}
                 <Link
                   href={ROUTES.SIGNUP}
-                  className="inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base transition-all duration-200 focus-visible:outline-offset-4 hover:bg-white active:scale-[0.98] shadow-xs"
+                  className="inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base transition-all duration-200 focus-visible:outline-offset-4 hover:bg-white active:scale-[0.98] shadow-xs hover:shadow-[0_0_16px_rgba(244,243,239,0.12)]"
                   style={{
                     backgroundColor: '#F4F3EF',
                     color: '#202020',
@@ -194,10 +195,10 @@ export function HeroMentorSection() {
                 {/* Secondary text link */}
                 <Link
                   href="#how-it-works"
-                  className="inline-flex items-center gap-1.5 text-[0.9375rem] font-medium transition-colors duration-150 text-[var(--color-text-primary)] hover:text-white"
+                  className="group inline-flex items-center gap-1.5 text-[0.9375rem] font-medium transition-colors duration-150 text-[var(--color-text-primary)] hover:text-white"
                 >
-                  See how Career OS works
-                  <span aria-hidden="true" className="text-[var(--color-taupe-300)]">→</span>
+                  <span>See how Career OS works</span>
+                  <span aria-hidden="true" className="text-[var(--color-taupe-300)] group-hover:text-[var(--accent-blue)] group-hover:translate-x-0.5 transition-all">→</span>
                 </Link>
               </div>
 

@@ -84,7 +84,7 @@ export function RegulatedRolesVisual() {
 
                 <div className="space-y-1 text-xs">
                   <div className="text-[11px] text-[var(--color-text-secondary)]">
-                    <strong className="text-purple-300 font-mono">Capability:</strong> {item.capabilitySignal}
+                    <strong className="text-[#6BB8FF] font-mono">Capability:</strong> {item.capabilitySignal}
                   </div>
                   <div className="text-[11px] text-[var(--color-text-secondary)]">
                     <strong className="text-amber-300 font-mono">Mandatory:</strong> {item.statutoryRequirement}

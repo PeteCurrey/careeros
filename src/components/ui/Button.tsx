@@ -7,15 +7,15 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-[#F4F3EF] text-[#202020] hover:bg-white active:bg-[#E5E4DE] border border-transparent shadow-xs font-semibold',
+    'bg-[#F4F3EF] text-[#202020] hover:bg-white active:bg-[#E5E4DE] border border-transparent shadow-xs font-semibold hover:shadow-[0_0_14px_rgba(244,243,239,0.12)]',
   secondary:
-    'bg-transparent text-[#F4F3EF] hover:bg-white/10 active:bg-white/15 border border-white/20 hover:border-white/40 font-medium',
+    'bg-transparent text-[#F4F3EF] hover:bg-white/10 active:bg-white/15 border border-white/20 hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_12px_rgba(47,143,255,0.06)] font-medium',
   dark:
     'bg-[#303030] text-[#F4F3EF] hover:bg-[#414141] active:bg-[#474747] border border-white/10 shadow-xs font-semibold',
   ghost:
     'bg-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5 border border-transparent',
   outline:
-    'bg-transparent text-[var(--color-text-primary)] hover:bg-white/5 border border-white/20 hover:border-white/40',
+    'bg-transparent text-[var(--color-text-primary)] hover:bg-white/5 border border-white/20 hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_12px_rgba(47,143,255,0.06)]',
   destructive:
     'bg-[var(--color-danger)] text-white hover:opacity-90 border border-transparent',
 };
@@ -29,7 +29,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 // Shared visual base classes
 const baseClass = (variant: ButtonVariant, size: ButtonSize, extra?: string) =>
   cn(
-    'inline-flex items-center justify-center transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus)] cursor-pointer tracking-tight font-sans',
+    'inline-flex items-center justify-center transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus)] cursor-pointer tracking-tight font-sans',
     variantStyles[variant],
     sizeStyles[size],
     extra,

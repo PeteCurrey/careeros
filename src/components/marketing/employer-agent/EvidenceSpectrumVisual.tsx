@@ -34,7 +34,7 @@ export function EvidenceSpectrumVisual() {
       label: 'Platform Assessed',
       type: 'Evaluation',
       desc: 'Demonstrated through structured platform benchmarking or standardized technical simulation.',
-      statusColor: 'text-purple-300 bg-purple-500/10 border-purple-500/20',
+      statusColor: 'text-[#6BB8FF] bg-[rgba(47,143,255,0.07)] border-[rgba(47,143,255,0.18)]',
     },
     {
       state: 'THIRD_PARTY_VERIFIED',
@@ -108,7 +108,7 @@ export function EvidenceSpectrumVisual() {
         ))}
       </div>
 
-      <div className="p-6 rounded-[var(--radius-card)] bg-purple-500/5 border border-purple-500/20 text-center space-y-2">
+      <div className="p-6 rounded-[var(--radius-card)] bg-[rgba(47,143,255,0.04)] border border-[rgba(47,143,255,0.18)] text-center space-y-2">
         <p className="text-base sm:text-lg font-serif italic text-white">
           &ldquo;Verification should describe the evidence, not certify the entire person.&rdquo;
         </p>

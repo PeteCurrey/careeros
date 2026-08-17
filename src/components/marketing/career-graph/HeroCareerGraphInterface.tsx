@@ -26,11 +26,11 @@ export function HeroCareerGraphInterface() {
   };
 
   return (
-    <div className="w-full bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-2xl transition-all duration-300">
+    <div className="w-full bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-2xl transition-all duration-300 border-beam-container border-beam-slow">
       {/* Top Header Bar */}
       <div className="px-5 py-3.5 bg-black/40 border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="inline-block w-2 h-2 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.7)]" />
           <span className="font-mono font-semibold tracking-wider text-[var(--color-text-primary)] uppercase">
             Career Graph &bull; Interactive Topology
           </span>

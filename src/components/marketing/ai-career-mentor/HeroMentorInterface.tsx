@@ -7,11 +7,11 @@ import { Sparkles, ShieldCheck, Layers, CheckCircle2, Info } from 'lucide-react'
 
 export function HeroMentorInterface() {
   return (
-    <div className="w-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans">
+    <div className="w-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans border-beam-container border-beam-slow">
       {/* Interface Bar */}
       <div className="px-4 py-3 bg-[var(--color-surface-sunken)] border-b border-[var(--color-border-default)] flex items-center justify-between gap-2 text-xs">
         <div className="flex items-center gap-2 font-mono text-[11px] text-[var(--color-text-secondary)]">
-          <span className="w-2 h-2 rounded-full bg-[var(--color-success)]" />
+          <span className="w-2 h-2 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.7)]" />
           <span>CAREER OS MENTOR</span>
         </div>
         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[var(--radius-sm)] bg-white/10 text-[var(--color-text-primary)] text-[10px] uppercase font-bold tracking-wider border border-[var(--color-border-default)]">
@@ -58,7 +58,7 @@ export function HeroMentorInterface() {
         <div className="p-5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4">
           <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-3">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[var(--color-taupe-600)]" />
+              <Sparkles className="w-4 h-4 text-[#2F8FFF]" />
               <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-text-primary)]">
                 Recommendation Rationale
               </span>

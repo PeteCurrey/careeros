@@ -108,7 +108,8 @@ export function CareerGraphVisualSection() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 border-b border-[var(--color-border-default)]">
           <div className="max-w-3xl space-y-4">
-            <span className="section-label">
+            <span className="section-label flex items-center gap-2">
+              <span className="accent-blue-dot" />
               Dynamic Labor Economy Topology
             </span>
             <h2 className="text-display-section text-[var(--color-text-primary)]">
@@ -161,7 +162,7 @@ export function CareerGraphVisualSection() {
             {/* Connecting Indicator */}
             <div className="lg:col-span-1 hidden lg:flex items-center justify-center text-[var(--color-taupe-300)]">
               <div className="h-[1px] w-full bg-[var(--color-border-default)] relative">
-                <span className="absolute right-0 top-1/2 -translate-y-1/2 text-xs">&rarr;</span>
+                <span className="absolute right-0 top-1/2 -translate-y-1/2 text-xs text-[#2F8FFF]">→</span>
               </div>
             </div>
 
@@ -170,7 +171,7 @@ export function CareerGraphVisualSection() {
               {topology.branches.map((b) => (
                 <div
                   key={b.title}
-                  className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] hover:border-[var(--color-border-strong)] transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                  className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] hover:border-[rgba(47,143,255,0.25)] hover:shadow-[0_0_12px_rgba(47,143,255,0.05)] transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
                 >
                   <div className="space-y-0.5">
                     <div className="flex items-center gap-2">

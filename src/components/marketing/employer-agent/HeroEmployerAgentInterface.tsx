@@ -53,16 +53,16 @@ export function HeroEmployerAgentInterface() {
   ];
 
   return (
-    <div className="w-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans">
+    <div className="w-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle text-[var(--color-text-primary)] font-sans border-beam-container border-beam-reverse">
       {/* Interface Window Bar */}
       <div className="px-4 py-3 bg-[var(--color-surface-sunken)] border-b border-[var(--color-border-default)] flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2 font-mono text-[11px] text-[var(--color-text-secondary)]">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.7)]" />
           <span className="font-semibold text-white">CAREER OS &bull; EMPLOYER AGENT</span>
           <span className="text-[var(--color-text-tertiary)] hidden sm:inline">| Capability Decomposition Engine</span>
         </div>
         <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 text-[var(--color-taupe-300)] text-[10px] font-mono border border-white/10">
-          <Sparkles className="w-3 h-3 text-purple-400" />
+          <Sparkles className="w-3 h-3 text-[#2F8FFF]" />
           Illustrative Employer Agent Concept
         </span>
       </div>
@@ -72,7 +72,7 @@ export function HeroEmployerAgentInterface() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-6 border-b border-[var(--color-border-default)]">
           <div className="lg:col-span-7 space-y-2">
             <div className="flex items-center gap-2">
-              <span className="px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20 text-[10px] font-mono uppercase tracking-wider font-semibold">
+              <span className="px-2 py-0.5 rounded bg-[rgba(47,143,255,0.07)] text-[#6BB8FF] border border-[rgba(47,143,255,0.18)] text-[10px] font-mono uppercase tracking-wider font-semibold">
                 Target Role Definition
               </span>
               <span className="text-xs font-mono text-[var(--color-text-tertiary)]">
@@ -116,16 +116,16 @@ export function HeroEmployerAgentInterface() {
         {/* Structured Capability & Evidence Matrix */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-purple-300 font-semibold flex items-center gap-1.5">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-[#6BB8FF] font-semibold flex items-center gap-1.5">
               <Cpu className="w-3.5 h-3.5" /> Required Capabilities
             </span>
             <ul className="space-y-1 text-xs text-[var(--color-text-secondary)]">
               <li className="flex items-center gap-1.5 text-white">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF]" />
                 Root-cause electromechanical diagnostics
               </li>
               <li className="flex items-center gap-1.5 text-white">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF]" />
                 PLC / Automation fault isolation
               </li>
               <li className="flex items-center gap-1.5">
@@ -180,7 +180,7 @@ export function HeroEmployerAgentInterface() {
         <div className="space-y-3 pt-2">
           <div className="flex items-center justify-between">
             <span className="text-xs font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] flex items-center gap-2">
-              <GitBranch className="w-3.5 h-3.5 text-purple-400" />
+              <GitBranch className="w-3.5 h-3.5 text-[#2F8FFF]" />
               Surfaced Professional Clusters &bull; Qualitative Discovery
             </span>
             <span className="text-[11px] font-mono text-[var(--color-taupe-300)]">

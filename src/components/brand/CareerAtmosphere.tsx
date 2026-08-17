@@ -78,6 +78,19 @@ export function CareerAtmosphere({
         }}
       />
 
+      {/* Precision architectural cool blue — mid-right ambient depth */}
+      <div
+        className={animate ? 'atmosphere-field atmosphere-field--blue' : ''}
+        style={{
+          position: 'absolute',
+          top: '35%',
+          right: '12%',
+          width: '50%',
+          height: '50%',
+          background: `radial-gradient(ellipse at 50% 50%, rgba(47, 143, 255, ${o(0.035)}) 0%, transparent 65%)`,
+        }}
+      />
+
       {/* Return to solid charcoal — strong center-left, anchors the copy area */}
       <div
         style={{

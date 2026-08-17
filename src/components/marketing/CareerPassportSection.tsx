@@ -56,7 +56,8 @@ export function CareerPassportSection() {
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
-          <span className="section-label">
+          <span className="section-label flex items-center gap-2">
+            <span className="accent-blue-dot" />
             Sovereign Evidence Vault
           </span>
           <h2 className="text-display-section text-[var(--color-text-primary)]">
@@ -68,7 +69,7 @@ export function CareerPassportSection() {
         </div>
 
         {/* Digital Career Passport Interface Shell */}
-        <div className="bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle">
+        <div className="bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle border-beam-container border-beam-slow">
           
           {/* Document Header Bar */}
           <div className="bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-default)]">

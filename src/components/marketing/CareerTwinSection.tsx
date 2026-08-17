@@ -68,7 +68,8 @@ export function CareerTwinSection() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 border-b border-[var(--color-border-default)]">
           <div className="max-w-3xl space-y-4">
-            <span className="section-label">
+            <span className="section-label flex items-center gap-2">
+              <span className="accent-blue-dot" />
               Dynamic Self-Model
             </span>
             <h2 className="text-display-section text-[var(--color-text-primary)]">
@@ -121,7 +122,7 @@ export function CareerTwinSection() {
           </div>
 
           {/* Right: The Dynamic Career Twin Canvas */}
-          <div className="lg:col-span-8 p-8 sm:p-10 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6 flex flex-col justify-between">
+          <div className="lg:col-span-8 p-8 sm:p-10 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6 flex flex-col justify-between border-beam-container border-beam-slow">
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-6">
                 <div>

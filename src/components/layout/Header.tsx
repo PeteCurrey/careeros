@@ -53,7 +53,8 @@ export function Header() {
             <span className="text-xl font-bold tracking-tight">
               Career OS
             </span>
-            <span className="hidden sm:inline-block text-[11px] uppercase tracking-widest text-[var(--color-taupe-300)] font-medium pl-2 border-l border-[var(--color-border-default)]">
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-[var(--color-taupe-300)] font-medium pl-2.5 border-l border-[var(--color-border-default)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.6)]" />
               Platform
             </span>
           </Link>

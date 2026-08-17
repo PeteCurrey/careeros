@@ -68,6 +68,17 @@
   --color-danger: #F87171;
   --color-danger-light: rgba(248, 113, 113, 0.15);
 
+  /* --- Precision Blue Accent System (Architectural Detailing) --- */
+  --accent-blue: #2F8FFF;
+  --accent-blue-soft: rgba(47, 143, 255, 0.45);
+  --accent-blue-subtle: rgba(47, 143, 255, 0.12);
+  --accent-blue-glow: rgba(47, 143, 255, 0.08);
+  --accent-blue-border: rgba(47, 143, 255, 0.18);
+  --color-blue-accent: #2F8FFF;
+  --color-blue-accent-soft: rgba(47, 143, 255, 0.45);
+  --color-blue-accent-subtle: rgba(47, 143, 255, 0.12);
+  --color-blue-accent-border: rgba(47, 143, 255, 0.18);
+
   /* --- Active Surfaces Mapping --- */
   --color-surface-base: #393939;
   --color-surface-raised: #414141;
@@ -329,6 +340,19 @@ body {
   border-radius: var(--radius-card);
 }
 
+.card {
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-card);
+  transition: border-color 300ms ease, box-shadow 300ms ease, transform 200ms ease;
+}
+
+.card-interactive:hover {
+  border-color: rgba(47, 143, 255, 0.22);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3), 0 0 16px rgba(47, 143, 255, 0.06);
+  transform: translateY(-1px);
+}
+
 .editorial-surface-ivory {
   background-color: var(--color-surface-warm);
   border: 1px solid var(--color-border-default);
@@ -395,5 +419,139 @@ body {
     animation: atmosphereDrift 26s ease-in-out infinite alternate;
     animation-delay: -3s;
   }
+  .atmosphere-field--blue {
+    animation: atmosphereDrift 22s ease-in-out infinite alternate;
+    animation-delay: -8s;
+  }
 }
+
+/* ============================================================
+   PRECISION BORDER BEAM & MICRO-ANIMATIONS
+   Subtle travelling luminous highlights for flagship surfaces.
+   Respects prefers-reduced-motion.
+   ============================================================ */
+@keyframes beamSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes beamSpinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes subtleBluePulse {
+  0%, 100% {
+    opacity: 0.85;
+    box-shadow: 0 0 6px rgba(47, 143, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(47, 143, 255, 0.55);
+  }
+}
+
+.border-beam-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-beam-container::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--beam-start, 0deg),
+    transparent 0 315deg,
+    rgba(47, 143, 255, 0.20) 335deg,
+    rgba(100, 175, 255, 0.70) 350deg,
+    rgba(47, 143, 255, 0.20) 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+  animation: beamSpin var(--beam-duration, 12s) linear infinite;
+  animation-delay: var(--beam-delay, 0s);
+}
+
+.border-beam-slow::before {
+  --beam-duration: 16s;
+  --beam-delay: -4s;
+}
+
+.border-beam-fast::before {
+  --beam-duration: 9s;
+  --beam-delay: -2s;
+}
+
+.border-beam-reverse::before {
+  animation-name: beamSpinReverse;
+  --beam-duration: 14s;
+  --beam-delay: -7s;
+}
+
+/* Glass & Luminous Surface Refinements */
+.glass-surface {
+  background: rgba(55, 55, 55, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-surface-blue {
+  background: rgba(55, 55, 55, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(47, 143, 255, 0.18);
+}
+
+.glow-blue-subtle {
+  box-shadow: 0 0 14px rgba(47, 143, 255, 0.08);
+}
+
+.glow-blue-hover {
+  transition: box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.glow-blue-hover:hover {
+  box-shadow: 0 0 20px rgba(47, 143, 255, 0.12);
+  border-color: rgba(47, 143, 255, 0.25);
+}
+
+/* Precision Electric Blue Status Dot */
+.accent-blue-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--accent-blue);
+  box-shadow: 0 0 8px rgba(47, 143, 255, 0.4);
+  display: inline-block;
+}
+
+.accent-blue-dot-pulse {
+  animation: subtleBluePulse 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .border-beam-container::before {
+    animation: none !important;
+    background: rgba(47, 143, 255, 0.10) !important;
+  }
+  .accent-blue-dot-pulse {
+    animation: none !important;
+  }
+}
+
 

@@ -60,19 +60,19 @@ export function TitleVsCapabilityVisual() {
       </div>
 
       {/* Column 2: Career OS Capability-First Discovery */}
-      <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-purple-500/30 relative overflow-hidden space-y-6 flex flex-col justify-between">
+      <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[rgba(47,143,255,0.22)] relative overflow-hidden space-y-6 flex flex-col justify-between">
         <div
           aria-hidden="true"
-          className="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl pointer-events-none"
+          className="absolute top-0 right-0 w-64 h-64 bg-[rgba(47,143,255,0.04)] rounded-full blur-3xl pointer-events-none"
         />
 
         <div className="space-y-4 relative z-10">
           <div className="flex items-center justify-between pb-3 border-b border-[var(--color-border-default)]">
-            <span className="text-xs font-mono uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#2F8FFF] flex items-center gap-1.5">
               <Layers className="w-3.5 h-3.5" />
               Career OS Direction
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20 font-semibold">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[rgba(47,143,255,0.07)] text-[#6BB8FF] border border-[rgba(47,143,255,0.18)] font-semibold">
               Capability &amp; Evidence
             </span>
           </div>
@@ -88,11 +88,11 @@ export function TitleVsCapabilityVisual() {
           {/* Workflow Representation */}
           <div className="p-4 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-3 font-mono text-xs">
             <div className="flex items-center gap-2 text-white">
-              <span className="w-5 h-5 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center text-[10px]">1</span>
+              <span className="w-5 h-5 rounded-full bg-[rgba(47,143,255,0.12)] text-[#6BB8FF] flex items-center justify-center text-[10px]">1</span>
               <span>Outcome Brief: Electromechanical Diagnostics + Safety</span>
             </div>
             <div className="flex items-center gap-2 text-white">
-              <span className="w-5 h-5 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center text-[10px]">2</span>
+              <span className="w-5 h-5 rounded-full bg-[rgba(47,143,255,0.12)] text-[#6BB8FF] flex items-center justify-center text-[10px]">2</span>
               <span>Evidence Match: Verified logbooks &amp; apprenticeship items</span>
             </div>
             <div className="flex items-center gap-2 text-emerald-400">

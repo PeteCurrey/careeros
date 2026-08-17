@@ -117,7 +117,7 @@ export function EmployerAgentFaq() {
           >
             <button
               onClick={() => toggle(idx)}
-              className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 text-white hover:text-purple-300 transition-colors"
+              className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 text-white hover:text-[#6BB8FF] transition-colors"
               aria-expanded={isOpen}
             >
               <span className="font-semibold text-sm sm:text-base font-serif">
@@ -125,7 +125,7 @@ export function EmployerAgentFaq() {
               </span>
               <ChevronDown
                 className={`w-4 h-4 shrink-0 transition-transform duration-200 text-[var(--color-taupe-300)] ${
-                  isOpen ? 'rotate-180 text-purple-400' : ''
+                  isOpen ? 'rotate-180 text-[#2F8FFF]' : ''
                 }`}
               />
             </button>

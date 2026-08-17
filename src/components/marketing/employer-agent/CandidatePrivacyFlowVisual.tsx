@@ -73,7 +73,7 @@ export function CandidatePrivacyFlowVisual() {
     <div className="w-full p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[var(--color-border-default)]">
         <div className="space-y-1">
-          <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold flex items-center gap-1.5">
+          <span className="text-xs font-mono uppercase tracking-wider text-[#2F8FFF] font-semibold flex items-center gap-1.5">
             <Lock className="w-3.5 h-3.5" />
             Three-Stage Candidate Privacy Architecture
           </span>
@@ -94,12 +94,12 @@ export function CandidatePrivacyFlowVisual() {
             onClick={() => setActiveStage(idx)}
             className={`p-4 rounded-[var(--radius-card)] text-left transition-all border ${
               activeStage === idx
-                ? 'bg-white/10 border-purple-400 shadow-md ring-1 ring-purple-400/30 text-white'
+                ? 'bg-white/10 border-[rgba(47,143,255,0.35)] shadow-md ring-1 ring-[rgba(47,143,255,0.25)] text-white'
                 : 'bg-[var(--color-surface-base)] border-[var(--color-border-default)] text-[var(--color-text-secondary)] hover:border-white/20'
             }`}
           >
             <div className="flex items-center justify-between pb-1">
-              <span className="text-[10px] font-mono font-bold text-purple-400">
+              <span className="text-[10px] font-mono font-bold text-[#2F8FFF]">
                 STAGE {s.stage}
               </span>
               <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-[var(--color-taupe-300)]">
@@ -117,7 +117,7 @@ export function CandidatePrivacyFlowVisual() {
         return (
           <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-6">
             <div className="space-y-1">
-              <span className="text-[11px] font-mono uppercase text-purple-300 font-semibold">
+              <span className="text-[11px] font-mono uppercase text-[#6BB8FF] font-semibold">
                 Stage {currentStage.stage} Summary
               </span>
               <h4 className="text-lg font-serif text-white font-normal">
@@ -145,14 +145,14 @@ export function CandidatePrivacyFlowVisual() {
               </div>
 
               {/* Protected / Hidden Context */}
-              <div className="p-4 rounded bg-[var(--color-surface-raised)] border border-purple-500/20 space-y-2.5">
-                <span className="font-bold text-purple-400 font-mono text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+              <div className="p-4 rounded bg-[var(--color-surface-raised)] border border-[rgba(47,143,255,0.18)] space-y-2.5">
+                <span className="font-bold text-[#2F8FFF] font-mono text-[11px] uppercase tracking-wider flex items-center gap-1.5">
                   <Lock className="w-3.5 h-3.5" /> Strictly Protected / Hidden
                 </span>
                 <ul className="space-y-1.5 text-[var(--color-text-secondary)]">
                   {currentStage.hidden.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-1.5 text-white">
-                      <span className="text-purple-400 font-bold">&bull;</span>
+                      <span className="text-[#2F8FFF] font-bold">&bull;</span>
                       <span>{item}</span>
                     </li>
                   ))}

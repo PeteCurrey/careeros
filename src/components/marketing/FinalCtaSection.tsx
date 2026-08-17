@@ -7,11 +7,20 @@ import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 export function FinalCtaSection() {
   return (
     <section className="section-editorial-lg bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] relative overflow-hidden border-b border-[var(--color-border-default)]">
+      {/* Atmospheric blue depth — imperceptible, not decorative */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute inset-0 z-0"
+        style={{
+          background: 'radial-gradient(ellipse at 60% 30%, rgba(47,143,255,0.035) 0%, transparent 55%)',
+        }}
+      />
       <div className="container-editorial relative z-10 space-y-16">
         
         {/* Main CTA Block */}
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <span className="section-label-light">
+          <span className="section-label-light flex items-center justify-center gap-2">
+            <span className="accent-blue-dot accent-blue-dot-pulse" />
             Begin Your Lifelong Operating System
           </span>
 

@@ -228,19 +228,19 @@ export function InteractiveRoleDefinitionDemo() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#2F8FFF] shrink-0" />
               <span>Maintain 99.4% plant line availability across 3 shifts</span>
             </div>
             <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#2F8FFF] shrink-0" />
               <span>Reduce unpredicted breakdown recovery time (MTTR) by 20%</span>
             </div>
             <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#2F8FFF] shrink-0" />
               <span>Lead and develop 14 multi-skilled maintenance technicians</span>
             </div>
             <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#2F8FFF] shrink-0" />
               <span>Ensure 100% compliance with statutory safety &amp; PUWER audits</span>
             </div>
           </div>
@@ -344,10 +344,10 @@ export function InteractiveRoleDefinitionDemo() {
   return (
     <div className="w-full space-y-10" id="role-definition-demo">
       {/* ── PART 1: ROLE DEFINITION WORKFLOW ───────────────────────── */}
-      <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-6">
+      <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-6 border-beam-container border-beam-slow">
         <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[var(--color-border-default)]">
           <div className="space-y-1">
-            <span className="text-xs font-mono uppercase tracking-wider text-purple-400 flex items-center gap-1.5 font-semibold">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#2F8FFF] flex items-center gap-1.5 font-semibold">
               <Sparkles className="w-3.5 h-3.5" />
               Interactive Role-Definition Workflow
             </span>
@@ -372,7 +372,7 @@ export function InteractiveRoleDefinitionDemo() {
                   : 'bg-[var(--color-surface-base)] border-[var(--color-border-default)] text-[var(--color-text-secondary)] hover:border-white/15'
               }`}
             >
-              <span className="text-[10px] font-mono text-purple-400 block font-bold">
+              <span className="text-[10px] font-mono text-[#2F8FFF] block font-bold">
                 Step {s.num}
               </span>
               <span className="font-semibold text-xs block truncate text-white">
@@ -389,7 +389,7 @@ export function InteractiveRoleDefinitionDemo() {
             <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-4">
               <div className="flex items-center justify-between">
                 <h4 className="font-bold text-sm text-white flex items-center gap-2">
-                  <span className="text-purple-400 font-mono">Step {currentStep.num}:</span>
+                  <span className="text-[#2F8FFF] font-mono">Step {currentStep.num}:</span>
                   {currentStep.title}
                 </h4>
                 <span className="text-[11px] text-[var(--color-text-tertiary)] hidden sm:inline font-mono">
@@ -427,7 +427,7 @@ export function InteractiveRoleDefinitionDemo() {
       <div className="space-y-6">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#2F8FFF] font-semibold">
               Candidate Reasoning Explorer
             </span>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-semibold">
@@ -450,7 +450,7 @@ export function InteractiveRoleDefinitionDemo() {
               onClick={() => setSelectedProfileId(p.id)}
               className={`p-4 rounded-[var(--radius-card)] text-left transition-all border flex flex-col justify-between space-y-3 ${
                 selectedProfileId === p.id
-                  ? 'bg-white/10 border-purple-400 shadow-md ring-1 ring-purple-400/30'
+                  ? 'bg-white/10 border-[rgba(47,143,255,0.35)] shadow-md ring-1 ring-[rgba(47,143,255,0.25)]'
                   : 'bg-[var(--color-surface-raised)] border-[var(--color-border-default)] hover:border-white/20'
               }`}
             >
@@ -466,7 +466,7 @@ export function InteractiveRoleDefinitionDemo() {
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-purple-300 flex items-center justify-between">
+              <div className="pt-2 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-[#6BB8FF] flex items-center justify-between">
                 <span>View Full Reasoning</span>
                 <ChevronRight className="w-3 h-3" />
               </div>
@@ -488,7 +488,7 @@ export function InteractiveRoleDefinitionDemo() {
                 Background: {selectedProfile.origin}
               </p>
             </div>
-            <div className="px-3 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-purple-300 font-mono text-xs">
+            <div className="px-3 py-1 rounded bg-[rgba(47,143,255,0.07)] border border-[rgba(47,143,255,0.18)] text-[#6BB8FF] font-mono text-xs">
               {selectedProfile.qualitativeTag}
             </div>
           </div>
@@ -497,7 +497,7 @@ export function InteractiveRoleDefinitionDemo() {
             {/* Left Column: Why Surfaced & What Transfers */}
             <div className="lg:col-span-7 space-y-5">
               <div className="space-y-2">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-purple-300 font-bold block">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-[#6BB8FF] font-bold block">
                   Why This Profile Surfaced
                 </span>
                 <p className="text-xs sm:text-sm text-white leading-relaxed p-3.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded">
@@ -602,7 +602,7 @@ export function InteractiveRoleDefinitionDemo() {
             <span>
               Employer Agent surfaces relevant factors and evidence provenance. <strong>Human hiring teams evaluate candidates and make all final decisions.</strong>
             </span>
-            <span className="font-mono text-[11px] text-purple-300 shrink-0">
+            <span className="font-mono text-[11px] text-[#6BB8FF] shrink-0">
               No Automated Scoring &bull; Human in Loop
             </span>
           </div>

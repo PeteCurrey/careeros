@@ -40,7 +40,7 @@ export function TalentGraphVisual() {
   return (
     <div className="w-full p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-8">
       <div className="space-y-2 max-w-2xl">
-        <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold flex items-center gap-1.5">
+        <span className="text-xs font-mono uppercase tracking-wider text-[#2F8FFF] font-semibold flex items-center gap-1.5">
           <GitBranch className="w-3.5 h-3.5" />
           Career Graph Topology
         </span>
@@ -55,9 +55,9 @@ export function TalentGraphVisual() {
       {/* Structural Visual Topology Diagram */}
       <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-6">
         {/* Step 1: Role Brief */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-4 rounded bg-[var(--color-surface-raised)] border border-purple-500/20">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-4 rounded bg-[var(--color-surface-raised)] border border-[rgba(47,143,255,0.18)]">
           <div className="space-y-0.5">
-            <span className="text-[10px] font-mono text-purple-400 uppercase">Target Brief</span>
+            <span className="text-[10px] font-mono text-[#2F8FFF] uppercase">Target Brief</span>
             <h4 className="font-bold text-sm text-white">Senior Maintenance Engineer</h4>
           </div>
           <div className="flex flex-wrap gap-2 text-[11px] font-mono text-[var(--color-taupe-300)]">
@@ -69,7 +69,7 @@ export function TalentGraphVisual() {
 
         {/* Arrow Divider */}
         <div className="flex items-center justify-center">
-          <div className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-[10px] font-mono text-purple-300">
+          <div className="px-3 py-1 rounded-full bg-[rgba(47,143,255,0.07)] border border-[rgba(47,143,255,0.18)] text-[10px] font-mono text-[#6BB8FF]">
             &darr; Traversed via Career Graph Functional Ontology
           </div>
         </div>
@@ -99,7 +99,7 @@ export function TalentGraphVisual() {
       </div>
 
       <div className="text-xs text-[var(--color-text-tertiary)] flex items-center gap-2">
-        <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
+        <CheckCircle2 className="w-4 h-4 text-[#2F8FFF] shrink-0" />
         <span>
           Career Graph clarifies connections. It does not imply that every candidate with a transferable skill is automatically qualified.
         </span>

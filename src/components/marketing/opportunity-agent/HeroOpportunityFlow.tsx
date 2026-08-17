@@ -74,7 +74,7 @@ export function HeroOpportunityFlow() {
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border-default)] bg-[var(--background-dark-deep)]"
+      className="relative w-full overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border-default)] bg-[var(--background-dark-deep)] border-beam-container border-beam-slow"
       style={{ minHeight: '420px' }}
       role="img"
       aria-label="Illustrative Opportunity Agent concept showing relevant opportunities surfacing toward a career profile"

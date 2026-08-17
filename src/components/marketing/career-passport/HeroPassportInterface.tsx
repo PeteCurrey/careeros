@@ -7,7 +7,7 @@ export function HeroPassportInterface() {
   const [activeTab, setActiveTab] = useState<'qualifications' | 'projects' | 'licences'>('qualifications');
 
   return (
-    <div className="w-full p-6 sm:p-8 bg-white/95 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 text-[var(--color-text-primary)]">
+    <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)] backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 text-[var(--color-text-primary)] border-beam-container border-beam-fast">
       {/* Top Passport Header Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-5">
         <div className="flex items-center gap-3">

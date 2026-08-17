@@ -15,11 +15,11 @@ export function HeroTwinInterface() {
   ];
 
   return (
-    <div className="w-full p-6 sm:p-8 bg-white/90 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6">
+    <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)] backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 border-beam-container border-beam-slow">
       {/* Visual Header Badge */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[var(--color-border-subtle)] pb-4">
         <div className="flex items-center gap-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.7)]" />
           <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--color-text-primary)]">
             Career Twin &bull; Active Context Layer
           </span>

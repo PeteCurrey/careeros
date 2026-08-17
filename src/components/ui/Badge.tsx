@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 export type BadgeVariant =
   | 'default'
   | 'brand'
+  | 'blue'
   | 'success'
   | 'warning'
   | 'danger'
@@ -23,7 +24,9 @@ const variantStyles: Record<BadgeVariant, string> = {
   default:
     'bg-[var(--color-surface-interactive)] text-[var(--color-text-secondary)] border border-[var(--color-border-default)]',
   brand:
-    'bg-[var(--color-brand-50)] text-[var(--color-brand-700)] dark:bg-[var(--color-brand-950)] dark:text-[var(--color-brand-300)] border border-[var(--color-brand-200)] dark:border-[var(--color-brand-800)]',
+    'bg-[rgba(47,143,255,0.08)] text-[#6BB8FF] border border-[rgba(47,143,255,0.22)]',
+  blue:
+    'bg-[rgba(47,143,255,0.08)] text-[#6BB8FF] border border-[rgba(47,143,255,0.22)] font-semibold',
   success:
     'bg-[var(--color-success-light)] text-[var(--color-success)] border border-[var(--color-success)]/20',
   verified:
@@ -33,7 +36,7 @@ const variantStyles: Record<BadgeVariant, string> = {
   danger:
     'bg-[var(--color-danger-light)] text-[var(--color-danger)] border border-[var(--color-danger)]/30',
   info:
-    'bg-[var(--color-info-light)] text-[var(--color-info)] border border-[var(--color-info)]/30',
+    'bg-[rgba(47,143,255,0.08)] text-[#6BB8FF] border border-[rgba(47,143,255,0.22)]',
   outline:
     'bg-transparent text-[var(--color-text-secondary)] border border-[var(--color-border-strong)]',
 };

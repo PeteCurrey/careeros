@@ -52,7 +52,7 @@ export function MegaMenu({ section, onClose }: MegaMenuProps) {
                     >
                       <div className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-white transition-colors flex items-center justify-between">
                         <span>{item.label}</span>
-                        <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0.5 transition-all text-[var(--color-taupe-300)]" />
+                        <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0.5 transition-all text-[var(--accent-blue)]" />
                       </div>
                       {item.description && (
                         <p className="text-xs text-[var(--color-text-secondary)] line-clamp-1 mt-0.5 font-normal">
