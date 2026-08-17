@@ -1036,8 +1036,11 @@ export function formatEventDate(dateString: string): string {
 /**
  * Format human-readable time strings with timezone
  */
-export function formatEventTime(startTime: string, endTime: string, timezone: string): string {
-  const tzAbbrev = timezone.includes('/') ? timezone.split('/')[1].replace('_', ' ') : timezone;
+export function formatEventTime(startTime: string, endTime: string, timezone?: string): string {
+  const tz = timezone || 'UTC';
+  const parts = tz.split('/');
+  const sub = parts[1];
+  const tzAbbrev = sub ? sub.replace('_', ' ') : tz;
   return `${startTime} – ${endTime} (${tzAbbrev})`;
 }
 

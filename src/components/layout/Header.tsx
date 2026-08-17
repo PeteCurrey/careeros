@@ -173,7 +173,7 @@ export function Header() {
 
               {mobileEventsOpen && (
                 <div className="pt-2 border-t border-[var(--color-border-default)] space-y-4">
-                  {megaMenuContent.events.groups.map((grp) => (
+                  {(megaMenuContent.events?.groups ?? []).map((grp) => (
                     <div key={grp.label} className="space-y-1.5">
                       <div className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-taupe-300)]">
                         {grp.label}

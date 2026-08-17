@@ -37,6 +37,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/pathways/career-change`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/pathways/entrepreneurship`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
+    // Events Platform
+    { url: `${BASE_URL}/events`, lastModified: now, changeFrequency: 'daily', priority: 0.95 },
+    { url: `${BASE_URL}/events/career-fairs`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/events/apprenticeships`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/events/meet-the-employer`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/events/workshops`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/events/webinars`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/events/recruitment-events`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/events/graduate`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/events/entrepreneurship`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/events/promote`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+
     // Resources
     { url: `${BASE_URL}/resources`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 

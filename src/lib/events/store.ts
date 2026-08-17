@@ -220,8 +220,9 @@ export function getOrCreatePreparationPlan(event: CareerEvent): EventPreparation
     try {
       const raw = localStorage.getItem(PREPARATION_PLANS_KEY);
       const map: Record<string, EventPreparationPlan> = raw ? JSON.parse(raw) : {};
-      if (map[event.id]) {
-        return map[event.id];
+      const existingPlan = map[event.id];
+      if (existingPlan) {
+        return existingPlan as EventPreparationPlan;
       }
     } catch {}
   }

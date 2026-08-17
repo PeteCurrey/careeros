@@ -137,11 +137,13 @@ export function EventCard({ event, priority = false, compact = false, className 
             <div className="flex items-center gap-1.5 font-medium truncate max-w-[80%]">
               <span className="truncate">{event.organiser.name}</span>
               {event.organiser.verificationStatus !== 'unverified' && (
-                <VerificationBadge
-                  status="verified"
-                  tooltipText={`Verified ${event.organiser.type.replace('-', ' ')} on CareerOS`}
-                  size="sm"
-                />
+                <span
+                  className="inline-flex items-center gap-1 px-1.5 py-0.2 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium"
+                  title={`Verified ${event.organiser.type.replace('-', ' ')} on CareerOS`}
+                >
+                  <ShieldCheck className="w-2.5 h-2.5 text-emerald-400" />
+                  <span>Verified</span>
+                </span>
               )}
             </div>
             <span className="text-[11px] text-[var(--color-taupe-300)] uppercase tracking-wider font-semibold shrink-0">

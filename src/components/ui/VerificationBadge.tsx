@@ -13,7 +13,10 @@ export type VerificationState =
   | 'DISPUTED';
 
 interface VerificationBadgeProps {
-  state: VerificationState;
+  state?: VerificationState;
+  status?: string;
+  tooltipText?: string;
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
@@ -68,11 +71,13 @@ const stateConfig: Record<
   },
 };
 
-export function VerificationBadge({ state, className }: VerificationBadgeProps) {
-  const config = stateConfig[state];
+export function VerificationBadge({ state, status, tooltipText, size = 'sm', className }: VerificationBadgeProps) {
+  const resolvedState: VerificationState = state ?? (status?.toUpperCase() as VerificationState) ?? 'ISSUER_VERIFIED';
+  const config = stateConfig[resolvedState] ?? stateConfig.ISSUER_VERIFIED;
   return (
-    <Badge variant={config.variant} size="sm" className={className} title={config.description}>
+    <Badge variant={config.variant} size={size === 'lg' ? 'md' : size} className={className} title={tooltipText ?? config.description}>
       {config.label}
     </Badge>
   );
 }
+

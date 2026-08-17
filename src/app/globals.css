@@ -427,25 +427,26 @@ body {
 
 /* ============================================================
    PRECISION BORDER BEAM & MICRO-ANIMATIONS
-   Subtle travelling luminous highlights for flagship surfaces.
-   Respects prefers-reduced-motion.
+   Animates the conic-gradient start angle via @property so the
+   beam traces the card perimeter without rotating the element.
+   This is safe under overflow:hidden. Respects prefers-reduced-motion.
    ============================================================ */
-@keyframes beamSpin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Register the animatable custom property for the beam angle */
+@property --beam-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
 }
 
-@keyframes beamSpinReverse {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+@keyframes beamTrace {
+  from { --beam-angle: 0deg; }
+  to   { --beam-angle: 360deg; }
+}
+
+@keyframes beamTraceReverse {
+  from { --beam-angle: 360deg; }
+  to   { --beam-angle: 0deg; }
 }
 
 @keyframes subtleBluePulse {
@@ -459,33 +460,43 @@ body {
   }
 }
 
+/* ── Container ─────────────────────────────────────────────── */
 .border-beam-container {
   position: relative;
-  overflow: hidden;
+  /* Do NOT set overflow:hidden here — cards set their own overflow */
 }
 
+/*
+  The ::before lives inside the card stacking context.
+  inset: 0  → stays exactly on the card boundary even when parent clips.
+  We use padding: 1px + mask to carve out the interior so only
+  a 1 px strip around the perimeter is visible.
+*/
 .border-beam-container::before {
   content: "";
   position: absolute;
-  inset: -1px;
+  inset: 0;
   border-radius: inherit;
   padding: 1px;
   background: conic-gradient(
-    from var(--beam-start, 0deg),
-    transparent 0 315deg,
-    rgba(47, 143, 255, 0.20) 335deg,
-    rgba(100, 175, 255, 0.70) 350deg,
-    rgba(47, 143, 255, 0.20) 360deg
+    from var(--beam-angle),
+    transparent 0deg 300deg,
+    rgba(47, 143, 255, 0.15) 320deg,
+    rgba(107, 184, 255, 0.75) 345deg,
+    rgba(47, 143, 255, 0.15) 360deg
   );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  z-index: 10;
-  animation: beamSpin var(--beam-duration, 12s) linear infinite;
+  z-index: 20;
+  animation: beamTrace var(--beam-duration, 12s) linear infinite;
   animation-delay: var(--beam-delay, 0s);
 }
 
+/* ── Speed variants ─────────────────────────────────────────── */
 .border-beam-slow::before {
   --beam-duration: 16s;
   --beam-delay: -4s;
@@ -497,7 +508,7 @@ body {
 }
 
 .border-beam-reverse::before {
-  animation-name: beamSpinReverse;
+  animation-name: beamTraceReverse;
   --beam-duration: 14s;
   --beam-delay: -7s;
 }
