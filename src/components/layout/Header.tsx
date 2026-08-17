@@ -36,10 +36,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-40 w-full transition-all duration-200',
+        'sticky top-0 z-40 w-full transition-all duration-300',
         scrolled
-          ? 'bg-[var(--color-ivory-base)]/95 backdrop-blur-sm border-b border-[var(--color-border-default)] shadow-subtle'
-          : 'bg-[var(--color-ivory-base)] border-b border-[var(--color-border-subtle)]'
+          ? 'bg-[var(--color-ivory-base)]/80 backdrop-blur-md border-b border-[var(--color-border-default)] shadow-xs'
+          : 'bg-[var(--color-ivory-base)]/90 backdrop-blur-sm border-b border-[var(--color-border-subtle)]'
       )}
     >
       <div className="container-editorial">

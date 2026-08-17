@@ -132,14 +132,15 @@ export default function CareerTwinPage() {
       {/* SECTION 01 — HERO WITH BREATHTAKING CITY HORIZON                    */}
       {/* =================================================================== */}
       <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-ivory-base)] py-16 lg:py-24">
-        {/* Breathtaking City & Horizon Background Image */}
+        {/* Expansive Future Pathways & Horizon Background Image */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <Image
-            src={MEDIA_ASSETS.hero.cityHorizon.src}
-            alt={MEDIA_ASSETS.hero.cityHorizon.alt}
+            src={MEDIA_ASSETS.hero.careerTwinHorizon.src}
+            alt={MEDIA_ASSETS.hero.careerTwinHorizon.alt}
             fill
             priority
             sizes="100vw"
+            quality={95}
             className="object-cover object-center"
           />
 

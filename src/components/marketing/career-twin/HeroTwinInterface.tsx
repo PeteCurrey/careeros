@@ -15,7 +15,7 @@ export function HeroTwinInterface() {
   ];
 
   return (
-    <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-subtle space-y-6">
+    <div className="w-full p-6 sm:p-8 bg-white/90 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6">
       {/* Visual Header Badge */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[var(--color-border-subtle)] pb-4">
         <div className="flex items-center gap-2">

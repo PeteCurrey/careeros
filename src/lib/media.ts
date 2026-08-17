@@ -30,11 +30,24 @@ export const MEDIA_ASSETS = {
       height: 1080,
       caption: 'Career OS — Global career intelligence with expansive horizons.',
     },
+    careerTwinHorizon: {
+      src: '/media/hero/career_twin_horizon.jpg',
+      alt: 'Expansive illuminated architectural sky bridges and transit pathways reaching toward an inspiring golden sunrise horizon, symbolizing forward career trajectories and future possibilities',
+      width: 1920,
+      height: 1080,
+      caption: 'Career Twin — Revealing where your career could go.',
+    },
   },
   product: {
     aiMentorCity: {
       src: '/media/product/ai_mentor_hero_city.jpg',
       alt: 'Expansive panoramic city skyline looking toward the sunset horizon',
+      width: 1920,
+      height: 1080,
+    },
+    careerTwinHorizon: {
+      src: '/media/product/career_twin_horizon.jpg',
+      alt: 'Expansive illuminated architectural sky bridges and transit pathways reaching toward an inspiring golden sunrise horizon, symbolizing forward career trajectories and future possibilities',
       width: 1920,
       height: 1080,
     },
