@@ -1,11 +1,27 @@
 import type { Metadata, Viewport } from 'next';
+import { Plus_Jakarta_Sans, Newsreader } from 'next/font/google';
 import './globals.css';
 import { SkipLink } from '@/components/layout/SkipLink';
 
+const sansFont = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+const serifFont = Newsreader({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serif',
+  style: ['normal', 'italic'],
+  weight: ['300', '400', '500', '600'],
+});
+
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'oklch(99% 0.002 264)' },
-    { media: '(prefers-color-scheme: dark)', color: 'oklch(14% 0.010 264)' },
+    { media: '(prefers-color-scheme: light)', color: '#F6F6EE' },
+    { media: '(prefers-color-scheme: dark)', color: '#202020' },
   ],
 };
 
@@ -68,7 +84,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${sansFont.variable} ${serifFont.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -96,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col antialiased bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <body className="min-h-full flex flex-col antialiased bg-[var(--color-surface-base)] text-[var(--color-text-primary)] font-sans">
         <SkipLink />
         {children}
       </body>

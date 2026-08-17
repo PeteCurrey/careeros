@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Sparkles, Compass, Shield, ArrowRight, Building2, MapPin, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
 
@@ -19,106 +21,116 @@ const MATCHES: MatchedOpportunity[] = [
     type: 'Full-time &bull; Hybrid',
     location: 'Edinburgh / Remote',
     alignment: 94,
-    factors: ['Verified Distributed Systems Evidence', 'Clean Energy Preference Match', 'Target Compensation Band'],
+    factors: ['Verified Distributed Systems Deliverable', 'Clean Energy Sector Preference', 'Target Compensation Calibration'],
   },
   {
-    role: 'Staff Infrastructure Specialist',
+    role: 'Staff Infrastructure Operations Specialist',
     organisation: 'Autonomous Transit Labs',
     type: 'Full-time &bull; On-site',
     location: 'London',
     alignment: 89,
-    factors: ['Electro-Mechanical Qualification Match', 'High-Trust Culture Alignment'],
+    factors: ['Electro-Mechanical Diagnostics Evidence', 'High-Trust Culture Model Match'],
   },
 ];
 
 export function OpportunityIntelligenceSection() {
   return (
-    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
-      <div className="container-wide space-y-16">
+    <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+      <div className="container-editorial space-y-16">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-brand-50)] text-xs font-mono font-bold text-[var(--color-brand-600)] uppercase">
-            <Sparkles className="w-3.5 h-3.5" /> Future Opportunity Agent
+          <div className="flex items-center gap-3">
+            <span className="section-label">
+              Autonomous Discovery Intelligence
+            </span>
+            <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)] px-2 py-0.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)]">
+              Platform Direction
+            </span>
           </div>
-          <h2 className="text-display-section text-[var(--color-text-primary)]">
-            Eventually, you shouldn&apos;t have to search for every opportunity.{' '}
-            <span className="text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] block sm:inline">
+          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            What if the right opportunity found you first? <br />
+            <span className="text-[var(--color-taupe-600)] font-normal">
               Your career agent will find you.
             </span>
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
-            Instead of spending hours scrolling generic job boards and feeding résumés into keyword algorithms, your Career OS agent matches opportunities directly to your verified capabilities and private parameters.
+            Instead of spending hours scrolling generic job boards and feeding résumés into automated black-box keyword filters, your Career OS agent matches opportunities directly to your verified capabilities and private parameters.
           </p>
         </div>
 
-        {/* Proactive Opportunity Matching Demonstration Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Proactive Opportunity Matching Flow */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
           {/* Left Narrative Pillar */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-xl bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] space-y-4">
-              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-                Autonomous, Private Matching
+          <div className="lg:col-span-5 p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6 flex flex-col justify-between">
+            <div className="space-y-4">
+              <span className="section-label">
+                Zero Public Broadcasting
+              </span>
+              <h3 className="text-xl font-semibold text-[var(--color-charcoal-deep)]">
+                Autonomous, Private Evaluation
               </h3>
               <p className="text-body-editorial text-[var(--color-text-secondary)] leading-relaxed">
-                Opportunities evaluate against your Career Twin under your explicit consent. Your identity remains private until you choose to accept an introduction.
+                Opportunities evaluate against your Career Twin under your explicit consent ledger. Your identity and employment status remain entirely private until you choose to accept an introduction.
               </p>
-              <ul className="space-y-2.5 text-xs text-[var(--color-text-secondary)] pt-2">
-                <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--color-verified)] shrink-0" />
-                  <span>Zero public broadcasting of job-search status</span>
+              
+              <ul className="space-y-3 text-xs text-[var(--color-charcoal-deep)] pt-2 font-medium">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] shrink-0 mt-0.5" />
+                  <span>Zero public broadcasting of job-search status to your current employer</span>
                 </li>
-                <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--color-verified)] shrink-0" />
-                  <span>Matched on verified capability, not keyword fluff</span>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] shrink-0 mt-0.5" />
+                  <span>Matched on verified capability and deliverable evidence, not keyword fluff</span>
                 </li>
-                <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--color-verified)] shrink-0" />
-                  <span>Explainable alignment factors with full provenance</span>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] shrink-0 mt-0.5" />
+                  <span>Explainable alignment factors with transparent criteria provenance</span>
                 </li>
               </ul>
             </div>
 
-            <div className="px-4 text-[11px] font-mono text-[var(--color-text-tertiary)]">
-              * Opportunity Agent is part of the Career OS Phase 2 autonomous matching roadmap.
+            <div className="text-[11px] text-[var(--color-text-tertiary)] pt-4 border-t border-[var(--color-border-subtle)]">
+              * Autonomous opportunity matching operates under strict user-controlled consent grants.
             </div>
           </div>
 
-          {/* Right Matching Flow Cards */}
+          {/* Right Matching Demonstration Flow */}
           <div className="lg:col-span-7 space-y-4">
             {MATCHES.map((match, i) => (
               <div
                 key={i}
-                className="p-6 sm:p-8 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-400)] transition-all shadow-card space-y-5"
+                className="p-7 sm:p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-5"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[var(--color-border-subtle)] pb-4">
-                  <div>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-brand-600)]">
-                      PROACTIVE OPPORTUNITY MATCH
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-[var(--color-border-subtle)]">
+                  <div className="space-y-1">
+                    <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">
+                      Autonomous Direct Match
                     </span>
-                    <h4 className="text-lg font-bold text-[var(--color-text-primary)] mt-1">
+                    <h4 className="text-base sm:text-lg font-semibold text-[var(--color-charcoal-deep)]">
                       {match.role}
                     </h4>
                     <p
-                      className="text-xs text-[var(--color-text-secondary)] mt-0.5"
-                      dangerouslySetInnerHTML={{ __html: match.organisation }}
+                      className="text-xs text-[var(--color-text-secondary)]"
+                      dangerouslySetInnerHTML={{ __html: match.organisation + ' &bull; ' + match.location }}
                     />
                   </div>
-                  <div className="shrink-0 flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-[var(--color-verified-light)] text-[var(--color-verified)] text-xs font-mono font-bold">
-                      {match.alignment}% Capability Fit
-                    </span>
-                  </div>
+                  <span className="shrink-0 px-3 py-1 bg-[var(--color-success-light)] text-[var(--color-success)] text-xs font-semibold rounded-[var(--radius-sm)] border border-[var(--color-success)]/20">
+                    {match.alignment}% Capability Fit
+                  </span>
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-[11px] font-mono font-bold text-[var(--color-text-tertiary)] uppercase">
-                    WHY THIS OPPORTUNITY REACHED YOU
+                  <p className="text-[11px] uppercase tracking-wider text-[var(--color-taupe-600)] font-semibold">
+                    Explainable Matching Provenance
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {match.factors.map((f) => (
-                      <span key={f} className="px-3 py-1 rounded-lg bg-[var(--color-surface-warm)] text-xs text-[var(--color-text-secondary)] border border-[var(--color-border-subtle)]">
+                      <span
+                        key={f}
+                        className="text-xs px-3 py-1 bg-[var(--color-ivory-warm)] text-[var(--color-charcoal-deep)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] font-medium"
+                      >
                         &bull; {f}
                       </span>
                     ))}
@@ -126,6 +138,15 @@ export function OpportunityIntelligenceSection() {
                 </div>
               </div>
             ))}
+
+            <div className="pt-2 flex justify-end">
+              <Link
+                href={ROUTES.PRODUCT_OPPORTUNITY_AGENT}
+                className="text-xs font-semibold text-[var(--color-charcoal-deep)] hover:text-black inline-flex items-center gap-1 underline underline-offset-4"
+              >
+                Learn about Opportunity Agent <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
 
         </div>
@@ -134,3 +155,4 @@ export function OpportunityIntelligenceSection() {
     </section>
   );
 }
+

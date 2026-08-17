@@ -1,55 +1,66 @@
 import React from 'react';
 import { HeroMentorSection } from '@/components/marketing/HeroMentorSection';
+import { TheProblemSection } from '@/components/marketing/TheProblemSection';
+import { HowCareerOSUnderstandsYou } from '@/components/marketing/HowCareerOSUnderstandsYou';
 import { LifetimeJourneySection } from '@/components/marketing/LifetimeJourneySection';
-import { IntegratedSystemSection } from '@/components/marketing/IntegratedSystemSection';
 import { MentorStorySection } from '@/components/marketing/MentorStorySection';
 import { CareerTwinSection } from '@/components/marketing/CareerTwinSection';
 import { CareerPassportSection } from '@/components/marketing/CareerPassportSection';
+import { CareerGraphVisualSection } from '@/components/marketing/CareerGraphVisualSection';
 import { OpportunityIntelligenceSection } from '@/components/marketing/OpportunityIntelligenceSection';
 import { AudienceEditorialPanels } from '@/components/marketing/AudienceEditorialPanels';
 import { PrivacyViewerSection } from '@/components/marketing/PrivacyViewerSection';
-import { CareerStoriesSection } from '@/components/marketing/CareerStoriesSection';
+import { ComparisonTableSection } from '@/components/marketing/ComparisonTableSection';
 import { MissionSection } from '@/components/marketing/MissionSection';
 import { FinalCtaSection } from '@/components/marketing/FinalCtaSection';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col w-full overflow-hidden">
-      {/* 1. Hero — Multidisciplinary Mentor Team + Career Transition Panorama */}
+    <div className="flex flex-col w-full overflow-hidden bg-[var(--color-ivory-base)]">
+      {/* 01. Hero — Multidisciplinary Mentor Team + Career Transition Panorama */}
       <HeroMentorSection />
 
-      {/* 2. Lifetime Model — Discover to Reinvent */}
+      {/* 02. The Problem — Editorial Statement & Whitespace */}
+      <div id="how-it-works">
+        <TheProblemSection />
+      </div>
+
+      {/* 03. How Career OS Understands You — 6 Dimensions with Thin Rules */}
+      <HowCareerOSUnderstandsYou />
+
+      {/* 04. Lifetime Journey — Horizontal Timeline from Discover to Reinvent */}
       <LifetimeJourneySection />
 
-      {/* 3. Everything Working Together — Integrated Operating System */}
-      <IntegratedSystemSection />
-
-      {/* 4. Your AI Career Mentor — Human Storytelling & Strategic Advisory */}
+      {/* 05. Your AI Career Mentor — Strong Dark Charcoal Section & Advisory */}
       <MentorStorySection />
 
-      {/* 5. Career Twin — Dynamic Self-Model vs Static Résumé */}
+      {/* 06. Career Twin — Dynamic Self-Model with Abstract Radial Graph */}
       <CareerTwinSection />
 
-      {/* 6. Career Passport — Verifiable Evidence Vault */}
+      {/* 07. Career Passport — Verifiable Evidence Vault & W3C Credentials */}
       <CareerPassportSection />
 
-      {/* 7. Opportunity Intelligence — "Your career agent will find you" */}
+      {/* 08. Career Graph — Original Branching Topology (Tech & Skilled Trades) */}
+      <CareerGraphVisualSection />
+
+      {/* 09. Opportunity Intelligence — Autonomous Agent Discovery */}
       <OpportunityIntelligenceSection />
 
-      {/* 8. Four Career Worlds — Students, Professionals, High Schools, Employers */}
+      {/* 10. Who Career OS is For — 4 Bespoke Editorial Compositions */}
       <AudienceEditorialPanels />
 
-      {/* 9. Privacy & Trust — Interactive Access Control Viewer */}
+      {/* 11. Privacy & Trust — Interactive Permission & Redaction Simulator */}
       <PrivacyViewerSection />
 
-      {/* 10. Example Career Transitions — Non-linear Pathway Graphs */}
-      <CareerStoriesSection />
+      {/* 12. Comparison & Differentiation — Thin-Ruled Capability Matrix */}
+      <ComparisonTableSection />
 
-      {/* 11. Mission — Foundational Purpose */}
+      {/* 13. Mission Manifesto — Centered Editorial Typography */}
       <MissionSection />
 
-      {/* 12. Final CTA — Start Your Career (Free) + Launch Partnerships */}
+      {/* 14. Final CTA — Charcoal Conclusion with Institutional Invitations */}
       <FinalCtaSection />
     </div>
   );
 }
+

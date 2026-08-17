@@ -1,234 +1,185 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Lock, Eye, EyeOff, ShieldCheck, UserCheck, Bot, Building2, Globe, CheckCircle2 } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { ROUTES } from '@/lib/routes';
+import React, { useState } from "react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { cn } from "@/lib/utils";
 
-type ViewPerspective = 'MY_VIEW' | 'MENTOR_VIEW' | 'EMPLOYER_VIEW' | 'PUBLIC_VIEW';
+type ViewMode = "MY_VIEW" | "MENTOR_VIEW" | "EMPLOYER_VIEW" | "PUBLIC_VIEW";
 
-interface ProfileField {
+interface PrivacyField {
   label: string;
-  value: string;
   category: string;
-  visibleIn: ViewPerspective[];
-  verified?: boolean;
+  visibility: {
+    MY_VIEW: { state: string; note: string; visible: boolean };
+    MENTOR_VIEW: { state: string; note: string; visible: boolean };
+    EMPLOYER_VIEW: { state: string; note: string; visible: boolean };
+    PUBLIC_VIEW: { state: string; note: string; visible: boolean };
+  };
 }
 
-const PROFILE_FIELDS: ProfileField[] = [
+const PRIVACY_FIELDS: PrivacyField[] = [
   {
-    label: 'Verified Identity & Credentials',
-    value: 'Alexander Chen &bull; BSc Computer Science (Verified)',
-    category: 'Credentials',
-    visibleIn: ['MY_VIEW', 'MENTOR_VIEW', 'EMPLOYER_VIEW', 'PUBLIC_VIEW'],
-    verified: true,
+    label: "Real Name & Identity Provenance",
+    category: "Identity",
+    visibility: {
+      MY_VIEW: { state: "Alexander Chen", note: "Full access", visible: true },
+      MENTOR_VIEW: { state: "Alexander Chen", note: "Explicitly shared", visible: true },
+      EMPLOYER_VIEW: { state: "[REDACTED: Candidate #8891]", note: "Zero identification until accepted", visible: false },
+      PUBLIC_VIEW: { state: "[REDACTED]", note: "Hidden from public", visible: false },
+    },
   },
   {
-    label: 'Demonstrated Skills & Projects',
-    value: 'Distributed Architecture, Systems Diagnostics, Q2 Launch Spec',
-    category: 'Capability',
-    visibleIn: ['MY_VIEW', 'MENTOR_VIEW', 'EMPLOYER_VIEW', 'PUBLIC_VIEW'],
-    verified: true,
+    label: "Current Employer & Team",
+    category: "Employment",
+    visibility: {
+      MY_VIEW: { state: "Global Logistics Infrastructure Ltd", note: "Full access", visible: true },
+      MENTOR_VIEW: { state: "Global Logistics Infrastructure Ltd", note: "Contextual advisory context", visible: true },
+      EMPLOYER_VIEW: { state: "[REDACTED: Leading Logistics Enterprise]", note: "Protected from current employer", visible: false },
+      PUBLIC_VIEW: { state: "[REDACTED]", note: "Hidden from public", visible: false },
+    },
   },
   {
-    label: 'Target Capability Gaps & Goals',
-    value: 'Management Exposure (28% gap), Cross-org Budgeting',
-    category: 'Development',
-    visibleIn: ['MY_VIEW', 'MENTOR_VIEW'],
+    label: "Target Compensation Expectation",
+    category: "Parameters",
+    visibility: {
+      MY_VIEW: { state: "£140,000 – £160,000 + Equity", note: "Full access", visible: true },
+      MENTOR_VIEW: { state: "£140,000 – £160,000 (Calibrated)", note: "Benchmarked for negotiation", visible: true },
+      EMPLOYER_VIEW: { state: "Matched against Budget Floor", note: "Evaluated autonomously without disclosure", visible: false },
+      PUBLIC_VIEW: { state: "[REDACTED]", note: "Strictly confidential", visible: false },
+    },
   },
   {
-    label: 'Private Work & Culture Preferences',
-    value: 'High-trust autonomous culture, no micromanagement, async-first',
-    category: 'Preferences',
-    visibleIn: ['MY_VIEW', 'MENTOR_VIEW'],
-  },
-  {
-    label: 'Target Compensation Band',
-    value: 'Top 15% regional market tier ($185k - $210k)',
-    category: 'Compensation',
-    visibleIn: ['MY_VIEW'],
-  },
-  {
-    label: 'Current Job Search / Opportunity Openness',
-    value: 'Passively open to clean tech & systems architecture leads',
-    category: 'Search Status',
-    visibleIn: ['MY_VIEW'],
+    label: "Verified Technical & Project Artifacts",
+    category: "Credentials",
+    visibility: {
+      MY_VIEW: { state: "4 Cryptographic Proofs & Code Vault", note: "Full access", visible: true },
+      MENTOR_VIEW: { state: "4 Cryptographic Proofs & Code Vault", note: "Used for capability evaluation", visible: true },
+      EMPLOYER_VIEW: { state: "Verified Architecture Spec (Anonymized)", note: "Proof of capability provided", visible: true },
+      PUBLIC_VIEW: { state: "Verified Credential Hashes (W3C)", note: "Publicly verifiable anchor", visible: true },
+    },
   },
 ];
 
 export function PrivacyViewerSection() {
-  const [perspective, setPerspective] = useState<ViewPerspective>('MY_VIEW');
-
-  const getPerspectiveInfo = () => {
-    switch (perspective) {
-      case 'MY_VIEW':
-        return {
-          title: 'Your Complete Career Twin',
-          desc: 'You have unrestricted access to your entire capability model, private goals, and market parameters.',
-          icon: UserCheck,
-        };
-      case 'MENTOR_VIEW':
-        return {
-          title: 'Assigned AI Career Mentor View',
-          desc: 'Your mentor accesses your capability gaps and development goals to provide strategic advice, but cannot see private salary targets.',
-          icon: Bot,
-        };
-      case 'EMPLOYER_VIEW':
-        return {
-          title: 'Verified Employer View',
-          desc: 'Employers only see explicitly granted verified evidence and capability fit. Private preferences and status remain invisible.',
-          icon: Building2,
-        };
-      case 'PUBLIC_VIEW':
-        return {
-          title: 'Public Career Passport View',
-          desc: 'The public only sees public credentials and project deliverables you have explicitly chosen to publish.',
-          icon: Globe,
-        };
-    }
-  };
-
-  const info = getPerspectiveInfo();
-  const PerspectiveIcon = info.icon;
+  const [activeView, setActiveView] = useState<ViewMode>("MY_VIEW");
 
   return (
-    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
-      <div className="container-wide space-y-16">
+    <section className="section-editorial bg-[var(--color-ivory-warm)] border-b border-[var(--color-border-default)]">
+      <div className="container-editorial space-y-16">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-brand-50)] text-xs font-mono font-bold text-[var(--color-brand-600)] uppercase">
-            <Lock className="w-3.5 h-3.5" /> Granular Access Control Simulator
-          </div>
-          <h2 className="text-display-section text-[var(--color-text-primary)]">
-            Your career data should work for you.{' '}
-            <span className="text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] block sm:inline">
-              Not against you.
-            </span>
+          <span className="section-label">
+            Granular Access & Consent Architecture
+          </span>
+          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
+            Your career data belongs in your hands.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
-            Toggle perspectives below to see how Career OS enforces field-level access control. An employer never automatically sees what is in your private Career Twin.
+            Career OS is built on a zero-trust, user-sovereign permission matrix. You choose exactly what your mentor, potential employers, and the public can view.
           </p>
         </div>
 
-        {/* The Interactive Viewer Card */}
-        <div className="p-8 sm:p-12 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-8">
+        {/* Interactive Permission Matrix */}
+        <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 shadow-subtle">
           
-          {/* Viewer Tabs */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-border-subtle)] pb-6">
-            <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-text-tertiary)]">
-                SIMULATE ACCESS PERMISSION BASIS
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[var(--color-border-default)] pb-6">
+            <div className="space-y-1">
+              <span className="section-label">
+                Interactive Permission Simulator
               </span>
-              <p className="text-sm font-semibold text-[var(--color-text-primary)] mt-0.5">
-                Select who is viewing the profile:
-              </p>
+              <h3 className="text-lg font-semibold text-[var(--color-charcoal-deep)]">
+                Select a perspective to verify real-time redaction:
+              </h3>
             </div>
 
+            {/* View Mode Buttons (Flat Squared Tabs) */}
             <div className="flex flex-wrap gap-2">
               {[
-                { id: 'MY_VIEW', label: 'My Full View', icon: UserCheck },
-                { id: 'MENTOR_VIEW', label: 'Mentor View', icon: Bot },
-                { id: 'EMPLOYER_VIEW', label: 'Employer View', icon: Building2 },
-                { id: 'PUBLIC_VIEW', label: 'Public View', icon: Globe },
+                { key: "MY_VIEW" as ViewMode, label: "My Sovereign View" },
+                { key: "MENTOR_VIEW" as ViewMode, label: "Mentor View" },
+                { key: "EMPLOYER_VIEW" as ViewMode, label: "Employer View" },
+                { key: "PUBLIC_VIEW" as ViewMode, label: "Public View" },
               ].map((tab) => {
-                const TabIcon = tab.icon;
-                const isSelected = perspective === tab.id;
+                const isSelected = activeView === tab.key;
                 return (
                   <button
-                    key={tab.id}
-                    onClick={() => setPerspective(tab.id as ViewPerspective)}
+                    key={tab.key}
+                    type="button"
+                    onClick={() => setActiveView(tab.key)}
                     className={cn(
-                      'px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-2',
+                      "px-3.5 py-2 text-xs font-semibold rounded-[var(--radius-sm)] border transition-all cursor-pointer",
                       isSelected
-                        ? 'bg-[var(--color-brand-600)] text-white shadow-xs'
-                        : 'bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-border-default)]'
+                        ? "bg-[var(--color-charcoal-deep)] text-[var(--color-ivory-base)] border-[var(--color-charcoal-deep)]"
+                        : "bg-[var(--color-ivory-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-[var(--color-surface-interactive)]"
                     )}
                   >
-                    <TabIcon className="w-3.5 h-3.5" />
-                    <span>{tab.label}</span>
+                    {tab.label}
                   </button>
                 );
               })}
             </div>
           </div>
 
-          {/* Active Perspective Explanation Banner */}
-          <div className="p-4 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] flex items-start gap-3">
-            <PerspectiveIcon className="w-5 h-5 text-[var(--color-brand-600)] shrink-0 mt-0.5" />
-            <div className="text-xs">
-              <h4 className="font-bold text-[var(--color-text-primary)]">{info.title}</h4>
-              <p className="text-[var(--color-text-secondary)]">{info.desc}</p>
-            </div>
-          </div>
-
-          {/* Dynamic Field Matrix */}
-          <div className="space-y-3">
-            {PROFILE_FIELDS.map((field, idx) => {
-              const isVisible = field.visibleIn.includes(perspective);
+          {/* Matrix Field Rows */}
+          <div className="divide-y divide-[var(--color-border-default)] border-y border-[var(--color-border-default)]">
+            {PRIVACY_FIELDS.map((field) => {
+              const current = field.visibility[activeView];
               return (
                 <div
-                  key={idx}
-                  className={cn(
-                    'p-4 sm:p-5 rounded-lg border transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4',
-                    isVisible
-                      ? 'bg-[var(--color-surface-base)] border-[var(--color-border-default)] opacity-100'
-                      : 'bg-[var(--color-surface-warm)] border-[var(--color-border-subtle)] opacity-40'
-                  )}
+                  key={field.label}
+                  className="py-5 grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
                 >
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono uppercase font-bold tracking-wider text-[var(--color-text-tertiary)]">
-                        {field.category}
-                      </span>
-                      {field.verified && isVisible && (
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[var(--color-verified-light)] text-[var(--color-verified)] font-bold">
-                          VERIFIED
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm font-bold text-[var(--color-text-primary)]">
+                  <div className="md:col-span-4 space-y-0.5">
+                    <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-600)]">
+                      {field.category}
+                    </span>
+                    <h4 className="text-sm font-semibold text-[var(--color-charcoal-deep)]">
                       {field.label}
-                    </p>
-                    <p
-                      className={cn(
-                        'text-xs font-mono',
-                        isVisible ? 'text-[var(--color-text-secondary)]' : 'text-[var(--color-text-tertiary)] italic'
-                      )}
-                      dangerouslySetInnerHTML={{
-                        __html: isVisible ? field.value : '&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; [Redacted by Field-Level Access Control Grant]',
-                      }}
-                    />
+                    </h4>
                   </div>
 
-                  <div className="shrink-0 flex items-center gap-1.5 text-xs font-mono font-bold">
-                    {isVisible ? (
-                      <span className="text-[var(--color-verified)] flex items-center gap-1">
-                        <Eye className="w-3.5 h-3.5" /> VISIBLE
-                      </span>
-                    ) : (
-                      <span className="text-[var(--color-text-tertiary)] flex items-center gap-1">
-                        <EyeOff className="w-3.5 h-3.5" /> REDACTED
-                      </span>
-                    )}
+                  <div className="md:col-span-5">
+                    <span
+                      className={cn(
+                        "text-xs sm:text-sm font-medium",
+                        current.visible ? "text-[var(--color-charcoal-deep)]" : "text-[var(--color-danger)] font-mono"
+                      )}
+                    >
+                      {current.state}
+                    </span>
+                  </div>
+
+                  <div className="md:col-span-3 flex md:justify-end">
+                    <span
+                      className={cn(
+                        "text-[11px] px-2.5 py-1 rounded-[var(--radius-sm)] font-medium border",
+                        current.visible
+                          ? "bg-[var(--color-ivory-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)]"
+                          : "bg-[var(--color-danger-light)] text-[var(--color-danger)] border-[var(--color-danger)]/20"
+                      )}
+                    >
+                      {current.note}
+                    </span>
                   </div>
                 </div>
               );
             })}
           </div>
 
-          {/* Section Trust Guarantee */}
-          <div className="pt-4 border-t border-[var(--color-border-subtle)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs">
-            <span className="text-[var(--color-text-secondary)] flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[var(--color-verified)]" />
-              Zero third-party advertising sales &bull; Immutable consent audit ledger
-            </span>
+          {/* Verification Guarantee Footer */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[var(--color-text-secondary)] pt-2">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[var(--color-success)] shrink-0" />
+              <span>Cryptographic enforcement: No database operator or automated scraper can bypass these policies.</span>
+            </div>
             <Link
               href={ROUTES.TRUST_DATA_ETHICS}
-              className="font-semibold text-[var(--color-brand-600)] hover:underline inline-flex items-center gap-1"
+              className="font-semibold text-[var(--color-charcoal-deep)] hover:text-black inline-flex items-center gap-1 underline underline-offset-4 shrink-0"
             >
-              Read Data Ethics Commitments &rarr;
+              Data Ethics Architecture <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 

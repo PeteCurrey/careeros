@@ -1,123 +1,116 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { MEDIA_ASSETS } from '@/lib/media';
-import { Bot, ArrowRight, ShieldCheck, CheckCircle2, Sparkles, Compass } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
+import { Button } from '@/components/ui/Button';
 
 export function MentorStorySection() {
   return (
-    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
-      <div className="container-wide">
+    <section className="section-editorial bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] relative overflow-hidden border-b border-[var(--color-charcoal-border)]">
+      <div className="container-editorial relative z-10 space-y-16">
         
         {/* Editorial Section Top Header */}
-        <div className="max-w-3xl space-y-4 mb-16">
-          <p className="text-xs font-mono font-bold tracking-widest text-[var(--color-brand-600)] uppercase">
-            Lifelong Intelligence
-          </p>
-          <h2 className="text-display-section text-[var(--color-text-primary)]">
-            Your mentor knows where you&apos;re trying to go.
+        <div className="max-w-3xl space-y-4">
+          <span className="section-label-light">
+            Continuous Intelligence & Advisory
+          </span>
+          <h2 className="text-display-section text-[var(--color-ivory-base)]">
+            Someone in your corner. <br />
+            <span className="text-[var(--color-lavender-base)] font-normal">
+              Backed by your Career OS.
+            </span>
           </h2>
-          <p className="text-lead text-[var(--color-text-secondary)]">
-            Not a generic prompt box. A persistent advisor backed by structured career graphs, verifiable evidence, and transparent rationale.
+          <p className="text-lead text-[var(--color-text-inverse-muted)]">
+            Not a generic prompt box. A persistent advisor backed by structured career graphs, verifiable evidence, and transparent rationale throughout your working life.
           </p>
         </div>
 
-        {/* Hero Narrative Split: Mentor Portrait & Natural Advisory UI */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* High-Contrast Narrative Split: Mentor Portrait & Natural Advisory UI */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left: Art-Directed Mentor Portrait */}
+          {/* Left: Documentary Mentor Portrait */}
           <div className="lg:col-span-5 relative">
-            <div className="rounded-xl overflow-hidden border border-[var(--color-border-default)] shadow-editorial bg-[var(--color-surface-raised)] relative aspect-4/3 lg:aspect-auto lg:h-[540px]">
+            <div className="border border-[var(--color-border-charcoal)] bg-[var(--color-charcoal-deep)] rounded-[var(--radius-card)] overflow-hidden shadow-floating relative aspect-4/3 lg:aspect-auto lg:h-[520px]">
               <Image
                 src={MEDIA_ASSETS.mentors.marcus.src}
-                alt={MEDIA_ASSETS.mentors.marcus.alt}
+                alt="Marcus Thorne - Career OS Assigned Mentor in Technical Leadership"
                 width={MEDIA_ASSETS.mentors.marcus.width}
                 height={MEDIA_ASSETS.mentors.marcus.height}
                 className="w-full h-full object-cover"
               />
               
-              {/* Bottom Caption Overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--color-neutral-950)]/85 via-[var(--color-neutral-950)]/40 to-transparent p-6 text-white">
-                <p className="text-xs font-mono font-bold tracking-wider text-white/70 uppercase">
-                  Assigned Domain Mentor
-                </p>
-                <h3 className="text-base font-bold text-white">
+              {/* Bottom Caption Bar */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--color-charcoal-deep)] via-[var(--color-charcoal-deep)]/70 to-transparent p-6 text-[var(--color-ivory-base)] space-y-1">
+                <span className="text-[10px] uppercase tracking-widest text-[var(--color-lavender-light)] font-semibold">
+                  System-Assigned Domain Advisor
+                </span>
+                <h3 className="text-lg font-bold text-white">
                   Marcus Thorne
                 </h3>
-                <p className="text-xs text-white/80">
+                <p className="text-xs text-[var(--color-text-inverse-muted)]">
                   Senior Engineering & Technical Leadership Advisory
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right: Realistic Structured Advisory Interface */}
+          {/* Right: Authentic Structured Advisory Interface */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* The Conversational Insight Block */}
-            <div className="p-8 sm:p-10 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial space-y-6">
+            <div className="p-8 sm:p-10 bg-[var(--color-charcoal-deep)] border border-[var(--color-border-charcoal)] rounded-[var(--radius-card)] space-y-6">
               
-              <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-brand-50)] dark:bg-[var(--color-brand-950)] flex items-center justify-center text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] font-bold text-sm">
-                    MT
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-sm text-[var(--color-text-primary)]">
-                      Marcus Thorne
-                    </h3>
-                    <p className="text-xs text-[var(--color-text-tertiary)]">
-                      System-assigned advisor &bull; 4 years mentoring history
-                    </p>
-                  </div>
+              <div className="flex items-center justify-between border-b border-[var(--color-border-charcoal)] pb-4">
+                <div>
+                  <h4 className="font-semibold text-sm text-[var(--color-ivory-base)]">
+                    Active Strategic Consultation
+                  </h4>
+                  <p className="text-xs text-[var(--color-text-inverse-muted)]">
+                    Session 14 &bull; Calibration against Staff Architecture Benchmark
+                  </p>
                 </div>
-                <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-[var(--color-brand-50)] text-[var(--color-brand-600)] font-bold">
-                  Active Consultation
+                <span className="text-[11px] font-semibold text-[var(--color-lavender-base)] px-2.5 py-1 bg-white/5 border border-white/10 rounded-[var(--radius-sm)]">
+                  Evidence-Grounded
                 </span>
               </div>
 
-              {/* Natural Advisory Dialog */}
-              <div className="space-y-4">
-                <div className="p-5 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] text-sm sm:text-base text-[var(--color-text-primary)] leading-relaxed">
-                  &ldquo;You said leadership is your next priority. You&apos;ve now built the technical architecture evidence in your Passport, but demonstrable cross-functional management exposure is still missing for a Staff role.&rdquo;
-                </div>
+              {/* Natural Advisory Dialogue */}
+              <div className="p-5 bg-white/5 border border-white/10 rounded-[var(--radius-sm)] text-sm sm:text-base text-[var(--color-ivory-base)] leading-relaxed">
+                &ldquo;You noted that moving into Staff leadership is your priority for the next 18 months. You&apos;ve now anchored the distributed systems design deliverables in your Passport, but demonstrable cross-functional budget exposure is still missing for a Staff review.&rdquo;
               </div>
 
-              {/* Next Move Actionable Recommendation Card */}
-              <div className="p-6 rounded-lg bg-[var(--color-surface-base)] border-2 border-[var(--color-brand-300)] dark:border-[var(--color-brand-700)] space-y-4">
+              {/* Actionable Next Move Recommendation */}
+              <div className="p-6 bg-[var(--color-charcoal-base)] border border-[var(--color-border-charcoal)] rounded-[var(--radius-sm)] space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)]">
-                    RECOMMENDED NEXT MOVE
+                  <span className="section-label-light">
+                    Recommended Next Move
                   </span>
-                  <span className="text-xs font-semibold px-2 py-0.5 rounded bg-[var(--color-verified-light)] text-[var(--color-verified)]">
-                    High Impact
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-[var(--radius-sm)] bg-[var(--color-gold-base)]/20 text-[var(--color-gold-light)]">
+                    High Strategic Value
                   </span>
                 </div>
 
-                <h4 className="text-lg font-bold text-[var(--color-text-primary)]">
-                  Lead a small cross-functional deliverable
+                <h4 className="text-base sm:text-lg font-medium text-white">
+                  Lead a multi-team delivery specification with financial trade-offs
                 </h4>
 
-                <div className="space-y-1">
-                  <p className="text-xs font-bold text-[var(--color-text-secondary)] uppercase font-mono">
-                    STRATEGIC RATIONALE
-                  </p>
-                  <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                    Builds documented stakeholder and team delivery evidence before applying for your next promotion, closing the 28% gap in management competencies.
-                  </p>
-                </div>
+                <p className="text-xs sm:text-sm text-[var(--color-text-inverse-muted)] leading-relaxed">
+                  Builds documented stakeholder and team delivery evidence before applying for your next promotion, closing the 28% gap in strategic leadership competencies.
+                </p>
               </div>
 
-              {/* Transparency Provenance Footer */}
-              <div className="pt-2 flex flex-wrap items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+              {/* Provenance & CTA */}
+              <div className="pt-3 border-t border-[var(--color-border-charcoal)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[var(--color-text-inverse-muted)]">
                 <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[var(--color-verified)]" />
+                  <ShieldCheck className="w-4 h-4 text-[var(--color-lavender-base)]" />
                   Factor provenance: Career Graph benchmark &bull; Verified skills record
                 </span>
                 <Link
                   href={ROUTES.PRODUCT_AI_CAREER_MENTOR}
-                  className="font-semibold text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] hover:underline inline-flex items-center gap-1"
+                  className="font-semibold text-[var(--color-ivory-base)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4"
                 >
                   Explore AI Career Mentor <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
@@ -130,6 +123,10 @@ export function MentorStorySection() {
         </div>
 
       </div>
+
+      {/* Subtle organic background motif */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-[var(--color-lavender-base)]/5 blur-3xl rounded-full pointer-events-none" />
     </section>
   );
 }
+

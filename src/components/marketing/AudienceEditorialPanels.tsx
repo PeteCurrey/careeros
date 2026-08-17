@@ -1,111 +1,107 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
-import { Button } from '@/components/ui/Button';
 import { MEDIA_ASSETS } from '@/lib/media';
-import { ArrowRight, GraduationCap, Briefcase, School, Building2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-interface AudiencePanel {
+interface AudienceFeature {
   id: string;
+  num: string;
   badge: string;
-  title: string;
   headline: string;
   description: string;
-  bullets: string[];
+  points: string[];
   href: string;
-  cta: string;
+  ctaText: string;
   image: {
     src: string;
     alt: string;
     width: number;
     height: number;
   };
-  icon: React.ElementType;
 }
 
-const PANELS: AudiencePanel[] = [
+const AUDIENCES: AudienceFeature[] = [
   {
     id: 'students',
-    badge: 'STUDENTS & EARLY CAREERS',
-    title: 'For Students',
-    headline: 'Work out where you&apos;re going — and what it takes to get there.',
-    description: 'Explore pathways across university, college, apprenticeships, and trades. Build a verifiable portfolio of project evidence and carry your Career OS into the workforce.',
-    bullets: [
-      'Authentic pathway discovery without bias',
-      'Verifiable skills records from real projects',
-      'Direct connection to first opportunities',
-      'Free for life &bull; You own your data',
+    num: '01',
+    badge: 'Students & Early Careers',
+    headline: 'You shouldn\x27t have to know your whole future at 17.',
+    description: 'Explore pathways across university, technical apprenticeships, trades, and emerging fields. Build a verifiable portfolio of hands-on project evidence and carry your Career OS into the workforce.',
+    points: [
+      'Authentic pathway discovery without institutional bias',
+      'Equal visual weight and parity for technical apprenticeships and university degrees',
+      'Direct connection to first launch opportunities based on capability',
+      'Free for life &bull; You own and control your data sovereignly',
     ],
     href: ROUTES.FOR_STUDENTS,
-    cta: 'Explore for Students',
+    ctaText: 'Explore for Students',
     image: MEDIA_ASSETS.audiences.students,
-    icon: GraduationCap,
   },
   {
     id: 'professionals',
-    badge: 'PROFESSIONALS & LEADERS',
-    title: 'For Professionals',
-    headline: 'Your next role is only one part of your career.',
-    description: 'Continuously compound your capability, execute lateral industry pivots, benchmark market compensation, or prepare for entrepreneurship and global mobility.',
-    bullets: [
-      'Strategic next move advisory',
-      'Capability gap closure guidance',
-      'Autonomous & private opportunity agent',
-      'Preserve and carry your lifelong evidence',
+    num: '02',
+    badge: 'Professionals & Leaders',
+    headline: 'The job you have now isn\x27t the end of the story.',
+    description: 'Continuously compound your capability, execute lateral industry pivots, benchmark market compensation horizons, or prepare for entrepreneurship and global mobility.',
+    points: [
+      'Strategic next-move advisory calibrated to your trajectory',
+      'Capability gap closure and management benchmark guidance',
+      'Autonomous & private opportunity matching without public job searching',
+      'Preserve and carry your verified evidence across every employer',
     ],
     href: ROUTES.FOR_PROFESSIONALS,
-    cta: 'Explore for Professionals',
+    ctaText: 'Explore for Professionals',
     image: MEDIA_ASSETS.audiences.professionals,
-    icon: Briefcase,
   },
   {
     id: 'schools',
-    badge: 'HIGH SCHOOLS & DISTRICTS',
-    title: 'For High Schools',
-    headline: 'Personalised career development for every student.',
-    description: 'Equip counsellors with intelligent tools, support college, technical trade, and apprenticeship pathways equally, and protect minors under strict FERPA/COPPA safeguarding.',
-    bullets: [
+    num: '03',
+    badge: 'High Schools & Districts',
+    headline: 'Personal career guidance shouldn\x27t depend on how much time a counsellor has.',
+    description: 'Equip counsellors with intelligent tools, support college and technical trade pathways equally, and protect minors under strict institutional data safeguarding with zero advertising.',
+    points: [
       'Equitable parity across university, trades & apprenticeships',
-      'Institutional safeguarding & zero advertising',
-      'Measurable post-graduation outcome tracking',
-      'Become a launch education partner',
+      'Institutional safeguarding, zero commercial ads, and strict privacy',
+      'Measurable longitudinal post-graduation outcome tracking',
+      'Become a launch educational partner school or district',
     ],
     href: ROUTES.FOR_HIGH_SCHOOLS,
-    cta: 'Explore for High Schools',
+    ctaText: 'Explore for High Schools',
     image: MEDIA_ASSETS.audiences.schools,
-    icon: School,
   },
   {
     id: 'employers',
-    badge: 'EMPLOYERS & HIRING TEAMS',
-    title: 'For Employers',
-    headline: 'Find people by potential, evidence and fit — not just keywords on a résumé.',
-    description: 'Execute responsible candidate discovery based on demonstrated competence and mutual alignment, supported by explainable Employer Agent decision support with full human oversight.',
-    bullets: [
-      'Evidence-based talent matching',
-      'Explainable recommendation factors',
-      'Early-career and apprenticeship pipelines',
-      'Become a launch employer partner',
+    num: '04',
+    badge: 'Forward-Thinking Employers',
+    headline: 'Find more than the right résumé.',
+    description: 'Execute responsible candidate discovery based on demonstrated competence and mutual alignment, supported by explainable decision support with human oversight kept central.',
+    points: [
+      'Evidence-based candidate matching beyond static keyword filters',
+      'Explainable recommendation factors with transparent criteria provenance',
+      'Direct early-career and apprenticeship talent pipelines',
+      'Become a founding launch employer partner',
     ],
     href: ROUTES.FOR_EMPLOYERS,
-    cta: 'Explore for Employers',
+    ctaText: 'Explore for Employers',
     image: MEDIA_ASSETS.audiences.employers,
-    icon: Building2,
   },
 ];
 
 export function AudienceEditorialPanels() {
   return (
-    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
-      <div className="container-wide space-y-20">
+    <section className="section-editorial bg-[var(--color-ivory-base)] border-b border-[var(--color-border-default)]">
+      <div className="container-editorial space-y-24">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs font-mono font-bold tracking-widest text-[var(--color-brand-600)] uppercase">
+          <span className="section-label">
             Ecosystem Audiences
-          </p>
-          <h2 className="text-display-section text-[var(--color-text-primary)]">
+          </span>
+          <h2 className="text-display-section text-[var(--color-charcoal-deep)]">
             Four career worlds. One operating system.
           </h2>
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -113,53 +109,64 @@ export function AudienceEditorialPanels() {
           </p>
         </div>
 
-        {/* 4 Large Editorial Panels */}
-        <div className="space-y-16">
-          {PANELS.map((panel, idx) => {
+        {/* 4 Varied Editorial Visual Sections */}
+        <div className="space-y-24">
+          {AUDIENCES.map((aud, idx) => {
             const isReversed = idx % 2 === 1;
-            const Icon = panel.icon;
             return (
               <div
-                key={panel.id}
-                className="p-8 sm:p-12 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-editorial grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+                key={aud.id}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center pt-12 border-t border-[var(--color-border-default)]"
               >
-                {/* Text Content */}
+                {/* Narrative Column */}
                 <div className={`space-y-6 ${isReversed ? 'lg:col-span-6 lg:order-2' : 'lg:col-span-6'}`}>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs font-mono font-bold text-[var(--color-brand-600)]">
-                    <Icon className="w-3.5 h-3.5" /> {panel.badge}
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-semibold text-[var(--color-taupe-600)]">
+                      {aud.num}
+                    </span>
+                    <span className="text-[var(--color-border-strong)]">/</span>
+                    <span className="section-label">
+                      {aud.badge}
+                    </span>
                   </div>
 
-                  <h3 className="text-headline-editorial text-[var(--color-text-primary)]" dangerouslySetInnerHTML={{ __html: panel.headline }} />
+                  <h3 className="text-display-section text-[var(--color-charcoal-deep)] text-2xl sm:text-3xl lg:text-4xl leading-tight">
+                    {aud.headline}
+                  </h3>
 
                   <p className="text-body-editorial text-[var(--color-text-secondary)] leading-relaxed">
-                    {panel.description}
+                    {aud.description}
                   </p>
 
-                  <ul className="space-y-2.5 pt-2">
-                    {panel.bullets.map((b, bIdx) => (
-                      <li key={bIdx} className="text-xs font-medium text-[var(--color-text-primary)] flex items-start gap-2">
-                        <span className="text-[var(--color-brand-600)] font-bold text-sm leading-none">&bull;</span>
-                        <span dangerouslySetInnerHTML={{ __html: b }} />
+                  <ul className="space-y-2.5 pt-2 text-xs text-[var(--color-charcoal-deep)] font-medium">
+                    {aud.points.map((p, pIdx) => (
+                      <li key={pIdx} className="flex items-start gap-2.5">
+                        <span className="text-[var(--color-taupe-600)] font-bold text-sm leading-none">&bull;</span>
+                        <span dangerouslySetInnerHTML={{ __html: p }} />
                       </li>
                     ))}
                   </ul>
 
                   <div className="pt-4">
-                    <Button href={panel.href} variant="secondary" size="md" className="shadow-xs font-semibold">
-                      {panel.cta} <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    <Link
+                      href={aud.href}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-charcoal-deep)] hover:text-black underline underline-offset-4"
+                    >
+                      <span>{aud.ctaText}</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
 
-                {/* Photography Asset */}
+                {/* Documentary Photography Column */}
                 <div className={`relative ${isReversed ? 'lg:col-span-6 lg:order-1' : 'lg:col-span-6'}`}>
-                  <div className="rounded-lg overflow-hidden border border-[var(--color-border-default)] shadow-card aspect-16/10 relative group">
+                  <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle aspect-16/10 relative group">
                     <Image
-                      src={panel.image.src}
-                      alt={panel.image.alt}
-                      width={panel.image.width}
-                      height={panel.image.height}
-                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-[1.02]"
+                      src={aud.image.src}
+                      alt={aud.image.alt}
+                      width={aud.image.width}
+                      height={aud.image.height}
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.01]"
                     />
                   </div>
                 </div>
@@ -172,3 +179,4 @@ export function AudienceEditorialPanels() {
     </section>
   );
 }
+

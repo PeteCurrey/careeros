@@ -2,32 +2,34 @@ import React from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline' | 'destructive';
+export type ButtonVariant = 'primary' | 'secondary' | 'dark' | 'ghost' | 'outline' | 'destructive';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-[var(--color-brand-600)] text-white hover:bg-[var(--color-brand-700)] active:bg-[var(--color-brand-800)] border border-transparent shadow-sm',
+    'bg-[var(--color-charcoal-base)] text-[var(--color-ivory-base)] hover:bg-[var(--color-charcoal-deep)] active:bg-black border border-transparent shadow-xs',
   secondary:
-    'bg-[var(--color-surface-raised)] text-[var(--color-text-primary)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)]',
+    'bg-transparent text-[var(--color-charcoal-deep)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-border-strong)] hover:border-[var(--color-charcoal-base)]',
+  dark:
+    'bg-[var(--color-ivory-base)] text-[var(--color-charcoal-deep)] hover:bg-white active:bg-[var(--color-ivory-deep)] border border-transparent shadow-xs font-semibold',
   ghost:
     'bg-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-interactive)] border border-transparent',
   outline:
-    'bg-transparent text-[var(--color-brand-600)] dark:text-[var(--color-brand-400)] hover:bg-[var(--color-brand-50)] dark:hover:bg-[var(--color-brand-950)] border border-[var(--color-border-brand)]',
+    'bg-transparent text-[var(--color-charcoal-base)] hover:bg-[var(--color-surface-interactive)] border border-[var(--color-charcoal-base)]',
   destructive:
     'bg-[var(--color-danger)] text-white hover:opacity-90 border border-transparent',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'px-3 py-1.5 text-xs font-medium rounded-md gap-1.5',
-  md: 'px-4 py-2 text-sm font-semibold rounded-md gap-2',
-  lg: 'px-6 py-3 text-base font-semibold rounded-lg gap-2.5',
+  sm: 'px-3.5 py-1.5 text-xs font-semibold rounded-[var(--radius-button)] gap-1.5',
+  md: 'px-5 py-2.5 text-sm font-semibold rounded-[var(--radius-button)] gap-2',
+  lg: 'px-7 py-3.5 text-base font-semibold rounded-[var(--radius-button)] gap-2.5',
 };
 
 // Shared visual base classes
 const baseClass = (variant: ButtonVariant, size: ButtonSize, extra?: string) =>
   cn(
-    'inline-flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus)] cursor-pointer',
+    'inline-flex items-center justify-center transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus)] cursor-pointer tracking-tight font-sans',
     variantStyles[variant],
     sizeStyles[size],
     extra,
@@ -84,3 +86,4 @@ export function Button(props: ButtonProps) {
   const { ...rest } = props as ActionButtonProps;
   return <ActionButton {...rest} />;
 }
+

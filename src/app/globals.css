@@ -1,117 +1,111 @@
 @import "tailwindcss";
 
 /* ============================================================
-   CAREER OS DESIGN SYSTEM TOKENS (2026 Editorial Reset)
+   CAREER OS DESIGN SYSTEM TOKENS (Editorial Venture Reset)
    
-   Aesthetic: Premium consumer tech + modern editorial publication
-   + serious professional infrastructure.
-   Light, warm, human-first, visually grounded.
+   Aesthetic: Bespoke editorial publishing + modern technology
+   + serious global career infrastructure.
+   Warm Ivory surfaces, Charcoal contrast, Taupe neutrals,
+   restrained Lavender/Gold accents, thin 1px rules, flat geometry.
    ============================================================ */
 
 @theme {
   /* --- Typography --- */
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: var(--font-serif), 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  /* --- Brand Accent (Authoritative Cobalt / Deep Indigo) --- */
-  --color-brand-50: oklch(98% 0.015 255);
-  --color-brand-100: oklch(94% 0.04 255);
-  --color-brand-200: oklch(88% 0.08 255);
-  --color-brand-300: oklch(78% 0.14 255);
-  --color-brand-400: oklch(66% 0.19 255);
-  --color-brand-500: oklch(55% 0.24 255);
-  --color-brand-600: oklch(47% 0.25 255);
-  --color-brand-700: oklch(40% 0.22 255);
-  --color-brand-800: oklch(32% 0.18 255);
-  --color-brand-900: oklch(24% 0.14 255);
-  --color-brand-950: oklch(16% 0.09 255);
+  /* --- Career Ivory Family (Core Editorial Light Backgrounds) --- */
+  --color-ivory-base: #F6F6EE;
+  --color-ivory-warm: #FAFAF5;
+  --color-ivory-deep: #F0EFE7;
+  --color-ivory-border: #E5E4D8;
 
-  /* --- Warm Human Neutrals (Stone / Off-white / Charcoal) --- */
-  --color-neutral-25: oklch(99.4% 0.003 85);
-  --color-neutral-50: oklch(98.5% 0.004 85);
-  --color-neutral-100: oklch(96.2% 0.006 85);
-  --color-neutral-200: oklch(91.8% 0.008 85);
-  --color-neutral-300: oklch(86.5% 0.012 85);
-  --color-neutral-400: oklch(70% 0.016 85);
-  --color-neutral-500: oklch(54% 0.018 85);
-  --color-neutral-600: oklch(42% 0.016 85);
-  --color-neutral-700: oklch(32% 0.014 85);
-  --color-neutral-800: oklch(22% 0.012 85);
-  --color-neutral-900: oklch(15% 0.010 85);
-  --color-neutral-950: oklch(11% 0.008 85);
+  /* --- Career Charcoal Family (Strong High-Contrast Dark & Text) --- */
+  --color-charcoal-base: #343434;
+  --color-charcoal-deep: #202020;
+  --color-charcoal-light: #4A4A4A;
+  --color-charcoal-border: #444444;
+
+  /* --- Career Taupe Family (Warm Editorial Neutrals & Diagrams) --- */
+  --color-taupe-600: #7A6D60;
+  --color-taupe-500: #8A8177;
+  --color-taupe-400: #A59D94;
+  --color-taupe-300: #C2BBB3;
+  --color-taupe-100: #EBE7E2;
+  --color-taupe-50: #F5F3F0;
+
+  /* --- Career Lavender Family (Identity, Discovery & Reflection) --- */
+  --color-lavender-base: #CDBBD2;
+  --color-lavender-light: #E8DFE9;
+  --color-lavender-deep: #B49CB9;
+  --color-lavender-subtle: #F3EEF4;
+
+  /* --- Career Mauve Family (Restrained Accent & Emphasis) --- */
+  --color-mauve-base: #8B758D;
+  --color-mauve-strong: #9250A0;
+  --color-mauve-light: #A38DA5;
+
+  /* --- Career Gold Family (Opportunity, Progression & Highlights) --- */
+  --color-gold-base: #DDD36D;
+  --color-gold-light: #EFE9B8;
+  --color-gold-deep: #C7BC54;
+  --color-gold-subtle: #FAF7E6;
 
   /* --- Semantic Accents --- */
-  --color-success: oklch(54% 0.17 155);
-  --color-success-light: oklch(95% 0.05 155);
-  --color-verified: oklch(50% 0.19 155);
-  --color-verified-light: oklch(94% 0.05 155);
-  --color-warning: oklch(70% 0.17 75);
-  --color-warning-light: oklch(96% 0.05 75);
-  --color-danger: oklch(55% 0.22 25);
-  --color-danger-light: oklch(95% 0.05 25);
+  --color-success: #2E7D56;
+  --color-success-light: #EBF5F0;
+  --color-verified: #2E7D56;
+  --color-verified-light: #EBF5F0;
+  --color-warning: #B27B1A;
+  --color-warning-light: #FDF8EB;
+  --color-danger: #BA3D34;
+  --color-danger-light: #FBEFEF;
 
-  /* --- Surfaces --- */
-  --color-surface-base: var(--color-neutral-25);
-  --color-surface-raised: #ffffff;
-  --color-surface-warm: oklch(98% 0.005 85);
-  --color-surface-sunken: oklch(95.5% 0.006 85);
-  --color-surface-interactive: oklch(93.5% 0.008 85);
+  /* --- Active Surfaces Mapping --- */
+  --color-surface-base: var(--color-ivory-base);
+  --color-surface-raised: #FFFFFF;
+  --color-surface-warm: var(--color-ivory-warm);
+  --color-surface-sunken: var(--color-ivory-deep);
+  --color-surface-taupe: var(--color-taupe-50);
+  --color-surface-interactive: #EBEAE0;
+  --color-surface-dark: var(--color-charcoal-base);
+  --color-surface-dark-deep: var(--color-charcoal-deep);
 
   /* --- Text Hierarchy --- */
-  --color-text-primary: oklch(16% 0.01 85);
-  --color-text-secondary: oklch(38% 0.015 85);
-  --color-text-tertiary: oklch(54% 0.014 85);
-  --color-text-disabled: oklch(72% 0.010 85);
-  --color-text-inverse: oklch(99% 0.002 85);
-  --color-text-brand: var(--color-brand-600);
+  --color-text-primary: var(--color-charcoal-deep);
+  --color-text-secondary: #55514D;
+  --color-text-tertiary: #7D7974;
+  --color-text-disabled: #A6A29C;
+  --color-text-inverse: var(--color-ivory-base);
+  --color-text-inverse-muted: #D1CFBF;
+  --color-text-accent: var(--color-taupe-600);
+  --color-text-mauve: var(--color-mauve-base);
 
-  /* --- Borders & Outlines --- */
-  --color-border-default: oklch(90% 0.007 85);
-  --color-border-subtle: oklch(94% 0.005 85);
-  --color-border-strong: oklch(76% 0.012 85);
-  --color-border-brand: var(--color-brand-400);
+  /* --- Thin Rules & Borders --- */
+  --color-border-default: #E2E1D4;
+  --color-border-subtle: #EBEAE0;
+  --color-border-strong: #BCBAAA;
+  --color-border-charcoal: rgba(255, 255, 255, 0.12);
+  --color-border-taupe: #C2BBB3;
 
   /* --- Accessibility Focus --- */
-  --color-focus: var(--color-brand-500);
+  --color-focus: var(--color-charcoal-base);
 
-  /* --- Radii (Refined, tighter premium architecture) --- */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
-  --radius-card: 0.75rem;
-  --radius-button: 0.375rem;
+  /* --- Minimal Radii System (Squared-Edge Editorial Design) --- */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-card: 2px;
+  --radius-button: 2px;
+  --radius-tag: 2px;
   --radius-full: 9999px;
 
-  /* --- Elevations --- */
-  --shadow-subtle: 0 1px 3px oklch(15% 0.01 85 / 0.04), 0 1px 2px oklch(15% 0.01 85 / 0.02);
-  --shadow-card: 0 4px 20px -2px oklch(15% 0.01 85 / 0.06), 0 2px 6px -1px oklch(15% 0.01 85 / 0.03);
-  --shadow-editorial: 0 20px 40px -15px oklch(15% 0.01 85 / 0.08), 0 8px 16px -6px oklch(15% 0.01 85 / 0.04);
-  --shadow-floating: 0 25px 60px -15px oklch(15% 0.01 85 / 0.12);
-}
-
-/* ============================================================
-   DARK MODE
-   ============================================================ */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-surface-base: oklch(13% 0.010 264);
-    --color-surface-raised: oklch(17% 0.010 264);
-    --color-surface-warm: oklch(15% 0.010 264);
-    --color-surface-sunken: oklch(10% 0.008 264);
-    --color-surface-interactive: oklch(21% 0.012 264);
-    --color-text-primary: oklch(96% 0.004 264);
-    --color-text-secondary: oklch(74% 0.012 264);
-    --color-text-tertiary: oklch(56% 0.014 264);
-    --color-text-disabled: oklch(38% 0.012 264);
-    --color-border-default: oklch(26% 0.012 264);
-    --color-border-subtle: oklch(20% 0.010 264);
-    --color-border-strong: oklch(36% 0.016 264);
-    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.4);
-    --shadow-card: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
-    --shadow-editorial: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
-  }
+  /* --- Flat Editorial Elevations (Subtle & Restrained) --- */
+  --shadow-subtle: 0 1px 2px rgba(52, 52, 52, 0.04);
+  --shadow-card: 0 2px 8px -2px rgba(52, 52, 52, 0.05);
+  --shadow-editorial: 0 16px 36px -12px rgba(52, 52, 52, 0.08);
+  --shadow-floating: 0 24px 50px -16px rgba(32, 32, 32, 0.12);
 }
 
 /* ============================================================
@@ -125,6 +119,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  background-color: var(--color-surface-base);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -151,7 +146,7 @@ body {
 *:focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 *:focus:not(:focus-visible) {
@@ -165,11 +160,11 @@ body {
   left: 1.5rem;
   z-index: 9999;
   padding: 0.75rem 1.5rem;
-  background: var(--color-text-primary);
-  color: var(--color-surface-raised);
+  background: var(--color-charcoal-deep);
+  color: var(--color-ivory-base);
   font-weight: 600;
   font-size: 0.875rem;
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   text-decoration: none;
   transition: top 150ms ease;
 }
@@ -182,40 +177,51 @@ body {
    EDITORIAL TYPOGRAPHY UTILITIES
    ============================================================ */
 .text-display-hero {
-  font-size: clamp(2.75rem, 5.5vw, 4.75rem);
-  font-weight: 750;
-  line-height: 1.05;
+  font-size: clamp(3rem, 5.5vw, 6.25rem);
+  font-weight: 350;
+  line-height: 1.04;
   letter-spacing: -0.035em;
   color: var(--color-text-primary);
 }
 
 .text-display-section {
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.12;
+  font-size: clamp(2.25rem, 3.8vw, 4.25rem);
+  font-weight: 350;
+  line-height: 1.1;
   letter-spacing: -0.025em;
   color: var(--color-text-primary);
 }
 
 .text-headline-editorial {
-  font-size: clamp(1.65rem, 2.75vw, 2.25rem);
-  font-weight: 650;
+  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+  font-weight: 400;
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.018em;
   color: var(--color-text-primary);
 }
 
+.text-serif-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+  font-weight: 350;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+}
+
 .text-lead {
-  font-size: clamp(1.125rem, 1.5vw, 1.35rem);
+  font-size: clamp(1.125rem, 1.4vw, 1.35rem);
   line-height: 1.6;
   color: var(--color-text-secondary);
-  font-weight: 400;
+  font-weight: 350;
 }
 
 .text-body-editorial {
   font-size: 1.0625rem;
   line-height: 1.7;
   color: var(--color-text-secondary);
+  font-weight: 400;
 }
 
 .text-caption-editorial {
@@ -224,58 +230,116 @@ body {
   color: var(--color-text-tertiary);
 }
 
+/* Section Sub-labels (Restrained Uppercase Sans, Never Monospace) */
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-taupe-600);
+}
+
+.section-label-light {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-ivory-warm);
+  opacity: 0.8;
+}
+
 /* ============================================================
    CONTAINER TIERS & SPACING
    ============================================================ */
+.container-editorial {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 4rem);
+}
+
 .container-site {
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 3rem);
+  padding-inline: clamp(1.25rem, 3.5vw, 3rem);
 }
 
 .container-wide {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1560px;
   margin-inline: auto;
   padding-inline: clamp(1.25rem, 4vw, 3.5rem);
 }
 
 .container-narrow {
   width: 100%;
-  max-width: 960px;
+  max-width: 980px;
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+  padding-inline: clamp(1.25rem, 3.5vw, 2.5rem);
 }
 
 .section-editorial {
-  padding-block: clamp(4.5rem, 8vw, 8rem);
+  padding-block: clamp(5rem, 9vw, 9.5rem);
+}
+
+.section-editorial-sm {
+  padding-block: clamp(3.5rem, 6vw, 6.5rem);
 }
 
 .section-editorial-lg {
-  padding-block: clamp(6rem, 11vw, 11rem);
+  padding-block: clamp(6.5rem, 12vw, 12.5rem);
 }
 
 /* ============================================================
-   ATMOSPHERIC & EDITORIAL GRADIENTS
+   EDITORIAL DIVIDERS & SURFACES
    ============================================================ */
-.hero-editorial-backdrop {
-  background: 
-    radial-gradient(ellipse 65% 50% at 75% 20%, oklch(55% 0.24 255 / 0.05) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, oklch(54% 0.17 155 / 0.03) 0%, transparent 60%),
-    linear-gradient(180deg, var(--color-surface-base) 0%, var(--color-surface-warm) 100%);
+.editorial-rule {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-border-default);
 }
 
-.editorial-surface-card {
-  background: var(--color-surface-raised);
+.editorial-rule-subtle {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-border-subtle);
+}
+
+.editorial-rule-dark {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.editorial-surface-flat {
+  background-color: var(--color-surface-raised);
   border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-card);
-  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms ease;
+  border-radius: var(--radius-card);
 }
 
-.editorial-surface-card:hover {
-  border-color: var(--color-border-strong);
-  box-shadow: var(--shadow-editorial);
-  transform: translateY(-2px);
+.editorial-surface-ivory {
+  background-color: var(--color-surface-warm);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-card);
+}
+
+.editorial-surface-dark {
+  background-color: var(--color-charcoal-base);
+  color: var(--color-ivory-base);
+  border-radius: var(--radius-none);
+}
+
+/* Mega menu dropdown container */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-ivory-base);
+  border-bottom: 1px solid var(--color-border-default);
+  box-shadow: 0 20px 40px -10px rgba(52, 52, 52, 0.08);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  z-index: 50;
 }
