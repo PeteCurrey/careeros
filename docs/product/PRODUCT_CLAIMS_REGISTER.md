@@ -34,3 +34,22 @@
 | **94% Evidence Overlap Metric** | `/product/ai-career-mentor` | `PROHIBITED_UNSUPPORTED` | Invented mathematical precision in UI mockup without calculation engine. | Engineering | 2026-08-17 | Removed from HeroMentorInterface; replaced with "RELEVANT EVIDENCE". |
 | **Zero Model Training on PII** | `/product/ai-career-mentor` | `PROHIBITED_UNSUPPORTED` | Absolute legal guarantee ahead of finalized vendor enterprise contracts. | Legal / AI | 2026-08-17 | Replaced with "Private career data handled under Career OS data controls". |
 | **Mentor Engine v2.4** | `/product/ai-career-mentor` | `PROHIBITED_UNSUPPORTED` | Invented release versioning. | Engineering | 2026-08-17 | Replaced with "CAREER OS MENTOR" / "Illustrative Career OS Interface". |
+
+---
+
+## Route: `/product/career-graph`
+
+| Claim | Route | Status | Evidence / Grounding | Owner | Last Verified | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Interactive Career Topology Explorer** | `/product/career-graph` | `ILLUSTRATIVE` | Interactive client-side topology component demonstrating capability deconstruction and lateral bridges across 6 disciplines. | Marketing / Eng | 2026-08-17 | Clearly labeled as illustrative product demonstration. |
+| **Non-Deterministic Exploration** | `/product/career-graph` | `VERIFIED_CURRENT` | Product principle; graph does not assign users to a single "best career" or calculate automated career destiny scores. | Trust & Safety | 2026-08-17 | Maintains full user human agency. |
+| **Transferable Capability vs Bridge Model** | `/product/career-graph` | `DESIGNED_DIRECTION` | Core architectural distinction between demonstrated strengths and necessary conversion requirements. | Product Design | 2026-08-17 | Prevents implying that capability overlap equals instant eligibility. |
+| **Cross-Industry Topology Mapping** | `/product/career-graph` | `DESIGNED_DIRECTION` | Approved product architecture linking capabilities to roles, qualifications, and industry clusters. | Product / Graph | 2026-08-17 | Phrased as designed direction; avoids claiming live millions-of-roles database. |
+| **Twin / Passport / Mentor / Agent Integration** | `/product/career-graph` | `DESIGNED_DIRECTION` | Ecosystem model where Twin adds personal context, Passport provides evidence, Mentor provides coaching, and Agent finds opportunities. | Architecture | 2026-08-17 | Communicates unified OS direction. |
+| **Regulated Profession Disclaimers** | `/product/career-graph` | `VERIFIED_CURRENT` | Explicit disclaimers for healthcare licensing, bar admissions, engineering charters, and trade licensures. | Legal / Compliance | 2026-08-17 | Prohibits implying legal equivalence across statutory roles. |
+| **Labour Market Intelligence Integration** | `/product/career-graph` | `DESIGNED_DIRECTION` | Planned ingestion of occupational and credential taxonomies as verified data feeds are deployed. | Data / Graph | 2026-08-17 | Avoids claiming live real-time vacancy scrapers or invented demand numbers. |
+| **Free for Individual Core Accounts** | `/product/career-graph` | `VERIFIED_CURRENT` | Commercial model: core individual access is free. | Commercial | 2026-08-17 | Standardized across platform. |
+| **Millions of Live Roles / 14,000 Skills** | `/product/career-graph` | `PROHIBITED_UNSUPPORTED` | Invented scale metrics ahead of production taxonomy deployment. | Data / Eng | 2026-08-17 | Prohibited in copy. |
+| **Deterministic Fit / Match Percentages (e.g. 88% fit)** | `/product/career-graph` | `PROHIBITED_UNSUPPORTED` | Manufactured numerical precision without statistical validation. | Product / AI | 2026-08-17 | Prohibited in copy. Replaced with qualitative feasibility tiers. |
+| **Guaranteed Transfer / Automatic Eligibility** | `/product/career-graph` | `PROHIBITED_UNSUPPORTED` | False legal/statutory promise. | Legal | 2026-08-17 | Prohibited in copy. Explicit bridge requirements detailed instead. |
+
