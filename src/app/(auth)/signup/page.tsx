@@ -2,78 +2,108 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ROUTES } from "@/lib/routes";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, AlertTriangle, ShieldAlert, Clock, ShieldCheck } from "lucide-react";
-import { createClient } from "@supabase/supabase-js";
+import { CheckCircle2, AlertTriangle, ShieldAlert, Clock, ShieldCheck, ArrowRight, KeyRound } from "lucide-react";
 import { evaluateAgeBracket, AgeCalculationResult } from "@/lib/auth/age-gating";
 import { DIRECT_ACCOUNT_MIN_AGE } from "@/lib/config/age-policy";
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
-const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
-
 export default function SignupPage() {
+  const router = useRouter();
+
+  // Screen 1 State: Account Details
   const [email, setEmail] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [guardianEmail, setGuardianEmail] = useState("");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "pending_guardian" | "error">("idle");
+
+  // Screen 2 State: 6-Digit OTP Verification
+  const [otpCode, setOtpCode] = useState("");
+  const [step, setStep] = useState<"details" | "otp_verify" | "pending_guardian">("details");
+
+  const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const ageEvaluation: AgeCalculationResult | null = dateOfBirth ? evaluateAgeBracket(dateOfBirth) : null;
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Step 1 Submission: Send 6-digit OTP
+  const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreedToTerms || !ageEvaluation) return;
 
-    if (ageEvaluation.isHardBlocked) {
-      return;
-    }
+    if (ageEvaluation.isHardBlocked) return;
 
     if (ageEvaluation.requiresGuardianConsent && !guardianEmail) {
       setErrorMessage("Parent or guardian email is required for users ages 13–15.");
       return;
     }
 
-    setStatus("loading");
+    setIsLoading(true);
     setErrorMessage("");
 
     try {
-      if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-        const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      const res = await fetch("/api/auth/otp/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          dateOfBirth,
+          guardianEmail: guardianEmail || undefined,
+          agreedToTerms,
+        }),
+      });
 
-        if (ageEvaluation.requiresGuardianConsent) {
-          // 13–15 accounts land in PENDING_GUARDIAN_CONSENT state
-          const { error } = await supabase.from("profiles").insert({
-            email,
-            date_of_birth: dateOfBirth,
-            age_bracket: "MINOR_13_17",
-            guardian_email: guardianEmail,
-            status: "PENDING_GUARDIAN_CONSENT",
-            consent_state: "PENDING",
-          });
-          if (error && error.code !== "23505") throw error;
-        } else {
-          // 16+ direct account (including 16–17 minor direct and 18+ adult)
-          const { error } = await supabase.from("profiles").insert({
-            email,
-            date_of_birth: dateOfBirth,
-            age_bracket: ageEvaluation.ageBracket,
-            status: "ACTIVE",
-            consent_state: "NOT_REQUIRED",
-          });
-          if (error && error.code !== "23505") throw error;
-        }
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to send verification code.");
       }
 
-      if (ageEvaluation.requiresGuardianConsent) {
-        setStatus("pending_guardian");
+      if (data.requiresGuardianConsent) {
+        setStep("pending_guardian");
       } else {
-        setStatus("success");
+        setStep("otp_verify");
       }
-    } catch {
-      setStatus("error");
-      setErrorMessage("Something went wrong. Please try again or contact support.");
+    } catch (err: unknown) {
+      setErrorMessage((err as Error).message || "Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Step 2 Submission: Verify 6-digit OTP
+  const handleVerifyOtp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (otpCode.length < 6) return;
+
+    setIsLoading(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/auth/otp/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          token: otpCode,
+          dateOfBirth,
+          guardianEmail: guardianEmail || undefined,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Invalid verification code.");
+      }
+
+      // Success -> Redirect to onboarding
+      router.push(ROUTES.APP_ONBOARDING);
+    } catch (err: unknown) {
+      setErrorMessage((err as Error).message || "Verification failed.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -84,14 +114,16 @@ export default function SignupPage() {
         {/* Heading */}
         <div className="space-y-1 text-center">
           <h1 className="text-xl font-bold text-[var(--color-text-primary)] tracking-tight">
-            Start your Career OS
+            {step === "otp_verify" ? "Verify your email" : "Start your Career OS"}
           </h1>
           <p className="text-xs text-[var(--color-text-tertiary)]">
-            Free for individuals. Persistent, private career operating system.
+            {step === "otp_verify"
+              ? `Enter the 6-digit verification code sent to ${email}`
+              : "Free for individuals. Persistent, private career operating system."}
           </p>
         </div>
 
-        {/* SCREEN 1: UNDER-13 HARD BLOCK */}
+        {/* SCREEN: UNDER-13 HARD BLOCK */}
         {ageEvaluation?.isHardBlocked ? (
           <div className="text-center space-y-4 py-4 border border-[var(--color-danger)]/20 bg-[var(--color-danger-light)]/30 rounded-lg p-5">
             <ShieldAlert className="w-10 h-10 text-[var(--color-danger)] mx-auto" />
@@ -114,8 +146,8 @@ export default function SignupPage() {
               Learn about Career OS for Schools &rarr;
             </Link>
           </div>
-        ) : status === "pending_guardian" ? (
-          /* SCREEN 2: 13-15 PENDING GUARDIAN CONSENT STATE */
+        ) : step === "pending_guardian" ? (
+          /* SCREEN: 13-15 PENDING GUARDIAN CONSENT STATE */
           <div className="text-center space-y-4 py-4">
             <Clock className="w-12 h-12 text-[var(--color-brand-600)] mx-auto animate-pulse" />
             <div className="space-y-1">
@@ -140,23 +172,67 @@ export default function SignupPage() {
             </div>
 
             <p className="text-xs text-[var(--color-text-tertiary)]">
-              Guardian contact recorded: <strong>{guardianEmail}</strong>.
+              Verification link dispatched to guardian: <strong>{guardianEmail}</strong>.
             </p>
           </div>
-        ) : status === "success" ? (
-          /* SCREEN 3: SUCCESS SCREEN */
-          <div className="text-center space-y-3 py-4">
-            <CheckCircle2 className="w-12 h-12 text-[var(--color-success)] mx-auto" />
-            <p className="text-sm font-semibold text-[var(--color-text-primary)]">
-              Account registered!
-            </p>
-            <p className="text-xs text-[var(--color-text-tertiary)] leading-relaxed">
-              We&apos;ve reserved your spot for <strong>{email}</strong>. Welcome to Career OS.
-            </p>
-          </div>
+        ) : step === "otp_verify" ? (
+          /* SCREEN 2: 6-DIGIT EMAIL OTP VERIFICATION */
+          <form onSubmit={handleVerifyOtp} className="space-y-4">
+            <div className="space-y-2">
+              <label htmlFor="otp-input" className="text-xs font-semibold text-[var(--color-text-primary)]">
+                6-digit verification code
+              </label>
+              <input
+                id="otp-input"
+                type="text"
+                maxLength={6}
+                autoComplete="one-time-code"
+                required
+                value={otpCode}
+                onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, ""))}
+                placeholder="123456"
+                className="w-full px-3 py-3 text-center text-xl tracking-[0.4em] font-mono rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-base)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)]"
+              />
+              <p className="text-[11px] text-[var(--color-text-tertiary)] text-center">
+                Code expires in 10 minutes.
+              </p>
+            </div>
+
+            {errorMessage && (
+              <p className="text-xs text-[var(--color-danger)] text-center">{errorMessage}</p>
+            )}
+
+            <Button
+              type="submit"
+              variant="primary"
+              size="md"
+              className="w-full"
+              disabled={isLoading || otpCode.length < 6}
+            >
+              {isLoading ? "Verifying…" : "Verify and Continue"}
+            </Button>
+
+            <div className="flex items-center justify-between text-xs pt-2">
+              <button
+                type="button"
+                onClick={() => setStep("details")}
+                className="text-[var(--color-text-tertiary)] hover:underline"
+              >
+                ← Back
+              </button>
+              <button
+                type="button"
+                onClick={handleSendOtp}
+                disabled={isLoading}
+                className="text-[var(--color-brand-600)] font-medium hover:underline"
+              >
+                Resend code
+              </button>
+            </div>
+          </form>
         ) : (
-          /* SCREEN 4: SIGNUP FORM */
-          <form onSubmit={handleSubmit} className="space-y-4">
+          /* SCREEN 1: FRICTIONLESS SIGNUP (Email + DOB + Terms) */
+          <form onSubmit={handleSendOtp} className="space-y-4">
             <div className="space-y-1">
               <label htmlFor="signup-email" className="text-xs font-semibold text-[var(--color-text-primary)]">
                 Email address
@@ -173,7 +249,7 @@ export default function SignupPage() {
               />
             </div>
 
-            {/* REAL DOB AGE GATE */}
+            {/* DOB AGE GATE */}
             <div className="space-y-1">
               <label htmlFor="signup-dob" className="text-xs font-semibold text-[var(--color-text-primary)]">
                 Date of Birth
@@ -243,7 +319,7 @@ export default function SignupPage() {
               </label>
             </div>
 
-            {status === "error" && (
+            {errorMessage && (
               <p className="text-xs text-[var(--color-danger)]">{errorMessage}</p>
             )}
 
@@ -252,10 +328,10 @@ export default function SignupPage() {
               variant="primary"
               size="md"
               className="w-full"
-              disabled={status === "loading" || !agreedToTerms || !dateOfBirth || ageEvaluation?.isHardBlocked}
+              disabled={isLoading || !agreedToTerms || !dateOfBirth || ageEvaluation?.isHardBlocked}
             >
-              {status === "loading"
-                ? "Processing registration…"
+              {isLoading
+                ? "Sending verification code…"
                 : ageEvaluation?.requiresGuardianConsent
                 ? "Submit for Guardian Verification"
                 : "Create Free Account"}
@@ -263,7 +339,7 @@ export default function SignupPage() {
           </form>
         )}
 
-        {status !== "success" && status !== "pending_guardian" && (
+        {step === "details" && (
           <div className="text-center text-xs text-[var(--color-text-tertiary)]">
             Already have an account?{" "}
             <Link href={ROUTES.LOGIN} className="text-[var(--color-brand-600)] font-semibold hover:underline">

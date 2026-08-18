@@ -64,6 +64,7 @@ export const ROUTES = {
 
   // Trust
   TRUST: '/trust',
+  TRUST_COMPLIANCE: '/trust/compliance',
   TRUST_RESPONSIBLE_AI: '/trust/responsible-ai',
   TRUST_AI_TRANSPARENCY: '/trust/ai-transparency',
   TRUST_HUMAN_OVERSIGHT: '/trust/human-oversight',
@@ -136,9 +137,11 @@ export const ROUTES = {
   APP: '/app',
   APP_DASHBOARD: '/app',
   APP_ONBOARDING: '/app/onboarding',
+  APP_SECURITY_SETUP: '/app/security/setup',
   APP_SETTINGS: '/app/settings',
   APP_SETTINGS_ACCOUNT: '/app/settings/account',
   APP_SETTINGS_PRIVACY: '/app/settings/privacy',
+  APP_SETTINGS_SECURITY: '/app/settings/security',
 
   // Events Platform
   EVENTS: '/events',
@@ -265,6 +268,15 @@ export const ROUTES = {
   ADMIN_REVENUE_SPONSORSHIP: '/admin/revenue/sponsorship',
   ADMIN_REVENUE_TRANSACTIONS: '/admin/revenue/transactions',
   ADMIN_REVENUE_PRODUCTS: '/admin/revenue/products',
+
+  // Compliance & Assurance
+  ADMIN_COMPLIANCE: '/admin/compliance',
+  ADMIN_COMPLIANCE_REGISTRY: '/admin/compliance/registry',
+  ADMIN_COMPLIANCE_EVIDENCE: '/admin/compliance/evidence',
+  ADMIN_COMPLIANCE_RENEWALS: '/admin/compliance/renewals',
+  ADMIN_COMPLIANCE_REGULATIONS: '/admin/compliance/regulations',
+  ADMIN_COMPLIANCE_AI_GOVERNANCE: '/admin/compliance/ai-governance',
+  ADMIN_COMPLIANCE_REQUESTS: '/admin/compliance/requests',
 
   // System
   ADMIN_SYSTEM_INTEGRATIONS: '/admin/system/integrations',

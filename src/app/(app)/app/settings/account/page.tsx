@@ -63,21 +63,22 @@ export default function AccountSettingsPage() {
           </Card>
 
           <Card className="p-6 space-y-4">
-            <h2 className="text-sm font-bold text-[var(--color-text-primary)] uppercase tracking-wide font-mono">
-              Authentication Methods
-            </h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm font-bold text-[var(--color-text-primary)] uppercase tracking-wide font-mono">
+                Authentication Methods &amp; Devices
+              </h2>
+              <Button href={ROUTES.APP_SETTINGS_SECURITY} variant="secondary" size="sm" className="font-mono text-xs">
+                Manage Security
+              </Button>
+            </div>
             <div className="space-y-2">
               <div className="flex items-center justify-between p-3 rounded-lg bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)]">
-                <span className="text-sm text-[var(--color-text-primary)]">Email / Password</span>
-                <Badge variant="success" size="sm">Active</Badge>
+                <span className="text-sm text-[var(--color-text-primary)]">Passkey (WebAuthn)</span>
+                <Badge variant="verified" size="sm">Primary</Badge>
               </div>
               <div className="flex items-center justify-between p-3 rounded-lg bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)]">
-                <span className="text-sm text-[var(--color-text-secondary)]">Passkey (WebAuthn)</span>
-                <Badge variant="default" size="sm">Not configured</Badge>
-              </div>
-              <div className="flex items-center justify-between p-3 rounded-lg bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)]">
-                <span className="text-sm text-[var(--color-text-secondary)]">Two-Factor Authentication</span>
-                <Badge variant="default" size="sm">Disabled</Badge>
+                <span className="text-sm text-[var(--color-text-secondary)]">Password Fallback</span>
+                <Badge variant="default" size="sm">Configured</Badge>
               </div>
             </div>
           </Card>

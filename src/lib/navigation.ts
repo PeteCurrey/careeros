@@ -190,22 +190,24 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
     label: 'Trust',
     groups: [
       {
-        label: 'Responsible AI',
+        label: 'Assurance & AI Governance',
         items: [
-          { label: 'Responsible AI', href: ROUTES.TRUST_RESPONSIBLE_AI },
-          { label: 'AI Transparency', href: ROUTES.TRUST_AI_TRANSPARENCY },
-          { label: 'Human Oversight', href: ROUTES.TRUST_HUMAN_OVERSIGHT },
-          { label: 'Fairness & Bias', href: ROUTES.TRUST_FAIRNESS_BIAS },
+          { label: 'Compliance & Assurance', href: ROUTES.TRUST_COMPLIANCE, description: 'Independent assurance, SOC 2, ISO standards, and US regulatory controls.' },
+          { label: 'Responsible AI', href: ROUTES.TRUST_RESPONSIBLE_AI, description: 'Core principles, risk tiers, and AI lifecycle governance.' },
+          { label: 'AI Transparency', href: ROUTES.TRUST_AI_TRANSPARENCY, description: 'Public use-case register, model disclosures, and system change logs.' },
+          { label: 'Human Oversight', href: ROUTES.TRUST_HUMAN_OVERSIGHT, description: 'Decision boundaries, human-in-the-loop, and user recourse.' },
+          { label: 'Fairness & Bias', href: ROUTES.TRUST_FAIRNESS_BIAS, description: '7-stage testing protocol and anti-bias evaluations.' },
         ],
       },
       {
-        label: 'Privacy & Safety',
+        label: 'Privacy & Safeguarding',
         items: [
-          { label: 'Data Ethics', href: ROUTES.TRUST_DATA_ETHICS },
-          { label: 'Safeguarding', href: ROUTES.TRUST_SAFEGUARDING },
-          { label: 'Security', href: ROUTES.TRUST_SECURITY },
-          { label: 'Verification', href: ROUTES.TRUST_VERIFICATION },
-          { label: 'Accessibility', href: ROUTES.TRUST_ACCESSIBILITY },
+          { label: 'Compliance & Assurance', href: ROUTES.TRUST_COMPLIANCE, description: 'Verified compliance frameworks and assurance documentation.' },
+          { label: 'Data Ethics', href: ROUTES.TRUST_DATA_ETHICS, description: 'Zero data sales, no behavioural ad tracking, and data minimisation.' },
+          { label: 'Safeguarding', href: ROUTES.TRUST_SAFEGUARDING, description: 'Student protection, minor access gating, and school safety.' },
+          { label: 'Security', href: ROUTES.TRUST_SECURITY, description: 'Encryption, tenant isolation, and PostgreSQL RLS security.' },
+          { label: 'Verification', href: ROUTES.TRUST_VERIFICATION, description: 'Evidence verification and credential provenance.' },
+          { label: 'Accessibility', href: ROUTES.TRUST_ACCESSIBILITY, description: 'WCAG 2.2 Level AA accessibility commitment.' },
         ],
       },
     ],
@@ -298,6 +300,7 @@ export const footerNav: NavGroup[] = [
     label: 'Trust',
     items: [
       { label: 'Trust Centre', href: ROUTES.TRUST },
+      { label: 'Compliance & Assurance', href: ROUTES.TRUST_COMPLIANCE },
       { label: 'Responsible AI', href: ROUTES.TRUST_RESPONSIBLE_AI },
       { label: 'Safeguarding', href: ROUTES.TRUST_SAFEGUARDING },
       { label: 'Data Ethics', href: ROUTES.TRUST_DATA_ETHICS },
@@ -319,6 +322,7 @@ export const footerNav: NavGroup[] = [
     label: 'Regulatory',
     items: [
       { label: 'Regulatory Alignment', href: ROUTES.REGULATORY },
+      { label: 'Compliance & Assurance', href: ROUTES.TRUST_COMPLIANCE },
       { label: 'United States', href: ROUTES.REGULATORY_UNITED_STATES },
       { label: 'Student Privacy', href: ROUTES.REGULATORY_STUDENT_PRIVACY },
       { label: 'Automated Hiring', href: ROUTES.REGULATORY_AUTOMATED_HIRING },
