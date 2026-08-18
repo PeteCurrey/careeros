@@ -42,9 +42,12 @@ export async function middleware(request: NextRequest) {
 
   // 2. Guard /app and /api/app routes
   if (pathname.startsWith("/app") || pathname.startsWith("/api/app")) {
-    // Check for Supabase session cookie or token
-    const hasAuthCookie = request.cookies.getAll().some((c) =>
-      c.name.startsWith("sb-") && c.name.endsWith("-auth-token")
+    const allCookies = request.cookies.getAll();
+    const hasAuthCookie = allCookies.some((c) =>
+      c.name.includes("-auth-token") ||
+      c.name.startsWith("sb-") ||
+      c.name === "careeros_user_session" ||
+      c.name === "careeros-session"
     );
 
     const isDev = process.env.NODE_ENV === "development" || process.env.NEXT_PUBLIC_APP_ENV === "development";

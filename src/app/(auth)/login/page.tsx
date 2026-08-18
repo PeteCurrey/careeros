@@ -118,7 +118,7 @@ export default function LoginPage() {
         throw new Error(data.error || 'Invalid verification code.');
       }
 
-      router.push(data.redirectTo || ROUTES.APP_DASHBOARD);
+      window.location.href = data.redirectTo || ROUTES.APP_ONBOARDING;
     } catch (err: unknown) {
       setErrorMessage((err as Error).message || 'Verification failed.');
     } finally {
@@ -152,7 +152,7 @@ export default function LoginPage() {
         throw new Error(data.error || 'Invalid email or password.');
       }
 
-      router.push(data.redirectTo || ROUTES.APP_DASHBOARD);
+      window.location.href = data.redirectTo || ROUTES.APP_ONBOARDING;
     } catch (err: unknown) {
       setErrorMessage((err as Error).message || 'Login failed. Please check your credentials.');
     } finally {
