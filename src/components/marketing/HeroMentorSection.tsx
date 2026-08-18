@@ -196,11 +196,11 @@ export function HeroMentorSection() {
       {/* ── Layer 6: Copy content & Staggered Editorial Entrances ──── */}
       <div className="relative z-10 container-editorial h-full">
         <div
-          className="grid grid-cols-1 lg:grid-cols-[44fr_56fr] min-h-[inherit]"
+          className="grid grid-cols-1 lg:grid-cols-[44fr_56fr] items-center min-h-[inherit]"
           style={{ minHeight: 'inherit' }}
         >
           {/* LEFT: Editorial copy */}
-          <div className="flex flex-col justify-center pt-24 pb-16 lg:pt-0 lg:pb-0 pr-0 lg:pr-8 xl:pr-12">
+          <div className="flex flex-col justify-center py-28 lg:py-0 pr-0 lg:pr-8 xl:pr-12">
             
             {/* Section label */}
             <div style={textStagger(0.05)} className="mb-6 flex items-center gap-3">
