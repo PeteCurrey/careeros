@@ -75,11 +75,12 @@ export async function GET(request: NextRequest) {
 
     // Fetch user privacy preference for welcome mode
     let welcomeMode = "CINEMATIC";
-    if (profile?.id) {
+    const profileId = (profile as { id?: string } | null)?.id;
+    if (profileId) {
       const { data: privacy } = await adminDb
         .from("privacy_preferences")
         .select("*")
-        .eq("profile_id", profile.id)
+        .eq("profile_id", profileId)
         .maybeSingle();
       if (privacy) {
         welcomeMode = "CINEMATIC";
