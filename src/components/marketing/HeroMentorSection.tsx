@@ -93,25 +93,24 @@ export function HeroMentorSection() {
       />
 
       {/* ── Layer 3: Subtle atmospheric warmth complement (very light) ── */}
-      {/* The new image carries its own cinematic lighting — overlays are kept minimal */}
+      {/* Complements the industrial tunnel sparks and cool engineering workspace lighting */}
       <div
         aria-hidden="true"
         className="hidden lg:block absolute inset-y-0 right-0 z-[2] w-[65%] pointer-events-none"
       >
-        {/* Warm amber echo in the upper right — complements the golden-hour window light */}
+        {/* Warm amber spark echo — complements the welding sparks in the tunnel */}
         <div
-          className="absolute top-[20%] right-[15%] w-80 h-80 rounded-full blur-3xl opacity-15"
-          style={{ background: 'radial-gradient(circle, #C8882A 0%, transparent 70%)' }}
+          className="absolute top-[40%] right-[32%] w-80 h-80 rounded-full blur-3xl opacity-20"
+          style={{ background: 'radial-gradient(circle, #E89A3C 0%, transparent 70%)' }}
         />
-        {/* Cool blue complement from far city glass wall */}
+        {/* Cool precision blue complement from safety lighting */}
         <div
-          className="absolute bottom-[15%] right-[5%] w-72 h-72 rounded-full blur-3xl opacity-12"
-          style={{ background: 'radial-gradient(circle, #2F5FBF 0%, transparent 70%)' }}
+          className="absolute top-[15%] right-[12%] w-72 h-72 rounded-full blur-3xl opacity-15"
+          style={{ background: 'radial-gradient(circle, #2F8FFF 0%, transparent 70%)' }}
         />
       </div>
 
       {/* ── Layer 4: Mobile Atmospheric Background ───────────────────── */}
-      {/* Uses the dedicated portrait-crop mobile image — not the desktop wide crop */}
       <div
         aria-hidden="true"
         className="block lg:hidden absolute inset-0 z-[2] pointer-events-none opacity-25"
@@ -123,7 +122,7 @@ export function HeroMentorSection() {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: '60% center' }}
+          style={{ objectPosition: '82% 35%' }}
         />
         <div
           className="absolute inset-0"
@@ -133,12 +132,11 @@ export function HeroMentorSection() {
         />
       </div>
 
-      {/* ── Layer 5: Desktop Hero — Cinematic Career World Image ──────── */}
-      {/* The image has a natural dark left zone — perfect for text overlay composition */}
+      {/* ── Layer 5: Desktop Hero — Female Engineer Looking into Camera Lens ── */}
       <div
         className="hidden lg:block absolute inset-y-0 right-0 z-[3]"
         style={{
-          width: '70%',
+          width: '65%',
           opacity: mounted || prefersReducedMotion.current ? 1 : 0,
           transition: 'opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s',
           ...imageParallax,
@@ -149,17 +147,17 @@ export function HeroMentorSection() {
           alt={MEDIA_ASSETS.hero.mentorTeam.alt}
           fill
           priority
-          sizes="(min-width: 1920px) 1344px, (min-width: 1440px) 1008px, (min-width: 1280px) 896px, (min-width: 1024px) 70vw"
+          sizes="(min-width: 1920px) 1344px, (min-width: 1440px) 1008px, (min-width: 1280px) 896px, (min-width: 1024px) 65vw"
           className="object-cover"
-          style={{ objectPosition: '35% center' }}
+          style={{ objectPosition: '82% 40%' }}
         />
 
-        {/* Left-edge charcoal dissolve — blends the image's own natural dark left zone */}
+        {/* Left-edge charcoal dissolve — blends the tunnel background into the dark copy zone */}
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 z-10 w-[38%] pointer-events-none"
+          className="absolute inset-y-0 left-0 z-10 w-[45%] pointer-events-none"
           style={{
-            background: `linear-gradient(to right, ${CHARCOAL} 0%, rgba(34,34,34,0.95) 18%, rgba(34,34,34,0.6) 40%, rgba(34,34,34,0.15) 65%, transparent 100%)`,
+            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 12%, rgba(34,34,34,0.92) 28%, rgba(34,34,34,0.55) 55%, rgba(34,34,34,0.12) 78%, transparent 100%)`,
           }}
         />
 
@@ -183,13 +181,12 @@ export function HeroMentorSection() {
       </div>
 
       {/* ── Layer 6: Left-side foreground vignette ─────────────────── */}
-      {/* Narrower than before — image's own composition provides the left darkness */}
       <div
         aria-hidden="true"
         className="hidden lg:block absolute inset-y-0 left-0 z-[4] pointer-events-none"
         style={{
-          width: '42%',
-          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.65) 0%, transparent 80%)`,
+          width: '45%',
+          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.70) 0%, transparent 80%)`,
         }}
       />
 
@@ -335,12 +332,10 @@ export function HeroMentorSection() {
       </div>
 
       {/* ── Mobile: In-flow portrait mentor image ──────────────────── */}
-      {/* Uses the dedicated 3:4 portrait crop — preserves the foreground mentor and  */}
-      {/* background professionals, not just an edge-crop of the desktop wide shot    */}
       <div
         className="block lg:hidden relative z-[2] w-full"
         style={{
-          aspectRatio: '3/4',
+          aspectRatio: '4/3',
           opacity: mounted || prefersReducedMotion.current ? 1 : 0,
           transition: 'opacity 1.2s ease-out',
         }}
@@ -352,7 +347,7 @@ export function HeroMentorSection() {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: '60% top' }}
+          style={{ objectPosition: '82% 30%' }}
         />
         <div
           aria-hidden="true"

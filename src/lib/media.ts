@@ -17,18 +17,18 @@ export interface MediaAsset {
 export const MEDIA_ASSETS = {
   hero: {
     mentorTeam: {
-      src: '/media/hero/hero_career_world_desktop.jpg',
-      alt: 'Career OS mentor professionals from diverse disciplines — engineering, healthcare, architecture, creative industries and leadership — occupying a dramatic converted industrial space with a city skyline beyond',
-      width: 1920,
-      height: 1080,
-      caption: 'Career OS — Where every professional world connects.',
+      src: '/media/hero/woman_looking_into_camera_lens.jpeg',
+      alt: 'Female infrastructure and tunneling engineer wearing protective hard hat and high-visibility apparel looking with confidence directly into the camera lens inside a complex civil engineering tunnel project',
+      width: 2752,
+      height: 1536,
+      caption: 'Career OS — Where every technical and professional capability is proven.',
     },
     mentorTeamMobile: {
-      src: '/media/hero/hero_career_world_mobile.jpg',
-      alt: 'Career OS senior mentor standing with quiet authority in a dramatic industrial architectural space, multidisciplinary professionals in background',
-      width: 900,
-      height: 1200,
-      caption: 'Career OS — Where every professional world connects.',
+      src: '/media/hero/woman_looking_into_camera_lens.jpeg',
+      alt: 'Female infrastructure engineer in protective hard hat looking with confidence directly into the camera lens inside a civil engineering tunnel',
+      width: 2752,
+      height: 1536,
+      caption: 'Career OS — Where every technical and professional capability is proven.',
     },
     cityHorizon: {
       src: '/media/hero/city_horizon_hero.jpg',
