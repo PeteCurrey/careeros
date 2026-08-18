@@ -21,9 +21,12 @@ import {
   ChevronDown,
   ChevronRight,
   Shield,
+  ShieldCheck,
+  FileCheck,
   Search,
   Sparkles,
   ExternalLink,
+  Handshake,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -176,6 +179,27 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
       ],
     },
     {
+      title: 'PARTNERSHIPS',
+      items: [
+        {
+          title: 'Partnerships CRM',
+          href: ROUTES.ADMIN_PARTNERSHIPS,
+          icon: Handshake,
+          subItems: [
+            { title: 'Command Hub', href: ROUTES.ADMIN_PARTNERSHIPS },
+            { title: 'Pipeline Kanban', href: ROUTES.ADMIN_PARTNERSHIPS_PIPELINE },
+            { title: 'Target Directory', href: ROUTES.ADMIN_PARTNERSHIPS_TARGETS },
+            { title: 'Opportunities', href: ROUTES.ADMIN_PARTNERSHIPS_OPPORTUNITIES },
+            { title: 'Contacts & Leads', href: ROUTES.ADMIN_PARTNERSHIPS_CONTACTS },
+            { title: 'Tasks & Waiting On', href: ROUTES.ADMIN_PARTNERSHIPS_TASKS },
+            { title: 'Integrations', href: ROUTES.ADMIN_PARTNERSHIPS_INTEGRATIONS },
+            { title: 'Documents & Vault', href: ROUTES.ADMIN_PARTNERSHIPS_DOCUMENTS },
+            { title: 'Strategic Analytics', href: ROUTES.ADMIN_PARTNERSHIPS_ANALYTICS },
+          ],
+        },
+      ],
+    },
+    {
       title: 'AI CONTROL CENTRE',
       items: [
         {
@@ -248,6 +272,25 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
             { title: 'Sponsorships', href: ROUTES.ADMIN_REVENUE_SPONSORSHIP },
             { title: 'Transactions', href: ROUTES.ADMIN_REVENUE_TRANSACTIONS },
             { title: 'Products & Tiers', href: ROUTES.ADMIN_REVENUE_PRODUCTS },
+          ],
+        },
+      ],
+    },
+    {
+      title: 'COMPLIANCE & ASSURANCE',
+      items: [
+        {
+          title: 'Trust & Compliance',
+          href: ROUTES.ADMIN_COMPLIANCE,
+          icon: ShieldCheck,
+          subItems: [
+            { title: 'Overview', href: ROUTES.ADMIN_COMPLIANCE },
+            { title: 'Framework Registry', href: ROUTES.ADMIN_COMPLIANCE_REGISTRY },
+            { title: 'AI Decision Governance', href: ROUTES.ADMIN_COMPLIANCE_AI_GOVERNANCE },
+            { title: 'Evidence Vault', href: ROUTES.ADMIN_COMPLIANCE_EVIDENCE },
+            { title: 'Renewal Calendar', href: ROUTES.ADMIN_COMPLIANCE_RENEWALS },
+            { title: 'Regulatory Register', href: ROUTES.ADMIN_COMPLIANCE_REGULATIONS },
+            { title: 'Document Requests', href: ROUTES.ADMIN_COMPLIANCE_REQUESTS },
           ],
         },
       ],

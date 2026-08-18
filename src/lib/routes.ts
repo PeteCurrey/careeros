@@ -231,6 +231,17 @@ export const ROUTES = {
   ADMIN_ORGANISATIONS_ORGANISERS: '/admin/organisations/organisers',
   ADMIN_ORGANISATIONS_PARTNERS: '/admin/organisations/partners',
 
+  // Partnerships CRM & Intelligence
+  ADMIN_PARTNERSHIPS: '/admin/partnerships',
+  ADMIN_PARTNERSHIPS_PIPELINE: '/admin/partnerships/pipeline',
+  ADMIN_PARTNERSHIPS_TARGETS: '/admin/partnerships/targets',
+  ADMIN_PARTNERSHIPS_OPPORTUNITIES: '/admin/partnerships/opportunities',
+  ADMIN_PARTNERSHIPS_CONTACTS: '/admin/partnerships/contacts',
+  ADMIN_PARTNERSHIPS_TASKS: '/admin/partnerships/tasks',
+  ADMIN_PARTNERSHIPS_INTEGRATIONS: '/admin/partnerships/integrations',
+  ADMIN_PARTNERSHIPS_DOCUMENTS: '/admin/partnerships/documents',
+  ADMIN_PARTNERSHIPS_ANALYTICS: '/admin/partnerships/analytics',
+
   // AI Control Centre
   ADMIN_AI: '/admin/ai',
   ADMIN_AI_PROVIDERS: '/admin/ai/providers',

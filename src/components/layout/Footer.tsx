@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { footerNav } from '@/lib/navigation';
 import { ROUTES } from '@/lib/routes';
+import { FooterTrustStrip } from '@/components/compliance/FooterTrustStrip';
 
 export function Footer() {
   return (
@@ -69,12 +70,18 @@ export function Footer() {
           ))}
         </div>
 
+        {/* Trust & Compliance Assurance Strip */}
+        <FooterTrustStrip />
+
         {/* Bottom Bar */}
         <div className="pt-10 flex flex-col md:flex-row items-start md:items-center justify-between text-xs text-[var(--color-text-tertiary)] gap-4">
           <p>
             &copy; {new Date().getFullYear()} Career OS Inc. All rights reserved. Built as universal career infrastructure.
           </p>
           <div className="flex flex-wrap items-center gap-6">
+            <Link href={ROUTES.TRUST_COMPLIANCE} className="hover:text-[var(--color-text-primary)] transition-colors">
+              Compliance & Assurance
+            </Link>
             <Link href={ROUTES.LEGAL_PRIVACY} className="hover:text-[var(--color-text-primary)] transition-colors">
               Privacy Policy
             </Link>

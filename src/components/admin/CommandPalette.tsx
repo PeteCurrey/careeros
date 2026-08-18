@@ -15,6 +15,7 @@ import {
   Settings,
   ArrowRight,
   Sparkles,
+  ShieldCheck,
 } from 'lucide-react';
 
 interface SearchOption {
@@ -27,6 +28,10 @@ interface SearchOption {
 const SEARCH_OPTIONS: SearchOption[] = [
   { title: 'Command Centre', category: 'Overview', href: ROUTES.ADMIN, icon: LayoutDashboard },
   { title: 'Action Centre', category: 'Overview', href: ROUTES.ADMIN_ACTION_CENTRE, icon: LayoutDashboard },
+  { title: 'Compliance & Assurance', category: 'Compliance', href: ROUTES.ADMIN_COMPLIANCE, icon: ShieldCheck },
+  { title: 'AI Decision Governance', category: 'Compliance', href: ROUTES.ADMIN_COMPLIANCE_AI_GOVERNANCE, icon: ShieldCheck },
+  { title: 'Evidence Vault', category: 'Compliance', href: ROUTES.ADMIN_COMPLIANCE_EVIDENCE, icon: ShieldCheck },
+  { title: 'Compliance Document Requests', category: 'Compliance', href: ROUTES.ADMIN_COMPLIANCE_REQUESTS, icon: ShieldCheck },
   { title: 'CMS Pages', category: 'Content', href: ROUTES.ADMIN_CONTENT_PAGES, icon: FileText },
   { title: 'Media Library', category: 'Content', href: ROUTES.ADMIN_CONTENT_MEDIA, icon: FileText },
   { title: 'SEO Control Centre', category: 'Growth', href: ROUTES.ADMIN_GROWTH_SEO, icon: FileText },

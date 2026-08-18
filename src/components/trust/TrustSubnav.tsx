@@ -13,11 +13,13 @@ import {
   Scale, 
   Lock, 
   ArrowRight,
-  Sparkles
+  Sparkles,
+  FileCheck
 } from 'lucide-react';
 
 const TRUST_NAV_ITEMS = [
   { label: 'Trust Overview', href: ROUTES.TRUST, icon: ShieldCheck },
+  { label: 'Compliance & Assurance', href: ROUTES.TRUST_COMPLIANCE, icon: FileCheck },
   { label: 'Responsible AI', href: ROUTES.TRUST_RESPONSIBLE_AI, icon: Bot },
   { label: 'AI Transparency', href: ROUTES.TRUST_AI_TRANSPARENCY, icon: Eye },
   { label: 'Human Oversight', href: ROUTES.TRUST_HUMAN_OVERSIGHT, icon: Users },
