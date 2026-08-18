@@ -125,40 +125,48 @@ export default function MentorsHubPage() {
       {/* ── 02. Why Domain Mentors ── */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label text-[#2F8FFF]">Domain Depth vs Generic AI</span>
-            <h2 className="text-display-section font-normal text-white">
-              Why a single generic chatbot cannot advise an electrician, a nurse, and an engineer.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              General-purpose AI treats career advice as text generation. Career OS connects domain mentors directly to structured Career Graph nodes, trade licensing rules, clinical credential sequences, and Staff+ engineering promotion rubrics.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label text-[#2F8FFF]">Domain Depth vs Generic AI</span>
+              <h2 className="text-display-section font-normal text-white">
+                Why a single generic chatbot cannot advise an electrician, a nurse, and an engineer.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                General-purpose AI treats career advice as text generation. Career OS connects domain mentors directly to structured Career Graph nodes, trade licensing rules, clinical credential sequences, and Staff+ engineering promotion rubrics.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-3">
-              <Bot className="w-6 h-6 text-[#2F8FFF]" />
-              <h3 className="text-base font-bold text-white">Persistent Domain Memory</h3>
-              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Remembers developmental milestones and career trajectory across years, avoiding repetitive prompt engineering.
-              </p>
-            </div>
+            <ScrollReveal delayMs={0}>
+              <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-3 hover-lift card-interactive h-full">
+                <Bot className="w-6 h-6 text-[#2F8FFF]" />
+                <h3 className="text-base font-bold text-white">Persistent Domain Memory</h3>
+                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                  Remembers developmental milestones and career trajectory across years, avoiding repetitive prompt engineering.
+                </p>
+              </div>
+            </ScrollReveal>
 
-            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-3">
-              <Network className="w-6 h-6 text-[#CDBBD2]" />
-              <h3 className="text-base font-bold text-white">Passport Evidence Grounding</h3>
-              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Evaluates demonstrated deliverables, certifications, and project artifacts rather than unverified self-descriptions.
-              </p>
-            </div>
+            <ScrollReveal delayMs={80}>
+              <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-3 hover-lift card-interactive h-full">
+                <Network className="w-6 h-6 text-[#CDBBD2]" />
+                <h3 className="text-base font-bold text-white">Passport Evidence Grounding</h3>
+                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                  Evaluates demonstrated deliverables, certifications, and project artifacts rather than unverified self-descriptions.
+                </p>
+              </div>
+            </ScrollReveal>
 
-            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-3">
-              <ShieldCheck className="w-6 h-6 text-[#DDD36D]" />
-              <h3 className="text-base font-bold text-white">Explicit Decision Boundaries</h3>
-              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Never simulates human companionship, never provides unlicensed legal/medical advice, and never hallucinates credential requirements.
-              </p>
-            </div>
+            <ScrollReveal delayMs={160}>
+              <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-3 hover-lift card-interactive h-full">
+                <ShieldCheck className="w-6 h-6 text-[#DDD36D]" />
+                <h3 className="text-base font-bold text-white">Explicit Decision Boundaries</h3>
+                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                  Never simulates human companionship, never provides unlicensed legal/medical advice, and never hallucinates credential requirements.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -166,18 +174,20 @@ export default function MentorsHubPage() {
       {/* ── 03. Meet the Mentor Council Grid ── */}
       <section id="mentor-council" className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
         <div className="container-editorial space-y-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div className="max-w-2xl space-y-3">
-              <span className="section-label text-[#2F8FFF]">Representative Council</span>
-              <h2 className="text-display-section font-normal text-white">
-                Meet the Career OS domain mentors.
-              </h2>
-              <p className="text-body text-[var(--color-text-secondary)]">
-                These 8 representative personas embody the specialized logic deployed across major occupational clusters. Career OS assigns your mentor automatically.
-              </p>
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+              <div className="max-w-2xl space-y-3">
+                <span className="section-label text-[#2F8FFF]">Representative Council</span>
+                <h2 className="text-display-section font-normal text-white">
+                  Meet the Career OS domain mentors.
+                </h2>
+                <p className="text-body text-[var(--color-text-secondary)]">
+                  These 8 representative personas embody the specialized logic deployed across major occupational clusters. Career OS assigns your mentor automatically.
+                </p>
+              </div>
+              <TechnicalBadge variant="blue">8 ACTIVE DOMAIN PERSONAS</TechnicalBadge>
             </div>
-            <TechnicalBadge variant="blue">8 ACTIVE DOMAIN PERSONAS</TechnicalBadge>
-          </div>
+          </ScrollReveal>
 
           <MentorCouncilGrid />
         </div>
@@ -186,15 +196,17 @@ export default function MentorsHubPage() {
       {/* ── 04. How Your Mentor Is Assigned ── */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-2xl space-y-3">
-            <span className="section-label text-[#2F8FFF]">Assignment Architecture</span>
-            <h2 className="text-display-section font-normal text-white">
-              How Career OS determines your mentor.
-            </h2>
-            <p className="text-body text-[var(--color-text-secondary)]">
-              You never have to browse profiles or pick a character. Career OS evaluates your Career Twin to assign the mentor with the deepest relevant domain context.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-2xl space-y-3">
+              <span className="section-label text-[#2F8FFF]">Assignment Architecture</span>
+              <h2 className="text-display-section font-normal text-white">
+                How Career OS determines your mentor.
+              </h2>
+              <p className="text-body text-[var(--color-text-secondary)]">
+                You never have to browse profiles or pick a character. Career OS evaluates your Career Twin to assign the mentor with the deepest relevant domain context.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <MentorAssignmentFlow />
         </div>
@@ -203,15 +215,17 @@ export default function MentorsHubPage() {
       {/* ── 05. Your Career Can Change ── */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-2xl space-y-3">
-            <span className="section-label text-[#2F8FFF]">Dynamic Evolution</span>
-            <h2 className="text-display-section font-normal text-white">
-              Your career evolves. Your mentor adapts.
-            </h2>
-            <p className="text-body text-[var(--color-text-secondary)]">
-              When you pivot into a new industry, transition from technical execution into management, or launch a venture, your mentor context shifts seamlessly.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-2xl space-y-3">
+              <span className="section-label text-[#2F8FFF]">Dynamic Evolution</span>
+              <h2 className="text-display-section font-normal text-white">
+                Your career evolves. Your mentor adapts.
+              </h2>
+              <p className="text-body text-[var(--color-text-secondary)]">
+                When you pivot into a new industry, transition from technical execution into management, or launch a venture, your mentor context shifts seamlessly.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <MentorTransitionExamples />
         </div>
@@ -220,48 +234,56 @@ export default function MentorsHubPage() {
       {/* ── 06. Student Mentoring Guardrails ── */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
         <div className="container-editorial space-y-8 max-w-4xl">
-          <div className="flex items-center gap-3">
-            <GraduationCap className="w-6 h-6 text-[#2F8FFF]" />
-            <span className="section-label text-white">Youth & Secondary Education</span>
-          </div>
+          <ScrollReveal>
+            <div className="space-y-6">
+              <div className="flex items-center gap-3">
+                <GraduationCap className="w-6 h-6 text-[#2F8FFF]" />
+                <span className="section-label text-white">Youth & Secondary Education</span>
+              </div>
 
-          <h2 className="text-display-section font-normal text-white">
-            Age-appropriate career guidance for younger learners.
-          </h2>
+              <h2 className="text-display-section font-normal text-white">
+                Age-appropriate career guidance for younger learners.
+              </h2>
 
-          <p className="text-body-editorial text-[var(--color-text-secondary)] leading-relaxed">
-            For students in high schools and colleges, Career OS mentors focus on pathway discovery, subject choice implications, apprenticeship options, and introductory evidence collection. We never gamify career choices or create artificial juvenile avatars. Mentoring remains professional, encouraging, and subject to strict school district safeguarding agreements.
-          </p>
+              <p className="text-body-editorial text-[var(--color-text-secondary)] leading-relaxed">
+                For students in high schools and colleges, Career OS mentors focus on pathway discovery, subject choice implications, apprenticeship options, and introductory evidence collection. We never gamify career choices or create artificial juvenile avatars. Mentoring remains professional, encouraging, and subject to strict school district safeguarding agreements.
+              </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <Link href={ROUTES.FOR_HIGH_SCHOOLS} className="text-xs font-semibold text-[#6BB8FF] hover:underline inline-flex items-center gap-1">
-              <span>Explore High School Solutions</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-            <Link href={ROUTES.TRUST_SAFEGUARDING} className="text-xs font-semibold text-[var(--color-text-secondary)] hover:underline inline-flex items-center gap-1">
-              <span>Minor Safeguarding Policy</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link href={ROUTES.FOR_HIGH_SCHOOLS} className="text-xs font-semibold text-[#6BB8FF] hover:underline inline-flex items-center gap-1">
+                  <span>Explore High School Solutions</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+                <Link href={ROUTES.TRUST_SAFEGUARDING} className="text-xs font-semibold text-[var(--color-text-secondary)] hover:underline inline-flex items-center gap-1">
+                  <span>Minor Safeguarding Policy</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── 07. Boundaries & Ethics ── */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
         <div className="container-editorial">
-          <MentorBoundariesBlock />
+          <ScrollReveal>
+            <MentorBoundariesBlock />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── 08. FAQ ── */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-2xl space-y-3">
-            <span className="section-label text-[#2F8FFF]">Common Questions</span>
-            <h2 className="text-display-section font-normal text-white">
-              Frequently asked questions about AI mentors.
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-2xl space-y-3">
+              <span className="section-label text-[#2F8FFF]">Common Questions</span>
+              <h2 className="text-display-section font-normal text-white">
+                Frequently asked questions about AI mentors.
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <MentorFAQ />
         </div>
@@ -270,17 +292,21 @@ export default function MentorsHubPage() {
       {/* ── 09. Final CTA ── */}
       <section className="section-editorial bg-[var(--color-surface-base)] text-center">
         <div className="container-editorial max-w-3xl space-y-6 mx-auto">
-          <h2 className="text-display-section font-normal text-white">
-            Ready for guidance that compounds over your entire working life?
-          </h2>
-          <p className="text-lead text-[var(--color-text-secondary)] max-w-xl mx-auto">
-            Build your private Career Twin today and let Career OS assign your dedicated domain mentor.
-          </p>
-          <div className="pt-4">
-            <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
-              Start Free — Create Your Career OS
-            </Button>
-          </div>
+          <ScrollReveal direction="none">
+            <div className="space-y-6">
+              <h2 className="text-display-section font-normal text-white">
+                Ready for guidance that compounds over your entire working life?
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)] max-w-xl mx-auto">
+                Build your private Career Twin today and let Career OS assign your dedicated domain mentor.
+              </p>
+              <div className="pt-4">
+                <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+                  Start Free — Create Your Career OS
+                </Button>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>

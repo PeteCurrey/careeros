@@ -223,19 +223,21 @@ export default function PathwaysPage() {
 
       {/* ── 03. Call to Action ── */}
       <section className="section-editorial bg-[var(--background-dark-deep)] text-[var(--color-text-primary)] border-t border-[var(--color-border-default)]">
-        <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="space-y-2 max-w-xl">
-            <h3 className="text-2xl font-normal text-white tracking-tight">
-              Begin exploring your pathway on Career OS
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Free for individual core accounts. Start discovering and building verified evidence today.
-            </p>
+        <ScrollReveal direction="none">
+          <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div className="space-y-2 max-w-xl">
+              <h3 className="text-2xl font-normal text-white tracking-tight">
+                Begin exploring your pathway on Career OS
+              </h3>
+              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                Free for individual core accounts. Start discovering and building verified evidence today.
+              </p>
+            </div>
+            <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="shrink-0">
+              Start Free <ArrowRight className="w-4 h-4 ml-1.5" />
+            </Button>
           </div>
-          <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="shrink-0">
-            Start Free <ArrowRight className="w-4 h-4 ml-1.5" />
-          </Button>
-        </div>
+        </ScrollReveal>
       </section>
     </div>
   );

@@ -129,51 +129,61 @@ export default function HighSchoolsPage() {
 
         <div className="container-editorial relative z-10 space-y-16">
           <div className="max-w-4xl space-y-6">
-            <div className="flex items-center gap-2">
-              <span className="accent-blue-dot accent-blue-dot-pulse" />
-              <span className="section-label">
-                High Schools, Academy Trusts &amp; School Districts
-              </span>
-            </div>
+            <ScrollReveal>
+              <div className="flex items-center gap-2">
+                <span className="accent-blue-dot accent-blue-dot-pulse" />
+                <span className="section-label">
+                  High Schools, Academy Trusts &amp; School Districts
+                </span>
+              </div>
+            </ScrollReveal>
 
-            <h1 className="text-display-hero text-white">
-              Every student deserves{' '}
-              <CareerGradientText variant="blue">
-                more than one career conversation.
-              </CareerGradientText>
-            </h1>
+            <ScrollReveal delayMs={80}>
+              <h1 className="text-display-hero text-white">
+                Every student deserves{' '}
+                <CareerGradientText variant="blue">
+                  more than one career conversation.
+                </CareerGradientText>
+              </h1>
+            </ScrollReveal>
 
-            <p className="text-headline-editorial text-[var(--color-text-secondary)] font-normal">
-              Give your team the capacity to make career guidance continuous.
-            </p>
+            <ScrollReveal delayMs={140}>
+              <p className="text-headline-editorial text-[var(--color-text-secondary)] font-normal">
+                Give your team the capacity to make career guidance continuous.
+              </p>
+            </ScrollReveal>
 
-            <p className="text-lead text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
-              Career OS is being built to give students an individual Career Mentor, structured multi-pathway exploration, and an evidence record that develops over time—while helping schools support guidance, safeguarding, and student progression at institutional scale.
-            </p>
+            <ScrollReveal delayMs={200}>
+              <p className="text-lead text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
+                Career OS is being built to give students an individual Career Mentor, structured multi-pathway exploration, and an evidence record that develops over time—while helping schools support guidance, safeguarding, and student progression at institutional scale.
+              </p>
+            </ScrollReveal>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-              <Button href="#launch-school-form" variant="primary" size="lg">
-                Become a Launch School <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button href="#how-it-works" variant="secondary" size="lg">
-                See how it works ↓
-              </Button>
-              <Button href={ROUTES.FOR_STUDENTS} variant="ghost" size="lg">
-                Career OS for Students →
-              </Button>
-            </div>
+            <ScrollReveal delayMs={260}>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                <Button href="#launch-school-form" variant="primary" size="lg">
+                  Become a Launch School <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button href="#how-it-works" variant="secondary" size="lg">
+                  See how it works ↓
+                </Button>
+                <Button href={ROUTES.FOR_STUDENTS} variant="ghost" size="lg">
+                  Career OS for Students →
+                </Button>
+              </div>
 
-            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-[var(--color-text-tertiary)] font-medium">
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" /> Augments Counsellors (Not Replaces)
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#2F8FFF]" /> Equal Multi-Pathway Parity
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Lock className="w-4 h-4 text-[var(--color-gold-base)]" /> Zero Commercial Minor Sourcing
-              </span>
-            </div>
+              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-[var(--color-text-tertiary)] font-medium">
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" /> Augments Counsellors (Not Replaces)
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#2F8FFF]" /> Equal Multi-Pathway Parity
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Lock className="w-4 h-4 text-[var(--color-gold-base)]" /> Zero Commercial Minor Sourcing
+                </span>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Hero Dual-Perspective Product Stage */}
@@ -190,79 +200,89 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              The Institutional Challenge
-            </span>
-            <h2 className="text-display-section text-white">
-              The number of pathways has grown. The school day hasn&apos;t.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              Secondary schools are being asked to prepare students for an economy transforming faster than the curriculum. At the same time, career teams work with strictly finite hours.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                The Institutional Challenge
+              </span>
+              <h2 className="text-display-section text-white">
+                The number of pathways has grown. The school day hasn&apos;t.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Secondary schools are being asked to prepare students for an economy transforming faster than the curriculum. At the same time, career teams work with strictly finite hours.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="text-xs font-mono uppercase text-[#6BB8FF] font-bold">
-                  Challenge 01
-                </span>
-                <h3 className="text-lg font-serif font-medium text-white">
-                  Exponential Pathway Complexity
-                </h3>
-                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Students must navigate 4-year universities, community colleges, degree apprenticeships, vocational trades, emerging technical specialisms, and direct employment routes. No single counsellor can manually track every changing entry requirement and regional employer opening in real time.
-                </p>
+            <ScrollReveal delayMs={0}>
+              <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between hover-lift card-interactive h-full">
+                <div className="space-y-3">
+                  <span className="text-xs font-mono uppercase text-[#6BB8FF] font-bold">
+                    Challenge 01
+                  </span>
+                  <h3 className="text-lg font-serif font-medium text-white">
+                    Exponential Pathway Complexity
+                  </h3>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                    Students must navigate 4-year universities, community colleges, degree apprenticeships, vocational trades, emerging technical specialisms, and direct employment routes. No single counsellor can manually track every changing entry requirement and regional employer opening in real time.
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
+                  Multi-pathway mapping required
+                </div>
               </div>
-              <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
-                Multi-pathway mapping required
-              </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="text-xs font-mono uppercase text-[#2F8FFF] font-bold">
-                  Challenge 02
-                </span>
-                <h3 className="text-lg font-serif font-medium text-white">
-                  The Once-a-Year Advising Bottleneck
-                </h3>
-                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Because counsellor time is constrained, many students receive only 15–30 minutes of dedicated 1:1 career advising per academic year. Students often arrive unprepared, spending valuable time answering basic background questions rather than evaluating strategic decisions.
-                </p>
+            <ScrollReveal delayMs={80}>
+              <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between hover-lift card-interactive h-full">
+                <div className="space-y-3">
+                  <span className="text-xs font-mono uppercase text-[#2F8FFF] font-bold">
+                    Challenge 02
+                  </span>
+                  <h3 className="text-lg font-serif font-medium text-white">
+                    The Once-a-Year Advising Bottleneck
+                  </h3>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                    Because counsellor time is constrained, many students receive only 15–30 minutes of dedicated 1:1 career advising per academic year. Students often arrive unprepared, spending valuable time answering basic background questions rather than evaluating strategic decisions.
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
+                  Continuous exploration between sessions
+                </div>
               </div>
-              <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
-                Continuous exploration between sessions
-              </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="text-xs font-mono uppercase text-[var(--color-gold-base)] font-bold">
-                  Challenge 03
-                </span>
-                <h3 className="text-lg font-serif font-medium text-white">
-                  Perception &amp; Status Silos
-                </h3>
-                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Academic university routes have traditionally enjoyed structured marketing and systemic visibility, while high-value apprenticeships and technical trade careers remain opaque to families. Students frequently overlook high-paying technical options simply because they cannot easily compare them.
-                </p>
+            <ScrollReveal delayMs={160}>
+              <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between hover-lift card-interactive h-full">
+                <div className="space-y-3">
+                  <span className="text-xs font-mono uppercase text-[var(--color-gold-base)] font-bold">
+                    Challenge 03
+                  </span>
+                  <h3 className="text-lg font-serif font-medium text-white">
+                    Perception &amp; Status Silos
+                  </h3>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                    Academic university routes have traditionally enjoyed structured marketing and systemic visibility, while high-value apprenticeships and technical trade careers remain opaque to families. Students frequently overlook high-paying technical options simply because they cannot easily compare them.
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
+                  Equal editorial parity standard
+                </div>
               </div>
-              <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
-                Equal editorial parity standard
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
 
-          <div className="p-6 bg-[var(--background-dark-deep)] border border-[rgba(47,143,255,0.22)] rounded-[var(--radius-card)] text-center max-w-3xl mx-auto space-y-2">
-            <p className="text-sm font-serif italic text-white leading-relaxed">
-              &ldquo;The objective of Career OS is not fewer human conversations. It is better-prepared human conversations.&rdquo;
-            </p>
-            <span className="text-[11px] font-mono text-[#6BB8FF] uppercase tracking-wider block">
-              Core Career OS Educational Proposition
-            </span>
-          </div>
+          <ScrollReveal delayMs={100}>
+            <div className="p-6 bg-[var(--background-dark-deep)] border border-[rgba(47,143,255,0.22)] rounded-[var(--radius-card)] text-center max-w-3xl mx-auto space-y-2 hover-lift card-interactive">
+              <p className="text-sm font-serif italic text-white leading-relaxed">
+                &ldquo;The objective of Career OS is not fewer human conversations. It is better-prepared human conversations.&rdquo;
+              </p>
+              <span className="text-[11px] font-mono text-[#6BB8FF] uppercase tracking-wider block">
+                Core Career OS Educational Proposition
+              </span>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -273,17 +293,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]" id="how-it-works">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              The Operating Model
-            </span>
-            <h2 className="text-display-section text-white">
-              Give counsellors more context before the conversation starts.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              AI helps prepare the context. Educators provide the human judgement, empathy, pastoral care, and understanding that technology cannot replace.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                The Operating Model
+              </span>
+              <h2 className="text-display-section text-white">
+                Give counsellors more context before the conversation starts.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                AI helps prepare the context. Educators provide the human judgement, empathy, pastoral care, and understanding that technology cannot replace.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <CounsellorAugmentationWorkflow />
         </div>
@@ -296,22 +318,24 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-6 border-b border-[var(--color-border-default)]">
-            <div className="max-w-3xl space-y-4">
-              <span className="section-label">
-                Student Agency &amp; Discovery
-              </span>
-              <h2 className="text-display-section text-white">
-                Give every student somewhere useful to start.
-              </h2>
-              <p className="text-lead text-[var(--color-text-secondary)]">
-                Whether a student enters with clear ambitions or zero idea what they want to do, Career OS offers a calm, structured progression from initial curiosities to tangible capability evidence.
-              </p>
+          <ScrollReveal>
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-6 border-b border-[var(--color-border-default)]">
+              <div className="max-w-3xl space-y-4">
+                <span className="section-label">
+                  Student Agency &amp; Discovery
+                </span>
+                <h2 className="text-display-section text-white">
+                  Give every student somewhere useful to start.
+                </h2>
+                <p className="text-lead text-[var(--color-text-secondary)]">
+                  Whether a student enters with clear ambitions or zero idea what they want to do, Career OS offers a calm, structured progression from initial curiosities to tangible capability evidence.
+                </p>
+              </div>
+              <Button href={ROUTES.FOR_STUDENTS} variant="secondary" size="md">
+                Full Student Experience Walkthrough →
+              </Button>
             </div>
-            <Button href={ROUTES.FOR_STUDENTS} variant="secondary" size="md">
-              Full Student Experience Walkthrough →
-            </Button>
-          </div>
+          </ScrollReveal>
 
           {/* 6-Stage Student Progression Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -347,22 +371,23 @@ export default function HighSchoolsPage() {
                 desc: 'Enter human counselling sessions and post-school applications with grounded confidence, formed questions, and structured evidence.',
               },
             ].map((st, i) => (
-              <div
-                key={i}
-                className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2.5 flex flex-col justify-between"
-              >
-                <div className="space-y-2">
-                  <span className="text-xs font-mono font-bold text-[#2F8FFF]">
-                    Step {st.step}
-                  </span>
-                  <h4 className="text-base font-serif font-medium text-white">
-                    {st.title}
-                  </h4>
-                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                    {st.desc}
-                  </p>
+              <ScrollReveal key={i} delayMs={i * 60}>
+                <div
+                  className="p-6 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2.5 flex flex-col justify-between hover-lift card-interactive h-full"
+                >
+                  <div className="space-y-2">
+                    <span className="text-xs font-mono font-bold text-[#2F8FFF]">
+                      Step {st.step}
+                    </span>
+                    <h4 className="text-base font-serif font-medium text-white">
+                      {st.title}
+                    </h4>
+                    <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                      {st.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
