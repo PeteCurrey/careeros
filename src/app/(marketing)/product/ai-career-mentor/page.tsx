@@ -166,13 +166,18 @@ export default function AICareerMentorPage() {
           />
         </div>
 
+        <CareerPathwayConnector variant="branching" className="opacity-20" />
+
         {/* Content Container */}
         <div className="container-editorial relative z-10 w-full py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
             {/* Left: Editorial Hero Content */}
             <div className="lg:col-span-6 space-y-6 max-w-2xl">
               <div className="space-y-2">
-                <span className="section-label">THE CAREER OPERATING SYSTEM</span>
+                <span className="section-label flex items-center gap-2">
+                  <span className="accent-blue-dot accent-blue-dot-pulse" />
+                  Core Subsystem &bull; AI Career Mentor
+                </span>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-surface-raised)]/85 backdrop-blur-sm border border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)] font-mono shadow-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   <span>AI-powered. System-assigned. Always clearly identified as AI.</span>

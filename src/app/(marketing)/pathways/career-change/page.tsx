@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { CareerPathwayConnector } from "@/components/brand/CareerPathwayConnector";
+import { CareerAtmosphere } from "@/components/brand/CareerAtmosphere";
+
 export default function CareerChangePathwayPage() {
   const transitionPillars = [
     {
@@ -35,7 +38,12 @@ export default function CareerChangePathwayPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <section className="relative min-h-[70vh] flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20">
-        <div className="container-editorial space-y-6 max-w-4xl">
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+          <CareerAtmosphere className="absolute inset-0" intensity={0.4} animate={false} />
+        </div>
+        <CareerPathwayConnector variant="branching" className="opacity-15" />
+
+        <div className="container-editorial relative z-10 space-y-6 max-w-4xl">
           <div className="flex items-center gap-3">
             <span className="section-label flex items-center gap-2">
               <span className="accent-blue-dot accent-blue-dot-pulse" />

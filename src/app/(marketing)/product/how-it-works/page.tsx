@@ -133,11 +133,18 @@ export default function HowItWorksPage() {
           />
         </div>
 
+        <CareerPathwayConnector variant="branching" className="opacity-20" />
+
         <div className="container-editorial relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — Copy */}
             <div className="space-y-7">
-              <span className="section-label">One system for your whole working life</span>
+              <div className="flex items-center gap-3">
+                <span className="section-label flex items-center gap-2">
+                  <span className="accent-blue-dot accent-blue-dot-pulse" />
+                  Lifecycle &bull; How Career OS Works
+                </span>
+              </div>
               <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.08]">
                 Your career is already a system.
                 <br />

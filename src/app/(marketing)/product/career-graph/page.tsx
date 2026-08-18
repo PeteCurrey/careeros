@@ -95,11 +95,15 @@ export default function CareerGraphPage() {
           />
         </div>
 
+        <CareerPathwayConnector variant="branching" className="opacity-20" />
+
         <div className="container-editorial relative z-10 space-y-12">
           <div className="max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-[var(--color-taupe-300)]">
-              <Compass className="w-3.5 h-3.5 text-purple-400" />
-              <span>Career OS Architecture &bull; Career Graph</span>
+            <div className="flex items-center gap-3">
+              <span className="section-label flex items-center gap-2">
+                <span className="accent-blue-dot accent-blue-dot-pulse" />
+                Core Subsystem &bull; Career Graph
+              </span>
             </div>
 
             <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">

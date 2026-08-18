@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { CareerPathwayConnector } from "@/components/brand/CareerPathwayConnector";
+import { CareerAtmosphere } from "@/components/brand/CareerAtmosphere";
+
 export default function CompanyMissionPage() {
   const principles = [
     {
@@ -43,11 +46,20 @@ export default function CompanyMissionPage() {
 
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
-      <section className="relative pt-16 pb-20 border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
-        <div className="container-editorial space-y-6 max-w-4xl">
+      <section className="relative overflow-hidden pt-20 pb-24 border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
+        {/* Subtle ambient atmosphere layer */}
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+          <CareerAtmosphere className="absolute inset-0" intensity={0.4} animate={false} />
+        </div>
+        <CareerPathwayConnector variant="branching" className="opacity-15" />
+
+        <div className="container-editorial relative z-10 space-y-6 max-w-4xl">
           <div className="flex items-center gap-3">
-            <Compass className="w-5 h-5 text-[#2F8FFF]" />
-            <span className="section-label text-white">Mission & Conviction</span>
+            <span className="section-label flex items-center gap-2">
+              <span className="accent-blue-dot accent-blue-dot-pulse" />
+              Company Conviction &bull; Mission
+            </span>
+            <TechnicalBadge variant="blue">FOUNDING PRINCIPLES</TechnicalBadge>
           </div>
 
           <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">

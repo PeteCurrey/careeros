@@ -82,6 +82,8 @@ function FaqItem({ q, a }: { q: string; a: React.ReactNode }) {
 
 import Image from 'next/image';
 import { MEDIA_ASSETS } from '@/lib/media';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function OpportunityAgentPage() {
@@ -130,15 +132,23 @@ export default function OpportunityAgentPage() {
           />
         </div>
 
+        <CareerPathwayConnector variant="branching" className="opacity-20" />
+
         <div className="container-editorial relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — copy */}
             <div className="space-y-7">
-              <span className="section-label">
-                Career OS product direction
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="section-label flex items-center gap-2">
+                  <span className="accent-blue-dot accent-blue-dot-pulse" />
+                  Core Subsystem &bull; Opportunity Agent
+                </span>
+              </div>
               <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">
-                What if the right opportunity found you first?
+                What if the right opportunity{' '}
+                <CareerGradientText variant="blue">
+                  found you first?
+                </CareerGradientText>
               </h1>
               <p className="text-display-sub font-serif font-normal text-[var(--color-text-secondary)] leading-relaxed">
                 Your career agent will find you.
