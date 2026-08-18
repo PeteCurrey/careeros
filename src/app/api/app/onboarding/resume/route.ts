@@ -1,13 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { createClient } from "@/lib/supabase/server";
 import { extractStructuredResumeText } from "@/lib/onboarding/resume-parser";
+import { getAuthUser } from "@/lib/auth/get-auth-user";
 
 export async function POST(request: NextRequest) {
   try {
-    const supabase = await createClient();
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const user = await getAuthUser();
 
-    if (authError || !user) {
+    if (!user) {
       return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 

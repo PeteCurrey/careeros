@@ -1,12 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { createClient, createAdminClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/server";
 import { getDefaultPrivacyPreferences } from "@/types/platform/privacy";
+import { getAuthUser } from "@/lib/auth/get-auth-user";
 
 export async function GET() {
   try {
-    const supabase = await createClient();
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
-    if (authError || !user) {
+    const user = await getAuthUser();
+    if (!user) {
       return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
     const adminDb = createAdminClient();
@@ -33,9 +33,8 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    const supabase = await createClient();
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
-    if (authError || !user) {
+    const user = await getAuthUser();
+    if (!user) {
       return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
     const body = await request.json();
