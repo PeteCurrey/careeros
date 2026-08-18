@@ -92,33 +92,54 @@ export function HeroMentorSection() {
         animate={true}
       />
 
-      {/* ── Layer 3: Atmospheric Lighting Spill behind Mentor Figures ─ */}
+      {/* ── Layer 3: Atmospheric Lighting Spill behind Visionary Horizon ─ */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute inset-y-0 right-0 z-[2] w-[60%] pointer-events-none"
+        className="hidden lg:block absolute inset-y-0 right-0 z-[2] w-[65%] pointer-events-none"
       >
-        {/* Cool precision blue atmospheric wash behind engineering/technology leaders */}
+        {/* Cool precision cyan-blue atmospheric wash behind illuminated pathways */}
         <div
-          className="absolute top-[20%] right-[32%] w-72 h-72 rounded-full blur-3xl opacity-30"
+          className="absolute top-[35%] right-[25%] w-96 h-96 rounded-full blur-3xl opacity-35"
           style={{ background: 'radial-gradient(circle, #2F8FFF 0%, transparent 70%)' }}
         />
-        {/* Warm champagne wash behind skilled trades/business leaders */}
+        {/* Warm sunset gold wash over the horizon skyline */}
         <div
-          className="absolute bottom-[25%] right-[10%] w-80 h-80 rounded-full blur-3xl opacity-20"
+          className="absolute top-[15%] right-[8%] w-80 h-80 rounded-full blur-3xl opacity-25"
           style={{ background: 'radial-gradient(circle, #DDD36D 0%, transparent 70%)' }}
         />
-        {/* Cool lilac wash behind human advisory/mentoring */}
+        {/* Deep electric blue accent in lower foreground */}
         <div
-          className="absolute top-[10%] right-[12%] w-64 h-64 rounded-full blur-3xl opacity-25"
-          style={{ background: 'radial-gradient(circle, #CDBBD2 0%, transparent 70%)' }}
+          className="absolute bottom-[10%] right-[35%] w-72 h-72 rounded-full blur-3xl opacity-25"
+          style={{ background: 'radial-gradient(circle, #0066FF 0%, transparent 70%)' }}
         />
       </div>
 
-      {/* ── Layer 4: Mentor Team Image — right side panel with micro-parallax ── */}
+      {/* ── Layer 4: Mobile Atmospheric Background Image Layer ───────── */}
+      <div
+        aria-hidden="true"
+        className="block lg:hidden absolute inset-0 z-[2] pointer-events-none opacity-20"
+      >
+        <Image
+          src={MEDIA_ASSETS.hero.mentorTeam.src}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.7) 50%, ${CHARCOAL} 100%)`,
+          }}
+        />
+      </div>
+
+      {/* ── Layer 5: Hero Visionary Pathways Image — right side panel with micro-parallax ── */}
       <div
         className="hidden lg:block absolute inset-y-0 right-0 z-[3]"
         style={{
-          width: '60%',
+          width: '62%',
           opacity: mounted || prefersReducedMotion.current ? 1 : 0,
           transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s',
           ...imageParallax,
@@ -126,29 +147,29 @@ export function HeroMentorSection() {
       >
         <Image
           src={MEDIA_ASSETS.hero.mentorTeam.src}
-          alt=""
+          alt={MEDIA_ASSETS.hero.mentorTeam.alt}
           fill
           priority
-          sizes="(min-width: 1920px) 1152px, (min-width: 1440px) 864px, (min-width: 1024px) 60vw"
+          sizes="(min-width: 1920px) 1200px, (min-width: 1440px) 900px, (min-width: 1024px) 62vw"
           className="object-cover object-center"
-          style={{ objectPosition: '48% center' }}
+          style={{ objectPosition: '52% center' }}
         />
 
         {/* Left-edge charcoal dissolve — matches exact bg colour */}
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 z-10 w-[55%] pointer-events-none"
+          className="absolute inset-y-0 left-0 z-10 w-[50%] pointer-events-none"
           style={{
-            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 10%, rgba(34,34,34,0.94) 28%, rgba(34,34,34,0.55) 52%, rgba(34,34,34,0.12) 74%, transparent 100%)`,
+            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 12%, rgba(34,34,34,0.92) 26%, rgba(34,34,34,0.50) 50%, rgba(34,34,34,0.10) 75%, transparent 100%)`,
           }}
         />
 
         {/* Top-edge fade */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 z-10 h-[18%] pointer-events-none"
+          className="absolute inset-x-0 top-0 z-10 h-[16%] pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.6) 40%, transparent 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.5) 40%, transparent 100%)`,
           }}
         />
 
@@ -162,13 +183,13 @@ export function HeroMentorSection() {
         />
       </div>
 
-      {/* ── Layer 5: Left-side foreground vignette ─────────────────── */}
+      {/* ── Layer 6: Left-side foreground vignette ─────────────────── */}
       <div
         aria-hidden="true"
         className="hidden lg:block absolute inset-y-0 left-0 z-[4] pointer-events-none"
         style={{
-          width: '52%',
-          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.80) 0%, transparent 80%)`,
+          width: '50%',
+          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.75) 0%, transparent 80%)`,
         }}
       />
 

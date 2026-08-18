@@ -17,11 +17,11 @@ export interface MediaAsset {
 export const MEDIA_ASSETS = {
   hero: {
     mentorTeam: {
-      src: '/media/hero/mentor_team_hero.jpg',
-      alt: 'Career OS Multidisciplinary Council representing military service, emergency response, skilled trades, healthcare, corporate business, and legal professions',
+      src: '/media/hero/hero_visionary_pathways.jpg',
+      alt: 'Visionary illuminated metropolitan skyline with topological career pathway light streams and modern multidisciplinary leaders overlooking the horizon',
       width: 1920,
       height: 1080,
-      caption: 'The Career OS multidisciplinary mentor ecosystem.',
+      caption: 'Career OS — Navigating modern career trajectories across interconnected industries.',
     },
     cityHorizon: {
       src: '/media/hero/city_horizon_hero.jpg',
