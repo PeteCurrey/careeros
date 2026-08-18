@@ -21,6 +21,11 @@ import {
   Lock,
   ChevronRight,
   Info,
+  MessageSquare,
+  AlertCircle,
+  HeartHandshake,
+  GraduationCap,
+  Mail,
 } from 'lucide-react';
 import { CareerGradientText } from '@/components/brand/CareerGradientText';
 

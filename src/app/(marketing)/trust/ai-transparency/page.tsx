@@ -24,6 +24,8 @@ import {
   HelpCircle,
   Clock,
   Info,
+  BadgeInfo,
+  ShieldAlert,
 } from 'lucide-react';
 import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
