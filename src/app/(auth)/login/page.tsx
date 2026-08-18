@@ -129,24 +129,32 @@ export default function LoginPage() {
   // 3. Password Login Handler (Fallback)
   const handlePasswordLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !password) return;
+    if (!email || !password) {
+      setErrorMessage('Enter your email and password.');
+      return;
+    }
 
     setIsLoading(true);
     setErrorMessage('');
 
     try {
-      const res = await fetch('/api/auth/step-up', {
+      const res = await fetch('/api/auth/password/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          method: 'password',
+          email: email.trim().toLowerCase(),
           password,
         }),
-      }).catch(() => null);
+      });
 
-      router.push(ROUTES.APP_DASHBOARD);
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Invalid email or password.');
+      }
+
+      router.push(data.redirectTo || ROUTES.APP_DASHBOARD);
     } catch (err: unknown) {
-      setErrorMessage((err as Error).message || 'Login failed.');
+      setErrorMessage((err as Error).message || 'Login failed. Please check your credentials.');
     } finally {
       setIsLoading(false);
     }
