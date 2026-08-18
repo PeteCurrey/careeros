@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { MentorAssignment } from '@/types/platform/mentors';
-import { Bot, ArrowRight, ArrowLeft, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowLeft, ShieldCheck, Sparkles } from 'lucide-react';
 
 interface Step12MentorRevealProps {
   mentorAssignment: MentorAssignment;
@@ -26,14 +26,14 @@ export function Step12MentorReveal({
       <div className="text-center space-y-2 max-w-xl mx-auto">
         <div className="flex items-center justify-center gap-2">
           <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded bg-[var(--accent-blue-subtle)] text-[var(--accent-blue)] border border-[var(--accent-blue-border)] font-bold">
-            Chapter 03 &bull; Mentor Calibration
+            Your Mentor
           </span>
         </div>
         <h1 className="text-2xl sm:text-4xl font-serif text-white font-normal">
-          Meet your AI Career Mentor.
+          We've found the Mentor that best fits where you are right now.
         </h1>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
-          Career OS system-assigns a dedicated domain specialist mentor calibrated directly to your Career Twin context.
+          {mentorAssignment.mentorName} is your dedicated AI Career Mentor, specialising in {mentorAssignment.mentorDomain.toLowerCase()}.
         </p>
       </div>
 
@@ -53,14 +53,11 @@ export function Step12MentorReveal({
               />
             </div>
             <div className="space-y-0.5">
-              <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] tracking-widest block">
-                AI Career Mentor Persona
-              </span>
               <h2 className="text-xl sm:text-2xl font-serif text-white font-normal">
                 {mentorAssignment.mentorName}
               </h2>
               <span className="text-xs font-mono text-[var(--accent-blue)]">
-                {mentorAssignment.mentorDomain}
+                AI Career Mentor &bull; {mentorAssignment.mentorDomain}
               </span>
             </div>
           </div>
@@ -79,13 +76,13 @@ export function Step12MentorReveal({
 
             <div className="space-y-2 text-xs text-[var(--color-text-secondary)]">
               <p className="leading-relaxed">
-                {firstName} will act as your private sounding board, evaluate non-linear career trade-offs, and help you shape verifiable milestones in Career OS.
+                {firstName} will act as your sounding board, give honest advice, and help you work out the best next steps for your career.
               </p>
             </div>
 
             <div className="p-3 rounded-lg bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] flex items-center gap-2.5 text-xs text-white">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Private conversations &bull; Zero exposure to external model training</span>
+              <span>Mentor conversations are always completely private to you</span>
             </div>
           </div>
         </div>
@@ -111,7 +108,7 @@ export function Step12MentorReveal({
           onClick={onNext}
           className="text-xs font-mono"
         >
-          <span>First consultation with {firstName}</span>
+          <span>Talk with {firstName}</span>
           <ArrowRight className="w-4 h-4 ml-1.5" />
         </Button>
       </div>

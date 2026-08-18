@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { AdaptiveSplitLayout } from '../../shared/AdaptiveSplitLayout';
 import { Button } from '@/components/ui/Button';
 import { CareerStage } from '@/types/platform/onboarding';
-import { Sparkles, Plus, X, ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Plus, X, ArrowRight, ArrowLeft } from 'lucide-react';
 
 interface Step08CapabilitiesProps {
   careerStage: CareerStage;
@@ -25,22 +25,21 @@ export function Step08Capabilities({
 }: Step08CapabilitiesProps) {
   const [inputVal, setInputVal] = useState('');
 
-  // Suggested capability vectors per stage
   const getSuggestions = (stage: CareerStage) => {
     switch (stage) {
       case 'SCHOOL_STUDENT':
       case 'COLLEGE_UNIVERSITY':
-        return ['Critical Thinking', 'Problem Solving', 'Data Analysis', 'Project Presentation', 'Python', 'Written Communication', 'Research'];
+        return ['Problem Solving', 'Teamwork', 'Communication', 'Presentations', 'Data Analysis', 'Research', 'Time Management'];
       case 'APPRENTICE_TRADE':
-        return ['Diagnostics & Troubleshooting', 'Electrical Schematic Analysis', 'Safety Compliance', 'Blueprint Reading', 'Preventive Maintenance', 'Tool Calibration'];
+        return ['Diagnostics & Troubleshooting', 'Safety Compliance', 'Blueprint Reading', 'Equipment Maintenance', 'Electrical Work', 'Tool Handling'];
       case 'LEADER_EXECUTIVE':
-        return ['Strategic Planning', 'Executive Governance', 'Budget & P&L Oversight', 'Organizational Design', 'Cross-Functional Alignment', 'Board Reporting'];
+        return ['Strategic Planning', 'Team Leadership', 'Budget Management', 'Hiring & Mentoring', 'Executive Reporting', 'Operations'];
       case 'ENTREPRENEUR':
-        return ['Product Strategy', 'Venture Capital & Unit Economics', 'Customer Discovery', 'Team Building', 'Go-To-Market Execution', 'Financial Modeling'];
+        return ['Product Strategy', 'Sales & Marketing', 'Customer Research', 'Financial Planning', 'Team Building', 'Negotiation'];
       case 'CAREER_CHANGER':
-        return ['Transferable Analysis', 'Project Management', 'Stakeholder Communication', 'Operational Optimization', 'Process Mapping', 'Adaptability'];
+        return ['Project Management', 'Clear Communication', 'Problem Solving', 'Process Improvement', 'Client Management', 'Adaptability'];
       default:
-        return ['Systems Architecture', 'Agile Product Delivery', 'Client Relationship Management', 'Strategic Execution', 'Team Mentorship', 'Data-Driven Decision Making'];
+        return ['Project Management', 'Communication', 'Problem Solving', 'Data Analysis', 'Strategic Planning', 'Client Relations'];
     }
   };
 
@@ -56,16 +55,16 @@ export function Step08Capabilities({
   return (
     <AdaptiveSplitLayout
       chapter="02_UNDERSTAND"
-      stepNumber="4"
-      stepTotal="4"
-      sectionLabel="Capabilities &bull; Evidence"
-      headline="Confirm your key capabilities &amp; strengths."
-      description="These capability vectors help Career OS synthesize your initial Career Twin model and assign your domain-specialist mentor."
+      stepNumber="5"
+      stepTotal="5"
+      sectionLabel="Your skills"
+      headline="What are you good at?"
+      description="What kinds of things do people rely on you to do? Tell us about your main skills and strengths."
       imageSrc="/media/product/career_twin_horizon.jpg"
-      imageAlt="Career Twin Capability Mapping"
+      imageAlt="Skills and Strengths"
       bottomVisualQuote={{
-        text: 'Capabilities are living vectors of demonstrable skill — not static bullet points on a paper resume.',
-        author: 'Career Twin Architecture',
+        text: 'Your Career Twin is built around what you can actually do.',
+        author: 'Career OS',
       }}
     >
       <div className="space-y-6">
@@ -74,13 +73,8 @@ export function Step08Capabilities({
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <label className="text-xs font-semibold text-white">
-                Selected Capabilities ({skills.length}):
+                Your selected skills ({skills.length}):
               </label>
-              {skills.length > 0 && (
-                <span className="text-[10px] font-mono text-emerald-400">
-                  Ready for Career Twin synthesis
-                </span>
-              )}
             </div>
 
             {skills.length > 0 ? (
@@ -104,7 +98,7 @@ export function Step08Capabilities({
               </div>
             ) : (
               <p className="text-xs text-[var(--color-text-tertiary)] italic p-3 rounded bg-[var(--color-surface-base)]">
-                No capabilities added yet. Type below or select from suggestions.
+                No skills added yet. Type below or choose from suggestions.
               </p>
             )}
           </div>
@@ -121,7 +115,7 @@ export function Step08Capabilities({
                   handleAdd();
                 }
               }}
-              placeholder="Type a skill or capability (e.g. Systems Architecture)..."
+              placeholder="Type a skill or strength..."
               className="flex-1 px-3.5 py-2.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#2F8FFF]"
             />
             <Button
@@ -141,7 +135,7 @@ export function Step08Capabilities({
           {suggestions.length > 0 && (
             <div className="space-y-2 pt-2 border-t border-[var(--color-border-default)]">
               <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] font-semibold block">
-                Suggested for your career stage:
+                Suggestions:
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {suggestions.slice(0, 6).map((s) => (
@@ -181,7 +175,7 @@ export function Step08Capabilities({
             className="text-xs font-mono"
           >
             <Sparkles className="w-4 h-4 mr-1.5 text-[#6BB8FF]" />
-            <span>Synthesize Career Twin &bull; Chapter 03</span>
+            <span>Build my Career Twin</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

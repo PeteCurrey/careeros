@@ -17,10 +17,10 @@ export function Step09TwinSynthesis({
   onRetry,
 }: Step09TwinSynthesisProps) {
   const assemblyNodes = [
-    { from: 'Verified History', to: 'Capability Model', color: 'border-[#2F8FFF]' },
-    { from: 'Demonstrated Skills', to: 'Career Passport Proof', color: 'border-emerald-500' },
-    { from: 'Selected Goals', to: 'Active Objective Horizon', color: 'border-purple-500' },
-    { from: 'Domain Context', to: 'AI Mentor Persona', color: 'border-[#CDBBD2]' },
+    { from: 'Experience & background', to: 'Skills profile' },
+    { from: 'Your goals', to: 'Career directions' },
+    { from: 'Your industry focus', to: 'AI Career Mentor' },
+    { from: 'Strengths & achievements', to: 'Career Passport' },
   ];
 
   return (
@@ -29,15 +29,15 @@ export function Step09TwinSynthesis({
         <Card className="p-8 sm:p-10 text-center space-y-5 bg-[var(--color-surface-raised)] border-red-500/40 shadow-2xl max-w-xl mx-auto">
           <AlertCircle className="w-12 h-12 text-red-400 mx-auto" />
           <div className="space-y-1.5">
-            <h2 className="text-xl font-bold text-white">Career Twin Analysis Incomplete</h2>
+            <h2 className="text-xl font-bold text-white">We couldn't finish building this yet</h2>
             <p className="text-xs text-red-300 leading-relaxed max-w-md mx-auto">
-              {synthesisError}
+              Your information is safe. Please try again.
             </p>
           </div>
           <div className="pt-2">
             <Button type="button" onClick={onRetry} variant="primary" size="md" className="text-xs font-mono">
               <RefreshCw className="w-4 h-4 mr-2" />
-              <span>Retry Career Twin Synthesis</span>
+              <span>Try again</span>
             </Button>
           </div>
         </Card>
@@ -49,16 +49,16 @@ export function Step09TwinSynthesis({
               <Sparkles className="w-7 h-7 animate-pulse text-[#6BB8FF]" />
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white font-normal">
-              Assembling your Career Twin…
+              Setting up your Career Twin…
             </h1>
             <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Synthesizing your capability model, adjacent topological pathways, and mentor calibration from verified evidence.
+              Bringing together your experience, skills and goals into your private career profile.
             </p>
           </div>
 
           {/* Node Convergence Visual */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
-            {assemblyNodes.map((node, idx) => (
+            {assemblyNodes.map((node) => (
               <div
                 key={node.from}
                 className="p-4 rounded-xl bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] flex items-center justify-between gap-3 shadow-md"
@@ -76,7 +76,7 @@ export function Step09TwinSynthesis({
 
           <div className="pt-4 flex items-center justify-center gap-2 text-xs font-mono text-[var(--color-text-tertiary)]">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Private deterministic intelligence &bull; Zero external model leaks</span>
+            <span>Private &bull; Stored securely &bull; Never shared without your choice</span>
           </div>
         </div>
       )}

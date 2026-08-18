@@ -3,7 +3,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { X, ShieldCheck, Lock, Sparkles, HelpCircle, CheckCircle2 } from 'lucide-react';
+import { X, ShieldCheck, Sparkles, CheckCircle2 } from 'lucide-react';
 
 interface OnboardingHelpModalProps {
   isOpen: boolean;
@@ -33,15 +33,15 @@ export function OnboardingHelpModal({ isOpen, onClose }: OnboardingHelpModalProp
         {/* Title & Introduction */}
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[var(--accent-blue-subtle)] text-[var(--accent-blue)] border border-[var(--accent-blue-border)] font-bold">
-              Support &amp; Guidance
+            <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded bg-[var(--accent-blue-subtle)] text-[var(--accent-blue)] border border-[var(--accent-blue-border)] font-bold">
+              Help &amp; Privacy
             </span>
           </div>
           <h2 id="onboarding-help-title" className="text-xl font-serif text-white font-normal">
-            Building your Career OS
+            How Career OS works
           </h2>
           <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-            Here is how your setup works and how your privacy is protected.
+            Here is what you need to know about your setup and privacy.
           </p>
         </div>
 
@@ -50,9 +50,9 @@ export function OnboardingHelpModal({ isOpen, onClose }: OnboardingHelpModalProp
           <div className="flex items-start gap-2.5 p-3 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-white">Private &amp; Self-Sovereign</p>
+              <p className="font-semibold text-white">Private by default</p>
               <p className="text-[11px] leading-snug">
-                Your Career Twin, notes, and mentor conversations are private to you. They are never sold, published, or exposed to employers without your explicit choice.
+                Your Career Twin, notes, and mentor chats are completely private to you. They are never shared with employers unless you choose to share them.
               </p>
             </div>
           </div>
@@ -60,9 +60,9 @@ export function OnboardingHelpModal({ isOpen, onClose }: OnboardingHelpModalProp
           <div className="flex items-start gap-2.5 p-3 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
             <Sparkles className="w-4 h-4 text-[#2F8FFF] shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-white">Progressive Payoff</p>
+              <p className="font-semibold text-white">Personalised for you</p>
               <p className="text-[11px] leading-snug">
-                Every answer helps Career OS calibrate your capability model, assign your domain mentor, and generate your first strategic career objective.
+                Your answers help Career OS build your Career Twin, connect you with the right Mentor, and suggest real next steps.
               </p>
             </div>
           </div>
@@ -70,9 +70,9 @@ export function OnboardingHelpModal({ isOpen, onClose }: OnboardingHelpModalProp
           <div className="flex items-start gap-2.5 p-3 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
             <CheckCircle2 className="w-4 h-4 text-[#34D399] shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-white">Automatic Progress Saving</p>
+              <p className="font-semibold text-white">Saved as you go</p>
               <p className="text-[11px] leading-snug">
-                Your progress is securely saved at each step. You can exit anytime and resume right where you left off.
+                Your progress is automatically saved. You can exit anytime and come back whenever you like.
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@ export function OnboardingHelpModal({ isOpen, onClose }: OnboardingHelpModalProp
         {/* Action Button */}
         <div className="pt-2">
           <Button variant="primary" size="md" onClick={onClose} className="w-full justify-center text-xs font-mono">
-            Got it &bull; Continue Setup
+            Got it &bull; Continue
           </Button>
         </div>
       </Card>

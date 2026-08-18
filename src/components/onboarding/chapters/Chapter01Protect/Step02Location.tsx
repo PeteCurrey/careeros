@@ -38,14 +38,14 @@ export function Step02Location({
       chapter="01_PROTECT"
       stepNumber="2"
       stepTotal="3"
-      sectionLabel="Location &bull; Regional Context"
-      headline="Where are you building your career?"
-      description="Location helps Career OS understand nearby opportunities, education routes, and labour-market context."
+      sectionLabel="Location"
+      headline="Where are you based?"
+      description="This helps us show opportunities, training and career information that make sense for where you live."
       imageSrc="/media/hero/city_horizon_hero.jpg"
-      imageAlt="Regional Market & Career Horizon"
+      imageAlt="Career Horizon"
       bottomVisualQuote={{
-        text: 'Regional market context informs local apprenticeship parity, compensation baselines, and industry density.',
-        author: 'Labour Market Intelligence',
+        text: 'Finding local options close to where you live and work.',
+        author: 'Career OS',
       }}
     >
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -53,7 +53,7 @@ export function Step02Location({
           <div className="flex items-center gap-2 pb-2 border-b border-[var(--color-border-default)]">
             <MapPin className="w-4 h-4 text-[#2F8FFF]" />
             <h3 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-              Regional Market Hub
+              Location
             </h3>
           </div>
 
@@ -61,7 +61,7 @@ export function Step02Location({
             {/* City */}
             <div className="sm:col-span-6 space-y-1.5">
               <label htmlFor="city-input" className="text-xs font-semibold text-white">
-                City / Metro Area
+                City / Town
               </label>
               <input
                 id="city-input"
@@ -94,7 +94,7 @@ export function Step02Location({
             {/* ZIP / Postcode */}
             <div className="sm:col-span-3 space-y-1.5">
               <label htmlFor="zip-input" className="text-xs font-semibold text-white">
-                Postal Code (Optional)
+                ZIP / Postcode (Optional)
               </label>
               <input
                 id="zip-input"
@@ -108,7 +108,7 @@ export function Step02Location({
           </div>
 
           <p className="text-[11px] text-[var(--color-text-secondary)]">
-            We do not ask for or store your street address. We only calibrate regional opportunity models.
+            We only use this to find local opportunities close to you. We never ask for your street address.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export function Step02Location({
             disabled={!city.trim()}
             className="text-xs font-mono"
           >
-            <span>Continue to Security</span>
+            <span>Next</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

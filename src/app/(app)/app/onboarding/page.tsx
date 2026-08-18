@@ -369,15 +369,15 @@ export default function RedesignedOnboardingMaster() {
 
       if (!res.ok) {
         const data = await res.json();
-        setPrivacySaveError(data.error || 'Failed to save privacy preferences. Please try again.');
+        setPrivacySaveError(data.error || "We couldn't save these settings. Your choices haven't been changed. Please try again.");
         return;
       }
 
-      triggerSaveNotification('Privacy confirmed');
+      triggerSaveNotification('Preferences saved');
       setCurrentStep(15);
     } catch (err) {
       console.error('Privacy save error:', err);
-      setPrivacySaveError('Network issue. Please try again.');
+      setPrivacySaveError("We couldn't save these settings. Your choices haven't been changed. Please check your connection and try again.");
     } finally {
       setIsSavingPrivacy(false);
     }

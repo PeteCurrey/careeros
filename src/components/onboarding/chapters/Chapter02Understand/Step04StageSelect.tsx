@@ -41,71 +41,71 @@ export function Step04StageSelect({
   }[] = [
     {
       id: 'SCHOOL_STUDENT',
-      title: 'Still in school',
-      description: "I'm exploring what comes next and comparing future routes.",
+      title: "I'm still at school",
+      description: "Looking at what to do next and comparing possible routes.",
       icon: GraduationCap,
       image: '/media/students/student_hero_futures.jpg',
     },
     {
       id: 'COLLEGE_UNIVERSITY',
-      title: 'College or university',
-      description: "I'm building toward my first professional move.",
+      title: "I'm at college or university",
+      description: "Preparing for my first step after studying.",
       icon: GraduationCap,
       image: '/media/students/audience_students.jpg',
     },
     {
       id: 'APPRENTICE_TRADE',
-      title: 'Apprentice or skilled trade',
-      description: 'Hands-on technical craft, mechanical, electrical, or engineering craft.',
+      title: "I'm doing an apprenticeship or trade",
+      description: "Hands-on technical craft, mechanical, electrical, or trade work.",
       icon: Wrench,
       image: '/media/schools/audience_schools.jpg',
     },
     {
       id: 'EARLY_CAREER',
-      title: 'Starting my career',
-      description: "I'm establishing myself in my first 1–3 years in the workforce.",
+      title: "I'm starting my career",
+      description: "In my first 1–3 years in work and learning the ropes.",
       icon: Briefcase,
       image: '/media/professionals/audience_professionals.jpg',
     },
     {
       id: 'EXPERIENCED_PROFESSIONAL',
-      title: 'Building my career',
-      description: "I'm established and ready for the next level in my field.",
+      title: "I'm working and want to progress",
+      description: "Established in my field and ready for the next level.",
       icon: TrendingUp,
       image: '/media/professionals/professional_hero_intersection.jpg',
     },
     {
       id: 'LEADER_EXECUTIVE',
-      title: 'Leading people or organisations',
-      description: 'Director, VP, or executive management thinking about long-term stewardship.',
+      title: "I lead a team or organisation",
+      description: "Managing people, departments, or high-level direction.",
       icon: Users,
       image: '/media/professionals/professional_pathways_collective.jpg',
     },
     {
       id: 'CAREER_CHANGER',
-      title: 'Changing careers',
-      description: 'I want to take my experience and capability somewhere different.',
+      title: "I'm thinking about changing career",
+      description: "I want to take my skills and move into something different.",
       icon: RotateCcw,
       image: '/media/product/career_graph_hero.jpg',
     },
     {
       id: 'RETURNER',
-      title: 'Returning after time away',
-      description: 'Re-entering the workforce after caregiving, travel, or a career break.',
+      title: "I'm returning to work",
+      description: "Coming back after time away, caregiving, travel, or a break.",
       icon: Sparkles,
       image: '/media/hero/city_horizon_hero.jpg',
     },
     {
       id: 'ENTREPRENEUR',
-      title: 'Building something of my own',
-      description: 'Founder, operator, or consultant building a new venture.',
+      title: "I'm building a business",
+      description: "Founder, freelancer, or consultant working on my own venture.",
       icon: Rocket,
       image: '/media/employers/employer_hero_capability.jpg',
     },
     {
       id: 'EXPLORING',
-      title: 'Not sure yet',
-      description: "That's what I need help figuring out — open to discovering possibilities.",
+      title: "I'm not sure yet",
+      description: "Open to discovering different possibilities and advice.",
       icon: Compass,
       image: '/media/product/career_twin_horizon.jpg',
     },
@@ -117,15 +117,15 @@ export function Step04StageSelect({
     <AdaptiveSplitLayout
       chapter="02_UNDERSTAND"
       stepNumber="1"
-      stepTotal="4"
-      sectionLabel="Context &bull; Career Starting Point"
-      headline="Where are you in your career today?"
-      description="Select your starting point so Career OS calibrates the right questions, mentors, and intelligence models for you."
+      stepTotal="5"
+      sectionLabel="About you"
+      headline="Where are you right now?"
+      description="Select the option that best describes where you are today. We'll tailor everything to your situation."
       imageSrc={currentOption.image}
       imageAlt={currentOption.title}
       bottomVisualQuote={{
-        text: 'Every career stage has equal dignity in Career OS — from trades and university routes to career transitions and executive stewardship.',
-        author: 'Pathway Dignity Principle',
+        text: 'Career OS is designed for every stage — from school and apprenticeships to executive leadership and career changes.',
+        author: 'Career OS',
       }}
     >
       <div className="space-y-6">

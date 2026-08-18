@@ -80,12 +80,27 @@ export async function POST(request: NextRequest) {
     checks.hasObjective = !!objective;
 
     // Check privacy preferences confirmed
-    const { data: privacy } = await adminDb
-      .from("user_privacy_preferences")
-      .select("user_id")
-      .eq("user_id", user.id)
+    let hasPrivacy = false;
+    const { data: profileRecord } = await adminDb
+      .from("profiles")
+      .select("id")
+      .eq("auth_user_id", user.id)
       .maybeSingle();
-    checks.hasPrivacyConfirmed = !!privacy;
+
+    if (profileRecord?.id) {
+      const { data: privacy } = await adminDb
+        .from("privacy_preferences")
+        .select("profile_id")
+        .eq("profile_id", profileRecord.id)
+        .maybeSingle();
+      hasPrivacy = !!privacy;
+    }
+    
+    // Also accept session state if already progressed through privacy step
+    if (!hasPrivacy && (session.state === "PRIVACY_CONFIRMED" || session.state === "ONBOARDING_COMPLETE")) {
+      hasPrivacy = true;
+    }
+    checks.hasPrivacyConfirmed = hasPrivacy;
 
     const allComplete = Object.values(checks).every(Boolean);
 

@@ -6,7 +6,7 @@ import { AdaptiveSplitLayout } from '../../shared/AdaptiveSplitLayout';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { MentorAssignment, CareerObjective } from '@/types/platform/mentors';
-import { MessageSquare, Sparkles, Target, ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { MessageSquare, Sparkles, Target, ArrowRight, ArrowLeft } from 'lucide-react';
 
 interface Step13MentorDialogProps {
   mentorAssignment: MentorAssignment;
@@ -34,7 +34,7 @@ export function Step13MentorDialog({
   const firstName = mentorAssignment.mentorName.split(' ')[0] || 'Mentor';
   const questionText =
     mentorQuestion ||
-    "If Career OS worked brilliantly for you over the next six months, what would actually be different in your working life?";
+    "If Career OS works really well for you over the next six months, what would actually be different in your career?";
 
   const mentorVisual = (
     <div className="p-7 rounded-2xl bg-gradient-to-br from-[#0F1422] to-[#141B2E] border border-blue-950/40 shadow-2xl space-y-5">
@@ -59,10 +59,10 @@ export function Step13MentorDialog({
 
       <div className="p-4 rounded-xl bg-black/40 border border-white/10 space-y-2">
         <span className="text-[10px] font-mono uppercase text-[#DDD36D] font-bold block">
-          Strategic Focus Horizon
+          Your goal
         </span>
         <p className="text-xs text-zinc-200 leading-relaxed">
-          &ldquo;We will turn your reflection into an active 90-day objective with sequential milestones in your Career OS ledger.&rdquo;
+          &ldquo;We'll turn what you want to achieve into clear next steps you can work on.&rdquo;
         </p>
       </div>
     </div>
@@ -73,9 +73,9 @@ export function Step13MentorDialog({
       chapter="03_ACTIVATE"
       stepNumber="3"
       stepTotal="5"
-      sectionLabel="Guidance &bull; First Consultation"
+      sectionLabel="Your Mentor"
       headline={`A question from ${firstName}.`}
-      description="Your answer will shape your first 90-day career objective and milestone roadmap."
+      description="Your answer helps your Mentor understand what success looks like for you."
       visualContent={mentorVisual}
     >
       <div className="space-y-6">
@@ -84,7 +84,7 @@ export function Step13MentorDialog({
           <div className="flex items-center gap-2">
             <MessageSquare className="w-4 h-4 text-[#2F8FFF]" />
             <span className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-              {firstName}&apos;s First Question
+              {firstName}'s First Question
             </span>
           </div>
 
@@ -94,7 +94,7 @@ export function Step13MentorDialog({
 
           <div className="space-y-2 pt-2 border-t border-[var(--color-border-default)]">
             <label htmlFor="reflection-input" className="text-xs font-semibold text-white block">
-              Your Reflection
+              Your answer
             </label>
             <textarea
               id="reflection-input"
@@ -102,7 +102,7 @@ export function Step13MentorDialog({
               autoFocus
               value={mentorAnswer}
               onChange={(e) => onChangeAnswer(e.target.value)}
-              placeholder="e.g. Lead higher-visibility systems architecture projects, negotiate compensation clarity, establish a clear path to director..."
+              placeholder="e.g. Find a job with better pay, get practical experience in a new area, work out my next move..."
               className="w-full p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#2F8FFF]"
             />
           </div>
@@ -118,7 +118,7 @@ export function Step13MentorDialog({
                 className="text-xs font-mono"
               >
                 <Sparkles className="w-3.5 h-3.5 mr-1 text-[#DDD36D]" />
-                <span>Shape First Objective</span>
+                <span>Create my plan</span>
               </Button>
             </div>
           )}
@@ -137,11 +137,11 @@ export function Step13MentorDialog({
               <div className="flex items-center gap-2">
                 <Target className="w-4 h-4 text-emerald-400" />
                 <span className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-                  Your First Grounded Objective &bull; {careerObjective.horizonDays}-Day Horizon
+                  Here's what we'll work towards first
                 </span>
               </div>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
-                ACTIVE
+                READY
               </span>
             </div>
 
@@ -155,7 +155,7 @@ export function Step13MentorDialog({
             {careerObjective.milestones?.length > 0 && (
               <div className="space-y-1.5 pt-2 border-t border-[var(--color-border-default)]">
                 <span className="text-[10px] font-mono text-[var(--color-taupe-300)] uppercase block">
-                  Initial Milestones ({careerObjective.milestones.length}):
+                  Your first steps:
                 </span>
                 <div className="space-y-1">
                   {careerObjective.milestones.map((m) => (
@@ -194,7 +194,7 @@ export function Step13MentorDialog({
             disabled={!careerObjective}
             className="text-xs font-mono"
           >
-            <span>Review Privacy &amp; Data Grants</span>
+            <span>Next</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

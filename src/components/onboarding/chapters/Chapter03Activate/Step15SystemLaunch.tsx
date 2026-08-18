@@ -11,10 +11,7 @@ import {
   Compass,
   Bot,
   Target,
-  Zap,
   ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
 } from 'lucide-react';
 
 interface Step15SystemLaunchProps {
@@ -43,39 +40,33 @@ export function Step15SystemLaunch({
   const systems = [
     {
       name: 'Career Twin',
-      status: 'INITIALIZED',
-      detail: `${careerTwin?.capabilities?.length || 3} capability vectors mapped`,
+      status: 'READY',
+      detail: `${careerTwin?.capabilities?.length || 3} skills and strengths`,
       icon: Sparkles,
     },
     {
       name: 'Career Passport',
-      status: 'CREATED',
-      detail: `${passport?.entries?.length || 1} verified entry stored`,
+      status: 'READY',
+      detail: `${passport?.entries?.length || 1} verified records`,
       icon: Award,
     },
     {
       name: 'Career Map',
-      status: 'MAP SEEDED',
-      detail: `${graphSeed?.nodes?.length || 2} adjacent pathways calculated`,
+      status: 'READY',
+      detail: `${graphSeed?.nodes?.length || 2} possible directions`,
       icon: Compass,
     },
     {
       name: 'AI Career Mentor',
-      status: 'ASSIGNED',
+      status: 'CONNECTED',
       detail: mentorAssignment?.mentorName || 'Marcus Thorne',
       icon: Bot,
     },
     {
-      name: 'Career Objective',
-      status: '1 ACTIVE',
-      detail: `${careerObjective?.horizonDays || 90}-day milestone roadmap`,
+      name: 'Your Plan',
+      status: 'ACTIVE',
+      detail: `${careerObjective?.horizonDays || 90}-day next steps`,
       icon: Target,
-    },
-    {
-      name: 'Opportunity Agent',
-      status: 'READY',
-      detail: 'Bilateral discovery configured',
-      icon: Zap,
     },
   ];
 
@@ -85,14 +76,14 @@ export function Step15SystemLaunch({
       <div className="text-center space-y-3 max-w-xl mx-auto">
         <div className="flex items-center justify-center gap-2">
           <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">
-            Activation Gate &bull; All Systems Ready
+            All ready
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-normal leading-tight">
           Your Career OS is ready.
         </h1>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          Your starting capability model, topological map, and assigned domain mentor are initialized.
+          We've created your Career Twin, prepared your map, and connected your Mentor.
         </p>
       </div>
 
@@ -128,11 +119,8 @@ export function Step15SystemLaunch({
         <Card className="p-6 sm:p-7 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-4">
           <div className="flex items-center justify-between pb-2 border-b border-[var(--color-border-default)]">
             <h3 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-              Your First Priorities in Career OS
+              Suggested first steps
             </h3>
-            <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">
-              Grounded in Twin V1
-            </span>
           </div>
 
           <div className="space-y-2">
@@ -172,12 +160,12 @@ export function Step15SystemLaunch({
           disabled={isActivating}
           className="w-full sm:w-auto px-10 py-3.5 text-sm font-mono shadow-xl"
         >
-          <span>{isActivating ? 'Unlocking Career OS…' : 'Enter my Career OS'}</span>
+          <span>{isActivating ? 'Opening Career OS…' : 'Enter Career OS'}</span>
           <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
 
         <p className="text-[11px] font-mono text-[var(--color-taupe-300)]">
-          Private Career Operating System &bull; Self-Sovereign Architecture
+          Private &bull; Secure &bull; Built for your career
         </p>
       </div>
     </div>

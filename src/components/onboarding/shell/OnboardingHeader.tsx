@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { OnboardingChapter } from '@/types/platform/onboarding';
 import { OnboardingHelpModal } from './OnboardingHelpModal';
-import { ShieldCheck, HelpCircle, LogOut, CheckCircle2 } from 'lucide-react';
+import { HelpCircle, LogOut, CheckCircle2 } from 'lucide-react';
 import { ROUTES } from '@/lib/routes';
 
 interface OnboardingHeaderProps {
@@ -21,9 +21,9 @@ export function OnboardingHeader({
   const [isHelpOpen, setIsHelpOpen] = useState(false);
 
   const chapters: { id: OnboardingChapter; label: string; number: string }[] = [
-    { id: '01_PROTECT', label: 'Protect', number: '01' },
-    { id: '02_UNDERSTAND', label: 'Understand', number: '02' },
-    { id: '03_ACTIVATE', label: 'Activate', number: '03' },
+    { id: '01_PROTECT', label: 'Set up', number: '01' },
+    { id: '02_UNDERSTAND', label: 'About you', number: '02' },
+    { id: '03_ACTIVATE', label: 'Your Career OS', number: '03' },
   ];
 
   const currentChapterIndex = chapters.findIndex((c) => c.id === currentChapter);
@@ -45,7 +45,7 @@ export function OnboardingHeader({
             </Link>
           </div>
 
-          {/* CENTRE / DESKTOP: 3 Clean Chapter Milestones */}
+          {/* CENTRE / DESKTOP: 3 Simple Milestones */}
           <nav
             aria-label="Setup progress"
             className="hidden md:flex items-center gap-2 p-1 rounded-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)]"
@@ -82,7 +82,7 @@ export function OnboardingHeader({
             })}
           </nav>
 
-          {/* MOBILE: Compact Chapter Badge */}
+          {/* MOBILE: Compact Stage Badge */}
           <div className="md:hidden flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] text-xs font-mono text-white">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-blue)] animate-pulse" />
             <span>
@@ -104,7 +104,7 @@ export function OnboardingHeader({
             <button
               onClick={() => setIsHelpOpen(true)}
               className="text-[var(--color-taupe-300)] hover:text-white flex items-center gap-1 px-2 py-1 rounded hover:bg-white/5 transition-colors"
-              title="Setup help & privacy details"
+              title="Help and privacy details"
             >
               <HelpCircle className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Help</span>

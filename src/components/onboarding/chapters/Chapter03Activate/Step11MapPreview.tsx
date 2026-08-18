@@ -5,7 +5,7 @@ import { AdaptiveSplitLayout } from '../../shared/AdaptiveSplitLayout';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { CareerGraphSeed } from '@/types/platform/intelligence';
-import { Compass, ArrowRight, ArrowLeft, GitBranch, ShieldCheck } from 'lucide-react';
+import { Compass, ArrowRight, ArrowLeft, GitBranch } from 'lucide-react';
 
 interface Step11MapPreviewProps {
   graphSeed: CareerGraphSeed | null;
@@ -21,23 +21,17 @@ export function Step11MapPreview({
   const nodes = graphSeed?.nodes || [
     {
       id: 'node_1',
-      roleTitle: 'Adjacent Specialisation',
-      trajectoryType: 'ADJACENT_POSSIBILITY' as const,
-      evidenceBasis: 'Transferable capability overlap with your starting profile.',
-      confidence: 'SOME_EVIDENCE' as const,
-      domain: 'Systems & Engineering',
-      overlappingCapabilities: ['Technical Design', 'Analysis'],
-      keyBridgeRequirements: ['Domain Certification'],
+      roleTitle: 'A possible next step',
+      trajectoryType: 'ANOTHER DIRECTION',
+      evidenceBasis: 'Where your current skills give you a head start.',
+      domain: 'Engineering & Technology',
     },
     {
       id: 'node_2',
-      roleTitle: 'Senior Leadership Direction',
-      trajectoryType: 'DEVELOPMENT_DIRECTION' as const,
-      evidenceBasis: 'Progression vector requiring demonstrated evidence compounding.',
-      confidence: 'EARLY_HYPOTHESIS' as const,
-      domain: 'Executive Stewardship',
-      overlappingCapabilities: ['Strategic Planning'],
-      keyBridgeRequirements: ['P&L Management'],
+      roleTitle: 'Longer-term option',
+      trajectoryType: 'GROWTH DIRECTION',
+      evidenceBasis: 'Roles you can work towards over the next few years.',
+      domain: 'Leadership',
     },
   ];
 
@@ -46,14 +40,14 @@ export function Step11MapPreview({
       chapter="03_ACTIVATE"
       stepNumber="2"
       stepTotal="5"
-      sectionLabel="Navigation &bull; Career Graph"
-      headline="Explore your starting Career Map."
-      description="Career OS maps topological pathways between roles. These are lateral bridges and progression vectors grounded in your transferable capabilities."
+      sectionLabel="Your Career OS"
+      headline="Here are a few directions Career OS can already see."
+      description="Based on your skills and goals, here are possible routes ahead — from your current direction to new possibilities."
       imageSrc="/media/product/career_graph_hero.jpg"
-      imageAlt="Career Map Topological Graph"
+      imageAlt="Career Map Overview"
       bottomVisualQuote={{
-        text: 'Career progression is non-linear. The Career Graph maps adjacent possibilities and bridge requirements across disciplines.',
-        author: 'Topological Career Mapping',
+        text: 'Careers rarely move in a straight line. Career OS maps different ways forward.',
+        author: 'Career OS',
       }}
     >
       <div className="space-y-6">
@@ -63,11 +57,11 @@ export function Step11MapPreview({
             <div className="flex items-center gap-2">
               <Compass className="w-4 h-4 text-[#2F8FFF]" />
               <h3 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-                Initial Graph Topology
+                Your Career Map
               </h3>
             </div>
             <span className="text-[10px] font-mono text-emerald-400">
-              {nodes.length} Adjacent Vectors Mapped
+              {nodes.length} Directions Mapped
             </span>
           </div>
 
@@ -75,21 +69,21 @@ export function Step11MapPreview({
           <div className="p-4 rounded-xl bg-gradient-to-r from-[var(--accent-blue-subtle)] to-[var(--color-surface-base)] border border-[var(--accent-blue-border)] space-y-1">
             <div className="flex items-center justify-between">
               <span className="text-[10px] font-mono uppercase text-[var(--accent-blue)] font-bold">
-                Anchor Point &bull; You Are Here
+                Where you are today
               </span>
               <span className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded bg-[#2F8FFF] text-white font-bold">
                 CURRENT
               </span>
             </div>
             <p className="text-sm font-bold text-white">
-              Starting Career Profile Context
+              Starting Profile
             </p>
           </div>
 
           {/* Connected Branches */}
           <div className="space-y-2.5 pt-1">
             <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] font-semibold block">
-              Emerging Topological Vectors:
+              Possible directions:
             </span>
 
             <div className="grid grid-cols-1 gap-2.5">
@@ -105,9 +99,6 @@ export function Step11MapPreview({
                         {node.roleTitle}
                       </span>
                     </div>
-                    <span className="text-[9px] font-mono uppercase px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[var(--color-taupe-300)]">
-                      {node.trajectoryType.replace(/_/g, ' ')}
-                    </span>
                   </div>
                   <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
                     {node.evidenceBasis}
@@ -138,7 +129,7 @@ export function Step11MapPreview({
             onClick={onNext}
             className="text-xs font-mono"
           >
-            <span>Meet your Career Mentor</span>
+            <span>Meet my Mentor</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

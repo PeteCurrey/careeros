@@ -33,13 +33,14 @@ export default function AboutPage() {
             priority
             sizes="100vw"
             quality={95}
-            className="object-cover object-center"
+            className="object-cover"
+            style={{ objectPosition: '72% center' }}
           />
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(to right, #222222 0%, rgba(34, 34, 34, 0.96) 38%, rgba(34, 34, 34, 0.88) 55%, rgba(34, 34, 34, 0.42) 78%, rgba(34, 34, 34, 0.18) 100%)`,
+              background: `linear-gradient(to right, #222222 0%, #222222 28%, rgba(34, 34, 34, 0.96) 45%, rgba(34, 34, 34, 0.70) 62%, rgba(34, 34, 34, 0.20) 82%, rgba(34, 34, 34, 0.05) 100%)`,
             }}
           />
           <div
@@ -56,44 +57,46 @@ export default function AboutPage() {
 
         <CareerPathwayConnector variant="branching" className="opacity-20" />
 
-        <div className="container-editorial relative z-10 space-y-6 max-w-4xl">
-          <ScrollReveal>
-            <div className="flex items-center gap-3">
-              <span className="section-label flex items-center gap-2">
-                <span className="accent-blue-dot accent-blue-dot-pulse" />
-                Company &amp; Philosophy
-              </span>
-              <TechnicalBadge variant="blue">
-                ESTABLISHED 2026
-              </TechnicalBadge>
-            </div>
-          </ScrollReveal>
+        <div className="container-editorial relative z-10">
+          <div className="max-w-xl lg:max-w-[48%] xl:max-w-[46%] space-y-6">
+            <ScrollReveal>
+              <div className="flex items-center gap-3">
+                <span className="section-label flex items-center gap-2">
+                  <span className="accent-blue-dot accent-blue-dot-pulse" />
+                  Company &amp; Philosophy
+                </span>
+                <TechnicalBadge variant="blue">
+                  ESTABLISHED 2026
+                </TechnicalBadge>
+              </div>
+            </ScrollReveal>
 
-          <ScrollReveal delayMs={100}>
-            <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.08]">
-              Serious career infrastructure for{' '}
-              <CareerGradientText variant="blue">
-                your entire working life.
-              </CareerGradientText>
-            </h1>
-          </ScrollReveal>
+            <ScrollReveal delayMs={100}>
+              <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.08] max-w-[16ch]">
+                Serious career infrastructure for{' '}
+                <CareerGradientText variant="blue">
+                  your entire working life.
+                </CareerGradientText>
+              </h1>
+            </ScrollReveal>
 
-          <ScrollReveal delayMs={200}>
-            <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
-              Career OS was founded on a single conviction: that every person deserves professional infrastructure of the same quality that was previously accessible only to privileged networks.
-            </p>
-          </ScrollReveal>
+            <ScrollReveal delayMs={200}>
+              <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-lg">
+                Career OS was founded on a single conviction: that every person deserves professional infrastructure of the same quality that was previously accessible only to privileged networks.
+              </p>
+            </ScrollReveal>
 
-          <ScrollReveal delayMs={300}>
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button href={ROUTES.COMPANY_MISSION} variant="primary" size="lg">
-                Read Our Mission <ArrowRight className="w-4 h-4 ml-1.5" />
-              </Button>
-              <Button href={ROUTES.COMPANY_CONTACT} variant="secondary" size="lg">
-                Contact the Team
-              </Button>
-            </div>
-          </ScrollReveal>
+            <ScrollReveal delayMs={300}>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Button href={ROUTES.COMPANY_MISSION} variant="primary" size="lg">
+                  Read Our Mission <ArrowRight className="w-4 h-4 ml-1.5" />
+                </Button>
+                <Button href={ROUTES.COMPANY_CONTACT} variant="secondary" size="lg">
+                  Contact the Team
+                </Button>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 

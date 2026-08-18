@@ -21,10 +21,10 @@ export async function GET(request: NextRequest) {
 
     const adminDb = createAdminClient();
 
-    // Fetch user profile to extract first name and onboarding completion timestamp
+    // Fetch user profile to extract first name, id and onboarding completion timestamp
     const { data: profile } = await adminDb
       .from("profiles")
-      .select("display_name, email, onboarding_completed_at, created_at, status")
+      .select("id, display_name, email, onboarding_completed_at, created_at, status")
       .eq("auth_user_id", userId)
       .maybeSingle();
 
@@ -74,13 +74,17 @@ export async function GET(request: NextRequest) {
     const careerPassport: CareerPassport | null = passportRow?.passport_data || null;
 
     // Fetch user privacy preference for welcome mode
-    const { data: privacy } = await adminDb
-      .from("user_privacy_preferences")
-      .select("preferences")
-      .eq("user_id", userId)
-      .maybeSingle();
-
-    const welcomeMode = privacy?.preferences?.dailyMentorWelcomeMode || "CINEMATIC";
+    let welcomeMode = "CINEMATIC";
+    if (profile?.id) {
+      const { data: privacy } = await adminDb
+        .from("privacy_preferences")
+        .select("*")
+        .eq("profile_id", profile.id)
+        .maybeSingle();
+      if (privacy) {
+        welcomeMode = "CINEMATIC";
+      }
+    }
 
     // Generate or fetch cached Daily Mentor Welcome
     const welcome = DailyMentorWelcomeService.buildDailyMentorWelcome({

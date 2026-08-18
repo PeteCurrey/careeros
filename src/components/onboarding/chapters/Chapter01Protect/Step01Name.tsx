@@ -28,30 +28,30 @@ export function Step01Name({
       chapter="01_PROTECT"
       stepNumber="1"
       stepTotal="3"
-      sectionLabel="Identity &bull; Setup"
-      headline="Let's build your Career OS."
-      description="A few important details first. Then Career OS can start understanding where you are and where you want to go."
+      sectionLabel="Set up"
+      headline="Let's get your Career OS ready."
+      description="We'll ask a few questions so Career OS can understand where you are and what you want to work towards."
       imageSrc="/media/hero/city_horizon_hero.jpg"
-      imageAlt="Career OS Architectural Horizon"
+      imageAlt="Career OS Horizon"
       bottomVisualQuote={{
-        text: 'Your Career OS is built around your real capability and direction — not generic assessment algorithms.',
-        author: 'Career OS Architecture',
+        text: 'Career OS is built around what you can actually do and where you want to go.',
+        author: 'Career OS',
       }}
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-2">
           <label
-            htmlFor="mentor-callsign-input"
+            htmlFor="user-name-input"
             className="text-sm font-semibold text-white block"
           >
-            What should your Career Mentor call you?
+            What should we call you?
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[var(--color-taupe-300)]">
               <User className="w-4 h-4" />
             </div>
             <input
-              id="mentor-callsign-input"
+              id="user-name-input"
               type="text"
               required
               autoFocus
@@ -62,7 +62,7 @@ export function Step01Name({
             />
           </div>
           <p className="text-xs text-[var(--color-text-secondary)]">
-            This is how your assigned AI mentor and career intelligence will address you.
+            Your preferred first name or nickname.
           </p>
         </div>
 

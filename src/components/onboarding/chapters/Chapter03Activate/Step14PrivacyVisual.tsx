@@ -3,16 +3,13 @@
 import React from 'react';
 import { AdaptiveSplitLayout } from '../../shared/AdaptiveSplitLayout';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
 import {
   ShieldCheck,
-  Eye,
-  EyeOff,
   ToggleLeft,
   ToggleRight,
   ArrowRight,
   ArrowLeft,
-  Lock,
+  RefreshCw,
 } from 'lucide-react';
 
 interface Step14PrivacyVisualProps {
@@ -40,43 +37,43 @@ export function Step14PrivacyVisual({
   onSaveAndNext,
   onBack,
 }: Step14PrivacyVisualProps) {
-  // Visual Concentric Privacy Model
-  const concentricPrivacyVisual = (
-    <div className="p-7 rounded-2xl bg-gradient-to-br from-[#090D14] to-[#121A2B] border border-emerald-950/40 shadow-2xl space-y-6">
+  // Simple, readable privacy visual
+  const privacyVisual = (
+    <div className="p-7 rounded-2xl bg-gradient-to-br from-[#090D14] to-[#121A2B] border border-emerald-950/40 shadow-2xl space-y-5">
       <div className="flex items-center justify-between pb-3 border-b border-white/10">
         <div className="flex items-center gap-2">
           <ShieldCheck className="w-5 h-5 text-emerald-400" />
           <span className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-            Concentric Privacy Shield
+            Private by default
           </span>
         </div>
         <span className="text-[10px] font-mono text-emerald-400 font-semibold">
-          SELF-SOVEREIGN
+          YOUR CHOICE
         </span>
       </div>
 
       {/* Layer 1: Core Self */}
-      <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-0.5">
-        <span className="text-[10px] font-mono uppercase text-emerald-300 font-bold">
-          Core Vault &bull; You Only
+      <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-1">
+        <span className="text-[10px] font-mono uppercase text-emerald-300 font-bold block">
+          PRIVATE TO YOU
         </span>
-        <p className="text-xs font-bold text-white">Career Twin &bull; Mentor Sounding Board &bull; Passport</p>
+        <p className="text-xs font-semibold text-white">Career Twin &bull; Mentor conversations &bull; Career Passport</p>
       </div>
 
-      {/* Layer 2: Sealed Intermediary */}
-      <div className="p-3.5 rounded-xl bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-center space-y-0.5">
-        <span className="text-[10px] font-mono uppercase text-[var(--accent-blue)] font-bold">
-          Bilateral Discovery &bull; Anonymous Matching
+      {/* Layer 2: Optional Matching */}
+      <div className="p-3.5 rounded-xl bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] space-y-1">
+        <span className="text-[10px] font-mono uppercase text-[var(--accent-blue)] font-bold block">
+          ONLY IF YOU CHOOSE
         </span>
-        <p className="text-xs font-semibold text-white">Opportunity Recommendations Engine</p>
+        <p className="text-xs text-white">Employer matching without revealing your name</p>
       </div>
 
-      {/* Layer 3: External Perimeter */}
-      <div className="p-3.5 rounded-xl bg-black/40 border border-white/10 text-center space-y-0.5 opacity-80">
-        <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] font-bold">
-          External Perimeter &bull; No Access
+      {/* Layer 3: Public */}
+      <div className="p-3.5 rounded-xl bg-black/40 border border-white/10 space-y-1 opacity-80">
+        <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] font-bold block">
+          NEVER SHARED PUBLICLY BY DEFAULT
         </span>
-        <p className="text-xs text-zinc-400">Employers &bull; Search Engines &bull; Public Feeds</p>
+        <p className="text-xs text-zinc-400">Search engines &bull; Public internet</p>
       </div>
     </div>
   );
@@ -86,23 +83,23 @@ export function Step14PrivacyVisual({
       chapter="03_ACTIVATE"
       stepNumber="4"
       stepTotal="5"
-      sectionLabel="Sovereignty &bull; Data Grants"
+      sectionLabel="Privacy"
       headline="You're in control of who sees what."
-      description="Career OS is private by default. Your Career Twin, mentor chats, and passport are never visible to employers without your explicit choice."
-      visualContent={concentricPrivacyVisual}
+      description="Your Career Twin, Mentor conversations and Career Passport are private unless you choose to share something."
+      visualContent={privacyVisual}
     >
       <div className="space-y-6">
         <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-5">
           <h3 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-            Privacy &amp; Discovery Preferences
+            Privacy &amp; Sharing Settings
           </h3>
 
           {/* Employer Discovery Toggle */}
           <div className="flex items-center justify-between pb-3 border-b border-[var(--color-border-default)]">
             <div className="space-y-0.5 max-w-sm">
-              <div className="text-xs font-semibold text-white">Employer Discovery</div>
+              <div className="text-xs font-semibold text-white">Let employers find me privately</div>
               <div className="text-[11px] text-[var(--color-text-secondary)]">
-                Allow verified employers to discover your capability profile anonymously.
+                Career OS can match you with employers without showing them your name or private information.
               </div>
             </div>
             <button
@@ -113,7 +110,7 @@ export function Step14PrivacyVisual({
               {employerDiscovery === 'OFF' ? (
                 <>
                   <ToggleLeft className="w-4 h-4 text-zinc-500" />
-                  <span>OFF (DEFAULT)</span>
+                  <span>OFF</span>
                 </>
               ) : (
                 <>
@@ -127,9 +124,9 @@ export function Step14PrivacyVisual({
           {/* Opportunity Recommendations Toggle */}
           <div className="flex items-center justify-between pb-3 border-b border-[var(--color-border-default)]">
             <div className="space-y-0.5 max-w-sm">
-              <div className="text-xs font-semibold text-white">Opportunity Recommendations</div>
+              <div className="text-xs font-semibold text-white">Show me relevant opportunities</div>
               <div className="text-[11px] text-[var(--color-text-secondary)]">
-                Match adjacent pathways and capability briefs to your Career Twin.
+                We'll suggest jobs, training and other opportunities that match your goals.
               </div>
             </div>
             <button
@@ -154,9 +151,9 @@ export function Step14PrivacyVisual({
           {/* Product Updates Toggle */}
           <div className="flex items-center justify-between">
             <div className="space-y-0.5 max-w-sm">
-              <div className="text-xs font-semibold text-white">Product &amp; Intelligence Updates</div>
+              <div className="text-xs font-semibold text-white">Email me useful Career OS updates</div>
               <div className="text-[11px] text-[var(--color-text-secondary)]">
-                Receive new feature releases and relevant career insight digests.
+                Occasional product news and career insights.
               </div>
             </div>
             <button
@@ -180,9 +177,19 @@ export function Step14PrivacyVisual({
         </div>
 
         {privacySaveError && (
-          <p className="text-xs text-red-400 p-3 rounded bg-red-950/20 border border-red-700/30">
-            {privacySaveError}
-          </p>
+          <div className="p-3.5 rounded-lg bg-red-950/30 border border-red-700/40 text-xs text-red-300 flex items-center justify-between gap-3">
+            <span>{privacySaveError}</span>
+            <Button
+              type="button"
+              variant="secondary"
+              size="sm"
+              onClick={onSaveAndNext}
+              className="text-xs font-mono shrink-0"
+            >
+              <RefreshCw className="w-3 h-3 mr-1" />
+              <span>Try again</span>
+            </Button>
+          </div>
         )}
 
         {/* Bottom Actions */}
@@ -206,7 +213,7 @@ export function Step14PrivacyVisual({
             disabled={isSavingPrivacy}
             className="text-xs font-mono"
           >
-            <span>{isSavingPrivacy ? 'Saving preferences…' : 'Confirm Privacy & Activate'}</span>
+            <span>{isSavingPrivacy ? 'Saving your privacy settings…' : 'Save and continue'}</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>

@@ -3,9 +3,7 @@
 import React from 'react';
 import { AdaptiveSplitLayout } from '../../shared/AdaptiveSplitLayout';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
 import {
-  ShieldCheck,
   Fingerprint,
   Lock,
   ArrowRight,
@@ -43,42 +41,41 @@ export function Step03Security({
   onNext,
   onBack,
 }: Step03SecurityProps) {
-  // Visual side panel representation for protection
   const protectionVisual = (
     <div className="p-7 rounded-2xl bg-gradient-to-br from-[#0A0E17] via-[#101726] to-[#151F33] border border-blue-950/40 shadow-2xl space-y-6">
       <div className="flex items-center justify-between pb-3 border-b border-white/10">
         <div className="flex items-center gap-2">
           <Shield className="w-5 h-5 text-[#2F8FFF]" />
           <span className="text-xs font-mono uppercase tracking-widest text-white font-bold">
-            Career OS Security Vault
+            Private &amp; Secure
           </span>
         </div>
         <span className="text-[10px] font-mono text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
-          AIR-GAPPED
+          PROTECTED
         </span>
       </div>
 
       <div className="space-y-3 text-xs">
         <div className="p-3.5 rounded-lg bg-black/40 border border-white/10 flex items-center justify-between">
-          <span className="text-[var(--color-taupe-300)]">Career Twin &amp; History</span>
-          <span className="font-semibold text-white">Private</span>
+          <span className="text-[var(--color-taupe-300)]">Career Twin &amp; Skills</span>
+          <span className="font-semibold text-white">Private to you</span>
         </div>
         <div className="p-3.5 rounded-lg bg-black/40 border border-white/10 flex items-center justify-between">
-          <span className="text-[var(--color-taupe-300)]">Mentor Sounding Board</span>
-          <span className="font-semibold text-white">Protected</span>
+          <span className="text-[var(--color-taupe-300)]">Mentor Conversations</span>
+          <span className="font-semibold text-white">Always private</span>
         </div>
         <div className="p-3.5 rounded-lg bg-black/40 border border-white/10 flex items-center justify-between">
-          <span className="text-[var(--color-taupe-300)]">Career Passport Proof</span>
-          <span className="font-semibold text-white">Yours</span>
+          <span className="text-[var(--color-taupe-300)]">Career Passport</span>
+          <span className="font-semibold text-white">Yours to keep</span>
         </div>
       </div>
 
       <div className="p-4 rounded-lg bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] space-y-1">
         <p className="text-xs font-semibold text-white">
-          Why secure your account now?
+          Why protect your account?
         </p>
         <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
-          Your Career OS will hold years of private career context, goals, capability data, and mentor dialogues.
+          Career OS will hold private information about your career history, goals, and mentor chats.
         </p>
       </div>
     </div>
@@ -89,9 +86,9 @@ export function Step03Security({
       chapter="01_PROTECT"
       stepNumber="3"
       stepTotal="3"
-      sectionLabel="Security &bull; Sovereign Vault"
-      headline="Before we build your Career Twin, let's protect it."
-      description="Your Career OS may eventually contain years of private career history, evidence, and conversations. Secure it now."
+      sectionLabel="Security"
+      headline="Protect your account."
+      description="Career OS will hold private information about your career. Let's make sure only you can access it."
       visualContent={protectionVisual}
     >
       <div className="space-y-6">
@@ -99,10 +96,10 @@ export function Step03Security({
           <div className="p-6 rounded-[var(--radius-card)] bg-emerald-950/20 border border-emerald-500/30 space-y-3">
             <div className="flex items-center gap-2.5 text-emerald-300 font-semibold text-sm">
               <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-              <span>Career OS vault secured</span>
+              <span>Account protected</span>
             </div>
             <p className="text-xs text-zinc-300 leading-relaxed">
-              Your device authentication credentials have been verified. Your career data remains protected.
+              Your security is set up. Your career information remains private to you.
             </p>
           </div>
         ) : (
@@ -119,7 +116,7 @@ export function Step03Security({
                 }`}
               >
                 <Fingerprint className="w-4 h-4 text-[#2F8FFF]" />
-                <span>Passkey (Biometric)</span>
+                <span>Use a passkey</span>
               </button>
 
               <button
@@ -132,7 +129,7 @@ export function Step03Security({
                 }`}
               >
                 <Lock className="w-4 h-4" />
-                <span>Password</span>
+                <span>Use a password</span>
               </button>
             </div>
 
@@ -146,7 +143,7 @@ export function Step03Security({
             {securityMethod === 'passkey' ? (
               <div className="space-y-3">
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Use Face ID, Touch ID, Windows Hello, or your device security key. Fast, phishing-resistant, and private.
+                  Use Face ID, Touch ID, Windows Hello or your device security. Fast and private.
                 </p>
                 <Button
                   type="button"
@@ -157,19 +154,19 @@ export function Step03Security({
                   disabled={isSecuring}
                 >
                   <Fingerprint className="w-4 h-4 mr-2 text-[#6BB8FF]" />
-                  <span>{isSecuring ? 'Verifying with device…' : 'Set up a passkey'}</span>
+                  <span>{isSecuring ? 'Checking with device…' : 'Set up passkey'}</span>
                 </Button>
               </div>
             ) : (
               <div className="space-y-3">
                 <label className="text-xs font-semibold text-white block">
-                  Create Account Password
+                  Create a password
                 </label>
                 <input
                   type="password"
                   value={passwordValue}
                   onChange={(e) => onChangePassword(e.target.value)}
-                  placeholder="Minimum 8 characters"
+                  placeholder="At least 8 characters"
                   className="w-full px-3.5 py-2.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#2F8FFF]"
                 />
                 <Button
@@ -181,7 +178,7 @@ export function Step03Security({
                   disabled={isSecuring || passwordValue.length < 8}
                 >
                   <KeyRound className="w-4 h-4 mr-2" />
-                  <span>{isSecuring ? 'Securing password…' : 'Save password & protect account'}</span>
+                  <span>{isSecuring ? 'Saving…' : 'Save password'}</span>
                 </Button>
               </div>
             )}
@@ -209,7 +206,7 @@ export function Step03Security({
             disabled={!securitySecured}
             className="text-xs font-mono"
           >
-            <span>Tell Career OS about me</span>
+            <span>Continue</span>
             <ArrowRight className="w-4 h-4 ml-1.5" />
           </Button>
         </div>
