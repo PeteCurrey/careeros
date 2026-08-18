@@ -3,7 +3,7 @@ import { existsSync, mkdirSync } from 'fs';
 import path from 'path';
 
 const ARTIFACT_DIR = '/Users/petercurrey/.gemini/antigravity/brain/4e75bf25-01a7-4e56-9949-8fafa11a325a';
-const BASE_URL = 'http://localhost:3006/schools/educators';
+const BASE_URL = 'http://localhost:3009/schools/educators';
 
 async function main() {
   const browser = await chromium.launch({
