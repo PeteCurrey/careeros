@@ -18,22 +18,26 @@ interface EcosystemNode {
   detail: string;
 }
 
+const CENTER_X = 320;
+const CENTER_Y = 320;
+const ORBIT_RADIUS = 230;
+
 const ECOSYSTEM_NODES: EcosystemNode[] = [
-  { id: 'workforce', label: 'WORKFORCE BOARDS', sub: 'Regional Hubs', angle: 0, radius: 185, color: '#2F8FFF', detail: '550+ American Job Centers & regional workforce investment boards' },
-  { id: 'education', label: 'HIGHER ED & VET', sub: 'Accredited Learning', angle: 45, radius: 190, color: '#CDBBD2', detail: 'Universities, community colleges & technical apprenticeships' },
-  { id: 'employers', label: 'EMPLOYER COALITIONS', sub: 'Hiring Networks', angle: 90, radius: 185, color: '#DDD36D', detail: 'Demonstrated capability hiring without keyword resume screening' },
-  { id: 'wellbeing', label: 'HUMAN WELLBEING', sub: 'Clinical Care', angle: 135, radius: 190, color: '#F87171', detail: 'Licensed clinical tele-health when career pressure becomes personal' },
-  { id: 'skills', label: 'SKILLS & CREDS', sub: 'W3C Passport', angle: 180, radius: 185, color: '#2F8FFF', detail: 'Tamper-proof verifiable digital credentials & competency proof' },
-  { id: 'opportunity', label: 'LABOUR INTELLIGENCE', sub: 'Real-time Demand', angle: 225, radius: 190, color: '#34D399', detail: 'Real-time employer demand, wage benchmarks & occupational data' },
-  { id: 'community', label: 'COMMUNITY CARE', sub: 'Life Support', angle: 270, radius: 185, color: '#DDD36D', detail: '211 hyper-local childcare, transit, and social care assistance' },
-  { id: 'public_infra', label: 'PUBLIC DATA', sub: 'Federal Standards', angle: 315, radius: 190, color: '#CDBBD2', detail: 'O*NET®, CareerOneStop & US Department of Labor infrastructure' },
+  { id: 'workforce', label: 'WORKFORCE BOARDS', sub: 'Regional Hubs', angle: 0, radius: ORBIT_RADIUS, color: '#2F8FFF', detail: '550+ American Job Centers & regional workforce investment boards' },
+  { id: 'education', label: 'HIGHER ED & VET', sub: 'Accredited Learning', angle: 45, radius: ORBIT_RADIUS, color: '#CDBBD2', detail: 'Universities, community colleges & technical apprenticeships' },
+  { id: 'employers', label: 'EMPLOYER COALITIONS', sub: 'Hiring Networks', angle: 90, radius: ORBIT_RADIUS, color: '#DDD36D', detail: 'Demonstrated capability hiring without keyword resume screening' },
+  { id: 'wellbeing', label: 'HUMAN WELLBEING', sub: 'Clinical Care', angle: 135, radius: ORBIT_RADIUS, color: '#F87171', detail: 'Licensed clinical tele-health when career pressure becomes personal' },
+  { id: 'skills', label: 'SKILLS & CREDS', sub: 'W3C Passport', angle: 180, radius: ORBIT_RADIUS, color: '#2F8FFF', detail: 'Tamper-proof verifiable digital credentials & competency proof' },
+  { id: 'opportunity', label: 'LABOUR INTELLIGENCE', sub: 'Real-time Demand', angle: 225, radius: ORBIT_RADIUS, color: '#34D399', detail: 'Real-time employer demand, wage benchmarks & occupational data' },
+  { id: 'community', label: 'COMMUNITY CARE', sub: 'Life Support', angle: 270, radius: ORBIT_RADIUS, color: '#DDD36D', detail: '211 hyper-local childcare, transit, and social care assistance' },
+  { id: 'public_infra', label: 'PUBLIC DATA', sub: 'Federal Standards', angle: 315, radius: ORBIT_RADIUS, color: '#CDBBD2', detail: 'O*NET®, CareerOneStop & US Department of Labor infrastructure' },
 ];
 
 export function PartnersHero() {
   const [activeNode, setActiveNode] = useState<EcosystemNode | null>(null);
 
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
+    <section className="relative min-h-[94vh] flex items-center overflow-hidden bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
       
       {/* Ambient background glows */}
       <div className="ambient-glow-blue absolute inset-0 pointer-events-none" />
@@ -49,11 +53,11 @@ export function PartnersHero() {
         aria-hidden="true"
       />
 
-      <div className="container-editorial relative z-10 w-full py-20 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="container-editorial relative z-10 w-full py-16 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-          {/* Text narrative column */}
-          <div className="lg:col-span-6 space-y-8">
+          {/* Text narrative column (5 cols on large desktop for balanced hero hierarchy) */}
+          <div className="lg:col-span-5 space-y-8">
             <ScrollReveal>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -107,72 +111,81 @@ export function PartnersHero() {
             </ScrollReveal>
           </div>
 
-          {/* Interactive Constellation Orbital Visual */}
-          <div className="lg:col-span-6 flex flex-col items-center justify-center relative">
+          {/* Interactive Constellation Orbital Visual (Expanded 7 cols on large desktop) */}
+          <div className="lg:col-span-7 flex flex-col items-center justify-center relative">
             <ScrollReveal delayMs={100}>
-              <div className="relative w-full max-w-[500px] aspect-square select-none">
+              <div className="relative w-full max-w-[620px] xl:max-w-[680px] aspect-square select-none">
                 
                 {/* SVG Constellation Canvas */}
                 <svg
-                  viewBox="0 0 500 500"
-                  className="w-full h-full filter drop-shadow-[0_0_30px_rgba(47,143,255,0.08)]"
+                  viewBox="0 0 640 640"
+                  className="w-full h-full filter drop-shadow-[0_0_35px_rgba(47,143,255,0.12)]"
                   aria-label="CareerOS Interactive Ecosystem Constellation"
                 >
                   <defs>
-                    <radialGradient id="centerCoreGlow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#2F8FFF" stopOpacity="0.25" />
-                      <stop offset="70%" stopColor="#2F8FFF" stopOpacity="0.03" />
+                    <radialGradient id="centerCoreGlowLarge" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#2F8FFF" stopOpacity="0.28" />
+                      <stop offset="60%" stopColor="#2F8FFF" stopOpacity="0.04" />
                       <stop offset="100%" stopColor="transparent" stopOpacity="0" />
                     </radialGradient>
-                    <radialGradient id="nodeActiveGlow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#2F8FFF" stopOpacity="0.4" />
+                    <radialGradient id="nodeActiveGlowLarge" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#2F8FFF" stopOpacity="0.45" />
                       <stop offset="100%" stopColor="transparent" stopOpacity="0" />
                     </radialGradient>
                   </defs>
 
                   {/* Ambient center radial wash */}
-                  <circle cx="250" cy="250" r="210" fill="url(#centerCoreGlow)" />
+                  <circle cx={CENTER_X} cy={CENTER_Y} r="270" fill="url(#centerCoreGlowLarge)" />
 
-                  {/* Orbit rings */}
+                  {/* Outer Orbit rings */}
                   <circle
-                    cx="250"
-                    cy="250"
-                    r="188"
+                    cx={CENTER_X}
+                    cy={CENTER_Y}
+                    r={ORBIT_RADIUS}
                     fill="none"
                     stroke="var(--color-border-default)"
-                    strokeWidth="0.8"
-                    strokeDasharray="4 6"
-                    className="opacity-40 animate-[spin_120s_linear_infinite]"
-                    style={{ transformOrigin: 'center' }}
+                    strokeWidth="1"
+                    strokeDasharray="5 7"
+                    className="opacity-45 animate-[spin_140s_linear_infinite]"
+                    style={{ transformOrigin: `${CENTER_X}px ${CENTER_Y}px` }}
                   />
                   <circle
-                    cx="250"
-                    cy="250"
-                    r="125"
+                    cx={CENTER_X}
+                    cy={CENTER_Y}
+                    r="155"
                     fill="none"
                     stroke="#2F8FFF"
+                    strokeWidth="0.6"
+                    strokeDasharray="3 5"
+                    className="opacity-25"
+                  />
+                  <circle
+                    cx={CENTER_X}
+                    cy={CENTER_Y}
+                    r="85"
+                    fill="none"
+                    stroke="var(--color-border-default)"
                     strokeWidth="0.5"
-                    strokeDasharray="2 4"
                     className="opacity-20"
                   />
 
                   {/* Connecting lines from center to each node */}
                   {ECOSYSTEM_NODES.map((node) => {
                     const rad = (node.angle * Math.PI) / 180;
-                    const nx = 250 + node.radius * Math.cos(rad);
-                    const ny = 250 + node.radius * Math.sin(rad);
+                    const nx = CENTER_X + node.radius * Math.cos(rad);
+                    const ny = CENTER_Y + node.radius * Math.sin(rad);
                     const isActive = activeNode?.id === node.id;
 
                     return (
                       <line
                         key={node.id}
-                        x1="250"
-                        y1="250"
+                        x1={CENTER_X}
+                        y1={CENTER_Y}
                         x2={nx}
                         y2={ny}
                         stroke={isActive ? node.color : '#2F8FFF'}
-                        strokeWidth={isActive ? '1.5' : '0.75'}
-                        opacity={isActive ? '0.8' : '0.22'}
+                        strokeWidth={isActive ? '2' : '0.9'}
+                        opacity={isActive ? '0.85' : '0.24'}
                         strokeDasharray={isActive ? 'none' : '4 6'}
                         className="transition-all duration-300"
                       />
@@ -182,9 +195,13 @@ export function PartnersHero() {
                   {/* Outer Orbital Nodes */}
                   {ECOSYSTEM_NODES.map((node) => {
                     const rad = (node.angle * Math.PI) / 180;
-                    const nx = 250 + node.radius * Math.cos(rad);
-                    const ny = 250 + node.radius * Math.sin(rad);
+                    const nx = CENTER_X + node.radius * Math.cos(rad);
+                    const ny = CENTER_Y + node.radius * Math.sin(rad);
                     const isActive = activeNode?.id === node.id;
+
+                    // Compute clean label offset avoiding collision
+                    const isUpper = ny < CENTER_Y - 20;
+                    const labelY = isUpper ? ny - 22 : ny + 26;
 
                     return (
                       <g
@@ -198,9 +215,9 @@ export function PartnersHero() {
                         <circle
                           cx={nx}
                           cy={ny}
-                          r={isActive ? 28 : 16}
+                          r={isActive ? 34 : 18}
                           fill={node.color}
-                          opacity={isActive ? 0.25 : 0}
+                          opacity={isActive ? 0.28 : 0}
                           className="transition-all duration-300"
                         />
 
@@ -208,10 +225,10 @@ export function PartnersHero() {
                         <circle
                           cx={nx}
                           cy={ny}
-                          r="14"
+                          r="16"
                           fill="var(--color-surface-raised)"
                           stroke={isActive ? node.color : 'var(--color-border-strong)'}
-                          strokeWidth={isActive ? 2 : 1}
+                          strokeWidth={isActive ? 2.5 : 1.2}
                           className="transition-all duration-300"
                         />
 
@@ -219,7 +236,7 @@ export function PartnersHero() {
                         <circle
                           cx={nx}
                           cy={ny}
-                          r={isActive ? 5 : 3.5}
+                          r={isActive ? 6 : 4}
                           fill={node.color}
                           className="transition-all duration-300"
                         />
@@ -227,14 +244,14 @@ export function PartnersHero() {
                         {/* Node Label */}
                         <text
                           x={nx}
-                          y={ny > 250 ? ny + 22 : ny - 18}
+                          y={labelY}
                           textAnchor="middle"
-                          fontSize="8.5"
+                          fontSize="9.5"
                           fontFamily="var(--font-mono, monospace)"
                           fill={isActive ? '#FFFFFF' : 'var(--color-text-tertiary)'}
-                          fontWeight={isActive ? '700' : '500'}
-                          letterSpacing="0.06em"
-                          className="transition-colors duration-200"
+                          fontWeight={isActive ? '700' : '600'}
+                          letterSpacing="0.07em"
+                          className="transition-colors duration-200 pointer-events-none"
                         >
                           {node.label}
                         </text>
@@ -245,27 +262,27 @@ export function PartnersHero() {
                   {/* Central CareerOS Core Node */}
                   <g className="cursor-pointer">
                     <circle
-                      cx="250"
-                      cy="250"
-                      r="52"
+                      cx={CENTER_X}
+                      cy={CENTER_Y}
+                      r="64"
                       fill="var(--background-dark-deep)"
                       stroke="#2F8FFF"
-                      strokeWidth="1.5"
-                      className="shadow-[0_0_24px_rgba(47,143,255,0.4)]"
+                      strokeWidth="2"
+                      className="shadow-[0_0_30px_rgba(47,143,255,0.45)]"
                     />
                     <circle
-                      cx="250"
-                      cy="250"
-                      r="44"
+                      cx={CENTER_X}
+                      cy={CENTER_Y}
+                      r="54"
                       fill="var(--color-surface-base)"
-                      stroke="rgba(47,143,255,0.3)"
-                      strokeWidth="1"
+                      stroke="rgba(47,143,255,0.35)"
+                      strokeWidth="1.2"
                     />
                     <text
-                      x="250"
-                      y="244"
+                      x={CENTER_X}
+                      y={CENTER_Y - 8}
                       textAnchor="middle"
-                      fontSize="9"
+                      fontSize="10.5"
                       fontFamily="var(--font-mono, monospace)"
                       fill="var(--color-text-secondary)"
                       letterSpacing="0.14em"
@@ -274,42 +291,43 @@ export function PartnersHero() {
                       CAREER
                     </text>
                     <text
-                      x="250"
-                      y="258"
+                      x={CENTER_X}
+                      y={CENTER_Y + 10}
                       textAnchor="middle"
-                      fontSize="10"
+                      fontSize="12.5"
                       fontFamily="var(--font-mono, monospace)"
                       fill="#2F8FFF"
-                      letterSpacing="0.16em"
+                      letterSpacing="0.18em"
                       fontWeight="800"
                     >
                       OS
                     </text>
                     <text
-                      x="250"
-                      y="270"
+                      x={CENTER_X}
+                      y={CENTER_Y + 24}
                       textAnchor="middle"
-                      fontSize="6.5"
+                      fontSize="7.5"
                       fontFamily="var(--font-mono, monospace)"
                       fill="var(--color-text-tertiary)"
-                      letterSpacing="0.1em"
+                      letterSpacing="0.12em"
+                      fontWeight="500"
                     >
-                      CORE NODE
+                      CORE HUB
                     </text>
                   </g>
                 </svg>
 
                 {/* Floating Interactive Detail Tooltip */}
                 {activeNode && (
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-30 p-3.5 rounded-lg bg-[var(--background-dark-deep)]/95 backdrop-blur-md border border-[#2F8FFF]/50 text-xs shadow-2xl text-center space-y-1 max-w-xs animate-in fade-in zoom-in-95 duration-200">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-30 p-4 rounded-xl bg-[var(--background-dark-deep)]/95 backdrop-blur-md border border-[#2F8FFF]/60 text-xs shadow-2xl text-center space-y-1.5 max-w-xs animate-in fade-in zoom-in-95 duration-200">
                     <div className="flex items-center justify-center gap-1.5 font-mono text-[10px] text-[#2F8FFF] uppercase font-bold">
-                      <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+                      <span className="w-2 h-2 rounded-full bg-current animate-pulse" />
                       <span>{activeNode.label}</span>
                     </div>
-                    <div className="text-[11px] font-semibold text-white">
+                    <div className="text-xs font-semibold text-white">
                       {activeNode.sub}
                     </div>
-                    <p className="text-[10px] text-[var(--color-text-secondary)] leading-relaxed">
+                    <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
                       {activeNode.detail}
                     </p>
                   </div>
@@ -317,7 +335,7 @@ export function PartnersHero() {
 
               </div>
             </ScrollReveal>
-            <p className="text-[11px] font-mono text-[var(--color-text-tertiary)] text-center pt-2">
+            <p className="text-xs font-mono text-[var(--color-text-tertiary)] text-center pt-3">
               Hover over orbital nodes to inspect ecosystem integration roles &rarr;
             </p>
           </div>
