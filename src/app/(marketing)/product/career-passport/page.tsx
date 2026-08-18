@@ -139,14 +139,15 @@ export default function CareerPassportPage() {
       {/* SECTION 01 — HERO WITH BREATHTAKING CITY HORIZON                    */}
       {/* =================================================================== */}
       <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-16 lg:py-24">
-        {/* City & Horizon Background Image */}
+        {/* Physical-Digital Credential Vault Background Image */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <Image
-            src={MEDIA_ASSETS.hero.cityHorizon.src}
-            alt={MEDIA_ASSETS.hero.cityHorizon.alt}
+            src={MEDIA_ASSETS.product.careerPassport.src}
+            alt={MEDIA_ASSETS.product.careerPassport.alt}
             fill
             priority
             sizes="100vw"
+            quality={95}
             className="object-cover object-center"
           />
 

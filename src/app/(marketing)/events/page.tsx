@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { EventCard } from '@/components/events/EventCard';
 import { EventFilters } from '@/components/events/EventFilters';
 import { SEED_EVENTS, EVENT_CATEGORIES, filterEvents } from '@/lib/events/data';
 import { EventFilterState, CareerEvent } from '@/types/events/platform';
 import { ROUTES } from '@/lib/routes';
+import { MEDIA_ASSETS } from '@/lib/media';
 import { ArrowRight, Calendar, Sparkles, Building2, GraduationCap, Lightbulb, Users, Globe, ShieldCheck, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -85,14 +87,27 @@ export default function EventsDiscoveryPage() {
     <div className="flex flex-col min-h-screen bg-[var(--color-surface-base)]">
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-16 pb-10 border-b border-[var(--color-border-default)]">
-        {/* Ambient atmosphere */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-[rgba(47,143,255,0.05)] blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full bg-[rgba(47,143,255,0.04)] blur-3xl" />
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)]">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src={MEDIA_ASSETS.hero.cityHorizon.src}
+            alt="Panoramic city skyline at dusk representing career discovery and events"
+            fill
+            priority
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
+          {/* Left charcoal dissolve */}
+          <div aria-hidden="true" className="absolute inset-0" style={{ background: `linear-gradient(to right, #393939 0%, rgba(57,57,57,0.96) 38%, rgba(57,57,57,0.88) 55%, rgba(57,57,57,0.42) 78%, rgba(57,57,57,0.18) 100%)` }} />
+          {/* Top dissolve */}
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to bottom, #393939 0%, transparent 100%)` }} />
+          {/* Bottom dissolve */}
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to top, #393939 0%, transparent 100%)` }} />
         </div>
 
-        <div className="container-editorial relative z-10">
+        <div className="container-editorial relative z-10 py-20 lg:py-0">
           <div className="max-w-3xl space-y-5">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-blue)] shadow-[0_0_8px_rgba(47,143,255,0.7)]" />

@@ -75,14 +75,51 @@ export default function ForProfessionalsPage() {
       />
 
       {/* ── SECTION 01: HERO ────────────────────────────────────────── */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center border-b border-[var(--color-border-default)] pt-20 pb-16 lg:py-24 overflow-hidden">
-        {/* Ambient background glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[450px] bg-[var(--accent-blue-glow)] rounded-full blur-[150px] pointer-events-none -z-10" />
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-20 lg:py-0">
+        {/* Full-bleed Professional Intersection Background Image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src="/media/professionals/professional_hero_intersection.jpg"
+            alt="Experienced mid-career professional standing at a modern architectural intersection with emerging horizons for Executive Leadership, Precision Engineering, Global Operations, and Healthcare Strategy."
+            fill
+            priority
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
 
-        <div className="container-editorial">
+          {/* Editorial Scrim: Charcoal Wash on Left for Ultra-Crisp Legibility */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
+            }}
+          />
+
+          {/* Top Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
+            }}
+          />
+
+          {/* Bottom Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
+            }}
+          />
+        </div>
+
+        <div className="container-editorial relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Hero Copy */}
-            <div className="lg:col-span-6 space-y-6 max-w-2xl">
+            <div className="lg:col-span-7 space-y-6 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-xs font-mono text-[var(--accent-blue)]">
                 <Briefcase className="w-3.5 h-3.5" />
                 <span>For Working Professionals &amp; Leaders</span>
@@ -120,26 +157,28 @@ export default function ForProfessionalsPage() {
               </div>
             </div>
 
-            {/* Hero Media Composition */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl group">
-                <Image
-                  src="/media/professionals/professional_hero_intersection.jpg"
-                  alt="Experienced mid-career professional standing at a modern architectural intersection with emerging horizons for Executive Leadership, Precision Engineering, Global Operations, and Healthcare Strategy."
-                  width={1920}
-                  height={1080}
-                  priority
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background-dark-deep)]/90 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded bg-[var(--color-surface-base)]/75 backdrop-blur-md border border-[var(--color-border-default)] flex items-center justify-between">
-                  <div className="space-y-0.5">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-blue)] font-semibold">
-                      Your Current Role is One Point in a Larger Career
-                    </span>
-                    <p className="text-xs text-[var(--color-text-secondary)]">
-                      Actively manage progression, lateral pivots, leadership development, or independent practice.
-                    </p>
+            {/* Right Card / Overview */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl p-6 sm:p-7 space-y-4 border-beam-container border-beam-slow">
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-blue)] font-semibold">
+                    Your Current Role is One Point in a Larger Career
+                  </span>
+                  <h3 className="text-base font-bold text-white">
+                    Lifelong Career Compounding
+                  </h3>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                    Actively manage promotion milestones, lateral industry pivots, leadership development, or independent practice without starting over.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
+                  <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
+                    <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Twin</span>
+                    <p className="font-semibold text-white">Compound Context</p>
+                  </div>
+                  <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
+                    <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Graph</span>
+                    <p className="font-semibold text-white">Lateral Bridges</p>
                   </div>
                 </div>
               </div>

@@ -44,19 +44,53 @@ export const metadata: Metadata = {
   },
 };
 
+import Image from 'next/image';
+import { MEDIA_ASSETS } from '@/lib/media';
+
 export default function CareerGraphPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--background-dark)] text-[var(--color-text-primary)] transition-colors">
       {/* ── SECTION 01: HERO ────────────────────────────────────────── */}
       <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-16 lg:py-24 relative overflow-hidden bg-[var(--background-dark-deep)]">
-        {/* Subtle Atmospheric Gradient */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-20"
-          style={{
-            background: 'radial-gradient(ellipse at 50% 20%, rgba(168, 85, 247, 0.15) 0%, rgba(59, 130, 246, 0.08) 50%, transparent 80%)',
-          }}
-        />
+        {/* Multidimensional Topological City Grid Background Image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src={MEDIA_ASSETS.product.careerGraph.src}
+            alt={MEDIA_ASSETS.product.careerGraph.alt}
+            fill
+            priority
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
+
+          {/* Editorial Scrim: Charcoal Wash on Left for Ultra-Crisp Legibility */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
+            }}
+          />
+
+          {/* Top Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
+            }}
+          />
+
+          {/* Bottom Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
+            }}
+          />
+        </div>
 
         <div className="container-editorial relative z-10 space-y-12">
           <div className="max-w-4xl space-y-6">

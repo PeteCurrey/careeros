@@ -80,14 +80,57 @@ function FaqItem({ q, a }: { q: string; a: React.ReactNode }) {
   );
 }
 
+import Image from 'next/image';
+import { MEDIA_ASSETS } from '@/lib/media';
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function HowItWorksPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
 
       {/* ── SECTION 01 — HERO ────────────────────────────────────────────────── */}
-      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] py-20 lg:py-0">
-        <div className="container-editorial">
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-20 lg:py-0">
+        {/* Civic Innovation Atrium Background Image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src={MEDIA_ASSETS.product.howItWorks.src}
+            alt={MEDIA_ASSETS.product.howItWorks.alt}
+            fill
+            priority
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
+
+          {/* Editorial Scrim: Charcoal Wash on Left for Ultra-Crisp Legibility */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
+            }}
+          />
+
+          {/* Top Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
+            }}
+          />
+
+          {/* Bottom Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
+            }}
+          />
+        </div>
+
+        <div className="container-editorial relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — Copy */}
             <div className="space-y-7">

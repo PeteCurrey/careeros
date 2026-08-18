@@ -212,4 +212,28 @@
 | **PROHIBITED: 24/7 Human Moderation / Police Dispatching Claims** | `/schools/student-safety` | `PROHIBITED_UNSUPPORTED` | Fabricating non-existent 24/7 emergency response infrastructure. | Trust & Safety | 2026-08-18 | Strictly prohibited; platform routes to certified regional helplines and school DSLs. |
 | **PROHIBITED: Fake Compliance Badges (e.g. "COPPA Certified", "ChildSafe Seal")** | `/schools/student-safety` | `PROHIBITED_UNSUPPORTED` | Displaying uncertified third-party trust seals or fake compliance badges. | Marketing / Legal | 2026-08-18 | Prohibited throughout page. |
 
+---
+
+## Route: `/schools/outcomes`
+
+| Claim | Route | Status | Evidence / Grounding | Owner | Last Verified | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Core Outcomes Principle ("Measure development. Don't score human potential.")** | `/schools/outcomes` | `VERIFIED_CURRENT` | Product principle; platform measures exploration reach, multi-pathway breadth, and evidence creation without composite scoring. | Trust & Safety | 2026-08-18 | Explicitly rejects reducing young people to single employability numbers. |
+| **Hero Institutional Outcomes View (Cohort Aggregate Signals)** | `/schools/outcomes` | `ILLUSTRATIVE` | 5-dimension aggregate institutional visual showing pathway exploration breadth, evidence artifacts, and human guidance indicators. | Product Design | 2026-08-18 | Clearly labeled "Illustrative data — not live school data". |
+| **Interactive Pathway Exposure Explorer (Grades 10–12 & Whole School)** | `/schools/outcomes` | `ILLUSTRATIVE` | Interactive component filtering cohort exploration breadth across academic, apprenticeship, and trade pathways with leadership reflection questions. | Marketing / Eng | 2026-08-18 | Labeled illustrative data; prompts institutional resource decisions. |
+| **5-Stage Career Exploration Depth Model** | `/schools/outcomes` | `DESIGNED_DIRECTION` | Progression framework: Discovered → Explored → Compared → Researched → Action Taken. | Product Design | 2026-08-18 | Tracks inquiry depth without evaluating individual human potential. |
+| **Interactive Outcomes Objective Builder (6 Goals, Can Tell vs Cannot Tell)** | `/schools/outcomes` | `ILLUSTRATIVE` | Interactive configuration tool demonstrating analytical restraint across 6 institutional priorities. | Product / Trust | 2026-08-18 | Explicitly contrasts what data can tell vs what it cannot prove. |
+| **Career Passport Tangible Evidence Documentation** | `/schools/outcomes` | `DESIGNED_DIRECTION` | Helps schools track cohort evidence creation across projects, work experience, volunteering, and credentials. | Product / Credential | 2026-08-18 | "Evidence volume is not human value. Context matters." |
+| **Human Guidance Request & Preparation Signals** | `/schools/outcomes` | `DESIGNED_DIRECTION` | Measures pre-conversation brief completion and student-initiated guidance inquiries as positive programme outcomes. | Product / Advising | 2026-08-18 | Technology equips human guidance rather than replacing it. |
+| **Career Event Sector Balance Auditing** | `/schools/outcomes` | `DESIGNED_DIRECTION` | Audits distribution of sectors across school-hosted careers fairs and employer presentations. | Events / Ed | 2026-08-18 | Identifies exposure gaps across green tech, trades, and health. |
+| **Algorithmic Non-Discrimination & Anti-Profiling** | `/schools/outcomes` | `VERIFIED_CURRENT` | Prohibits race-based, gendered, or demographic career predictions or suitability scoring. | AI Ethics / Legal | 2026-08-18 | Protected characteristics never used to narrow student horizons. |
+| **Post-School Destination Attribution Care** | `/schools/outcomes` | `DESIGNED_DIRECTION` | Strictly separates destination data (what happened) from platform causation (why it happened). | Analytics / Trust | 2026-08-18 | Prohibits claiming sole causal responsibility for student life trajectories. |
+| **Sovereign Evidence Continuity Post-Graduation** | `/schools/outcomes` | `DESIGNED_DIRECTION` | Verified evidence persists with the individual learner into adulthood while school records remain archived. | Architecture / Legal | 2026-08-18 | "Long-term continuity belongs to the individual career relationship." |
+| **26-Item Comprehensive Outcomes Leadership FAQ** | `/schools/outcomes` | `VERIFIED_CURRENT` | Substantial reference answers covering readiness scores, salary predictions, privacy, cohort comparisons, and evidence base. | Product / Legal | 2026-08-18 | Institutional reference for superintendents, governors, and funders. |
+| **PROHIBITED: Composite "Career-Readiness" or Employability Scores** | `/schools/outcomes` | `PROHIBITED_UNSUPPORTED` | Collapsing human complexity into single mathematical readiness or potential ratings. | Trust & Safety | 2026-08-18 | Strictly prohibited in copy, UI mockups, and backend models. |
+| **PROHIBITED: Student Ranking or Percentile Sorting** | `/schools/outcomes` | `PROHIBITED_UNSUPPORTED` | Ranking students against peers or assigning percentile employability tiers. | Trust / Pedagogy | 2026-08-18 | Strictly prohibited across all product surfaces. |
+| **PROHIBITED: School League Tables or Counsellor Performance Scores** | `/schools/outcomes` | `PROHIBITED_UNSUPPORTED` | Benchmarking and ranking school districts or evaluating teacher productivity. | Ed Partnerships | 2026-08-18 | Prohibited in copy and component designs. |
+| **PROHIBITED: Fabricated Placement / Salary Impact Statistics (e.g. "+28% placement")** | `/schools/outcomes` | `PROHIBITED_UNSUPPORTED` | Unsubstantiated quantitative outcome improvement claims without empirical causal proof. | Marketing / Legal | 2026-08-18 | Strictly prohibited throughout page. |
+
+
 

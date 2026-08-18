@@ -71,14 +71,51 @@ export default function ForStudentsPage() {
       />
 
       {/* ── SECTION 01: HERO ────────────────────────────────────────── */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center border-b border-[var(--color-border-default)] pt-20 pb-16 lg:py-24 overflow-hidden">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[var(--accent-blue-glow)] rounded-full blur-[140px] pointer-events-none -z-10" />
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-20 lg:py-0">
+        {/* Full-bleed Student Futures Background Image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src="/media/students/student_hero_futures.jpg"
+            alt="Young student looking forward with diverse vocational pavilions behind: bioresearch, aerospace engineering, design studio, skilled electrical trades, and healthcare simulation."
+            fill
+            priority
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
 
-        <div className="container-editorial">
+          {/* Editorial Scrim: Charcoal Wash on Left for Ultra-Crisp Legibility */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
+            }}
+          />
+
+          {/* Top Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
+            }}
+          />
+
+          {/* Bottom Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
+            }}
+          />
+        </div>
+
+        <div className="container-editorial relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Hero Copy */}
-            <div className="lg:col-span-6 space-y-6 max-w-2xl">
+            <div className="lg:col-span-7 space-y-6 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-xs font-mono text-[var(--accent-blue)]">
                 <Compass className="w-3.5 h-3.5" />
                 <span>For Students &amp; Young People</span>
@@ -116,26 +153,28 @@ export default function ForStudentsPage() {
               </div>
             </div>
 
-            {/* Hero Media Composition */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl group">
-                <Image
-                  src="/media/students/student_hero_futures.jpg"
-                  alt="Young student looking forward with diverse vocational pavilions behind: bioresearch, aerospace engineering, design studio, skilled electrical trades, and healthcare simulation."
-                  width={1920}
-                  height={1080}
-                  priority
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background-dark-deep)]/90 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded bg-[var(--color-surface-base)]/75 backdrop-blur-md border border-[var(--color-border-default)] flex items-center justify-between">
-                  <div className="space-y-0.5">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-blue)] font-semibold">
-                      One Starting Point &bull; Many Possible Futures
-                    </span>
-                    <p className="text-xs text-[var(--color-text-secondary)]">
-                      Explore healthcare, engineering, trades, technology, creative fields, and public service.
-                    </p>
+            {/* Right Card / Overview */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl p-6 sm:p-7 space-y-4 border-beam-container border-beam-slow">
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-blue)] font-semibold">
+                    One Starting Point &bull; Many Possible Futures
+                  </span>
+                  <h3 className="text-base font-bold text-white">
+                    Equal Multi-Pathway Exploration
+                  </h3>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                    Compare university degrees, degree apprenticeships, technical trades, and direct career entry without bias or forced algorithmic outcomes.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
+                  <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
+                    <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">AI Career Mentor</span>
+                    <p className="font-semibold text-white">Personalised Guidance</p>
+                  </div>
+                  <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
+                    <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Passport</span>
+                    <p className="font-semibold text-white">Compound Evidence</p>
                   </div>
                 </div>
               </div>

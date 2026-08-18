@@ -14,19 +14,65 @@ export const metadata: Metadata = {
   },
 };
 
+import Image from 'next/image';
+import { MEDIA_ASSETS } from '@/lib/media';
+
 export default function ProductOverviewPage() {
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Header */}
-      <section className="min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] py-16 lg:py-0">
-        <div className="container-editorial space-y-6 max-w-4xl">
-          <span className="section-label">
-            Product Architecture & Subsystems
-          </span>
-          <h1 className="text-display-section text-[var(--color-text-primary)]">
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] overflow-hidden py-20 lg:py-0">
+        {/* Background Image with Signature Editorial Charcoal Fade */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src={MEDIA_ASSETS.product.overview.src}
+            alt={MEDIA_ASSETS.product.overview.alt}
+            fill
+            priority
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
+
+          {/* Left-edge charcoal dissolve for ultra-crisp legibility */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)`,
+            }}
+          />
+
+          {/* Top Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to bottom, #393939 0%, transparent 100%)`,
+            }}
+          />
+
+          {/* Bottom Edge Dissolve */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
+            style={{
+              background: `linear-gradient(to top, #393939 0%, transparent 100%)`,
+            }}
+          />
+        </div>
+
+        <div className="container-editorial relative z-10 space-y-6 max-w-4xl">
+          <div className="flex items-center gap-2">
+            <span className="accent-blue-dot accent-blue-dot-pulse" />
+            <span className="section-label">
+              Product Architecture &amp; Subsystems
+            </span>
+          </div>
+          <h1 className="text-display-section text-[var(--color-text-primary)] leading-[1.08]">
             A comprehensive operating system for lifelong career development.
           </h1>
-          <p className="text-lead text-[var(--color-text-secondary)]">
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-3xl">
             Career OS integrates eight foundational subsystems into one unified, privacy-first platform. Built to support people from early education through professional leadership, lateral reinvention, and international mobility.
           </p>
         </div>

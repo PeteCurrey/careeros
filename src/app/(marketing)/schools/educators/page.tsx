@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ROUTES } from '@/lib/routes';
+import { MEDIA_ASSETS } from '@/lib/media';
 import { Button } from '@/components/ui/Button';
 import { 
   ArrowRight, 
@@ -87,18 +88,27 @@ export default function SchoolsEducatorsPage() {
           More context before the conversation.
           More time for the part only a human can do.
           ============================================================ */}
-      <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 border-b border-[var(--color-border-default)] overflow-hidden">
-        {/* Subtle architectural atmosphere */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute inset-0 z-0 opacity-40"
-          style={{
-            background:
-              'radial-gradient(ellipse at 70% 20%, rgba(47, 143, 255, 0.05) 0%, transparent 60%)',
-          }}
-        />
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)]">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <Image
+            src={MEDIA_ASSETS.audiences.schoolPrivacy.src}
+            alt={MEDIA_ASSETS.audiences.schoolPrivacy.alt}
+            fill
+            priority
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
+          {/* Left charcoal dissolve */}
+          <div aria-hidden="true" className="absolute inset-0" style={{ background: `linear-gradient(to right, #393939 0%, rgba(57,57,57,0.96) 38%, rgba(57,57,57,0.88) 55%, rgba(57,57,57,0.42) 78%, rgba(57,57,57,0.18) 100%)` }} />
+          {/* Top dissolve */}
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to bottom, #393939 0%, transparent 100%)` }} />
+          {/* Bottom dissolve */}
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to top, #393939 0%, transparent 100%)` }} />
+        </div>
 
-        <div className="container-editorial relative z-10 space-y-16">
+        <div className="container-editorial relative z-10 space-y-16 py-20 lg:py-0">
           <div className="max-w-4xl space-y-6">
             <div className="flex items-center gap-2">
               <span className="accent-blue-dot accent-blue-dot-pulse" />
