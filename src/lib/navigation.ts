@@ -29,12 +29,12 @@ export interface MegaMenuSection {
 
 /** Primary desktop navigation items */
 export const primaryNav: NavItem[] = [
-  { label: 'Events', href: ROUTES.EVENTS },
   { label: 'Product', href: ROUTES.PRODUCT },
   { label: "Who It's For", href: ROUTES.FOR_PROFESSIONALS },
   { label: 'Pathways', href: ROUTES.PATHWAYS },
   { label: 'Resources', href: ROUTES.RESOURCES },
   { label: 'Trust', href: ROUTES.TRUST },
+  { label: 'Events', href: ROUTES.EVENTS },
   { label: 'Company', href: ROUTES.COMPANY_ABOUT },
 ];
 

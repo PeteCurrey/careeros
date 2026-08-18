@@ -175,6 +175,101 @@ export const ROUTES = {
   EVENTS_PROMOTE_CREATE: '/events/promote/create',
   EVENTS_ORGANISERS_DASHBOARD: '/events/organisers/dashboard',
   EVENTS_ADMIN: '/events/admin',
+
+  // Admin Control Centre
+  ADMIN: '/admin',
+  ADMIN_ACTION_CENTRE: '/admin/action-centre',
+  ADMIN_FORBIDDEN: '/admin/forbidden',
+
+  // Content
+  ADMIN_CONTENT_PAGES: '/admin/content/pages',
+  ADMIN_CONTENT_ARTICLES: '/admin/content/articles',
+  ADMIN_CONTENT_MEDIA: '/admin/content/media',
+  ADMIN_CONTENT_NAVIGATION: '/admin/content/navigation',
+  ADMIN_CONTENT_CTAS: '/admin/content/ctas',
+  ADMIN_CONTENT_REDIRECTS: '/admin/content/redirects',
+
+  // Events
+  ADMIN_EVENTS: '/admin/events',
+  ADMIN_EVENTS_PUBLISHED: '/admin/events/published',
+  ADMIN_EVENTS_SUBMISSIONS: '/admin/events/submissions',
+  ADMIN_EVENTS_DISCOVERY: '/admin/events/discovery',
+  ADMIN_EVENTS_SOURCES: '/admin/events/sources',
+  ADMIN_EVENTS_DISCOVERY_RUNS: '/admin/events/discovery-runs',
+  ADMIN_EVENTS_CATEGORIES: '/admin/events/categories',
+  ADMIN_EVENTS_ORGANISERS: '/admin/events/organisers',
+  ADMIN_EVENTS_PROMOTIONS: '/admin/events/promotions',
+
+  // Opportunities
+  ADMIN_OPPORTUNITIES_JOBS: '/admin/opportunities/jobs',
+  ADMIN_OPPORTUNITIES_SUBMISSIONS: '/admin/opportunities/submissions',
+  ADMIN_OPPORTUNITIES_EMPLOYERS: '/admin/opportunities/employers',
+  ADMIN_OPPORTUNITIES_SOURCES: '/admin/opportunities/sources',
+  ADMIN_OPPORTUNITIES_STALE: '/admin/opportunities/stale',
+
+  // Users
+  ADMIN_USERS: '/admin/users',
+  ADMIN_USERS_SEGMENTS: '/admin/users/segments',
+  ADMIN_USERS_ACTIVITY: '/admin/users/activity',
+  ADMIN_USERS_SUPPORT: '/admin/users/support',
+  ADMIN_USERS_TRUST_SAFETY: '/admin/users/trust-safety',
+  ADMIN_USERS_DATA_REQUESTS: '/admin/users/data-requests',
+
+  // Organisations
+  ADMIN_ORGANISATIONS: '/admin/organisations',
+  ADMIN_ORGANISATIONS_EMPLOYERS: '/admin/organisations/employers',
+  ADMIN_ORGANISATIONS_SCHOOLS: '/admin/organisations/schools',
+  ADMIN_ORGANISATIONS_ORGANISERS: '/admin/organisations/organisers',
+  ADMIN_ORGANISATIONS_PARTNERS: '/admin/organisations/partners',
+
+  // AI Control Centre
+  ADMIN_AI: '/admin/ai',
+  ADMIN_AI_PROVIDERS: '/admin/ai/providers',
+  ADMIN_AI_MODELS: '/admin/ai/models',
+  ADMIN_AI_ROUTING: '/admin/ai/routing',
+  ADMIN_AI_PROMPTS: '/admin/ai/prompts',
+  ADMIN_AI_GUARDRAILS: '/admin/ai/guardrails',
+  ADMIN_AI_EVALUATIONS: '/admin/ai/evaluations',
+  ADMIN_AI_USAGE: '/admin/ai/usage',
+  ADMIN_AI_ERRORS: '/admin/ai/errors',
+
+  // Growth & SEO
+  ADMIN_GROWTH_TRAFFIC: '/admin/growth/traffic',
+  ADMIN_GROWTH_SEO: '/admin/growth/seo',
+  ADMIN_GROWTH_SEARCH_CONSOLE: '/admin/growth/search-console',
+  ADMIN_GROWTH_LANDING_PAGES: '/admin/growth/landing-pages',
+  ADMIN_GROWTH_FUNNELS: '/admin/growth/funnels',
+  ADMIN_GROWTH_CAMPAIGNS: '/admin/growth/campaigns',
+  ADMIN_GROWTH_EXPERIMENTS: '/admin/growth/experiments',
+  ADMIN_GROWTH_ATTRIBUTION: '/admin/growth/attribution',
+
+  // Communications
+  ADMIN_COMMS: '/admin/communications',
+  ADMIN_COMMS_TEMPLATES: '/admin/communications/templates',
+  ADMIN_COMMS_NEWSLETTERS: '/admin/communications/newsletters',
+  ADMIN_COMMS_CAMPAIGNS: '/admin/communications/campaigns',
+  ADMIN_COMMS_AUDIENCES: '/admin/communications/audiences',
+  ADMIN_COMMS_AUTOMATIONS: '/admin/communications/automations',
+  ADMIN_COMMS_DELIVERY: '/admin/communications/delivery-logs',
+
+  // Revenue
+  ADMIN_REVENUE: '/admin/revenue',
+  ADMIN_REVENUE_EMPLOYERS: '/admin/revenue/employers',
+  ADMIN_REVENUE_PROMOTED_EVENTS: '/admin/revenue/promoted-events',
+  ADMIN_REVENUE_SPONSORSHIP: '/admin/revenue/sponsorship',
+  ADMIN_REVENUE_TRANSACTIONS: '/admin/revenue/transactions',
+  ADMIN_REVENUE_PRODUCTS: '/admin/revenue/products',
+
+  // System
+  ADMIN_SYSTEM_INTEGRATIONS: '/admin/system/integrations',
+  ADMIN_SYSTEM_JOBS: '/admin/system/jobs',
+  ADMIN_SYSTEM_BACKGROUND_JOBS: '/admin/system/background-jobs',
+  ADMIN_SYSTEM_FEATURE_FLAGS: '/admin/system/feature-flags',
+  ADMIN_SYSTEM_WEBHOOKS: '/admin/system/webhooks',
+  ADMIN_SYSTEM_ENVIRONMENT: '/admin/system/environment',
+  ADMIN_SYSTEM_ERRORS: '/admin/system/errors',
+  ADMIN_SYSTEM_SETTINGS: '/admin/system/settings',
+  ADMIN_SYSTEM_AUDIT: '/admin/system/audit',
 } as const;
 
 export type RouteKey = keyof typeof ROUTES;
