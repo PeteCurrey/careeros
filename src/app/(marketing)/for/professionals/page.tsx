@@ -123,68 +123,78 @@ export default function ForProfessionalsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Hero Copy */}
             <div className="lg:col-span-7 space-y-6 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-xs font-mono text-[var(--accent-blue)]">
-                <Briefcase className="w-3.5 h-3.5" />
-                <span>For Working Professionals &amp; Leaders</span>
-              </div>
+              <ScrollReveal>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-xs font-mono text-[var(--accent-blue)]">
+                  <Briefcase className="w-3.5 h-3.5" />
+                  <span>For Working Professionals &amp; Leaders</span>
+                </div>
+              </ScrollReveal>
 
-              <div className="space-y-3">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.12]">
-                  Don&apos;t wait until you need a new job to think about your career.
-                  <CareerGradientText variant="blue" className="block font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
-                    Build the next move while you&apos;re still making this one count.
-                  </CareerGradientText>
-                </h1>
-              </div>
+              <ScrollReveal delayMs={80}>
+                <div className="space-y-3">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.12]">
+                    Don&apos;t wait until you need a new job to think about your career.
+                    <CareerGradientText variant="blue" className="block font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
+                      Build the next move while you&apos;re still making this one count.
+                    </CareerGradientText>
+                  </h1>
+                </div>
+              </ScrollReveal>
 
-              <p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
-                Career OS gives you a Career Mentor, a growing professional context, an evidence record, and a clearer view of the paths available from where you are now.
-              </p>
+              <ScrollReveal delayMs={140}>
+                <p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
+                  Career OS gives you a Career Mentor, a growing professional context, an evidence record, and a clearer view of the paths available from where you are now.
+                </p>
+              </ScrollReveal>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-                <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="justify-center">
-                  Start your Career OS <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-                <Button href="#career-drift" variant="secondary" size="lg" className="justify-center">
-                  Explore the professional journey &darr;
-                </Button>
-              </div>
+              <ScrollReveal delayMs={200}>
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+                  <Button href={ROUTES.SIGNUP} variant="primary" size="lg" className="justify-center">
+                    Start your Career OS <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                  <Button href="#career-drift" variant="secondary" size="lg" className="justify-center">
+                    Explore the professional journey &darr;
+                  </Button>
+                </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[var(--color-text-tertiary)] font-mono">
-                <span className="flex items-center gap-1.5 text-[var(--color-text-secondary)]">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Free for individuals
-                </span>
-                <span className="text-[11px]">
-                  Private context &bull; Independent of your employer&apos;s IT
-                </span>
-              </div>
+                <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[var(--color-text-tertiary)] font-mono">
+                  <span className="flex items-center gap-1.5 text-[var(--color-text-secondary)]">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Free for individuals
+                  </span>
+                  <span className="text-[11px]">
+                    Private context &bull; Independent of your employer&apos;s IT
+                  </span>
+                </div>
+              </ScrollReveal>
             </div>
 
             {/* Right Card / Overview */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl p-6 sm:p-7 space-y-4 border-beam-container border-beam-slow">
-                <div className="space-y-1.5">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-blue)] font-semibold">
-                    Your Current Role is One Point in a Larger Career
-                  </span>
-                  <h3 className="text-base font-bold text-white">
-                    Lifelong Career Compounding
-                  </h3>
-                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                    Actively manage promotion milestones, lateral industry pivots, leadership development, or independent practice without starting over.
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
-                  <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
-                    <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Twin</span>
-                    <p className="font-semibold text-white">Compound Context</p>
+              <ScrollReveal delayMs={120}>
+                <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl p-6 sm:p-7 space-y-4 border-beam-container border-beam-slow hover-lift card-interactive">
+                  <div className="space-y-1.5">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-blue)] font-semibold">
+                      Your Current Role is One Point in a Larger Career
+                    </span>
+                    <h3 className="text-base font-bold text-white">
+                      Lifelong Career Compounding
+                    </h3>
+                    <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                      Actively manage promotion milestones, lateral industry pivots, leadership development, or independent practice without starting over.
+                    </p>
                   </div>
-                  <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
-                    <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Graph</span>
-                    <p className="font-semibold text-white">Lateral Bridges</p>
+                  <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
+                    <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
+                      <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Twin</span>
+                      <p className="font-semibold text-white">Compound Context</p>
+                    </div>
+                    <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
+                      <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Graph</span>
+                      <p className="font-semibold text-white">Lateral Bridges</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -193,34 +203,38 @@ export default function ForProfessionalsPage() {
       {/* ── SECTION 02: A CAREER CAN STALL QUIETLY ──────────────────── */}
       <section id="career-drift" className="section-editorial bg-[var(--color-surface-raised)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">Perspective</span>
-            <h2 className="text-display-section text-[var(--color-text-primary)]">
-              Career drift rarely announces itself.
-            </h2>
-            <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              You can spend years being productive, well-regarded, and reliable without necessarily building toward anything strategic. Responsibilities expand without titles changing, technical expertise compounds without capturing proof, and career reflection only happens when a reorganisation or crisis forces it.
-            </p>
-            <blockquote className="p-4 rounded bg-[var(--color-surface-base)] border-l-2 border-[var(--accent-blue)] text-sm italic text-[var(--color-text-primary)]">
-              &ldquo;Being busy and progressing are not always the same thing.&rdquo;
-            </blockquote>
-          </div>
-
-          <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-6">
-            <div className="space-y-1">
-              <span className="text-xs font-mono uppercase tracking-wider text-[var(--accent-blue)]">
-                Interactive Starting Point
-              </span>
-              <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)]">
-                What are you trying to work out right now?
-              </h3>
-              <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
-                Select your primary career question to inspect how Career OS helps you evaluate it:
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">Perspective</span>
+              <h2 className="text-display-section text-[var(--color-text-primary)]">
+                Career drift rarely announces itself.
+              </h2>
+              <p className="text-body-editorial text-[var(--color-text-secondary)]">
+                You can spend years being productive, well-regarded, and reliable without necessarily building toward anything strategic. Responsibilities expand without titles changing, technical expertise compounds without capturing proof, and career reflection only happens when a reorganisation or crisis forces it.
               </p>
+              <blockquote className="p-4 rounded bg-[var(--color-surface-base)] border-l-2 border-[var(--accent-blue)] text-sm italic text-[var(--color-text-primary)]">
+                &ldquo;Being busy and progressing are not always the same thing.&rdquo;
+              </blockquote>
             </div>
+          </ScrollReveal>
 
-            <ProfessionalMindsetInteractive />
-          </div>
+          <ScrollReveal delayMs={100}>
+            <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-6">
+              <div className="space-y-1">
+                <span className="text-xs font-mono uppercase tracking-wider text-[var(--accent-blue)]">
+                  Interactive Starting Point
+                </span>
+                <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)]">
+                  What are you trying to work out right now?
+                </h3>
+                <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
+                  Select your primary career question to inspect how Career OS helps you evaluate it:
+                </p>
+              </div>
+
+              <ProfessionalMindsetInteractive />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -229,58 +243,66 @@ export default function ForProfessionalsPage() {
         <div className="container-editorial space-y-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="section-label">Career Twin in Practice</span>
-              <h2 className="text-display-section text-[var(--color-text-primary)]">
-                Before deciding what comes next, understand what you&apos;ve already built.
-              </h2>
-              <p className="text-body-editorial text-[var(--color-text-secondary)]">
-                A professional career is vastly richer than a LinkedIn headline or a corporate job description. Career Twin deconstructs your actual responsibilities, delivered artifacts, client engagements, and team coordination to reveal your real underlying capability.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href={ROUTES.PRODUCT_CAREER_TWIN}
-                  className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[var(--accent-blue)] hover:underline"
-                >
-                  Explore Career Twin Architecture &rarr;
-                </Link>
-              </div>
+              <ScrollReveal>
+                <div className="space-y-6">
+                  <span className="section-label">Career Twin in Practice</span>
+                  <h2 className="text-display-section text-[var(--color-text-primary)]">
+                    Before deciding what comes next, understand what you&apos;ve already built.
+                  </h2>
+                  <p className="text-body-editorial text-[var(--color-text-secondary)]">
+                    A professional career is vastly richer than a LinkedIn headline or a corporate job description. Career Twin deconstructs your actual responsibilities, delivered artifacts, client engagements, and team coordination to reveal your real underlying capability.
+                  </p>
+                  <div className="pt-2">
+                    <Link
+                      href={ROUTES.PRODUCT_CAREER_TWIN}
+                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[var(--accent-blue)] hover:underline"
+                    >
+                      Explore Career Twin Architecture &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
             </div>
 
             {/* Context Deconstruction Visual */}
-            <div className="lg:col-span-6 p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-5">
-              <div className="space-y-1 pb-3 border-b border-[var(--color-border-default)]">
-                <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)]">Surface Label vs. True Context</span>
-                <h4 className="text-lg font-bold text-white">Job Title: Mechanical Engineer</h4>
-              </div>
+            <div className="lg:col-span-6">
+              <ScrollReveal delayMs={100}>
+                <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-5 hover-lift card-interactive">
+                  <div className="space-y-1 pb-3 border-b border-[var(--color-border-default)]">
+                    <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)]">Surface Label vs. True Context</span>
+                    <h4 className="text-lg font-bold text-white">Job Title: Mechanical Engineer</h4>
+                  </div>
 
-              <div className="space-y-2">
-                <span className="text-[10px] font-mono uppercase text-emerald-400 font-bold block">
-                  What Sits Underneath (Discovered by Career Twin):
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
-                    <span className="font-semibold text-white block">Troubleshooting</span>
-                    <span className="text-[11px] text-[var(--color-text-secondary)]">Root-cause fault isolation in 24/7 continuous operations</span>
+                  <div className="space-y-2">
+                    <span className="text-[10px] font-mono uppercase text-emerald-400 font-bold block">
+                      What Sits Underneath (Discovered by Career Twin):
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                      <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
+                        <span className="font-semibold text-white block">Troubleshooting</span>
+                        <span className="text-[11px] text-[var(--color-text-secondary)]">Root-cause fault isolation in 24/7 continuous operations</span>
+                      </div>
+                      <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
+                        <span className="font-semibold text-white block">Commercial Judgement</span>
+                        <span className="text-[11px] text-[var(--color-text-secondary)]">Vendor warranty recovery and parts margin negotiations</span>
+                      </div>
+                      <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
+                        <span className="font-semibold text-white block">Project Ownership</span>
+                        <span className="text-[11px] text-[var(--color-text-secondary)]">Led €1.2M plant line retrofit with zero safety incidents</span>
+                      </div>
+                      <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
+                        <span className="font-semibold text-white block">Mentoring &amp; Standards</span>
+                        <span className="text-[11px] text-[var(--color-text-secondary)]">Onboarded and coached 4 junior technician apprentices</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
-                    <span className="font-semibold text-white block">Commercial Judgement</span>
-                    <span className="text-[11px] text-[var(--color-text-secondary)]">Vendor warranty recovery and parts margin negotiations</span>
-                  </div>
-                  <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
-                    <span className="font-semibold text-white block">Project Ownership</span>
-                    <span className="text-[11px] text-[var(--color-text-secondary)]">Led €1.2M plant line retrofit with zero safety incidents</span>
-                  </div>
-                  <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
-                    <span className="font-semibold text-white block">Mentoring &amp; Standards</span>
-                    <span className="text-[11px] text-[var(--color-text-secondary)]">Onboarded and coached 4 junior technician apprentices</span>
+
+                  <div className="p-3 rounded bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-xs text-[var(--color-text-primary)]">
+                    <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-bold block mb-1">Possible Future Value Unlocked:</span>
+                    Senior Plant Operations Director &bull; Asset Reliability Consultant &bull; Field Operations VP
                   </div>
                 </div>
-              </div>
-
-              <div className="p-3 rounded bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-xs text-[var(--color-text-primary)]">
-                <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-bold block mb-1">Possible Future Value Unlocked:</span>
-                Senior Plant Operations Director &bull; Asset Reliability Consultant &bull; Field Operations VP
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -289,15 +311,17 @@ export default function ForProfessionalsPage() {
       {/* ── SECTION 04: PROMOTION READINESS ─────────────────────────── */}
       <section className="section-editorial bg-[var(--color-surface-raised)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">Promotion Planning</span>
-            <h2 className="text-display-section text-[var(--color-text-primary)]">
-              Promotion is often about the evidence you don&apos;t have yet.
-            </h2>
-            <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              Many professionals assume getting promoted requires another academic credential or waiting for annual appraisal cycles. In reality, leadership promotions stall because of missing operational evidence — such as documented delegation or direct budget accountability.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">Promotion Planning</span>
+              <h2 className="text-display-section text-[var(--color-text-primary)]">
+                Promotion is often about the evidence you don&apos;t have yet.
+              </h2>
+              <p className="text-body-editorial text-[var(--color-text-secondary)]">
+                Many professionals assume getting promoted requires another academic credential or waiting for annual appraisal cycles. In reality, leadership promotions stall because of missing operational evidence — such as documented delegation or direct budget accountability.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <PromotionReadinessInteractive />
         </div>
@@ -306,48 +330,55 @@ export default function ForProfessionalsPage() {
       {/* ── SECTION 05: SPECIALIST OR MANAGER? ──────────────────────── */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-3">
-            <span className="section-label">Progression Architecture</span>
-            <h2 className="text-display-section text-[var(--color-text-primary)]">
-              Progression doesn&apos;t have to mean managing people.
-            </h2>
-            <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              Too many organisations default to pushing top individual performers into people management. Career OS treats technical mastery, architectural oversight, and commercial ownership as equal, high-status progression tracks.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-3">
+              <span className="section-label">Progression Architecture</span>
+              <h2 className="text-display-section text-[var(--color-text-primary)]">
+                Progression doesn&apos;t have to mean managing people.
+              </h2>
+              <p className="text-body-editorial text-[var(--color-text-secondary)]">
+                Too many organisations default to pushing top individual performers into people management. Career OS treats technical mastery, architectural oversight, and commercial ownership as equal, high-status progression tracks.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-3">
-              <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-bold">Track 01</span>
-              <h3 className="text-base font-semibold text-white">Deeper Specialism</h3>
-              <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                Principal contributor, technical fellow, subject-matter authority, or consulting specialist solving domain problems.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-3">
-              <span className="font-mono text-[10px] text-emerald-400 uppercase font-bold">Track 02</span>
-              <h3 className="text-base font-semibold text-white">People Leadership</h3>
-              <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                Team management, talent coaching, organizational culture, performance evaluation, and cross-functional leadership.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-3">
-              <span className="font-mono text-[10px] text-purple-400 uppercase font-bold">Track 03</span>
-              <h3 className="text-base font-semibold text-white">Commercial &amp; Strategic</h3>
-              <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                Product leadership, revenue operations, business unit P&amp;L ownership, and corporate strategic development.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-3">
-              <span className="font-mono text-[10px] text-amber-400 uppercase font-bold">Track 04</span>
-              <h3 className="text-base font-semibold text-white">Entrepreneurial</h3>
-              <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                Independent consulting practice, specialized agency, contracting enterprise, or launching an industry venture.
-              </p>
-            </div>
+            {[
+              {
+                track: 'Track 01',
+                color: 'text-[var(--accent-blue)]',
+                title: 'Deeper Specialism',
+                desc: 'Principal contributor, technical fellow, subject-matter authority, or consulting specialist solving domain problems.',
+              },
+              {
+                track: 'Track 02',
+                color: 'text-emerald-400',
+                title: 'People Leadership',
+                desc: 'Team management, talent coaching, organizational culture, performance evaluation, and cross-functional leadership.',
+              },
+              {
+                track: 'Track 03',
+                color: 'text-purple-400',
+                title: 'Commercial & Strategic',
+                desc: 'Product leadership, revenue operations, business unit P&L ownership, and corporate strategic development.',
+              },
+              {
+                track: 'Track 04',
+                color: 'text-amber-400',
+                title: 'Entrepreneurial',
+                desc: 'Independent consulting practice, specialized agency, contracting enterprise, or launching an industry venture.',
+              },
+            ].map((item, idx) => (
+              <ScrollReveal key={idx} delayMs={idx * 80}>
+                <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-3 hover-lift card-interactive h-full">
+                  <span className={`font-mono text-[10px] uppercase font-bold ${item.color}`}>{item.track}</span>
+                  <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                  <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
@@ -357,61 +388,69 @@ export default function ForProfessionalsPage() {
         <div className="container-editorial space-y-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="section-label">Career Passport</span>
-              <h2 className="text-display-section text-[var(--color-text-primary)]">
-                The strongest career record is built before you need to apply anywhere.
-              </h2>
-              <p className="text-body-editorial text-[var(--color-text-secondary)]">
-                Three years after delivering a major project, &ldquo;I think I worked on that&rdquo; is weak. Career Passport lets you log project ownership, delivered KPIs, regulatory audit approvals, and client testimonials in real time.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href={ROUTES.PRODUCT_CAREER_PASSPORT}
-                  className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 hover:underline"
-                >
-                  Explore Career Passport &rarr;
-                </Link>
-              </div>
+              <ScrollReveal>
+                <div className="space-y-6">
+                  <span className="section-label">Career Passport</span>
+                  <h2 className="text-display-section text-[var(--color-text-primary)]">
+                    The strongest career record is built before you need to apply anywhere.
+                  </h2>
+                  <p className="text-body-editorial text-[var(--color-text-secondary)]">
+                    Three years after delivering a major project, &ldquo;I think I worked on that&rdquo; is weak. Career Passport lets you log project ownership, delivered KPIs, regulatory audit approvals, and client testimonials in real time.
+                  </p>
+                  <div className="pt-2">
+                    <Link
+                      href={ROUTES.PRODUCT_CAREER_PASSPORT}
+                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 hover:underline"
+                    >
+                      Explore Career Passport &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
             </div>
 
             {/* Evidence Timeline Visual */}
-            <div className="lg:col-span-6 p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-4">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 block font-semibold">
-                Evidence Compounding Over Time
-              </span>
-              <div className="space-y-3 text-xs">
-                <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-emerald-400 space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-white">Year 1 &bull; Technical Delivery</span>
-                    <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Artifact Logged</span>
-                  </div>
-                  <p className="text-[var(--color-text-secondary)]">Delivered automated testing suite reducing release regression by 34%.</p>
-                </div>
+            <div className="lg:col-span-6">
+              <ScrollReveal delayMs={100}>
+                <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-4 hover-lift card-interactive">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 block font-semibold">
+                    Evidence Compounding Over Time
+                  </span>
+                  <div className="space-y-3 text-xs">
+                    <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-emerald-400 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-white">Year 1 &bull; Technical Delivery</span>
+                        <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Artifact Logged</span>
+                      </div>
+                      <p className="text-[var(--color-text-secondary)]">Delivered automated testing suite reducing release regression by 34%.</p>
+                    </div>
 
-                <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-[var(--accent-blue)] space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-white">Year 2 &bull; Certification &amp; Governance</span>
-                    <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Credential Verified</span>
-                  </div>
-                  <p className="text-[var(--color-text-secondary)]">Earned ISO Lead Auditor qualification; led facility compliance audit.</p>
-                </div>
+                    <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-[var(--accent-blue)] space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-white">Year 2 &bull; Certification &amp; Governance</span>
+                        <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Credential Verified</span>
+                      </div>
+                      <p className="text-[var(--color-text-secondary)]">Earned ISO Lead Auditor qualification; led facility compliance audit.</p>
+                    </div>
 
-                <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-purple-400 space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-white">Year 3 &bull; Mentorship &amp; People</span>
-                    <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Endorsement Added</span>
-                  </div>
-                  <p className="text-[var(--color-text-secondary)]">Mentored 3 junior engineers to successful mid-level promotion.</p>
-                </div>
+                    <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-purple-400 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-white">Year 3 &bull; Mentorship &amp; People</span>
+                        <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Endorsement Added</span>
+                      </div>
+                      <p className="text-[var(--color-text-secondary)]">Mentored 3 junior engineers to successful mid-level promotion.</p>
+                    </div>
 
-                <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-amber-400 space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-white">Year 4 &bull; Commercial Impact</span>
-                    <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Outcome Recorded</span>
+                    <div className="p-3 rounded bg-[var(--color-surface-raised)] border-l-2 border-amber-400 space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-white">Year 4 &bull; Commercial Impact</span>
+                        <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Outcome Recorded</span>
+                      </div>
+                      <p className="text-[var(--color-text-secondary)]">Renegotiated supplier contracts saving €180k annually.</p>
+                    </div>
                   </div>
-                  <p className="text-[var(--color-text-secondary)]">Renegotiated supplier contracts saving €180k annually.</p>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -420,40 +459,53 @@ export default function ForProfessionalsPage() {
       {/* ── SECTION 07: SALARY & NEGOTIATION ────────────────────────── */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-10">
-          <div className="max-w-3xl space-y-3">
-            <span className="section-label">Compensation Strategy</span>
-            <h2 className="text-display-section text-[var(--color-text-primary)]">
-              Salary conversations are easier when they&apos;re based on more than a feeling.
-            </h2>
-            <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              The goal is not to promise arbitrary salary jumps, but to help you structure a rigorous, evidence-grounded review conversation anchored in delivered business outcomes.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-3">
+              <span className="section-label">Compensation Strategy</span>
+              <h2 className="text-display-section text-[var(--color-text-primary)]">
+                Salary conversations are easier when they&apos;re based on more than a feeling.
+              </h2>
+              <p className="text-body-editorial text-[var(--color-text-secondary)]">
+                The goal is not to promise arbitrary salary jumps, but to help you structure a rigorous, evidence-grounded review conversation anchored in delivered business outcomes.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-            <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-bold">01. Expanded Scope</span>
-              <h4 className="font-semibold text-white text-sm">What Has Changed?</h4>
-              <p className="text-[var(--color-text-secondary)]">Document how your direct responsibilities, headcount, or technical footprint have grown since your salary was set.</p>
-            </div>
-
-            <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <span className="font-mono text-[10px] text-emerald-400 uppercase font-bold">02. Delivered Value</span>
-              <h4 className="font-semibold text-white text-sm">Demonstrable Proof</h4>
-              <p className="text-[var(--color-text-secondary)]">Assemble delivered revenue, cost-avoidance, safety milestones, or team efficiency gains from your Career Passport.</p>
-            </div>
-
-            <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <span className="font-mono text-[10px] text-purple-400 uppercase font-bold">03. Market Context</span>
-              <h4 className="font-semibold text-white text-sm">Realistic Benchmarks</h4>
-              <p className="text-[var(--color-text-secondary)]">Evaluate external market dynamics and regional compensation trends without relying on unverified estimates.</p>
-            </div>
-
-            <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <span className="font-mono text-[10px] text-amber-400 uppercase font-bold">04. The Proposal</span>
-              <h4 className="font-semibold text-white text-sm">Structured Ask</h4>
-              <p className="text-[var(--color-text-secondary)]">Present a collaborative package covering base salary, development budget, equity, or title realignment.</p>
-            </div>
+            {[
+              {
+                num: '01. Expanded Scope',
+                color: 'text-[var(--accent-blue)]',
+                title: 'What Has Changed?',
+                desc: 'Document how your direct responsibilities, headcount, or technical footprint have grown since your salary was set.',
+              },
+              {
+                num: '02. Delivered Value',
+                color: 'text-emerald-400',
+                title: 'Demonstrable Proof',
+                desc: 'Assemble delivered revenue, cost-avoidance, safety milestones, or team efficiency gains from your Career Passport.',
+              },
+              {
+                num: '03. Market Context',
+                color: 'text-purple-400',
+                title: 'Realistic Benchmarks',
+                desc: 'Evaluate external market dynamics and regional compensation trends without relying on unverified estimates.',
+              },
+              {
+                num: '04. The Proposal',
+                color: 'text-amber-400',
+                title: 'Structured Ask',
+                desc: 'Present a collaborative package covering base salary, development budget, equity, or title realignment.',
+              },
+            ].map((item, idx) => (
+              <ScrollReveal key={idx} delayMs={idx * 80}>
+                <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2 hover-lift card-interactive h-full">
+                  <span className={`font-mono text-[10px] uppercase font-bold ${item.color}`}>{item.num}</span>
+                  <h4 className="font-semibold text-white text-sm">{item.title}</h4>
+                  <p className="text-[var(--color-text-secondary)]">{item.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
