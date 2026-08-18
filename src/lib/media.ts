@@ -17,11 +17,18 @@ export interface MediaAsset {
 export const MEDIA_ASSETS = {
   hero: {
     mentorTeam: {
-      src: '/media/hero/hero_visionary_pathways.jpg',
-      alt: 'Visionary illuminated metropolitan skyline with topological career pathway light streams and modern multidisciplinary leaders overlooking the horizon',
+      src: '/media/hero/hero_career_world_desktop.jpg',
+      alt: 'Career OS mentor professionals from diverse disciplines — engineering, healthcare, architecture, creative industries and leadership — occupying a dramatic converted industrial space with a city skyline beyond',
       width: 1920,
       height: 1080,
-      caption: 'Career OS — Navigating modern career trajectories across interconnected industries.',
+      caption: 'Career OS — Where every professional world connects.',
+    },
+    mentorTeamMobile: {
+      src: '/media/hero/hero_career_world_mobile.jpg',
+      alt: 'Career OS senior mentor standing with quiet authority in a dramatic industrial architectural space, multidisciplinary professionals in background',
+      width: 900,
+      height: 1200,
+      caption: 'Career OS — Where every professional world connects.',
     },
     cityHorizon: {
       src: '/media/hero/city_horizon_hero.jpg',

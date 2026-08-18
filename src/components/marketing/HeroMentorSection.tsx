@@ -92,56 +92,55 @@ export function HeroMentorSection() {
         animate={true}
       />
 
-      {/* ── Layer 3: Atmospheric Lighting Spill behind Visionary Horizon ─ */}
+      {/* ── Layer 3: Subtle atmospheric warmth complement (very light) ── */}
+      {/* The new image carries its own cinematic lighting — overlays are kept minimal */}
       <div
         aria-hidden="true"
         className="hidden lg:block absolute inset-y-0 right-0 z-[2] w-[65%] pointer-events-none"
       >
-        {/* Cool precision cyan-blue atmospheric wash behind illuminated pathways */}
+        {/* Warm amber echo in the upper right — complements the golden-hour window light */}
         <div
-          className="absolute top-[35%] right-[25%] w-96 h-96 rounded-full blur-3xl opacity-35"
-          style={{ background: 'radial-gradient(circle, #2F8FFF 0%, transparent 70%)' }}
+          className="absolute top-[20%] right-[15%] w-80 h-80 rounded-full blur-3xl opacity-15"
+          style={{ background: 'radial-gradient(circle, #C8882A 0%, transparent 70%)' }}
         />
-        {/* Warm sunset gold wash over the horizon skyline */}
+        {/* Cool blue complement from far city glass wall */}
         <div
-          className="absolute top-[15%] right-[8%] w-80 h-80 rounded-full blur-3xl opacity-25"
-          style={{ background: 'radial-gradient(circle, #DDD36D 0%, transparent 70%)' }}
-        />
-        {/* Deep electric blue accent in lower foreground */}
-        <div
-          className="absolute bottom-[10%] right-[35%] w-72 h-72 rounded-full blur-3xl opacity-25"
-          style={{ background: 'radial-gradient(circle, #0066FF 0%, transparent 70%)' }}
+          className="absolute bottom-[15%] right-[5%] w-72 h-72 rounded-full blur-3xl opacity-12"
+          style={{ background: 'radial-gradient(circle, #2F5FBF 0%, transparent 70%)' }}
         />
       </div>
 
-      {/* ── Layer 4: Mobile Atmospheric Background Image Layer ───────── */}
+      {/* ── Layer 4: Mobile Atmospheric Background ───────────────────── */}
+      {/* Uses the dedicated portrait-crop mobile image — not the desktop wide crop */}
       <div
         aria-hidden="true"
-        className="block lg:hidden absolute inset-0 z-[2] pointer-events-none opacity-20"
+        className="block lg:hidden absolute inset-0 z-[2] pointer-events-none opacity-25"
       >
         <Image
-          src={MEDIA_ASSETS.hero.mentorTeam.src}
+          src={MEDIA_ASSETS.hero.mentorTeamMobile.src}
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: '60% center' }}
         />
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.7) 50%, ${CHARCOAL} 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.65) 45%, ${CHARCOAL} 100%)`,
           }}
         />
       </div>
 
-      {/* ── Layer 5: Hero Visionary Pathways Image — right side panel with micro-parallax ── */}
+      {/* ── Layer 5: Desktop Hero — Cinematic Career World Image ──────── */}
+      {/* The image has a natural dark left zone — perfect for text overlay composition */}
       <div
         className="hidden lg:block absolute inset-y-0 right-0 z-[3]"
         style={{
-          width: '62%',
+          width: '70%',
           opacity: mounted || prefersReducedMotion.current ? 1 : 0,
-          transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s',
+          transition: 'opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s',
           ...imageParallax,
         }}
       >
@@ -150,46 +149,47 @@ export function HeroMentorSection() {
           alt={MEDIA_ASSETS.hero.mentorTeam.alt}
           fill
           priority
-          sizes="(min-width: 1920px) 1200px, (min-width: 1440px) 900px, (min-width: 1024px) 62vw"
-          className="object-cover object-center"
-          style={{ objectPosition: '52% center' }}
+          sizes="(min-width: 1920px) 1344px, (min-width: 1440px) 1008px, (min-width: 1280px) 896px, (min-width: 1024px) 70vw"
+          className="object-cover"
+          style={{ objectPosition: '35% center' }}
         />
 
-        {/* Left-edge charcoal dissolve — matches exact bg colour */}
+        {/* Left-edge charcoal dissolve — blends the image's own natural dark left zone */}
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 z-10 w-[50%] pointer-events-none"
+          className="absolute inset-y-0 left-0 z-10 w-[38%] pointer-events-none"
           style={{
-            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 12%, rgba(34,34,34,0.92) 26%, rgba(34,34,34,0.50) 50%, rgba(34,34,34,0.10) 75%, transparent 100%)`,
+            background: `linear-gradient(to right, ${CHARCOAL} 0%, rgba(34,34,34,0.95) 18%, rgba(34,34,34,0.6) 40%, rgba(34,34,34,0.15) 65%, transparent 100%)`,
           }}
         />
 
         {/* Top-edge fade */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 z-10 h-[16%] pointer-events-none"
+          className="absolute inset-x-0 top-0 z-10 h-[14%] pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.5) 40%, transparent 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.4) 50%, transparent 100%)`,
           }}
         />
 
         {/* Bottom-edge fade */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 z-10 h-[16%] pointer-events-none"
+          className="absolute inset-x-0 bottom-0 z-10 h-[14%] pointer-events-none"
           style={{
-            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.5) 40%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.4) 50%, transparent 100%)`,
           }}
         />
       </div>
 
       {/* ── Layer 6: Left-side foreground vignette ─────────────────── */}
+      {/* Narrower than before — image's own composition provides the left darkness */}
       <div
         aria-hidden="true"
         className="hidden lg:block absolute inset-y-0 left-0 z-[4] pointer-events-none"
         style={{
-          width: '50%',
-          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.75) 0%, transparent 80%)`,
+          width: '42%',
+          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.65) 0%, transparent 80%)`,
         }}
       />
 
@@ -334,28 +334,31 @@ export function HeroMentorSection() {
         </div>
       </div>
 
-      {/* ── Mobile: In-flow mentor team image ─────────────────────── */}
+      {/* ── Mobile: In-flow portrait mentor image ──────────────────── */}
+      {/* Uses the dedicated 3:4 portrait crop — preserves the foreground mentor and  */}
+      {/* background professionals, not just an edge-crop of the desktop wide shot    */}
       <div
         className="block lg:hidden relative z-[2] w-full"
         style={{
-          aspectRatio: '4/3',
+          aspectRatio: '3/4',
           opacity: mounted || prefersReducedMotion.current ? 1 : 0,
-          transition: 'opacity 1s ease-out',
+          transition: 'opacity 1.2s ease-out',
         }}
       >
         <Image
-          src={MEDIA_ASSETS.hero.mentorTeam.src}
-          alt={MEDIA_ASSETS.hero.mentorTeam.alt}
+          src={MEDIA_ASSETS.hero.mentorTeamMobile.src}
+          alt={MEDIA_ASSETS.hero.mentorTeamMobile.alt}
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: '60% top' }}
         />
         <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.4) 40%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.3) 35%, transparent 100%)`,
           }}
         />
       </div>
