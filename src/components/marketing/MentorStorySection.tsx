@@ -81,7 +81,7 @@ export function MentorStorySection() {
             </div>
             <h2 className="text-display-section text-[var(--color-text-primary)]">
               Someone in your corner. <br />
-              <span className="text-[var(--color-lavender-base)] font-normal">
+              <span className="text-[#CDBBD2] font-normal">
                 Backed by your Career OS.
               </span>
             </h2>
@@ -137,8 +137,12 @@ export function MentorStorySection() {
             </ScrollReveal>
           </div>
 
-          {/* Right: Sequential Reasoning Consultation Interface */}
-          <div className="lg:col-span-7 space-y-6">
+          {/* Right: Sequential Reasoning Consultation Interface with Connected Data Line */}
+          <div className="lg:col-span-7 space-y-6 relative">
+            
+            {/* Fine connecting data line between mentor and reasoning nodes */}
+            <div className="hidden lg:block absolute -left-7 top-1/2 -translate-y-1/2 w-7 h-px bg-gradient-to-r from-[#CDBBD2]/40 to-[#2F8FFF]/60" />
+
             <ScrollReveal direction="left" delayMs={150}>
               <div className="p-8 sm:p-10 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6 border-beam-container border-beam-slow">
 
@@ -168,14 +172,16 @@ export function MentorStorySection() {
                   style={getStepStyle(300)}
                   className="p-5 bg-white/5 border border-white/10 rounded-[var(--radius-sm)] text-sm sm:text-base text-[var(--color-text-primary)] leading-relaxed relative"
                 >
+                  <div className="absolute -left-2 top-4 w-1 h-6 bg-[#CDBBD2] rounded-full" />
                   &ldquo;You noted that moving into Staff leadership is your priority for the next 18 months. You&apos;ve now anchored the distributed systems design deliverables in your Passport, but demonstrable cross-functional budget exposure is still missing for a Staff review.&rdquo;
                 </div>
 
                 {/* Step 3: Actionable Next Move Recommendation */}
                 <div
                   style={getStepStyle(500)}
-                  className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-3 hover-lift"
+                  className="p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-3 hover-lift relative"
                 >
+                  <div className="absolute -left-2 top-6 w-1 h-8 bg-[#2F8FFF] rounded-full" />
                   <div className="flex items-center justify-between">
                     <span className="section-label-light">
                       Recommended Next Move

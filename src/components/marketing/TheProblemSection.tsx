@@ -1,8 +1,9 @@
 'use client';
 
-import React from "react";
-import { ScrollReveal } from "@/components/brand/ScrollReveal";
-import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import React from 'react';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
+import { HumanCareerAnnotation } from '@/components/brand/HumanCareerAnnotation';
 
 const CAREER_JOURNEY_STAGES = [
   'Education',
@@ -67,11 +68,11 @@ export function TheProblemSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left: Editorial Statement & Copy */}
-          <div className="lg:col-span-8 space-y-8">
+          <div className="lg:col-span-7 space-y-8">
             <ScrollReveal delayMs={100}>
               <h2 className="text-display-section text-[var(--color-text-primary)] max-w-3xl leading-[1.08]">
                 Careers aren&apos;t linear anymore. <br />
-                <span className="text-[var(--color-taupe-300)] font-normal">
+                <span className="text-[#2F8FFF] font-normal">
                   Career support shouldn&apos;t be either.
                 </span>
               </h2>
@@ -98,66 +99,72 @@ export function TheProblemSection() {
             </ScrollReveal>
 
             <ScrollReveal delayMs={300}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-2 max-w-3xl text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
+              <div className="space-y-4 max-w-2xl text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
                 <p>
                   The traditional playbook — pick a major at 18, polish a two-page paper résumé, and climb a single company ladder — has collapsed under the weight of technological and economic change.
                 </p>
                 <p>
-                  Today, people transition between sectors, combine technical trades with leadership, reskill mid-career, and navigate AI disruption. They need persistent, verifiable infrastructure that travels with them.
+                  Today, people transition between sectors, combine technical trades with leadership, reskill mid-career, and navigate AI disruption. <strong className="text-[var(--color-text-primary)] font-semibold">Your career needs more than advice. It needs an operating system.</strong>
                 </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Reality Gap Metric Indicators */}
+            <ScrollReveal delayMs={350}>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-subtle)] rounded-lg space-y-1">
+                  <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">AVERAGE LIFETIME</span>
+                  <div className="text-base font-bold font-mono text-[#2F8FFF]">5.7 Career Changes</div>
+                  <p className="text-[10px] text-[var(--color-text-secondary)] leading-tight">Frequent pivots across sectors and roles.</p>
+                </div>
+
+                <div className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-subtle)] rounded-lg space-y-1">
+                  <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">JOB BOARD CLAIM</span>
+                  <div className="text-base font-bold font-mono text-[#F87171]">85% Unverified</div>
+                  <p className="text-[10px] text-[var(--color-text-secondary)] leading-tight">Keyword claims without evidence provenance.</p>
+                </div>
+
+                <div className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-subtle)] rounded-lg space-y-1">
+                  <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">SOVEREIGN HOME</span>
+                  <div className="text-base font-bold font-mono text-[#34D399]">1 Platform</div>
+                  <p className="text-[10px] text-[var(--color-text-secondary)] leading-tight">Lifelong compounding from first job to executive.</p>
+                </div>
               </div>
             </ScrollReveal>
           </div>
 
-          {/* Right: The Reality Gap Panel */}
-          <div className="lg:col-span-4">
+          {/* Right: Photographic Human Career Annotation Panel */}
+          <div className="lg:col-span-5">
             <ScrollReveal delayMs={200}>
-              <div className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6 hover-lift">
-                <div className="flex items-center justify-between">
-                  <div className="text-xs uppercase tracking-widest text-[var(--color-taupe-300)] font-semibold">
-                    The Reality Gap
-                  </div>
-                  <TechnicalBadge variant="champagne">EVIDENCE</TechnicalBadge>
-                </div>
-
-                <div className="space-y-4 text-xs text-[var(--color-text-secondary)]">
-                  <div className="pb-3.5 border-b border-[var(--color-border-subtle)] space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF]" />
-                      <span className="font-semibold text-[var(--color-text-primary)] text-sm">
-                        5.7 Career Changes
-                      </span>
-                    </div>
-                    <p className="text-[var(--color-text-tertiary)] pl-3.5">
-                      Average career pivots an individual will make over their working lifetime.
-                    </p>
-                  </div>
-
-                  <div className="pb-3.5 border-b border-[var(--color-border-subtle)] space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#F87171]" />
-                      <span className="font-semibold text-[var(--color-text-primary)] text-sm">
-                        85% Unverified Résumés
-                      </span>
-                    </div>
-                    <p className="text-[var(--color-text-tertiary)] pl-3.5">
-                      Self-reported claims on job boards that lack verifiable evidence provenance.
-                    </p>
-                  </div>
-
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#34D399]" />
-                      <span className="font-semibold text-[var(--color-text-primary)] text-sm">
-                        1 Platform
-                      </span>
-                    </div>
-                    <p className="text-[var(--color-text-tertiary)] pl-3.5">
-                      Career OS unites discovery, mentoring, evidence, and progression in one sovereign home.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <HumanCareerAnnotation
+                imageSrc="/media/professionals/professional_hero_intersection.jpg"
+                imageAlt="Professional engineer navigating multidirectional career choices in a contemporary architectural setting"
+                title="Sovereign Career Understanding"
+                roleBadge="REAL-WORLD SYNTHESIS"
+                annotations={[
+                  {
+                    label: 'Experience',
+                    value: '8 Yrs Technical Operations',
+                    detail: 'Cross-industry engineering systems & team mentoring',
+                    category: 'experience',
+                    position: { top: '28%', left: '30%' },
+                  },
+                  {
+                    label: 'Skills',
+                    value: '3 Verified Domains',
+                    detail: 'Cloud systems, team leadership, risk assessment',
+                    category: 'skills',
+                    position: { top: '48%', left: '72%' },
+                  },
+                  {
+                    label: 'Next Move',
+                    value: 'Principal Architect',
+                    detail: 'Identified 92% readiness with 1 development bridge',
+                    category: 'next_move',
+                    position: { top: '75%', left: '38%' },
+                  },
+                ]}
+              />
             </ScrollReveal>
           </div>
 

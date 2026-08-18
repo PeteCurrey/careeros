@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ScrollReveal } from '@/components/brand/ScrollReveal';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
+import { ImageHoverRevealCard } from '@/components/brand/ImageHoverRevealCard';
 import { Sparkles, Layers } from 'lucide-react';
 
 interface Stage {
@@ -13,6 +14,8 @@ interface Stage {
   environment: string;
   description: string;
   milestones: string[];
+  imageSrc: string;
+  imageAlt: string;
 }
 
 const LIFETIME_STAGES: Stage[] = [
@@ -23,6 +26,8 @@ const LIFETIME_STAGES: Stage[] = [
     environment: 'School & Exploration Environment',
     description: 'Explore suited careers, emerging industries, and realistic pathways without being forced into narrow predetermined tracks or premature decisions.',
     milestones: ['Latent Strength Mapping', 'Exploratory Pathway Modelling', 'Parity across University & Trades'],
+    imageSrc: '/media/students/student_hero_futures.jpg',
+    imageAlt: 'Young student exploring future horizon pathways',
   },
   {
     num: '02',
@@ -31,6 +36,8 @@ const LIFETIME_STAGES: Stage[] = [
     environment: 'Technical Workshop & University Campus',
     description: 'Gain targeted skills across college, technical apprenticeships, trades, or university with curated development milestones and verified projects.',
     milestones: ['Domain Capability Frameworks', 'Hands-on Project Deliverables', 'Apprenticeship & Academic Parity'],
+    imageSrc: '/media/students/audience_students.jpg',
+    imageAlt: 'Engineers and students collaborating on technical prototypes',
   },
   {
     num: '03',
@@ -39,6 +46,8 @@ const LIFETIME_STAGES: Stage[] = [
     environment: 'Professional Project Space',
     description: 'Anchor qualifications, project deliverables, and verified endorsements inside your tamper-evident Career Passport independently of any employer.',
     milestones: ['W3C Verifiable Credentials', 'Cryptographic Proof of Work', 'Peer & Institutional Endorsements'],
+    imageSrc: '/media/product/career_passport_hero.jpg',
+    imageAlt: 'Secure credential archive and verifiable evidence vault',
   },
   {
     num: '04',
@@ -47,6 +56,8 @@ const LIFETIME_STAGES: Stage[] = [
     environment: 'Enterprise & Industry Ecosystem',
     description: 'Let verified capability surface you directly to forward-thinking employers and mentors who value demonstrated potential over keyword résumés.',
     milestones: ['Private Opportunity Matching', 'Autonomous Agent Introductions', 'Zero Public Job-Search Broadcasting'],
+    imageSrc: '/media/product/opportunity_agent_hero.jpg',
+    imageAlt: 'Opportunity intelligence observatory overlooking career horizons',
   },
   {
     num: '05',
@@ -55,6 +66,8 @@ const LIFETIME_STAGES: Stage[] = [
     environment: 'Executive & Strategic Operations',
     description: 'Continuously benchmark capability, bridge management skill gaps, and strategically advance compensation trajectory over years.',
     milestones: ['Staff & Executive Advisory', 'Market Compensation Calibration', 'Capability Gap Resolution'],
+    imageSrc: '/media/professionals/audience_professionals.jpg',
+    imageAlt: 'Professional leader contemplating strategic career trajectory',
   },
   {
     num: '06',
@@ -63,6 +76,8 @@ const LIFETIME_STAGES: Stage[] = [
     environment: 'Founder & Venture Studio',
     description: 'Execute strategic lateral career transitions, international mobility, or entrepreneurial launches with your complete professional foundation intact.',
     milestones: ['Cross-Industry Capability Bridges', 'Venture Founder Readiness', 'Global Portability Standards'],
+    imageSrc: '/media/professionals/professional_hero_intersection.jpg',
+    imageAlt: 'Professional executing lateral pivot across industries',
   },
 ];
 
@@ -89,7 +104,7 @@ export function LifetimeJourneySection() {
                 <TechnicalBadge variant="champagne">LIFELONG COMPOUNDING</TechnicalBadge>
               </div>
               <h2 className="text-display-section text-[var(--color-text-primary)]">
-                One system. Your whole working life.
+                One system. <span className="text-[#DDD36D]">Your whole working life.</span>
               </h2>
               <p className="text-lead text-[var(--color-text-secondary)]">
                 Most career tools vanish the moment you secure a first job. Career OS stays with you across every promotion, lateral pivot, and reinvention.
@@ -101,38 +116,42 @@ export function LifetimeJourneySection() {
           </div>
         </ScrollReveal>
 
-        {/* Horizontal Editorial Timeline Bar */}
+        {/* Horizontal Interactive Lifetime Phase Cards */}
         <ScrollReveal delayMs={100}>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-y md:divide-y-0 md:divide-x divide-[var(--color-border-default)] border-y border-[var(--color-border-default)] bg-[var(--color-surface-raised)]">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {LIFETIME_STAGES.map((item, idx) => {
               const isActive = activeStage === idx;
               return (
-                <button
+                <div
                   key={item.num}
-                  type="button"
                   onClick={() => setActiveStage(idx)}
-                  className={cn(
-                    'p-6 text-left transition-all cursor-pointer flex flex-col justify-between min-h-[160px] relative',
-                    isActive
-                      ? 'bg-[var(--color-surface-sunken)] border-b-2 border-b-[#2F8FFF]'
-                      : 'hover:bg-white/5'
-                  )}
+                  className="cursor-pointer"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className={cn('text-xs font-mono font-semibold', isActive ? 'text-[#2F8FFF]' : 'text-[var(--color-taupe-400)]')}>
-                      {item.num}
-                    </span>
-                    {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.6)]" />}
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="font-semibold text-sm text-[var(--color-text-primary)] tracking-tight">
-                      {item.name}
-                    </h3>
-                    <p className="text-xs text-[var(--color-text-tertiary)] line-clamp-2 mt-1 leading-relaxed">
-                      {item.tagline}
-                    </p>
-                  </div>
-                </button>
+                  <ImageHoverRevealCard
+                    imageSrc={item.imageSrc}
+                    imageAlt={item.imageAlt}
+                    pattern="background"
+                    active={isActive}
+                    className="h-full min-h-[160px] p-5 flex flex-col justify-between"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className={cn('text-xs font-mono font-semibold', isActive ? 'text-[#2F8FFF]' : 'text-[var(--color-taupe-400)]')}>
+                        {item.num}
+                      </span>
+                      {isActive && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.8)]" />
+                      )}
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="font-semibold text-sm text-[var(--color-text-primary)] tracking-tight">
+                        {item.name}
+                      </h3>
+                      <p className="text-[11px] text-[var(--color-text-tertiary)] line-clamp-2 mt-1 leading-relaxed">
+                        {item.tagline}
+                      </p>
+                    </div>
+                  </ImageHoverRevealCard>
+                </div>
               );
             })}
           </div>
@@ -180,7 +199,7 @@ export function LifetimeJourneySection() {
                 ))}
               </ul>
               <div className="pt-2 text-[11px] font-mono text-[var(--color-text-tertiary)] border-t border-[var(--color-border-default)]">
-                Compounded inside your lifelong Career Twin & Passport
+                Compounded inside your lifelong Career Twin &amp; Passport
               </div>
             </div>
           </div>

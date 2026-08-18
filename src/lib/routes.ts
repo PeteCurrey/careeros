@@ -120,6 +120,7 @@ export const ROUTES = {
   LEGAL_SUBPROCESSORS: '/legal/subprocessors',
   LEGAL_DATA_RETENTION: '/legal/data-retention',
   LEGAL_VERSION_HISTORY: '/legal/version-history',
+  LEGAL_DATA_SOURCES: '/legal/data-sources-integrations',
 
   // Company
   COMPANY_ABOUT: '/company/about',
@@ -128,6 +129,8 @@ export const ROUTES = {
   COMPANY_PRESS: '/company/press',
   COMPANY_CAREERS: '/company/careers',
   COMPANY_CONTACT: '/company/contact',
+  CONTACT_PARTNERSHIPS: '/contact/partnerships',
+  SUPPORT_REPORT_DATA: '/support/report-data',
 
   // Auth
   LOGIN: '/login',

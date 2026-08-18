@@ -360,6 +360,7 @@ export const footerNav: NavGroup[] = [
       { label: 'AI Terms', href: ROUTES.LEGAL_AI_TERMS },
       { label: 'Student Terms', href: ROUTES.LEGAL_STUDENT_TERMS },
       { label: 'Employer Terms', href: ROUTES.LEGAL_EMPLOYER_TERMS },
+      { label: 'Data Sources & Integrations', href: ROUTES.LEGAL_DATA_SOURCES },
       { label: 'Accessibility', href: ROUTES.LEGAL_ACCESSIBILITY },
     ],
   },

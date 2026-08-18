@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
-import { MEDIA_ASSETS } from '@/lib/media';
 import { ArrowRight } from 'lucide-react';
 import { ScrollReveal } from '@/components/brand/ScrollReveal';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
+import { HumanCareerAnnotation, CareerAnnotationPoint } from '@/components/brand/HumanCareerAnnotation';
 
 interface AudienceFeature {
   id: string;
@@ -18,12 +17,9 @@ interface AudienceFeature {
   points: string[];
   href: string;
   ctaText: string;
-  image: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
+  imageSrc: string;
+  imageAlt: string;
+  annotations: CareerAnnotationPoint[];
 }
 
 const AUDIENCES: AudienceFeature[] = [
@@ -31,7 +27,7 @@ const AUDIENCES: AudienceFeature[] = [
     id: 'students',
     num: '01',
     badge: 'Students & Early Careers',
-    headline: 'You shouldn\x27t have to know your whole future at 17.',
+    headline: "You shouldn't have to know your whole future at 17.",
     description: 'Explore pathways across university, technical apprenticeships, trades, and emerging fields. Build a verifiable portfolio of hands-on project evidence and carry your Career OS into the workforce.',
     points: [
       'Authentic pathway discovery without institutional bias',
@@ -41,13 +37,37 @@ const AUDIENCES: AudienceFeature[] = [
     ],
     href: ROUTES.FOR_STUDENTS,
     ctaText: 'Explore for Students',
-    image: MEDIA_ASSETS.audiences.students,
+    imageSrc: '/media/students/audience_students.jpg',
+    imageAlt: 'Students collaborating on technical design prototype in modern learning lab',
+    annotations: [
+      {
+        label: 'Discovery',
+        value: 'Trades & University Parity',
+        detail: 'Equal visibility for technical apprenticeships & college degrees',
+        category: 'experience',
+        position: { top: '30%', left: '30%' },
+      },
+      {
+        label: 'Evidence',
+        value: 'First Project Portfolio',
+        detail: 'Verified deliverables anchored in the Career Passport',
+        category: 'evidence',
+        position: { top: '55%', left: '70%' },
+      },
+      {
+        label: 'Next Move',
+        value: 'Apprenticeship Launch',
+        detail: 'Direct matching based on demonstrated hands-on skill',
+        category: 'next_move',
+        position: { top: '78%', left: '35%' },
+      },
+    ],
   },
   {
     id: 'professionals',
     num: '02',
     badge: 'Professionals & Leaders',
-    headline: 'The job you have now isn\x27t the end of the story.',
+    headline: "The job you have now isn't the end of the story.",
     description: 'Continuously compound your capability, execute lateral industry pivots, benchmark market compensation horizons, or prepare for entrepreneurship and global mobility.',
     points: [
       'Strategic next-move advisory calibrated to your trajectory',
@@ -57,13 +77,37 @@ const AUDIENCES: AudienceFeature[] = [
     ],
     href: ROUTES.FOR_PROFESSIONALS,
     ctaText: 'Explore for Professionals',
-    image: MEDIA_ASSETS.audiences.professionals,
+    imageSrc: '/media/professionals/audience_professionals.jpg',
+    imageAlt: 'Professional leader contemplating strategic career trajectory in contemporary workspace',
+    annotations: [
+      {
+        label: 'Experience',
+        value: 'Senior Systems Engineering',
+        detail: '6 years compounding architecture & technical team leadership',
+        category: 'experience',
+        position: { top: '25%', left: '32%' },
+      },
+      {
+        label: 'Skills',
+        value: '4 Core Competencies',
+        detail: 'Distributed systems, project leadership, security audit, AI workflows',
+        category: 'skills',
+        position: { top: '50%', left: '72%' },
+      },
+      {
+        label: 'Goals',
+        value: 'Director of Architecture',
+        detail: 'Target horizon benchmarked with compensation calibrations',
+        category: 'goals',
+        position: { top: '78%', left: '40%' },
+      },
+    ],
   },
   {
     id: 'schools',
     num: '03',
     badge: 'High Schools & Districts',
-    headline: 'Personal career guidance shouldn\x27t depend on how much time a counsellor has.',
+    headline: "Personal career guidance shouldn't depend on how much time a counsellor has.",
     description: 'Equip counsellors with intelligent tools, support college and technical trade pathways equally, and protect minors under strict institutional data safeguarding with zero advertising.',
     points: [
       'Equitable parity across university, trades & apprenticeships',
@@ -73,7 +117,31 @@ const AUDIENCES: AudienceFeature[] = [
     ],
     href: ROUTES.FOR_HIGH_SCHOOLS,
     ctaText: 'Explore for High Schools',
-    image: MEDIA_ASSETS.audiences.schools,
+    imageSrc: '/media/schools/audience_schools.jpg',
+    imageAlt: 'Educator mentoring high school students exploring diverse technical and academic pathways',
+    annotations: [
+      {
+        label: 'Safeguarding',
+        value: 'FERPA & COPPA Isolated',
+        detail: 'Strict minor data boundaries with zero advertising or tracking',
+        category: 'evidence',
+        position: { top: '28%', left: '35%' },
+      },
+      {
+        label: 'Guidance',
+        value: '1:1 AI Mentor Copilot',
+        detail: 'Scales counsellor capacity across entire student bodies',
+        category: 'skills',
+        position: { top: '58%', left: '68%' },
+      },
+      {
+        label: 'Outcomes',
+        value: 'Longitudinal Tracking',
+        detail: 'Verifiable post-graduation employment & college progression',
+        category: 'goals',
+        position: { top: '80%', left: '35%' },
+      },
+    ],
   },
   {
     id: 'employers',
@@ -89,7 +157,31 @@ const AUDIENCES: AudienceFeature[] = [
     ],
     href: ROUTES.FOR_EMPLOYERS,
     ctaText: 'Explore for Employers',
-    image: MEDIA_ASSETS.audiences.employers,
+    imageSrc: '/media/employers/audience_employers.jpg',
+    imageAlt: 'Modern hiring team reviewing candidate project evidence and talent fit',
+    annotations: [
+      {
+        label: 'Matching',
+        value: 'Evidence Provenance Match',
+        detail: 'Candidate discovery based on demonstrated project deliverables',
+        category: 'experience',
+        position: { top: '30%', left: '32%' },
+      },
+      {
+        label: 'Governance',
+        value: 'Explainable AI Criteria',
+        detail: 'Transparent reasoning with mandatory human decision oversight',
+        category: 'skills',
+        position: { top: '55%', left: '72%' },
+      },
+      {
+        label: 'Pipelines',
+        value: 'Pre-Prepared Talent',
+        detail: 'Candidates whose skills have been verified before application',
+        category: 'next_move',
+        position: { top: '80%', left: '42%' },
+      },
+    ],
   },
 ];
 
@@ -112,7 +204,7 @@ export function AudienceEditorialPanels() {
               <TechnicalBadge variant="blue">FOUR WORLDS</TechnicalBadge>
             </div>
             <h2 className="text-display-section text-[var(--color-text-primary)]">
-              Four career worlds. One operating system.
+              Four career worlds. <span className="text-[#2F8FFF]">One operating system.</span>
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
               Career OS bridges the divide between students discovering direction, professionals advancing, educators guiding, and employers hiring responsibly.
@@ -120,7 +212,7 @@ export function AudienceEditorialPanels() {
           </div>
         </ScrollReveal>
 
-        {/* 4 Varied Editorial Visual Sections */}
+        {/* 4 Varied Editorial Visual Sections with Annotated Photography */}
         <div className="space-y-24">
           {AUDIENCES.map((aud, idx) => {
             const isReversed = idx % 2 === 1;
@@ -173,26 +265,16 @@ export function AudienceEditorialPanels() {
                   </ScrollReveal>
                 </div>
 
-                {/* Documentary Photography Column */}
+                {/* Annotated Documentary Photography Column */}
                 <div className={`relative ${isReversed ? 'lg:col-span-6 lg:order-1' : 'lg:col-span-6'}`}>
                   <ScrollReveal delayMs={200}>
-                    <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle aspect-16/10 relative group hover-lift">
-                      <Image
-                        src={aud.image.src}
-                        alt={aud.image.alt}
-                        width={aud.image.width}
-                        height={aud.image.height}
-                        className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.015]"
-                      />
-                      {/* Subtle ambient gradient vignette */}
-                      <div
-                        aria-hidden="true"
-                        className="absolute inset-0 pointer-events-none"
-                        style={{
-                          background: 'linear-gradient(to top, rgba(48,48,48,0.4) 0%, transparent 60%)',
-                        }}
-                      />
-                    </div>
+                    <HumanCareerAnnotation
+                      imageSrc={aud.imageSrc}
+                      imageAlt={aud.imageAlt}
+                      annotations={aud.annotations}
+                      title={aud.badge}
+                      roleBadge={`AUDIENCE ${aud.num}`}
+                    />
                   </ScrollReveal>
                 </div>
               </div>

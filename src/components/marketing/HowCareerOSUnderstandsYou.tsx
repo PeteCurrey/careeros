@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { CareerOSSignatureMark } from '@/components/editorial/CareerOSMarks';
 import { ScrollReveal } from '@/components/brand/ScrollReveal';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
+import { ImageHoverRevealCard } from '@/components/brand/ImageHoverRevealCard';
 import { CheckCircle2, Network, Shield } from 'lucide-react';
 
 interface UnderstandingDimension {
@@ -14,6 +15,8 @@ interface UnderstandingDimension {
   description: string;
   signals: string[];
   graphRole: string;
+  imageSrc: string;
+  imageAlt: string;
 }
 
 const DIMENSIONS: UnderstandingDimension[] = [
@@ -25,6 +28,8 @@ const DIMENSIONS: UnderstandingDimension[] = [
     description: 'Your genuine ambitions, emerging sector interests, leadership horizons, or desire for entrepreneurship.',
     signals: ['Target Horizons', 'Sector Openness', 'Trajectory Pace'],
     graphRole: 'HORIZON MAPPING',
+    imageSrc: '/media/students/student_hero_futures.jpg',
+    imageAlt: 'Young student exploring future horizon pathways',
   },
   {
     id: 'capability',
@@ -34,6 +39,8 @@ const DIMENSIONS: UnderstandingDimension[] = [
     description: 'Demonstrated skills across technical execution, problem solving, team leadership, and domain depth.',
     signals: ['Skill Topology', 'Diagnostic Aptitude', 'Execution Depth'],
     graphRole: 'SKILL SYNTHESIS',
+    imageSrc: '/media/students/audience_students.jpg',
+    imageAlt: 'Engineers and students collaborating on technical prototypes in learning lab',
   },
   {
     id: 'evidence',
@@ -43,6 +50,8 @@ const DIMENSIONS: UnderstandingDimension[] = [
     description: 'Verified qualifications, completed deliverables, code artifacts, trade endorsements, and peer reviews.',
     signals: ['Passport Vault', 'W3C Verifiable Credentials', 'Artifact Reviews'],
     graphRole: 'EVIDENCE PROVENANCE',
+    imageSrc: '/media/product/career_passport_hero.jpg',
+    imageAlt: 'Secure digital evidence vault and verifiable credentials archive',
   },
   {
     id: 'context',
@@ -52,6 +61,8 @@ const DIMENSIONS: UnderstandingDimension[] = [
     description: 'Your life stage, educational path, geographic mobility, caregiver commitments, or financial constraints.',
     signals: ['Life Milestones', 'Education Pathway', 'Mobility Parameters'],
     graphRole: 'CONTEXT PARAMETERS',
+    imageSrc: '/media/schools/audience_schools.jpg',
+    imageAlt: 'High school teacher and students discussing career realities',
   },
   {
     id: 'preferences',
@@ -61,6 +72,8 @@ const DIMENSIONS: UnderstandingDimension[] = [
     description: 'Working style, autonomy vs structure, compensation benchmarks, and values alignment.',
     signals: ['Culture Model', 'Compensation Band', 'Autonomy Index'],
     graphRole: 'CULTURE CALIBRATION',
+    imageSrc: '/media/professionals/audience_professionals.jpg',
+    imageAlt: 'Professional contemplating strategic options in modern workplace',
   },
   {
     id: 'potential',
@@ -70,6 +83,8 @@ const DIMENSIONS: UnderstandingDimension[] = [
     description: 'Latent capabilities, transferable bridges across unrelated industries, and high-probability lateral moves.',
     signals: ['Transferable Bridges', 'Adjacent Skill Match', 'Reinvention Viability'],
     graphRole: 'ADJACENT BRIDGES',
+    imageSrc: '/media/professionals/professional_pathways_collective.jpg',
+    imageAlt: 'Multidisciplinary team in strategic engineering environment',
   },
 ];
 
@@ -97,7 +112,7 @@ export function HowCareerOSUnderstandsYou() {
                 <TechnicalBadge variant="blue">DIMENSIONAL SYNTHESIS</TechnicalBadge>
               </div>
               <h2 className="text-display-section text-[var(--color-text-primary)]">
-                A career is more than a job title.
+                A career is <span className="text-[#2F8FFF]">more than a job title</span>.
               </h2>
               <p className="text-lead text-[var(--color-text-secondary)]">
                 Traditional platforms reduce you to keywords on a static document. Career OS continuously understands the full dimensionality of your working life.
@@ -109,37 +124,45 @@ export function HowCareerOSUnderstandsYou() {
           </div>
         </ScrollReveal>
 
-        {/* 6 Editorial Columns with Thin Rules */}
+        {/* 6 Editorial Interactive Dimension Cards with Image Hover Reveal */}
         <ScrollReveal delayMs={100}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 divide-y md:divide-y-0 md:divide-x divide-[var(--color-border-default)] border-y border-[var(--color-border-default)] bg-[var(--color-surface-raised)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3">
             {DIMENSIONS.map((dim) => {
               const isSelected = activeDim === dim.id;
               return (
-                <button
+                <div
                   key={dim.id}
-                  type="button"
                   onClick={() => setActiveDim(dim.id)}
-                  className={`text-left p-6 sm:p-7 transition-all cursor-pointer flex flex-col justify-between min-h-[220px] relative group ${
-                    isSelected
-                      ? "bg-[var(--color-surface-warm)] border-b-2 border-b-[#2F8FFF]"
-                      : "hover:bg-white/5"
-                  }`}
+                  className="cursor-pointer"
                 >
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className={`text-xs font-mono font-semibold ${isSelected ? "text-[#2F8FFF]" : "text-[var(--color-taupe-400)]"}`}>
-                        {dim.num}
-                      </span>
-                      {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-[#2F8FFF] shadow-[0_0_6px_rgba(47,143,255,0.6)]" />}
+                  <ImageHoverRevealCard
+                    imageSrc={dim.imageSrc}
+                    imageAlt={dim.imageAlt}
+                    pattern="background"
+                    active={isSelected}
+                    className="h-full min-h-[220px] p-5 flex flex-col justify-between"
+                  >
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className={`text-xs font-mono font-semibold ${isSelected ? 'text-[#2F8FFF]' : 'text-[var(--color-taupe-400)]'}`}>
+                          {dim.num}
+                        </span>
+                        {isSelected && (
+                          <span className="w-2 h-2 rounded-full bg-[#2F8FFF] shadow-[0_0_8px_rgba(47,143,255,0.8)]" />
+                        )}
+                      </div>
+                      <h3 className="text-base font-semibold text-[var(--color-text-primary)]">
+                        {dim.name}
+                      </h3>
                     </div>
-                    <h3 className="text-lg font-medium text-[var(--color-text-primary)]">
-                      {dim.name}
-                    </h3>
-                  </div>
-                  <p className="text-xs text-[var(--color-text-secondary)] font-normal line-clamp-3 mt-4 leading-relaxed">
-                    {dim.question}
-                  </p>
-                </button>
+
+                    <div className="pt-4 border-t border-[var(--color-border-subtle)]">
+                      <p className="text-[11px] text-[var(--color-text-secondary)] line-clamp-2 leading-relaxed">
+                        {dim.question}
+                      </p>
+                    </div>
+                  </ImageHoverRevealCard>
+                </div>
               );
             })}
           </div>
