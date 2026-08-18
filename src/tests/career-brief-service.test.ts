@@ -100,7 +100,7 @@ describe("CareerBriefService Intelligence & Prioritization Engine", () => {
     mentorId: "marcus-thorne",
     mentorName: "Marcus Thorne",
     mentorDomain: "Technology & Systems Architecture",
-    portraitSrc: "/media/mentors/marcus_thorne.jpg",
+    portraitSrc: "/media/mentors/mentor_marcus.jpg",
     assignmentReason: "Aligned with systems architecture and technology progression.",
     domainMatches: ["Technology & Systems Architecture"],
     confidence: 0.95,

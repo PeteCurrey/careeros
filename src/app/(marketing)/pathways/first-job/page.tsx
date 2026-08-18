@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/Button";
 import { CareerGradientText } from "@/components/brand/CareerGradientText";
 import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
 import { Compass, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
+import { CareerPathwayConnector } from "@/components/brand/CareerPathwayConnector";
+import { CareerAtmosphere } from "@/components/brand/CareerAtmosphere";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -34,8 +36,13 @@ export default function FirstJobPathwayPage() {
 
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
-      <section className="relative min-h-[70vh] flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20">
-        <div className="container-editorial space-y-6 max-w-4xl">
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20 lg:py-0">
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+          <CareerAtmosphere className="absolute inset-0" intensity={0.4} animate={false} />
+        </div>
+        <CareerPathwayConnector variant="branching" className="opacity-15" />
+
+        <div className="container-editorial space-y-6 max-w-4xl relative z-10">
           <div className="flex items-center gap-3">
             <span className="section-label flex items-center gap-2">
               <span className="accent-blue-dot accent-blue-dot-pulse" />

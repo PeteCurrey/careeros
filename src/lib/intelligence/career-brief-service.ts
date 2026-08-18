@@ -89,7 +89,7 @@ export class CareerBriefService {
     const mentorId = mentorAssignment?.mentorId || "marcus-thorne";
     const mentorName = mentorAssignment?.mentorName || "Marcus Thorne";
     const mentorDomain = mentorAssignment?.mentorDomain || "Technology & Systems Architecture";
-    const portraitSrc = mentorAssignment?.portraitSrc || "/media/mentors/marcus_thorne.jpg";
+    const portraitSrc = mentorAssignment?.portraitSrc || "/media/mentors/mentor_marcus.jpg";
 
     // 4. Determine Contextual Statement based on actual user data
     let contextStatement = "I've structured your initial Career OS roadmap.";

@@ -32,7 +32,7 @@ interface AppHeaderProps {
 export function AppHeader({
   userDisplayName = 'Pete Currey',
   mentorName = 'Marcus Thorne',
-  mentorPortraitSrc = '/media/mentors/marcus_thorne.jpg',
+  mentorPortraitSrc = '/media/mentors/mentor_marcus.jpg',
   mentorDomain = 'Technology & Systems Architecture',
 }: AppHeaderProps) {
   const pathname = usePathname();

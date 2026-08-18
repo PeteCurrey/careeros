@@ -45,7 +45,7 @@ export default function ApprenticeshipsPathwayPage() {
 
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
-      <section className="relative min-h-[70vh] flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20">
+      <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20 lg:py-0">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
           <CareerAtmosphere className="absolute inset-0" intensity={0.4} animate={false} />
         </div>
