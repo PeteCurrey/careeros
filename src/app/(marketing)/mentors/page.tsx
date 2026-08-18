@@ -64,18 +64,18 @@ export default function MentorsHubPage() {
             aria-hidden="true"
             className="absolute inset-0"
             style={{
-              background: ,
+              background: 'linear-gradient(to right, #393939 0%, rgba(57, 57, 57, 0.96) 38%, rgba(57, 57, 57, 0.88) 55%, rgba(57, 57, 57, 0.42) 78%, rgba(57, 57, 57, 0.18) 100%)',
             }}
           />
           <div
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-28 pointer-events-none"
-            style={{ background:  }}
+            style={{ background: 'linear-gradient(to bottom, #393939 0%, transparent 100%)' }}
           />
           <div
             aria-hidden="true"
             className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
-            style={{ background:  }}
+            style={{ background: 'linear-gradient(to top, #393939 0%, transparent 100%)' }}
           />
         </div>
 
