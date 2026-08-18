@@ -260,7 +260,71 @@
 | **PROHIBITED: Paid Placement in AI Career Mentor Recommendations** | `/schools/partnerships` | `PROHIBITED_UNSUPPORTED` | Allowing partners to buy recommendation priority or biased career matches. | AI Ethics | 2026-08-18 | Strictly prohibited in copy, UI components, and backend models. |
 | **PROHIBITED: Fake Partner Logos, Endorsements, or Customer Counts** | `/schools/partnerships` | `PROHIBITED_UNSUPPORTED` | Displaying unauthorized corporate logos or fabricated partner numbers. | Marketing / Legal | 2026-08-18 | All examples explicitly designated as illustrative scenarios. |
 | **PROHIBITED: Universal Background Check / Police Dispatching Claims** | `/schools/partnerships` | `PROHIBITED_UNSUPPORTED` | Claiming universal police background checks for corporate staff or emergency dispatching. | Trust & Safety | 2026-08-18 | Prohibited throughout page. |
+---
 
+## Route: `/trust` (Trust Center Hub)
 
+| Claim | Route | Status | Evidence / Grounding | Owner | Last Verified | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Core Trust Thesis ("AI should open doors. Not decide who gets through them.")** | `/trust` | `VERIFIED_CURRENT` | Core corporate positioning and ethical foundation governing all Career OS AI systems. | Trust & Safety | 2026-08-18 | Standardized across marketing and institutional governance. |
+| **Seven-Pillar Trust Architecture** | `/trust` | `VERIFIED_CURRENT` | Seven operational principles: Human Agency, Transparency, Fairness, Privacy, Safety, Oversight, Accountability. | Architecture / Trust | 2026-08-18 | Architecturally enforced across all product layers. |
+| **Hero Trust Operating Model Visual** | `/trust` | `ILLUSTRATIVE` | Visual representation of the seven trust pillars centered around the sovereign individual user. | Product Design | 2026-08-18 | Proves user decision primacy and system boundaries. |
+| **Feature-Level Capability Governance Matrix** | `/trust#capability-governance-matrix` | `VERIFIED_CURRENT` | Granular matrix mapping AI role, human review, impact tier, and safeguards across 9 core capabilities. | AI Governance | 2026-08-18 | Filterable by impact tier (Low, Moderate, Heightened). |
+| **7-Stage Trust Journey Model** | `/trust` | `DESIGNED_DIRECTION` | Continuous lifecycle: Govern → Understand → Test → Deploy → Monitor → Escalate → Improve. | Trust & Safety | 2026-08-18 | Informs continuous benchmarking and risk management. |
+| **Comprehensive Trust Directory** | `/trust` | `VERIFIED_CURRENT` | Hub directory connecting 4 flagship AI pillars with existing privacy, security, safeguarding, and standards pages. | Product / Legal | 2026-08-18 | Institutional procurement reference. |
+| **PROHIBITED: Claims of "100% Bias-Free", "Completely Safe", or "Zero-Risk AI"** | `/trust` | `PROHIBITED_UNSUPPORTED` | Unsubstantiated absolute safety or perfection claims. | Legal / AI Ethics | 2026-08-18 | Replaced with "Designed for responsible use. Tested for foreseeable risks." |
+| **PROHIBITED: Fake Independent Certification or Fabricated Trust Scores** | `/trust` | `PROHIBITED_UNSUPPORTED` | Invented compliance badges, fake audit scores, or manufactured precision metrics. | Legal / Compliance | 2026-08-18 | Prohibited across all trust surfaces. |
 
+---
+
+## Route: `/trust/responsible-ai`
+
+| Claim | Route | Status | Evidence / Grounding | Owner | Last Verified | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **8 Responsible AI Principles** | `/trust/responsible-ai` | `VERIFIED_CURRENT` | Operational principles: Agency, Purpose, Proportionality, Safety, Fairness, Privacy, Transparency, Accountability. | Trust & Safety | 2026-08-18 | Backed by explicit engineering and prompt boundaries. |
+| **Explicit Non-Negotiable Boundaries ("What Career OS Will Not Build")** | `/trust/responsible-ai` | `VERIFIED_CURRENT` | Explicit refusal to build autonomous hiring tools, biometric profiling, minor cold-sourcing, or pay-to-recommend bias. | AI Ethics / Legal | 2026-08-18 | Published as categorical corporate boundaries. |
+| **3-Tier Proportional Risk Governance Framework** | `/trust/responsible-ai` | `DESIGNED_DIRECTION` | Low Impact (formative), Moderate Impact (pathway advisory), Heightened Impact (employment matching). | AI Governance | 2026-08-18 | Calibrates controls to potential consequential harm. |
+| **12-Stage AI Governance Lifecycle** | `/trust/responsible-ai` | `DESIGNED_DIRECTION` | Step-by-step operating lifecycle from purpose definition to iterative review. | Engineering / Trust | 2026-08-18 | Structured after NIST AI RMF voluntary risk mapping. |
+| **Official Standards Reference Library** | `/trust/responsible-ai#regulatory-references` | `VERIFIED_CURRENT` | References to NIST AI RMF, EEOC Title VII, FTC Guidance, Ed Dept AI Policy, and NYC Local Law 144 with official external links. | Legal / Policy | 2026-08-18 | Explicitly disclaims formal certification where voluntary frameworks apply. |
+| **PROHIBITED: Formal "NIST Certified" or Government Endorsement Claims** | `/trust/responsible-ai` | `PROHIBITED_UNSUPPORTED` | Claiming government certification under voluntary guidance frameworks like NIST AI RMF. | Legal | 2026-08-18 | NIST AI RMF is voluntary; no certification exists. |
+
+---
+
+## Route: `/trust/ai-transparency`
+
+| Claim | Route | Status | Evidence / Grounding | Owner | Last Verified | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Mandatory AI Disclosure Labels (6 Badges)** | `/trust/ai-transparency` | `VERIFIED_CURRENT` | Explicit labels: AI-Assisted, AI-Drafted, AI-Matched, AI-Synthesised, Human Curated, Verified Source. | Product Design | 2026-08-18 | Surfaced across all user and employer interfaces. |
+| **Public Searchable AI Use-Case Register** | `/trust/ai-transparency#use-case-register` | `VERIFIED_CURRENT` | Granular register covering 7 active AI use cases with purpose, role, inputs, limitations, and risk tiers. | AI Governance | 2026-08-18 | Searchable and filterable by impact tier. |
+| **Enterprise Foundation Model Disclosures** | `/trust/ai-transparency#model-disclosures` | `VERIFIED_CURRENT` | Disclosures for Google Vertex AI (Gemini), Anthropic (Claude), and OpenAI with enterprise zero-training commitments. | Engineering / AI | 2026-08-18 | Explains data residency without exposing API keys or private system prompts. |
+| **7-Step Recommendation Flow ("Recommendation ≠ Decision")** | `/trust/ai-transparency#recommendation-flow` | `ILLUSTRATIVE` | Flow demonstrating context ingestion, taxonomy mapping, safety filtering, and human decision primacy. | Product / Trust | 2026-08-18 | Enforces principle that recommendations are non-binding. |
+| **Documented Material Limitations ("What AI Cannot Know")** | `/trust/ai-transparency` | `VERIFIED_CURRENT` | Candid disclosures of latency, unverified user data, lack of live vacancies, and probabilistic nature. | Trust & Safety | 2026-08-18 | Published candidly to prevent over-reliance. |
+| **Public Versioned AI Change Log** | `/trust/ai-transparency#change-log` | `VERIFIED_CURRENT` | Public register tracking capability updates, guardrail revisions, reasons, and governance reviewers. | Trust & Safety | 2026-08-18 | Auditable ledger for institutional procurement. |
+
+---
+
+## Route: `/trust/human-oversight`
+
+| Claim | Route | Status | Evidence / Grounding | Owner | Last Verified | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Four Pillars of Meaningful Human Oversight** | `/trust/human-oversight` | `VERIFIED_CURRENT` | Genuine Authority, Adequate Information, Sufficient Review Time, and Practical Override Ability. | AI Ethics / Legal | 2026-08-18 | Rejects illusory or notional "human in the loop" rubber-stamping. |
+| **Distributed Stakeholder Oversight Roles** | `/trust/human-oversight#stakeholder-roles` | `VERIFIED_CURRENT` | Specific oversight responsibilities and boundaries for Users, Schools, Employers, and Trust & Safety. | Product / Trust | 2026-08-18 | Segregates pastoral, corporate, and individual authority. |
+| **Decision Boundaries ("Where AI Stops")** | `/trust/human-oversight#decision-boundaries` | `VERIFIED_CURRENT` | Delineates AI Assistance vs AI Recommendation vs AI-Assisted Higher-Impact vs Consequential Human Decision. | Architecture / Legal | 2026-08-18 | Hard architectural rule: AI never hires, fires, grades, or admits. |
+| **5-Stage Incident Escalation Framework** | `/trust/human-oversight#escalation-framework` | `DESIGNED_DIRECTION` | Incident response: Flagged → Containment → Human Investigation → Action/Redress → System Hardening. | Trust & Safety | 2026-08-18 | Rapid containment for safety or bias triggers. |
+| **School-Age Safeguarding Rules** | `/trust/human-oversight#youth-safeguarding` | `VERIFIED_CURRENT` | Absolute blocks on minor cold-sourcing, default-private minor profiles, non-therapeutic guardrails, and DSL channels. | Safeguarding / Legal | 2026-08-18 | Non-configurable system rules. |
+| **Four Practical User Recourse Channels** | `/trust/human-oversight#recourse` | `VERIFIED_CURRENT` | Dispute recommendation, report AI output, request data erasure (DSR), and school safeguarding escalation. | Legal / Support | 2026-08-18 | Accessible directly without platform friction. |
+
+---
+
+## Route: `/trust/fairness-and-bias`
+
+| Claim | Route | Status | Evidence / Grounding | Owner | Last Verified | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Honest Framing of Algorithmic Bias** | `/trust/fairness-and-bias` | `VERIFIED_CURRENT` | Explicit rejection of "bias-free" or "100% fair" marketing claims; commitment to continuous testing. | AI Ethics | 2026-08-18 | Sets realistic, defensible standard for institutional buyers. |
+| **Systemic Bias Architecture Analysis (6 Factors)** | `/trust/fairness-and-bias` | `VERIFIED_CURRENT` | Detailed breakdown of data gaps, historical hiring patterns, proxy variables, prestige bias, and language norms. | AI Research | 2026-08-18 | Demonstrates deep domain understanding. |
+| **7-Stage Fairness Testing Protocol** | `/trust/fairness-and-bias#fairness-testing` | `DESIGNED_DIRECTION` | Define Dimensions → Assemble Datasets → Baseline Analysis → Proxy Testing → Mitigations → Validate → Monitor. | Engineering / AI | 2026-08-18 | Applied to all Moderate and Heightened risk systems. |
+| **Jurisdiction-Aware Protected Characteristics Table** | `/trust/fairness-and-bias` | `VERIFIED_CURRENT` | Comprehensive alignment table mapping UK Equality Act 2010 and US Federal protections (EEOC, ADA, ADEA, Title VII). | Legal / Compliance | 2026-08-18 | Tracks evolving case law across jurisdictions. |
+| **Capability-First Matching for Non-Traditional Backgrounds** | `/trust/fairness-and-bias` | `DESIGNED_DIRECTION` | Evaluates demonstrated skills directly, decoupling capability from degree prestige, career breaks, or military rank. | Product / Matching | 2026-08-18 | 4 worked scenarios (prison leaver, veteran, self-taught, career changer). |
+| **Employment AI Regulatory Readiness Matrix** | `/trust/fairness-and-bias` | `VERIFIED_CURRENT` | Comparative analysis of US EEOC, NYC Local Law 144, UK ICO, and EU AI Act high-risk requirements. | Legal / Policy | 2026-08-18 | Positions Career OS ahead of global regulatory enforcement. |
+| **Direct Human Bias Reporting Mechanism** | `/trust/fairness-and-bias#bias-reporting` | `VERIFIED_CURRENT` | Dedicated reporting channel (`trust@career-os.com`) with 5-day human review commitment and anonymous support. | Trust & Safety | 2026-08-18 | Reports directly feed continuous testing cycle. |
 

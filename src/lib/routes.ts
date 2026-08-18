@@ -178,8 +178,14 @@ export const ROUTES = {
 
   // Admin Control Centre
   ADMIN: '/admin',
+  ADMIN_LOGIN: '/admin/login',
+  ADMIN_SECURITY_SETUP: '/admin/security/setup',
+  ADMIN_SECURITY_VERIFY: '/admin/security/verify',
+  ADMIN_ACCOUNT_SECURITY: '/admin/account/security',
   ADMIN_ACTION_CENTRE: '/admin/action-centre',
   ADMIN_FORBIDDEN: '/admin/forbidden',
+  ADMIN_SYSTEM_ADMINS: '/admin/system/admins',
+  ADMIN_SYSTEM_SECURITY: '/admin/system/security',
 
   // Content
   ADMIN_CONTENT_PAGES: '/admin/content/pages',
