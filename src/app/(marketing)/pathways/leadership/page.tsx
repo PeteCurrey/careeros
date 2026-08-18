@@ -1,42 +1,104 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
-
-import type { Metadata } from 'next';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { Button } from "@/components/ui/Button";
+import { CareerGradientText } from "@/components/brand/CareerGradientText";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import { Users, ShieldCheck, Building2, TrendingUp, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Leadership — Pathways | Career OS",
-  description: "Career OS Pathways leadership. Verified evidence, persistent career intelligence, and absolute privacy.",
+  title: "Executive & Organisational Leadership Pathways | Career OS",
+  description: "Transition from individual contributor to team manager, director, vice president, and C-suite executive with verified leadership governance artifacts.",
   alternates: {
     canonical: "https://career-os.com/pathways/leadership",
   },
 };
 
 export default function LeadershipPathwayPage() {
-  return (
-    <EditorialSubpage
-      badge="PATHWAYS &bull; EXECUTIVE & ORGANISATIONAL LEADERSHIP"
-      title="Leadership & Management Pathways"
-      description="Transition from individual contributor to engineering manager, director, vice president, and C-suite executive with structured leadership evidence."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Pathways', href: ROUTES.PATHWAYS },
-        { label: 'Leadership', href: ROUTES.PATHWAYS_LEADERSHIP },
-      ]}
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Cultivating Executive Judgment and Organizational Impact</h2>
-        <p>
-          Leadership requires a fundamental shift from direct execution to organizational strategy, talent development, and capital allocation. Career OS tracks leadership milestones, governance credentials, and cross-functional outcomes.
-        </p>
+  const leadershipTiers = [
+    {
+      tier: "Individual Contributor to Team Lead",
+      desc: "Transition from direct execution to team mentorship, sprint velocity optimization, and project scoping deliverables.",
+    },
+    {
+      tier: "Manager to Functional Director",
+      desc: "Lead multiple cross-functional teams, allocate annual operational budgets, and build scalable talent hiring and retention systems.",
+    },
+    {
+      tier: "Vice President to C-Suite Executive",
+      desc: "Set multi-year enterprise strategy, manage board and investor communications, and oversee enterprise capital allocation.",
+    },
+  ];
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Key Leadership Competencies</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Strategic Capital & Budgeting:</strong> Multi-team resource allocation and operational forecasting.</li>
-          <li><strong>Organizational Culture & Governance:</strong> Demonstrated talent retention, inclusive hiring, and compliance frameworks.</li>
-          <li><strong>Board & Investor Communication:</strong> Executive synthesis and business risk management.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+  return (
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <section className="relative min-h-[70vh] flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20">
+        <div className="container-editorial space-y-6 max-w-4xl">
+          <div className="flex items-center gap-3">
+            <span className="section-label flex items-center gap-2">
+              <span className="accent-blue-dot accent-blue-dot-pulse" />
+              Executive & Management Direction
+            </span>
+            <TechnicalBadge variant="lavender">STRATEGIC GOVERNANCE</TechnicalBadge>
+          </div>
+
+          <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
+            Cultivating executive judgment and{" "}
+            <CareerGradientText variant="blue">
+              organizational impact.
+            </CareerGradientText>
+          </h1>
+
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+            Leadership requires a fundamental shift from direct execution to organizational stewardship, strategic capital allocation, and talent development. Career OS tracks leadership milestones, governance credentials, and cross-functional business outcomes.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+              Explore Leadership Pathways Free
+            </Button>
+            <Button href={ROUTES.PATHWAYS_CAREER_PROGRESSION} variant="secondary" size="lg">
+              View Progression Rubrics
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        <div className="container-editorial space-y-12 max-w-5xl">
+          <div className="space-y-4">
+            <span className="section-label text-[#CDBBD2]">Leadership Continuum</span>
+            <h2 className="text-display-section font-normal text-white">Three stages of executive escalation</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {leadershipTiers.map((t) => (
+              <div key={t.tier} className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
+                <h3 className="text-base font-bold text-white">{t.tier}</h3>
+                <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-editorial bg-[var(--background-dark-deep)] text-center">
+        <div className="container-editorial max-w-4xl space-y-6 mx-auto">
+          <h2 className="text-display-section font-normal text-white">
+            Build your executive portfolio.
+          </h2>
+          <p className="text-lead text-[var(--color-text-secondary)] max-w-xl mx-auto">
+            Log governance achievements, board memos, and organizational turnarounds into your Career Passport.
+          </p>
+          <div className="pt-2">
+            <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+              Start Free on Career OS
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

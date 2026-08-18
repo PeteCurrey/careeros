@@ -1,42 +1,104 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
-
-import type { Metadata } from 'next';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { Button } from "@/components/ui/Button";
+import { CareerGradientText } from "@/components/brand/CareerGradientText";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import { GitBranch, ShieldCheck, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Career Change — Pathways | Career OS",
-  description: "Career OS Pathways career Change. Verified evidence, persistent career intelligence, and absolute privacy.",
+  title: "Career Change & Lateral Transition Pathways | Career OS",
+  description: "Pivot into a new industry without starting over. Map transferable capability vectors, identify adjacent sectors, and build targeted bridge evidence.",
   alternates: {
     canonical: "https://career-os.com/pathways/career-change",
   },
 };
 
 export default function CareerChangePathwayPage() {
-  return (
-    <EditorialSubpage
-      badge="PATHWAYS &bull; LATERAL PIVOTS & REINVENTION"
-      title="Career Change & Transition Pathways"
-      description="Pivot into a new sector without starting from scratch. Map transferable competencies, identify adjacent industries, and build targeted transitional evidence."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Pathways', href: ROUTES.PATHWAYS },
-        { label: 'Career Change', href: ROUTES.PATHWAYS_CAREER_CHANGE },
-      ]}
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Non-Linear Reinvention Across Industries</h2>
-        <p>
-          Changing careers does not mean discarding your past accomplishments. The Career Graph analyzes your existing skills taxonomy and maps direct capability bridges into emerging or adjacent fields.
-        </p>
+  const transitionPillars = [
+    {
+      title: "Transferable Capability Vectoring",
+      desc: "The Career Graph maps high-overlap competencies between your past domain and target industry, ensuring you never start from zero.",
+    },
+    {
+      title: "60–90 Day Bridge Evidence Sprints",
+      desc: "Targeted project sprints designed to produce 2–3 demonstrable deliverables proving domain-specific capability in your new sector.",
+    },
+    {
+      title: "Default-Private Exploration Mode",
+      desc: "Explore new industries, assess salary expectations, and engage with domain mentors in total privacy without alerting current employers.",
+    },
+  ];
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Transition Architecture</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Transferable Skill Mapping:</strong> Identifying high-overlap competencies between your past domain and target industry.</li>
-          <li><strong>Bridge Evidence Sprints:</strong> Focused 60–90 day projects designed to prove domain-specific capability.</li>
-          <li><strong>Private Exploration Mode:</strong> Evaluating opportunities without alerting your current employer.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+  return (
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <section className="relative min-h-[70vh] flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20">
+        <div className="container-editorial space-y-6 max-w-4xl">
+          <div className="flex items-center gap-3">
+            <span className="section-label flex items-center gap-2">
+              <span className="accent-blue-dot accent-blue-dot-pulse" />
+              Lateral Pivots & Reinvention
+            </span>
+            <TechnicalBadge variant="blue">ZERO RESTART PENALTY</TechnicalBadge>
+          </div>
+
+          <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
+            Career change without{" "}
+            <CareerGradientText variant="blue">
+              starting from scratch.
+            </CareerGradientText>
+          </h1>
+
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+            Changing careers does not mean discarding past accomplishments. Career OS analyzes your existing skills taxonomy and maps direct capability bridges into adjacent high-growth industries, preserving the equity you have built.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+              Map Your Transferable Skills Free
+            </Button>
+            <Button href={ROUTES.PATHWAYS} variant="secondary" size="lg">
+              Explore All Pathways
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        <div className="container-editorial space-y-12 max-w-5xl">
+          <div className="space-y-4">
+            <span className="section-label text-[#2F8FFF]">Reinvention Strategy</span>
+            <h2 className="text-display-section font-normal text-white">How Career OS bridges you into new sectors</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {transitionPillars.map((p) => (
+              <div key={p.title} className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
+                <h3 className="text-base font-bold text-white">{p.title}</h3>
+                <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-editorial bg-[var(--background-dark-deep)] text-center">
+        <div className="container-editorial max-w-4xl space-y-6 mx-auto">
+          <h2 className="text-display-section font-normal text-white">
+            Discover adjacent opportunities.
+          </h2>
+          <p className="text-lead text-[var(--color-text-secondary)] max-w-xl mx-auto">
+            Input your background into the Career Twin and discover where your skills command the highest premium.
+          </p>
+          <div className="pt-2">
+            <Button href={ROUTES.SIGNUP} variant="primary" size="lg">
+              Start Free on Career OS
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

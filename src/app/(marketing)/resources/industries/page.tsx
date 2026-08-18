@@ -1,43 +1,81 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
-
-import type { Metadata } from 'next';
+import React from "react";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { Button } from "@/components/ui/Button";
+import { CareerGradientText } from "@/components/brand/CareerGradientText";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import { TrendingUp, Network, Globe2, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industries — Resources | Career OS",
-  description: "Career OS Resources industries. Verified evidence, persistent career intelligence, and absolute privacy.",
+  title: "Industry Outlook & Labour Market Intelligence | Career OS",
+  description: "Sector-by-sector labour market research, automation risk index, emerging skill demands, and regional wage benchmarks across the United States.",
   alternates: {
     canonical: "https://career-os.com/resources/industries",
   },
 };
 
 export default function ResourcesIndustriesPage() {
-  return (
-    <EditorialSubpage
-      badge="RESOURCES &bull; SECTORS & MARKETS"
-      title="Industry Intelligence & Market Landscapes"
-      description="Understand macro labor trends, high-growth sectors, emerging technological disruption, and global hiring demand across global markets."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Resources', href: ROUTES.RESOURCES },
-        { label: 'Industries', href: ROUTES.RESOURCES_INDUSTRIES },
-      ]}
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Macro Industry Topology</h2>
-        <p>
-          Industries evolve continuously. Career OS tracks shifts in demand across key global sectors, providing early intelligence on where technological capability is creating high-growth opportunities.
-        </p>
+  const industries = [
+    {
+      title: "Clean Energy & Grid Modernization",
+      signal: "HIGH DEMAND GROWTH",
+      desc: "Surging demand for master electricians, solar/wind technicians, substation engineers, and battery storage specialists driven by federal infrastructure investment.",
+    },
+    {
+      title: "Healthcare Informatics & Clinical Operations",
+      signal: "CRITICAL CAPACITY",
+      desc: "Expanding need for clinicians with structured data literacy who can implement AI workflow tools and streamline patient records without increasing burnout.",
+    },
+    {
+      title: "Applied AI Platform & Data Infrastructure",
+      signal: "EVOLVING TAXONOMY",
+      desc: "Transition from pure model development to reliable production deployment, evaluation auditing, privacy guardrails, and latency optimization.",
+    },
+    {
+      title: "Advanced Precision Manufacturing",
+      signal: "RESILIENT INDUSTRIAL",
+      desc: "Domestic supply chain reshoring driving multi-year hiring across precision CNC machinists, robotics maintenance technicians, and quality engineers.",
+    },
+  ];
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Global Sectors Tracked</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Clean Energy & Climate Technology:</strong> Grid storage, solar/wind mechanics, environmental compliance.</li>
-          <li><strong>Artificial Intelligence & Applied Compute:</strong> ML engineering, data infrastructure, algorithmic safety.</li>
-          <li><strong>Healthcare Delivery & MedTech:</strong> Telehealth, surgical robotics, medical devices.</li>
-          <li><strong>Aerospace & Defense Engineering:</strong> Avionics, satellite systems, defense manufacturing.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+  return (
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <section className="relative pt-16 pb-20 border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
+        <div className="container-editorial space-y-6 max-w-4xl">
+          <div className="flex items-center gap-3">
+            <TrendingUp className="w-5 h-5 text-[#2F8FFF]" />
+            <span className="section-label text-white">Macro Labour Intelligence</span>
+          </div>
+
+          <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
+            Sector trajectories &{" "}
+            <CareerGradientText variant="blue">
+              labour market demand.
+            </CareerGradientText>
+          </h1>
+
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
+            Real-time intelligence on macro industry shifts, technology adoption cycles, regional demand variations, and long-term automation risk.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        <div className="container-editorial space-y-12 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {industries.map((ind) => (
+              <div key={ind.title} className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-3">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold text-white">{ind.title}</h3>
+                  <TechnicalBadge variant="champagne">{ind.signal}</TechnicalBadge>
+                </div>
+                <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

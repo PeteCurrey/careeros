@@ -3,6 +3,20 @@
  * All application routes defined here — never hardcoded in components.
  */
 export const ROUTES = {
+  // Mentors Council Estate
+  MENTORS: '/mentors',
+  MENTORS_MARCUS: '/mentors/marcus-thorne',
+  MENTORS_AMARA: '/mentors/amara-osei',
+  MENTORS_CALLUM: '/mentors/callum-reid',
+  MENTORS_PRIYA: '/mentors/priya-chakraborty',
+  MENTORS_ISABELLE: '/mentors/isabelle-fontaine',
+  MENTORS_JORDAN: '/mentors/jordan-park',
+  MENTORS_DARNELL: '/mentors/darnell-hayes',
+  MENTORS_ROSA: '/mentors/rosa-mbeki',
+
+  // Company Hub
+  COMPANY: '/company',
+
   // Root
   HOME: '/',
 

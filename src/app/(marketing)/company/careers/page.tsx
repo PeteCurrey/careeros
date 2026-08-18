@@ -1,12 +1,15 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
-
-import type { Metadata } from 'next';
+import React from "react";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { Button } from "@/components/ui/Button";
+import { CareerGradientText } from "@/components/brand/CareerGradientText";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import { Briefcase, ShieldCheck, Heart, Sparkles, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Careers — Company | Career OS",
-  description: "Career OS Company careers. Verified evidence, persistent career intelligence, and absolute privacy.",
+  title: "Careers at Career OS | Join Our Team",
+  description: "Join the team building lifelong career infrastructure. Transparent hiring, remote-first engineering, and mission-driven colleagues.",
   alternates: {
     canonical: "https://career-os.com/company/careers",
   },
@@ -14,39 +17,77 @@ export const metadata: Metadata = {
 
 export default function CompanyCareersPage() {
   return (
-    <EditorialSubpage
-      badge="COMPANY &bull; JOIN US"
-      title="Careers at Career OS"
-      description="We are building foundational career infrastructure. Join a team committed to equity, transparency, and building technology that genuinely serves human potential."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'About', href: ROUTES.COMPANY_ABOUT },
-        { label: 'Careers', href: ROUTES.COMPANY_CAREERS },
-      ]}
-      ctaText="View Open Roles"
-      ctaHref={ROUTES.COMPANY_CONTACT}
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Building Meaningful Infrastructure</h2>
-        <p>
-          Career OS is in its founding phase. We are looking for unusually thoughtful engineers, product designers, and domain experts who believe that technology can genuinely improve how people navigate their working lives.
-        </p>
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <section className="relative pt-16 pb-20 border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
+        <div className="container-editorial space-y-6 max-w-4xl">
+          <div className="flex items-center gap-3">
+            <Briefcase className="w-5 h-5 text-[#2F8FFF]" />
+            <span className="section-label text-white">Careers at Career OS</span>
+          </div>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">What We Value in Our Team</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Systems Thinking:</strong> Comfort with complexity and an ability to design for long-term user trust.</li>
-          <li><strong>Ethical Judgment:</strong> Genuine care for the societal implications of technology in hiring and career development.</li>
-          <li><strong>Craftsmanship:</strong> A high bar for product quality, clarity of communication, and rigorous engineering.</li>
-          <li><strong>Intellectual Honesty:</strong> Willingness to challenge assumptions and admit uncertainty.</li>
-        </ul>
+          <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
+            Building the operating system for{" "}
+            <CareerGradientText variant="blue">
+              human potential.
+            </CareerGradientText>
+          </h1>
 
-        <div className="p-6 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] mt-6">
-          <p className="text-sm font-semibold text-[var(--color-text-primary)]">Currently Recruiting</p>
-          <p className="text-xs text-[var(--color-text-secondary)] mt-1">
-            We are building our founding team across engineering, design, and partnerships. All roles are fully remote-friendly. Reach out directly with a brief introduction and examples of your work.
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
+            We practice what we preach: evidence-grounded hiring, asynchronous autonomy, high craftsmanship, and deep respect for candidate sovereignty.
           </p>
         </div>
-      </div>
-    </EditorialSubpage>
+      </section>
+
+      <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        <div className="container-editorial space-y-12 max-w-4xl">
+          {/* Current Hiring Posture */}
+          <div className="p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-base font-bold text-white">Current Operational Hiring Status</h2>
+              <TechnicalBadge variant="blue">PRE-LAUNCH TALENT NETWORK</TechnicalBadge>
+            </div>
+            <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
+              We are currently focused on core platform hardening with our foundational engineering and compliance team. While there are no open public job listings at this exact moment, we maintain an active talent pool for senior systems engineers, AI evaluation specialists, and institutional education partnership directors.
+            </p>
+            <div className="pt-2">
+              <a
+                href="mailto:careers@career-os.com"
+                className="text-xs font-semibold text-[#6BB8FF] hover:underline inline-flex items-center gap-1"
+              >
+                <span>Submit your Career Passport or introduction to careers@career-os.com</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Engineering & Cultural Values */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] space-y-2">
+              <Sparkles className="w-5 h-5 text-[#2F8FFF]" />
+              <h3 className="text-sm font-bold text-white">High Agency & Craft</h3>
+              <p className="text-xs text-[var(--color-text-secondary)]">
+                We value clean architecture, typed precision, and thoughtful editorial design over frantic feature churn.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] space-y-2">
+              <ShieldCheck className="w-5 h-5 text-[#34D399]" />
+              <h3 className="text-sm font-bold text-white">Ethics by Default</h3>
+              <p className="text-xs text-[var(--color-text-secondary)]">
+                Zero data broker sales, no candidate tracking ads, and strict student safeguarding from day one.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] space-y-2">
+              <Heart className="w-5 h-5 text-[#CDBBD2]" />
+              <h3 className="text-sm font-bold text-white">Asynchronous First</h3>
+              <p className="text-xs text-[var(--color-text-secondary)]">
+                Deep work over constant meetings. Thoughtful written documentation over reactive chatter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

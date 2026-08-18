@@ -1,57 +1,120 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
-import Link from 'next/link';
-
-import type { Metadata } from 'next';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { Button } from "@/components/ui/Button";
+import { CareerGradientText } from "@/components/brand/CareerGradientText";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import { Building2, Users, ShieldCheck, Search, Briefcase, ArrowRight, CheckCircle2 } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Employers | Career OS",
-  description: "Career OS Employers. Verified evidence, persistent career intelligence, and absolute privacy.",
+  title: "Employer Institutional Hub | Career OS",
+  description: "Evidence-based talent discovery, early career pipelines, and ethical candidate matching without keyword filters or algorithmic bias.",
   alternates: {
     canonical: "https://career-os.com/employers",
   },
 };
 
 export default function EmployersHubPage() {
-  return (
-    <EditorialSubpage
-      badge="INSTITUTIONS &bull; EMPLOYERS"
-      title="Employers & Talent Teams Hub"
-      description="Discover high-aptitude talent through verified project evidence, demonstrable competence, and explainable Employer Agent decision support."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Employers', href: ROUTES.EMPLOYERS },
-      ]}
-      ctaText="Become a Launch Employer"
-      ctaHref={ROUTES.COMPANY_CONTACT}
-      fullScreenHero={true}
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Hiring on Evidence, Not Keyword Filtering</h2>
-        <p>
-          Legacy ATS systems reject qualified candidates based on arbitrary resume formatting and keyword density. Career OS evaluates verified capabilities, actual project deliverables, and genuine alignment.
-        </p>
+  const subpages = [
+    {
+      title: "Employer Agent Implementation",
+      href: "/employers/employer-agent",
+      desc: "Deploy the Career OS Employer Agent to match vacancies against verified capability vectors and cross-team requirements.",
+    },
+    {
+      title: "Evidence-Based Talent Discovery",
+      href: "/employers/talent-discovery",
+      desc: "Discover candidate portfolios based upon demonstrated deliverables, code repositories, and trade certifications rather than pedigree.",
+    },
+    {
+      title: "Early Careers & Graduate Pipelines",
+      href: "/employers/early-careers",
+      desc: "Build sustainable campus and early-talent pipelines with verified capstone deliverables from participating high schools and colleges.",
+    },
+    {
+      title: "Internships & Structured Experience",
+      href: "/employers/internships",
+      desc: "Manage high-impact seasonal internships and co-op placements with transparent learning objectives and performance sign-offs.",
+    },
+    {
+      title: "Corporate Apprenticeship Programs",
+      desc: "Launch debt-free degree and technical apprenticeship programs with registered curriculum standards and on-the-job hour tracking.",
+      href: "/employers/apprenticeships",
+    },
+    {
+      title: "Responsible Hiring & Anti-Bias Audits",
+      desc: "Ensure complete compliance with NYC Local Law 144, EEOC guidelines, and independent algorithmic fairness audits.",
+      href: "/employers/responsible-hiring",
+    },
+  ];
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-          <Link href={ROUTES.EMPLOYERS_EMPLOYER_AGENT} className="p-6 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-500)] block transition-colors">
-            <h3 className="font-bold text-sm text-[var(--color-text-primary)]">Employer Agent Intelligence</h3>
-            <p className="text-xs text-[var(--color-text-secondary)] mt-1">Autonomous candidate-role capability matching with full rationale.</p>
-          </Link>
-          <Link href={ROUTES.EMPLOYERS_TALENT_DISCOVERY} className="p-6 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-500)] block transition-colors">
-            <h3 className="font-bold text-sm text-[var(--color-text-primary)]">Evidence-Based Discovery</h3>
-            <p className="text-xs text-[var(--color-text-secondary)] mt-1">Directly review capstone artifacts, trade credentials, and code repositories.</p>
-          </Link>
-          <Link href={ROUTES.EMPLOYERS_EARLY_CAREERS} className="p-6 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-500)] block transition-colors">
-            <h3 className="font-bold text-sm text-[var(--color-text-primary)]">Early Careers & Apprenticeships</h3>
-            <p className="text-xs text-[var(--color-text-secondary)] mt-1">Build durable pipelines of motivated graduates and apprentices.</p>
-          </Link>
-          <Link href={ROUTES.EMPLOYERS_RESPONSIBLE_HIRING} className="p-6 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] hover:border-[var(--color-brand-500)] block transition-colors">
-            <h3 className="font-bold text-sm text-[var(--color-text-primary)]">Responsible Hiring & Compliance</h3>
-            <p className="text-xs text-[var(--color-text-secondary)] mt-1">NYC LL144, EU AI Act, and EEOC audit alignment.</p>
-          </Link>
+  return (
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <section className="relative min-h-[70vh] flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--background-dark-deep)] py-20">
+        <div className="container-editorial space-y-6 max-w-4xl">
+          <div className="flex items-center gap-3">
+            <span className="section-label flex items-center gap-2">
+              <span className="accent-blue-dot accent-blue-dot-pulse" />
+              Institutional Employer Ecosystem
+            </span>
+            <TechnicalBadge variant="blue">CAPABILITY-DEFINED HIRING</TechnicalBadge>
+          </div>
+
+          <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
+            Evidence-grounded hiring for{" "}
+            <CareerGradientText variant="blue">
+              forward-looking organizations.
+            </CareerGradientText>
+          </h1>
+
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
+            Move beyond static PDF resumes and arbitrary keyword screening. Career OS connects employers with candidates through verified project evidence, demonstrated competencies, and explainable capability matching.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <Button href="/employers/talent-discovery" variant="primary" size="lg">
+              Explore Talent Discovery
+            </Button>
+            <Button href={ROUTES.FOR_EMPLOYERS} variant="secondary" size="lg">
+              Employer Value Proposition
+            </Button>
+          </div>
         </div>
-      </div>
-    </EditorialSubpage>
+      </section>
+
+      <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        <div className="container-editorial space-y-12 max-w-5xl">
+          <div className="space-y-3">
+            <span className="section-label text-[#2F8FFF]">Employer Ecosystem</span>
+            <h2 className="text-display-section font-normal text-white">Dedicated Employer Solutions</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {subpages.map((s) => (
+              <Link
+                key={s.href}
+                href={s.href}
+                className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[#2F8FFF]/40 transition-all duration-300 flex flex-col justify-between space-y-3 group hover-lift"
+              >
+                <div className="space-y-2">
+                  <h3 className="text-base font-bold text-white group-hover:text-[#6BB8FF] transition-colors">
+                    {s.title}
+                  </h3>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                    {s.desc}
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-[var(--color-border-subtle)] flex items-center justify-between text-xs font-semibold text-[#6BB8FF]">
+                  <span>Explore route</span>
+                  <ArrowRight className="w-3.5 h-3.5 transform transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

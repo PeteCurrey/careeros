@@ -1,12 +1,15 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
-
-import type { Metadata } from 'next';
+import React from "react";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { Button } from "@/components/ui/Button";
+import { CareerGradientText } from "@/components/brand/CareerGradientText";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import { Newspaper, Download, Mail, CheckCircle2, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Press — Company | Career OS",
-  description: "Career OS Company press. Verified evidence, persistent career intelligence, and absolute privacy.",
+  title: "Press & Media Centre | Career OS",
+  description: "Official media resources, company boilerplate, approved brand asset specifications, and media inquiry contacts for Career OS.",
   alternates: {
     canonical: "https://career-os.com/company/press",
   },
@@ -14,39 +17,66 @@ export const metadata: Metadata = {
 
 export default function CompanyPressPage() {
   return (
-    <EditorialSubpage
-      badge="COMPANY &bull; PRESS & MEDIA"
-      title="Press & Media Resources"
-      description="Brand assets, executive bios, press releases, and media contacts for journalists covering career technology and responsible AI."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'About', href: ROUTES.COMPANY_ABOUT },
-        { label: 'Press', href: ROUTES.COMPANY_PRESS },
-      ]}
-      ctaText="Contact Press Team"
-      ctaHref={ROUTES.COMPANY_CONTACT}
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Media Enquiries & Brand Assets</h2>
-        <p>
-          Career OS is building universal career infrastructure at a pivotal moment in AI and employment technology. We welcome rigorous editorial coverage across career development, responsible AI, and workforce equity.
-        </p>
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <section className="relative pt-16 pb-20 border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
+        <div className="container-editorial space-y-6 max-w-4xl">
+          <div className="flex items-center gap-3">
+            <Newspaper className="w-5 h-5 text-[#2F8FFF]" />
+            <span className="section-label text-white">Press & Media Centre</span>
+          </div>
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Press Resources</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Brand Guidelines:</strong> Official logo usage, color palette, and typography specifications available on request.</li>
-          <li><strong>Executive Profiles:</strong> Founder and leadership biographies and approved photography.</li>
-          <li><strong>Product Demonstrations:</strong> Arrange editorial walkthrough sessions with our product team.</li>
-          <li><strong>Data & Research:</strong> Access to career mobility research, equity metrics, and platform statistics.</li>
-        </ul>
+          <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
+            News, boilerplate &{" "}
+            <CareerGradientText variant="blue">
+              media resources.
+            </CareerGradientText>
+          </h1>
 
-        <div className="p-6 rounded-lg bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] mt-6">
-          <p className="text-sm font-semibold text-[var(--color-text-primary)]">Press Contact</p>
-          <p className="text-xs text-[var(--color-text-secondary)] mt-1">
-            For all press and media enquiries, please reach out via our contact page. We aim to respond within 24 hours on business days.
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
+            Direct access to official announcements, leadership briefings, brand assets, and press inquiry channels.
           </p>
         </div>
-      </div>
-    </EditorialSubpage>
+      </section>
+
+      <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        <div className="container-editorial space-y-12 max-w-4xl">
+          {/* Boilerplate Section */}
+          <div className="p-8 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-base font-bold text-white">Official Company Boilerplate</h2>
+              <TechnicalBadge variant="neutral">STANDARD USAGE</TechnicalBadge>
+            </div>
+            <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
+              Career OS (Career OS Inc.) is universal career infrastructure engineered to compound individual human equity across lifelong working journeys. By synthesizing private Career Twin models, verified Career Passport evidence vaults, multi-dimensional Career Graph ontologies, and system-assigned domain AI mentorship, Career OS bridges individuals directly with institutional opportunities, accredited training, and responsible employers. Headquartered for initial launch in the United States, Career OS operates under strict student data safeguarding (FERPA/COPPA) and responsible AI governance (ISO/IEC 42001).
+            </p>
+          </div>
+
+          {/* Media Contact Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] space-y-3">
+              <Mail className="w-5 h-5 text-[#2F8FFF]" />
+              <h3 className="text-sm font-bold text-white">Press Enquiries</h3>
+              <p className="text-xs text-[var(--color-text-secondary)]">
+                For journalist interviews, data reports, and background briefings:
+              </p>
+              <a href="mailto:press@career-os.com" className="text-xs font-semibold text-[#6BB8FF] hover:underline block pt-1">
+                press@career-os.com
+              </a>
+            </div>
+
+            <div className="p-6 rounded-[var(--radius-card)] bg-[var(--background-dark-deep)] border border-[var(--color-border-default)] space-y-3">
+              <Download className="w-5 h-5 text-[#DDD36D]" />
+              <h3 className="text-sm font-bold text-white">Approved Brand Kit</h3>
+              <p className="text-xs text-[var(--color-text-secondary)]">
+                High-resolution wordmarks, typography standards, and interface media:
+              </p>
+              <span className="text-xs text-[var(--color-text-tertiary)] font-mono block pt-1">
+                Available via press@career-os.com
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

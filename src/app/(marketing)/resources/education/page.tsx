@@ -1,42 +1,74 @@
-import React from 'react';
-import { EditorialSubpage } from '@/components/layout/EditorialSubpage';
-import { ROUTES } from '@/lib/routes';
-
-import type { Metadata } from 'next';
+import React from "react";
+import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
+import { Button } from "@/components/ui/Button";
+import { CareerGradientText } from "@/components/brand/CareerGradientText";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
+import { GraduationCap, FileCheck, CheckCircle2, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Education — Resources | Career OS",
-  description: "Career OS Resources education. Verified evidence, persistent career intelligence, and absolute privacy.",
+  title: "Education, Credentials & Accreditation Guides | Career OS",
+  description: "Understand credential validity, accreditation bodies, degree ROI calculations, and verified certificate standards across higher education.",
   alternates: {
     canonical: "https://career-os.com/resources/education",
   },
 };
 
 export default function ResourcesEducationPage() {
-  return (
-    <EditorialSubpage
-      badge="RESOURCES &bull; ACCREDITATION"
-      title="Educational Pathways & Accreditation Index"
-      description="Compare accredited degrees, vocational credentials, national trade apprenticeships, and technical bootcamps by real career return on investment."
-      breadcrumbs={[
-        { label: 'Home', href: ROUTES.HOME },
-        { label: 'Resources', href: ROUTES.RESOURCES },
-        { label: 'Education', href: ROUTES.RESOURCES_EDUCATION },
-      ]}
-    >
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Evaluating Real Education ROI</h2>
-        <p>
-          Not all educational investments yield equal market outcomes. Career OS aggregates verified graduate earnings, placement timelines, and debt-to-income metrics across collegiate and vocational programs.
-        </p>
+  const topics = [
+    {
+      title: "Regional vs National Accreditation",
+      desc: "How accreditation bodies impact credit transferability, employer recognition, and graduate school admissions in the United States.",
+    },
+    {
+      title: "Credential Validity & Stackable Sequences",
+      desc: "How micro-credentials and industry certificates stack into full associate or bachelor degree programs with verified credit mapping.",
+    },
+    {
+      title: "Higher Education Return on Investment (ROI)",
+      desc: "Empirical analysis of degree costs, debt-to-income ratios, and earning trajectories across major collegiate disciplines.",
+    },
+    {
+      title: "Tamper-Proof Credential Vaulting",
+      desc: "How Career OS uses cryptographic hashes to anchor verifiable diplomas, transcripts, and certificates directly into candidate passports.",
+    },
+  ];
 
-        <h3 className="text-lg font-bold text-[var(--color-text-primary)] pt-4">Education Categories Compared</h3>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><strong>Four-Year Universities:</strong> Tuition vs median 5-year and 10-year career progression.</li>
-          <li><strong>Community & Technical Colleges:</strong> Two-year technical associate programs and articulated transfer routes.</li>
-          <li><strong>Registered Apprenticeships:</strong> Direct zero-debt entry into union and non-union advanced trades.</li>
-        </ul>
-      </div>
-    </EditorialSubpage>
+  return (
+    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+      <section className="relative pt-16 pb-20 border-b border-[var(--color-border-default)] bg-[var(--background-dark-deep)]">
+        <div className="container-editorial space-y-6 max-w-4xl">
+          <div className="flex items-center gap-3">
+            <GraduationCap className="w-5 h-5 text-[#2F8FFF]" />
+            <span className="section-label text-white">Academic & Credential Standards</span>
+          </div>
+
+          <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
+            Accreditation, credentials &{" "}
+            <CareerGradientText variant="blue">
+              learning return on investment.
+            </CareerGradientText>
+          </h1>
+
+          <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
+            Make informed higher education decisions with transparent guidance on accreditation, credit portability, and degree economics.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        <div className="container-editorial space-y-12 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {topics.map((t) => (
+              <div key={t.title} className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
+                <h3 className="text-base font-bold text-white">{t.title}</h3>
+                <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

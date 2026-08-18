@@ -117,6 +117,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
         label: 'Core Systems',
         items: [
           { label: 'AI Career Mentor', href: ROUTES.PRODUCT_AI_CAREER_MENTOR, description: 'A system-assigned mentor that understands your career over time.' },
+          { label: 'Mentor Council', href: ROUTES.MENTORS, description: 'Meet the 8 domain AI mentor personas system-assigned by Career OS.' },
           { label: 'Career Twin', href: ROUTES.PRODUCT_CAREER_TWIN, description: 'A structured model of your professional self — beyond a résumé.' },
           { label: 'Career Passport', href: ROUTES.PRODUCT_CAREER_PASSPORT, description: 'A portable professional record of skills, evidence and achievements.' },
           { label: 'Career Graph', href: ROUTES.PRODUCT_CAREER_GRAPH, description: 'Careers as connected pathways between skills, roles and destinations.' },
@@ -258,6 +259,7 @@ export const footerNav: NavGroup[] = [
     items: [
       { label: 'Overview', href: ROUTES.PRODUCT },
       { label: 'AI Career Mentor', href: ROUTES.PRODUCT_AI_CAREER_MENTOR },
+      { label: 'Mentor Council', href: ROUTES.MENTORS },
       { label: 'Career Twin', href: ROUTES.PRODUCT_CAREER_TWIN },
       { label: 'Career Passport', href: ROUTES.PRODUCT_CAREER_PASSPORT },
       { label: 'Career Graph', href: ROUTES.PRODUCT_CAREER_GRAPH },
