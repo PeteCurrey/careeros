@@ -1,44 +1,70 @@
 import React from 'react';
-import Link from 'next/link';
-import { ROUTES } from '@/lib/routes';
 import { SkipLink } from '@/components/layout/SkipLink';
+import { AppHeader } from '@/components/app/shell/AppHeader';
+import { AppBottomNav } from '@/components/app/shell/AppBottomNav';
+import { getApplicationAccessState } from '@/lib/auth/access-guard';
+import { createAdminClient } from '@/lib/supabase/server';
+import { MENTOR_LIST } from '@/content/mentors/mentorRegistry';
 
-export default function AppLayout({ children }: { children: React.ReactNode }) {
+export default async function AppLayout({ children }: { children: React.ReactNode }) {
+  let displayName = 'Pete Currey';
+  let mentorName = 'Marcus Thorne';
+  let mentorPortraitSrc = '/media/mentors/marcus_thorne.jpg';
+  let mentorDomain = 'Technology & Systems Architecture';
+
+  try {
+    const accessState = await getApplicationAccessState();
+    const userId = accessState.userId;
+
+    if (userId) {
+      const adminDb = createAdminClient();
+      const { data: profile } = await adminDb
+        .from('profiles')
+        .select('display_name')
+        .eq('auth_user_id', userId)
+        .maybeSingle();
+
+      if (profile?.display_name) {
+        displayName = profile.display_name;
+      }
+
+      const { data: assignment } = await adminDb
+        .from('mentor_assignments')
+        .select('mentor_id')
+        .eq('user_id', userId)
+        .maybeSingle();
+
+      const mentorId = assignment?.mentor_id || 'marcus-thorne';
+      const persona = MENTOR_LIST.find((m) => m.slug === mentorId) || MENTOR_LIST[0];
+      if (persona) {
+        mentorName = persona.name;
+        mentorPortraitSrc = persona.portraitSrc;
+        mentorDomain = persona.domain;
+      }
+    }
+  } catch {
+    // Non-fatal fallback defaults used
+  }
+
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--color-surface-base)]">
+    <div className="min-h-screen flex flex-col bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <SkipLink />
 
-      {/* App Shell Header */}
-      <header className="sticky top-0 z-40 h-14 flex items-center justify-between px-4 bg-[var(--color-surface-raised)] border-b border-[var(--color-border-default)]">
-        <Link
-          href={ROUTES.APP_DASHBOARD}
-          className="flex items-center gap-2 font-bold text-sm tracking-tight text-[var(--color-text-primary)]"
-        >
-          <div className="w-6 h-6 rounded-md bg-[var(--color-brand-600)] flex items-center justify-center text-white text-xs font-mono font-bold">
-            OS
-          </div>
-          <span>Career OS</span>
-        </Link>
+      {/* Desktop Top Header Navigation */}
+      <AppHeader
+        userDisplayName={displayName}
+        mentorName={mentorName}
+        mentorPortraitSrc={mentorPortraitSrc}
+        mentorDomain={mentorDomain}
+      />
 
-        <nav className="flex items-center gap-2" aria-label="Application navigation">
-          <Link
-            href={ROUTES.APP_SETTINGS}
-            className="text-xs font-medium text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] px-2 py-1 rounded transition-colors"
-          >
-            Settings
-          </Link>
-          <Link
-            href={ROUTES.LOGIN}
-            className="text-xs font-medium text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] px-2 py-1 rounded transition-colors"
-          >
-            Log out
-          </Link>
-        </nav>
-      </header>
-
-      <main id="main-content" tabIndex={-1} className="flex-1 focus:outline-none">
+      {/* Main Application Content Area */}
+      <main id="main-content" tabIndex={-1} className="flex-1 focus:outline-none pb-20 lg:pb-10">
         {children}
       </main>
+
+      {/* Mobile-First Bottom Navigation */}
+      <AppBottomNav />
     </div>
   );
 }
