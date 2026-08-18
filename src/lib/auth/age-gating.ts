@@ -20,15 +20,106 @@ export interface AgeCalculationResult {
   isHardBlocked: boolean;
   defaultConsentState: ConsentState;
   defaultAccountStatus: AccountStatus;
+  canonicalIsoDate: string;
+}
+
+export interface DOBValidationResult {
+  isValid: boolean;
+  isoDate?: string;
+  displayDate?: string;
+  error?: string;
+}
+
+/**
+ * Validates and canonicalises a Date of Birth input string (supporting MM/DD/YYYY or YYYY-MM-DD).
+ * Rejects impossible dates (e.g. 02/30/2000, 13/10/2000, 02/29/2023), future dates, and impossible ages (> 120).
+ */
+export function validateAndFormatDOB(input: string, referenceDate: Date = new Date()): DOBValidationResult {
+  if (!input || typeof input !== "string") {
+    return { isValid: false, error: "Enter your date of birth in MM/DD/YYYY format." };
+  }
+
+  const trimmed = input.trim();
+  let mm: number, dd: number, yyyy: number;
+
+  // Format 1: MM/DD/YYYY
+  if (/^\d{2}\/\d{2}\/\d{4}$/.test(trimmed)) {
+    const parts = trimmed.split("/");
+    mm = parseInt(parts[0]!, 10);
+    dd = parseInt(parts[1]!, 10);
+    yyyy = parseInt(parts[2]!, 10);
+  }
+  // Format 2: 8 raw digits MMDDYYYY
+  else if (/^\d{8}$/.test(trimmed)) {
+    mm = parseInt(trimmed.substring(0, 2), 10);
+    dd = parseInt(trimmed.substring(2, 4), 10);
+    yyyy = parseInt(trimmed.substring(4, 8), 10);
+  }
+  // Format 3: ISO YYYY-MM-DD
+  else if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+    const parts = trimmed.split("-");
+    yyyy = parseInt(parts[0]!, 10);
+    mm = parseInt(parts[1]!, 10);
+    dd = parseInt(parts[2]!, 10);
+  } else {
+    return { isValid: false, error: "Enter your date of birth in MM/DD/YYYY format." };
+  }
+
+  // Month check
+  if (mm < 1 || mm > 12) {
+    return { isValid: false, error: "Invalid month. Enter a valid month between 01 and 12." };
+  }
+
+  // Days in month check (handles leap years accurately via standard calendar arithmetic)
+  const daysInMonth = new Date(yyyy, mm, 0).getDate();
+  if (dd < 1 || dd > daysInMonth) {
+    return { isValid: false, error: `Invalid date. The specified month has ${daysInMonth} days.` };
+  }
+
+  // Future date check
+  const birthDate = new Date(yyyy, mm - 1, dd, 0, 0, 0, 0);
+  const refDateZero = new Date(referenceDate.getFullYear(), referenceDate.getMonth(), referenceDate.getDate(), 0, 0, 0, 0);
+  if (birthDate > refDateZero) {
+    return { isValid: false, error: "Date of birth cannot be in the future." };
+  }
+
+  // Age bounds check
+  const currentYear = referenceDate.getFullYear();
+  const ageApprox = currentYear - yyyy;
+  if (ageApprox > 120 || yyyy < 1900) {
+    return { isValid: false, error: "Enter a realistic year of birth." };
+  }
+
+  const mmStr = mm.toString().padStart(2, "0");
+  const ddStr = dd.toString().padStart(2, "0");
+  const isoDate = `${yyyy}-${mmStr}-${ddStr}`;
+  const displayDate = `${mmStr}/${ddStr}/${yyyy}`;
+
+  return {
+    isValid: true,
+    isoDate,
+    displayDate,
+  };
 }
 
 /**
  * Calculates user age based on date of birth and reference date.
  */
 export function calculateAge(dob: string | Date, referenceDate: Date = new Date()): number {
-  const birthDate = typeof dob === "string" ? new Date(dob) : dob;
-  if (isNaN(birthDate.getTime())) {
-    throw new Error("Invalid date of birth provided.");
+  let birthDate: Date;
+
+  if (typeof dob === "string") {
+    const validation = validateAndFormatDOB(dob, referenceDate);
+    if (!validation.isValid || !validation.isoDate) {
+      throw new Error(validation.error || "Invalid date of birth provided.");
+    }
+    const [y, m, d] = validation.isoDate.split("-").map(Number);
+    birthDate = new Date(y!, m! - 1, d!);
+  } else {
+    birthDate = dob;
+    if (isNaN(birthDate.getTime())) {
+      throw new Error("Invalid date of birth provided.");
+    }
   }
 
   let age = referenceDate.getFullYear() - birthDate.getFullYear();
@@ -55,6 +146,20 @@ export function evaluateAgeBracket(
   channel: "DIRECT" | "SCHOOL" | "GUARDIAN" = "DIRECT",
   isPostsecondary = false
 ): AgeCalculationResult {
+  let canonicalIsoDate = "";
+  if (typeof dob === "string") {
+    const valid = validateAndFormatDOB(dob, referenceDate);
+    if (!valid.isValid || !valid.isoDate) {
+      throw new Error(valid.error || "Invalid date of birth.");
+    }
+    canonicalIsoDate = valid.isoDate;
+  } else {
+    const y = dob.getFullYear();
+    const m = (dob.getMonth() + 1).toString().padStart(2, "0");
+    const d = dob.getDate().toString().padStart(2, "0");
+    canonicalIsoDate = `${y}-${m}-${d}`;
+  }
+
   const age = calculateAge(dob, referenceDate);
   const isMinor = isMinorStatus(age);
   const directEligible = hasDirectAccountEligibility(age);
@@ -73,6 +178,7 @@ export function evaluateAgeBracket(
       isHardBlocked: true,
       defaultConsentState: "DENIED",
       defaultAccountStatus: "DEACTIVATED",
+      canonicalIsoDate,
     };
   }
 
@@ -89,6 +195,7 @@ export function evaluateAgeBracket(
       isHardBlocked: false,
       defaultConsentState: "PENDING",
       defaultAccountStatus: "PENDING_GUARDIAN_CONSENT",
+      canonicalIsoDate,
     };
   }
 
@@ -106,6 +213,7 @@ export function evaluateAgeBracket(
       isHardBlocked: false,
       defaultConsentState: "NOT_REQUIRED",
       defaultAccountStatus: "ACTIVE",
+      canonicalIsoDate,
     };
   }
 
@@ -121,5 +229,6 @@ export function evaluateAgeBracket(
     isHardBlocked: false,
     defaultConsentState: "NOT_REQUIRED",
     defaultAccountStatus: "ACTIVE",
+    canonicalIsoDate,
   };
 }

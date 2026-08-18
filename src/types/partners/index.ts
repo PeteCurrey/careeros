@@ -68,8 +68,12 @@ export interface PublicWorkforceResource {
   slug: string;
   purpose: string[];
   description: string;
+  shortDescription?: string;
+  howCareerOSUsesIt?: string;
+  dataCategory?: string;
   officialSponsor: string;
   websiteUrl: string;
+  url?: string;
   attributionText: string;
   trademarkNotice?: string;
   isFederalResource: boolean;

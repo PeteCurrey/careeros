@@ -1,4 +1,4 @@
-import { createAdminClient } from '@/lib/supabase/server';
+import { createClient } from '@/lib/supabase/client';
 import {
   Partner,
   PartnerContact,
@@ -87,7 +87,7 @@ export async function getPartners(filters?: {
   category?: string;
   search?: string;
 }): Promise<Partner[]> {
-  const adminDb = createAdminClient();
+  const adminDb = createClient();
   let query = adminDb
     .from('partners')
     .select('*')
@@ -130,7 +130,7 @@ export async function getPartnerBySlug(slug: string): Promise<{
   compliance: PartnerCompliance | null;
   metrics: PartnerMetrics[];
 }> {
-  const adminDb = createAdminClient();
+  const adminDb = createClient();
 
   const { data: partner, error: partnerError } = await adminDb
     .from('partners')
@@ -196,7 +196,7 @@ export async function updatePartnerStage(
   note?: string,
   actorUserId?: string
 ): Promise<{ success: boolean; error?: string }> {
-  const adminDb = createAdminClient();
+  const adminDb = createClient();
 
   const { data: currentPartner, error: fetchError } = await adminDb
     .from('partners')

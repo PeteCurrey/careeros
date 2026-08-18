@@ -9,7 +9,7 @@ import { ROUTES } from '@/lib/routes';
 
 interface StudentPrivacySectionProps {
   frameworks: ComplianceFramework[];
-  onRequestAccess: (framework: ComplianceFramework) => void;
+  onRequestAccess?: (framework: ComplianceFramework) => void;
 }
 
 export function StudentPrivacySection({

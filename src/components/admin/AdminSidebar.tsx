@@ -27,6 +27,7 @@ import {
   Sparkles,
   ExternalLink,
   Handshake,
+  Database,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -200,6 +201,21 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
       ],
     },
     {
+      title: 'DATA & INTEGRATIONS',
+      items: [
+        {
+          title: 'Integration Registry',
+          href: ROUTES.ADMIN_INTEGRATIONS,
+          icon: Database,
+          subItems: [
+            { title: 'All Integrations', href: ROUTES.ADMIN_INTEGRATIONS },
+            { title: 'Data Issues', href: ROUTES.ADMIN_DATA_ISSUES },
+          ],
+        },
+      ],
+    },
+    {
+
       title: 'AI CONTROL CENTRE',
       items: [
         {

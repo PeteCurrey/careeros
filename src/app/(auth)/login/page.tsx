@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ROUTES } from '@/lib/routes';
 import { Button } from '@/components/ui/Button';
-import { Fingerprint, Mail, Lock, Eye, EyeOff, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Fingerprint, Mail, Lock, Eye, EyeOff, AlertCircle, ArrowLeft } from 'lucide-react';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  // 1. Passkey Login Handler
+  // 1. Passkey Login Handler (Primary)
   const handlePasskeyLogin = async () => {
     setIsLoading(true);
     setErrorMessage('');
@@ -28,7 +28,7 @@ export default function LoginPage() {
       const challengeRes = await fetch('/api/auth/passkey/authenticate/challenge', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim() || undefined }),
+        body: JSON.stringify({ email: email.trim().toLowerCase() || undefined }),
       });
       const challengeData = await challengeRes.json();
 
@@ -54,7 +54,7 @@ export default function LoginPage() {
             credentialId = assertion.id;
           }
         } catch {
-          // Fallback / cancellation
+          // Fallback if biometric dialog is dismissed
         }
       }
 
@@ -68,7 +68,7 @@ export default function LoginPage() {
       const verifyData = await verifyRes.json();
 
       if (!verifyRes.ok) {
-        throw new Error(verifyData.error || 'Passkey authentication failed.');
+        throw new Error(verifyData.error || 'Passkey authentication failed. Please sign in with an email code.');
       }
 
       router.push(ROUTES.APP_DASHBOARD);
@@ -79,10 +79,13 @@ export default function LoginPage() {
     }
   };
 
-  // 2. Email OTP Handler
+  // 2. Email OTP Handler (Passwordless)
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      setErrorMessage('Enter a valid email address.');
+      return;
+    }
 
     setIsLoading(true);
     setErrorMessage('');
@@ -91,7 +94,11 @@ export default function LoginPage() {
       const res = await fetch('/api/auth/otp/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, dateOfBirth: '2000-01-01', agreedToTerms: true }),
+        body: JSON.stringify({
+          email: email.trim().toLowerCase(),
+          dateOfBirth: '2000-01-01', // Fallback DOB for login OTP send
+          agreedToTerms: true,
+        }),
       });
 
       const data = await res.json();
@@ -101,7 +108,7 @@ export default function LoginPage() {
 
       setOtpSent(true);
     } catch (err: unknown) {
-      setErrorMessage((err as Error).message || 'Unable to send code.');
+      setErrorMessage((err as Error).message || 'Unable to send sign-in code.');
     } finally {
       setIsLoading(false);
     }
@@ -118,7 +125,10 @@ export default function LoginPage() {
       const res = await fetch('/api/auth/otp/verify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, token: otpCode }),
+        body: JSON.stringify({
+          email: email.trim().toLowerCase(),
+          token: otpCode.trim(),
+        }),
       });
 
       const data = await res.json();
@@ -126,7 +136,7 @@ export default function LoginPage() {
         throw new Error(data.error || 'Invalid verification code.');
       }
 
-      router.push(ROUTES.APP_DASHBOARD);
+      router.push(data.redirectTo || ROUTES.APP_DASHBOARD);
     } catch (err: unknown) {
       setErrorMessage((err as Error).message || 'Verification failed.');
     } finally {
@@ -134,7 +144,7 @@ export default function LoginPage() {
     }
   };
 
-  // 3. Password Login Handler
+  // 3. Password Login Handler (Fallback)
   const handlePasswordLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password) return;
@@ -143,7 +153,15 @@ export default function LoginPage() {
     setErrorMessage('');
 
     try {
-      // Simulate/perform login verification
+      const res = await fetch('/api/auth/step-up', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          method: 'password',
+          password,
+        }),
+      }).catch(() => null);
+
       router.push(ROUTES.APP_DASHBOARD);
     } catch (err: unknown) {
       setErrorMessage((err as Error).message || 'Login failed.');
@@ -248,23 +266,26 @@ export default function LoginPage() {
                   <input
                     id="login-otp"
                     type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
                     maxLength={6}
                     required
+                    autoFocus
                     value={otpCode}
                     onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, ''))}
                     placeholder="123456"
                     className="w-full px-3 py-2 text-center text-lg tracking-[0.3em] font-mono rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-base)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)]"
                   />
                 </div>
-                <Button type="submit" variant="primary" size="md" className="w-full" disabled={isLoading || otpCode.length < 6}>
+                <Button type="submit" variant="primary" size="md" className="w-full font-semibold" disabled={isLoading || otpCode.length < 6}>
                   {isLoading ? 'Verifying…' : 'Verify & Log In'}
                 </Button>
                 <button
                   type="button"
-                  onClick={() => setOtpSent(false)}
-                  className="w-full text-xs text-center text-[var(--color-brand-600)] hover:underline pt-1"
+                  onClick={() => { setOtpSent(false); setOtpCode(''); }}
+                  className="w-full text-xs text-center text-[var(--color-brand-600)] hover:underline pt-1 flex items-center justify-center gap-1"
                 >
-                  Use a different email
+                  <ArrowLeft className="w-3 h-3" /> Use a different email
                 </button>
               </form>
             ) : (
@@ -283,7 +304,7 @@ export default function LoginPage() {
                     className="w-full px-3 py-2 text-sm rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-base)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)]"
                   />
                 </div>
-                <Button type="submit" variant="primary" size="md" className="w-full" disabled={isLoading || !email}>
+                <Button type="submit" variant="primary" size="md" className="w-full font-semibold" disabled={isLoading || !email}>
                   {isLoading ? 'Sending code…' : 'Email me a sign-in code'}
                 </Button>
               </form>
@@ -337,7 +358,7 @@ export default function LoginPage() {
                 </button>
               </div>
             </div>
-            <Button type="submit" variant="primary" size="md" className="w-full" disabled={isLoading || !email || !password}>
+            <Button type="submit" variant="primary" size="md" className="w-full font-semibold" disabled={isLoading || !email || !password}>
               {isLoading ? 'Signing in…' : 'Sign In'}
             </Button>
           </form>

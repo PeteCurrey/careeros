@@ -85,13 +85,11 @@ export default function ComplianceAndAssurancePage() {
         {/* 1. Independent Assurance & Recognised Standards (SOC 2, ISO 27001, ISO 27701, ISO 42001) */}
         <IndependentAssuranceSection
           frameworks={COMPLIANCE_FRAMEWORKS_REGISTRY}
-          onRequestAccess={() => {}}
         />
 
         {/* 2. US Student Privacy & Education (FERPA, PPRA, COPPA, HIPAA) */}
         <StudentPrivacySection
           frameworks={COMPLIANCE_FRAMEWORKS_REGISTRY}
-          onRequestAccess={() => {}}
         />
 
         {/* 3. Cybersecurity & Operational Resilience (NIST CSF 2.0) */}

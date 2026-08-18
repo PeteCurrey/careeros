@@ -245,6 +245,12 @@ export const ROUTES = {
   ADMIN_PARTNERSHIPS_DOCUMENTS: '/admin/partnerships/documents',
   ADMIN_PARTNERSHIPS_ANALYTICS: '/admin/partnerships/analytics',
 
+  // Integration Registry (Data Sources & Integrations)
+  ADMIN_INTEGRATIONS: '/admin/integrations',
+  ADMIN_INTEGRATIONS_NEW: '/admin/integrations/new',
+  ADMIN_DATA_ISSUES: '/admin/integrations/data-issues',
+
+
   // AI Control Centre
   ADMIN_AI: '/admin/ai',
   ADMIN_AI_PROVIDERS: '/admin/ai/providers',

@@ -1,55 +1,95 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { ROUTES } from "@/lib/routes";
-import { Button } from "@/components/ui/Button";
-import { CheckCircle2, AlertTriangle, ShieldAlert, Clock, ShieldCheck, ArrowRight, KeyRound } from "lucide-react";
-import { evaluateAgeBracket, AgeCalculationResult } from "@/lib/auth/age-gating";
-import { DIRECT_ACCOUNT_MIN_AGE } from "@/lib/config/age-policy";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { ROUTES } from '@/lib/routes';
+import { Button } from '@/components/ui/Button';
+import { DateOfBirthInput } from '@/components/ui/DateOfBirthInput';
+import { ShieldAlert, Clock, AlertTriangle, ArrowLeft, MailCheck } from 'lucide-react';
+import { evaluateAgeBracket, validateAndFormatDOB } from '@/lib/auth/age-gating';
+
+const RESEND_COOLDOWN_SECONDS = 60;
 
 export default function SignupPage() {
   const router = useRouter();
 
   // Screen 1 State: Account Details
-  const [email, setEmail] = useState("");
-  const [dateOfBirth, setDateOfBirth] = useState("");
-  const [guardianEmail, setGuardianEmail] = useState("");
+  const [email, setEmail] = useState('');
+  const [displayDob, setDisplayDob] = useState('');
+  const [canonicalDob, setCanonicalDob] = useState('');
+  const [isDobValid, setIsDobValid] = useState(false);
+  const [guardianEmail, setGuardianEmail] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   // Screen 2 State: 6-Digit OTP Verification
-  const [otpCode, setOtpCode] = useState("");
-  const [step, setStep] = useState<"details" | "otp_verify" | "pending_guardian">("details");
+  const [otpCode, setOtpCode] = useState('');
+  const [step, setStep] = useState<'details' | 'otp_verify' | 'pending_guardian'>('details');
 
+  // Async States & Error Handling
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
+  const [cooldown, setCooldown] = useState(0);
 
-  const ageEvaluation: AgeCalculationResult | null = dateOfBirth ? evaluateAgeBracket(dateOfBirth) : null;
+  // Derive age evaluation safely on valid DOB without exposing internal enum debug UI
+  const ageEvaluation = isDobValid && canonicalDob ? evaluateAgeBracket(canonicalDob) : null;
 
-  // Step 1 Submission: Send 6-digit OTP
-  const handleSendOtp = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!agreedToTerms || !ageEvaluation) return;
+  // Resend cooldown timer countdown
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setInterval(() => {
+      setCooldown((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [cooldown]);
 
-    if (ageEvaluation.isHardBlocked) return;
+  const handleDobChange = (isoDate: string, formattedDisplay: string, isValid: boolean) => {
+    setDisplayDob(formattedDisplay);
+    setCanonicalDob(isoDate);
+    setIsDobValid(isValid);
+    setErrorMessage('');
+  };
 
-    if (ageEvaluation.requiresGuardianConsent && !guardianEmail) {
-      setErrorMessage("Parent or guardian email is required for users ages 13–15.");
+  // Step 1 Submission: Request 6-digit OTP
+  const handleSendOtp = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+
+    setErrorMessage('');
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      setErrorMessage('Enter a valid email address.');
+      return;
+    }
+
+    if (!isDobValid || !canonicalDob) {
+      setErrorMessage('Enter your date of birth in MM/DD/YYYY format.');
+      return;
+    }
+
+    if (!agreedToTerms) {
+      setErrorMessage('Please agree to the Terms of Service and Privacy Policy to continue.');
+      return;
+    }
+
+    if (ageEvaluation?.isHardBlocked) {
+      return;
+    }
+
+    if (ageEvaluation?.requiresGuardianConsent && !guardianEmail) {
+      setErrorMessage('Parent or guardian email is required for users ages 13–15.');
       return;
     }
 
     setIsLoading(true);
-    setErrorMessage("");
 
     try {
-      const res = await fetch("/api/auth/otp/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/auth/otp/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          email,
-          dateOfBirth,
-          guardianEmail: guardianEmail || undefined,
+          email: email.trim().toLowerCase(),
+          dateOfBirth: canonicalDob,
+          guardianEmail: guardianEmail ? guardianEmail.trim().toLowerCase() : undefined,
           agreedToTerms,
         }),
       });
@@ -57,16 +97,18 @@ export default function SignupPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Failed to send verification code.");
+        throw new Error(data.error || 'We couldn’t create your account right now. Please try again.');
       }
 
+      setCooldown(RESEND_COOLDOWN_SECONDS);
+
       if (data.requiresGuardianConsent) {
-        setStep("pending_guardian");
+        setStep('pending_guardian');
       } else {
-        setStep("otp_verify");
+        setStep('otp_verify');
       }
     } catch (err: unknown) {
-      setErrorMessage((err as Error).message || "Something went wrong. Please try again.");
+      setErrorMessage((err as Error).message || 'We couldn’t create your account right now. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -78,30 +120,30 @@ export default function SignupPage() {
     if (otpCode.length < 6) return;
 
     setIsLoading(true);
-    setErrorMessage("");
+    setErrorMessage('');
 
     try {
-      const res = await fetch("/api/auth/otp/verify", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/auth/otp/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          email,
-          token: otpCode,
-          dateOfBirth,
-          guardianEmail: guardianEmail || undefined,
+          email: email.trim().toLowerCase(),
+          token: otpCode.trim(),
+          dateOfBirth: canonicalDob,
+          guardianEmail: guardianEmail ? guardianEmail.trim().toLowerCase() : undefined,
         }),
       });
 
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Invalid verification code.");
+        throw new Error(data.error || 'That code isn’t correct. Try again.');
       }
 
       // Success -> Redirect to onboarding
-      router.push(ROUTES.APP_ONBOARDING);
+      router.push(data.redirectTo || ROUTES.APP_ONBOARDING);
     } catch (err: unknown) {
-      setErrorMessage((err as Error).message || "Verification failed.");
+      setErrorMessage((err as Error).message || 'Verification failed. Please check your code and try again.');
     } finally {
       setIsLoading(false);
     }
@@ -114,12 +156,16 @@ export default function SignupPage() {
         {/* Heading */}
         <div className="space-y-1 text-center">
           <h1 className="text-xl font-bold text-[var(--color-text-primary)] tracking-tight">
-            {step === "otp_verify" ? "Verify your email" : "Start your Career OS"}
+            {step === 'otp_verify'
+              ? 'Check your email'
+              : step === 'pending_guardian'
+              ? 'Guardian Consent Required'
+              : 'Start your Career OS'}
           </h1>
           <p className="text-xs text-[var(--color-text-tertiary)]">
-            {step === "otp_verify"
-              ? `Enter the 6-digit verification code sent to ${email}`
-              : "Free for individuals. Persistent, private career operating system."}
+            {step === 'otp_verify'
+              ? `We've sent a 6-digit verification code to ${email}`
+              : 'Free for individuals. Persistent, private career operating system.'}
           </p>
         </div>
 
@@ -129,15 +175,15 @@ export default function SignupPage() {
             <ShieldAlert className="w-10 h-10 text-[var(--color-danger)] mx-auto" />
             <div className="space-y-1">
               <h2 className="text-sm font-bold text-[var(--color-text-primary)]">
-                Under-13 Direct Registration Restricted
+                School Enrollment Required
               </h2>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Career OS does not provide open consumer registration for children under 13 under COPPA guidelines. Access is limited to <strong>verified school arrangements</strong>.
+                Career OS does not offer direct consumer registration for users under 13 under COPPA guidelines. Access is provided exclusively through verified school arrangements.
               </p>
             </div>
             <div className="text-[11px] text-[var(--color-text-tertiary)] bg-[var(--color-surface-base)] p-3 rounded border border-[var(--color-border-default)] text-left space-y-1">
-              <p className="font-semibold text-[var(--color-text-primary)]">School Enrollment Required:</p>
-              <p>Please contact your school administrator or teacher to request an institutional Career OS account invitation.</p>
+              <p className="font-semibold text-[var(--color-text-primary)]">School Arrangement:</p>
+              <p>Please ask your school teacher or administrator to invite you through the Career OS for Schools programme.</p>
             </div>
             <Link
               href={ROUTES.FOR_HIGH_SCHOOLS}
@@ -146,7 +192,7 @@ export default function SignupPage() {
               Learn about Career OS for Schools &rarr;
             </Link>
           </div>
-        ) : step === "pending_guardian" ? (
+        ) : step === 'pending_guardian' ? (
           /* SCREEN: 13-15 PENDING GUARDIAN CONSENT STATE */
           <div className="text-center space-y-4 py-4">
             <Clock className="w-12 h-12 text-[var(--color-brand-600)] mx-auto animate-pulse" />
@@ -174,23 +220,35 @@ export default function SignupPage() {
             <p className="text-xs text-[var(--color-text-tertiary)]">
               Verification link dispatched to guardian: <strong>{guardianEmail}</strong>.
             </p>
+
+            <button
+              type="button"
+              onClick={() => setStep('details')}
+              className="text-xs text-[var(--color-brand-600)] hover:underline block mx-auto pt-2"
+            >
+              &larr; Return to registration details
+            </button>
           </div>
-        ) : step === "otp_verify" ? (
+        ) : step === 'otp_verify' ? (
           /* SCREEN 2: 6-DIGIT EMAIL OTP VERIFICATION */
           <form onSubmit={handleVerifyOtp} className="space-y-4">
             <div className="space-y-2">
-              <label htmlFor="otp-input" className="text-xs font-semibold text-[var(--color-text-primary)]">
+              <label htmlFor="otp-input" className="text-xs font-semibold text-[var(--color-text-primary)] block">
                 6-digit verification code
               </label>
               <input
                 id="otp-input"
                 type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 maxLength={6}
                 autoComplete="one-time-code"
+                autoFocus
                 required
                 value={otpCode}
-                onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, ""))}
+                onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, ''))}
                 placeholder="123456"
+                aria-label="6-digit verification code"
                 className="w-full px-3 py-3 text-center text-xl tracking-[0.4em] font-mono rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-base)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)]"
               />
               <p className="text-[11px] text-[var(--color-text-tertiary)] text-center">
@@ -199,40 +257,43 @@ export default function SignupPage() {
             </div>
 
             {errorMessage && (
-              <p className="text-xs text-[var(--color-danger)] text-center">{errorMessage}</p>
+              <p className="text-xs text-[var(--color-danger)] text-center" role="alert">
+                {errorMessage}
+              </p>
             )}
 
             <Button
               type="submit"
               variant="primary"
               size="md"
-              className="w-full"
+              className="w-full font-semibold"
               disabled={isLoading || otpCode.length < 6}
             >
-              {isLoading ? "Verifying…" : "Verify and Continue"}
+              {isLoading ? 'Verifying…' : 'Verify Email'}
             </Button>
 
             <div className="flex items-center justify-between text-xs pt-2">
               <button
                 type="button"
-                onClick={() => setStep("details")}
-                className="text-[var(--color-text-tertiary)] hover:underline"
+                onClick={() => { setStep('details'); setErrorMessage(''); }}
+                className="text-[var(--color-text-tertiary)] hover:underline flex items-center gap-1"
               >
-                ← Back
+                <ArrowLeft className="w-3 h-3" /> Back
               </button>
               <button
                 type="button"
-                onClick={handleSendOtp}
-                disabled={isLoading}
-                className="text-[var(--color-brand-600)] font-medium hover:underline"
+                onClick={() => handleSendOtp()}
+                disabled={isLoading || cooldown > 0}
+                className="text-[var(--color-brand-600)] font-medium hover:underline disabled:text-[var(--color-text-disabled)] disabled:no-underline"
               >
-                Resend code
+                {cooldown > 0 ? `Resend code (${cooldown}s)` : 'Resend code'}
               </button>
             </div>
           </form>
         ) : (
           /* SCREEN 1: FRICTIONLESS SIGNUP (Email + DOB + Terms) */
           <form onSubmit={handleSendOtp} className="space-y-4">
+            {/* EMAIL */}
             <div className="space-y-1">
               <label htmlFor="signup-email" className="text-xs font-semibold text-[var(--color-text-primary)]">
                 Email address
@@ -243,36 +304,23 @@ export default function SignupPage() {
                 autoComplete="email"
                 required
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => { setEmail(e.target.value); setErrorMessage(''); }}
                 placeholder="you@example.com"
                 className="w-full px-3 py-2.5 text-sm rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-base)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-disabled)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)] transition-shadow"
               />
             </div>
 
-            {/* DOB AGE GATE */}
+            {/* DATE OF BIRTH (CONTROLLED US MM/DD/YYYY) */}
             <div className="space-y-1">
               <label htmlFor="signup-dob" className="text-xs font-semibold text-[var(--color-text-primary)]">
                 Date of Birth
               </label>
-              <input
+              <DateOfBirthInput
                 id="signup-dob"
-                type="date"
+                value={displayDob}
+                onChange={handleDobChange}
                 required
-                value={dateOfBirth}
-                onChange={(e) => setDateOfBirth(e.target.value)}
-                className="w-full px-3 py-2.5 text-sm rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-base)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-focus)] transition-shadow"
               />
-              {ageEvaluation && (
-                <div className="text-[11px] text-[var(--color-text-tertiary)] pt-1 space-y-1">
-                  <p>Age: {ageEvaluation.age} &bull; Policy State: <span className="font-mono text-[var(--color-text-primary)]">{ageEvaluation.agePolicyState}</span></p>
-                  {ageEvaluation.isMinor && ageEvaluation.hasDirectAccountEligibility && (
-                    <div className="p-2 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded text-[10px] text-[var(--color-text-secondary)] flex items-start gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[var(--color-success)] shrink-0 mt-0.5" />
-                      <span>Direct account eligible ({DIRECT_ACCOUNT_MIN_AGE}+ policy). Minor safeguarding controls active (profile default-private, restricted employer contact).</span>
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
 
             {/* GUARDIAN EMAIL FIELD FOR AGES 13-15 */}
@@ -297,51 +345,64 @@ export default function SignupPage() {
               </div>
             )}
 
+            {/* TERMS & PRIVACY CHECKBOX WITH NON-DESTRUCTIVE TARGET=_BLANK LINKS */}
             <div className="flex items-start gap-3 pt-1">
               <input
                 id="terms-checkbox"
                 type="checkbox"
                 checked={agreedToTerms}
-                onChange={(e) => setAgreedToTerms(e.target.checked)}
+                onChange={(e) => { setAgreedToTerms(e.target.checked); setErrorMessage(''); }}
                 className="mt-0.5 h-4 w-4 rounded border-[var(--color-border-strong)] text-[var(--color-brand-600)] focus:ring-[var(--color-focus)]"
                 required
               />
               <label htmlFor="terms-checkbox" className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                I agree to the Career OS{" "}
-                <Link href={ROUTES.LEGAL_TERMS} className="text-[var(--color-brand-600)] hover:underline">
+                I agree to the Career OS{' '}
+                <a
+                  href={ROUTES.LEGAL_TERMS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-brand-600)] hover:underline font-medium"
+                >
                   Terms of Service
-                </Link>{" "}
-                and{" "}
-                <Link href={ROUTES.LEGAL_PRIVACY} className="text-[var(--color-brand-600)] hover:underline">
+                </a>{' '}
+                and{' '}
+                <a
+                  href={ROUTES.LEGAL_PRIVACY}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-brand-600)] hover:underline font-medium"
+                >
                   Privacy Policy
-                </Link>
+                </a>
                 .
               </label>
             </div>
 
             {errorMessage && (
-              <p className="text-xs text-[var(--color-danger)]">{errorMessage}</p>
+              <p className="text-xs text-[var(--color-danger)]" role="alert">
+                {errorMessage}
+              </p>
             )}
 
             <Button
               type="submit"
               variant="primary"
               size="md"
-              className="w-full"
-              disabled={isLoading || !agreedToTerms || !dateOfBirth || ageEvaluation?.isHardBlocked}
+              className="w-full font-semibold"
+              disabled={isLoading || !agreedToTerms || !isDobValid || !email || ageEvaluation?.isHardBlocked}
             >
               {isLoading
-                ? "Sending verification code…"
+                ? 'Creating account…'
                 : ageEvaluation?.requiresGuardianConsent
-                ? "Submit for Guardian Verification"
-                : "Create Free Account"}
+                ? 'Submit for Guardian Verification'
+                : 'Create Free Account'}
             </Button>
           </form>
         )}
 
-        {step === "details" && (
+        {step === 'details' && (
           <div className="text-center text-xs text-[var(--color-text-tertiary)]">
-            Already have an account?{" "}
+            Already have an account?{' '}
             <Link href={ROUTES.LOGIN} className="text-[var(--color-brand-600)] font-semibold hover:underline">
               Log in
             </Link>

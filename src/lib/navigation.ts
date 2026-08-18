@@ -207,6 +207,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
           { label: 'Safeguarding', href: ROUTES.TRUST_SAFEGUARDING, description: 'Student protection, minor access gating, and school safety.' },
           { label: 'Security', href: ROUTES.TRUST_SECURITY, description: 'Encryption, tenant isolation, and PostgreSQL RLS security.' },
           { label: 'Verification', href: ROUTES.TRUST_VERIFICATION, description: 'Evidence verification and credential provenance.' },
+          { label: 'Data Sources & Integrations', href: ROUTES.LEGAL_DATA_SOURCES, description: 'Public register of every external data source and integration CareerOS uses.' },
           { label: 'Accessibility', href: ROUTES.TRUST_ACCESSIBILITY, description: 'WCAG 2.2 Level AA accessibility commitment.' },
         ],
       },
@@ -221,7 +222,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
         items: [
           { label: 'About Career OS', href: ROUTES.COMPANY_ABOUT },
           { label: 'Mission & Principles', href: ROUTES.COMPANY_MISSION },
-          { label: 'Partners', href: ROUTES.COMPANY_PARTNERS },
+          { label: 'Partners & Ecosystem', href: ROUTES.COMPANY_PARTNERS },
         ],
       },
       {
@@ -230,6 +231,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
           { label: 'Press', href: ROUTES.COMPANY_PRESS },
           { label: 'Careers', href: ROUTES.COMPANY_CAREERS },
           { label: 'Contact', href: ROUTES.COMPANY_CONTACT },
+          { label: 'Partner with CareerOS', href: ROUTES.CONTACT_PARTNERSHIPS },
         ],
       },
     ],
