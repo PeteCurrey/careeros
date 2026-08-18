@@ -4,6 +4,7 @@ import React from 'react';
 import { ScrollReveal } from '@/components/brand/ScrollReveal';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 import { HumanCareerAnnotation } from '@/components/brand/HumanCareerAnnotation';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
 const CAREER_JOURNEY_STAGES = [
   'Education',
@@ -72,9 +73,9 @@ export function TheProblemSection() {
             <ScrollReveal delayMs={100}>
               <h2 className="text-display-section text-[var(--color-text-primary)] max-w-3xl leading-[1.08]">
                 Careers aren&apos;t linear anymore. <br />
-                <span className="text-[#2F8FFF] font-normal">
+                <CareerGradientText variant="blue" className="font-normal">
                   Career support shouldn&apos;t be either.
-                </span>
+                </CareerGradientText>
               </h2>
             </ScrollReveal>
 

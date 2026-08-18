@@ -30,6 +30,9 @@ import { CapabilityBriefInteractive } from '@/components/marketing/employers/Cap
 import { AdjacentTalentInteractive } from '@/components/marketing/employers/AdjacentTalentInteractive';
 import { FoundingEmployerForm } from '@/components/marketing/employers/FoundingEmployerForm';
 import { EmployerConversionFaq } from '@/components/marketing/employers/EmployerConversionFaq';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -130,9 +133,9 @@ export default function ForEmployersPage() {
               <div className="space-y-3">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.12]">
                   Hire for the capability you need.
-                  <span className="block text-[var(--color-text-secondary)] font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
+                  <CareerGradientText variant="blue" className="block font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
                     Not only the title somebody already has.
-                  </span>
+                  </CareerGradientText>
                 </h1>
               </div>
 

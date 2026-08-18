@@ -34,6 +34,9 @@ import { BridgeArchitectureVisual } from '@/components/marketing/career-graph/Br
 import { CareerChangeStories } from '@/components/marketing/career-graph/CareerChangeStories';
 import { StudentPathwayGraph } from '@/components/marketing/career-graph/StudentPathwayGraph';
 import { EcosystemIntegrationSection } from '@/components/marketing/career-graph/EcosystemIntegrationSection';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 
 export const metadata: Metadata = {
   title: 'Career Graph for Career Change, Progression & Transferable Skills',
@@ -100,7 +103,10 @@ export default function CareerGraphPage() {
             </div>
 
             <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">
-              Your next career may be closer to your current one than you think.
+              Your next career may be{' '}
+              <CareerGradientText variant="blue">
+                closer to your current one than you think.
+              </CareerGradientText>
             </h1>
 
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-3xl font-light">

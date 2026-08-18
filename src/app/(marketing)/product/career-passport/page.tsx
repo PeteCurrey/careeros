@@ -34,6 +34,9 @@ import { CrossCareerEvidenceGrid } from '@/components/marketing/career-passport/
 import { SelectiveSharingSimulator } from '@/components/marketing/career-passport/SelectiveSharingSimulator';
 import { MayaTechnicianPassportView } from '@/components/marketing/career-passport/MayaTechnicianPassportView';
 import { TransferableEvidenceFlow } from '@/components/marketing/career-passport/TransferableEvidenceFlow';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 
 export const metadata: Metadata = {
   title: 'Career Passport for Skills, Credentials & Professional Evidence | Career OS',
@@ -185,9 +188,9 @@ export default function CareerPassportPage() {
 
             <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">
               Don’t just say what you can do.{' '}
-              <span className="italic font-normal block sm:inline">
+              <CareerGradientText variant="gold" className="italic font-normal block sm:inline">
                 Carry the evidence.
-              </span>
+              </CareerGradientText>
             </h1>
 
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">

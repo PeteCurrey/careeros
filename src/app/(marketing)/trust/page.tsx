@@ -20,6 +20,7 @@ import {
   CheckCircle2,
   Bot,
 } from 'lucide-react';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
 export const metadata: Metadata = {
   title: 'Trust Center | AI should open doors. Not decide who gets through them. | Career OS',
@@ -87,7 +88,7 @@ export default function TrustCenterPage() {
           <>
             AI should open doors.
             <br className="hidden sm:block" />
-            <span className="text-[#6BB8FF]"> Not decide who gets through them.</span>
+            <CareerGradientText variant="blue"> Not decide who gets through them.</CareerGradientText>
           </>
         }
         lead="Career OS is built on a simple premise: technology should expand human opportunity. Not quietly rank it, gate it, or make consequential choices on people's behalf. Every AI capability we deploy is governed by seven principles, tested for foreseeable risks, and made accountable through public registers."

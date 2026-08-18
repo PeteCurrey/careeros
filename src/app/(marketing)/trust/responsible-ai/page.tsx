@@ -8,17 +8,24 @@ import { TrustHero } from '@/components/trust/TrustHero';
 import { TrustRiskFramework } from '@/components/trust/TrustRiskFramework';
 import { RegulatoryReferencesPanel } from '@/components/trust/RegulatoryReferencesPanel';
 import {
-  Bot,
-  Ban,
-  CheckCircle2,
   ShieldCheck,
-  UserCheck,
-  AlertCircle,
+  Eye,
+  Scale,
+  Lock,
+  Users,
+  FileCheck,
+  Bot,
   ArrowRight,
+  CheckCircle2,
+  AlertTriangle,
+  ChevronRight,
+  Info,
+  Ban,
+  AlertCircle,
   Gavel,
   BarChart2,
-  Lock,
 } from 'lucide-react';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
 export const metadata: Metadata = {
   title: 'Responsible AI | Powerful enough to help. Governed enough to trust. | Career OS',
@@ -101,7 +108,7 @@ export default function ResponsibleAIPage() {
           <>
             Powerful enough to help.
             <br className="hidden sm:block" />
-            <span className="text-[#6BB8FF]"> Governed enough to trust.</span>
+            <CareerGradientText variant="blue"> Governed enough to trust.</CareerGradientText>
           </>
         }
         lead="Career OS applies a comprehensive responsible AI framework to every AI system we operate. This is not a compliance exercise. It is the operational architecture that determines what AI we build, how we govern it, and what we explicitly refuse to create."

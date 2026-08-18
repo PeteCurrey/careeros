@@ -11,15 +11,21 @@ import { AIRecommendationFlow } from '@/components/trust/AIRecommendationFlow';
 import { AIChangeLog } from '@/components/trust/AIChangeLog';
 import {
   Eye,
-  AlertCircle,
-  CheckCircle2,
-  ArrowRight,
-  Lightbulb,
-  Database,
+  ShieldCheck,
+  Cpu,
   Bot,
-  ShieldAlert,
-  BadgeInfo,
+  Sparkles,
+  ArrowRight,
+  CheckCircle2,
+  Lock,
+  Layers,
+  History,
+  FileText,
+  HelpCircle,
+  Clock,
+  Info,
 } from 'lucide-react';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
 export const metadata: Metadata = {
   title: 'AI Transparency | You should know when AI is involved. And what it is doing. | Career OS',
@@ -76,7 +82,7 @@ export default function AITransparencyPage() {
           <>
             You should know when AI
             <br className="hidden sm:block" />
-            <span className="text-[#6BB8FF]"> is involved. And what it is doing.</span>
+            <CareerGradientText variant="blue"> is involved. And what it is doing.</CareerGradientText>
           </>
         }
         lead="Career OS believes that meaningful transparency is not a badge. It is a system design requirement. This page publishes every active AI use case, the foundation models powering them, how recommendations are generated, what AI cannot know, and a versioned record of every AI capability change."

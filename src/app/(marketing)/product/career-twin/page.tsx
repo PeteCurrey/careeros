@@ -35,6 +35,9 @@ import { VerificationWorkflowStory } from '@/components/marketing/career-twin/Ve
 import { TechnicianScenarioInteractive } from '@/components/marketing/career-twin/TechnicianScenarioInteractive';
 import { TransferableSkillsGraph } from '@/components/marketing/career-twin/TransferableSkillsGraph';
 import { TwinPrivacySimulator } from '@/components/marketing/career-twin/TwinPrivacySimulator';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 
 export const metadata: Metadata = {
   title: 'Career Twin: Build an Evolving Professional Profile | Career OS',
@@ -178,9 +181,9 @@ export default function CareerTwinPage() {
 
             <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)]">
               Your résumé shows where you’ve been.{' '}
-              <span className="italic font-normal block sm:inline">
+              <CareerGradientText variant="blue" className="italic font-normal block sm:inline">
                 Your Career Twin helps reveal where you could go.
-              </span>
+              </CareerGradientText>
             </h1>
 
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">

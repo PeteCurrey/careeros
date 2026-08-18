@@ -11,6 +11,9 @@ import { ROUTES } from '@/lib/routes';
 import { MEDIA_ASSETS } from '@/lib/media';
 import { ArrowRight, Calendar, Sparkles, Building2, GraduationCap, Lightbulb, Users, Globe, ShieldCheck, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 
 const DEFAULT_FILTERS: EventFilterState = {
   searchQuery: '',
@@ -115,7 +118,10 @@ export default function EventsDiscoveryPage() {
             </div>
 
             <h1 className="text-display-section text-[var(--color-text-primary)] leading-[1.06]">
-              Go where<br />opportunity happens.
+              Go where<br />
+              <CareerGradientText variant="blue">
+                opportunity happens.
+              </CareerGradientText>
             </h1>
 
             <p className="text-lead max-w-xl">

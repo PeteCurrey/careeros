@@ -23,6 +23,9 @@ import { LifetimeJourneyVisual } from '@/components/marketing/how-it-works/Lifet
 import { DiverseCareersVisual } from '@/components/marketing/how-it-works/DiverseCareersVisual';
 import { ProductLayersSection } from '@/components/marketing/how-it-works/ProductLayersSection';
 import { CareerOSInActionDemo } from '@/components/marketing/how-it-works/CareerOSInActionDemo';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 
 import type { Metadata } from 'next';
 
@@ -138,7 +141,9 @@ export default function HowItWorksPage() {
               <h1 className="text-display-hero font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.08]">
                 Your career is already a system.
                 <br />
-                <span className="text-[var(--color-text-secondary)]">Career OS makes it visible.</span>
+                <CareerGradientText variant="blue">
+                  Career OS makes it visible.
+                </CareerGradientText>
               </h1>
               <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-xl">
                 Career OS is designed to connect career guidance, professional context, evidence,

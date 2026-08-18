@@ -15,6 +15,9 @@ import { LifetimeTimelineInteractive } from '@/components/marketing/ai-career-me
 import { QuestionSelectorInteractive } from '@/components/marketing/ai-career-mentor/QuestionSelectorInteractive';
 import { ActionLoopDiagram } from '@/components/marketing/ai-career-mentor/ActionLoopDiagram';
 import { PrivacySimulatorInteractive } from '@/components/marketing/ai-career-mentor/PrivacySimulatorInteractive';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 import {
   Sparkles,
   ShieldCheck,
@@ -180,7 +183,10 @@ export default function AICareerMentorPage() {
                 id="hero-title"
                 className="text-display-hero font-serif font-normal text-[var(--color-text-primary)] tracking-tight"
               >
-                A career mentor that learns where you&apos;re trying to go.
+                A career mentor that learns{' '}
+                <CareerGradientText variant="lilac" className="font-serif">
+                  where you&apos;re trying to go.
+                </CareerGradientText>
               </h1>
 
               <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">

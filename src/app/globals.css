@@ -79,6 +79,17 @@
   --color-blue-accent-subtle: rgba(47, 143, 255, 0.12);
   --color-blue-accent-border: rgba(47, 143, 255, 0.18);
 
+  /* --- Continuous Blue Gradient Palette --- */
+  --career-blue-start: #1D64D8;
+  --career-blue-mid: #2F8FFF;
+  --career-blue-end: #6BB8FF;
+  --career-lilac-start: #B49CB9;
+  --career-lilac-mid: #CDBBD2;
+  --career-lilac-end: #E8DFE9;
+  --career-gold-start: #C7BC54;
+  --career-gold-mid: #DDD36D;
+  --career-gold-end: #EFE9B8;
+
   /* --- Active Surfaces Mapping --- */
   --color-surface-base: #393939;
   --color-surface-raised: #414141;
@@ -246,6 +257,58 @@ body {
   font-size: 0.875rem;
   line-height: 1.5;
   color: var(--color-text-tertiary);
+}
+
+/* ============================================================
+   CONTINUOUS CAREEROS GRADIENT TEXT UTILITIES
+   Spans the entire phrase as one continuous graphical surface.
+   Never splits characters or resets gradients per-word.
+   ============================================================ */
+.career-gradient-blue,
+.text-gradient-blue {
+  background: linear-gradient(90deg, var(--career-blue-start) 0%, var(--career-blue-mid) 48%, var(--career-blue-end) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline;
+}
+
+.career-gradient-lilac,
+.text-gradient-lilac {
+  background: linear-gradient(90deg, var(--career-lilac-start) 0%, var(--career-lilac-mid) 50%, var(--career-lilac-end) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline;
+}
+
+.career-gradient-gold,
+.text-gradient-gold {
+  background: linear-gradient(90deg, var(--career-gold-start) 0%, var(--career-gold-mid) 50%, var(--career-gold-end) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline;
+}
+
+@media (forced-colors: active) {
+  .career-gradient-blue,
+  .text-gradient-blue,
+  .career-gradient-lilac,
+  .text-gradient-lilac,
+  .career-gradient-gold,
+  .text-gradient-gold {
+    color: Highlight;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
 }
 
 /* Section Sub-labels (Restrained Uppercase Sans, Never Monospace) */

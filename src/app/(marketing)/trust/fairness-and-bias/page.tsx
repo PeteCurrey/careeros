@@ -8,17 +8,26 @@ import { TrustHero } from '@/components/trust/TrustHero';
 import { FairnessTestingMethodology } from '@/components/trust/FairnessTestingMethodology';
 import {
   Scale,
-  AlertCircle,
-  CheckCircle2,
+  ShieldCheck,
+  Eye,
+  AlertTriangle,
+  Users,
+  FileCheck,
   ArrowRight,
+  CheckCircle2,
+  Lock,
+  ChevronRight,
+  Info,
+  Layers,
   BookOpen,
+  AlertCircle,
   Briefcase,
   GraduationCap,
   Wrench,
   Mail,
-  ShieldCheck,
   Building2,
 } from 'lucide-react';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
 export const metadata: Metadata = {
   title: 'Fairness & Bias | Fairness isn\'t a claim. It\'s something you have to keep testing. | Career OS',
@@ -128,7 +137,7 @@ export default function FairnessAndBiasPage() {
           <>
             Fairness isn&apos;t a claim.
             <br className="hidden sm:block" />
-            <span className="text-[#6BB8FF]"> It&apos;s something you have to keep testing.</span>
+            <CareerGradientText variant="blue"> It&apos;s something you have to keep testing.</CareerGradientText>
           </>
         }
         lead="Career OS does not claim to be bias-free. No AI system can make that claim credibly. What we commit to is a rigorous, documented testing methodology applied continuously — with honest disclosure of residual limitations. Fairness in career technology requires active architectural choices, not passive good intentions."

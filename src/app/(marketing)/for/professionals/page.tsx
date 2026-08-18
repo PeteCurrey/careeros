@@ -28,6 +28,9 @@ import { PromotionReadinessInteractive } from '@/components/marketing/profession
 import { CareerTransferExplorer } from '@/components/marketing/professionals/CareerTransferExplorer';
 import { PrivacySimulator } from '@/components/marketing/professionals/PrivacySimulator';
 import { ProfessionalFAQ } from '@/components/marketing/professionals/ProfessionalFAQ';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -128,9 +131,9 @@ export default function ForProfessionalsPage() {
               <div className="space-y-3">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.12]">
                   Don&apos;t wait until you need a new job to think about your career.
-                  <span className="block text-[var(--color-text-secondary)] font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
+                  <CareerGradientText variant="blue" className="block font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
                     Build the next move while you&apos;re still making this one count.
-                  </span>
+                  </CareerGradientText>
                 </h1>
               </div>
 

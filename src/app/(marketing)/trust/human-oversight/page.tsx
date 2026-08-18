@@ -9,17 +9,20 @@ import { HumanOversightRoles } from '@/components/trust/HumanOversightRoles';
 import { DecisionBoundariesTable } from '@/components/trust/DecisionBoundariesTable';
 import { EscalationWorkflowVisual } from '@/components/trust/EscalationWorkflowVisual';
 import {
-  Users,
+  UserCheck,
   ShieldCheck,
-  GraduationCap,
+  Eye,
+  AlertTriangle,
+  Scale,
+  Users,
+  FileCheck,
   ArrowRight,
-  AlertCircle,
   CheckCircle2,
-  MessageSquare,
-  Mail,
   Lock,
-  HeartHandshake,
+  ChevronRight,
+  Info,
 } from 'lucide-react';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
 
 export const metadata: Metadata = {
   title: 'Human Oversight | AI can recommend. Humans remain accountable. | Career OS',
@@ -110,7 +113,7 @@ export default function HumanOversightPage() {
           <>
             AI can recommend.
             <br className="hidden sm:block" />
-            <span className="text-[#6BB8FF]"> Humans remain accountable.</span>
+            <CareerGradientText variant="blue"> Humans remain accountable.</CareerGradientText>
           </>
         }
         lead="Career OS is designed on the principle that meaningful human oversight is not a compliance footnote — it is an architectural guarantee. No AI on Career OS makes consequential career, employment, admissions, or welfare decisions. People do. This page explains exactly where AI stops and human authority begins."

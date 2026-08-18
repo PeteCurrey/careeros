@@ -40,6 +40,9 @@ import { SchoolImplementationRoadmap } from '@/components/marketing/high-schools
 import { SchoolLifetimeTransitionVisual } from '@/components/marketing/high-schools/SchoolLifetimeTransitionVisual';
 import { LaunchSchoolForm } from '@/components/marketing/high-schools/LaunchSchoolForm';
 import { HighSchoolsFAQ } from '@/components/marketing/high-schools/HighSchoolsFAQ';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 
 export const metadata: Metadata = {
   title: 'Career Guidance for High Schools & Students | Career OS',
@@ -134,7 +137,10 @@ export default function HighSchoolsPage() {
             </div>
 
             <h1 className="text-display-hero text-white">
-              Every student deserves more than one career conversation.
+              Every student deserves{' '}
+              <CareerGradientText variant="blue">
+                more than one career conversation.
+              </CareerGradientText>
             </h1>
 
             <p className="text-headline-editorial text-[var(--color-text-secondary)] font-normal">

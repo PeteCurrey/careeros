@@ -24,6 +24,9 @@ import { StudentMindsetInteractive } from '@/components/marketing/students/Stude
 import { StudentCareerExplorer } from '@/components/marketing/students/StudentCareerExplorer';
 import { StudentPathwayComparison } from '@/components/marketing/students/StudentPathwayComparison';
 import { StudentFAQ } from '@/components/marketing/students/StudentFAQ';
+import { CareerGradientText } from '@/components/brand/CareerGradientText';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { CareerPathwayConnector } from '@/components/brand/CareerPathwayConnector';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -124,9 +127,9 @@ export default function ForStudentsPage() {
               <div className="space-y-3">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-[var(--color-text-primary)] leading-[1.12]">
                   You don&apos;t need your whole career figured out.
-                  <span className="block text-[var(--color-text-secondary)] font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
+                  <CareerGradientText variant="blue" className="block font-sans text-2xl sm:text-3xl lg:text-4xl mt-2 font-normal">
                     You just need a better way to explore it.
-                  </span>
+                  </CareerGradientText>
                 </h1>
               </div>
 
