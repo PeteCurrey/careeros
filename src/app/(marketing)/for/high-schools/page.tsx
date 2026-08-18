@@ -400,17 +400,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Equal Pathway Parity
-            </span>
-            <h2 className="text-display-section text-white">
-              Career guidance should not quietly rank one route above another.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              The right pathway is the one that fits the student&apos;s direction—not the one with the highest perceived social prestige. Career OS displays academic, vocational, and service pathways with equal editorial dignity.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Equal Pathway Parity
+              </span>
+              <h2 className="text-display-section text-white">
+                Career guidance should not quietly rank one route above another.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                The right pathway is the one that fits the student&apos;s direction—not the one with the highest perceived social prestige. Career OS displays academic, vocational, and service pathways with equal editorial dignity.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <InteractiveSchoolPathwayExplorer />
         </div>
@@ -423,17 +425,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Career Passport in High School
-            </span>
-            <h2 className="text-display-section text-white">
-              A student career record doesn&apos;t have to begin with their first full-time job.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              A young person may leave secondary education with limited traditional employment history, but still possess meaningful evidence of capability, problem-solving, and dedication.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Career Passport in High School
+              </span>
+              <h2 className="text-display-section text-white">
+                A student career record doesn&apos;t have to begin with their first full-time job.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                A young person may leave secondary education with limited traditional employment history, but still possess meaningful evidence of capability, problem-solving, and dedication.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <StudentPassportPreview />
         </div>
@@ -446,17 +450,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Educator &amp; Counsellor Experience
-            </span>
-            <h2 className="text-display-section text-white">
-              See where your attention may matter most.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              Career OS provides structured cohort context, advising queues, and student questions without producing invasive behavioural tracking, hidden risk scores, or automated employability rankings.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Educator &amp; Counsellor Experience
+              </span>
+              <h2 className="text-display-section text-white">
+                See where your attention may matter most.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Career OS provides structured cohort context, advising queues, and student questions without producing invasive behavioural tracking, hidden risk scores, or automated employability rankings.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <InteractiveEducatorView />
         </div>
@@ -469,17 +475,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Information Boundaries
-            </span>
-            <h2 className="text-display-section text-white">
-              More context does not mean unlimited access.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              High-leverage career support requires context. It does not require eliminating student privacy. Career OS enforces purpose-based, role-governed data segregation at every layer.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Information Boundaries
+              </span>
+              <h2 className="text-display-section text-white">
+                More context does not mean unlimited access.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                High-leverage career support requires context. It does not require eliminating student privacy. Career OS enforces purpose-based, role-governed data segregation at every layer.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <InteractivePrivacyAccessViewer />
         </div>
@@ -492,17 +500,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Youth Safeguarding Framework
-            </span>
-            <h2 className="text-display-section text-white">
-              Younger users need a different product architecture.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              Career OS applies distinct product safeguards across three developmental age tiers, ensuring minors explore careers in an educational sanctuary protected from commercial solicitation.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Youth Safeguarding Framework
+              </span>
+              <h2 className="text-display-section text-white">
+                Younger users need a different product architecture.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Career OS applies distinct product safeguards across three developmental age tiers, ensuring minors explore careers in an educational sanctuary protected from commercial solicitation.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <SafeguardingArchitectureVisual />
         </div>
@@ -518,58 +528,64 @@ export default function HighSchoolsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-6 space-y-6">
-              <span className="section-label">
-                Family Partnership
-              </span>
-              <h2 className="text-display-section text-white">
-                Give families confidence without turning exploration into surveillance.
-              </h2>
-              <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-                Parents and guardians want clarity on how their children are being guided, how AI is applied, and how data is protected. Career OS provides transparent family visibility while preserving the student&apos;s safe exploratory space.
-              </p>
-              <div className="space-y-3 text-xs text-[var(--color-text-secondary)]">
-                <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-white block font-sans">Transparent Multi-Pathway Overview</strong>
-                    <span>Families can review pathway comparisons together, bridging gaps between academic and vocational route understandings.</span>
+              <ScrollReveal>
+                <div className="space-y-6">
+                  <span className="section-label">
+                    Family Partnership
+                  </span>
+                  <h2 className="text-display-section text-white">
+                    Give families confidence without turning exploration into surveillance.
+                  </h2>
+                  <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
+                    Parents and guardians want clarity on how their children are being guided, how AI is applied, and how data is protected. Career OS provides transparent family visibility while preserving the student&apos;s safe exploratory space.
+                  </p>
+                  <div className="space-y-3 text-xs text-[var(--color-text-secondary)]">
+                    <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white block font-sans">Transparent Multi-Pathway Overview</strong>
+                        <span>Families can review pathway comparisons together, bridging gaps between academic and vocational route understandings.</span>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white block font-sans">Clear AI &amp; Privacy Disclosures</strong>
+                        <span>Transparent notices detailing that Career OS never sells student career data or uses private student conversations for advertising targeting.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <Link
+                      href={ROUTES.LEGAL_PARENT_GUARDIAN}
+                      className="text-xs font-semibold text-white hover:text-[#6BB8FF] underline underline-offset-4 inline-flex items-center gap-1.5"
+                    >
+                      Read Parent &amp; Guardian Information Notice <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
-
-                <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-white block font-sans">Clear AI &amp; Privacy Disclosures</strong>
-                    <span>Transparent notices detailing that Career OS never sells student career data or uses private student conversations for advertising targeting.</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <Link
-                  href={ROUTES.LEGAL_PARENT_GUARDIAN}
-                  className="text-xs font-semibold text-white hover:text-[#6BB8FF] underline underline-offset-4 inline-flex items-center gap-1.5"
-                >
-                  Read Parent &amp; Guardian Information Notice <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+              </ScrollReveal>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-5">
-                <span className="text-xs font-mono uppercase text-[#2F8FFF] font-bold block">
-                  Family Alignment Standard
-                </span>
-                <h3 className="text-xl font-serif text-white">
-                  Supporting Informed Family Conversations
-                </h3>
-                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Career choices often create family tension when parents are unfamiliar with modern degree apprenticeships or technical salaries. Career OS provides grounded, factual labour market context so families can discuss options based on real data rather than outdated generational stereotypes.
-                </p>
-                <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded text-xs text-[var(--color-text-tertiary)] italic">
-                  &ldquo;Parental oversight is aligned with student age thresholds and statutory requirements—fostering confidence without over-monitoring early career curiosities.&rdquo;
+              <ScrollReveal delayMs={100}>
+                <div className="p-8 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-5 hover-lift card-interactive">
+                  <span className="text-xs font-mono uppercase text-[#2F8FFF] font-bold block">
+                    Family Alignment Standard
+                  </span>
+                  <h3 className="text-xl font-serif text-white">
+                    Supporting Informed Family Conversations
+                  </h3>
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                    Career choices often create family tension when parents are unfamiliar with modern degree apprenticeships or technical salaries. Career OS provides grounded, factual labour market context so families can discuss options based on real data rather than outdated generational stereotypes.
+                  </p>
+                  <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded text-xs text-[var(--color-text-tertiary)] italic">
+                    &ldquo;Parental oversight is aligned with student age thresholds and statutory requirements—fostering confidence without over-monitoring early career curiosities.&rdquo;
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
 
           </div>
@@ -583,17 +599,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Institutional Outcomes
-            </span>
-            <h2 className="text-display-section text-white">
-              Measure whether career education is happening—not whether every student chose the same route.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              Career OS tracks meaningful engagement signals: pathway exploration breadth, pre-conversation advising completion, and evidence logging. We do not invent premature employment outcomes or reductive employability scores.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Institutional Outcomes
+              </span>
+              <h2 className="text-display-section text-white">
+                Measure whether career education is happening—not whether every student chose the same route.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Career OS tracks meaningful engagement signals: pathway exploration breadth, pre-conversation advising completion, and evidence logging. We do not invent premature employment outcomes or reductive employability scores.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <SchoolOutcomesAggregateVisual />
         </div>
@@ -606,17 +624,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Deployment &amp; Rollout
-            </span>
-            <h2 className="text-display-section text-white">
-              Start without rebuilding your entire school technology stack.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              A pragmatic 6-phase institutional rollout designed for seamless adoption by school leadership, careers departments, and students.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Deployment &amp; Rollout
+              </span>
+              <h2 className="text-display-section text-white">
+                Start without rebuilding your entire school technology stack.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                A pragmatic 6-phase institutional rollout designed for seamless adoption by school leadership, careers departments, and students.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <SchoolImplementationRoadmap />
         </div>
@@ -629,17 +649,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Procurement &amp; Governance
-            </span>
-            <h2 className="text-display-section text-white">
-              Your privacy and technology teams should be able to ask difficult questions.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              We welcome rigorous institutional scrutiny from district data protection officers, IT administrators, and safeguarding leaders.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Procurement &amp; Governance
+              </span>
+              <h2 className="text-display-section text-white">
+                Your privacy and technology teams should be able to ask difficult questions.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                We welcome rigorous institutional scrutiny from district data protection officers, IT administrators, and safeguarding leaders.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -674,26 +696,27 @@ export default function HighSchoolsPage() {
                 desc: 'Targeted WCAG 2.2 AA standards, keyboard navigation, screen reader compatibility, and plain language.',
               },
             ].map((p, i) => (
-              <Link
-                key={i}
-                href={p.href}
-                className="group p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_16px_rgba(47,143,255,0.06)] transition-all flex flex-col justify-between space-y-4"
-              >
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-sm font-bold text-white group-hover:text-[#6BB8FF] transition-colors">
-                      {p.title}
-                    </h4>
-                    <ArrowRight className="w-4 h-4 text-[var(--color-taupe-400)] group-hover:text-[#2F8FFF] transform group-hover:translate-x-0.5 transition-all" />
+              <ScrollReveal key={i} delayMs={i * 60}>
+                <Link
+                  href={p.href}
+                  className="group p-6 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_16px_rgba(47,143,255,0.06)] transition-all flex flex-col justify-between space-y-4 hover-lift card-interactive h-full"
+                >
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-sm font-bold text-white group-hover:text-[#6BB8FF] transition-colors">
+                        {p.title}
+                      </h4>
+                      <ArrowRight className="w-4 h-4 text-[var(--color-taupe-400)] group-hover:text-[#2F8FFF] transform group-hover:translate-x-0.5 transition-all" />
+                    </div>
+                    <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                      {p.desc}
+                    </p>
                   </div>
-                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                    {p.desc}
-                  </p>
-                </div>
-                <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase tracking-wider">
-                  Review Official Document →
-                </span>
-              </Link>
+                  <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                    Review Official Document →
+                  </span>
+                </Link>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -706,17 +729,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Lifelong Architecture
-            </span>
-            <h2 className="text-display-section text-white">
-              Career support shouldn&apos;t expire when a student leaves school.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              The student&apos;s institutional relationship with the school reaches its planned conclusion. Their working life is only beginning. Career OS provides the unbroken thread that accompanies them forward.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Lifelong Architecture
+              </span>
+              <h2 className="text-display-section text-white">
+                Career support shouldn&apos;t expire when a student leaves school.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                The student&apos;s institutional relationship with the school reaches its planned conclusion. Their working life is only beginning. Career OS provides the unbroken thread that accompanies them forward.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <SchoolLifetimeTransitionVisual />
         </div>
@@ -728,81 +753,91 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Implementation Scenario
-            </span>
-            <h2 className="text-display-section text-white">
-              Illustrative Launch School Scenario
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              How a comprehensive secondary school with 1,200 students deploys Career OS to expand guidance capacity across Year 11 and Year 12 cohorts.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Implementation Scenario
+              </span>
+              <h2 className="text-display-section text-white">
+                Illustrative Launch School Scenario
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                How a comprehensive secondary school with 1,200 students deploys Career OS to expand guidance capacity across Year 11 and Year 12 cohorts.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-4 p-6 sm:p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="text-xs font-mono uppercase text-[#2F8FFF] font-bold">
-                  School Profile
-                </span>
-                <h3 className="text-xl font-serif text-white">
-                  Oakridge Comprehensive High School
-                </h3>
-                <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  1,200 students (Ages 14–18). Team: 2 full-time certified career counsellors supported by form tutors.
-                </p>
-                <div className="space-y-1.5 pt-2 font-mono text-[11px] text-[var(--color-text-tertiary)]">
-                  <div>&bull; Cohort: 280 Year 11 students</div>
-                  <div>&bull; Challenge: Finite 1:1 advising time</div>
-                  <div>&bull; Goal: Increase apprenticeship parity</div>
-                </div>
-              </div>
+            <div className="lg:col-span-4">
+              <ScrollReveal delayMs={0}>
+                <div className="p-6 sm:p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-4 flex flex-col justify-between hover-lift card-interactive h-full">
+                  <div className="space-y-3">
+                    <span className="text-xs font-mono uppercase text-[#2F8FFF] font-bold">
+                      School Profile
+                    </span>
+                    <h3 className="text-xl font-serif text-white">
+                      Oakridge Comprehensive High School
+                    </h3>
+                    <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                      1,200 students (Ages 14–18). Team: 2 full-time certified career counsellors supported by form tutors.
+                    </p>
+                    <div className="space-y-1.5 pt-2 font-mono text-[11px] text-[var(--color-text-tertiary)]">
+                      <div>&bull; Cohort: 280 Year 11 students</div>
+                      <div>&bull; Challenge: Finite 1:1 advising time</div>
+                      <div>&bull; Goal: Increase apprenticeship parity</div>
+                    </div>
+                  </div>
 
-              <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-emerald-400">
-                Illustrative deployment scenario
-              </div>
+                  <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-emerald-400">
+                    Illustrative deployment scenario
+                  </div>
+                </div>
+              </ScrollReveal>
             </div>
 
-            <div className="lg:col-span-8 p-6 sm:p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
-              <div className="space-y-1 border-b border-[var(--color-border-default)] pb-4">
-                <span className="text-xs font-mono uppercase tracking-wider text-[#6BB8FF] font-semibold">
-                  Deployment Impact &amp; Workflow
-                </span>
-                <h4 className="text-lg font-serif font-medium text-white">
-                  From Rushed 15-Minute Meetings to High-Leverage Advising
-                </h4>
-              </div>
+            <div className="lg:col-span-8">
+              <ScrollReveal delayMs={100}>
+                <div className="p-6 sm:p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6 hover-lift card-interactive">
+                  <div className="space-y-1 border-b border-[var(--color-border-default)] pb-4">
+                    <span className="text-xs font-mono uppercase tracking-wider text-[#6BB8FF] font-semibold">
+                      Deployment Impact &amp; Workflow
+                    </span>
+                    <h4 className="text-lg font-serif font-medium text-white">
+                      From Rushed 15-Minute Meetings to High-Leverage Advising
+                    </h4>
+                  </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
-                  <span className="font-bold text-white block">Student Exploration Rhythm</span>
-                  <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                    Students explore 3.5x more pathway combinations using Career Mentor during weekly advisory blocks, logging early project artifacts in their Career Passport.
-                  </p>
-                </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                    <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
+                      <span className="font-bold text-white block">Student Exploration Rhythm</span>
+                      <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                        Students explore 3.5x more pathway combinations using Career Mentor during weekly advisory blocks, logging early project artifacts in their Career Passport.
+                      </p>
+                    </div>
 
-                <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
-                  <span className="font-bold text-white block">Counsellor Efficiency</span>
-                  <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                    Advisors review 1-page pre-conversation briefs ahead of appointments, diving straight into critical decisions rather than initial discovery.
-                  </p>
-                </div>
+                    <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
+                      <span className="font-bold text-white block">Counsellor Efficiency</span>
+                      <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                        Advisors review 1-page pre-conversation briefs ahead of appointments, diving straight into critical decisions rather than initial discovery.
+                      </p>
+                    </div>
 
-                <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
-                  <span className="font-bold text-white block">Equitable Pathway Access</span>
-                  <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                    Apprenticeship and technical trade exploration increases by 40% across students who previously only considered traditional 4-year degrees.
-                  </p>
-                </div>
+                    <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
+                      <span className="font-bold text-white block">Equitable Pathway Access</span>
+                      <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                        Apprenticeship and technical trade exploration increases by 40% across students who previously only considered traditional 4-year degrees.
+                      </p>
+                    </div>
 
-                <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
-                  <span className="font-bold text-white block">Zero Administrative Burden</span>
-                  <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                    Milestone tracking and follow-up reminders are automated within the student Career Twin with zero manual spreadsheet logging for teachers.
-                  </p>
+                    <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
+                      <span className="font-bold text-white block">Zero Administrative Burden</span>
+                      <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                        Milestone tracking and follow-up reminders are automated within the student Career Twin with zero manual spreadsheet logging for teachers.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -815,18 +850,20 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial-lg bg-[var(--background-dark-deep)] border-b border-[var(--color-border-default)]" id="launch-school-section">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="section-label flex items-center justify-center gap-2">
-              <span className="accent-blue-dot accent-blue-dot-pulse" />
-              Launch School Early Adopter Programme
-            </span>
-            <h2 className="text-display-section text-white">
-              Help shape Career OS with us.
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              Partner with Career OS to bring continuous, equitable career guidance, apprenticeship discovery, and early evidence building to your students with absolute data integrity.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <span className="section-label flex items-center justify-center gap-2">
+                <span className="accent-blue-dot accent-blue-dot-pulse" />
+                Launch School Early Adopter Programme
+              </span>
+              <h2 className="text-display-section text-white">
+                Help shape Career OS with us.
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Partner with Career OS to bring continuous, equitable career guidance, apprenticeship discovery, and early evidence building to your students with absolute data integrity.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <LaunchSchoolForm />
         </div>
@@ -838,17 +875,19 @@ export default function HighSchoolsPage() {
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
-          <div className="max-w-3xl space-y-4">
-            <span className="section-label">
-              Frequently Asked Questions
-            </span>
-            <h2 className="text-display-section text-white">
-              Institutional Governance, Privacy &amp; Deployment FAQ
-            </h2>
-            <p className="text-lead text-[var(--color-text-secondary)]">
-              Detailed answers for school principals, district superintendents, careers leads, and data privacy officers.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl space-y-4">
+              <span className="section-label">
+                Frequently Asked Questions
+              </span>
+              <h2 className="text-display-section text-white">
+                Institutional Governance, Privacy &amp; Deployment FAQ
+              </h2>
+              <p className="text-lead text-[var(--color-text-secondary)]">
+                Detailed answers for school principals, district superintendents, careers leads, and data privacy officers.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <HighSchoolsFAQ />
         </div>
@@ -870,41 +909,43 @@ export default function HighSchoolsPage() {
         />
 
         <div className="container-editorial relative z-10 space-y-12 max-w-4xl mx-auto text-center">
-          <div className="space-y-6">
-            <span className="section-label flex items-center justify-center gap-2">
-              <span className="accent-blue-dot accent-blue-dot-pulse" />
-              The Future of Institutional Career Guidance
-            </span>
+          <ScrollReveal direction="none">
+            <div className="space-y-6">
+              <span className="section-label flex items-center justify-center gap-2">
+                <span className="accent-blue-dot accent-blue-dot-pulse" />
+                The Future of Institutional Career Guidance
+              </span>
 
-            <h2 className="text-display-hero text-white">
-              Give every student more room to explore their future.
-            </h2>
+              <h2 className="text-display-hero text-white">
+                Give every student more room to explore their future.
+              </h2>
 
-            <p className="text-lead text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
-              Career OS is being built to extend the reach of school career teams, strengthen student exploration, and create a compound capability foundation that continues long after graduation.
-            </p>
-          </div>
+              <p className="text-lead text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
+                Career OS is being built to extend the reach of school career teams, strengthen student exploration, and create a compound capability foundation that continues long after graduation.
+              </p>
+            </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <Button href="#launch-school-form" variant="primary" size="lg">
-              Become a Launch School <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-            <Button href={ROUTES.FOR_STUDENTS} variant="secondary" size="lg">
-              Explore Career OS for Students →
-            </Button>
-          </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+              <Button href="#launch-school-form" variant="primary" size="lg">
+                Become a Launch School <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+              <Button href={ROUTES.FOR_STUDENTS} variant="secondary" size="lg">
+                Explore Career OS for Students →
+              </Button>
+            </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[var(--color-text-tertiary)] pt-4">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" /> Dedicated Institutional Pilot Support
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#2F8FFF]" /> Zero Student Commercial Advertising
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Lock className="w-4 h-4 text-[var(--color-gold-base)]" /> Purpose-Based Role Governance
-            </span>
-          </div>
+            <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[var(--color-text-tertiary)] pt-8">
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-emerald-400" /> Dedicated Institutional Pilot Support
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-[#2F8FFF]" /> Zero Student Commercial Advertising
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Lock className="w-4 h-4 text-[var(--color-gold-base)]" /> Purpose-Based Role Governance
+              </span>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>
