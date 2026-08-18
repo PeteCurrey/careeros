@@ -220,6 +220,8 @@ export function HeroMentorSection() {
               style={{
                 color: 'var(--color-text-primary)',
                 maxWidth: '14ch',
+                fontSize: 'clamp(2.6rem, 4.8vw, 5.5rem)',
+                fontWeight: 325,
               }}
             >
               <span style={textStagger(0.12)} className="inline-block">
@@ -253,6 +255,8 @@ export function HeroMentorSection() {
               style={{
                 maxWidth: '560px',
                 color: 'var(--color-text-secondary)',
+                fontSize: 'clamp(1rem, 1.25vw, 1.2rem)',
+                fontWeight: 325,
                 ...textStagger(0.52),
               }}
             >
