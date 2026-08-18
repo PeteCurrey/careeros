@@ -220,7 +220,7 @@ export function HeroMentorSection() {
               style={{
                 color: 'var(--color-text-primary)',
                 maxWidth: '14ch',
-                fontSize: 'clamp(2.6rem, 4.8vw, 5.5rem)',
+                fontSize: 'clamp(2.2rem, 3.8vw, 4.4rem)',
                 fontWeight: 325,
               }}
             >
@@ -255,7 +255,7 @@ export function HeroMentorSection() {
               style={{
                 maxWidth: '560px',
                 color: 'var(--color-text-secondary)',
-                fontSize: 'clamp(1rem, 1.25vw, 1.2rem)',
+                fontSize: 'clamp(0.9rem, 1.05vw, 1.05rem)',
                 fontWeight: 325,
                 ...textStagger(0.52),
               }}
