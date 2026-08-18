@@ -1,6 +1,7 @@
-import { NextResponse, type NextRequest } from 'next/server';
-import { createClient, createAdminClient } from '@/lib/supabase/server';
-import { generateWebAuthnChallenge, createPasskeyRegistrationOptions } from '@/lib/auth/passkeys';
+import { NextResponse, type NextRequest } from "next/server";
+import { cookies } from "next/headers";
+import { createClient, createAdminClient } from "@/lib/supabase/server";
+import { createRealRegistrationOptions } from "@/lib/auth/passkeys";
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,40 +9,41 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser();
 
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
+      return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 
     const adminDb = createAdminClient();
-    const { data: profile, error: profileError } = await adminDb
-      .from('profiles')
-      .select('*')
-      .eq('auth_user_id', user.id)
+    const { data: profile } = await adminDb
+      .from("profiles")
+      .select("*")
+      .eq("auth_user_id", user.id)
       .single();
 
-    if (profileError || !profile) {
-      return NextResponse.json({ error: 'Profile not found.' }, { status: 404 });
-    }
+    const profileId = profile?.id || user.id;
 
-    // Generate cryptographic challenge
-    const challenge = generateWebAuthnChallenge();
-    const options = createPasskeyRegistrationOptions(
-      {
-        id: profile.id,
-        email: user.email || 'user@careeros.com',
-        displayName: profile.display_name || undefined,
-      },
-      challenge
-    );
+    const options = await createRealRegistrationOptions({
+      id: profileId,
+      email: user.email || "user@careeros.com",
+      displayName: profile?.display_name || undefined,
+    });
+
+    const cookieStore = await cookies();
+    cookieStore.set("webauthn_reg_challenge", options.challenge, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 300, // 5 mins
+      path: "/",
+    });
 
     return NextResponse.json({
       success: true,
-      challenge,
       options,
     });
   } catch (error) {
-    console.error('Error generating passkey registration challenge:', error);
+    console.error("Error generating passkey registration options:", error);
     return NextResponse.json(
-      { error: 'Failed to generate passkey challenge.' },
+      { error: "Failed to generate passkey challenge." },
       { status: 500 }
     );
   }

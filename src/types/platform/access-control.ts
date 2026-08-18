@@ -67,8 +67,8 @@ export interface DataAccessGrant {
   metadata: Record<string, unknown> | null;
 }
 
-/** Privacy preferences per profile */
-export interface PrivacyPreferences {
+/** Privacy preferences per profile (Legacy schema) */
+export interface ProfilePrivacySettings {
   profile_id: string;
   default_visibility: DefaultVisibility;
   allow_mentor_access: boolean;

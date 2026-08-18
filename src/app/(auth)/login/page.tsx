@@ -7,6 +7,8 @@ import { ROUTES } from '@/lib/routes';
 import { Button } from '@/components/ui/Button';
 import { Fingerprint, Mail, Lock, Eye, EyeOff, AlertCircle, ArrowLeft } from 'lucide-react';
 
+import { startAuthentication } from '@simplewebauthn/browser';
+
 export default function LoginPage() {
   const router = useRouter();
   const [authMethod, setAuthMethod] = useState<'passkey' | 'email_otp' | 'password'>('passkey');
@@ -36,33 +38,13 @@ export default function LoginPage() {
         throw new Error(challengeData.error || 'Failed to initialize passkey sign-in.');
       }
 
-      let credentialId = 'passkey_test_credential';
-
-      if (typeof window !== 'undefined' && window.navigator?.credentials) {
-        try {
-          const authOptions: PublicKeyCredentialRequestOptions = {
-            challenge: Uint8Array.from(atob(challengeData.challenge.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0)),
-            rpId: challengeData.options.rpId,
-            timeout: challengeData.options.timeout,
-            userVerification: challengeData.options.userVerification,
-          };
-          const assertion = (await navigator.credentials.get({
-            publicKey: authOptions,
-          })) as PublicKeyCredential;
-
-          if (assertion) {
-            credentialId = assertion.id;
-          }
-        } catch {
-          // Fallback if biometric dialog is dismissed
-        }
-      }
+      const asseResp = await startAuthentication({ optionsJSON: challengeData.options });
 
       // Verify passkey on server
       const verifyRes = await fetch('/api/auth/passkey/authenticate/verify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ credentialId }),
+        body: JSON.stringify(asseResp),
       });
 
       const verifyData = await verifyRes.json();

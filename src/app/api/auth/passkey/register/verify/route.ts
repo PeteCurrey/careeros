@@ -1,6 +1,7 @@
-import { NextResponse, type NextRequest } from 'next/server';
-import { createClient, createAdminClient } from '@/lib/supabase/server';
-import { recordUserSecurityEvent } from '@/lib/auth/passkeys';
+import { NextResponse, type NextRequest } from "next/server";
+import { cookies } from "next/headers";
+import { createClient, createAdminClient } from "@/lib/supabase/server";
+import { verifyRealRegistrationResponse, recordUserSecurityEvent } from "@/lib/auth/passkeys";
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,82 +9,94 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser();
 
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
+      return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 
-    const body = await request.json();
-    const { credentialId, publicKey, deviceName, aaguid } = body;
+    const cookieStore = await cookies();
+    const expectedChallenge = cookieStore.get("webauthn_reg_challenge")?.value;
 
-    if (!credentialId || !publicKey) {
+    if (!expectedChallenge) {
       return NextResponse.json(
-        { error: 'Credential ID and public key are required.' },
+        { error: "Registration challenge expired or missing. Please try again." },
         { status: 400 }
       );
     }
 
-    const adminDb = createAdminClient();
-    const { data: profile, error: profileError } = await adminDb
-      .from('profiles')
-      .select('id, security_assurance')
-      .eq('auth_user_id', user.id)
-      .single();
+    const body = await request.json();
+    const verification = await verifyRealRegistrationResponse(body, expectedChallenge);
 
-    if (profileError || !profile) {
-      return NextResponse.json({ error: 'Profile not found.' }, { status: 404 });
+    if (!verification.verified || !verification.registrationInfo) {
+      return NextResponse.json(
+        { error: "Passkey verification failed cryptographically." },
+        { status: 400 }
+      );
     }
 
-    // Insert passkey into user_passkeys
-    const { data: newPasskey, error: passkeyInsertError } = await adminDb
-      .from('user_passkeys')
+    const { credential, aaguid } = verification.registrationInfo;
+    const adminDb = createAdminClient();
+
+    const { data: profile } = await adminDb
+      .from("profiles")
+      .select("id")
+      .eq("auth_user_id", user.id)
+      .single();
+
+    const profileId = profile?.id || user.id;
+
+    // Store verified credential
+    const publicKeyBase64 = Buffer.from(credential.publicKey).toString("base64");
+    const { data: newPasskey, error: insertError } = await adminDb
+      .from("user_passkeys")
       .insert({
-        profile_id: profile.id,
-        credential_id: credentialId,
-        public_key: publicKey,
-        device_name: deviceName || 'Personal Device',
+        profile_id: profileId,
+        credential_id: credential.id,
+        public_key: publicKeyBase64,
+        counter: credential.counter,
+        device_name: "Biometric Passkey",
         aaguid: aaguid || null,
-        counter: 0,
+        transports: credential.transports || ["internal"],
       })
       .select()
       .single();
 
-    if (passkeyInsertError) {
-      console.error('Error inserting passkey:', passkeyInsertError);
+    if (insertError) {
+      console.error("Failed to store passkey in DB:", insertError);
       return NextResponse.json(
-        { error: 'Failed to store passkey credential.' },
+        { error: "Failed to persist passkey credential." },
         { status: 500 }
       );
     }
 
-    // Promote profile security assurance to SECURED
+    // Promote security assurance to SECURED
     await adminDb
-      .from('profiles')
+      .from("profiles")
       .update({
-        security_assurance: 'SECURED',
+        security_assurance: "SECURED",
         updated_at: new Date().toISOString(),
       })
-      .eq('id', profile.id);
+      .eq("id", profileId);
 
-    // Record security event
+    // Clean up challenge cookie
+    cookieStore.delete("webauthn_reg_challenge");
+
+    // Record audit event
     await recordUserSecurityEvent({
-      profileId: profile.id,
-      eventType: 'passkey_registered',
+      profileId,
+      eventType: "passkey_registered",
       success: true,
-      metadata: {
-        passkeyId: newPasskey.id,
-        deviceName: deviceName || 'Personal Device',
-      },
+      metadata: { passkeyId: newPasskey.id },
     });
 
     return NextResponse.json({
       success: true,
       passkeyId: newPasskey.id,
-      securityAssurance: 'SECURED',
-      message: 'CareerOS secured with passkey.',
+      securityAssurance: "SECURED",
+      message: "Passkey verified and registered successfully.",
     });
   } catch (error) {
-    console.error('Error verifying passkey registration:', error);
+    console.error("Error verifying passkey registration:", error);
     return NextResponse.json(
-      { error: 'Passkey verification failed.' },
+      { error: "Passkey verification failed." },
       { status: 500 }
     );
   }
