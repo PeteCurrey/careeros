@@ -91,6 +91,42 @@ export default function PrivacySettingsPage() {
             </div>
           </Card>
 
+          <Card className="p-6 space-y-5">
+            <h2 className="text-sm font-bold text-[var(--color-text-primary)] uppercase tracking-wide font-mono">
+              Daily Mentor Startup Experience
+            </h2>
+            <div className="space-y-4">
+              <div className="space-y-1.5">
+                <label className="text-xs font-semibold text-[var(--color-text-primary)]">
+                  Daily Welcome Mode
+                </label>
+                <p className="text-xs text-[var(--color-text-tertiary)]">
+                  Configure how your assigned AI Career Mentor greets you on your first entry into Career OS each local day.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {[
+                    { key: 'CINEMATIC', label: 'Cinematic (Default)', desc: 'Full-screen authentic environment, mentor greeting and daily line' },
+                    { key: 'SUBTLE', label: 'Subtle', desc: 'Embedded mentor greeting banner without fullscreen transition' },
+                    { key: 'OFF', label: 'Off', desc: 'Open directly into Today dashboard without daily sequence' },
+                  ].map((mode) => (
+                    <button
+                      key={mode.key}
+                      type="button"
+                      className={`px-3 py-2 text-xs font-medium rounded-md border text-left transition-colors ${
+                        mode.key === 'CINEMATIC'
+                          ? 'bg-[#2F8FFF]/15 text-white border-[#2F8FFF]'
+                          : 'bg-[var(--color-surface-interactive)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-[var(--color-border-strong)]'
+                      }`}
+                    >
+                      <span className="font-semibold block">{mode.label}</span>
+                      <span className="text-[10px] text-[var(--color-text-tertiary)] block mt-0.5">{mode.desc}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Card>
+
           <Card className="p-6 space-y-4">
             <h2 className="text-sm font-bold text-[var(--color-text-primary)] uppercase tracking-wide font-mono">
               Data Export
