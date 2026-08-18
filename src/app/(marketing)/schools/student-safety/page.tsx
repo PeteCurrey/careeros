@@ -67,11 +67,11 @@ export default function SchoolsStudentSafetyPage() {
             className="object-cover object-center"
           />
           {/* Left charcoal dissolve */}
-          <div aria-hidden="true" className="absolute inset-0" style={{ background: `linear-gradient(to right, #393939 0%, rgba(57,57,57,0.96) 38%, rgba(57,57,57,0.88) 55%, rgba(57,57,57,0.42) 78%, rgba(57,57,57,0.18) 100%)` }} />
+          <div aria-hidden="true" className="absolute inset-0" style={{ background: `linear-gradient(to right, #222222 0%, rgba(34, 34, 34,0.96) 38%, rgba(34, 34, 34,0.88) 55%, rgba(34, 34, 34,0.42) 78%, rgba(34, 34, 34,0.18) 100%)` }} />
           {/* Top dissolve */}
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to bottom, #393939 0%, transparent 100%)` }} />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to bottom, #222222 0%, transparent 100%)` }} />
           {/* Bottom dissolve */}
-          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to top, #393939 0%, transparent 100%)` }} />
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to top, #222222 0%, transparent 100%)` }} />
         </div>
 
         <div className="container-editorial relative z-10 space-y-8 py-20 lg:py-0">

@@ -36,7 +36,7 @@ export function CareerAtmosphere({
       {/* Dark charcoal base — full fill */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: '#393939' }}
+        style={{ backgroundColor: '#222222' }}
       />
 
       {/* Soft lavender atmosphere — upper-right, behind where image sits */}
@@ -61,7 +61,7 @@ export function CareerAtmosphere({
           right: '5%',
           width: '60%',
           height: '70%',
-          background: `radial-gradient(ellipse at 50% 70%, rgba(48, 48, 48, ${o(0.60)}) 0%, transparent 65%)`,
+          background: `radial-gradient(ellipse at 50% 70%, rgba(24, 24, 24, ${o(0.65)}) 0%, transparent 65%)`,
         }}
       />
 
@@ -99,7 +99,7 @@ export function CareerAtmosphere({
           left: '-10%',
           width: '58%',
           height: '90%',
-          background: `radial-gradient(ellipse at 25% 40%, rgba(57, 57, 57, ${o(0.95)}) 0%, transparent 72%)`,
+          background: `radial-gradient(ellipse at 25% 40%, rgba(34, 34, 34, ${o(0.96)}) 0%, transparent 72%)`,
         }}
       />
 
@@ -112,7 +112,7 @@ export function CareerAtmosphere({
           left: '5%',
           width: '40%',
           height: '50%',
-          background: `radial-gradient(ellipse at 30% 20%, rgba(65, 65, 65, ${o(0.40)}) 0%, transparent 60%)`,
+          background: `radial-gradient(ellipse at 30% 20%, rgba(42, 42, 42, ${o(0.40)}) 0%, transparent 60%)`,
         }}
       />
     </div>

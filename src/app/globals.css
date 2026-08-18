@@ -5,7 +5,7 @@
    
    Aesthetic: Bespoke editorial publishing + modern technology
    + serious global career infrastructure.
-   Soft graphite / charcoal canvas (#393939), subtle tonal depth,
+   Soft graphite / charcoal canvas (#222222), subtle tonal depth,
    off-white typography (#F4F3EF), restrained accents, thin 1px rules.
    ============================================================ */
 
@@ -16,21 +16,21 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* --- Career Charcoal Canvas Family (Primary Dark System) --- */
-  --background-dark-deep: #303030;
-  --background-dark: #393939;
-  --background-dark-soft: #414141;
-  --background-dark-elevated: #474747;
+  --background-dark-deep: #181818;
+  --background-dark: #222222;
+  --background-dark-soft: #2a2a2a;
+  --background-dark-elevated: #323232;
 
   /* --- Charcoal Core Tokens --- */
-  --color-charcoal-base: #393939;
-  --color-charcoal-deep: #303030;
-  --color-charcoal-light: #414141;
+  --color-charcoal-base: #222222;
+  --color-charcoal-deep: #181818;
+  --color-charcoal-light: #2a2a2a;
   --color-charcoal-border: rgba(255, 255, 255, 0.08);
 
   /* --- Legacy Ivory Aliases mapped to new charcoal system --- */
-  --color-ivory-base: #393939;
-  --color-ivory-warm: #414141;
-  --color-ivory-deep: #303030;
+  --color-ivory-base: #222222;
+  --color-ivory-warm: #2a2a2a;
+  --color-ivory-deep: #181818;
   --color-ivory-border: rgba(255, 255, 255, 0.08);
 
   /* --- Career Taupe Family (Muted Neutrals on Dark) --- */
@@ -38,8 +38,8 @@
   --color-taupe-500: #B5ADA4;
   --color-taupe-400: #9E9D98;
   --color-taupe-300: #C2BBB3;
-  --color-taupe-100: #474747;
-  --color-taupe-50: #393939;
+  --color-taupe-100: #323232;
+  --color-taupe-50: #222222;
 
   /* --- Career Lavender Family (Identity, Discovery & Reflection) --- */
   --color-lavender-base: #CDBBD2;
@@ -91,14 +91,14 @@
   --career-gold-end: #EFE9B8;
 
   /* --- Active Surfaces Mapping --- */
-  --color-surface-base: #393939;
-  --color-surface-raised: #414141;
-  --color-surface-warm: #414141;
-  --color-surface-sunken: #303030;
-  --color-surface-taupe: #3d3d3d;
-  --color-surface-interactive: #4a4a4a;
-  --color-surface-dark: #303030;
-  --color-surface-dark-deep: #262626;
+  --color-surface-base: #222222;
+  --color-surface-raised: #2a2a2a;
+  --color-surface-warm: #2a2a2a;
+  --color-surface-sunken: #181818;
+  --color-surface-taupe: #262626;
+  --color-surface-interactive: #333333;
+  --color-surface-dark: #181818;
+  --color-surface-dark-deep: #121212;
 
   /* --- Text Hierarchy (Light Typography against Dark Charcoal) --- */
   --color-text-primary: #F4F3EF;

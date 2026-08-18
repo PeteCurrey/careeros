@@ -11,7 +11,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary:
     'bg-transparent text-[#F4F3EF] hover:bg-white/10 active:bg-white/15 border border-white/20 hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_12px_rgba(47,143,255,0.06)] font-medium',
   dark:
-    'bg-[#303030] text-[#F4F3EF] hover:bg-[#414141] active:bg-[#474747] border border-white/10 shadow-xs font-semibold',
+    'bg-[#181818] text-[#F4F3EF] hover:bg-[#2a2a2a] active:bg-[#323232] border border-white/10 shadow-xs font-semibold',
   ghost:
     'bg-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5 border border-transparent',
   outline:

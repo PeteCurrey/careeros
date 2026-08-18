@@ -10,7 +10,7 @@ import { CareerPathLines } from '@/components/brand/CareerPathLines';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 
 // The exact hex of --background-dark used in the CSS dissolve overlay
-const CHARCOAL = '#393939';
+const CHARCOAL = '#222222';
 
 export function HeroMentorSection() {
   const [mounted, setMounted] = useState(false);
@@ -139,7 +139,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-y-0 left-0 z-10 w-[55%] pointer-events-none"
           style={{
-            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 10%, rgba(57,57,57,0.92) 28%, rgba(57,57,57,0.55) 52%, rgba(57,57,57,0.12) 74%, transparent 100%)`,
+            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 10%, rgba(34,34,34,0.94) 28%, rgba(34,34,34,0.55) 52%, rgba(34,34,34,0.12) 74%, transparent 100%)`,
           }}
         />
 
@@ -148,7 +148,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-x-0 top-0 z-10 h-[18%] pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(57,57,57,0.6) 40%, transparent 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.6) 40%, transparent 100%)`,
           }}
         />
 
@@ -157,7 +157,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-x-0 bottom-0 z-10 h-[16%] pointer-events-none"
           style={{
-            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(57,57,57,0.5) 40%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.5) 40%, transparent 100%)`,
           }}
         />
       </div>
@@ -168,7 +168,7 @@ export function HeroMentorSection() {
         className="hidden lg:block absolute inset-y-0 left-0 z-[4] pointer-events-none"
         style={{
           width: '52%',
-          background: `radial-gradient(ellipse at 0% 50%, rgba(57,57,57,0.75) 0%, transparent 80%)`,
+          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.80) 0%, transparent 80%)`,
         }}
       />
 
@@ -330,7 +330,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(57,57,57,0.4) 40%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.4) 40%, transparent 100%)`,
           }}
         />
       </div>
