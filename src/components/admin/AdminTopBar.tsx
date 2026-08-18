@@ -123,11 +123,26 @@ export function AdminTopBar({
             <Activity className="w-4 h-4" />
           </Link>
 
-          {/* User Role Tag */}
+          {/* User Role & Account Security Tag */}
           <div className="hidden md:flex items-center gap-2 pl-2 border-l border-[var(--color-border-default)]">
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[var(--color-surface-sunken)] text-[var(--color-text-secondary)] border border-[var(--color-border-default)]">
+            <Link
+              href={ROUTES.ADMIN_ACCOUNT_SECURITY}
+              title="Account Security & MFA"
+              className="text-[10px] font-mono px-2 py-0.5 rounded bg-[var(--color-surface-sunken)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:border-[var(--color-border-strong)] border border-[var(--color-border-default)] transition-colors"
+            >
               {userRole.toUpperCase()}
-            </span>
+            </Link>
+            <button
+              type="button"
+              title="Sign Out of Administration"
+              onClick={async () => {
+                await fetch('/api/admin/auth/logout', { method: 'POST' });
+                window.location.href = ROUTES.ADMIN_LOGIN;
+              }}
+              className="p-1.5 text-[var(--color-text-tertiary)] hover:text-[#F87171] hover:bg-[var(--color-surface-interactive)] rounded transition-colors"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+            </button>
           </div>
         </div>
       </header>

@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { Check, Minus } from 'lucide-react';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 
 interface ComparisonRow {
   capability: string;
@@ -55,58 +57,69 @@ const ROWS: ComparisonRow[] = [
 
 export function ComparisonTableSection() {
   return (
-    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
-      <div className="container-editorial space-y-16">
+    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] relative overflow-hidden">
+      
+      {/* Subtle ambient lighting */}
+      <div className="ambient-glow-blue absolute inset-0 pointer-events-none" />
+
+      <div className="container-editorial space-y-16 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-4">
-          <span className="section-label">
-            Architectural Comparison
-          </span>
-          <h2 className="text-display-section text-[var(--color-text-primary)]">
-            Built as infrastructure, not a transactional tool.
-          </h2>
-          <p className="text-lead text-[var(--color-text-secondary)]">
-            Compare how Career OS differs from one-time career personality quizzes and commercial recruiter databases.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="max-w-3xl space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="section-label">
+                Architectural Comparison
+              </span>
+              <TechnicalBadge variant="blue">CAPABILITY MATRIX</TechnicalBadge>
+            </div>
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              Built as infrastructure, not a transactional tool.
+            </h2>
+            <p className="text-lead text-[var(--color-text-secondary)]">
+              Compare how Career OS differs from one-time career personality quizzes and commercial recruiter databases.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Editorial Comparison Table */}
-        <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-warm)] text-xs text-[var(--color-text-primary)] font-semibold">
-                  <th className="p-5 sm:p-6 font-semibold w-1/3">Core Capability</th>
-                  <th className="p-5 sm:p-6 font-medium text-[var(--color-text-tertiary)] w-1/5">Traditional Quizzes</th>
-                  <th className="p-5 sm:p-6 font-medium text-[var(--color-text-tertiary)] w-1/5">Job Boards</th>
-                  <th className="p-5 sm:p-6 font-bold text-white bg-[var(--background-dark-deep)] w-1/4">Career OS</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[var(--color-border-default)] text-xs sm:text-sm">
-                {ROWS.map((row) => (
-                  <tr key={row.capability} className="hover:bg-white/5 transition-colors">
-                    <td className="p-5 sm:p-6 font-semibold text-[var(--color-text-primary)]">
-                      {row.capability}
-                    </td>
-                    <td className="p-5 sm:p-6 text-[var(--color-text-secondary)]">
-                      {row.traditional}
-                    </td>
-                    <td className="p-5 sm:p-6 text-[var(--color-text-secondary)]">
-                      {row.jobBoards}
-                    </td>
-                    <td className="p-5 sm:p-6 font-semibold text-[var(--color-text-primary)] bg-white/[0.03] border-l border-r border-[var(--color-border-default)]">
-                      <div className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-[var(--color-success)] shrink-0" />
-                        <span>{row.careerOS}</span>
-                      </div>
-                    </td>
+        <ScrollReveal delayMs={100}>
+          <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle hover-lift">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-warm)] text-xs text-[var(--color-text-primary)] font-semibold font-mono">
+                    <th className="p-5 sm:p-6 font-semibold w-1/3">Core Capability</th>
+                    <th className="p-5 sm:p-6 font-medium text-[var(--color-text-tertiary)] w-1/5">Traditional Quizzes</th>
+                    <th className="p-5 sm:p-6 font-medium text-[var(--color-text-tertiary)] w-1/5">Job Boards</th>
+                    <th className="p-5 sm:p-6 font-bold text-white bg-[var(--background-dark-deep)] w-1/4">Career OS</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-[var(--color-border-default)] text-xs sm:text-sm">
+                  {ROWS.map((row) => (
+                    <tr key={row.capability} className="hover:bg-white/5 transition-colors">
+                      <td className="p-5 sm:p-6 font-semibold text-[var(--color-text-primary)]">
+                        {row.capability}
+                      </td>
+                      <td className="p-5 sm:p-6 text-[var(--color-text-secondary)]">
+                        {row.traditional}
+                      </td>
+                      <td className="p-5 sm:p-6 text-[var(--color-text-secondary)]">
+                        {row.jobBoards}
+                      </td>
+                      <td className="p-5 sm:p-6 font-semibold text-[var(--color-text-primary)] bg-white/[0.03] border-l border-r border-[var(--color-border-default)]">
+                        <div className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-[#34D399] shrink-0" />
+                          <span>{row.careerOS}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>

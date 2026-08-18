@@ -88,3 +88,65 @@ export interface AdminNavSection {
   title: string;
   items: AdminNavItem[];
 }
+
+export type AdminSecurityEventType =
+  | 'login_attempt'
+  | 'login_success'
+  | 'login_failure'
+  | 'mfa_challenge'
+  | 'mfa_success'
+  | 'mfa_failure'
+  | 'mfa_totp_enrolled'
+  | 'mfa_passkey_enrolled'
+  | 'mfa_factor_removed'
+  | 'recovery_code_used'
+  | 'recovery_code_invalid'
+  | 'recovery_codes_regenerated'
+  | 'session_created'
+  | 'session_revoked'
+  | 'all_sessions_revoked'
+  | 'step_up_required'
+  | 'step_up_completed'
+  | 'password_changed'
+  | 'admin_invited'
+  | 'admin_activated'
+  | 'admin_deactivated'
+  | 'role_changed'
+  | 'super_admin_action'
+  | 'break_glass_access';
+
+export interface AdminSession {
+  id: string;
+  admin_profile_id: string;
+  session_token_hash: string;
+  supabase_user_id?: string;
+  mfa_verified_at: string;
+  step_up_verified_at?: string;
+  last_active_at: string;
+  expires_at: string;
+  idle_expires_at: string;
+  ip_address_hash?: string;
+  user_agent_hash?: string;
+  device_label?: string;
+  revoked_at?: string;
+  revocation_reason?: string;
+  created_at: string;
+}
+
+export interface AdminMfaFactor {
+  id: string;
+  admin_profile_id: string;
+  factor_type: 'totp' | 'webauthn_passkey';
+  factor_label: string;
+  credential_id?: string;
+  enrolled_at: string;
+  last_used_at?: string;
+  revoked_at?: string;
+}
+
+export interface AdminAuthContext {
+  user: AdminUser;
+  session: AdminSession;
+  mfaEnrolled: boolean;
+  hasRecentStepUp: boolean;
+}

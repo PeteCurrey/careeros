@@ -7,67 +7,122 @@ import { ROUTES } from '@/lib/routes';
 import { MEDIA_ASSETS } from '@/lib/media';
 import { CareerAtmosphere } from '@/components/brand/CareerAtmosphere';
 import { CareerPathLines } from '@/components/brand/CareerPathLines';
+import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 
 // The exact hex of --background-dark used in the CSS dissolve overlay
 const CHARCOAL = '#393939';
 
 export function HeroMentorSection() {
   const [mounted, setMounted] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const prefersReducedMotion = useRef(false);
+  const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     prefersReducedMotion.current = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
-    // Slight delay so entrance is perceived on first render
+
     const t = setTimeout(() => setMounted(true), 60);
-    return () => clearTimeout(t);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (prefersReducedMotion.current || window.innerWidth < 1024) return;
+      const { innerWidth, innerHeight } = window;
+      const x = (e.clientX / innerWidth - 0.5) * 2;
+      const y = (e.clientY / innerHeight - 0.5) * 2;
+      setMousePos({ x, y });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
-  const heroEnter = prefersReducedMotion.current
+  // Staggered entrance timing
+  const textStagger = (delaySec: number) =>
+    prefersReducedMotion.current
+      ? {}
+      : {
+          opacity: mounted ? 1 : 0,
+          transform: mounted ? 'translate3d(0, 0, 0)' : 'translate3d(0, 14px, 0)',
+          transition: `opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delaySec}s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delaySec}s`,
+        };
+
+  // Micro-parallax depth calculations (barely perceptible, 3–5px max)
+  const imageParallax = prefersReducedMotion.current
     ? {}
     : {
-        opacity: mounted ? 1 : 0,
-        transform: mounted ? 'translateY(0)' : 'translateY(6px)',
-        transition: 'opacity 0.9s ease-out, transform 0.9s ease-out',
+        transform: `translate3d(${mousePos.x * -4}px, ${mousePos.y * -3}px, 0)`,
+        transition: 'transform 0.4s ease-out',
       };
 
-  const imageEnter = prefersReducedMotion.current
+  const bgParallax = prefersReducedMotion.current
     ? {}
     : {
-        opacity: mounted ? 1 : 0,
-        transform: mounted ? 'translateX(0)' : 'translateX(10px)',
-        transition: 'opacity 1.2s ease-out 0.15s, transform 1.2s ease-out 0.15s',
+        transform: `translate3d(${mousePos.x * 2}px, ${mousePos.y * 1.5}px, 0)`,
+        transition: 'transform 0.4s ease-out',
       };
 
   return (
     <section
+      ref={heroRef}
       aria-labelledby="hero-headline"
-      className="relative overflow-hidden border-b border-[var(--color-border-default)] min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center"
+      className="relative overflow-hidden border-b border-[var(--color-border-default)] min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center select-none"
       style={{
         minHeight: '100vh',
         backgroundColor: CHARCOAL,
       }}
     >
-      {/* ── Layer 1: Career Atmosphere ──────────────────────────────── */}
-      <CareerAtmosphere
-        className="absolute inset-0 z-0"
-        intensity={1}
-        animate={true}
-      />
+      {/* ── Layer 1: Career Atmosphere with subtle ambient parallax ── */}
+      <div className="absolute inset-0 z-0" style={bgParallax}>
+        <CareerAtmosphere
+          className="absolute inset-0"
+          intensity={1}
+          animate={true}
+        />
+      </div>
 
-      {/* ── Layer 2: Career Path Lines ─────────────────────────────── */}
+      {/* ── Layer 2: Career Path Lines (Drawing animation & nodes) ─── */}
       <CareerPathLines
         className="absolute inset-0 z-[1]"
         density="all"
         animate={true}
       />
 
-      {/* ── Layer 3: Mentor Team Image — right side absolute panel ──── */}
-      {/* Visible on lg+ only; in-flow on mobile (see below) */}
+      {/* ── Layer 3: Atmospheric Lighting Spill behind Mentor Figures ─ */}
       <div
-        className="hidden lg:block absolute inset-y-0 right-0 z-[2]"
-        style={{ width: '60%', ...imageEnter }}
+        aria-hidden="true"
+        className="hidden lg:block absolute inset-y-0 right-0 z-[2] w-[60%] pointer-events-none"
+      >
+        {/* Cool precision blue atmospheric wash behind engineering/technology leaders */}
+        <div
+          className="absolute top-[20%] right-[32%] w-72 h-72 rounded-full blur-3xl opacity-30"
+          style={{ background: 'radial-gradient(circle, #2F8FFF 0%, transparent 70%)' }}
+        />
+        {/* Warm champagne wash behind skilled trades/business leaders */}
+        <div
+          className="absolute bottom-[25%] right-[10%] w-80 h-80 rounded-full blur-3xl opacity-20"
+          style={{ background: 'radial-gradient(circle, #DDD36D 0%, transparent 70%)' }}
+        />
+        {/* Cool lilac wash behind human advisory/mentoring */}
+        <div
+          className="absolute top-[10%] right-[12%] w-64 h-64 rounded-full blur-3xl opacity-25"
+          style={{ background: 'radial-gradient(circle, #CDBBD2 0%, transparent 70%)' }}
+        />
+      </div>
+
+      {/* ── Layer 4: Mentor Team Image — right side panel with micro-parallax ── */}
+      <div
+        className="hidden lg:block absolute inset-y-0 right-0 z-[3]"
+        style={{
+          width: '60%',
+          opacity: mounted || prefersReducedMotion.current ? 1 : 0,
+          transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s',
+          ...imageParallax,
+        }}
       >
         <Image
           src={MEDIA_ASSETS.hero.mentorTeam.src}
@@ -84,7 +139,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-y-0 left-0 z-10 w-[55%] pointer-events-none"
           style={{
-            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 8%, rgba(57,57,57,0.92) 28%, rgba(57,57,57,0.55) 50%, rgba(57,57,57,0.12) 72%, transparent 100%)`,
+            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 10%, rgba(57,57,57,0.92) 28%, rgba(57,57,57,0.55) 52%, rgba(57,57,57,0.12) 74%, transparent 100%)`,
           }}
         />
 
@@ -100,42 +155,44 @@ export function HeroMentorSection() {
         {/* Bottom-edge fade */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 z-10 h-[14%] pointer-events-none"
+          className="absolute inset-x-0 bottom-0 z-10 h-[16%] pointer-events-none"
           style={{
             background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(57,57,57,0.5) 40%, transparent 100%)`,
           }}
         />
       </div>
 
-      {/* ── Layer 4: Left-side foreground vignette ─────────────────── */}
-      {/* Keeps copy area crisp charcoal canvas regardless of atmosphere */}
+      {/* ── Layer 5: Left-side foreground vignette ─────────────────── */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute inset-y-0 left-0 z-[3] pointer-events-none"
+        className="hidden lg:block absolute inset-y-0 left-0 z-[4] pointer-events-none"
         style={{
           width: '52%',
-          background: `radial-gradient(ellipse at 0% 50%, rgba(57,57,57,0.7) 0%, transparent 75%)`,
+          background: `radial-gradient(ellipse at 0% 50%, rgba(57,57,57,0.75) 0%, transparent 80%)`,
         }}
       />
 
-      {/* ── Layer 5: Copy content ─────────────────────────────────── */}
+      {/* ── Layer 6: Copy content & Staggered Editorial Entrances ──── */}
       <div className="relative z-10 container-editorial h-full">
         <div
           className="grid grid-cols-1 lg:grid-cols-[44fr_56fr] min-h-[inherit]"
           style={{ minHeight: 'inherit' }}
         >
           {/* LEFT: Editorial copy */}
-          <div
-            className="flex flex-col justify-center pt-24 pb-16 lg:pt-0 lg:pb-0 pr-0 lg:pr-8 xl:pr-12"
-            style={heroEnter}
-          >
+          <div className="flex flex-col justify-center pt-24 pb-16 lg:pt-0 lg:pb-0 pr-0 lg:pr-8 xl:pr-12">
+            
             {/* Section label */}
-            <p className="section-label mb-6 flex items-center gap-2">
-              <span className="accent-blue-dot accent-blue-dot-pulse" />
-              The Career Operating System
-            </p>
+            <div style={textStagger(0.05)} className="mb-6 flex items-center gap-3">
+              <span className="section-label flex items-center gap-2">
+                <span className="accent-blue-dot accent-blue-dot-pulse" />
+                The Career Operating System
+              </span>
+              <TechnicalBadge variant="blue" className="hidden sm:inline-flex">
+                SIGNAL 01
+              </TechnicalBadge>
+            </div>
 
-            {/* H1 headline */}
+            {/* H1 headline — Staggered visual entrances */}
             <h1
               id="hero-headline"
               className="text-display-hero mb-8"
@@ -144,16 +201,23 @@ export function HeroMentorSection() {
                 maxWidth: '14ch',
               }}
             >
-              Your career
+              <span style={textStagger(0.12)} className="inline-block">
+                Your career
+              </span>
               <br />
-              needs more
+              <span style={textStagger(0.22)} className="inline-block">
+                needs more
+              </span>
               <br />
-              than advice.
+              <span style={textStagger(0.32)} className="inline-block">
+                than advice.
+              </span>
               <span
                 className="block mt-3"
                 style={{
                   color: 'var(--color-text-secondary)',
                   fontWeight: 350,
+                  ...textStagger(0.42),
                 }}
               >
                 It needs an
@@ -168,6 +232,7 @@ export function HeroMentorSection() {
               style={{
                 maxWidth: '560px',
                 color: 'var(--color-text-secondary)',
+                ...textStagger(0.52),
               }}
             >
               Your mentor, career intelligence, evidence and
@@ -176,12 +241,12 @@ export function HeroMentorSection() {
             </p>
 
             {/* Primary CTA block */}
-            <div className="flex flex-col gap-4 mb-8">
+            <div style={textStagger(0.62)} className="flex flex-col gap-4 mb-8">
               <div className="flex flex-wrap items-center gap-5">
-                {/* Primary button */}
+                {/* Primary button with hover lift */}
                 <Link
                   href={ROUTES.SIGNUP}
-                  className="inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base transition-all duration-200 focus-visible:outline-offset-4 hover:bg-white active:scale-[0.98] shadow-xs hover:shadow-[0_0_16px_rgba(244,243,239,0.12)]"
+                  className="hover-lift inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base focus-visible:outline-offset-4 active:scale-[0.98] shadow-xs"
                   style={{
                     backgroundColor: '#F4F3EF',
                     color: '#202020',
@@ -192,29 +257,35 @@ export function HeroMentorSection() {
                   Start your career
                 </Link>
 
-                {/* Secondary text link */}
+                {/* Secondary text link with subtle arrow slide */}
                 <Link
                   href="#how-it-works"
-                  className="group inline-flex items-center gap-1.5 text-[0.9375rem] font-medium transition-colors duration-150 text-[var(--color-text-primary)] hover:text-white"
+                  className="group inline-flex items-center gap-2 text-[0.9375rem] font-medium transition-colors duration-150 text-[var(--color-text-primary)] hover:text-white"
                 >
                   <span>See how Career OS works</span>
-                  <span aria-hidden="true" className="text-[var(--color-taupe-300)] group-hover:text-[var(--accent-blue)] group-hover:translate-x-0.5 transition-all">→</span>
+                  <span
+                    aria-hidden="true"
+                    className="text-[var(--color-taupe-300)] group-hover:text-[var(--accent-blue)] transform transition-transform duration-200 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
                 </Link>
               </div>
 
               {/* Commercial reassurance */}
               <p
-                className="text-xs"
+                className="text-xs flex items-center gap-2"
                 style={{ color: 'var(--color-text-tertiary)', letterSpacing: '0.01em' }}
               >
-                Free for individuals.&ensp;&middot;&ensp;Your information stays under your control.
+                <span className="w-1 h-1 rounded-full bg-[#34D399]" />
+                <span>Free for individuals.&ensp;&middot;&ensp;Your information stays under your control.</span>
               </p>
             </div>
 
             {/* Institutional quiet links */}
             <div
               className="flex items-center gap-1 text-xs"
-              style={{ color: 'var(--color-text-tertiary)' }}
+              style={{ color: 'var(--color-text-tertiary)', ...textStagger(0.72) }}
             >
               <span>For institutions:</span>
               <Link
@@ -241,7 +312,11 @@ export function HeroMentorSection() {
       {/* ── Mobile: In-flow mentor team image ─────────────────────── */}
       <div
         className="block lg:hidden relative z-[2] w-full"
-        style={{ aspectRatio: '4/3', ...imageEnter }}
+        style={{
+          aspectRatio: '4/3',
+          opacity: mounted || prefersReducedMotion.current ? 1 : 0,
+          transition: 'opacity 1s ease-out',
+        }}
       >
         <Image
           src={MEDIA_ASSETS.hero.mentorTeam.src}
@@ -249,22 +324,15 @@ export function HeroMentorSection() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: '50% center' }}
+          className="object-cover object-center"
         />
-        {/* Top fade into charcoal */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 h-[22%] pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(57,57,57,0.4) 40%, transparent 100%)`,
           }}
         />
-      </div>
-
-      {/* ── Mobile: Career path lines (simplified) ─────────────────── */}
-      <div className="block lg:hidden absolute inset-0 z-[1] pointer-events-none">
-        <CareerPathLines density="minimal" animate={false} />
       </div>
     </section>
   );

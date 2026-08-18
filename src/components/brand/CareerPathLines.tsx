@@ -14,11 +14,9 @@ interface CareerPathLinesProps {
  * CareerPathLines
  *
  * Brand SVG signature: 4 thin editorial lines representing different
- * career directions — curving, splitting, reconnecting, disappearing
- * behind the mentor team and re-emerging.
+ * career trajectories — curving, splitting, and illuminating subtle network nodes.
  *
- * NOT: circuit boards / neural networks / wavy SaaS lines.
- * IS: elegant editorial line-art, subordinate to content.
+ * Line progresses -> Node illuminates -> Settles gracefully.
  */
 export function CareerPathLines({
   className = '',
@@ -26,40 +24,43 @@ export function CareerPathLines({
   animate = true,
 }: CareerPathLinesProps) {
   const [revealed, setRevealed] = useState(false);
+  const [nodesIlluminated, setNodesIlluminated] = useState(false);
   const prefersReducedMotion = useRef(false);
 
   useEffect(() => {
     prefersReducedMotion.current = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
+
     if (!prefersReducedMotion.current && animate) {
-      // Small delay so entrance animation is noticeable after page paint
-      const t = setTimeout(() => setRevealed(true), 200);
-      return () => clearTimeout(t);
+      const t1 = setTimeout(() => setRevealed(true), 150);
+      const t2 = setTimeout(() => setNodesIlluminated(true), 1800);
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
     } else {
       setRevealed(true);
+      setNodesIlluminated(true);
     }
   }, [animate]);
 
-  // Stroke colours — muted, editorial for dark charcoal canvas
+  // Stroke colours — restrained, editorial on dark graphite
+  const BLUE   = 'rgba(47, 143, 255, 0.35)';
   const GOLD   = 'rgba(221, 211, 109, 0.25)';
   const MAUVE  = 'rgba(205, 187, 210, 0.22)';
-  const TAUPE  = 'rgba(194, 187, 179, 0.18)';
-  const STONE  = 'rgba(232, 223, 233, 0.15)';
+  const TAUPE  = 'rgba(194, 187, 179, 0.16)';
+  const STONE  = 'rgba(232, 223, 233, 0.14)';
 
-  // Each path has a total approximate length for dashoffset reveal
   const paths = [
     {
-      // Path A: Main arc — enters bottom-left, sweeps up through copy area,
-      // crosses center, dissolves behind mentors, re-emerges top-right
       d: 'M -80 680 C 120 580, 280 420, 480 340 C 640 270, 760 310, 920 280 C 1080 250, 1200 190, 1400 160 C 1560 135, 1700 148, 1920 120',
-      stroke: GOLD,
+      stroke: BLUE,
       strokeWidth: 0.9,
       length: 2200,
       show: true,
     },
     {
-      // Path B: Branches from A mid-journey, curves down slightly then re-ascends
       d: 'M 420 390 C 560 430, 680 480, 820 460 C 960 440, 1060 380, 1200 360 C 1360 338, 1540 290, 1760 240',
       stroke: MAUVE,
       strokeWidth: 0.8,
@@ -67,7 +68,6 @@ export function CareerPathLines({
       show: true,
     },
     {
-      // Path C: Enters from top-left, arcs broadly downward through mid-hero
       d: 'M -40 80 C 200 120, 380 200, 560 260 C 720 318, 860 320, 1040 340 C 1200 358, 1360 400, 1560 440 C 1720 472, 1860 480, 2000 490',
       stroke: TAUPE,
       strokeWidth: 0.75,
@@ -75,13 +75,21 @@ export function CareerPathLines({
       show: density === 'all',
     },
     {
-      // Path D: Short, elegant diagonal — lower third of hero, fades into image
       d: 'M 0 820 C 180 760, 340 720, 520 680 C 680 645, 800 640, 980 620 C 1140 602, 1300 570, 1480 540',
-      stroke: STONE,
+      stroke: GOLD,
       strokeWidth: 0.7,
       length: 1600,
       show: density === 'all',
     },
+  ];
+
+  // Subtle illuminated network nodes at key trajectory junctions
+  const nodes = [
+    { cx: 480, cy: 340, color: '#2F8FFF', label: 'EVIDENCE' },
+    { cx: 920, cy: 280, color: '#DDD36D', label: 'MILESTONE' },
+    { cx: 820, cy: 460, color: '#CDBBD2', label: 'ADVISORY' },
+    { cx: 1200, cy: 360, color: '#2F8FFF', label: 'PROGRESSION' },
+    { cx: 560, cy: 260, color: '#CDBBD2', label: 'CAPABILITY' },
   ];
 
   const animStyle = (length: number, delay: number) => {
@@ -89,7 +97,7 @@ export function CareerPathLines({
     return {
       strokeDasharray: length,
       strokeDashoffset: revealed ? 0 : length,
-      transition: `stroke-dashoffset 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}s`,
+      transition: `stroke-dashoffset 2.2s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`,
     };
   };
 
@@ -122,10 +130,41 @@ export function CareerPathLines({
               strokeLinecap="round"
               style={
                 animate && !prefersReducedMotion.current
-                  ? animStyle(p.length, i * 0.3)
+                  ? animStyle(p.length, i * 0.25)
                   : staticStyle(p.length)
               }
             />
+          ))}
+
+        {/* Illuminated Junction Nodes */}
+        {density === 'all' &&
+          nodes.map((node, i) => (
+            <g
+              key={i}
+              style={{
+                opacity: nodesIlluminated ? 1 : 0,
+                transform: nodesIlluminated ? 'scale(1)' : 'scale(0.5)',
+                transformOrigin: `${node.cx}px ${node.cy}px`,
+                transition: `opacity 0.8s ease-out ${0.1 * i}s, transform 0.8s ease-out ${0.1 * i}s`,
+              }}
+            >
+              {/* Outer halo */}
+              <circle
+                cx={node.cx}
+                cy={node.cy}
+                r="7"
+                fill={node.color}
+                fillOpacity="0.12"
+              />
+              {/* Core point */}
+              <circle
+                cx={node.cx}
+                cy={node.cy}
+                r="2.5"
+                fill={node.color}
+                fillOpacity="0.85"
+              />
+            </g>
           ))}
       </svg>
     </div>

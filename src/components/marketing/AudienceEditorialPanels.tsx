@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
 import { MEDIA_ASSETS } from '@/lib/media';
 import { ArrowRight } from 'lucide-react';
+import { ScrollReveal } from '@/components/brand/ScrollReveal';
+import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 
 interface AudienceFeature {
   id: string;
@@ -93,21 +95,30 @@ const AUDIENCES: AudienceFeature[] = [
 
 export function AudienceEditorialPanels() {
   return (
-    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]">
-      <div className="container-editorial space-y-24">
+    <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)] relative overflow-hidden">
+      
+      {/* Subtle ambient lighting */}
+      <div className="ambient-glow-blue absolute inset-0 pointer-events-none" />
+
+      <div className="container-editorial space-y-24 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-4">
-          <span className="section-label">
-            Ecosystem Audiences
-          </span>
-          <h2 className="text-display-section text-[var(--color-text-primary)]">
-            Four career worlds. One operating system.
-          </h2>
-          <p className="text-lead text-[var(--color-text-secondary)]">
-            Career OS bridges the divide between students discovering direction, professionals advancing, educators guiding, and employers hiring responsibly.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="max-w-3xl space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="section-label">
+                Ecosystem Audiences
+              </span>
+              <TechnicalBadge variant="blue">FOUR WORLDS</TechnicalBadge>
+            </div>
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              Four career worlds. One operating system.
+            </h2>
+            <p className="text-lead text-[var(--color-text-secondary)]">
+              Career OS bridges the divide between students discovering direction, professionals advancing, educators guiding, and employers hiring responsibly.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* 4 Varied Editorial Visual Sections */}
         <div className="space-y-24">
@@ -120,55 +131,69 @@ export function AudienceEditorialPanels() {
               >
                 {/* Narrative Column */}
                 <div className={`space-y-6 ${isReversed ? 'lg:col-span-6 lg:order-2' : 'lg:col-span-6'}`}>
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-semibold text-[var(--color-taupe-300)]">
-                      {aud.num}
-                    </span>
-                    <span className="text-[var(--color-border-strong)]">/</span>
-                    <span className="section-label">
-                      {aud.badge}
-                    </span>
-                  </div>
+                  <ScrollReveal delayMs={100}>
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-3 font-mono">
+                        <span className="text-sm font-semibold text-[var(--color-taupe-300)]">
+                          {aud.num}
+                        </span>
+                        <span className="text-[var(--color-border-strong)]">/</span>
+                        <TechnicalBadge variant={idx % 2 === 0 ? 'blue' : 'lavender'}>
+                          {aud.badge}
+                        </TechnicalBadge>
+                      </div>
 
-                  <h3 className="text-display-section text-[var(--color-text-primary)] text-2xl sm:text-3xl lg:text-4xl leading-tight">
-                    {aud.headline}
-                  </h3>
+                      <h3 className="text-display-section text-[var(--color-text-primary)] text-2xl sm:text-3xl lg:text-4xl leading-tight">
+                        {aud.headline}
+                      </h3>
 
-                  <p className="text-body-editorial text-[var(--color-text-secondary)] leading-relaxed">
-                    {aud.description}
-                  </p>
+                      <p className="text-body-editorial text-[var(--color-text-secondary)] leading-relaxed">
+                        {aud.description}
+                      </p>
 
-                  <ul className="space-y-2.5 pt-2 text-xs text-[var(--color-text-primary)] font-medium">
-                    {aud.points.map((p, pIdx) => (
-                      <li key={pIdx} className="flex items-start gap-2.5">
-                        <span className="text-[var(--color-taupe-300)] font-bold text-sm leading-none">&bull;</span>
-                        <span dangerouslySetInnerHTML={{ __html: p }} />
-                      </li>
-                    ))}
-                  </ul>
+                      <ul className="space-y-2.5 pt-2 text-xs text-[var(--color-text-primary)] font-medium">
+                        {aud.points.map((p, pIdx) => (
+                          <li key={pIdx} className="flex items-start gap-2.5">
+                            <span className="text-[#2F8FFF] font-bold text-sm leading-none">&bull;</span>
+                            <span dangerouslySetInnerHTML={{ __html: p }} />
+                          </li>
+                        ))}
+                      </ul>
 
-                  <div className="pt-4">
-                    <Link
-                      href={aud.href}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4"
-                    >
-                      <span>{aud.ctaText}</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
+                      <div className="pt-4 font-mono">
+                        <Link
+                          href={aud.href}
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-primary)] hover:text-white underline underline-offset-4 group"
+                        >
+                          <span>{aud.ctaText}</span>
+                          <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      </div>
+                    </div>
+                  </ScrollReveal>
                 </div>
 
                 {/* Documentary Photography Column */}
                 <div className={`relative ${isReversed ? 'lg:col-span-6 lg:order-1' : 'lg:col-span-6'}`}>
-                  <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle aspect-16/10 relative group">
-                    <Image
-                      src={aud.image.src}
-                      alt={aud.image.alt}
-                      width={aud.image.width}
-                      height={aud.image.height}
-                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.01]"
-                    />
-                  </div>
+                  <ScrollReveal delayMs={200}>
+                    <div className="border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] rounded-[var(--radius-card)] overflow-hidden shadow-subtle aspect-16/10 relative group hover-lift">
+                      <Image
+                        src={aud.image.src}
+                        alt={aud.image.alt}
+                        width={aud.image.width}
+                        height={aud.image.height}
+                        className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.015]"
+                      />
+                      {/* Subtle ambient gradient vignette */}
+                      <div
+                        aria-hidden="true"
+                        className="absolute inset-0 pointer-events-none"
+                        style={{
+                          background: 'linear-gradient(to top, rgba(48,48,48,0.4) 0%, transparent 60%)',
+                        }}
+                      />
+                    </div>
+                  </ScrollReveal>
                 </div>
               </div>
             );
@@ -179,4 +204,3 @@ export function AudienceEditorialPanels() {
     </section>
   );
 }
-

@@ -563,6 +563,60 @@ body {
   .accent-blue-dot-pulse {
     animation: none !important;
   }
+  .breathing-subtle {
+    animation: none !important;
+  }
+}
+
+/* --- Atmospheric Radial Washes --- */
+.ambient-glow-blue {
+  background: radial-gradient(circle at 50% 50%, rgba(47, 143, 255, 0.04) 0%, transparent 70%);
+}
+
+.ambient-glow-lilac {
+  background: radial-gradient(circle at 50% 50%, rgba(205, 187, 210, 0.04) 0%, transparent 70%);
+}
+
+.ambient-glow-champagne {
+  background: radial-gradient(circle at 50% 50%, rgba(221, 211, 109, 0.035) 0%, transparent 70%);
+}
+
+/* --- Subtle Optical Breathing --- */
+@keyframes subtleBreathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.012);
+  }
+}
+
+.breathing-subtle {
+  animation: subtleBreathing 18s ease-in-out infinite;
+}
+
+/* --- Line Drawing Animation Helpers --- */
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Micro-Elevation on Hover --- */
+.hover-lift {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 

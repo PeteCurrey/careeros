@@ -1,55 +1,54 @@
+import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { createClient, createAdminClient } from '@/lib/supabase/server';
-import { AdminRole, AdminUser } from '@/types/admin';
+import { createAdminClient } from '@/lib/supabase/server';
+import { AdminRole, AdminUser, AdminSession, AdminAuthContext } from '@/types/admin';
 import { ROUTES } from '@/lib/routes';
+import {
+  ADMIN_SESSION_COOKIE_NAME,
+  ADMIN_FALLBACK_COOKIE_NAME,
+  validateAdminSessionToken,
+  touchAdminSession,
+} from '@/lib/admin/session';
+import { ROLE_HIERARCHY, isStepUpValid } from '@/lib/admin/permissions';
+import { getAdminMfaFactors } from '@/lib/admin/mfa';
 
 /**
- * Role hierarchy for administrative permissions
+ * High-Security Admin Authentication Guard
+ * 
+ * Enforces:
+ * 1. Presence and cryptographic validity of dedicated Admin Session Token
+ * 2. Active, non-revoked DB session record with idle & absolute timeouts
+ * 3. Verified MFA factor (or immediate redirection to setup)
+ * 4. Active admin workspace membership & minimum role hierarchy
+ * 
+ * Completely decoupled from consumer sessions.
  */
-const ROLE_HIERARCHY: Record<AdminRole, number> = {
-  super_admin: 100,
-  admin: 80,
-  content_editor: 50,
-  events_moderator: 50,
-  marketing: 50,
-  support: 40,
-  analyst: 30,
-  read_only: 10,
-};
+export async function requireAdminSession(minimumRole: AdminRole = 'read_only'): Promise<AdminAuthContext> {
+  const cookieStore = await cookies();
+  const token =
+    cookieStore.get(ADMIN_SESSION_COOKIE_NAME)?.value ||
+    cookieStore.get(ADMIN_FALLBACK_COOKIE_NAME)?.value;
 
-/**
- * Verifies that the current request has an authenticated session with an active admin workspace membership.
- * Enforces server-side authorization. Redirects to /login or /admin/forbidden if unauthorized.
- */
-export async function requireAdminRole(minimumRole: AdminRole = 'read_only'): Promise<AdminUser> {
   const isDev = process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_APP_ENV === 'development';
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  // In local development mode without auth config, provide local root administrator context immediately
-  if (isDev && (!supabaseUrl || !supabaseAnonKey)) {
-    return {
-      id: '00000000-0000-0000-0000-000000000001',
-      auth_user_id: '00000000-0000-0000-0000-000000000001',
-      email: 'admin@careeros.local',
-      display_name: 'Lead Administrator (Local Dev)',
-      role: 'super_admin',
-      workspace_id: '00000000-0000-0000-0000-000000000001',
-      workspace_name: 'CareerOS Platform Administration',
-      created_at: new Date().toISOString(),
-    };
-  }
+  // Local development bypass strictly for unconfigured local instances
+  if (isDev && (!supabaseUrl || !token)) {
+    // If no token exists in dev without supabase, allow developer fallback
+    if (!token && (!supabaseUrl || supabaseUrl === '')) {
+      const mockSession: AdminSession = {
+        id: '00000000-0000-0000-0000-000000000001',
+        admin_profile_id: '00000000-0000-0000-0000-000000000001',
+        session_token_hash: 'dev_mock_hash',
+        mfa_verified_at: new Date().toISOString(),
+        step_up_verified_at: new Date().toISOString(),
+        last_active_at: new Date().toISOString(),
+        expires_at: new Date(Date.now() + 8 * 3600 * 1000).toISOString(),
+        idle_expires_at: new Date(Date.now() + 30 * 60 * 1000).toISOString(),
+        created_at: new Date().toISOString(),
+      };
 
-  const supabase = await createClient();
-  const {
-    data: { user: authUser },
-  } = await supabase.auth.getUser();
-
-  // If not authenticated, redirect to login
-  if (!authUser) {
-    // In local development mode without auth session, provide local root administrator context
-    if (isDev) {
-      return {
+      const mockUser: AdminUser = {
         id: '00000000-0000-0000-0000-000000000001',
         auth_user_id: '00000000-0000-0000-0000-000000000001',
         email: 'admin@careeros.local',
@@ -59,21 +58,45 @@ export async function requireAdminRole(minimumRole: AdminRole = 'read_only'): Pr
         workspace_name: 'CareerOS Platform Administration',
         created_at: new Date().toISOString(),
       };
+
+      return {
+        user: mockUser,
+        session: mockSession,
+        mfaEnrolled: true,
+        hasRecentStepUp: true,
+      };
     }
-    redirect(ROUTES.LOGIN);
   }
 
-  // Look up profile and workspace membership with ADMIN workspace type
+  if (!token) {
+    redirect(ROUTES.ADMIN_LOGIN);
+  }
+
+  // Validate session against DB
+  const validation = await validateAdminSessionToken(token);
+  if (!validation.valid || !validation.session) {
+    redirect(ROUTES.ADMIN_LOGIN);
+  }
+
+  const session = validation.session;
+
+  // Touch session (refresh rolling idle timeout)
+  await touchAdminSession(session.id);
+
+  const supabase = createAdminClient();
+
+  // Load profile and verified role
   const { data: profile } = await supabase
     .from('profiles')
-    .select('id, display_name, status')
-    .eq('auth_user_id', authUser.id)
+    .select('id, auth_user_id, display_name, status')
+    .eq('id', session.admin_profile_id)
     .single();
 
-  if (!profile) {
-    redirect(ROUTES.ADMIN_FORBIDDEN);
+  if (!profile || profile.status !== 'ACTIVE') {
+    redirect(ROUTES.ADMIN_LOGIN);
   }
 
+  // Load admin workspace membership
   const { data: membership } = await supabase
     .from('workspace_memberships')
     .select(`
@@ -107,19 +130,41 @@ export async function requireAdminRole(minimumRole: AdminRole = 'read_only'): Pr
     redirect(ROUTES.ADMIN_FORBIDDEN);
   }
 
+  // Verify MFA Status
+  const mfaStatus = await getAdminMfaFactors(profile.id);
+  if (!mfaStatus.hasMfaEnrolled) {
+    redirect(ROUTES.ADMIN_SECURITY_SETUP);
+  }
+
   const workspaceData = membership.workspaces as unknown as { id: string; name: string };
 
-  return {
+  const adminUser: AdminUser = {
     id: profile.id,
-    auth_user_id: authUser.id,
-    email: authUser.email || '',
-    display_name: profile.display_name || authUser.email || 'Administrator',
+    auth_user_id: profile.auth_user_id || '',
+    email: '', // Retrieved from identities if necessary
+    display_name: profile.display_name || 'Administrator',
     role: userRole,
     workspace_id: workspaceData?.id || '',
     workspace_name: workspaceData?.name || 'CareerOS Platform Administration',
-    last_sign_in_at: authUser.last_sign_in_at,
-    created_at: authUser.created_at,
+    created_at: session.created_at,
   };
+
+  const hasRecentStepUp = isStepUpValid(session.step_up_verified_at);
+
+  return {
+    user: adminUser,
+    session,
+    mfaEnrolled: mfaStatus.hasMfaEnrolled,
+    hasRecentStepUp,
+  };
+}
+
+/**
+ * Backward compatibility wrapper for existing admin routes while providing the new security boundary.
+ */
+export async function requireAdminRole(minimumRole: AdminRole = 'read_only'): Promise<AdminUser> {
+  const context = await requireAdminSession(minimumRole);
+  return context.user;
 }
 
 /**

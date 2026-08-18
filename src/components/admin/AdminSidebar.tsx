@@ -267,6 +267,8 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
               badge: counts?.failedJobs || undefined,
             },
             { title: 'Feature Flags', href: ROUTES.ADMIN_SYSTEM_FEATURE_FLAGS },
+            { title: 'Admin Accounts', href: ROUTES.ADMIN_SYSTEM_ADMINS },
+            { title: 'Security & Telemetry', href: ROUTES.ADMIN_SYSTEM_SECURITY },
             { title: 'Environment Status', href: ROUTES.ADMIN_SYSTEM_ENVIRONMENT },
             { title: 'Error Logs', href: ROUTES.ADMIN_SYSTEM_ERRORS },
             { title: 'Settings', href: ROUTES.ADMIN_SYSTEM_SETTINGS },

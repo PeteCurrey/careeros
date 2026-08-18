@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useState } from "react";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Lock } from "lucide-react";
 import Link from "next/link";
 import { ROUTES } from "@/lib/routes";
 import { cn } from "@/lib/utils";
+import { ScrollReveal } from "@/components/brand/ScrollReveal";
+import { TechnicalBadge } from "@/components/brand/TechnicalBadge";
 
 type ViewMode = "MY_VIEW" | "MENTOR_VIEW" | "EMPLOYER_VIEW" | "PUBLIC_VIEW";
 
@@ -66,124 +68,139 @@ export function PrivacyViewerSection() {
   const [activeView, setActiveView] = useState<ViewMode>("MY_VIEW");
 
   return (
-    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)]">
-      <div className="container-editorial space-y-16">
+    <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] relative overflow-hidden">
+      
+      {/* Subtle ambient lighting */}
+      <div className="ambient-glow-blue absolute inset-0 pointer-events-none" />
+
+      <div className="container-editorial space-y-16 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-4">
-          <span className="section-label">
-            Granular Access & Consent Architecture
-          </span>
-          <h2 className="text-display-section text-[var(--color-text-primary)]">
-            Your career data belongs in your hands.
-          </h2>
-          <p className="text-lead text-[var(--color-text-secondary)]">
-            Career OS is built on a zero-trust, user-sovereign permission matrix. You choose exactly what your mentor, potential employers, and the public can view.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="max-w-3xl space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="section-label">
+                Granular Access & Consent Architecture
+              </span>
+              <TechnicalBadge variant="blue">ZERO-TRUST SOVEREIGNTY</TechnicalBadge>
+            </div>
+            <h2 className="text-display-section text-[var(--color-text-primary)]">
+              Your career data belongs in your hands.
+            </h2>
+            <p className="text-lead text-[var(--color-text-secondary)]">
+              Career OS is built on a zero-trust, user-sovereign permission matrix. You choose exactly what your mentor, potential employers, and the public can view.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Interactive Permission Matrix */}
-        <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 shadow-subtle">
-          
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[var(--color-border-default)] pb-6">
-            <div className="space-y-1">
-              <span className="section-label">
-                Interactive Permission Simulator
-              </span>
-              <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
-                Select a perspective to verify real-time redaction:
-              </h3>
+        <ScrollReveal delayMs={100}>
+          <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 shadow-subtle hover-lift">
+            
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[var(--color-border-default)] pb-6">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="section-label">
+                    Interactive Permission Simulator
+                  </span>
+                  <Lock className="w-3.5 h-3.5 text-[#2F8FFF]" />
+                </div>
+                <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">
+                  Select a perspective to verify real-time redaction:
+                </h3>
+              </div>
+
+              {/* View Mode Buttons (Flat Squared Tabs) */}
+              <div className="flex flex-wrap gap-2 font-mono">
+                {[
+                  { key: "MY_VIEW" as ViewMode, label: "My Sovereign View" },
+                  { key: "MENTOR_VIEW" as ViewMode, label: "Mentor View" },
+                  { key: "EMPLOYER_VIEW" as ViewMode, label: "Employer View" },
+                  { key: "PUBLIC_VIEW" as ViewMode, label: "Public View" },
+                ].map((tab) => {
+                  const isSelected = activeView === tab.key;
+                  return (
+                    <button
+                      key={tab.key}
+                      type="button"
+                      onClick={() => setActiveView(tab.key)}
+                      className={cn(
+                        "px-3.5 py-2 text-xs font-semibold rounded-[var(--radius-sm)] border transition-all cursor-pointer",
+                        isSelected
+                          ? "bg-[#F4F3EF] text-[#202020] border-[#F4F3EF] shadow-sm"
+                          : "bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-white/10"
+                      )}
+                    >
+                      {tab.label}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* View Mode Buttons (Flat Squared Tabs) */}
-            <div className="flex flex-wrap gap-2">
-              {[
-                { key: "MY_VIEW" as ViewMode, label: "My Sovereign View" },
-                { key: "MENTOR_VIEW" as ViewMode, label: "Mentor View" },
-                { key: "EMPLOYER_VIEW" as ViewMode, label: "Employer View" },
-                { key: "PUBLIC_VIEW" as ViewMode, label: "Public View" },
-              ].map((tab) => {
-                const isSelected = activeView === tab.key;
+            {/* Matrix Field Rows */}
+            <div className="divide-y divide-[var(--color-border-default)] border-y border-[var(--color-border-default)]">
+              {PRIVACY_FIELDS.map((field) => {
+                const current = field.visibility[activeView];
                 return (
-                  <button
-                    key={tab.key}
-                    type="button"
-                    onClick={() => setActiveView(tab.key)}
-                    className={cn(
-                      "px-3.5 py-2 text-xs font-semibold rounded-[var(--radius-sm)] border transition-all cursor-pointer",
-                      isSelected
-                        ? "bg-[#F4F3EF] text-[#202020] border-[#F4F3EF]"
-                        : "bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:bg-white/10"
-                    )}
+                  <div
+                    key={field.label}
+                    className="py-5 grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
                   >
-                    {tab.label}
-                  </button>
+                    <div className="md:col-span-4 space-y-0.5">
+                      <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)] font-mono">
+                        {field.category}
+                      </span>
+                      <h4 className="text-sm font-semibold text-[var(--color-text-primary)]">
+                        {field.label}
+                      </h4>
+                    </div>
+
+                    <div className="md:col-span-5">
+                      <span
+                        className={cn(
+                          "text-xs sm:text-sm font-medium",
+                          current.visible ? "text-[var(--color-text-primary)]" : "text-[#F87171] font-mono"
+                        )}
+                      >
+                        {current.state}
+                      </span>
+                    </div>
+
+                    <div className="md:col-span-3 flex md:justify-end font-mono">
+                      <span
+                        className={cn(
+                          "text-[11px] px-2.5 py-1 rounded-[var(--radius-sm)] font-medium border",
+                          current.visible
+                            ? "bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)]"
+                            : "bg-[rgba(248,113,113,0.1)] text-[#F87171] border-[rgba(248,113,113,0.25)]"
+                        )}
+                      >
+                        {current.note}
+                      </span>
+                    </div>
+                  </div>
                 );
               })}
             </div>
-          </div>
 
-          {/* Matrix Field Rows */}
-          <div className="divide-y divide-[var(--color-border-default)] border-y border-[var(--color-border-default)]">
-            {PRIVACY_FIELDS.map((field) => {
-              const current = field.visibility[activeView];
-              return (
-                <div
-                  key={field.label}
-                  className="py-5 grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
-                >
-                  <div className="md:col-span-4 space-y-0.5">
-                    <span className="text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">
-                      {field.category}
-                    </span>
-                    <h4 className="text-sm font-semibold text-[var(--color-text-primary)]">
-                      {field.label}
-                    </h4>
-                  </div>
-
-                  <div className="md:col-span-5">
-                    <span
-                      className={cn(
-                        "text-xs sm:text-sm font-medium",
-                        current.visible ? "text-[var(--color-text-primary)]" : "text-[var(--color-danger)] font-mono"
-                      )}
-                    >
-                      {current.state}
-                    </span>
-                  </div>
-
-                  <div className="md:col-span-3 flex md:justify-end">
-                    <span
-                      className={cn(
-                        "text-[11px] px-2.5 py-1 rounded-[var(--radius-sm)] font-medium border",
-                        current.visible
-                          ? "bg-[var(--color-surface-warm)] text-[var(--color-text-secondary)] border-[var(--color-border-default)]"
-                          : "bg-[var(--color-danger-light)] text-[var(--color-danger)] border-[var(--color-danger)]/20"
-                      )}
-                    >
-                      {current.note}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Verification Guarantee Footer */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[var(--color-text-secondary)] pt-2">
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[var(--color-success)] shrink-0" />
-              <span>Cryptographic enforcement: No database operator or automated scraper can bypass these policies.</span>
+            {/* Verification Guarantee Footer */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[var(--color-text-secondary)] pt-2 font-mono">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#34D399] shrink-0" />
+                <span>Cryptographic enforcement: No database operator or automated scraper can bypass these policies.</span>
+              </div>
+              <Link
+                href={ROUTES.TRUST_DATA_ETHICS}
+                className="font-semibold text-[var(--color-text-primary)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4 shrink-0 group"
+              >
+                <span>Data Ethics Architecture</span>
+                <ArrowRight className="w-3.5 h-3.5 transform transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
-            <Link
-              href={ROUTES.TRUST_DATA_ETHICS}
-              className="font-semibold text-[var(--color-text-primary)] hover:text-white inline-flex items-center gap-1 underline underline-offset-4 shrink-0"
-            >
-              Data Ethics Architecture <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
 
-        </div>
+          </div>
+        </ScrollReveal>
 
       </div>
     </section>
