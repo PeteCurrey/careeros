@@ -61,7 +61,7 @@ export function HoverImageCard({
       role={onClick ? 'button' : undefined}
       onClick={onClick}
       className={cn(
-        'group relative overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] transition-all duration-500 flex flex-col justify-between p-6 select-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-primary)]',
+        'group relative overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border-default)] bg-[var(--color-surface-raised)] transition-all duration-500 flex flex-col justify-between p-7 min-h-[260px] select-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-primary)]',
         isInteracting
           ? 'border-[#2F8FFF]/40 shadow-[0_8px_32px_rgba(0,0,0,0.45)] -translate-y-0.5'
           : 'hover:border-[var(--color-border-strong)]',
@@ -137,7 +137,7 @@ export function HoverImageCard({
           {badge ? (
             <span
               className={cn(
-                'inline-flex items-center font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-xs border',
+                'inline-flex items-center font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-xs border font-semibold',
                 badgeStyles[badgeVariant]
               )}
             >
@@ -148,7 +148,7 @@ export function HoverImageCard({
           )}
 
           {tagline && (
-            <span className="font-mono text-[10px] text-[var(--color-text-tertiary)]">
+            <span className="font-mono text-xs text-[var(--color-text-tertiary)]">
               {tagline}
             </span>
           )}
@@ -175,7 +175,7 @@ export function HoverImageCard({
             {pathwaySignals.map((signal, idx) => (
               <span
                 key={signal}
-                className="inline-flex items-center text-[10px] font-mono text-[#6BB8FF] bg-[#2F8FFF]/10 border border-[#2F8FFF]/20 px-2 py-0.5 rounded-xs"
+                className="inline-flex items-center text-[11px] font-mono text-[#6BB8FF] bg-[#2F8FFF]/10 border border-[#2F8FFF]/20 px-2 py-0.5 rounded-xs font-medium"
               >
                 {signal}
                 {idx < pathwaySignals.length - 1 && (

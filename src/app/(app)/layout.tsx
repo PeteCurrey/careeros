@@ -9,18 +9,20 @@ import { MENTOR_LIST } from '@/content/mentors/mentorRegistry';
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   let displayName = 'Pete Currey';
   let mentorName = 'Marcus Thorne';
-  let mentorPortraitSrc = '/media/mentors/marcus_thorne.jpg';
+  let mentorPortraitSrc = '/media/mentors/mentor_marcus.jpg';
   let mentorDomain = 'Technology & Systems Architecture';
+  let onboardingComplete = true;
 
   try {
     const accessState = await getApplicationAccessState();
     const userId = accessState.userId;
+    onboardingComplete = accessState.onboardingComplete;
 
     if (userId) {
       const adminDb = createAdminClient();
       const { data: profile } = await adminDb
         .from('profiles')
-        .select('display_name')
+        .select('display_name, onboarding_completed_at')
         .eq('auth_user_id', userId)
         .maybeSingle();
 
@@ -50,21 +52,30 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     <div className="min-h-screen flex flex-col bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <SkipLink />
 
-      {/* Desktop Top Header Navigation */}
-      <AppHeader
-        userDisplayName={displayName}
-        mentorName={mentorName}
-        mentorPortraitSrc={mentorPortraitSrc}
-        mentorDomain={mentorDomain}
-      />
+      {/* 
+        During incomplete onboarding, standard navigation tabs are hidden.
+        The dedicated OnboardingHeader controls the experience exclusively.
+      */}
+      {onboardingComplete && (
+        <AppHeader
+          userDisplayName={displayName}
+          mentorName={mentorName}
+          mentorPortraitSrc={mentorPortraitSrc}
+          mentorDomain={mentorDomain}
+        />
+      )}
 
-      {/* Main Application Content Area */}
-      <main id="main-content" tabIndex={-1} className="flex-1 focus:outline-none pb-20 lg:pb-10">
+      {/* Main Content Area */}
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className={`flex-1 focus:outline-none ${onboardingComplete ? 'pb-20 lg:pb-10' : ''}`}
+      >
         {children}
       </main>
 
-      {/* Mobile-First Bottom Navigation */}
-      <AppBottomNav />
+      {/* Mobile-First Bottom Navigation (Only after complete onboarding) */}
+      {onboardingComplete && <AppBottomNav />}
     </div>
   );
 }

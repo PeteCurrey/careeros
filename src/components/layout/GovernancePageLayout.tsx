@@ -3,6 +3,8 @@ import Link from "next/link";
 import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 import type { GovernanceDocumentMeta } from "@/types/platform/governance";
 import { ArrowLeft, Shield, FileText, Scale, ExternalLink, Mail, CheckCircle2, Info } from "lucide-react";
+import { CareerPathwayConnector } from "@/components/brand/CareerPathwayConnector";
+import { CareerAtmosphere } from "@/components/brand/CareerAtmosphere";
 
 export interface GovernancePageLayoutProps {
   meta: GovernanceDocumentMeta;
@@ -34,8 +36,14 @@ export function GovernancePageLayout({
   return (
     <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Header & Metadata Banner */}
-      <header className="pt-12 pb-10 border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
-        <div className="container-editorial space-y-6">
+      <header className="relative overflow-hidden pt-16 pb-12 border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
+        {/* Subtle ambient atmosphere layer */}
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+          <CareerAtmosphere className="absolute inset-0" intensity={0.35} animate={false} />
+        </div>
+        <CareerPathwayConnector variant="cross-section" className="opacity-10" />
+
+        <div className="container-editorial relative z-10 space-y-6">
           
           {/* Category Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-taupe-300)]" aria-label="Breadcrumb">
@@ -75,20 +83,20 @@ export function GovernancePageLayout({
           {/* Key Document Parameters Bar */}
           <div className="pt-4 border-t border-[var(--color-border-subtle)] grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Effective Date</span>
-              <span className="font-mono text-[var(--color-text-primary)]">{meta.effectiveDate}</span>
+              <span className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-taupe-300)] mb-0.5">Effective Date</span>
+              <span className="font-mono text-xs text-[var(--color-text-primary)]">{meta.effectiveDate}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Jurisdiction</span>
-              <span className="text-[var(--color-text-primary)]">{meta.jurisdiction}</span>
+              <span className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-taupe-300)] mb-0.5">Jurisdiction</span>
+              <span className="text-xs text-[var(--color-text-primary)]">{meta.jurisdiction}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Document Owner</span>
-              <span className="text-[var(--color-text-primary)]">{meta.owner}</span>
+              <span className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-taupe-300)] mb-0.5">Document Owner</span>
+              <span className="text-xs text-[var(--color-text-primary)]">{meta.owner}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase tracking-wider font-semibold text-[var(--color-taupe-300)]">Last Reviewed</span>
-              <span className="font-mono text-[var(--color-text-primary)]">{meta.lastReviewedDate}</span>
+              <span className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-taupe-300)] mb-0.5">Last Reviewed</span>
+              <span className="font-mono text-xs text-[var(--color-text-primary)]">{meta.lastReviewedDate}</span>
             </div>
           </div>
 
@@ -112,7 +120,7 @@ export function GovernancePageLayout({
                       <a
                         key={item.id}
                         href={`#${item.id}`}
-                        className="block text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-normal transition-colors line-clamp-2"
+                        className="block text-xs text-[var(--color-text-secondary)] hover:text-white hover:text-[#6BB8FF] font-normal transition-colors line-clamp-2 py-0.5"
                       >
                         {item.title}
                       </a>
