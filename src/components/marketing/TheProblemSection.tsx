@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ScrollReveal } from '@/components/brand/ScrollReveal';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 import { HumanCareerAnnotation } from '@/components/brand/HumanCareerAnnotation';
@@ -20,15 +21,44 @@ export function TheProblemSection() {
   return (
     <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] relative overflow-hidden">
       
-      {/* Background Fine-Line Non-Linear Career Pathway Ribbon */}
+      {/* ── Background Atmospheric Image with Directional Fade ── */}
       <div
         aria-hidden="true"
-        className="pointer-events-none select-none absolute inset-0 z-0 opacity-25 overflow-hidden"
+        className="pointer-events-none select-none absolute inset-0 z-0 overflow-hidden"
       >
+        {/* Right-weighted architectural environment image */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] opacity-20 lg:opacity-25">
+          <Image
+            src="/media/hero/hero_visionary_pathways.jpg"
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 65vw, 100vw"
+            className="object-cover object-center"
+          />
+          {/* Directional left-to-right dissolve — guarantees 100% solid dark base behind left copy */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to right, var(--color-surface-warm) 0%, var(--color-surface-warm) 15%, rgba(34,34,34,0.92) 40%, rgba(34,34,34,0.6) 75%, rgba(34,34,34,0.3) 100%)',
+            }}
+          />
+        </div>
+
+        {/* Top and bottom seam dissolves */}
+        <div
+          className="absolute inset-x-0 top-0 h-24"
+          style={{ background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, transparent 100%)' }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-24"
+          style={{ background: 'linear-gradient(to top, var(--color-surface-warm) 0%, transparent 100%)' }}
+        />
+
+        {/* Background Fine-Line Non-Linear Career Pathway Ribbon */}
         <svg
           viewBox="0 0 1440 600"
           preserveAspectRatio="none"
-          className="w-full h-full"
+          className="w-full h-full absolute inset-0 opacity-25"
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* Subtle connecting spline */}

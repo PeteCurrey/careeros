@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { ScrollReveal } from '@/components/brand/ScrollReveal';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
@@ -88,8 +89,30 @@ export function LifetimeJourneySection() {
   return (
     <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] relative overflow-hidden">
       
-      {/* Subtle ambient lighting */}
-      <div className="ambient-glow-champagne absolute inset-0 pointer-events-none" />
+      {/* ── Panoramic Architectural Civic Innovation Backdrop ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute inset-0 z-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 opacity-20 lg:opacity-25">
+          <Image
+            src="/media/product/how_it_works_hero.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+        {/* Deep vertical dark gradient overlay for text protection */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, rgba(34,34,34,0.92) 18%, rgba(24,24,24,0.85) 50%, rgba(34,34,34,0.92) 82%, var(--color-surface-warm) 100%)',
+          }}
+        />
+        {/* Subtle ambient lighting */}
+        <div className="ambient-glow-champagne absolute inset-0 pointer-events-none opacity-40" />
+      </div>
 
       <div className="container-editorial space-y-16 relative z-10">
         

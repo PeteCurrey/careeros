@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Search, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
@@ -39,8 +40,30 @@ export function OpportunityIntelligenceSection() {
   return (
     <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] relative overflow-hidden">
       
-      {/* Subtle ambient lighting */}
-      <div className="ambient-glow-champagne absolute inset-0 pointer-events-none" />
+      {/* ── Modern Architectural Opportunity Observatory Backdrop ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute inset-0 z-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 opacity-20 lg:opacity-25">
+          <Image
+            src="/media/product/opportunity_agent_hero.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+        {/* Directional & Vertical Dark Dissolve Overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, rgba(34,34,34,0.90) 15%, rgba(24,24,24,0.85) 50%, rgba(34,34,34,0.90) 85%, var(--color-surface-warm) 100%)',
+          }}
+        />
+        {/* Subtle ambient lighting */}
+        <div className="ambient-glow-champagne absolute inset-0 pointer-events-none opacity-50" />
+      </div>
 
       <div className="container-editorial space-y-16 relative z-10">
         

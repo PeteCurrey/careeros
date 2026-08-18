@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { ArrowRight, ShieldCheck, Lock } from "lucide-react";
 import Link from "next/link";
 import { ROUTES } from "@/lib/routes";
@@ -70,8 +71,38 @@ export function PrivacyViewerSection() {
   return (
     <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] relative overflow-hidden">
       
-      {/* Subtle ambient lighting */}
-      <div className="ambient-glow-blue absolute inset-0 pointer-events-none" />
+      {/* ── Architectural Vault & Safeguarding Structured Light Backdrop ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute inset-0 z-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 opacity-15 lg:opacity-20">
+          <Image
+            src="/media/schools/school_privacy_architecture_hero.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+        {/* Deep radial vignette and top/bottom seam fades */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at 50% 50%, rgba(34,34,34,0.72) 0%, rgba(24,24,24,0.92) 75%, var(--color-surface-warm) 100%)',
+          }}
+        />
+        <div
+          className="absolute inset-x-0 top-0 h-20"
+          style={{ background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, transparent 100%)' }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-20"
+          style={{ background: 'linear-gradient(to top, var(--color-surface-warm) 0%, transparent 100%)' }}
+        />
+        {/* Subtle ambient lighting */}
+        <div className="ambient-glow-blue absolute inset-0 pointer-events-none opacity-40" />
+      </div>
 
       <div className="container-editorial space-y-16 relative z-10">
         

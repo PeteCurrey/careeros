@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ScrollReveal } from '@/components/brand/ScrollReveal';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 
@@ -8,8 +9,38 @@ export function MissionSection() {
   return (
     <section className="section-editorial bg-[var(--color-surface-warm)] border-b border-[var(--color-border-default)] relative overflow-hidden">
       
-      {/* Subtle ambient lighting */}
-      <div className="ambient-glow-lilac absolute inset-0 pointer-events-none" />
+      {/* ── Cinematic Sunrise Horizon & Sky Bridges Backdrop ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute inset-0 z-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 opacity-20 lg:opacity-25">
+          <Image
+            src="/media/hero/career_twin_horizon.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+        {/* Deep central vignette ensuring maximum contrast for centered manifesto copy */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at 50% 50%, rgba(34,34,34,0.80) 0%, rgba(24,24,24,0.94) 75%, var(--color-surface-warm) 100%)',
+          }}
+        />
+        <div
+          className="absolute inset-x-0 top-0 h-24"
+          style={{ background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, transparent 100%)' }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-24"
+          style={{ background: 'linear-gradient(to top, var(--color-surface-warm) 0%, transparent 100%)' }}
+        />
+        {/* Subtle ambient lighting */}
+        <div className="ambient-glow-lilac absolute inset-0 pointer-events-none opacity-40" />
+      </div>
 
       <div className="container-narrow text-center space-y-10 relative z-10">
         
