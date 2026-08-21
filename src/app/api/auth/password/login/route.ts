@@ -1,8 +1,34 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { cookies } from 'next/headers';
 import { createClient, createAdminClient } from '@/lib/supabase/server';
-import { recordUserSecurityEvent } from '@/lib/auth/passkeys';
 import { ROUTES } from '@/lib/routes';
+import { USER_SESSION_COOKIE_NAME } from '@/lib/auth/cookie-names';
+import { signUserSession } from '@/lib/auth/session-signature';
+
+/**
+ * Password sign-in.
+ *
+ * This route previously did three things it must never do, all of which are
+ * now removed:
+ *
+ *   1. It granted a session to a specific hardcoded email address regardless
+ *      of the password supplied.
+ *   2. When Supabase sign-in failed it called `admin.updateUserById` to reset
+ *      the account's password to whatever the caller had just typed, which
+ *      allowed anyone to take over any registered account by submitting its
+ *      email address.
+ *   3. It issued an unsigned, non-httpOnly session cookie that downstream code
+ *      trusted on `authenticated === true`.
+ *
+ * Sign-in is now delegated entirely to Supabase Auth. Accounts are created by
+ * /signup, never here: a login endpoint that provisions accounts turns every
+ * typo into a new user and silently skips email verification.
+ */
+
+const SESSION_MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 days
+
+/** Deliberately identical for unknown email and wrong password. */
+const INVALID_CREDENTIALS = 'Invalid email or password. Please try again.';
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,150 +37,58 @@ export async function POST(request: NextRequest) {
 
     if (!email || !password) {
       return NextResponse.json(
-        { error: 'Email and password are required.' },
-        { status: 400 }
+        { error: 'Enter your email address and password to sign in.' },
+        { status: 400 },
       );
     }
 
-    const cleanEmail = email.trim().toLowerCase();
-    const isPeteCurrey = cleanEmail === 'petecurrey@gmail.com';
-    const isSpecialPassword = isPeteCurrey && password === 'Vivaro2104!!';
+    const cleanEmail = String(email).trim().toLowerCase();
 
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-    const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const supabaseConfigured =
+      Boolean(supabaseUrl) &&
+      Boolean(anonKey) &&
+      !supabaseUrl!.includes('placeholder');
 
-    let authUserId = isPeteCurrey ? 'usr_petecurrey_89' : `usr_${cleanEmail.replace(/[^a-z0-9]/g, '_')}`;
-    let authUserEmail = cleanEmail;
-    let isAuthenticated = false;
+    // Local development without Supabase credentials. Mirrors the same guard
+    // used in middleware. Never reachable in a deployed environment, where
+    // NODE_ENV is 'production' and Supabase is configured.
+    const isLocalDev =
+      process.env.NODE_ENV !== 'production' &&
+      process.env.NEXT_PUBLIC_APP_ENV !== 'production';
 
-    // 1. Try Supabase Auth if credentials are configured
-    if (supabaseUrl && anonKey && !supabaseUrl.includes('placeholder')) {
-      try {
-        const supabase = await createClient();
-        
-        // Attempt password sign in
-        const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
-          email: cleanEmail,
-          password,
-        });
-
-        if (!signInError && signInData.user) {
-          authUserId = signInData.user.id;
-          authUserEmail = signInData.user.email || cleanEmail;
-          isAuthenticated = true;
-        } else {
-          // If signIn failed, attempt auto-provisioning via admin client
-          try {
-            const adminDb = createAdminClient();
-            const { data: userList } = await adminDb.auth.admin.listUsers();
-            const existingAuthUser = userList?.users?.find(
-              (u) => u.email?.toLowerCase() === cleanEmail
-            );
-
-            if (!existingAuthUser) {
-              const { data: created, error: createError } = await adminDb.auth.admin.createUser({
-                email: cleanEmail,
-                password,
-                email_confirm: true,
-                user_metadata: {
-                  display_name: isPeteCurrey ? 'Pete Currey' : 'CareerOS User',
-                  date_of_birth: isPeteCurrey ? '1989-04-21' : '1995-01-01',
-                },
-              });
-              if (!createError && created.user) {
-                authUserId = created.user.id;
-                isAuthenticated = true;
-              }
-            } else {
-              const { data: updated, error: updateError } = await adminDb.auth.admin.updateUserById(
-                existingAuthUser.id,
-                {
-                  password,
-                  email_confirm: true,
-                }
-              );
-              if (!updateError && updated.user) {
-                authUserId = updated.user.id;
-                isAuthenticated = true;
-              }
-            }
-
-            // Retry signIn to establish SSR session cookies
-            if (isAuthenticated) {
-              await supabase.auth.signInWithPassword({
-                email: cleanEmail,
-                password,
-              });
-            }
-          } catch (adminErr) {
-            console.warn('Admin provisioning notice:', adminErr);
-          }
-
-          // Also attempt signUp via anon client if still not authenticated
-          if (!isAuthenticated) {
-            try {
-              const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
-                email: cleanEmail,
-                password,
-                options: {
-                  data: {
-                    display_name: isPeteCurrey ? 'Pete Currey' : 'CareerOS User',
-                    date_of_birth: isPeteCurrey ? '1989-04-21' : '1995-01-01',
-                  },
-                },
-              });
-
-              if (!signUpError && signUpData.user) {
-                authUserId = signUpData.user.id;
-                isAuthenticated = true;
-              }
-            } catch (signUpErr) {
-              console.warn('SignUp fallback notice:', signUpErr);
-            }
-          }
-        }
-      } catch (sbErr) {
-        console.warn('Supabase authentication notice:', sbErr);
+    if (!supabaseConfigured) {
+      if (!isLocalDev) {
+        console.error('Password login attempted with Supabase not configured.');
+        return NextResponse.json(
+          { error: 'Sign in is temporarily unavailable. Please try again shortly.' },
+          { status: 503 },
+        );
       }
-    }
-
-    // 2. Allow Pete Currey login directly
-    if (isSpecialPassword || isPeteCurrey) {
-      isAuthenticated = true;
-    }
-
-    if (!isAuthenticated) {
-      return NextResponse.json(
-        { error: 'Invalid email or password. Please try again.' },
-        { status: 401 }
+      return issueSession(
+        {
+          userId: `dev_${cleanEmail.replace(/[^a-z0-9]/g, '_')}`,
+          email: cleanEmail,
+        },
+        ROUTES.APP_ONBOARDING,
       );
     }
 
-    // 3. Set persistent authenticated cookie session
-    const cookieStore = await cookies();
-    cookieStore.set(
-      'careeros_user_session',
-      JSON.stringify({
-        userId: authUserId,
-        email: cleanEmail,
-        displayName: isPeteCurrey ? 'Pete Currey' : 'CareerOS User',
-        dateOfBirth: isPeteCurrey ? '1989-04-21' : '1995-01-01',
-        authenticated: true,
-        loginAt: new Date().toISOString(),
-      }),
-      {
-        path: '/',
-        httpOnly: false,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        maxAge: 60 * 60 * 24 * 30, // 30 days
-      }
-    );
+    const supabase = await createClient();
+    const { data: signInData, error: signInError } =
+      await supabase.auth.signInWithPassword({ email: cleanEmail, password });
 
-    // 4. Determine redirect URL: first-time login goes directly to /app/onboarding
+    if (signInError || !signInData.user) {
+      return NextResponse.json({ error: INVALID_CREDENTIALS }, { status: 401 });
+    }
+
+    const authUserId = signInData.user.id;
+    const authEmail = signInData.user.email || cleanEmail;
+    const displayName = signInData.user.user_metadata?.display_name;
+
+    // Send first-time users to onboarding, returning users to the dashboard.
     let targetRedirect: string = ROUTES.APP_ONBOARDING;
-
     try {
       const adminDb = createAdminClient();
       const { data: profile } = await adminDb
@@ -167,23 +101,59 @@ export async function POST(request: NextRequest) {
         targetRedirect = ROUTES.APP_DASHBOARD;
       }
     } catch {
-      // Default to onboarding for fresh login
-      targetRedirect = ROUTES.APP_ONBOARDING;
+      // Profile lookup is advisory only; onboarding is the safe default.
     }
 
-    return NextResponse.json({
-      success: true,
-      redirectTo: targetRedirect,
-      user: {
-        id: authUserId,
-        email: cleanEmail,
-      },
-    });
+    return issueSession(
+      { userId: authUserId, email: authEmail, displayName },
+      targetRedirect,
+    );
   } catch (error) {
     console.error('Error in /api/auth/password/login:', error);
     return NextResponse.json(
       { error: 'Sign in failed. Please try again.' },
-      { status: 500 }
+      { status: 500 },
     );
   }
+}
+
+/**
+ * Issues the signed fallback cookie that carries identity across the window
+ * where the Supabase SSR cookie has not yet propagated. If no signing secret
+ * is configured the cookie is omitted rather than issued unsigned — the
+ * Supabase session alone still authenticates the user.
+ */
+async function issueSession(
+  user: { userId: string; email: string; displayName?: string },
+  redirectTo: string,
+) {
+  const now = Math.floor(Date.now() / 1000);
+  const token = await signUserSession({
+    userId: user.userId,
+    email: user.email,
+    displayName: user.displayName,
+    issuedAt: now,
+    expiresAt: now + SESSION_MAX_AGE_SECONDS,
+  });
+
+  if (token) {
+    const cookieStore = await cookies();
+    cookieStore.set(USER_SESSION_COOKIE_NAME, token, {
+      path: '/',
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: SESSION_MAX_AGE_SECONDS,
+    });
+  } else {
+    console.warn(
+      'No session signing secret configured; issuing Supabase session only.',
+    );
+  }
+
+  return NextResponse.json({
+    success: true,
+    redirectTo,
+    user: { id: user.userId, email: user.email },
+  });
 }

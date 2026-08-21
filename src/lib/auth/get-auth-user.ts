@@ -6,9 +6,17 @@
  * This exists because the password login route may succeed via Supabase
  * while the SSR session cookie is not yet propagated to the next request,
  * so we carry a signed fallback cookie.
+ *
+ * The fallback cookie is now genuinely signed. It previously was not, despite
+ * this comment: it was plain JSON with `httpOnly: false`, and this function
+ * accepted any cookie whose `authenticated` field was `true`, so a visitor
+ * could assume any identity from the browser console. Every read now verifies
+ * an HMAC the server issued.
  */
 import { cookies } from 'next/headers';
 import { createClient } from '@/lib/supabase/server';
+import { USER_SESSION_COOKIE_NAME } from '@/lib/auth/cookie-names';
+import { verifyUserSession } from '@/lib/auth/session-signature';
 
 export interface AuthUser {
   id: string;
@@ -36,23 +44,22 @@ export async function getAuthUser(): Promise<AuthUser | null> {
     // Supabase client unavailable (e.g. placeholder env) — fall through
   }
 
-  // 2. Fallback: careeros_user_session cookie
+  // 2. Fallback: signed careeros_user_session cookie
   try {
     const cookieStore = await cookies();
-    const raw = cookieStore.get('careeros_user_session')?.value;
-    if (raw) {
-      const session = JSON.parse(raw);
-      if (session?.authenticated && session?.userId && session?.email) {
-        return {
-          id: session.userId,
-          email: session.email,
-          displayName: session.displayName,
-          fromSupabaseSession: false,
-        };
-      }
+    const session = await verifyUserSession(
+      cookieStore.get(USER_SESSION_COOKIE_NAME)?.value,
+    );
+    if (session) {
+      return {
+        id: session.userId,
+        email: session.email,
+        displayName: session.displayName,
+        fromSupabaseSession: false,
+      };
     }
   } catch {
-    // Malformed cookie — ignore
+    // Malformed or unverifiable cookie — treat as signed out.
   }
 
   return null;

@@ -3,6 +3,8 @@ import { cookies } from "next/headers";
 import { Profile, SecurityAssuranceLevel } from "@/types/platform/identity";
 import { OnboardingState } from "@/types/platform/onboarding";
 import { ROUTES } from "@/lib/routes";
+import { USER_SESSION_COOKIE_NAME } from "@/lib/auth/cookie-names";
+import { verifyUserSession } from "@/lib/auth/session-signature";
 
 export interface ApplicationAccessState {
   authenticated: boolean;
@@ -26,21 +28,19 @@ export async function getApplicationAccessState(userIdOverride?: string): Promis
   let authUserId = userIdOverride;
   let userEmail: string | undefined;
 
-  let fallbackSessionCookie: string | undefined;
+  // Fallback identity, used only when no Supabase SSR session is present.
+  // The cookie carries an HMAC issued by the password login route and is
+  // rejected unless that signature verifies. Before this was signed, any
+  // visitor could set `{ userId, authenticated: true }` from the browser
+  // console and be served that user's account.
+  let parsedFallback: { userId?: string; email?: string } | null = null;
   try {
     const cookieStore = await cookies();
-    fallbackSessionCookie = cookieStore.get("careeros_user_session")?.value;
+    parsedFallback = await verifyUserSession(
+      cookieStore.get(USER_SESSION_COOKIE_NAME)?.value,
+    );
   } catch {
     // In test environment or non-request context where cookies() is unmounted
-  }
-
-  let parsedFallback: { userId?: string; email?: string; authenticated?: boolean } | null = null;
-  if (fallbackSessionCookie) {
-    try {
-      parsedFallback = JSON.parse(fallbackSessionCookie);
-    } catch {
-      // ignore JSON parse error
-    }
   }
 
   if (!authUserId) {
@@ -55,7 +55,7 @@ export async function getApplicationAccessState(userIdOverride?: string): Promis
       // ignore
     }
 
-    if (!authUserId && parsedFallback?.authenticated && parsedFallback?.userId) {
+    if (!authUserId && parsedFallback?.userId) {
       authUserId = parsedFallback.userId;
       userEmail = parsedFallback.email;
     }
