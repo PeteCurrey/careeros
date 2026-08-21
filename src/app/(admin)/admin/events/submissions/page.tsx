@@ -22,14 +22,14 @@ export default async function AdminEventSubmissionsPage() {
       <AdminSectionHeader
         category="Events Platform"
         title="Event Submissions Moderation"
-        description="Review, verify, approve, or request changes on events submitted by employers, colleges, and independent organisers."
+        description="Review, verify, approve, or request changes on events submitted by employers, colleges, and independent organizers."
       />
 
       {!submissions || submissions.length === 0 ? (
         <AdminEmptyState
           icon={CheckCircle2}
           title="0 Awaiting Review"
-          description="The user and organiser submission queue is currently clear. When organisers submit events through the public portal, they appear here for verification."
+          description="The user and organizer submission queue is currently clear. When organizers submit events through the public portal, they appear here for verification."
           badge="Queue Clear"
         />
       ) : (
@@ -39,7 +39,7 @@ export default async function AdminEventSubmissionsPage() {
               <thead className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)] text-[var(--color-text-tertiary)] font-mono uppercase text-[10px]">
                 <tr>
                   <th className="p-3">Event Title</th>
-                  <th className="p-3">Submitter / Organisation</th>
+                  <th className="p-3">Submitter / Organization</th>
                   <th className="p-3">Contact Email</th>
                   <th className="p-3">Submission Date</th>
                   <th className="p-3">Status</th>

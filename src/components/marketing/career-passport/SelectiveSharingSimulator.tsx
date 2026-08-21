@@ -16,7 +16,7 @@ export function SelectiveSharingSimulator() {
   const initialItems: ShareableItem[] = [
     { id: 'qual', name: 'NVQ Level 3 Electrical Installation', category: 'Qualification', defaultShared: true, isPrivateByNature: false, value: 'Issuer Verified (City & Guilds #9402)' },
     { id: 'evid', name: 'Conveyor Line Retrofit Commissioning Report', category: 'Work Evidence', defaultShared: true, isPrivateByNature: false, value: 'Technical PDF + Schematics Attached' },
-    { id: 'safety', name: 'OSHA 30-Hour General Industry Card', category: 'Licence & Safety', defaultShared: true, isPrivateByNature: false, value: 'Active through 2027' },
+    { id: 'safety', name: 'OSHA 30-Hour General Industry Card', category: 'License & Safety', defaultShared: true, isPrivateByNature: false, value: 'Active through 2027' },
     { id: 'exp', name: '4 Years Verified Maintenance Experience', category: 'Employment History', defaultShared: true, isPrivateByNature: false, value: 'Apex Manufacturing LLC Confirmation' },
     { id: 'salary', name: 'Minimum Compensation Target Floor', category: 'Private Compensation', defaultShared: false, isPrivateByNature: true, value: '$95,000 / year base salary target' },
     { id: 'pivot', name: 'Career Change Interest in Wind Turbines', category: 'Private Ambition', defaultShared: false, isPrivateByNature: true, value: 'Exploring shift to renewable energy sector' },

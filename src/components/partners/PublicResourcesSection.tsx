@@ -141,7 +141,7 @@ export function PublicResourcesSection() {
             <ShieldCheck className="w-5 h-5 text-[#34D399] shrink-0 mt-0.5" />
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
               <strong className="text-[var(--color-text-primary)]">Attribution &amp; Endorsement Standards.</strong>{' '}
-              CareerOS uses public workforce data under open-data licensing and applicable federal data access terms. Where attribution is required — including for O*NET® and CareerOneStop — it is displayed alongside relevant content. Reference to federal agencies and programmes does not imply US government endorsement of CareerOS. See our{' '}
+              CareerOS uses public workforce data under open-data licensing and applicable federal data access terms. Where attribution is required — including for O*NET® and CareerOneStop — it is displayed alongside relevant content. Reference to federal agencies and programs does not imply US government endorsement of CareerOS. See our{' '}
               <a href="/legal/data-sources-integrations" className="text-[#2F8FFF] underline underline-offset-2 hover:text-white font-medium">
                 Data Sources &amp; Integrations Register
               </a>{' '}

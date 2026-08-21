@@ -32,7 +32,7 @@ export default async function AdminAIRoutingPage() {
     },
     {
       id: 'cv_analysis',
-      name: 'Career Twin & CV Parsing',
+      name: 'Career Twin & Resume Parsing',
       desc: 'Extracting skills, credentials and chronological employment milestones.',
       primaryModel: 'claude-3-5-sonnet',
       fallbackModel: 'gemini-1.5-pro',
@@ -53,7 +53,7 @@ export default async function AdminAIRoutingPage() {
       <AdminSectionHeader
         category="AI Operations"
         title="Use-Case Based AI Routing"
-        description="Configure primary and fallback model routing independently per feature. Allows switching Mentor model without touching Event Extraction or CV Parsing."
+        description="Configure primary and fallback model routing independently per feature. Allows switching Mentor model without touching Event Extraction or Resume Parsing."
       />
 
       <div className="bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-md overflow-hidden">

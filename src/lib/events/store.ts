@@ -133,7 +133,7 @@ export function getAllEvents(): CareerEvent[] {
 }
 
 /**
- * Submit an event into the organiser moderation queue
+ * Submit an event into the organizer moderation queue
  */
 export function submitEventToQueue(event: CareerEvent): void {
   if (typeof window === 'undefined') return;
@@ -228,7 +228,7 @@ export function getOrCreatePreparationPlan(event: CareerEvent): EventPreparation
   }
 
   // Generate structured preparation plan for this event
-  const topEmployers = event.participatingOrganisations.slice(0, 3).map((p) => p.name);
+  const topEmployers = event.participatingOrganizations.slice(0, 3).map((p) => p.name);
   const primarySector = event.sectors[0] || 'your chosen sector';
 
   const defaultPlan: EventPreparationPlan = {
@@ -245,13 +245,13 @@ export function getOrCreatePreparationPlan(event: CareerEvent): EventPreparation
       { id: 'chk-1', task: 'Review participating employer open roles and rotational tracks', category: 'research', completed: false },
       { id: 'chk-2', task: 'Ensure Career Twin skills and portfolio evidence are up to date', category: 'cv', completed: false },
       { id: 'chk-3', task: 'Practice 30-second elevator pitch for recruiter introductions', category: 'cv', completed: false },
-      { id: 'chk-4', task: 'Prepare 3 thoughtful questions for each target organisation', category: 'questions', completed: false },
+      { id: 'chk-4', task: 'Prepare 3 thoughtful questions for each target organization', category: 'questions', completed: false },
       { id: 'chk-5', task: 'Plan follow-up notes and connect on CareerOS within 24h of the event', category: 'follow-up', completed: false },
     ],
     networkingGoals: [
       `Introduce myself to at least 3 representatives from ${topEmployers.join(', ') || 'exhibiting teams'}`,
       'Obtain direct hiring contact email or fast-track referral link from 1 employer',
-      'Take notes on key assessment centre interview themes for post-event mentor review',
+      'Take notes on key assessment center interview themes for post-event mentor review',
     ],
   };
 

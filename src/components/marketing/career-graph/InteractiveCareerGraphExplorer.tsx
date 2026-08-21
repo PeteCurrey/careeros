@@ -306,7 +306,7 @@ export function InteractiveCareerGraphExplorer() {
       {/* Footer Audit Disclaimer */}
       <div className="p-4 sm:p-5 bg-black/40 border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
         <p className="leading-relaxed">
-          <strong>Illustrative Career Graph:</strong> Examples show product concepts, not live labour-market recommendations or guaranteed eligibility.
+          <strong>Illustrative Career Graph:</strong> Examples show product concepts, not live labor-market recommendations or guaranteed eligibility.
         </p>
         <span className="text-[11px] font-mono text-[var(--color-taupe-300)] shrink-0">
           Career OS &bull; Graph Exploration Model

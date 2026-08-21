@@ -29,7 +29,7 @@ interface StudentCohortItem {
   statusBadge: string;
   statusStyle: string;
   lastActive: string;
-  counsellorAction: string;
+  counselorAction: string;
   actionRequired: boolean;
   contextSummary: string;
   studentQuestions: string[];
@@ -47,7 +47,7 @@ const COHORT_STUDENTS: StudentCohortItem[] = [
     statusBadge: '1:1 Conversation Requested',
     statusStyle: 'bg-blue-500/10 text-[#6BB8FF] border-blue-500/20',
     lastActive: 'Today at 09:15 AM',
-    counsellorAction: 'Review clinical entry criteria and confirm local hospital trust shadowing day',
+    counselorAction: 'Review clinical entry criteria and confirm local hospital trust shadowing day',
     actionRequired: true,
     contextSummary: 'Student has completed extensive exploration of healthcare pathways and wants to understand clinical placement commitments versus university life.',
     studentQuestions: [
@@ -67,7 +67,7 @@ const COHORT_STUDENTS: StudentCohortItem[] = [
     statusBadge: 'Advising Follow-up Scheduled',
     statusStyle: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20',
     lastActive: 'Yesterday',
-    counsellorAction: 'Explain levy-funded employer application deadlines and portfolio requirements',
+    counselorAction: 'Explain levy-funded employer application deadlines and portfolio requirements',
     actionRequired: true,
     contextSummary: 'Student has logged 2 school workshop projects in Career Passport and seeks help preparing for technical assessment interviews.',
     studentQuestions: [
@@ -86,7 +86,7 @@ const COHORT_STUDENTS: StudentCohortItem[] = [
     statusBadge: 'Independent Exploration',
     statusStyle: 'bg-white/10 text-white/80 border-white/10',
     lastActive: '3 days ago',
-    counsellorAction: 'No immediate intervention needed — exploration proceeding naturally',
+    counselorAction: 'No immediate intervention needed — exploration proceeding naturally',
     actionRequired: false,
     contextSummary: 'Student is actively using Career Mentor to map transferrable skills from graphic design and video editing into technology and communication pathways.',
     studentQuestions: [
@@ -105,7 +105,7 @@ const COHORT_STUDENTS: StudentCohortItem[] = [
     statusBadge: 'Evidence Milestone Logged',
     statusStyle: 'bg-purple-500/10 text-[#CDBBD2] border-purple-500/20',
     lastActive: '4 hours ago',
-    counsellorAction: 'Acknowledge robotics club captaincy evidence in Career Passport',
+    counselorAction: 'Acknowledge robotics club captaincy evidence in Career Passport',
     actionRequired: false,
     contextSummary: 'Student has uploaded verified capstone coding project and requested school mentor sign-off on robotics leadership credential.',
     studentQuestions: [
@@ -138,7 +138,7 @@ export function InteractiveEducatorView() {
 
         <div className="flex items-center gap-3">
           <span className="text-[11px] font-mono px-3 py-1 rounded bg-white/5 border border-white/10 text-[var(--color-taupe-300)]">
-            Role: Lead Careers Counsellor
+            Role: Lead Careers Counselor
           </span>
         </div>
       </div>
@@ -230,7 +230,7 @@ export function InteractiveEducatorView() {
             <div className="space-y-2">
               <span className="text-[10px] font-mono uppercase text-[#6BB8FF] font-semibold flex items-center gap-1.5">
                 <MessageSquare className="w-3.5 h-3.5 text-[#2F8FFF]" />
-                Student Stated Questions for Counsellor (Permissioned)
+                Student Stated Questions for Counselor (Permissioned)
               </span>
               <ul className="space-y-2 text-xs text-[var(--color-text-secondary)]">
                 {activeStudent.studentQuestions.map((q, i) => (
@@ -249,7 +249,7 @@ export function InteractiveEducatorView() {
                 High-Leverage Human Touchpoint
               </span>
               <p className="text-xs text-white leading-relaxed">
-                {activeStudent.counsellorAction}
+                {activeStudent.counselorAction}
               </p>
             </div>
 

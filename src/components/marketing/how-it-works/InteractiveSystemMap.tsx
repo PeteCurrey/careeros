@@ -47,7 +47,7 @@ export function InteractiveSystemMap() {
             Connected Career Architecture
           </span>
           <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
-            You at the centre. One evolving system.
+            You at the center. One evolving system.
           </h3>
         </div>
         <span className="text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/60 backdrop-blur-sm text-[var(--color-text-tertiary)] self-start sm:self-auto">

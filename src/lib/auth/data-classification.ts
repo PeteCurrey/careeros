@@ -37,15 +37,15 @@ export const DATA_CLASSIFICATIONS: Record<DataClassificationLevel, DataClassific
   CLASS_2_PERSONAL_CAREER: {
     level: 'CLASS_2_PERSONAL_CAREER',
     name: 'Class 2 — Personal Career Records',
-    description: 'Detailed work history, CV documents, qualifications, and active job applications.',
+    description: 'Detailed work history, resume documents, qualifications, and active job applications.',
     requiredAssurance: 'SECURED',
     requiresExplicitConsent: true,
-    examples: ['CV/Resume uploads', 'Employment history', 'Education transcripts', 'Target job applications'],
+    examples: ['Resume/Resume uploads', 'Employment history', 'Education transcripts', 'Target job applications'],
   },
   CLASS_3_SENSITIVE_CAREEROS: {
     level: 'CLASS_3_SENSITIVE_CAREEROS',
     name: 'Class 3 — Sensitive Career Intelligence',
-    description: 'Private AI mentor consultations, detailed assessments, compensation targets, and behavioural observations.',
+    description: 'Private AI mentor consultations, detailed assessments, compensation targets, and behavioral observations.',
     requiredAssurance: 'SECURED',
     requiresExplicitConsent: true,
     examples: ['AI Mentor chat transcripts', 'Diagnostic assessments', 'Compensation benchmarks', 'Career Twin private parameters'],

@@ -26,7 +26,7 @@ export interface Workspace {
   type: WorkspaceType;
   name: string;
   slug: string; // URL-safe identifier
-  organisation_id: string | null; // FK -> organisations.id (null for INDIVIDUAL)
+  organisation_id: string | null; // FK -> organizations.id (null for INDIVIDUAL)
   settings: WorkspaceSettings;
   created_at: string;
   updated_at: string;

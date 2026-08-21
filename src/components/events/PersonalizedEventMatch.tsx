@@ -8,17 +8,17 @@ import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
 import { cn } from '@/lib/utils';
 
-interface PersonalisedEventMatchProps {
+interface PersonalizedEventMatchProps {
   event: CareerEvent;
   isLoggedIn?: boolean;
   className?: string;
 }
 
-export function PersonalisedEventMatch({
+export function PersonalizedEventMatch({
   event,
   isLoggedIn = false,
   className,
-}: PersonalisedEventMatchProps) {
+}: PersonalizedEventMatchProps) {
   const intel = event.mockIntelligence;
 
   // If no intelligence data and not logged in — show sign-in prompt
@@ -44,7 +44,7 @@ export function PersonalisedEventMatch({
               Sign in to see how this event fits your career plan.
             </p>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-              CareerOS analyses your Career Twin, goals, sector interests and location to personalise your event intelligence.
+              CareerOS analyzes your Career Twin, goals, sector interests and location to personalize your event intelligence.
             </p>
           </div>
         </div>

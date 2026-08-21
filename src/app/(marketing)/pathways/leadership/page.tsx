@@ -11,7 +11,7 @@ import { CareerAtmosphere } from "@/components/brand/CareerAtmosphere";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Executive & Organisational Leadership Pathways | Career OS",
+  title: "Executive & Organizational Leadership Pathways | Career OS",
   description: "Transition from individual contributor to team manager, director, vice president, and C-suite executive with verified leadership governance artifacts.",
   alternates: {
     canonical: "https://career-os.com/pathways/leadership",

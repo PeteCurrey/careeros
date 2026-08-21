@@ -119,9 +119,9 @@ export interface ComplianceDocumentRequest {
   id: string;
   requesterName: string;
   requesterEmail: string;
-  requesterOrganisation: string;
+  requesterOrganization: string;
   requesterRole?: string;
-  organisationType: 'school_district' | 'university' | 'enterprise_employer' | 'government' | 'auditor' | 'other';
+  organizationType: 'school_district' | 'university' | 'enterprise_employer' | 'government' | 'auditor' | 'other';
   requestedDocuments: string[];
   useCaseReason: string;
   ndaStatus: 'pending' | 'signed' | 'waived' | 'rejected';
@@ -211,7 +211,7 @@ export function getSafeStatusDisplay(framework: ComplianceFramework): {
       return {
         badgeLabel: 'Aligned',
         isVerifiedClaim: true,
-        tooltipText: 'Architected around recognised standard control practices',
+        tooltipText: 'Architected around recognized standard control practices',
       };
     case 'in_progress':
       return {

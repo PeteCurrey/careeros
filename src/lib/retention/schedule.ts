@@ -55,7 +55,7 @@ export const DATA_RETENTION_SCHEDULE: RetentionRule[] = [
   },
   {
     category: 'Institutional School Roster Data',
-    dataTypes: ['Student school email', 'Grade level', 'District SIS identifier', 'Counsellor cohort tags'],
+    dataTypes: ['Student school email', 'Grade level', 'District SIS identifier', 'Counselor cohort tags'],
     userRelationship: 'Enrolled K-12 Student via District Agreement',
     retentionPeriod: 'Duration of school academic year + 60 days post-contract termination (or graduation transition to personal 16+ account)',
     legalBasis: 'FERPA School Official Exception (34 CFR § 99.31(a)(1)(i)(B)); State Student Privacy DPAs',

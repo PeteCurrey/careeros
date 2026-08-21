@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "School & District Institutional Hub | Career OS",
-  description: "Institutional career readiness infrastructure for school districts. FERPA-compliant student safeguarding, counsellor capacity scaling, and verified progression.",
+  description: "Institutional career readiness infrastructure for school districts. FERPA-compliant student safeguarding, counselor capacity scaling, and verified progression.",
   alternates: {
     canonical: "https://career-os.com/schools",
   },
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 export default function SchoolsHubPage() {
   const schoolSubpages = [
     {
-      title: "Educator & Counsellor Workflows",
+      title: "Educator & Counselor Workflows",
       href: "/schools/educators",
-      desc: "Multiply counsellor impact with structured cohort tracking, student interest discovery summaries, and automated graduation pathway audits.",
+      desc: "Multiply counselor impact with structured cohort tracking, student interest discovery summaries, and automated graduation pathway audits.",
       imageSrc: "/media/schools/audience_schools.jpg",
-      imageAlt: "School educators and counsellors collaborating on student career pathways",
+      imageAlt: "School educators and counselors collaborating on student career pathways",
     },
     {
       title: "Minor Safeguarding & Youth Safety",
@@ -82,7 +82,7 @@ export default function SchoolsHubPage() {
 
           <ScrollReveal delayMs={160}>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-2xl">
-              Career OS is not another student app. We deliver enterprise-grade institutional infrastructure that expands counsellor capacity, guarantees student privacy, and tracks verified post-secondary outcomes.
+              Career OS is not another student app. We deliver enterprise-grade institutional infrastructure that expands counselor capacity, guarantees student privacy, and tracks verified post-secondary outcomes.
             </p>
           </ScrollReveal>
 

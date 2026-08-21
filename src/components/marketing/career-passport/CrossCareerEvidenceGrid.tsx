@@ -11,7 +11,7 @@ export function CrossCareerEvidenceGrid() {
       icon: ShieldAlert,
       evidenceItems: [
         'Level 4 Incident Command & Tactical Decision-Making Cert',
-        'Emergency Medical Technician (EMT-B) Active Licence',
+        'Emergency Medical Technician (EMT-B) Active License',
         'Breathing Apparatus & Hazardous Materials (HAZMAT) Log',
         'Post-Incident Review Safety Audit Documentation',
       ],

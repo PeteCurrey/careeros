@@ -72,7 +72,7 @@ const ENGINEERING_PATHWAYS: PathwayOption[] = [
     learningStructure: '4 days per week in manufacturing facility / design engineering plant; 1 day per week university / college study block.',
     evidenceBuilt: [
       '4 years of verified industrial maintenance & manufacturing logs',
-      'Accredited BEng Honours degree with zero student debt',
+      'Accredited BEng Honors degree with zero student debt',
       'Workplace Health & Safety compliance credentials (IOSH / NEBOSH foundation)',
       'Employer-verified performance and competency audits in Career Passport',
     ],
@@ -135,7 +135,7 @@ const ENGINEERING_PATHWAYS: PathwayOption[] = [
     destinations: [
       'Aviation Maintenance & Avionics Supervisor',
       'Maritime Propulsion & Systems Engineer',
-      'Defence Logistics & Communications Specialist',
+      'Defense Logistics & Communications Specialist',
       'High-demand civilian aerospace/maritime engineering transition',
     ],
     considerations: [

@@ -10,7 +10,7 @@ import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 
 interface MatchedOpportunity {
   role: string;
-  organisation: string;
+  organization: string;
   type: string;
   location: string;
   alignment: number;
@@ -20,7 +20,7 @@ interface MatchedOpportunity {
 const MATCHES: MatchedOpportunity[] = [
   {
     role: 'Lead Systems Architect — Renewable Energy Infrastructure',
-    organisation: 'Nordic Clean Power Consortium',
+    organization: 'Nordic Clean Power Consortium',
     type: 'Full-time &bull; Hybrid',
     location: 'Austin, TX / Remote',
     alignment: 94,
@@ -28,7 +28,7 @@ const MATCHES: MatchedOpportunity[] = [
   },
   {
     role: 'Staff Infrastructure Operations Specialist',
-    organisation: 'Autonomous Transit Labs',
+    organization: 'Autonomous Transit Labs',
     type: 'Full-time &bull; On-site',
     location: 'San Francisco, CA',
     alignment: 89,
@@ -153,7 +153,7 @@ export function OpportunityIntelligenceSection() {
                       </h4>
                       <p
                         className="text-xs text-[var(--color-text-secondary)]"
-                        dangerouslySetInnerHTML={{ __html: match.organisation + ' &bull; ' + match.location }}
+                        dangerouslySetInnerHTML={{ __html: match.organization + ' &bull; ' + match.location }}
                       />
                     </div>
                     <span className="shrink-0 px-3 py-1 bg-[rgba(52,211,153,0.1)] text-[#34D399] text-xs font-semibold rounded-[var(--radius-sm)] border border-[rgba(52,211,153,0.25)] font-mono flex items-center gap-1.5">

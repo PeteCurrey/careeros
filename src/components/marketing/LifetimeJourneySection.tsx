@@ -26,7 +26,7 @@ const LIFETIME_STAGES: Stage[] = [
     tagline: 'Understand innate strengths & viable horizons',
     environment: 'School & Exploration Environment',
     description: 'Explore suited careers, emerging industries, and realistic pathways without being forced into narrow predetermined tracks or premature decisions.',
-    milestones: ['Latent Strength Mapping', 'Exploratory Pathway Modelling', 'Parity across University & Trades'],
+    milestones: ['Latent Strength Mapping', 'Exploratory Pathway Modeling', 'Parity across University & Trades'],
     imageSrc: '/media/students/student_hero_futures.jpg',
     imageAlt: 'Young student exploring future horizon pathways',
   },

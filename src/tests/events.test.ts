@@ -24,7 +24,7 @@ describe('Events Platform Data & Logic', () => {
       expect(evt.costType).toMatch(/^(free|paid|scholarship-available|deposit-refundable)$/);
       expect(evt.startDate).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(evt.endDate).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-      expect(evt.organiser.name).toBeDefined();
+      expect(evt.organizer.name).toBeDefined();
       expect(evt.moderation.status).toBe('live');
       expect(evt.moderation.editorialApproved).toBe(true);
     });

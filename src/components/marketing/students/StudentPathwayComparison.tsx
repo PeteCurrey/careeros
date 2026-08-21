@@ -33,7 +33,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'Low',
         qualificationLevel: 'Level 3 / Electrician qualification',
         typicalOutcome: 'Qualified electrician — employed or self-employed',
-        requires: ['Application to employer', 'Maths & English GCSE/equivalent', 'Physical capability'],
+        requires: ['Application to employer', 'High school diploma or GED', 'Physical capability'],
         note: 'Direct entry to licensed trade. Strong earning potential.',
       },
       {
@@ -44,7 +44,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'High',
         qualificationLevel: 'BEng / MEng',
         typicalOutcome: 'Electrical design engineer, power systems, renewables',
-        requires: ['A-levels or equivalent including Maths/Physics', 'UCAS application'],
+        requires: ['High school diploma incl. Algebra II & Physics', 'College application'],
         note: 'Leads to engineering rather than trade roles. Different career family.',
       },
       {
@@ -55,7 +55,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'Low',
         qualificationLevel: 'City & Guilds / BTEC / NVQ',
         typicalOutcome: 'Entry into electrical trade, further apprenticeship',
-        requires: ['College application', 'Maths & English'],
+        requires: ['College application', 'Math & English'],
         note: 'Can be a stepping stone to apprenticeship or employment.',
       },
       {
@@ -83,7 +83,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'High',
         qualificationLevel: 'BSc Nursing (NMC registered)',
         typicalOutcome: 'Registered Nurse — NHS, private, international',
-        requires: ['A-levels or equivalent', 'UCAS application', 'Interview'],
+        requires: ['High school diploma or equivalent', 'College application', 'Interview'],
         note: 'Regulated profession requiring NMC registration.',
       },
       {
@@ -94,7 +94,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'Low',
         qualificationLevel: 'BSc Nursing (NMC registered)',
         typicalOutcome: 'Registered Nurse — typically with NHS employer sponsor',
-        requires: ['Employer sponsorship (NHS Trust)', 'Degree-entry standard'],
+        requires: ['Employer sponsorship (hospital system)', 'Degree-entry standard'],
         note: 'Same qualification as university route, earned while employed.',
       },
       {
@@ -105,7 +105,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'Low',
         qualificationLevel: 'On-the-job training + NVQ/apprenticeship progression',
         typicalOutcome: 'Healthcare assistant — pathway to further qualifications',
-        requires: ['Application to NHS or care provider', 'DBS check'],
+        requires: ['Application to a hospital or care provider', 'Background check'],
         note: 'Entry-level employment with strong internal progression routes.',
       },
       {
@@ -116,7 +116,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'High',
         qualificationLevel: 'BSc Paramedic Science (HCPC registered)',
         typicalOutcome: 'Paramedic — ambulance service or critical care',
-        requires: ['A-levels or equivalent', 'UCAS application', 'Fitness & health standards'],
+        requires: ['High school diploma or equivalent', 'College application', 'Fitness & health standards'],
         note: 'Regulated profession. Practice experience required during degree.',
       },
     ],
@@ -133,7 +133,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'High',
         qualificationLevel: 'BSc / MEng Computer Science',
         typicalOutcome: 'Software engineer, product engineer, technical roles',
-        requires: ['A-levels including Maths', 'UCAS application'],
+        requires: ['High school diploma including Algebra II', 'College application'],
       },
       {
         name: 'Software Developer Degree Apprenticeship',
@@ -143,7 +143,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'Low',
         qualificationLevel: 'BSc Computer Science (employer-sponsored)',
         typicalOutcome: 'Software developer at sponsoring employer',
-        requires: ['Employer application', 'Maths A-level typically required'],
+        requires: ['Employer application', 'High school Algebra II typically required'],
         note: 'Highly competitive — strong employer demand.',
       },
       {
@@ -165,7 +165,7 @@ const DESTINATIONS: Destination[] = [
         debtRisk: 'Low',
         qualificationLevel: 'Level 3 IT qualification',
         typicalOutcome: 'IT support, systems technician — pathway to further roles',
-        requires: ['Employer application', 'Maths & English GCSE'],
+        requires: ['Employer application', 'High school diploma or GED'],
         note: 'Strong entry point into technology — progression to higher-level roles.',
       },
     ],

@@ -27,6 +27,28 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  /**
+   * Permanent redirects for URLs that changed when the estate moved to US
+   * English. Public paths only — admin routes sit behind auth and are not
+   * indexed, so they were renamed without a redirect.
+   *
+   * These are permanent (308) so search engines transfer ranking to the new
+   * path rather than treating it as a temporary move.
+   */
+  async redirects() {
+    return [
+      {
+        source: '/events/organisers/dashboard',
+        destination: '/events/organizers/dashboard',
+        permanent: true,
+      },
+      {
+        source: '/events/organisers/:path*',
+        destination: '/events/organizers/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

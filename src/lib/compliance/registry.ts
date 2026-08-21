@@ -88,7 +88,7 @@ export const COMPLIANCE_FRAMEWORKS_REGISTRY: ComplianceFramework[] = [
     description:
       'Artificial Intelligence Management System (AIMS) governing AI risk assessment, lifecycle accountability, model transparency, bias testing, continuous drift monitoring, human-in-the-loop safeguards, and failover containment.',
     status: 'certified',
-    scope: ['AI Career Mentor', 'Career Twin Knowledge Engine', 'Opportunity Matcher', 'CV Extraction Pipeline'],
+    scope: ['AI Career Mentor', 'Career Twin Knowledge Engine', 'Opportunity Matcher', 'Resume Extraction Pipeline'],
     standardVersion: '2023',
     effectiveDate: '2025-01-15',
     verifiedDate: '2025-01-15',
@@ -110,7 +110,7 @@ export const COMPLIANCE_FRAMEWORKS_REGISTRY: ComplianceFramework[] = [
     description:
       'School-controlled data processing under the "School Official" exception (34 CFR § 99.31(a)(1)(i)). Access is strictly limited to authorized educational purposes under institutional direction with zero secondary marketing use.',
     status: 'compliant',
-    scope: ['School Workspaces', 'Student Guidance Records', 'Counsellor Oversight', 'District SIS Integrations'],
+    scope: ['School Workspaces', 'Student Guidance Records', 'Counselor Oversight', 'District SIS Integrations'],
     standardVersion: '34 CFR Part 99',
     effectiveDate: '2024-09-01',
     publicEvidenceUrl: '/schools/privacy',
@@ -200,7 +200,7 @@ export const COMPLIANCE_FRAMEWORKS_REGISTRY: ComplianceFramework[] = [
     shortName: 'NIST AI RMF',
     category: 'responsible_ai',
     description:
-      'Comprehensive AI risk governance structured around Govern, Map, Measure, and Manage. Applied across all AI Career Mentors, Career Twin models, matching engines, and CV parsing utilities.',
+      'Comprehensive AI risk governance structured around Govern, Map, Measure, and Manage. Applied across all AI Career Mentors, Career Twin models, matching engines, and resume parsing utilities.',
     status: 'aligned',
     scope: ['AI Career Mentor', 'Career Twin', 'Opportunity Matcher', 'Interview Simulator'],
     standardVersion: '1.0',
@@ -295,7 +295,7 @@ export const AI_DECISION_SYSTEMS_REGISTRY: AIDecisionSystem[] = [
     dataRetentionRule: 'Session dialogues retained during active account; deleted upon user request within 30 days.',
     knownLimitations: [
       'Does not guarantee university admission or employment offers.',
-      'Designed for exploration; requires human counsellor verification for high-stakes credential requirements.',
+      'Designed for exploration; requires human counselor verification for high-stakes credential requirements.',
     ],
     incidentCount: 0,
     lastReviewedAt: '2026-08-16T00:00:00Z',
@@ -342,7 +342,7 @@ export const AI_DECISION_SYSTEMS_REGISTRY: AIDecisionSystem[] = [
   {
     id: 'career-twin-cv-parsing',
     systemId: 'SYS-CTP-003',
-    systemName: 'Career Twin CV & Experience Extraction Engine',
+    systemName: 'Career Twin Resume & Experience Extraction Engine',
     modelProvider: 'Anthropic (Claude Enterprise)',
     modelName: 'Claude 3.5 Sonnet',
     modelVersion: '3.5',
@@ -384,7 +384,7 @@ export const AI_DECISION_SYSTEMS_REGISTRY: AIDecisionSystem[] = [
     decisionType: 'recommendation',
     jurisdictions: ['US-Federal', 'US-States'],
     developerOrDeployerRole: 'developer',
-    personalDataCategories: ['Location postcode/city', 'Industry preferences', 'Career development goals'],
+    personalDataCategories: ['Location ZIP code/city', 'Industry preferences', 'Career development goals'],
     inputCategories: ['User interest tags', 'Event taxonomy data'],
     outputCategories: ['Ranked event discovery feed', 'Event match rationale'],
     protectedClassRisk: 'low',
@@ -396,7 +396,7 @@ export const AI_DECISION_SYSTEMS_REGISTRY: AIDecisionSystem[] = [
     biasAuditRequired: false,
     candidateNoticeRequired: false,
     dataRetentionRule: 'Computed transiently per request; user preferences retained until updated in account settings.',
-    knownLimitations: ['Dependent on user-provided preference tags and accurate event organiser metadata.'],
+    knownLimitations: ['Dependent on user-provided preference tags and accurate event organizer metadata.'],
     incidentCount: 0,
     lastReviewedAt: '2026-08-16T00:00:00Z',
     owner: 'Head of Product',
@@ -541,7 +541,7 @@ export const COMPLIANCE_DOCUMENTS_VAULT: EvidenceDocument[] = [
   {
     id: 'doc-subprocessors',
     frameworkId: 'iso-27701',
-    title: 'CareerOS Authorised Subprocessor Register',
+    title: 'CareerOS Authorized Subprocessor Register',
     documentType: 'policy',
     isPublic: true,
     requiresNda: false,

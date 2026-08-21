@@ -26,7 +26,7 @@ export default async function AdminEventsOverviewPage() {
     { count: totalSubmissions },
     { count: totalCandidates },
     { count: totalSources },
-    { count: totalOrganisers },
+    { count: totalOrganizers },
     { data: recentLiveEvents },
   ] = await Promise.all([
     supabase.from('events').select('*', { count: 'exact', head: true }).in('moderation_status', ['approved', 'live']),
@@ -42,7 +42,7 @@ export default async function AdminEventsOverviewPage() {
       <AdminSectionHeader
         category="Verticals"
         title="Events Platform Control"
-        description="Comprehensive operations for live events, organiser submissions, automated discovery pipelines and commercial placements."
+        description="Comprehensive operations for live events, organizer submissions, automated discovery pipelines and commercial placements."
         actions={
           <Link
             href={ROUTES.ADMIN_EVENTS_SOURCES}
@@ -97,11 +97,11 @@ export default async function AdminEventsOverviewPage() {
         </div>
 
         <div className="p-4 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)]">
-          <p className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Organisers</p>
+          <p className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Organizers</p>
           <p className="text-xl font-bold text-[var(--color-text-primary)] mt-1">
-            {(totalOrganisers || 0).toLocaleString()}
+            {(totalOrganizers || 0).toLocaleString()}
           </p>
-          <Link href={ROUTES.ADMIN_EVENTS_ORGANISERS} className="text-[11px] text-[#2F8FFF] hover:underline mt-1 inline-block">
+          <Link href={ROUTES.ADMIN_EVENTS_ORGANIZERS} className="text-[11px] text-[#2F8FFF] hover:underline mt-1 inline-block">
             View profiles →
           </Link>
         </div>

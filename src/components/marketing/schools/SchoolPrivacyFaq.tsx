@@ -18,15 +18,15 @@ const FAQS: FAQ[] = [
   },
   {
     q: 'Can school staff see everything inside a student’s Career OS account?',
-    a: "No. School staff access is purpose-limited and role-based. Career counsellors can view agreed pathway goals, coursework evidence, and guidance requests, but they cannot routinely browse private AI Career Mentor chat transcripts or private personal salary reflections.",
+    a: "No. School staff access is purpose-limited and role-based. Career counselors can view agreed pathway goals, coursework evidence, and guidance requests, but they cannot routinely browse private AI Career Mentor chat transcripts or private personal salary reflections.",
   },
   {
     q: 'Can classroom teachers read a student’s AI Career Mentor conversations?',
     a: "No. Classroom teachers have no access to private AI Career Mentor dialogue. The Mentor is designed as a safe, confidential space for unhurried student inquiry.",
   },
   {
-    q: 'Can school career counsellors read Career Mentor conversations?',
-    a: "No. Routine exploratory conversations with the AI Mentor remain sealed in the student's personal account context. Counsellors receive high-level interest summaries and student-booked appointment requests.",
+    q: 'Can school career counselors read Career Mentor conversations?',
+    a: "No. Routine exploratory conversations with the AI Mentor remain sealed in the student's personal account context. Counselors receive high-level interest summaries and student-booked appointment requests.",
   },
   {
     q: 'Can safeguarding staff access private conversations during a safety concern?',
@@ -118,7 +118,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: 'How can a school Data Protection Officer conduct a formal privacy review?',
-    a: "DPOs and privacy leads can access our comprehensive compliance pack, including Data Processing Addenda (DPA), Subprocessor lists, DPIA templates, and security architecture whitepapers via our Trust Centre.",
+    a: "DPOs and privacy leads can access our comprehensive compliance pack, including Data Processing Addenda (DPA), Subprocessor lists, DPIA templates, and security architecture whitepapers via our Trust Center.",
   },
 ];
 

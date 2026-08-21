@@ -14,7 +14,7 @@ import {
 import { cn } from '@/lib/utils';
 
 const ESCALATION_STEPS = [
-  { step: '01', title: 'Concern Flagged', icon: ShieldAlert, desc: 'User report, automated guardrail breach, or school counsellor escalation.', badge: 'Triage Trigger' },
+  { step: '01', title: 'Concern Flagged', icon: ShieldAlert, desc: 'User report, automated guardrail breach, or school counselor escalation.', badge: 'Triage Trigger' },
   { step: '02', title: 'Containment', icon: Search, desc: 'Temporary output retraction or kill-switch activation on affected pathway vector.', badge: 'Immediate' },
   { step: '03', title: 'Human Investigation', icon: UserCheck, desc: 'Trust & Safety Review Board examines prompt logs, context, and potential bias.', badge: 'Human Review' },
   { step: '04', title: 'Action & Redress', icon: FileText, desc: 'System recalibration, direct communication to affected user, and policy update.', badge: 'Recourse' },

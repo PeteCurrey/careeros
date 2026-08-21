@@ -67,7 +67,7 @@ export const MENTOR_DEMO_BRANCHES: Stage1Branch[] = [
       },
       {
         id: 'analytical',
-        text: 'I like analysing complex things',
+        text: 'I like analyzing complex things',
         response: {
           hearing: "You excel when untangling multi-variable complexity, quantitative data structures, and systemic patterns.",
           nextMove: "Map analytical roles where domain depth compounds significantly over decades.",

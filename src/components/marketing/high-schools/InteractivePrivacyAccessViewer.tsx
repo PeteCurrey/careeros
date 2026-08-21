@@ -43,15 +43,15 @@ const ACCESS_ROLES: RoleAccessDefinition[] = [
     fields: [
       { name: 'Private Mentor Exploratory Dialogue', description: 'Raw conversation transcripts, personal uncertainties, exploratory prompts', visibility: 'FULL_ACCESS', visibilityNote: 'Unrestricted full access to personal history' },
       { name: 'Career Pathways Explored', description: 'Comparative pathway evaluations, apprenticeships vs degree models', visibility: 'FULL_ACCESS', visibilityNote: 'Unrestricted full access' },
-      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counsellor or mentor follow-up', visibility: 'FULL_ACCESS', visibilityNote: 'Editable and controllable by student' },
+      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counselor or mentor follow-up', visibility: 'FULL_ACCESS', visibilityNote: 'Editable and controllable by student' },
       { name: 'Career Passport Evidence Artifacts', description: 'Projects, competition entries, course transcripts, verified certificates', visibility: 'FULL_ACCESS', visibilityNote: 'Sovereign ownership persists after school' },
       { name: 'Personal Reflections & Sensitive Notes', description: 'Family considerations, private doubts, developmental reflections', visibility: 'FULL_ACCESS', visibilityNote: 'Confidential personal layer' },
       { name: 'Direct Contact Details & Identity', description: 'Full legal name, school ID, personal email, address', visibility: 'FULL_ACCESS', visibilityNote: 'Controllable under privacy settings' },
     ],
   },
   {
-    id: 'counsellor',
-    roleTitle: 'School Career Counsellor',
+    id: 'counselor',
+    roleTitle: 'School Career Counselor',
     roleSubtitle: 'Institutional Guidance Professional',
     badge: 'Purpose-Based Advising Context',
     icon: UserCheck,
@@ -59,7 +59,7 @@ const ACCESS_ROLES: RoleAccessDefinition[] = [
     fields: [
       { name: 'Private Mentor Exploratory Dialogue', description: 'Raw conversation transcripts, personal uncertainties, exploratory prompts', visibility: 'STRICTLY_PRIVATE', visibilityNote: 'Hidden & Segregated — Private to student' },
       { name: 'Career Pathways Explored', description: 'Comparative pathway evaluations, apprenticeships vs degree models', visibility: 'PERMISSIONED_SUMMARY', visibilityNote: 'Aggregated summary of explored industries' },
-      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counsellor or mentor follow-up', visibility: 'FULL_ACCESS', visibilityNote: 'Visible to prepare 1:1 human conversation' },
+      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counselor or mentor follow-up', visibility: 'FULL_ACCESS', visibilityNote: 'Visible to prepare 1:1 human conversation' },
       { name: 'Career Passport Evidence Artifacts', description: 'Projects, competition entries, course transcripts, verified certificates', visibility: 'FULL_ACCESS', visibilityNote: 'Visible to assist with applications/references' },
       { name: 'Personal Reflections & Sensitive Notes', description: 'Family considerations, private doubts, developmental reflections', visibility: 'STRICTLY_PRIVATE', visibilityNote: 'Hidden & Segregated — Never exposed' },
       { name: 'Direct Contact Details & Identity', description: 'Full legal name, school ID, personal email, address', visibility: 'FULL_ACCESS', visibilityNote: 'School records identity per institutional roster' },
@@ -75,7 +75,7 @@ const ACCESS_ROLES: RoleAccessDefinition[] = [
     fields: [
       { name: 'Private Mentor Exploratory Dialogue', description: 'Raw conversation transcripts, personal uncertainties, exploratory prompts', visibility: 'FULL_ACCESS', visibilityNote: 'Active in session memory under strict controls' },
       { name: 'Career Pathways Explored', description: 'Comparative pathway evaluations, apprenticeships vs degree models', visibility: 'FULL_ACCESS', visibilityNote: 'Used to provide balanced, unbiased exploration' },
-      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counsellor or mentor follow-up', visibility: 'FULL_ACCESS', visibilityNote: 'Helps structure questions for human review' },
+      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counselor or mentor follow-up', visibility: 'FULL_ACCESS', visibilityNote: 'Helps structure questions for human review' },
       { name: 'Career Passport Evidence Artifacts', description: 'Projects, competition entries, course transcripts, verified certificates', visibility: 'FULL_ACCESS', visibilityNote: 'Grounds advice in demonstrated evidence' },
       { name: 'Personal Reflections & Sensitive Notes', description: 'Family considerations, private doubts, developmental reflections', visibility: 'FULL_ACCESS', visibilityNote: 'Handled with care; never sold to third parties' },
       { name: 'Direct Contact Details & Identity', description: 'Full legal name, school ID, personal email, address', visibility: 'STRICTLY_PRIVATE', visibilityNote: 'AI operates on pseudonymised identifiers' },
@@ -91,7 +91,7 @@ const ACCESS_ROLES: RoleAccessDefinition[] = [
     fields: [
       { name: 'Private Mentor Exploratory Dialogue', description: 'Raw conversation transcripts, personal uncertainties, exploratory prompts', visibility: 'STRICTLY_PRIVATE', visibilityNote: 'Preserves student exploratory safe space' },
       { name: 'Career Pathways Explored', description: 'Comparative pathway evaluations, apprenticeships vs degree models', visibility: 'PERMISSIONED_SUMMARY', visibilityNote: 'High-level pathway exploration summary' },
-      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counsellor or mentor follow-up', visibility: 'PERMISSIONED_SUMMARY', visibilityNote: 'Visible where family alignment is agreed' },
+      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counselor or mentor follow-up', visibility: 'PERMISSIONED_SUMMARY', visibilityNote: 'Visible where family alignment is agreed' },
       { name: 'Career Passport Evidence Artifacts', description: 'Projects, competition entries, course transcripts, verified certificates', visibility: 'FULL_ACCESS', visibilityNote: 'Full view of student achievements and certificates' },
       { name: 'Personal Reflections & Sensitive Notes', description: 'Family considerations, private doubts, developmental reflections', visibility: 'STRICTLY_PRIVATE', visibilityNote: 'Private student exploratory reflection' },
       { name: 'Direct Contact Details & Identity', description: 'Full legal name, school ID, personal email, address', visibility: 'FULL_ACCESS', visibilityNote: 'Linked to verified guardian relationship' },
@@ -106,8 +106,8 @@ const ACCESS_ROLES: RoleAccessDefinition[] = [
     purposeStatement: 'Strictly prohibited from browsing minor student directories, cold-soliciting students, or accessing private career data.',
     fields: [
       { name: 'Private Mentor Exploratory Dialogue', description: 'Raw conversation transcripts, personal uncertainties, exploratory prompts', visibility: 'STRICTLY_PRIVATE', visibilityNote: '100% Inaccessible to commercial employers' },
-      { name: 'Career Pathways Explored', description: 'Comparative pathway evaluations, apprenticeships vs degree models', visibility: 'STRICTLY_PRIVATE', visibilityNote: '100% Inaccessible — No behavioural marketing' },
-      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counsellor or mentor follow-up', visibility: 'STRICTLY_PRIVATE', visibilityNote: '100% Inaccessible to commercial recruiters' },
+      { name: 'Career Pathways Explored', description: 'Comparative pathway evaluations, apprenticeships vs degree models', visibility: 'STRICTLY_PRIVATE', visibilityNote: '100% Inaccessible — No behavioral marketing' },
+      { name: 'Stated Advising Questions & Goals', description: 'Topics flagged for school counselor or mentor follow-up', visibility: 'STRICTLY_PRIVATE', visibilityNote: '100% Inaccessible to commercial recruiters' },
       { name: 'Career Passport Evidence Artifacts', description: 'Projects, competition entries, course transcripts, verified certificates', visibility: 'RESTRICTED_GATE', visibilityNote: 'Accessible ONLY via explicit student application' },
       { name: 'Personal Reflections & Sensitive Notes', description: 'Family considerations, private doubts, developmental reflections', visibility: 'STRICTLY_PRIVATE', visibilityNote: '100% Inaccessible — Absolute segregation' },
       { name: 'Direct Contact Details & Identity', description: 'Full legal name, school ID, personal email, address', visibility: 'RESTRICTED_GATE', visibilityNote: 'Revealed ONLY after verified institutional introduction' },
@@ -116,7 +116,7 @@ const ACCESS_ROLES: RoleAccessDefinition[] = [
 ];
 
 export function InteractivePrivacyAccessViewer() {
-  const [selectedRoleId, setSelectedRoleId] = useState<string>('counsellor');
+  const [selectedRoleId, setSelectedRoleId] = useState<string>('counselor');
   const activeRole = ACCESS_ROLES.find((r) => r.id === selectedRoleId) ?? ACCESS_ROLES[1]!;
 
   const getVisibilityBadge = (vis: string) => {

@@ -28,7 +28,7 @@ const ECOSYSTEM_NODES: EcosystemNode[] = [
   { id: 'employers', label: 'EMPLOYER COALITIONS', sub: 'Hiring Networks', angle: 90, radius: ORBIT_RADIUS, color: '#DDD36D', detail: 'Demonstrated capability hiring without keyword resume screening' },
   { id: 'wellbeing', label: 'HUMAN WELLBEING', sub: 'Clinical Care', angle: 135, radius: ORBIT_RADIUS, color: '#F87171', detail: 'Licensed clinical tele-health when career pressure becomes personal' },
   { id: 'skills', label: 'SKILLS & CREDS', sub: 'W3C Passport', angle: 180, radius: ORBIT_RADIUS, color: '#2F8FFF', detail: 'Tamper-proof verifiable digital credentials & competency proof' },
-  { id: 'opportunity', label: 'LABOUR INTELLIGENCE', sub: 'Real-time Demand', angle: 225, radius: ORBIT_RADIUS, color: '#34D399', detail: 'Real-time employer demand, wage benchmarks & occupational data' },
+  { id: 'opportunity', label: 'LABOR INTELLIGENCE', sub: 'Real-time Demand', angle: 225, radius: ORBIT_RADIUS, color: '#34D399', detail: 'Real-time employer demand, wage benchmarks & occupational data' },
   { id: 'community', label: 'COMMUNITY CARE', sub: 'Life Support', angle: 270, radius: ORBIT_RADIUS, color: '#DDD36D', detail: '211 hyper-local childcare, transit, and social care assistance' },
   { id: 'public_infra', label: 'PUBLIC DATA', sub: 'Federal Standards', angle: 315, radius: ORBIT_RADIUS, color: '#CDBBD2', detail: 'O*NET®, CareerOneStop & US Department of Labor infrastructure' },
 ];
@@ -76,7 +76,7 @@ export function PartnersHero() {
                 </h1>
 
                 <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed max-w-xl font-normal">
-                  CareerOS connects people with the organisations, learning, opportunities, and human support that move careers forward — uniting a fragmented landscape around one sovereign individual.
+                  CareerOS connects people with the organizations, learning, opportunities, and human support that move careers forward — uniting a fragmented landscape around one sovereign individual.
                 </p>
               </div>
             </ScrollReveal>

@@ -79,7 +79,7 @@ export default function SchoolsStudentSafetyPage() {
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
               <span className="section-label text-emerald-400">
-                School Authority Sprint 02 · Institutional Safeguarding Centre
+                School Authority Sprint 02 · Institutional Safeguarding Center
               </span>
             </div>
 
@@ -126,7 +126,7 @@ export default function SchoolsStudentSafetyPage() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[var(--color-border-subtle)] pb-4">
                 <div className="space-y-0.5">
                   <span className="section-label text-[var(--accent-blue)]">
-                    System Architecture Visualisation
+                    System Architecture Visualization
                   </span>
                   <h2 className="text-sm font-bold text-white">
                     Multi-Stakeholder Relationship &amp; Permission Boundary
@@ -145,7 +145,7 @@ export default function SchoolsStudentSafetyPage() {
                   <div className="p-3.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-1">
                     <div className="flex items-center gap-2 text-xs font-bold text-white">
                       <GraduationCap className="w-4 h-4 text-[var(--accent-blue)]" />
-                      <span>School &amp; Counsellor</span>
+                      <span>School &amp; Counselor</span>
                     </div>
                     <p className="text-[11px] text-[var(--color-text-tertiary)]">
                       Advising briefs &amp; cohort trends. No raw chat surveillance.
@@ -258,7 +258,7 @@ export default function SchoolsStudentSafetyPage() {
                 </div>
               </div>
               <div className="text-[10px] font-mono text-[var(--color-text-tertiary)] pt-2 border-t border-[var(--color-border-subtle)]">
-                Jurisdiction-specific youth labour and privacy rules remain applicable.
+                Jurisdiction-specific youth labor and privacy rules remain applicable.
               </div>
             </div>
 
@@ -306,10 +306,10 @@ export default function SchoolsStudentSafetyPage() {
                 </div>
                 <h3 className="text-sm font-bold text-white">Institutional Authorization Only</h3>
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Career OS does not provide open consumer registration to under-13 users. Any use must be through an approved institutional arrangement where authorised under educational privacy laws.
+                  Career OS does not provide open consumer registration to under-13 users. Any use must be through an approved institutional arrangement where authorized under educational privacy laws.
                 </p>
                 <div className="p-3 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded text-[11px] text-[var(--color-text-secondary)] leading-snug">
-                  School authorisation does not remove Career OS data minimisation duties. Strict zero-tracking and educational-only processing apply.
+                  School authorization does not remove Career OS data minimisation duties. Strict zero-tracking and educational-only processing apply.
                 </div>
               </div>
               <div className="text-[10px] font-mono text-[var(--color-text-tertiary)] pt-2 border-t border-[var(--color-border-subtle)]">
@@ -332,7 +332,7 @@ export default function SchoolsStudentSafetyPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             {[
               { label: 'Institutional Context', desc: 'School partnership vs direct account status' },
-              { label: 'Workspace Role', desc: 'Student, Counsellor, Administrator, Guardian' },
+              { label: 'Workspace Role', desc: 'Student, Counselor, Administrator, Guardian' },
               { label: 'Opportunity Type', desc: 'Educational fair vs statutory degree apprenticeship' },
               { label: 'Interaction Purpose', desc: 'Exploration vs formal consented application' },
             ].map((ctx) => (
@@ -352,7 +352,7 @@ export default function SchoolsStudentSafetyPage() {
               The Career Mentor supports career development. It is not a substitute for the adults responsible for a young person.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              The AI Career Mentor is engineered with strict domain guardrails. It deconstructs occupations, maps educational pathways, and prepares students for interviews — but it is explicitly barred from acting as a counsellor, therapist, or medical advisor.
+              The AI Career Mentor is engineered with strict domain guardrails. It deconstructs occupations, maps educational pathways, and prepares students for interviews — but it is explicitly barred from acting as a counselor, therapist, or medical advisor.
             </p>
           </div>
 
@@ -379,7 +379,7 @@ export default function SchoolsStudentSafetyPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-400 font-bold">✓</span>
-                  <span>Structuring questions for students to take into human counselling meetings</span>
+                  <span>Structuring questions for students to take into human counseling meetings</span>
                 </li>
               </ul>
             </div>
@@ -393,7 +393,7 @@ export default function SchoolsStudentSafetyPage() {
               <ul className="space-y-2.5 text-xs text-[var(--color-text-secondary)]">
                 <li className="flex items-start gap-2">
                   <span className="text-red-400 font-bold">✕</span>
-                  <span>Mental health counselling, psychological therapy, or clinical diagnoses</span>
+                  <span>Mental health counseling, psychological therapy, or clinical diagnoses</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-400 font-bold">✕</span>
@@ -473,7 +473,7 @@ export default function SchoolsStudentSafetyPage() {
               Make it obvious how to ask for help.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              Students, teachers, counsellors, and parents require distinct, unambiguous reporting mechanisms to raise concerns. Explore how reports are acknowledged, quarantined, investigated, and escalated below.
+              Students, teachers, counselors, and parents require distinct, unambiguous reporting mechanisms to raise concerns. Explore how reports are acknowledged, quarantined, investigated, and escalated below.
             </p>
           </div>
 
@@ -505,7 +505,7 @@ export default function SchoolsStudentSafetyPage() {
               <div className="p-4 bg-[var(--background-dark-deep)] border-2 border-[var(--accent-blue)] rounded text-center space-y-1 shadow-md">
                 <div className="text-xs font-bold text-[var(--accent-blue)] uppercase font-mono">2. Safeguarding Barrier</div>
                 <p className="text-[11px] text-[var(--color-text-tertiary)]">
-                  Institutional authorisation &amp; explicit student application required before any data transmission.
+                  Institutional authorization &amp; explicit student application required before any data transmission.
                 </p>
               </div>
 
@@ -550,7 +550,7 @@ export default function SchoolsStudentSafetyPage() {
             <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
               <div className="font-bold text-white">Legitimate Employer Verification</div>
               <p className="text-[11px] text-[var(--color-text-tertiary)]">
-                Organisers and corporate domains verified against official business registers to prevent ghost jobs or scam operations.
+                Organizers and corporate domains verified against official business registers to prevent ghost jobs or scam operations.
               </p>
             </div>
             <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
@@ -575,11 +575,11 @@ export default function SchoolsStudentSafetyPage() {
             Career events need the same safeguarding standards as digital opportunities.
           </h2>
           <p className="text-body-editorial text-[var(--color-text-secondary)]">
-            Career OS actively connects young people with career fairs, university open days, and employer recruitment sessions. Every event listing is vetted for organiser identity, age appropriateness, and venue accessibility.
+            Career OS actively connects young people with career fairs, university open days, and employer recruitment sessions. Every event listing is vetted for organizer identity, age appropriateness, and venue accessibility.
           </p>
           <div className="p-4 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded text-xs text-[var(--color-text-secondary)] space-y-2">
             <p>
-              <strong className="text-white">Venue &amp; Physical Safety Notice:</strong> Career OS listing reviews ensure event legitimacy and accurate representations. However, Career OS review does not replace an organiser&apos;s own statutory safeguarding, licensing, physical security, or venue health and safety duties.
+              <strong className="text-white">Venue &amp; Physical Safety Notice:</strong> Career OS listing reviews ensure event legitimacy and accurate representations. However, Career OS review does not replace an organizer&apos;s own statutory safeguarding, licensing, physical security, or venue health and safety duties.
             </p>
             <div className="pt-1">
               <Link href={ROUTES.EVENTS} className="text-xs text-[var(--accent-blue)] hover:underline">
@@ -661,7 +661,7 @@ export default function SchoolsStudentSafetyPage() {
             The Career Mentor can be useful and still be wrong.
           </h2>
           <p className="text-body-editorial text-[var(--color-text-secondary)]">
-            Generative AI models can misunderstand nuance, reflect outdated requirements, or fail to account for unique personal circumstances. Career OS communicates model uncertainty, cites qualification requirements, and encourages students to verify consequential decisions with school counsellors.
+            Generative AI models can misunderstand nuance, reflect outdated requirements, or fail to account for unique personal circumstances. Career OS communicates model uncertainty, cites qualification requirements, and encourages students to verify consequential decisions with school counselors.
           </p>
         </section>
 
@@ -706,7 +706,7 @@ export default function SchoolsStudentSafetyPage() {
               We distinguish safeguards that exist from safeguards we are still building.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              Trust with educational institutions requires radical transparency. Below is our formal control register categorised by implementation status.
+              Trust with educational institutions requires radical transparency. Below is our formal control register categorized by implementation status.
             </p>
           </div>
 
@@ -736,7 +736,7 @@ export default function SchoolsStudentSafetyPage() {
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <div className="text-xs font-bold text-white uppercase font-mono">School &amp; District</div>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Institutional safeguarding policy, staff access administration, pastoral care, 1:1 counselling, and local child protection referrals.
+                Institutional safeguarding policy, staff access administration, pastoral care, 1:1 counseling, and local child protection referrals.
               </p>
             </div>
 
@@ -748,7 +748,7 @@ export default function SchoolsStudentSafetyPage() {
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <div className="text-xs font-bold text-amber-400 uppercase font-mono">Employer / Organiser</div>
+              <div className="text-xs font-bold text-amber-400 uppercase font-mono">Employer / Organizer</div>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                 Truthful opportunity representations, fair labor compliance, workplace safety, background-checked staff, and zero unsolicited minor outreach.
               </p>
@@ -817,7 +817,7 @@ export default function SchoolsStudentSafetyPage() {
               { label: 'Security & Infrastructure', href: ROUTES.TRUST_SECURITY },
               { label: 'Accessibility Statement (WCAG 2.2)', href: ROUTES.TRUST_ACCESSIBILITY },
               { label: 'Regulatory Alignment Hub', href: ROUTES.REGULATORY },
-              { label: 'Career OS Events Centre', href: ROUTES.EVENTS },
+              { label: 'Career OS Events Center', href: ROUTES.EVENTS },
             ].map((doc) => (
               <Link
                 key={doc.label}
@@ -859,7 +859,7 @@ export default function SchoolsStudentSafetyPage() {
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <h3 className="text-sm font-bold text-white">3. What ages can use Career OS?</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Direct individual registration is available to users aged 16+. Users aged 13–15 require an approved school partnership or verified guardian arrangement. Under-13 use is restricted exclusively to authorised institutional deployments.
+                Direct individual registration is available to users aged 16+. Users aged 13–15 require an approved school partnership or verified guardian arrangement. Under-13 use is restricted exclusively to authorized institutional deployments.
               </p>
             </div>
 
@@ -880,7 +880,7 @@ export default function SchoolsStudentSafetyPage() {
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <h3 className="text-sm font-bold text-white">6. Can teachers read all student Mentor conversations?</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                No. Teachers and counsellors receive structured advising summaries and topics flagged by the student. Raw exploratory transcripts are kept private to provide a psychologically safe environment for candid reflection.
+                No. Teachers and counselors receive structured advising summaries and topics flagged by the student. Raw exploratory transcripts are kept private to provide a psychologically safe environment for candid reflection.
               </p>
             </div>
 

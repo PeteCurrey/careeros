@@ -28,7 +28,7 @@ const IMPLEMENTATION_PHASES: RoadmapPhase[] = [
     num: '01',
     title: 'Align & Establish Governance',
     duration: 'Weeks 1–2',
-    summary: 'Define cohort scope, institutional objectives, counselling priorities, and student safeguarding policies.',
+    summary: 'Define cohort scope, institutional objectives, counseling priorities, and student safeguarding policies.',
     keyDeliverables: [
       'Identify target year group or student pilot cohort (e.g., Grade 11 / Year 11)',
       'Confirm institutional data boundaries and student privacy configuration',
@@ -42,7 +42,7 @@ const IMPLEMENTATION_PHASES: RoadmapPhase[] = [
     duration: 'Weeks 2–3',
     summary: 'Provision school tenant, define role permissions, and calibrate regional pathway and curriculum context.',
     keyDeliverables: [
-      'Setup school administrative workspace and counsellor credentials',
+      'Setup school administrative workspace and counselor credentials',
       'Configure age thresholds (16+ vs 13–15 institutional oversight)',
       'Map regional vocational, university, and apprenticeship pathway priorities',
     ],
@@ -52,13 +52,13 @@ const IMPLEMENTATION_PHASES: RoadmapPhase[] = [
     num: '03',
     title: 'Educator Onboarding & Preparation',
     duration: 'Weeks 3–4',
-    summary: 'Equip school counsellors and advisors on how to leverage pre-conversation briefs and workflow cues.',
+    summary: 'Equip school counselors and advisors on how to leverage pre-conversation briefs and workflow cues.',
     keyDeliverables: [
-      'Conduct 60-minute interactive counsellor walkthrough on context-driven advising',
+      'Conduct 60-minute interactive counselor walkthrough on context-driven advising',
       'Demonstrate how student privacy boundaries operate in practice',
       'Provide parent & guardian information notices and introductory materials',
     ],
-    stakeholderFocus: 'Career Counsellors & Pastoral Advisors',
+    stakeholderFocus: 'Career Counselors & Pastoral Advisors',
   },
   {
     num: '04',
@@ -74,15 +74,15 @@ const IMPLEMENTATION_PHASES: RoadmapPhase[] = [
   },
   {
     num: '05',
-    title: 'Pilot Review & Counsellor Feedback',
+    title: 'Pilot Review & Counselor Feedback',
     duration: 'Weeks 8–10',
     summary: 'Evaluate human advising leverage, exploration breadth, and student feedback across the term.',
     keyDeliverables: [
       'Review cohort engagement signals and pathway interest distributions',
-      'Conduct counsellor feedback session on pre-conversation brief utility',
+      'Conduct counselor feedback session on pre-conversation brief utility',
       'Identify opportunities for targeted employer or alumni pathway panels',
     ],
-    stakeholderFocus: 'School Leadership, Counsellors & Career OS Team',
+    stakeholderFocus: 'School Leadership, Counselors & Career OS Team',
   },
   {
     num: '06',

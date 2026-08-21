@@ -37,7 +37,7 @@ export function HeroEducatorComposition() {
           <div className="flex items-center gap-2.5 text-[var(--color-text-secondary)]">
             <span className="w-2 h-2 rounded-full bg-[#2F8FFF]" />
             <span className="font-semibold text-white">1:1 SESSION PREPARATION</span>
-            <span className="text-[var(--color-text-tertiary)] hidden md:inline">| More context before, more human judgement during</span>
+            <span className="text-[var(--color-text-tertiary)] hidden md:inline">| More context before, more human judgment during</span>
           </div>
           <span className="text-[11px] text-emerald-400 flex items-center gap-1.5">
             <ShieldCheck className="w-3.5 h-3.5" />
@@ -98,7 +98,7 @@ export function HeroEducatorComposition() {
               <div className="p-3.5 bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)] space-y-1.5">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-semibold flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                  Student Stated Question for Counsellor
+                  Student Stated Question for Counselor
                 </span>
                 <p className="text-xs text-white font-medium leading-relaxed italic">
                   &ldquo;Will taking an advanced apprenticeship limit my ability to become a Chartered Engineer later compared to doing a university degree first?&rdquo;
@@ -133,7 +133,7 @@ export function HeroEducatorComposition() {
             <div className="space-y-3">
               <div className="p-3.5 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-2">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-[#6BB8FF] font-semibold block">
-                  Counsellor Briefing Notes (Automated Context)
+                  Counselor Briefing Notes (Automated Context)
                 </span>
                 <div className="space-y-1.5 text-xs text-[var(--color-text-secondary)]">
                   <p>
@@ -159,7 +159,7 @@ export function HeroEducatorComposition() {
                   </li>
                   <li className="flex items-start gap-1.5">
                     <span className="text-emerald-400 font-bold">&bull;</span>
-                    <span>Discuss dual-tracking UCAS applications as a safety net alongside early autumn apprenticeship deadlines.</span>
+                    <span>Discuss dual-tracking college applications as a safety net alongside early autumn apprenticeship deadlines.</span>
                   </li>
                 </ul>
               </div>

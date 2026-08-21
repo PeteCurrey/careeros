@@ -29,7 +29,7 @@ const ACCESS_ROWS = [
     school: 'Zero Access (Synthesis Only)',
     partnerEmployer: 'Zero Access',
     eduProvider: 'Zero Access',
-    rationale: 'Conversations remain private; counsellors receive high-level pre-session briefs rather than raw transcripts.',
+    rationale: 'Conversations remain private; counselors receive high-level pre-session briefs rather than raw transcripts.',
   },
   {
     domain: 'School Pastoral Notes & Safeguarding Records',
@@ -81,7 +81,7 @@ export function PartnerAccessMatrix() {
             Data Governance &bull; Strict Perimeter Architecture
           </span>
           <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
-            Being a partner does not make an organisation part of a student&apos;s private Career OS.
+            Being a partner does not make an organization part of a student&apos;s private Career OS.
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
             Explore how data boundaries segregate private developmental exploration from partner opportunities.
@@ -150,7 +150,7 @@ export function PartnerAccessMatrix() {
         <div className="flex items-center gap-2 text-white">
           <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
           <span>
-            <strong>Core Rule:</strong> Partnership status is not a data-access permission. Commercial organisations never browse minor profiles.
+            <strong>Core Rule:</strong> Partnership status is not a data-access permission. Commercial organizations never browse minor profiles.
           </span>
         </div>
         <span className="font-mono text-[11px] text-[var(--color-taupe-300)] shrink-0">

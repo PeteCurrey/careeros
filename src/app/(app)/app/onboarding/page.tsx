@@ -165,7 +165,7 @@ export default function RedesignedOnboardingMaster() {
       setSecuritySecured(true);
       triggerSaveNotification('Passkey secured');
     } catch (err: unknown) {
-      setSecurityError((err as Error).message || 'Passkey registration was cancelled or not supported.');
+      setSecurityError((err as Error).message || 'Passkey registration was canceled or not supported.');
     } finally {
       setIsSecuring(false);
     }

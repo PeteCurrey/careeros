@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, ShieldCheck, Lock, AlertCircle, Info } from 'lucide-react';
 
-type ViewerId = 'student' | 'mentor' | 'counsellor' | 'admin' | 'guardian' | 'employer' | 'public';
+type ViewerId = 'student' | 'mentor' | 'counselor' | 'admin' | 'guardian' | 'employer' | 'public';
 
 interface FieldAccess {
   fieldName: string;
@@ -28,10 +28,10 @@ const VIEWERS: ViewerConfig[] = [
       { fieldName: 'Real Identity & Contact', category: 'Identity', sampleValue: 'Alex Vance (Year 12 / Grade 11)', status: 'VISIBLE', explanation: 'Directly visible to you in your account profile.' },
       { fieldName: 'Private Mentor Conversations', category: 'Mentor Context', sampleValue: '“I want to drop Chemistry but my parents disagree.”', status: 'VISIBLE', explanation: 'Complete conversation history is accessible exclusively to you.' },
       { fieldName: 'Career Pathways Explored', category: 'Exploration', sampleValue: 'Aerospace Engineering, Industrial Robotics, Commercial Law', status: 'VISIBLE', explanation: 'Your full exploratory search and interest history.' },
-      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'GCSE Physics (Grade 8), GCSE Maths (Grade 9)', status: 'VISIBLE', explanation: 'Your self-custodied verified credential ledger.' },
+      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'AP Physics (Score 5), Algebra II (Grade A)', status: 'VISIBLE', explanation: 'Your self-custodied verified credential ledger.' },
       { fieldName: 'School Project Evidence Artifacts', category: 'Evidence', sampleValue: 'Autonomous Rover CAD & Python Control Script', status: 'VISIBLE', explanation: 'Uploaded coursework artifacts and project briefs.' },
-      { fieldName: 'Counsellor Support Requests', category: 'School Guidance', sampleValue: 'Booked 1:1 session for apprenticeship application review', status: 'VISIBLE', explanation: 'Your scheduled school career advisory appointments.' },
-      { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'Targeting £45k+ within 3 years; seeking high autonomy', status: 'VISIBLE', explanation: 'Your personal forward-looking career trajectory goals.' },
+      { fieldName: 'Counselor Support Requests', category: 'School Guidance', sampleValue: 'Booked 1:1 session for apprenticeship application review', status: 'VISIBLE', explanation: 'Your scheduled school career advisory appointments.' },
+      { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'Targeting $85k+ within 3 years; seeking high autonomy', status: 'VISIBLE', explanation: 'Your personal forward-looking career trajectory goals.' },
       { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'Active application to Rolls-Royce Degree Apprenticeship', status: 'VISIBLE', explanation: 'Dossiers you have explicitly approved for employer disclosure.' },
     ],
   },
@@ -43,26 +43,26 @@ const VIEWERS: ViewerConfig[] = [
       { fieldName: 'Real Identity & Contact', category: 'Identity', sampleValue: 'Alex (First name & age tier only)', status: 'PURPOSE_LIMITED', explanation: 'Only pseudonymized first name and age tier passed for age-appropriate tone.' },
       { fieldName: 'Private Mentor Conversations', category: 'Mentor Context', sampleValue: '“I want to drop Chemistry but my parents disagree.”', status: 'VISIBLE', explanation: 'Multi-turn conversation history is maintained to provide coherent guidance.' },
       { fieldName: 'Career Pathways Explored', category: 'Exploration', sampleValue: 'Aerospace Engineering, Industrial Robotics, Commercial Law', status: 'VISIBLE', explanation: 'Used to provide relevant lateral comparisons and subject advice.' },
-      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'GCSE Physics (Grade 8), GCSE Maths (Grade 9)', status: 'VISIBLE', explanation: 'Used to evaluate eligibility for specific apprenticeships or degree courses.' },
+      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'AP Physics (Score 5), Algebra II (Grade A)', status: 'VISIBLE', explanation: 'Used to evaluate eligibility for specific apprenticeships or degree courses.' },
       { fieldName: 'School Project Evidence Artifacts', category: 'Evidence', sampleValue: 'Autonomous Rover CAD & Python Control Script', status: 'PURPOSE_LIMITED', explanation: 'Summarized project skills referenced only when drafting CVs or personal statements.' },
-      { fieldName: 'Counsellor Support Requests', category: 'School Guidance', sampleValue: 'HIDDEN from AI reasoning context', status: 'NOT_VISIBLE', explanation: 'Internal institutional booking records are excluded from AI prompts.' },
-      { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'Targeting £45k+ within 3 years; seeking high autonomy', status: 'VISIBLE', explanation: 'Used to align recommendations with your personal lifestyle and earnings preferences.' },
+      { fieldName: 'Counselor Support Requests', category: 'School Guidance', sampleValue: 'HIDDEN from AI reasoning context', status: 'NOT_VISIBLE', explanation: 'Internal institutional booking records are excluded from AI prompts.' },
+      { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'Targeting $85k+ within 3 years; seeking high autonomy', status: 'VISIBLE', explanation: 'Used to align recommendations with your personal lifestyle and earnings preferences.' },
       { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'HIDDEN from AI reasoning context', status: 'NOT_VISIBLE', explanation: 'Live employer job application tracking is kept separate from general mentoring.' },
     ],
   },
   {
-    id: 'counsellor',
-    label: 'School Career Counsellor',
-    roleDescription: 'Authorised guidance professional supporting student pathways under institutional school data sharing arrangements.',
+    id: 'counselor',
+    label: 'School Career Counselor',
+    roleDescription: 'Authorized guidance professional supporting student pathways under institutional school data sharing arrangements.',
     fields: [
       { fieldName: 'Real Identity & Contact', category: 'Identity', sampleValue: 'Alex Vance (Student ID: 48829)', status: 'VISIBLE', explanation: 'Accessible for 1:1 in-school career appointments and progress tracking.' },
-      { fieldName: 'Private Mentor Conversations', category: 'Mentor Context', sampleValue: 'HIDDEN — Confidential student reflection space', status: 'NOT_VISIBLE', explanation: 'Counsellors cannot browse private AI Mentor chat transcripts.' },
+      { fieldName: 'Private Mentor Conversations', category: 'Mentor Context', sampleValue: 'HIDDEN — Confidential student reflection space', status: 'NOT_VISIBLE', explanation: 'Counselors cannot browse private AI Mentor chat transcripts.' },
       { fieldName: 'Career Pathways Explored', category: 'Exploration', sampleValue: 'Aggregated pathway interest: STEM &amp; Engineering', status: 'PURPOSE_LIMITED', explanation: 'High-level interest categories visible to support advisory session planning.' },
-      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'GCSE Physics (Grade 8), GCSE Maths (Grade 9)', status: 'VISIBLE', explanation: 'Academic profile visible to verify prerequisite course entry requirements.' },
+      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'AP Physics (Score 5), Algebra II (Grade A)', status: 'VISIBLE', explanation: 'Academic profile visible to verify prerequisite course entry requirements.' },
       { fieldName: 'School Project Evidence Artifacts', category: 'Evidence', sampleValue: 'Autonomous Rover CAD & Python Control Script', status: 'VISIBLE', explanation: 'Accessible to assist student in compiling personal statements and portfolios.' },
-      { fieldName: 'Counsellor Support Requests', category: 'School Guidance', sampleValue: 'Booked 1:1 session for apprenticeship application review', status: 'VISIBLE', explanation: 'Directly managed by the school career guidance department.' },
-      { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'HIDDEN — Private personal context', status: 'NOT_VISIBLE', explanation: 'Private earnings aspirations are excluded from counsellor views.' },
-      { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'Shared upon student request', status: 'REQUIRES_PERMISSION', explanation: 'Student can explicitly share their application dossier for counsellor feedback.' },
+      { fieldName: 'Counselor Support Requests', category: 'School Guidance', sampleValue: 'Booked 1:1 session for apprenticeship application review', status: 'VISIBLE', explanation: 'Directly managed by the school career guidance department.' },
+      { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'HIDDEN — Private personal context', status: 'NOT_VISIBLE', explanation: 'Private earnings aspirations are excluded from counselor views.' },
+      { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'Shared upon student request', status: 'REQUIRES_PERMISSION', explanation: 'Student can explicitly share their application dossier for counselor feedback.' },
     ],
   },
   {
@@ -70,12 +70,12 @@ const VIEWERS: ViewerConfig[] = [
     label: 'School Administrator / IT Lead',
     roleDescription: 'Institutional administrator managing school workspace tenancy, safeguarding escalations, and cohort reporting.',
     fields: [
-      { fieldName: 'Real Identity & Contact', category: 'Identity', sampleValue: 'Alex Vance (Year 12 / Grade 11 &bull; Active)', status: 'VISIBLE', explanation: 'Used for account provisioning, SSO syncing, and enrolment roster management.' },
+      { fieldName: 'Real Identity & Contact', category: 'Identity', sampleValue: 'Alex Vance (Year 12 / Grade 11 &bull; Active)', status: 'VISIBLE', explanation: 'Used for account provisioning, SSO syncing, and enrollment roster management.' },
       { fieldName: 'Private Mentor Conversations', category: 'Mentor Context', sampleValue: 'HIDDEN — Sealed unless formal safeguarding escalation triggered', status: 'NOT_VISIBLE', explanation: 'Administrators have zero routine browsing access to student chat logs.' },
       { fieldName: 'Career Pathways Explored', category: 'Exploration', sampleValue: 'Anonymized cohort metric: Engineering (+14%)', status: 'PURPOSE_LIMITED', explanation: 'Aggregated cohort trends only for Gatsby Benchmark / district reporting.' },
       { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'School-issued credentials only', status: 'PURPOSE_LIMITED', explanation: 'School can verify credentials it issued; external certificates are private.' },
       { fieldName: 'School Project Evidence Artifacts', category: 'Evidence', sampleValue: 'HIDDEN from institutional admin dashboard', status: 'NOT_VISIBLE', explanation: 'Personal project uploads are not stored in school admin file drives.' },
-      { fieldName: 'Counsellor Support Requests', category: 'School Guidance', sampleValue: 'Aggregated department appointment metrics', status: 'PURPOSE_LIMITED', explanation: 'Department volume reporting without student-level notes.' },
+      { fieldName: 'Counselor Support Requests', category: 'School Guidance', sampleValue: 'Aggregated department appointment metrics', status: 'PURPOSE_LIMITED', explanation: 'Department volume reporting without student-level notes.' },
       { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'HIDDEN from institutional admin', status: 'NOT_VISIBLE', explanation: 'Excluded from institutional dashboards.' },
       { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'HIDDEN from institutional admin', status: 'NOT_VISIBLE', explanation: 'Individual candidate employer interactions are not visible to IT admins.' },
     ],
@@ -88,9 +88,9 @@ const VIEWERS: ViewerConfig[] = [
       { fieldName: 'Real Identity & Contact', category: 'Identity', sampleValue: 'Alex Vance (Linked Dependent Account)', status: 'VISIBLE', explanation: 'Confirmation of verified parent-student account relationship.' },
       { fieldName: 'Private Mentor Conversations', category: 'Mentor Context', sampleValue: 'HIDDEN — Space for independent student inquiry', status: 'NOT_VISIBLE', explanation: 'Routine chat exploration remains private to foster honest student reflection.' },
       { fieldName: 'Career Pathways Explored', category: 'Exploration', sampleValue: 'Broad career clusters: Engineering &amp; Technology', status: 'PURPOSE_LIMITED', explanation: 'Summary of career families explored to facilitate home conversations.' },
-      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'GCSE Physics (Grade 8), GCSE Maths (Grade 9)', status: 'VISIBLE', explanation: 'Academic achievements and verified certificates viewable.' },
+      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'AP Physics (Score 5), Algebra II (Grade A)', status: 'VISIBLE', explanation: 'Academic achievements and verified certificates viewable.' },
       { fieldName: 'School Project Evidence Artifacts', category: 'Evidence', sampleValue: 'Uploaded school coursework portfolio', status: 'VISIBLE', explanation: 'Viewable to encourage parental support of student achievements.' },
-      { fieldName: 'Counsellor Support Requests', category: 'School Guidance', sampleValue: 'Upcoming school career appointment confirmed', status: 'PURPOSE_LIMITED', explanation: 'Status of school advisory appointments.' },
+      { fieldName: 'Counselor Support Requests', category: 'School Guidance', sampleValue: 'Upcoming school career appointment confirmed', status: 'PURPOSE_LIMITED', explanation: 'Status of school advisory appointments.' },
       { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'HIDDEN', status: 'NOT_VISIBLE', explanation: 'Private reflections remain in student account.' },
       { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'Parental notification &amp; approval required for under-16s', status: 'REQUIRES_PERMISSION', explanation: 'Explicit guardian approval required before under-16s share dossiers with employers.' },
     ],
@@ -98,14 +98,14 @@ const VIEWERS: ViewerConfig[] = [
   {
     id: 'employer',
     label: 'Prospective Employer / Recruiter',
-    roleDescription: 'Commercial or apprenticeship organisation reviewing authorized candidate applications — strict data minimization.',
+    roleDescription: 'Commercial or apprenticeship organization reviewing authorized candidate applications — strict data minimization.',
     fields: [
       { fieldName: 'Real Identity & Contact', category: 'Identity', sampleValue: 'Alex Vance (Disclosed upon application consent)', status: 'REQUIRES_PERMISSION', explanation: 'Contact details only revealed when student explicitly applies.' },
       { fieldName: 'Private Mentor Conversations', category: 'Mentor Context', sampleValue: 'STRICTLY PROHIBITED &amp; SEALED', status: 'NOT_VISIBLE', explanation: 'Employers have zero access to candidate AI coaching sessions.' },
       { fieldName: 'Career Pathways Explored', category: 'Exploration', sampleValue: 'HIDDEN — Employers cannot see past searches', status: 'NOT_VISIBLE', explanation: 'Exploratory queries are never shared with recruiters.' },
-      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'GCSE Physics (8), GCSE Maths (9) [Issuer Verified]', status: 'VISIBLE', explanation: 'Verified educational credentials attached to the specific application.' },
+      { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'AP Physics (5), Algebra II (A) [Issuer Verified]', status: 'VISIBLE', explanation: 'Verified educational credentials attached to the specific application.' },
       { fieldName: 'School Project Evidence Artifacts', category: 'Evidence', sampleValue: 'Autonomous Rover Project Brief &amp; GitHub Link', status: 'VISIBLE', explanation: 'Project artifacts explicitly selected by candidate for the role submission.' },
-      { fieldName: 'Counsellor Support Requests', category: 'School Guidance', sampleValue: 'STRICTLY PROHIBITED &amp; SEALED', status: 'NOT_VISIBLE', explanation: 'Internal school guidance is never disclosed to commercial entities.' },
+      { fieldName: 'Counselor Support Requests', category: 'School Guidance', sampleValue: 'STRICTLY PROHIBITED &amp; SEALED', status: 'NOT_VISIBLE', explanation: 'Internal school guidance is never disclosed to commercial entities.' },
       { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'HIDDEN from employer view', status: 'NOT_VISIBLE', explanation: 'Private earnings targets remain confidential.' },
       { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'Tailored candidate application dossier', status: 'VISIBLE', explanation: 'The bespoke application package curated by the candidate.' },
     ],
@@ -120,7 +120,7 @@ const VIEWERS: ViewerConfig[] = [
       { fieldName: 'Career Pathways Explored', category: 'Exploration', sampleValue: 'HIDDEN', status: 'NOT_VISIBLE', explanation: 'Exploratory data is completely non-public.' },
       { fieldName: 'Career Passport Qualifications', category: 'Credentials', sampleValue: 'Optional read-only credential link if generated', status: 'REQUIRES_PERMISSION', explanation: 'Only visible if student explicitly creates and shares a public credential URL.' },
       { fieldName: 'School Project Evidence Artifacts', category: 'Evidence', sampleValue: 'HIDDEN', status: 'NOT_VISIBLE', explanation: 'Non-public by default.' },
-      { fieldName: 'Counsellor Support Requests', category: 'School Guidance', sampleValue: 'HIDDEN', status: 'NOT_VISIBLE', explanation: 'Strictly internal school operational context.' },
+      { fieldName: 'Counselor Support Requests', category: 'School Guidance', sampleValue: 'HIDDEN', status: 'NOT_VISIBLE', explanation: 'Strictly internal school operational context.' },
       { fieldName: 'Private Salary / Career Ambitions', category: 'Career Twin', sampleValue: 'HIDDEN', status: 'NOT_VISIBLE', explanation: 'Never exposed publicly.' },
       { fieldName: 'Employer-Shared Application Dossier', category: 'Opportunity', sampleValue: 'HIDDEN', status: 'NOT_VISIBLE', explanation: 'Private 1:1 relationship between candidate and employer.' },
     ],
@@ -135,7 +135,7 @@ const STATUS_BADGES = {
 };
 
 export function SchoolPrivacyViewerInteractive() {
-  const [activeViewerId, setActiveViewerId] = useState<ViewerId>('counsellor');
+  const [activeViewerId, setActiveViewerId] = useState<ViewerId>('counselor');
 
   const activeViewer = VIEWERS.find((v) => v.id === activeViewerId) ?? VIEWERS[0]!;
 

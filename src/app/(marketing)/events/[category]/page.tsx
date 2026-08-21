@@ -20,7 +20,7 @@ const DEFAULT_FILTERS: EventFilterState = {
   careerStages: [],
   experienceLevels: [],
   costTypes: [],
-  organiserTypes: [],
+  organizerTypes: [],
   onlyFeatured: false,
   under18FriendlyOnly: false,
   sortBy: 'date-asc',
@@ -211,12 +211,12 @@ function CategoryContent({ categorySlug }: { categorySlug: string }) {
           </section>
         )}
 
-        {/* ── ORGANISER CTA ────────────────────────────────────────── */}
+        {/* ── ORGANIZER CTA ────────────────────────────────────────── */}
         <section className="p-7 sm:p-10 bg-[var(--color-surface-raised)] border border-[rgba(47,143,255,0.18)] rounded-[var(--radius-card)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="space-y-1.5 max-w-xl">
             <div className="flex items-center gap-2 text-[var(--accent-blue)]">
               <Sparkles className="w-4 h-4" />
-              <span className="text-[11px] font-bold uppercase tracking-wider">Organise a {category.name} Event?</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider">Organize a {category.name} Event?</span>
             </div>
             <h2 className="text-base font-bold text-[var(--color-text-primary)]">
               List your event on CareerOS and reach an audience actively building their careers.
@@ -296,7 +296,7 @@ function CategoryEmptyState({
       </div>
 
       <p className="text-xs text-[var(--color-text-tertiary)]">
-        Organising a {categoryName} event?{' '}
+        Organizing a {categoryName} event?{' '}
         <Link href={ROUTES.EVENTS_PROMOTE_CREATE} className="text-[var(--accent-blue)] hover:underline">
           Apply to list it on CareerOS.
         </Link>

@@ -132,7 +132,7 @@ export function StudentSafetyReportingFlow() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
           {[
             { id: 'student' as const, label: 'Student', icon: Sparkles },
-            { id: 'educator' as const, label: 'Educator / Counsellor', icon: UserCheck },
+            { id: 'educator' as const, label: 'Educator / Counselor', icon: UserCheck },
             { id: 'guardian' as const, label: 'Parent / Guardian', icon: Users },
             { id: 'employer' as const, label: 'Employer / Partner', icon: Building2 },
           ].map((s) => {

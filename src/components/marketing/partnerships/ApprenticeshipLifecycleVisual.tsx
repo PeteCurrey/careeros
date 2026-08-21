@@ -23,7 +23,7 @@ const LIFECYCLE_STAGES = [
   { stage: '01', title: 'Discover', role: 'Career Graph', desc: 'Student explores vocational role families and levy-funded openings.' },
   { stage: '02', title: 'Understand', role: 'AI Mentor', desc: 'Demystifies apprentice wage scales, shift duties, and study ratios.' },
   { stage: '03', title: 'Compare', role: 'Parity Engine', desc: 'Balances Degree Apprenticeship vs full-time university loans.' },
-  { stage: '04', title: 'Prepare', role: 'School Counsellor', desc: 'Structures portfolio evidence and technical interview preparation.' },
+  { stage: '04', title: 'Prepare', role: 'School Counselor', desc: 'Structures portfolio evidence and technical interview preparation.' },
   { stage: '05', title: 'Apply', role: 'Employer Partner', desc: 'Direct application into employer vacancy with verified criteria.' },
   { stage: '06', title: 'Work + Learn', role: 'Training Provider', desc: '4 days in commercial workplace + 1 day funded college/degree study.' },
   { stage: '07', title: 'Build Evidence', role: 'Career Passport', desc: 'Continuous logging of workplace logs, safety audits, and CAD projects.' },

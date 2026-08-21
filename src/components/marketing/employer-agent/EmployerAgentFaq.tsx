@@ -11,7 +11,7 @@ interface FaqItem {
 const FAQS: FaqItem[] = [
   {
     q: '1. What is Employer Agent?',
-    a: 'Employer Agent is a Career OS decision-support product direction designed to help organisations translate roles into functional capabilities and evidence requirements, and discover relevant candidates whose verified competencies match—including candidates whose existing job title might otherwise cause them to be overlooked.',
+    a: 'Employer Agent is a Career OS decision-support product direction designed to help organizations translate roles into functional capabilities and evidence requirements, and discover relevant candidates whose verified competencies match—including candidates whose existing job title might otherwise cause them to be overlooked.',
   },
   {
     q: '2. Is Employer Agent live today?',
@@ -35,7 +35,7 @@ const FAQS: FaqItem[] = [
   },
   {
     q: '7. How does it find candidates outside an exact job title?',
-    a: 'By decomposing roles into fundamental competencies (e.g. diagnostics, telemetry analysis, safety governance) and mapping those competencies across disciplines using the Career Graph. This surfaces qualified candidates from adjacent sectors like defence, trades, and field engineering.',
+    a: 'By decomposing roles into fundamental competencies (e.g. diagnostics, telemetry analysis, safety governance) and mapping those competencies across disciplines using the Career Graph. This surfaces qualified candidates from adjacent sectors like defense, trades, and field engineering.',
   },
   {
     q: '8. Does Employer Agent use the Career Graph?',
@@ -43,7 +43,7 @@ const FAQS: FaqItem[] = [
   },
   {
     q: '9. How does it connect with the Career Passport?',
-    a: 'Career Passport provides the candidate evidence layer—including issuer-verified qualifications, work product artifacts, and verified apprenticeship logs. This allows employers to evaluate demonstrable evidence rather than self-reported CV bullet points.',
+    a: 'Career Passport provides the candidate evidence layer—including issuer-verified qualifications, work product artifacts, and verified apprenticeship logs. This allows employers to evaluate demonstrable evidence rather than self-reported resume bullet points.',
   },
   {
     q: '10. Can employers see a candidate’s private Career Twin?',
@@ -66,7 +66,7 @@ const FAQS: FaqItem[] = [
     a: 'No. Career OS avoids manufactured mathematical precision. We provide structured qualitative indicators (e.g., strong supporting evidence, relevant transferable capability, additional evidence required, mandatory condition not confirmed).',
   },
   {
-    q: '15. How are mandatory professional licences handled?',
+    q: '15. How are mandatory professional licenses handled?',
     a: 'Statutory qualifications (such as medical board registrations, bar admissions, electrical licenses, or gas safety tickets) are treated as non-negotiable gates. Soft capability overlap is never converted into statutory eligibility.',
   },
   {
@@ -83,7 +83,7 @@ const FAQS: FaqItem[] = [
   },
   {
     q: '19. Can Employer Agent support internal mobility and succession planning?',
-    a: 'Yes. As a future capability, organisations will be able to apply Employer Agent internally to discover existing employees who possess transferable capabilities for new projects, stretch assignments, and leadership promotions.',
+    a: 'Yes. As a future capability, organizations will be able to apply Employer Agent internally to discover existing employees who possess transferable capabilities for new projects, stretch assignments, and leadership promotions.',
   },
   {
     q: '20. How does Employer Agent coordinate with Opportunity Agent?',

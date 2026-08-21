@@ -54,7 +54,7 @@ export type IntegrationLifecycleStatus =
 
 export type DataDirection = 'inbound' | 'outbound' | 'bidirectional' | 'no_data_exchange';
 
-export type CareerOSProcessing = 'none' | 'normalised' | 'enriched' | 'derived' | 'aggregated';
+export type CareerOSProcessing = 'none' | 'normalized' | 'enriched' | 'derived' | 'aggregated';
 
 export type RefreshFrequency =
   | 'real-time'
@@ -212,10 +212,10 @@ export const CATEGORY_LABELS: Record<IntegrationCategory, string> = {
   skills: 'Skills & Competencies',
   job_vacancies: 'Job Vacancies',
   salaries: 'Salaries & Compensation',
-  labour_market: 'Labour Market Intelligence',
+  labour_market: 'Labor Market Intelligence',
   employment_projections: 'Employment Projections',
   education: 'Education & Training',
-  training: 'Training Programmes',
+  training: 'Training Programs',
   credentials: 'Credentials & Verification',
   apprenticeships: 'Apprenticeships',
   employer_information: 'Employer Information',
@@ -253,7 +253,7 @@ export const DATA_DIRECTION_LABELS: Record<DataDirection, string> = {
 
 export const PROCESSING_LABELS: Record<CareerOSProcessing, string> = {
   none: 'Unmodified — used as-is',
-  normalised: 'Normalised — standardised to CareerOS taxonomy',
+  normalized: 'Normalized — standardized to CareerOS taxonomy',
   enriched: 'Enriched — combined with additional CareerOS data',
   derived: 'Derived — CareerOS generates new data from this source',
   aggregated: 'Aggregated — combined across multiple sources, no individual records',

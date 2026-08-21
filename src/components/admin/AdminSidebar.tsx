@@ -70,13 +70,13 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
       title: 'OVERVIEW',
       items: [
         {
-          title: 'Command Centre',
+          title: 'Command Center',
           href: ROUTES.ADMIN,
           icon: LayoutDashboard,
         },
         {
-          title: 'Action Centre',
-          href: ROUTES.ADMIN_ACTION_CENTRE,
+          title: 'Action Center',
+          href: ROUTES.ADMIN_ACTION_CENTER,
           icon: AlertCircle,
           badge: (counts?.pendingReviews || 0) + (counts?.discoveryCandidates || 0) > 0 
             ? (counts?.pendingReviews || 0) + (counts?.discoveryCandidates || 0) 
@@ -126,7 +126,7 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
             { title: 'Source Registry', href: ROUTES.ADMIN_EVENTS_SOURCES },
             { title: 'Discovery Runs', href: ROUTES.ADMIN_EVENTS_DISCOVERY_RUNS },
             { title: 'Categories', href: ROUTES.ADMIN_EVENTS_CATEGORIES },
-            { title: 'Organisers', href: ROUTES.ADMIN_EVENTS_ORGANISERS },
+            { title: 'Organizers', href: ROUTES.ADMIN_EVENTS_ORGANIZERS },
             { title: 'Promotions', href: ROUTES.ADMIN_EVENTS_PROMOTIONS },
           ],
         },
@@ -166,15 +166,15 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
           ],
         },
         {
-          title: 'Organisations',
-          href: ROUTES.ADMIN_ORGANISATIONS,
+          title: 'Organizations',
+          href: ROUTES.ADMIN_ORGANIZATIONS,
           icon: Building2,
           subItems: [
-            { title: 'All Organisations', href: ROUTES.ADMIN_ORGANISATIONS },
-            { title: 'Employers', href: ROUTES.ADMIN_ORGANISATIONS_EMPLOYERS },
-            { title: 'Schools & Colleges', href: ROUTES.ADMIN_ORGANISATIONS_SCHOOLS },
-            { title: 'Event Organisers', href: ROUTES.ADMIN_ORGANISATIONS_ORGANISERS },
-            { title: 'Partners', href: ROUTES.ADMIN_ORGANISATIONS_PARTNERS },
+            { title: 'All Organizations', href: ROUTES.ADMIN_ORGANIZATIONS },
+            { title: 'Employers', href: ROUTES.ADMIN_ORGANIZATIONS_EMPLOYERS },
+            { title: 'Schools & Colleges', href: ROUTES.ADMIN_ORGANIZATIONS_SCHOOLS },
+            { title: 'Event Organizers', href: ROUTES.ADMIN_ORGANIZATIONS_ORGANIZERS },
+            { title: 'Partners', href: ROUTES.ADMIN_ORGANIZATIONS_PARTNERS },
           ],
         },
       ],
@@ -216,7 +216,7 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
     },
     {
 
-      title: 'AI CONTROL CENTRE',
+      title: 'AI CONTROL CENTER',
       items: [
         {
           title: 'AI Operations',
@@ -245,7 +245,7 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
           icon: TrendingUp,
           subItems: [
             { title: 'Traffic Analytics', href: ROUTES.ADMIN_GROWTH_TRAFFIC },
-            { title: 'SEO Control Centre', href: ROUTES.ADMIN_GROWTH_SEO },
+            { title: 'SEO Control Center', href: ROUTES.ADMIN_GROWTH_SEO },
             { title: 'Search Console', href: ROUTES.ADMIN_GROWTH_SEARCH_CONSOLE },
             { title: 'Landing Pages', href: ROUTES.ADMIN_GROWTH_LANDING_PAGES },
             { title: 'Conversion Funnels', href: ROUTES.ADMIN_GROWTH_FUNNELS },
@@ -278,7 +278,7 @@ export function AdminSidebar({ userRole = 'read_only', userEmail, counts }: Admi
       title: 'COMMERCIAL',
       items: [
         {
-          title: 'Revenue Centre',
+          title: 'Revenue Center',
           href: ROUTES.ADMIN_REVENUE,
           icon: DollarSign,
           subItems: [

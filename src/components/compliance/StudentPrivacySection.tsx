@@ -70,7 +70,7 @@ export function StudentPrivacySection({
               <span>School-Controlled Data Access</span>
             </h4>
             <p className="leading-relaxed">
-              Schools and districts retain administrative ownership of institutional records. Counsellor and district dashboards allow educators to manage permissions, inspect student guidance activity, and export or delete records on demand.
+              Schools and districts retain administrative ownership of institutional records. Counselor and district dashboards allow educators to manage permissions, inspect student guidance activity, and export or delete records on demand.
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export function StudentPrivacySection({
           </span>
           <div className="flex flex-wrap items-center gap-4 text-xs font-medium">
             <Link href={ROUTES.SCHOOLS_STUDENT_SAFETY} className="text-[#6BB8FF] hover:underline">
-              Student Safety & Safeguarding Centre &rarr;
+              Student Safety & Safeguarding Center &rarr;
             </Link>
             <Link href={ROUTES.SCHOOLS_PRIVACY} className="text-[#6BB8FF] hover:underline">
               School Privacy Policy &rarr;

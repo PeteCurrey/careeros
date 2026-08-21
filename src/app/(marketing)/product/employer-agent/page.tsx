@@ -196,7 +196,7 @@ export default function EmployerAgentProductPage() {
           <div className="max-w-3xl space-y-4">
             <span className="section-label">Evidence Provenance</span>
             <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
-              A CV claim and a verified credential are not the same thing.
+              A resume claim and a verified credential are not the same thing.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
               Traditional recruitment software flattens all profile text into identical keyword matches. Career OS connects Employer Agent to the <strong>Career Passport</strong> evidence spectrum, allowing hiring teams to distinguish between unverified claims, work products, and issuer-certified credentials.
@@ -255,7 +255,7 @@ export default function EmployerAgentProductPage() {
               Discovery can work from both directions.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Career OS connects two dedicated agents: <strong>Opportunity Agent</strong>, which protects and advocates for the candidate, and <strong>Employer Agent</strong>, which assists the hiring organisation in scoping the role.
+              Career OS connects two dedicated agents: <strong>Opportunity Agent</strong>, which protects and advocates for the candidate, and <strong>Employer Agent</strong>, which assists the hiring organization in scoping the role.
             </p>
             <div className="pt-2">
               <Link
@@ -424,7 +424,7 @@ export default function EmployerAgentProductPage() {
           <div className="max-w-3xl space-y-4">
             <span className="section-label">Statutory Compliance</span>
             <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
-              Transferable skills cannot replace a required licence.
+              Transferable skills cannot replace a required license.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
               In heavily regulated sectors&mdash;healthcare, law, electrical installations, transport, and public safety&mdash;functional competence is only one half of the equation. Employer Agent enforces statutory credentials as strict non-negotiable gates.
@@ -444,7 +444,7 @@ export default function EmployerAgentProductPage() {
               The strongest candidate may not have taken the obvious route.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              By evaluating demonstrated evidence rather than narrow pedigree, Employer Agent helps organisations discover high-aptitude talent overlooked by traditional keyword filters.
+              By evaluating demonstrated evidence rather than narrow pedigree, Employer Agent helps organizations discover high-aptitude talent overlooked by traditional keyword filters.
             </p>
           </div>
 
@@ -455,7 +455,7 @@ export default function EmployerAgentProductPage() {
               </span>
               <h3 className="text-base font-bold text-white">High-Accountability Instincts</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Defence engineers and logistics specialists bring disciplined incident command, meticulous maintenance logging, and calm decision-making under severe operational pressure.
+                Defense engineers and logistics specialists bring disciplined incident command, meticulous maintenance logging, and calm decision-making under severe operational pressure.
               </p>
             </div>
 
@@ -573,10 +573,10 @@ export default function EmployerAgentProductPage() {
               'Will NOT rank candidates in competitive leaderboard tables.',
               'Will NOT expose private AI Career Mentor coaching chats to employers.',
               'Will NOT expose a candidate’s private Career Twin reflections without consent.',
-              'Will NOT convert soft capability signals into statutory licences.',
+              'Will NOT convert soft capability signals into statutory licenses.',
               'Will NOT permit unrestricted cold recruiter solicitation of minors.',
               'Will NOT use protected demographic characteristics as suitability criteria.',
-              'Will NOT claim unverified CV bullet points are confirmed credentials.',
+              'Will NOT claim unverified resume bullet points are confirmed credentials.',
               'Will NOT guarantee employment outcomes or candidate performance.',
             ].map((boundary, idx) => (
               <div
@@ -618,7 +618,7 @@ export default function EmployerAgentProductPage() {
               See the person behind the job title.
             </h2>
             <p className="text-sm sm:text-base text-[var(--color-text-secondary)] font-light leading-relaxed">
-              Employer Agent is being designed to help organisations understand roles through capability and evidence&mdash;and discover relevant people without turning AI into the final hiring authority.
+              Employer Agent is being designed to help organizations understand roles through capability and evidence&mdash;and discover relevant people without turning AI into the final hiring authority.
             </p>
             <div className="pt-2 text-xs font-mono text-[var(--color-taupe-300)]">
               Decision Support &bull; Evidence Provenance &bull; Privacy-First Architecture

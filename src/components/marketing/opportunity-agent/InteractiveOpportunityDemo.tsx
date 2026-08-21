@@ -19,7 +19,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 
-// ─── Category badge colour mapping ───────────────────────────────────────────
+// ─── Category badge color mapping ───────────────────────────────────────────
 const RELEVANCE_STYLE: Record<string, string> = {
   'Strong existing overlap': 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30',
   'Adjacent career direction': 'bg-amber-500/10 text-amber-300 border-amber-500/30',
@@ -86,7 +86,7 @@ function OpportunityCard({
             {opportunity.title}
           </p>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mt-0.5">
-            {opportunity.organisation} · Illustrative opportunity
+            {opportunity.organization} · Illustrative opportunity
           </p>
         </div>
         <ChevronRight
@@ -120,7 +120,7 @@ function ReasoningPanel({ opportunity }: { opportunity: IllustrativeOpportunity 
           {opportunity.title}
         </h3>
         <p className="text-xs text-[var(--color-text-tertiary)]">
-          {opportunity.organisation} · Illustrative opportunity
+          {opportunity.organization} · Illustrative opportunity
         </p>
         <span
           className={cn(
@@ -348,7 +348,7 @@ export function InteractiveOpportunityDemo() {
       {/* Footer disclaimer */}
       <div className="px-6 py-3 border-t border-[var(--color-border-default)] bg-[var(--color-surface-raised)]">
         <p className="text-[10px] text-[var(--color-text-tertiary)]">
-          All profiles, organisations and opportunities shown are illustrative only.
+          All profiles, organizations and opportunities shown are illustrative only.
           Career OS does not currently operate a live opportunity-matching engine or employer network.
           This demonstration shows the intended product direction.
         </p>

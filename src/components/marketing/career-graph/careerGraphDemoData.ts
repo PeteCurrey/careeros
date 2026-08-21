@@ -4,7 +4,7 @@
  * and transferable advantages across diverse disciplines.
  * 
  * Note: These are illustrative models demonstrating product concepts and
- * do not represent a production labour-market database or definitive ontology.
+ * do not represent a production labor-market database or definitive ontology.
  */
 
 export interface GraphCapability {
@@ -412,7 +412,7 @@ export const CAREER_GRAPH_PROFESSIONS: ProfessionGraph[] = [
       },
       {
         id: 'public-health-specialist',
-        title: 'Public Health Programme Lead',
+        title: 'Public Health Program Lead',
         industry: 'Government & Non-Governmental Agencies',
         transferTier: 'Qualification Required',
         transferAdvantage: 'Epidemiological observation, immunization campaigns, and community health education.',

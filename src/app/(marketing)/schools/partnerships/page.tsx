@@ -47,14 +47,14 @@ import { PartnershipsFAQ } from '@/components/marketing/partnerships/Partnership
 export const metadata: Metadata = {
   title: 'Career Education Partnerships for Schools & Employers | Career OS',
   description:
-    'See how Career OS connects schools with employers, apprenticeship providers, education organisations, training providers and other trusted partners around the student career journey.',
+    'See how Career OS connects schools with employers, apprenticeship providers, education organizations, training providers and other trusted partners around the student career journey.',
   alternates: {
     canonical: 'https://career-os.com/schools/partnerships',
   },
   openGraph: {
     title: 'Career Education Partnerships for Schools & Employers | Career OS',
     description:
-      'Careers are built across organisations. Career guidance should connect them. Discover the Career OS collaborative partner ecosystem.',
+      'Careers are built across organizations. Career guidance should connect them. Discover the Career OS collaborative partner ecosystem.',
     url: 'https://career-os.com/schools/partnerships',
     type: 'website',
   },
@@ -66,7 +66,7 @@ export default function SchoolsPartnershipsPage() {
     '@type': 'EducationalOccupationalProgram',
     name: 'Career OS Collaborative Career Education Partnerships',
     description:
-      'Multi-stakeholder career ecosystem connecting secondary schools with employers, apprenticeship training providers, universities, credential issuers, and community organisations.',
+      'Multi-stakeholder career ecosystem connecting secondary schools with employers, apprenticeship training providers, universities, credential issuers, and community organizations.',
     provider: {
       '@type': 'Organization',
       name: 'Career OS',
@@ -84,7 +84,7 @@ export default function SchoolsPartnershipsPage() {
 
       {/* ============================================================
           SECTION 01: HERO
-          Careers are built across organisations. Career guidance should connect them.
+          Careers are built across organizations. Career guidance should connect them.
           ============================================================ */}
       <section className="relative min-h-[calc(100vh-4.5rem)] lg:min-h-screen flex flex-col justify-center border-b border-[var(--color-border-default)] overflow-hidden bg-[var(--color-surface-base)] py-20 lg:py-24">
         {/* Full-bleed background image with editorial scrim */}
@@ -132,7 +132,7 @@ export default function SchoolsPartnershipsPage() {
             </div>
 
             <h1 className="text-display-hero text-white">
-              Careers are built across organisations.
+              Careers are built across organizations.
               <br />
               <span className="text-[var(--color-text-secondary)] font-serif font-normal">
                 Career guidance should connect them.
@@ -140,7 +140,7 @@ export default function SchoolsPartnershipsPage() {
             </h1>
 
             <p className="text-lead text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
-              Career OS is being designed to connect schools with employers, education providers, apprenticeship programmes, training organisations and other trusted partners — while keeping the student’s career journey at the centre.
+              Career OS is being designed to connect schools with employers, education providers, apprenticeship programs, training organizations and other trusted partners — while keeping the student’s career journey at the center.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
@@ -167,14 +167,14 @@ export default function SchoolsPartnershipsPage() {
 
       {/* ============================================================
           SECTION 02: WHY PARTNERSHIPS MATTER
-          No single organisation can show a student the whole world of work.
+          No single organization can show a student the whole world of work.
           ============================================================ */}
       <section className="section-editorial border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-16">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">Connected Ecosystem Philosophy</span>
             <h2 className="text-headline-editorial text-white">
-              No single organisation can show a student the whole world of work.
+              No single organization can show a student the whole world of work.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
               Schools know their students and communities. Employers understand real workplace demands. Colleges and universities understand academic disciplines. Apprenticeship providers master work-based learning. Professional bodies define statutory standards. Career OS connects these vital contributions without expecting any single entity to bear the entire burden.
@@ -221,7 +221,7 @@ export default function SchoolsPartnershipsPage() {
 
           <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] text-center max-w-3xl mx-auto space-y-2">
             <p className="text-lg sm:text-xl font-serif text-white italic">
-              &ldquo;The value is not having more organisations around the student. It is making each contribution more useful.&rdquo;
+              &ldquo;The value is not having more organizations around the student. It is making each contribution more useful.&rdquo;
             </p>
             <span className="text-[11px] font-mono text-[var(--color-taupe-300)] uppercase tracking-wider block">
               Core Partnership Architectural Principle
@@ -241,7 +241,7 @@ export default function SchoolsPartnershipsPage() {
               A career ecosystem needs different kinds of partners.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Explore the 10 partner categories below. Select your organisation type to see what you contribute, what Career OS contributes in return, how learners benefit, and our strict boundaries regarding student data access.
+              Explore the 10 partner categories below. Select your organization type to see what you contribute, what Career OS contributes in return, how learners benefit, and our strict boundaries regarding student data access.
             </p>
           </div>
 
@@ -384,7 +384,7 @@ export default function SchoolsPartnershipsPage() {
               Education providers should help students understand where courses can lead — not simply market courses.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Colleges and universities contribute vital academic degree and technical HND curricula. In Career OS, education programmes are presented with transparent entry criteria and objective graduate trajectories—evaluated alongside apprenticeships rather than presented as the only path.
+              Colleges and universities contribute vital academic degree and technical HND curricula. In Career OS, education programs are presented with transparent entry criteria and objective graduate trajectories—evaluated alongside apprenticeships rather than presented as the only path.
             </p>
           </div>
 
@@ -397,7 +397,7 @@ export default function SchoolsPartnershipsPage() {
                 Prerequisite Transparency
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Clearly state subject requirements (e.g. A-Level Maths for Engineering) so students make informed secondary option choices early.
+                Clearly state subject requirements (e.g. AP Calculus for Engineering) so students make informed secondary option choices early.
               </p>
             </div>
 
@@ -421,7 +421,7 @@ export default function SchoolsPartnershipsPage() {
                 Unbiased Evaluation
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                No university can pay to be ranked as the &ldquo;preferred&rdquo; or &ldquo;top match&rdquo; for a student. Recommendations remain neutral and student-centred.
+                No university can pay to be ranked as the &ldquo;preferred&rdquo; or &ldquo;top match&rdquo; for a student. Recommendations remain neutral and student-centered.
               </p>
             </div>
           </div>
@@ -521,17 +521,17 @@ export default function SchoolsPartnershipsPage() {
 
       {/* ============================================================
           SECTION 10: PARTNER ACCESS & STUDENT PRIVACY
-          Being a partner does not make an organisation part of a student's private Career OS.
+          Being a partner does not make an organization part of a student's private Career OS.
           ============================================================ */}
       <section className="section-editorial border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-16">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">Purpose-Based Access Architecture</span>
             <h2 className="text-headline-editorial text-white">
-              Being a partner does not make an organisation part of a student’s private Career OS.
+              Being a partner does not make an organization part of a student’s private Career OS.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              This distinction is non-negotiable. Joining the Career OS partner ecosystem gives an organisation the ability to contribute opportunities—it does not grant access to student profiles, conversational transcripts, or private reflections.
+              This distinction is non-negotiable. Joining the Career OS partner ecosystem gives an organization the ability to contribute opportunities—it does not grant access to student profiles, conversational transcripts, or private reflections.
             </p>
           </div>
 
@@ -620,7 +620,7 @@ export default function SchoolsPartnershipsPage() {
               Access to the Career OS ecosystem should come with standards.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Every participating organisation agrees to abide by our 8-pillar partnership standard. Failure to maintain these standards results in immediate opportunity retraction and partner suspension.
+              Every participating organization agrees to abide by our 8-pillar partnership standard. Failure to maintain these standards results in immediate opportunity retraction and partner suspension.
             </p>
           </div>
 
@@ -634,7 +634,7 @@ export default function SchoolsPartnershipsPage() {
             <div className="p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-2">
               <span className="text-[10px] font-mono text-emerald-400 uppercase font-bold block">02 &bull; Legality</span>
               <h4 className="font-semibold text-white">Lawful Operations</h4>
-              <p className="text-[var(--color-text-secondary)] leading-relaxed">Compliance with employment standards, national minimum wage, and youth labour laws.</p>
+              <p className="text-[var(--color-text-secondary)] leading-relaxed">Compliance with employment standards, national minimum wage, and youth labor laws.</p>
             </div>
 
             <div className="p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-2">
@@ -664,7 +664,7 @@ export default function SchoolsPartnershipsPage() {
               What a Career OS partnership looks like in practice.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Examine 4 representative partnership models illustrating how diverse organisations contribute authentic value without compromising student autonomy.
+              Examine 4 representative partnership models illustrating how diverse organizations contribute authentic value without compromising student autonomy.
             </p>
           </div>
 
@@ -736,7 +736,7 @@ export default function SchoolsPartnershipsPage() {
             <div className="p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-1.5">
               <span className="font-mono text-[#6BB8FF] font-bold block">01 &bull; Apply</span>
               <h4 className="font-semibold text-white">Enquiry Submission</h4>
-              <p className="text-[var(--color-text-secondary)]">Organisation submits proposed contribution and entity credentials.</p>
+              <p className="text-[var(--color-text-secondary)]">Organization submits proposed contribution and entity credentials.</p>
             </div>
 
             <div className="p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-1.5">
@@ -771,7 +771,7 @@ export default function SchoolsPartnershipsPage() {
               Apply to join the Career OS Partner Ecosystem.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Complete the application below to initiate partner review. Our team will evaluate your organisation&apos;s proposed contribution and schedule an exploratory briefing.
+              Complete the application below to initiate partner review. Our team will evaluate your organization&apos;s proposed contribution and schedule an exploratory briefing.
             </p>
           </div>
 
@@ -810,7 +810,7 @@ export default function SchoolsPartnershipsPage() {
               Build a bigger world of opportunity around every student.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Career OS is being designed to connect trusted education, employment, training and career organisations around the individual — while keeping privacy, safeguarding and career relevance separate from commercial influence.
+              Career OS is being designed to connect trusted education, employment, training and career organizations around the individual — while keeping privacy, safeguarding and career relevance separate from commercial influence.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button href="#partner-enquiry-form" variant="primary" size="lg">
@@ -825,7 +825,7 @@ export default function SchoolsPartnershipsPage() {
           {/* Institutional Navigation Links */}
           <div className="pt-12 border-t border-[var(--color-border-default)] flex flex-wrap items-center justify-center gap-6 text-xs text-[var(--color-text-tertiary)]">
             <Link href={ROUTES.SCHOOLS_EDUCATORS} className="hover:text-white transition-colors">
-              Counsellor &amp; Educator Tools →
+              Counselor &amp; Educator Tools →
             </Link>
             <Link href={ROUTES.SCHOOLS_OUTCOMES} className="hover:text-white transition-colors">
               School Outcomes &amp; Benchmark Alignment →

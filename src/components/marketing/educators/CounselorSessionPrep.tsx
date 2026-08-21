@@ -18,7 +18,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-export function CounsellorSessionPrep() {
+export function CounselorSessionPrep() {
   const [selectedStudentId, setSelectedStudentId] = useState<string>('student-a');
 
   const activeStudent: StudentPrepScenario =
@@ -29,7 +29,7 @@ export function CounsellorSessionPrep() {
       id="session-prep-demo"
       className="w-full bg-[var(--background-dark-deep)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] overflow-hidden shadow-2xl space-y-0"
       role="region"
-      aria-label="Counsellor Session Preparation Interactive Demonstration"
+      aria-label="Counselor Session Preparation Interactive Demonstration"
     >
       {/* Top Header */}
       <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -162,7 +162,7 @@ export function CounsellorSessionPrep() {
           <div className="p-4 rounded-lg bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-subtle)] space-y-2.5">
             <span className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-semibold flex items-center gap-1.5">
               <HelpCircle className="w-3.5 h-3.5 text-amber-400" />
-              Student Stated Question for Human Counsellor
+              Student Stated Question for Human Counselor
             </span>
             <p className="text-xs sm:text-sm text-white font-medium italic leading-relaxed">
               &ldquo;{activeStudent.studentQuestion}&rdquo;
@@ -192,7 +192,7 @@ export function CounsellorSessionPrep() {
             <div className="space-y-0.5">
               <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-300 font-semibold flex items-center gap-1.5">
                 <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-                Counsellor Preparation Context
+                Counselor Preparation Context
               </span>
               <h4 className="text-base font-serif font-medium text-white">
                 Human Discussion Strategy
@@ -206,7 +206,7 @@ export function CounsellorSessionPrep() {
           {/* Educator Summary Box */}
           <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#6BB8FF] font-semibold block">
-              Context Synopsis for Counsellor
+              Context Synopsis for Counselor
             </span>
             <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
               {activeStudent.educatorSummary}
@@ -252,7 +252,7 @@ export function CounsellorSessionPrep() {
           <div className="p-3 rounded bg-emerald-950/20 border border-emerald-500/30 flex items-center gap-2 text-xs text-emerald-300">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>
-              <strong>Professional Agency:</strong> The counsellor selects discussion direction and next steps. AI never automates guidance advice.
+              <strong>Professional Agency:</strong> The counselor selects discussion direction and next steps. AI never automates guidance advice.
             </span>
           </div>
 

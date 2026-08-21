@@ -12,7 +12,7 @@ export const GOVERNANCE_MANIFEST: Record<string, ExtendedGovernanceMeta> = {
   // LEGAL HUBS & CONTRACTS
   "legal-hub": {
     id: "gov-legal-hub-001",
-    title: "Career OS Legal & Compliance Centre",
+    title: "Career OS Legal & Compliance Center",
     slug: "legal-hub",
     category: "LEGAL",
     documentType: "GOVERNANCE_HUB",
@@ -355,7 +355,7 @@ export const GOVERNANCE_MANIFEST: Record<string, ExtendedGovernanceMeta> = {
   },
   "version-history": {
     id: "gov-legal-versions-001",
-    title: "Legal Centre Version History & Archive",
+    title: "Legal Center Version History & Archive",
     slug: "version-history",
     category: "LEGAL",
     documentType: "VERSION_HISTORY",
@@ -374,7 +374,7 @@ export const GOVERNANCE_MANIFEST: Record<string, ExtendedGovernanceMeta> = {
     changeSummary: "Archive index of active and superseded governance document versions.",
   },
 
-  // PART A — TRUST CENTRE
+  // PART A — TRUST CENTER
   "trust-hub": {
     id: "gov-trust-hub-001",
     title: "Career OS Trust & Security Hub",
@@ -596,7 +596,7 @@ export const GOVERNANCE_MANIFEST: Record<string, ExtendedGovernanceMeta> = {
     changeSummary: "Public disclosures distinguishing deployed capabilities from planned features, commercial partnerships, and regulatory readiness posture.",
   },
 
-  // PART B — STANDARDS CENTRE
+  // PART B — STANDARDS CENTER
   "standards-hub": {
     id: "gov-std-hub-001",
     title: "Career OS Platform Conduct Standards Hub",
@@ -759,7 +759,7 @@ export const GOVERNANCE_MANIFEST: Record<string, ExtendedGovernanceMeta> = {
     changeSummary: "Cross-platform safety standard covering students, professionals, schools, employers, and network users.",
   },
 
-  // PART C — REGULATORY ALIGNMENT CENTRE
+  // PART C — REGULATORY ALIGNMENT CENTER
   "regulatory-hub": {
     id: "gov-reg-hub-001",
     title: "Regulatory Alignment & Readiness Hub",

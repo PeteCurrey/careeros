@@ -27,7 +27,7 @@ export function HeroEcosystemVisual() {
     { title: 'Apprenticeship Providers', icon: Wrench, color: 'text-amber-400', border: 'border-amber-500/30', bg: 'bg-amber-950/40', role: 'Work-Based Learning' },
     { title: 'Colleges & Universities', icon: GraduationCap, color: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-950/40', role: 'Degree & Technical Paths' },
     { title: 'Credential Issuers', icon: Award, color: 'text-rose-400', border: 'border-rose-500/30', bg: 'bg-rose-950/40', role: 'Verified Provenance' },
-    { title: 'Event Organisers', icon: Calendar, color: 'text-sky-400', border: 'border-sky-500/30', bg: 'bg-sky-950/40', role: 'Fairs & Workshops' },
+    { title: 'Event Organizers', icon: Calendar, color: 'text-sky-400', border: 'border-sky-500/30', bg: 'bg-sky-950/40', role: 'Fairs & Workshops' },
   ];
 
   return (
@@ -51,7 +51,7 @@ export function HeroEcosystemVisual() {
           <div className="flex items-center gap-2.5 text-[var(--color-text-secondary)]">
             <span className="w-2 h-2 rounded-full bg-[#2F8FFF]" />
             <span className="font-semibold text-white">ONE STUDENT &bull; MANY CONTRIBUTORS</span>
-            <span className="text-[var(--color-text-tertiary)] hidden md:inline">| Sovereign Learner at the Centre</span>
+            <span className="text-[var(--color-text-tertiary)] hidden md:inline">| Sovereign Learner at the Center</span>
           </div>
           <span className="text-[11px] text-emerald-400 flex items-center gap-1.5 font-sans font-medium">
             <ShieldCheck className="w-3.5 h-3.5" />
@@ -59,7 +59,7 @@ export function HeroEcosystemVisual() {
           </span>
         </div>
 
-        {/* Ecosystem Stage: Centre Student Core + Surrounding Partner Satellites */}
+        {/* Ecosystem Stage: Center Student Core + Surrounding Partner Satellites */}
         <div className="p-6 sm:p-10 space-y-8 bg-[var(--color-surface-base)]/40">
           
           {/* Top Banner Rule */}
@@ -68,7 +68,7 @@ export function HeroEcosystemVisual() {
               &ldquo;One student. Many contributors. One career journey.&rdquo;
             </h3>
             <p className="text-xs text-[var(--color-text-secondary)]">
-              Organisations contribute authentic pathways, opportunities, and verified credentials into the ecosystem without taking ownership of the student&apos;s private career context.
+              Organizations contribute authentic pathways, opportunities, and verified credentials into the ecosystem without taking ownership of the student&apos;s private career context.
             </p>
           </div>
 

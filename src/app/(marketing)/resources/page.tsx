@@ -28,7 +28,7 @@ export default function ResourcesPage() {
       badgeVariant: 'blue' as const,
       description: 'Comprehensive research on emerging occupational clusters, shifting skill demands, automation impacts, and regional wage benchmarks.',
       imageSrc: '/media/product/career_graph_hero.jpg',
-      signals: ['Labour Market Signals', 'Regional Benchmarks', 'Automation Index'],
+      signals: ['Labor Market Signals', 'Regional Benchmarks', 'Automation Index'],
       href: ROUTES.RESOURCES_CAREERS,
     },
     {

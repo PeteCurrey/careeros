@@ -99,7 +99,7 @@ export function ProductBridgeSection() {
               </div>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                 Career Graph is being designed to connect career context with roles, skills, pathways
-                and relevant labour-market intelligence.
+                and relevant labor-market intelligence.
               </p>
             </div>
 

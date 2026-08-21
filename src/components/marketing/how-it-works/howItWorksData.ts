@@ -90,8 +90,8 @@ export const SYSTEM_MAP_NODES: SystemNodeInfo[] = [
     shortLabel: 'Employer Side',
     category: 'Employer Side',
     badge: 'Two-Sided Architecture',
-    headline: 'Helps organisations discover talent through capability and verified evidence.',
-    description: 'Operates outside the individual’s private Career OS to match role requirements against authorised, permissioned candidate profiles.',
+    headline: 'Helps organizations discover talent through capability and verified evidence.',
+    description: 'Operates outside the individual’s private Career OS to match role requirements against authorized, permissioned candidate profiles.',
     roleInSystem: 'Facilitates evidence-based candidate introductions while preserving human decision authority on both sides.',
     href: ROUTES.PRODUCT_EMPLOYER_AGENT,
     isExternalToPrivateCore: true,
@@ -115,7 +115,7 @@ export const STARTING_PERSONAS: StartingPersona[] = [
     id: 'student',
     role: 'Student & Early Career',
     tagline: 'Finding early direction without resume anxiety',
-    quote: '“I don’t know what I want to do yet — and I don’t have much experience to put on a CV.”',
+    quote: '“I don’t know what I want to do yet — and I don’t have much experience to put on a resume.”',
     startingChallenge: 'Lacks formal work history, feels overwhelmed by generic job titles, and needs to understand how subjects connect to the real world.',
     howCareerOSStarts: [
       'Identifies natural interests, academic strengths, and practical project experiences.',
@@ -148,7 +148,7 @@ export const STARTING_PERSONAS: StartingPersona[] = [
       'Uses Career Graph topology to identify adjacent industries with strong transfer advantages.',
       'Identifies the exact bridge requirements (e.g. 1 certification vs 3-year degree) needed to transition.',
     ],
-    initialOutcome: 'Clear visibility into high-overlap career pivots that honour prior seniority and skills.',
+    initialOutcome: 'Clear visibility into high-overlap career pivots that honor prior seniority and skills.',
   },
   {
     id: 'founder',
@@ -159,7 +159,7 @@ export const STARTING_PERSONAS: StartingPersona[] = [
     howCareerOSStarts: [
       'Structures proprietary technical depth and domain IP inside the Career Passport.',
       'Uses the Mentor to pressure-test business models, commercial risks, and go-to-market milestones.',
-      'Prepares context to connect with founder development programmes and early commercial accelerators.',
+      'Prepares context to connect with founder development programs and early commercial accelerators.',
     ],
     initialOutcome: 'A dual-track strategy balancing current professional momentum with disciplined venture incubation.',
   },
@@ -361,7 +361,7 @@ export const CAREER_OS_IN_ACTION_STEPS: JourneyStep[] = [
     phaseTitle: 'Current Position',
     engine: 'Starting Baseline',
     userContext: 'Automotive / Mechanical Technician with 5 years experience in workshop diagnostics, high-voltage EV battery maintenance, and customer communication.',
-    systemAction: 'User creates a free personal account. Career OS does not ask for an uploaded generic CV to discard — it begins an initial context discovery dialog.',
+    systemAction: 'User creates a free personal account. Career OS does not ask for an uploaded generic resume to discard — it begins an initial context discovery dialog.',
     visualArtifact: {
       type: 'profile',
       badge: 'Initial Intake',
@@ -407,7 +407,7 @@ export const CAREER_OS_IN_ACTION_STEPS: JourneyStep[] = [
       details: [
         'Observation: Technical diagnostic credibility is well-evidenced.',
         'Gap Identified: Zero documented project leadership or team coordination evidence.',
-        'Actionable Recommendation: Lead a shop-floor diagnostic reliability audit project rather than spending £2,000 on another technical cert.',
+        'Actionable Recommendation: Lead a shop-floor diagnostic reliability audit project rather than spending $2,500 on another technical cert.',
       ],
       highlightQuote: '“Create leadership evidence inside your current environment before chasing another technical qualification.”',
     },
@@ -567,7 +567,7 @@ export const PRODUCT_STATUS_LAYERS: ProductStatusLayer[] = [
       {
         name: 'Comprehensive Career Graph Ontology Engine',
         status: 'Data Engineering',
-        details: 'Extensive labour market graph integrating thousands of role nodes, qualification bridges, and skill maps.',
+        details: 'Extensive labor market graph integrating thousands of role nodes, qualification bridges, and skill maps.',
       },
     ],
   },

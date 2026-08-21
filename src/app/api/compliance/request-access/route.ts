@@ -8,17 +8,17 @@ export async function POST(req: NextRequest) {
     const {
       requesterName,
       requesterEmail,
-      requesterOrganisation,
+      requesterOrganization,
       requesterRole,
-      organisationType,
+      organizationType,
       requestedDocuments,
       useCaseReason,
     } = body;
 
     // Validate required fields
-    if (!requesterName || !requesterEmail || !requesterOrganisation || !useCaseReason) {
+    if (!requesterName || !requesterEmail || !requesterOrganization || !useCaseReason) {
       return NextResponse.json(
-        { error: 'Missing required fields: name, email, organisation, and reason are mandatory.' },
+        { error: 'Missing required fields: name, email, organization, and reason are mandatory.' },
         { status: 400 }
       );
     }
@@ -37,9 +37,9 @@ export async function POST(req: NextRequest) {
     const requestPayload = {
       requester_name: requesterName.trim(),
       requester_email: requesterEmail.trim().toLowerCase(),
-      requester_organisation: requesterOrganisation.trim(),
+      requester_organisation: requesterOrganization.trim(),
       requester_role: requesterRole ? requesterRole.trim() : null,
-      organisation_type: organisationType || 'other',
+      organisation_type: organizationType || 'other',
       requested_documents: Array.isArray(requestedDocuments) ? requestedDocuments : [requestedDocuments],
       use_case_reason: useCaseReason.trim(),
       nda_status: 'pending',
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
 
     if (error) {
       console.warn('Database error logging compliance document request:', error.message);
-      // Even if DB write fails, log and return success acknowledgement so enterprise user experience is preserved
+      // Even if DB write fails, log and return success acknowledgment so enterprise user experience is preserved
     }
 
     // Record forensic audit log
@@ -66,8 +66,8 @@ export async function POST(req: NextRequest) {
         subjectId: data?.id || requesterEmail,
         payload: {
           requester_name: requesterName,
-          requester_organisation: requesterOrganisation,
-          organisation_type: organisationType,
+          requester_organisation: requesterOrganization,
+          organisation_type: organizationType,
           requested_documents: requestedDocuments,
         },
       });

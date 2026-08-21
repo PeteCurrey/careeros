@@ -24,7 +24,7 @@ export function AgentCoordinationVisual() {
           Discovery Works from Both Directions
         </h3>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          Career OS coordinates two dedicated intelligence layers: Opportunity Agent advocating for the individual, and Employer Agent supporting the hiring organisation.
+          Career OS coordinates two dedicated intelligence layers: Opportunity Agent advocating for the individual, and Employer Agent supporting the hiring organization.
         </p>
       </div>
 

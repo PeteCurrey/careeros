@@ -82,7 +82,7 @@ export default async function DataSourcesIntegrationsPage() {
                 <p className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-text-tertiary)]">Definitions used in this register</p>
                 <div className="space-y-2">
                   {[
-                    { term: 'Data source', definition: 'An external system that CareerOS pulls information from — occupational data, labour market signals, or public records.' },
+                    { term: 'Data source', definition: 'An external system that CareerOS pulls information from — occupational data, labor market signals, or public records.' },
                     { term: 'Integration', definition: 'A technical connection between CareerOS and a third-party service. May involve data flowing in, out, or both directions.' },
                     { term: 'Partnership', definition: 'A formal commercial or strategic relationship. Partnerships may involve integrations, but are governed separately. See the Partnerships page.' },
                     { term: 'Planned / Intended', definition: 'Integrations marked "Planned" or "Intended" are disclosed proactively. They are not live in production and do not yet exchange data.' },
@@ -191,7 +191,7 @@ export default async function DataSourcesIntegrationsPage() {
               {[
                 {
                   title: 'External data is always attributed',
-                  detail: 'Where CareerOS displays information from an external source — occupational data, salary ranges, training programmes, employer information — the source is disclosed at the point of display or in this register.',
+                  detail: 'Where CareerOS displays information from an external source — occupational data, salary ranges, training programs, employer information — the source is disclosed at the point of display or in this register.',
                 },
                 {
                   title: 'AI does not erase provenance',

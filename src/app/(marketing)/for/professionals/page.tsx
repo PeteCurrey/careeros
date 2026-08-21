@@ -210,7 +210,7 @@ export default function ForProfessionalsPage() {
                 Career drift rarely announces itself.
               </h2>
               <p className="text-body-editorial text-[var(--color-text-secondary)]">
-                You can spend years being productive, well-regarded, and reliable without necessarily building toward anything strategic. Responsibilities expand without titles changing, technical expertise compounds without capturing proof, and career reflection only happens when a reorganisation or crisis forces it.
+                You can spend years being productive, well-regarded, and reliable without necessarily building toward anything strategic. Responsibilities expand without titles changing, technical expertise compounds without capturing proof, and career reflection only happens when a reorganization or crisis forces it.
               </p>
               <blockquote className="p-4 rounded bg-[var(--color-surface-base)] border-l-2 border-[var(--accent-blue)] text-sm italic text-[var(--color-text-primary)]">
                 &ldquo;Being busy and progressing are not always the same thing.&rdquo;
@@ -283,7 +283,7 @@ export default function ForProfessionalsPage() {
                         <span className="text-[11px] text-[var(--color-text-secondary)]">Root-cause fault isolation in 24/7 continuous operations</span>
                       </div>
                       <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
-                        <span className="font-semibold text-white block">Commercial Judgement</span>
+                        <span className="font-semibold text-white block">Commercial Judgment</span>
                         <span className="text-[11px] text-[var(--color-text-secondary)]">Vendor warranty recovery and parts margin negotiations</span>
                       </div>
                       <div className="p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
@@ -337,7 +337,7 @@ export default function ForProfessionalsPage() {
                 Progression doesn&apos;t have to mean managing people.
               </h2>
               <p className="text-body-editorial text-[var(--color-text-secondary)]">
-                Too many organisations default to pushing top individual performers into people management. Career OS treats technical mastery, architectural oversight, and commercial ownership as equal, high-status progression tracks.
+                Too many organizations default to pushing top individual performers into people management. Career OS treats technical mastery, architectural oversight, and commercial ownership as equal, high-status progression tracks.
               </p>
             </div>
           </ScrollReveal>

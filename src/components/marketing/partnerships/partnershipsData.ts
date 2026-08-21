@@ -26,7 +26,7 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
     ],
     careerOSContributes: [
       '24/7 patient AI Career Mentor for every student',
-      'Pre-conversation session briefs for counsellors',
+      'Pre-conversation session briefs for counselors',
       'Multi-pathway parity across university, apprenticeships & trades',
       'Cohort-level aggregate analytics without student ranking',
     ],
@@ -36,7 +36,7 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
       'Private mentor reflections and unconsented personal doubts',
       'Non-school personal portfolio evidence kept confidential by student',
     ],
-    nextStep: 'Join the Launch School programme for secondary cohorts.',
+    nextStep: 'Join the Launch School program for secondary cohorts.',
   },
   {
     id: 'employers',
@@ -61,7 +61,7 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
     whatYouDoNotAccess: [
       'Private student Career Twins and raw Mentor dialogues',
       'Searchable minor candidate directories or cold-messaging access',
-      'School pastoral records or confidential counselling notes',
+      'School pastoral records or confidential counseling notes',
     ],
     nextStep: 'Submit early-career roles or host an employer insight event.',
   },
@@ -122,10 +122,10 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
     category: 'Training Providers',
     badge: 'Skill Development',
     badgeColor: 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30',
-    title: 'Vocational Training Organisations & Technical Academies',
+    title: 'Vocational Training Organizations & Technical Academies',
     contributes: [
       'Specialist vocational bootcamps and micro-credentials',
-      'Hands-on diagnostic, technical, and digital skill programmes',
+      'Hands-on diagnostic, technical, and digital skill programs',
       'Industry-recognized certification pathways (e.g. AWS, City & Guilds, CompTIA)',
       'Practical workshop and lab-based training opportunities',
     ],
@@ -152,7 +152,7 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
     contributes: [
       'Direct verification of academic transcripts and vocational awards',
       'Cryptographic or authoritative registry status checks',
-      'Licence renewal, expiry, and continuing education criteria',
+      'License renewal, expiry, and continuing education criteria',
       'Statutory practice entitlement confirmations (e.g. GMC, Bar, NMC, Gas Safe)',
     ],
     careerOSContributes: [
@@ -179,7 +179,7 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
       'Occupational standards, ethical codes, and competency frameworks',
       'Chartership and professional registration progression pathways (CEng, ACCA, CIPD)',
       'Continuing Professional Development (CPD) guidelines',
-      'Sector labour market intelligence and emerging discipline taxonomies',
+      'Sector labor market intelligence and emerging discipline taxonomies',
     ],
     careerOSContributes: [
       'Embedding professional codes into Career Graph pathway topologies',
@@ -191,7 +191,7 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
       'Students understand the long-term professional development requirements of chartered careers from day one.',
     whatYouDoNotAccess: [
       'Unconsented student membership data or marketing lists',
-      'Private school counselling workflows',
+      'Private school counseling workflows',
     ],
     nextStep: 'Review occupational standard taxonomy mapping in Career Graph.',
   },
@@ -204,7 +204,7 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
     contributes: [
       'Regional priority skills strategies and green-economy targets',
       'Subsidised youth employment and retraining initiatives',
-      'Labour market growth sectors and industrial development plans',
+      'Labor market growth sectors and industrial development plans',
       'Local transport, childcare, and educational accessibility grants',
     ],
     careerOSContributes: [
@@ -228,9 +228,9 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
     badgeColor: 'text-fuchsia-300 bg-fuchsia-950/40 border-fuchsia-500/30',
     title: 'Social Mobility Charities & Community Organizations',
     contributes: [
-      'Targeted mentoring and widening participation programmes',
+      'Targeted mentoring and widening participation programs',
       'Support for care-experienced, neurodivergent, or first-generation youth',
-      'Specialist bursary, equipment, and travel grant programmes',
+      'Specialist bursary, equipment, and travel grant programs',
       'Community-grounded career exploration workshops',
     ],
     careerOSContributes: [
@@ -240,19 +240,19 @@ export const PARTNER_TYPES: PartnerTypeContribution[] = [
       'Zero commercial paywalls on core individual guidance tools',
     ],
     studentBenefit:
-      'Under-represented students gain access to high-calibre career intelligence, mentoring networks, and financial bursaries.',
+      'Under-represented students gain access to high-caliber career intelligence, mentoring networks, and financial bursaries.',
     whatYouDoNotAccess: [
-      'Student personal information without explicit programme application consent',
+      'Student personal information without explicit program application consent',
       'Private conversational logs with AI Career Mentor',
     ],
-    nextStep: 'Partner on widening-access programmes and community initiatives.',
+    nextStep: 'Partner on widening-access programs and community initiatives.',
   },
   {
     id: 'events',
-    category: 'Event Organisers',
+    category: 'Event Organizers',
     badge: 'Live Encounters',
     badgeColor: 'text-sky-300 bg-sky-950/40 border-sky-500/30',
-    title: 'Career Fair Organisers & Industry Conference Hosts',
+    title: 'Career Fair Organizers & Industry Conference Hosts',
     contributes: [
       'Multi-employer recruitment halls and STEM exhibitions',
       'Apprenticeship showcases, hackathons, and skills competitions',
@@ -281,7 +281,7 @@ export interface LocalEcosystemSector {
   iconName: string;
   partners: {
     type: string;
-    organisation: string;
+    organization: string;
     contribution: string;
   }[];
 }
@@ -294,12 +294,12 @@ export const LOCAL_ECOSYSTEM_EXAMPLE: LocalEcosystemSector[] = [
     partners: [
       {
         type: 'Regional Hospital Trust',
-        organisation: 'Illustrative Regional NHS / Health Trust',
+        organization: 'Illustrative Regional NHS / Health Trust',
         contribution: 'Clinical work shadowing, nursing taster days, paramedic apprenticeships',
       },
       {
-        type: 'Community Health Centre',
-        organisation: 'Illustrative Primary Care Network',
+        type: 'Community Health Center',
+        organization: 'Illustrative Primary Care Network',
         contribution: 'Allied health insight sessions, pharmacy technician pathways',
       },
     ],
@@ -311,12 +311,12 @@ export const LOCAL_ECOSYSTEM_EXAMPLE: LocalEcosystemSector[] = [
     partners: [
       {
         type: 'Aerospace Components Manufacturer',
-        organisation: 'Illustrative Precision Engineering Ltd',
+        organization: 'Illustrative Precision Engineering Ltd',
         contribution: 'Level 6 Degree Apprenticeships, CAD design workshop challenges',
       },
       {
         type: 'Green Energy Contractor',
-        organisation: 'Illustrative Renewable Power Systems',
+        organization: 'Illustrative Renewable Power Systems',
         contribution: 'Wind turbine & solar technician open days, apprenticeship interviews',
       },
     ],
@@ -328,12 +328,12 @@ export const LOCAL_ECOSYSTEM_EXAMPLE: LocalEcosystemSector[] = [
     partners: [
       {
         type: 'Electrical Contractors Association',
-        organisation: 'Illustrative Regional Trade Training Centre',
+        organization: 'Illustrative Regional Trade Training Center',
         contribution: 'Level 3 Electrotechnical apprenticeships, 18th Edition guidance',
       },
       {
         type: 'Civil Construction Consortium',
-        organisation: 'Illustrative Infrastructure Builders',
+        organization: 'Illustrative Infrastructure Builders',
         contribution: 'Surveying work experience, commercial project site tours',
       },
     ],
@@ -345,12 +345,12 @@ export const LOCAL_ECOSYSTEM_EXAMPLE: LocalEcosystemSector[] = [
     partners: [
       {
         type: 'Regional Technical College',
-        organisation: 'Illustrative Community Technical Institute',
-        contribution: 'BTEC HND programmes, dual-credit options, vocational labs',
+        organization: 'Illustrative Community Technical Institute',
+        contribution: 'BTEC HND programs, dual-credit options, vocational labs',
       },
       {
         type: 'Civic University',
-        organisation: 'Illustrative State / Civic University',
+        organization: 'Illustrative State / Civic University',
         contribution: 'STEM masterclasses, campus taster days, degree admissions clarity',
       },
     ],
@@ -362,12 +362,12 @@ export const LOCAL_ECOSYSTEM_EXAMPLE: LocalEcosystemSector[] = [
     partners: [
       {
         type: 'Fire & Rescue Authority',
-        organisation: 'Illustrative Regional Fire Service',
+        organization: 'Illustrative Regional Fire Service',
         contribution: 'Fitness standards guidance, firefighter apprenticeship intakes',
       },
       {
         type: 'Local Government Authority',
-        organisation: 'Illustrative County / Municipal Council',
+        organization: 'Illustrative County / Municipal Council',
         contribution: 'Public administration apprenticeships, urban planning talks',
       },
     ],
@@ -387,7 +387,7 @@ export const OPPORTUNITY_GOVERNANCE_STEPS: GovernanceStep[] = [
   {
     step: '01',
     stage: 'Identity & Entity Verification',
-    title: 'Organiser / Employer Identity Check',
+    title: 'Organizer / Employer Identity Check',
     checks: [
       'Confirmed registered business or accredited educational institution entity',
       'Verified corporate email domain and authorized contact credentials',
@@ -449,7 +449,7 @@ export const OPPORTUNITY_GOVERNANCE_STEPS: GovernanceStep[] = [
 export const PARTNERSHIP_FAQ = [
   {
     q: 'What is a Career OS Partner?',
-    a: 'A Career OS Partner is an accredited organisation—such as a school, employer, college, apprenticeship provider, training academy, professional body, or charity—that contributes authentic career insights, verified educational pathways, training opportunities, or career events to the Career OS ecosystem around learners, without ever owning or restricting the individual student’s career journey.',
+    a: 'A Career OS Partner is an accredited organization—such as a school, employer, college, apprenticeship provider, training academy, professional body, or charity—that contributes authentic career insights, verified educational pathways, training opportunities, or career events to the Career OS ecosystem around learners, without ever owning or restricting the individual student’s career journey.',
   },
   {
     q: 'Who can partner with Career OS?',
@@ -461,35 +461,35 @@ export const PARTNERSHIP_FAQ = [
   },
   {
     q: 'Can colleges and universities become partners?',
-    a: 'Yes. Higher and further education providers contribute objective course descriptions, entry prerequisites, open-day calendars, and subject masterclasses. Career OS displays university and college programmes alongside apprenticeships and trades with strict architectural parity, without paid university rankings.',
+    a: 'Yes. Higher and further education providers contribute objective course descriptions, entry prerequisites, open-day calendars, and subject masterclasses. Career OS displays university and college programs alongside apprenticeships and trades with strict architectural parity, without paid university rankings.',
   },
   {
     q: 'Can apprenticeship providers join the ecosystem?',
     a: 'Yes. Apprenticeship providers play a central role. They contribute framework standards, off-the-job training curricula, and employer vacancies. Career OS helps demystify apprenticeship wages, qualifications, and long-term career progression for students and parents.',
   },
   {
-    q: 'Can vocational training organisations join?',
+    q: 'Can vocational training organizations join?',
     a: 'Yes. Technical academies and training providers can map their specialized certifications (e.g. AWS, City & Guilds, CompTIA) directly to Career Graph skill nodes, helping students and career changers understand modular bridge requirements.',
   },
   {
     q: 'Can professional bodies partner with Career OS?',
-    a: 'Yes. Chartered institutes and professional associations contribute competency frameworks, ethical codes, chartership roadmaps (such as CEng, ACCA, or CIPD), and sector labour market intelligence to ensure students understand professional standards from early exploration.',
+    a: 'Yes. Chartered institutes and professional associations contribute competency frameworks, ethical codes, chartership roadmaps (such as CEng, ACCA, or CIPD), and sector labor market intelligence to ensure students understand professional standards from early exploration.',
   },
   {
     q: 'Can credential issuers integrate with Career Passport?',
     a: 'Credential awarding bodies can establish verified provenance protocols with Career Passport, allowing students to hold tamper-evident, portable proof of their qualifications that they can share selectively with employers.',
   },
   {
-    q: 'Can charities and non-profit organisations partner with Career OS?',
-    a: 'Yes. Social mobility charities, widening-access foundations, and youth organisations contribute mentoring programmes, specialist bursaries, and community workshops to ensure underserved young people have equal access to career infrastructure.',
+    q: 'Can charities and non-profit organizations partner with Career OS?',
+    a: 'Yes. Social mobility charities, widening-access foundations, and youth organizations contribute mentoring programs, specialist bursaries, and community workshops to ensure underserved young people have equal access to career infrastructure.',
   },
   {
     q: 'Can government and regional workforce bodies partner?',
-    a: 'Yes. Local authorities, regional enterprise partnerships, and workforce boards can contribute local skills priority data, public sector initiatives, and funded training schemes to connect regional economic needs with school careers programmes.',
+    a: 'Yes. Local authorities, regional enterprise partnerships, and workforce boards can contribute local skills priority data, public sector initiatives, and funded training schemes to connect regional economic needs with school careers programs.',
   },
   {
-    q: 'Can event organisers list career fairs on Career OS?',
-    a: 'Yes. Verified organisers can submit career fairs, apprenticeship exhibitions, university open days, and employer insight webinars to the Career OS Events platform, subject to editorial review and youth safeguarding standards.',
+    q: 'Can event organizers list career fairs on Career OS?',
+    a: 'Yes. Verified organizers can submit career fairs, apprenticeship exhibitions, university open days, and employer insight webinars to the Career OS Events platform, subject to editorial review and youth safeguarding standards.',
   },
   {
     q: 'Can partners promote paid opportunities on Career OS?',
@@ -501,7 +501,7 @@ export const PARTNERSHIP_FAQ = [
   },
   {
     q: 'Can partners access student Career Twins?',
-    a: 'No. The Career Twin is a private developmental space belonging to the individual user. Partner organisations cannot browse, search, or inspect private user reflections, exploratory questions, or personal goals.',
+    a: 'No. The Career Twin is a private developmental space belonging to the individual user. Partner organizations cannot browse, search, or inspect private user reflections, exploratory questions, or personal goals.',
   },
   {
     q: 'Can partners read student conversations with the AI Career Mentor?',
@@ -509,7 +509,7 @@ export const PARTNERSHIP_FAQ = [
   },
   {
     q: 'Can commercial employers search a directory of minor students?',
-    a: 'No. We strictly prohibit recruiter cold-sourcing and searchable directories of users under 18. All youth engagement occurs through school-facilitated events, structured applications, or institutional programmes.',
+    a: 'No. We strictly prohibit recruiter cold-sourcing and searchable directories of users under 18. All youth engagement occurs through school-facilitated events, structured applications, or institutional programs.',
   },
   {
     q: 'Can employers contact students directly without school involvement?',
@@ -520,7 +520,7 @@ export const PARTNERSHIP_FAQ = [
     a: 'We enforce age-appropriate boundary gates (16+ direct account, 13–15 school/guardian framework, <13 strict institutional only), prohibit unmoderated chat, audit opportunities for safety, and maintain immediate escalation to school safeguarding leads.',
   },
   {
-    q: 'How are partner organisations vetted and reviewed?',
+    q: 'How are partner organizations vetted and reviewed?',
     a: 'All prospective partners undergo entity authentication, domain verification, and review against our Partner & Opportunity Standards before publishing events or opportunities.',
   },
   {
@@ -533,11 +533,11 @@ export const PARTNERSHIP_FAQ = [
   },
   {
     q: 'How are events reviewed for safety and relevance?',
-    a: 'Events must clearly specify format, age suitability, physical or virtual location security, participating organisations, and agenda. Unverified commercial sales pitches disguised as career talks are rejected.',
+    a: 'Events must clearly specify format, age suitability, physical or virtual location security, participating organizations, and agenda. Unverified commercial sales pitches disguised as career talks are rejected.',
   },
   {
-    q: 'Can schools choose which local partners participate in their careers programme?',
-    a: 'Yes. School leadership and careers teams retain full institutional discretion over which local employers, colleges, and event organisers are invited to participate in their school-specific careers calendar.',
+    q: 'Can schools choose which local partners participate in their careers program?',
+    a: 'Yes. School leadership and careers teams retain full institutional discretion over which local employers, colleges, and event organizers are invited to participate in their school-specific careers calendar.',
   },
   {
     q: 'Can a school restrict certain partners or opportunity types?',
@@ -545,7 +545,7 @@ export const PARTNERSHIP_FAQ = [
   },
   {
     q: 'Does Career OS charge partners to join the ecosystem?',
-    a: 'Core partnership participation for schools, non-profits, and educational bodies is free. Commercial employers and enterprise event organisers may pay for value-added recruitment tools or promoted event listings, under strict transparency rules.',
+    a: 'Core partnership participation for schools, non-profits, and educational bodies is free. Commercial employers and enterprise event organizers may pay for value-added recruitment tools or promoted event listings, under strict transparency rules.',
   },
   {
     q: 'Are Career OS partnerships exclusive?',
@@ -556,7 +556,7 @@ export const PARTNERSHIP_FAQ = [
     a: 'We never sell student personal data to third-party advertisers or data brokers. Data sharing occurs exclusively with explicit user consent when a student deliberately submits an application for an opportunity or event.',
   },
   {
-    q: 'How does an organisation apply to become a Career OS partner?',
-    a: 'Organisations submit an enquiry through the Partner Application Form on this page. Our partnerships and ethics team reviews proposed contributions, checks entity credentials, and designs a tailored pilot onboarding plan.',
+    q: 'How does an organization apply to become a Career OS partner?',
+    a: 'Organizations submit an enquiry through the Partner Application Form on this page. Our partnerships and ethics team reviews proposed contributions, checks entity credentials, and designs a tailored pilot onboarding plan.',
   },
 ];

@@ -23,7 +23,7 @@ export default function RegulatoryHubPage() {
         { label: 'Home', href: ROUTES.HOME },
         { label: 'Regulatory', href: ROUTES.REGULATORY },
       ]}
-      ctaText="Review Trust Centre"
+      ctaText="Review Trust Center"
       ctaHref={ROUTES.TRUST}
       fullScreenHero={true}
     >

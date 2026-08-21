@@ -50,7 +50,7 @@ const STAGES = [
     label: 'Appropriate Information Shared',
     description: 'If you choose to proceed, selected professional information becomes eligible for sharing.',
     userSees: 'You choose what is shared and when.',
-    employerSees: 'Agreed evidence and identity — only what you have authorised.',
+    employerSees: 'Agreed evidence and identity — only what you have authorized.',
     icon: '🤝',
     isPrivate: false,
   },

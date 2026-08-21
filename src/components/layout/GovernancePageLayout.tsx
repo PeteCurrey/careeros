@@ -20,7 +20,7 @@ export function GovernancePageLayout({
   children,
 }: GovernancePageLayoutProps) {
   const categoryLabels: Record<string, string> = {
-    LEGAL: "Legal Centre & Operative Policies",
+    LEGAL: "Legal Center & Operative Policies",
     TRUST: "Trust, Ethics & Architecture Standards",
     REGULATORY: "Regulatory Alignment & Readiness Frameworks",
     STANDARDS: "Platform Standards & Conduct Codes",
@@ -224,7 +224,7 @@ export function GovernancePageLayout({
               className="inline-flex items-center gap-1.5 font-semibold text-[var(--color-text-primary)] hover:underline"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back to {categoryLabels[meta.category] || "Governance Centre"}</span>
+              <span>Back to {categoryLabels[meta.category] || "Governance Center"}</span>
             </Link>
 
             <span className="text-[11px] text-[var(--color-text-tertiary)]">

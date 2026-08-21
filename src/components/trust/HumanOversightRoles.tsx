@@ -25,7 +25,7 @@ export function HumanOversightRoles() {
     },
     {
       role: 'Schools & Educators',
-      stakeholder: 'Counsellors, Teachers & DSLs',
+      stakeholder: 'Counselors, Teachers & DSLs',
       oversight: 'Access pre-session synthesis briefs before 1:1 meetings. Statutory safeguarding leads maintain immediate escalation channels.',
       boundaries: 'Zero access to unconsented private student reflections or raw conversational memory.',
       icon: GraduationCap,

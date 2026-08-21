@@ -118,7 +118,7 @@ export default function AdminLoginPage() {
           CareerOS Administration
         </h1>
         <p className="mt-1 text-center text-xs font-mono uppercase tracking-wider text-[var(--color-text-tertiary)]">
-          Authorised Personnel Only
+          Authorized Personnel Only
         </p>
       </div>
 

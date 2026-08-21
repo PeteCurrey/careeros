@@ -29,9 +29,9 @@ import {
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Career Guidance Outcomes & School Programme Intelligence | Career OS',
+  title: 'Career Guidance Outcomes & School Program Intelligence | Career OS',
   description:
-    'See how Career OS is designed to help schools understand student career exploration, pathway engagement, evidence building, and counselling activity without ranking student potential.',
+    'See how Career OS is designed to help schools understand student career exploration, pathway engagement, evidence building, and counseling activity without ranking student potential.',
   alternates: {
     canonical: 'https://career-os.com/schools/outcomes',
   },
@@ -48,7 +48,7 @@ export default function SchoolsOutcomesPage() {
           <span>/</span>
           <Link href={ROUTES.FOR_HIGH_SCHOOLS} className="hover:text-white transition-colors">Schools</Link>
           <span>/</span>
-          <span className="text-[var(--color-text-primary)] font-semibold">Outcomes &amp; Programme Intelligence</span>
+          <span className="text-[var(--color-text-primary)] font-semibold">Outcomes &amp; Program Intelligence</span>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function SchoolsOutcomesPage() {
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[var(--accent-blue)] shadow-[0_0_8px_rgba(47,143,255,0.7)]" />
               <span className="section-label text-[var(--accent-blue)]">
-                School Authority Sprint 04 · Institutional Outcomes &amp; Programme Intelligence
+                School Authority Sprint 04 · Institutional Outcomes &amp; Program Intelligence
               </span>
             </div>
 
@@ -123,7 +123,7 @@ export default function SchoolsOutcomesPage() {
               Start with questions that lead to action.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              The purpose of measuring career education is to improve institutional provision, allocate guidance resources effectively, and identify curriculum gaps — not to categorise or label individual young people.
+              The purpose of measuring career education is to improve institutional provision, allocate guidance resources effectively, and identify curriculum gaps — not to categorize or label individual young people.
             </p>
           </div>
 
@@ -152,7 +152,7 @@ export default function SchoolsOutcomesPage() {
               {
                 title: 'Support',
                 question: 'Are students accessing human guidance when needed?',
-                detail: 'Understanding counsellor meeting demand, pre-appointment preparation, and completed action milestones.',
+                detail: 'Understanding counselor meeting demand, pre-appointment preparation, and completed action milestones.',
               },
               {
                 title: 'Exposure',
@@ -224,7 +224,7 @@ export default function SchoolsOutcomesPage() {
               <div className="text-[10px] font-mono text-[var(--accent-blue)] uppercase font-bold">Tier 2</div>
               <div className="text-xs font-bold text-white">Developmental Activity</div>
               <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
-                Comparing entry requirements across routes, logging project evidence in Career Passport, and preparing structured questions for human counsellors.
+                Comparing entry requirements across routes, logging project evidence in Career Passport, and preparing structured questions for human counselors.
               </p>
               <span className="text-[9px] font-mono text-[var(--accent-blue)] block pt-1 border-t border-[var(--color-border-subtle)]">
                 Student Learning Signal
@@ -233,7 +233,7 @@ export default function SchoolsOutcomesPage() {
 
             <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-2">
               <div className="text-[10px] font-mono text-emerald-400 uppercase font-bold">Tier 3</div>
-              <div className="text-xs font-bold text-white">Programme Outcome</div>
+              <div className="text-xs font-bold text-white">Program Outcome</div>
               <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
                 Broader multi-pathway awareness across cohorts, balanced event attendance across sectors, and well-informed post-16/post-18 transition planning.
               </p>
@@ -312,7 +312,7 @@ export default function SchoolsOutcomesPage() {
               {
                 step: '05',
                 name: 'Action Taken',
-                desc: 'Student logs a work experience goal, books a counsellor appointment, or registers for a sector event.',
+                desc: 'Student logs a work experience goal, books a counselor appointment, or registers for a sector event.',
               },
             ].map((st) => (
               <div
@@ -377,12 +377,12 @@ export default function SchoolsOutcomesPage() {
             Good outcomes include knowing when a student needs a person.
           </h2>
           <p className="text-body-editorial text-[var(--color-text-secondary)]">
-            Career OS does not define success as &ldquo;the student never needed human advice.&rdquo; On the contrary, empowering a young person to formulate sharp questions and proactively request 1:1 time with a school counsellor is one of the highest-value outcomes of our platform.
+            Career OS does not define success as &ldquo;the student never needed human advice.&rdquo; On the contrary, empowering a young person to formulate sharp questions and proactively request 1:1 time with a school counselor is one of the highest-value outcomes of our platform.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs">
             <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
               <strong className="text-white block">Pre-Meeting Briefs</strong>
-              Counsellors receive pre-synthesised topic briefs, eliminating routine discovery.
+              Counselors receive pre-synthesized topic briefs, eliminating routine discovery.
             </div>
             <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1">
               <strong className="text-white block">Student-Led Inquiries</strong>
@@ -439,7 +439,7 @@ export default function SchoolsOutcomesPage() {
             The transition out of school matters — but Career OS should not claim credit for everything that happens next.
           </h2>
           <p className="text-body-editorial text-[var(--color-text-secondary)]">
-            Where legitimately and legally available, destination trends provide valuable context on programme effectiveness. However, Career OS strictly separates destination data (what happened) from causal responsibility (why it happened), avoiding unsubstantiated commercial claims.
+            Where legitimately and legally available, destination trends provide valuable context on program effectiveness. However, Career OS strictly separates destination data (what happened) from causal responsibility (why it happened), avoiding unsubstantiated commercial claims.
           </p>
         </section>
 
@@ -486,7 +486,7 @@ export default function SchoolsOutcomesPage() {
             </div>
             <div className="p-4 bg-[var(--color-surface-base)] border border-red-500/20 rounded space-y-1">
               <span className="text-red-400 font-bold block">✕ No School League Tables</span>
-              We do not rank school districts or counsellor productivity.
+              We do not rank school districts or counselor productivity.
             </div>
           </div>
 
@@ -505,7 +505,7 @@ export default function SchoolsOutcomesPage() {
           <div className="max-w-3xl space-y-2">
             <span className="section-label">Section 13 · Institutional Autonomy</span>
             <h2 className="text-headline-editorial text-[var(--color-text-primary)]">
-              Different schools should be able to define different programme goals.
+              Different schools should be able to define different program goals.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
               Career OS does not enforce a rigid, top-down definition of success. A comprehensive high school, a technical academy, and a selective sixth form will each have distinct institutional priorities. Explore how our objective framework adapts below.
@@ -515,7 +515,7 @@ export default function SchoolsOutcomesPage() {
           <OutcomesObjectiveBuilder />
         </section>
 
-        {/* ── SECTION 14: PROGRAMME REVIEW LIFECYCLE ───────────────── */}
+        {/* ── SECTION 14: PROGRAM REVIEW LIFECYCLE ───────────────── */}
         <section className="p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-6">
           <div className="max-w-3xl space-y-2">
             <span className="section-label">Section 14 · Continuous Improvement Flywheel</span>
@@ -532,9 +532,9 @@ export default function SchoolsOutcomesPage() {
               { step: '01', title: 'Define Goal', desc: 'Set institutional focus (e.g. apprenticeship reach)' },
               { step: '02', title: 'Deliver Activity', desc: 'Run careers events, lessons, and mentor tasks' },
               { step: '03', title: 'Observe Data', desc: 'Review aggregate exploration breadth across cohorts' },
-              { step: '04', title: 'Educator Review', desc: 'Discuss trends in pastoral and counselling meetings' },
+              { step: '04', title: 'Educator Review', desc: 'Discuss trends in pastoral and counseling meetings' },
               { step: '05', title: 'Identify Gaps', desc: 'Notice under-explored sectors or late application timing' },
-              { step: '06', title: 'Adapt Programme', desc: 'Invite targeted employers and adjust advising slots' },
+              { step: '06', title: 'Adapt Program', desc: 'Invite targeted employers and adjust advising slots' },
             ].map((f) => (
               <div key={f.step} className="p-3.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1 flex flex-col justify-between">
                 <div className="text-[10px] font-mono text-[var(--accent-blue)] font-bold">Phase {f.step}</div>
@@ -595,7 +595,7 @@ export default function SchoolsOutcomesPage() {
           </p>
         </section>
 
-        {/* ── SECTION 19: LAUNCH SCHOOL OUTCOMES PROGRAMME ─────────── */}
+        {/* ── SECTION 19: LAUNCH SCHOOL OUTCOMES PROGRAM ─────────── */}
         <section className="p-8 bg-[var(--color-surface-raised)] border border-[rgba(47,143,255,0.25)] rounded-[var(--radius-card)] space-y-5">
           <div className="space-y-2">
             <span className="section-label text-[var(--accent-blue)]">Section 19 · Early Adopter Collaboration</span>
@@ -612,7 +612,7 @@ export default function SchoolsOutcomesPage() {
               href={ROUTES.FOR_HIGH_SCHOOLS}
               className="px-5 py-2.5 bg-white text-zinc-900 text-xs font-bold rounded-[var(--radius-button)] hover:bg-zinc-100 transition-colors inline-flex items-center gap-1.5"
             >
-              <span>Join the Launch School Programme</span>
+              <span>Join the Launch School Program</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -632,7 +632,7 @@ export default function SchoolsOutcomesPage() {
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <h3 className="text-sm font-bold text-white">1. What outcomes can Career OS reasonably measure?</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Career OS measures cohort exploration breadth, multi-pathway comparisons, Career Passport evidence items logged, counsellor appointment preparation rates, and event sector exposure balance.
+                Career OS measures cohort exploration breadth, multi-pathway comparisons, Career Passport evidence items logged, counselor appointment preparation rates, and event sector exposure balance.
               </p>
             </div>
 
@@ -665,16 +665,16 @@ export default function SchoolsOutcomesPage() {
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
-              <h3 className="text-sm font-bold text-white">6. Can counsellors track student advising preparation?</h3>
+              <h3 className="text-sm font-bold text-white">6. Can counselors track student advising preparation?</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Yes. Counsellors receive structured briefs containing student-flagged discussion topics, enabling high-impact 1:1 meetings from the opening minute.
+                Yes. Counselors receive structured briefs containing student-flagged discussion topics, enabling high-impact 1:1 meetings from the opening minute.
               </p>
             </div>
 
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <h3 className="text-sm font-bold text-white">7. Does Career OS rank schools or generate league tables?</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                No. We do not compare or rank schools, districts, or counsellor productivity. Institutional intelligence is private to each district.
+                No. We do not compare or rank schools, districts, or counselor productivity. Institutional intelligence is private to each district.
               </p>
             </div>
 
@@ -709,7 +709,7 @@ export default function SchoolsOutcomesPage() {
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <h3 className="text-sm font-bold text-white">12. How can our school get involved as an early launch partner?</h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Schools can apply through our Launch School Programme to collaborate directly with our team on baseline configuration and reporting requirements.
+                Schools can apply through our Launch School Program to collaborate directly with our team on baseline configuration and reporting requirements.
               </p>
             </div>
 
@@ -724,7 +724,7 @@ export default function SchoolsOutcomesPage() {
               Measure whether career development is actually happening.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)] max-w-xl mx-auto">
-              Career OS is designed to help schools understand exploration breadth, evidence creation, and human counselling engagement — while avoiding simplistic scores that pretend to predict a student&apos;s future.
+              Career OS is designed to help schools understand exploration breadth, evidence creation, and human counseling engagement — while avoiding simplistic scores that pretend to predict a student&apos;s future.
             </p>
           </div>
 

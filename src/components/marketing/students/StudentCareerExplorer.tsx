@@ -62,7 +62,7 @@ const INTERESTS: InterestOption[] = [
         environments: ['Ambulance service', 'Critical care transport', 'Event medicine'],
       },
       {
-        title: 'Social Work & Counselling',
+        title: 'Social Work & Counseling',
         environments: ['Children & families', 'Adult social care', 'Mental health services'],
       },
       {
@@ -78,7 +78,7 @@ const INTERESTS: InterestOption[] = [
         environments: ['Government agencies', 'NHS/healthcare systems', 'Charitable sector'],
       },
     ],
-    routes: ['University degree', 'Degree apprenticeship', 'NHS apprenticeship routes', 'Foundation programmes', 'Vocational qualifications'],
+    routes: ['University degree', 'Degree apprenticeship', 'NHS apprenticeship routes', 'Foundation programs', 'Vocational qualifications'],
   },
   {
     id: 'solving',
@@ -135,7 +135,7 @@ const INTERESTS: InterestOption[] = [
       },
       {
         title: 'Fashion & Textiles',
-        environments: ['Fashion industry', 'Technical textiles', 'Costume & theatre'],
+        environments: ['Fashion industry', 'Technical textiles', 'Costume & theater'],
       },
       {
         title: 'Marketing & Creative Strategy',
@@ -146,8 +146,8 @@ const INTERESTS: InterestOption[] = [
   },
   {
     id: 'leading',
-    label: 'I like leading and organising',
-    shortLabel: 'LEADING & ORGANISING',
+    label: 'I like leading and organizing',
+    shortLabel: 'LEADING & ORGANIZING',
     careers: [
       {
         title: 'Operations & Management',
@@ -174,7 +174,7 @@ const INTERESTS: InterestOption[] = [
         environments: ['Civil service', 'Local government', 'Policy & regulation'],
       },
     ],
-    routes: ['University degree', 'Management apprenticeship', 'Military officer programme', 'Graduate leadership scheme', 'Direct route + development'],
+    routes: ['University degree', 'Management apprenticeship', 'Military officer program', 'Graduate leadership scheme', 'Direct route + development'],
   },
 ];
 
@@ -246,7 +246,7 @@ export function StudentCareerExplorer() {
 
       <div className="flex flex-wrap items-center justify-between gap-4">
         <p className="text-[10px] text-[var(--color-text-tertiary)] font-mono">
-          Exploration examples — not personalised career recommendations.
+          Exploration examples — not personalized career recommendations.
         </p>
         <Link
           href={ROUTES.PRODUCT_CAREER_GRAPH}

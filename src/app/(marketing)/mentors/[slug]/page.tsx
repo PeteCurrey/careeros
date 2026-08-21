@@ -113,7 +113,7 @@ export default async function MentorProfilePage({ params }: MentorProfilePagePro
                 
                 <div className="absolute bottom-4 left-4 right-4 p-4 rounded bg-black/70 backdrop-blur-sm border border-white/10 space-y-1">
                   <span className="text-[10px] font-mono text-[var(--color-taupe-300)] uppercase tracking-wider">
-                    Domain Specialisation
+                    Domain Specialization
                   </span>
                   <p className="text-xs font-semibold text-white">
                     {mentor.roleTitle}

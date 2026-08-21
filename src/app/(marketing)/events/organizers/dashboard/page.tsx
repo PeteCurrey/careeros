@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export default function OrganiserDashboardPage() {
+export default function OrganizerDashboardPage() {
   const [events, setEvents] = useState<CareerEvent[]>([]);
   const [activeTab, setActiveTab] = useState<'live' | 'under-review' | 'changes-requested' | 'draft' | 'all'>('live');
 
@@ -95,7 +95,7 @@ export default function OrganiserDashboardPage() {
         <div className="container-editorial flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="section-label text-[var(--accent-blue)]">Organiser Portal</span>
+              <span className="section-label text-[var(--accent-blue)]">Organizer Portal</span>
               <VerificationBadge state="EMPLOYER_VERIFIED" size="sm" />
             </div>
             <h1 className="text-xl font-bold text-[var(--color-text-primary)]">

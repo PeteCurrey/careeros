@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 // Illustrative animated opportunity flow for the hero section.
-// Shows a Career Twin at centre-left, capabilities radiating, and
+// Shows a Career Twin at center-left, capabilities radiating, and
 // relevant opportunities moving toward the individual.
-// Clearly labelled as illustrative concept.
+// Clearly labeled as illustrative concept.
 
 const CAPABILITIES = [
   { label: 'Diagnostics', angle: -60, radius: 130, color: 'text-blue-400' },
@@ -99,7 +99,7 @@ export function HeroOpportunityFlow() {
         preserveAspectRatio="xMidYMid meet"
         aria-hidden="true"
       >
-        {/* Capability arcs from twin (centre ~170, 210) */}
+        {/* Capability arcs from twin (center ~170, 210) */}
         {CAPABILITIES.map((cap, i) => {
           const rad = (cap.angle * Math.PI) / 180;
           const x2 = 170 + Math.cos(rad) * cap.radius;

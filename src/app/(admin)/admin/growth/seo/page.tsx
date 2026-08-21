@@ -17,7 +17,7 @@ export default async function AdminSEOControlPage() {
     <div className="space-y-6">
       <AdminSectionHeader
         category="Growth & Organic Search"
-        title="SEO Control Centre & Health Scanner"
+        title="SEO Control Center & Health Scanner"
         description="Internal live crawler auditing meta titles, missing descriptions, canonical headers, OpenGraph cards and broken internal URLs."
         actions={
           <button

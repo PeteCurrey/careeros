@@ -193,16 +193,16 @@ export const ROUTES = {
   EVENTS_FUNDING_INVESTORS: '/events/funding-investor-events',
   EVENTS_PROMOTE: '/events/promote',
   EVENTS_PROMOTE_CREATE: '/events/promote/create',
-  EVENTS_ORGANISERS_DASHBOARD: '/events/organisers/dashboard',
+  EVENTS_ORGANIZERS_DASHBOARD: '/events/organizers/dashboard',
   EVENTS_ADMIN: '/events/admin',
 
-  // Admin Control Centre
+  // Admin Control Center
   ADMIN: '/admin',
   ADMIN_LOGIN: '/admin/login',
   ADMIN_SECURITY_SETUP: '/admin/security/setup',
   ADMIN_SECURITY_VERIFY: '/admin/security/verify',
   ADMIN_ACCOUNT_SECURITY: '/admin/account/security',
-  ADMIN_ACTION_CENTRE: '/admin/action-centre',
+  ADMIN_ACTION_CENTER: '/admin/action-center',
   ADMIN_FORBIDDEN: '/admin/forbidden',
   ADMIN_SYSTEM_ADMINS: '/admin/system/admins',
   ADMIN_SYSTEM_SECURITY: '/admin/system/security',
@@ -223,7 +223,7 @@ export const ROUTES = {
   ADMIN_EVENTS_SOURCES: '/admin/events/sources',
   ADMIN_EVENTS_DISCOVERY_RUNS: '/admin/events/discovery-runs',
   ADMIN_EVENTS_CATEGORIES: '/admin/events/categories',
-  ADMIN_EVENTS_ORGANISERS: '/admin/events/organisers',
+  ADMIN_EVENTS_ORGANIZERS: '/admin/events/organizers',
   ADMIN_EVENTS_PROMOTIONS: '/admin/events/promotions',
 
   // Opportunities
@@ -241,12 +241,12 @@ export const ROUTES = {
   ADMIN_USERS_TRUST_SAFETY: '/admin/users/trust-safety',
   ADMIN_USERS_DATA_REQUESTS: '/admin/users/data-requests',
 
-  // Organisations
-  ADMIN_ORGANISATIONS: '/admin/organisations',
-  ADMIN_ORGANISATIONS_EMPLOYERS: '/admin/organisations/employers',
-  ADMIN_ORGANISATIONS_SCHOOLS: '/admin/organisations/schools',
-  ADMIN_ORGANISATIONS_ORGANISERS: '/admin/organisations/organisers',
-  ADMIN_ORGANISATIONS_PARTNERS: '/admin/organisations/partners',
+  // Organizations
+  ADMIN_ORGANIZATIONS: '/admin/organizations',
+  ADMIN_ORGANIZATIONS_EMPLOYERS: '/admin/organizations/employers',
+  ADMIN_ORGANIZATIONS_SCHOOLS: '/admin/organizations/schools',
+  ADMIN_ORGANIZATIONS_ORGANIZERS: '/admin/organizations/organizers',
+  ADMIN_ORGANIZATIONS_PARTNERS: '/admin/organizations/partners',
 
   // Partnerships CRM & Intelligence
   ADMIN_PARTNERSHIPS: '/admin/partnerships',
@@ -265,7 +265,7 @@ export const ROUTES = {
   ADMIN_DATA_ISSUES: '/admin/integrations/data-issues',
 
 
-  // AI Control Centre
+  // AI Control Center
   ADMIN_AI: '/admin/ai',
   ADMIN_AI_PROVIDERS: '/admin/ai/providers',
   ADMIN_AI_MODELS: '/admin/ai/models',

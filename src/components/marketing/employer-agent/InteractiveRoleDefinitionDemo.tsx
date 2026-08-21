@@ -158,7 +158,7 @@ const PROFILES: ProfileData[] = [
         detail: 'Commercial fleet safety, not industrial manufacturing safety',
       },
       {
-        label: 'Full Driving Licence & Shift Availability',
+        label: 'Full Driving License & Shift Availability',
         status: 'CONFIRMED',
         detail: 'Fully eligible for on-site shift roster',
       },
@@ -169,7 +169,7 @@ const PROFILES: ProfileData[] = [
     id: 'profile-d',
     title: 'Profile D — Military Technical Engineer',
     category: 'High-Accountability Transfer',
-    origin: 'Defence Logistics / Royal Air Force Avionics',
+    origin: 'Defense Logistics / Royal Air Force Avionics',
     whySurfaced:
       'Rigorous adherence to maintenance schedules, high-stress incident command, safety audits, and disciplined leadership of technical maintenance squads.',
     supportingEvidence: [
@@ -192,12 +192,12 @@ const PROFILES: ProfileData[] = [
       {
         label: 'Statutory Electrical / Mechanical Qualification',
         status: 'CONFIRMED',
-        detail: 'Recognised military engineering equivalent (MOD/City & Guilds)',
+        detail: 'Recognized military engineering equivalent (MOD/City & Guilds)',
       },
       {
         label: 'Commercial Plant Experience',
         status: 'NOT CONFIRMED',
-        detail: 'Defence environment; commercial bridge needed',
+        detail: 'Defense environment; commercial bridge needed',
       },
       {
         label: 'Security Clearance & Right to Work',
@@ -318,9 +318,9 @@ export function InteractiveRoleDefinitionDemo() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
             <div className="p-3 bg-[var(--color-surface-base)] border border-amber-500/20 rounded space-y-1">
-              <span className="font-bold text-amber-400 block">Statutory Licence</span>
+              <span className="font-bold text-amber-400 block">Statutory License</span>
               <p className="text-[11px] text-[var(--color-text-secondary)]">
-                Recognised electrical qualification for statutory sign-off authority.
+                Recognized electrical qualification for statutory sign-off authority.
               </p>
             </div>
             <div className="p-3 bg-[var(--color-surface-base)] border border-amber-500/20 rounded space-y-1">

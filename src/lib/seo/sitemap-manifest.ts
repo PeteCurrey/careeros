@@ -92,7 +92,7 @@ export const PUBLIC_INDEXABLE_ROUTES: IndexableRoute[] = [
   { path: '/events/entrepreneurship', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/events/promote', changeFrequency: 'monthly', priority: 0.8 },
 
-  // ── 9. Trust & Assurance Centre ──
+  // ── 9. Trust & Assurance Center ──
   { path: '/trust', changeFrequency: 'monthly', priority: 0.85 },
   { path: '/trust/compliance', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/trust/responsible-ai', changeFrequency: 'monthly', priority: 0.85 },
@@ -106,7 +106,7 @@ export const PUBLIC_INDEXABLE_ROUTES: IndexableRoute[] = [
   { path: '/trust/transparency', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/trust/accessibility', changeFrequency: 'monthly', priority: 0.75 },
 
-  // ── 10. Platform Standards Centre ──
+  // ── 10. Platform Standards Center ──
   { path: '/standards', changeFrequency: 'monthly', priority: 0.75 },
   { path: '/standards/community-code', changeFrequency: 'yearly', priority: 0.7 },
   { path: '/standards/mentor-code', changeFrequency: 'yearly', priority: 0.75 },
@@ -128,7 +128,7 @@ export const PUBLIC_INDEXABLE_ROUTES: IndexableRoute[] = [
   { path: '/regulatory/state-privacy', changeFrequency: 'monthly', priority: 0.75 },
   { path: '/regulatory/global-expansion', changeFrequency: 'monthly', priority: 0.7 },
 
-  // ── 12. Legal & Governance Centre ──
+  // ── 12. Legal & Governance Center ──
   { path: '/legal', changeFrequency: 'monthly', priority: 0.75 },
   { path: '/legal/terms', changeFrequency: 'yearly', priority: 0.65 },
   { path: '/legal/privacy', changeFrequency: 'yearly', priority: 0.7 },

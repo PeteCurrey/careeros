@@ -2,7 +2,7 @@ import {
   CareerEvent,
   EventCategory,
   EventFilterState,
-  OrganiserType,
+  OrganizerType,
   CareerStage,
 } from '@/types/events/platform';
 
@@ -60,8 +60,8 @@ export const EVENT_CATEGORIES: EventCategory[] = [
     id: 'cat-graduate-recruitment',
     slug: 'graduate-recruitment',
     name: 'Graduate Recruitment',
-    shortDescription: 'Programmes, rotational schemes and entry roles for university graduates.',
-    longDescription: 'Specialised recruitment sessions focused on university leavers, master’s graduates, and PhD researchers seeking structured corporate, public, and technical graduate tracks.',
+    shortDescription: 'Programs, rotational schemes and entry roles for university graduates.',
+    longDescription: 'Specialized recruitment sessions focused on university leavers, master’s graduates, and PhD researchers seeking structured corporate, public, and technical graduate tracks.',
     group: 'careers',
     badgeText: 'Graduates',
   },
@@ -124,9 +124,9 @@ export const EVENT_CATEGORIES: EventCategory[] = [
   {
     id: 'cat-cv-interview-clinics',
     slug: 'cv-interview-clinics',
-    name: 'CV & Interview Clinics',
-    shortDescription: 'Personalised resume feedback, mock interview simulations and pitch polish.',
-    longDescription: 'One-on-one and small-group clinics with recruiters and mentors to audit your Career Twin evidence, sharpen your CV, and ace behavioral interviews.',
+    name: 'Resume & Interview Clinics',
+    shortDescription: 'Personalized resume feedback, mock interview simulations and pitch polish.',
+    longDescription: 'One-on-one and small-group clinics with recruiters and mentors to audit your Career Twin evidence, sharpen your resume, and ace behavioral interviews.',
     group: 'learning',
     badgeText: 'Coaching',
   },
@@ -146,7 +146,7 @@ export const EVENT_CATEGORIES: EventCategory[] = [
     slug: 'school-college-events',
     name: 'School & College Events',
     shortDescription: 'Age-appropriate career exploration for secondary and further education students.',
-    longDescription: 'Safe, structured career discovery days compliant with safeguarding protocols. Introduces high school and sixth form students to diverse industries and educational pathways.',
+    longDescription: 'Safe, structured career discovery days compliant with safeguarding protocols. Introduces high school and early college students to diverse industries and educational pathways.',
     group: 'education',
     badgeText: 'Schools (14-18)',
   },
@@ -163,7 +163,7 @@ export const EVENT_CATEGORIES: EventCategory[] = [
     id: 'cat-graduate',
     slug: 'graduate',
     name: 'Graduate Events',
-    shortDescription: 'Transition support, entry programmes and career acceleration for new grads.',
+    shortDescription: 'Transition support, entry programs and career acceleration for new grads.',
     longDescription: 'Bridging the gap between graduation and long-term career momentum with vetted opportunities and transition guidance.',
     group: 'education',
     badgeText: 'New Grads',
@@ -260,7 +260,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     slug: 'national-green-energy-apprenticeship-fair-2026',
     title: 'National Clean Energy & Engineering Apprenticeship Fair 2026',
     shortSummary: 'Meet 35+ verified renewable engineering, grid technology, and sustainable infrastructure employers offering Level 3-7 degree apprenticeships.',
-    fullDescription: 'The National Clean Energy & Engineering Apprenticeship Fair brings together the UK and European leaders in wind power, smart grid technology, hydrogen engineering, and sustainable manufacturing. Designed for school leavers, college students, and career changers passionate about the net-zero transition.\n\nAttendees will have direct access to hiring managers from National Grid, Siemens Energy, Octopus Energy, and Arup. You will learn about structured rotational schemes, fully funded engineering degrees (BSc / BEng), starting salaries from £24,000–£32,000, and long-term career progression.\n\nBring your Career Twin profile or CV for on-the-spot resume reviews and speed mentoring with current apprentices.',
+    fullDescription: 'The National Clean Energy & Engineering Apprenticeship Fair brings together the UK and European leaders in wind power, smart grid technology, hydrogen engineering, and sustainable manufacturing. Designed for school leavers, college students, and career changers passionate about the net-zero transition.\n\nAttendees will have direct access to hiring managers from National Grid, Siemens Energy, Octopus Energy, and Arup. You will learn about structured rotational schemes, fully funded engineering degrees (BSc / BEng), starting salaries from $45,000–$60,000, and long-term career progression.\n\nBring your Career Twin profile or resume for on-the-spot resume reviews and speed mentoring with current apprentices.',
     categorySlug: 'apprenticeships',
     subcategory: 'Green Engineering',
     format: 'hybrid',
@@ -273,7 +273,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     timezone: 'Europe/London',
     heroImageUrl: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1400&q=80',
     coverImageAlt: 'Clean energy engineering facility with wind turbine technician',
-    organiser: {
+    organizer: {
       id: 'org-renewable-skills-alliance',
       name: 'Renewable Energy Skills Alliance',
       slug: 'renewable-energy-skills-alliance',
@@ -288,7 +288,7 @@ export const SEED_EVENTS: CareerEvent[] = [
       totalEventsHosted: 42,
     },
     venue: {
-      name: 'Business Design Centre',
+      name: 'Business Design Center',
       addressLine1: '52 Upper Street',
       city: 'London',
       regionState: 'Greater London',
@@ -311,7 +311,7 @@ export const SEED_EVENTS: CareerEvent[] = [
       'Discover Level 3, 4, 6 and 7 Apprenticeships with zero student debt',
       'Meet 35+ accredited green employers hiring for 2026/2027 cohorts',
       'Understand salary bands, academic study days, and qualifications',
-      'Fast-track your application into early assessment centre rounds',
+      'Fast-track your application into early assessment center rounds',
     ],
     prerequisites: ['Interest in STEM, technical trades, or sustainability'],
     entryRequirements: ['Free digital ticket required on entry', 'Parent/guardian welcome for attendees aged 14-17'],
@@ -319,26 +319,26 @@ export const SEED_EVENTS: CareerEvent[] = [
     agenda: [
       { id: 'ag-1', time: '09:30', title: 'Exhibition Hall Opens & Stand Discovery', description: 'Explore employer zones across Wind, Solar, Battery Storage, and Grid Operations.' },
       { id: 'ag-2', time: '11:00', title: 'Keynote: Engineering the 2035 Net Zero Grid', description: 'Lead engineers discuss how AI and high-voltage transmission are transforming careers.' },
-      { id: 'ag-3', time: '13:00', title: 'Apprentice Real Talk: From GCSEs to BEng Degree', description: 'Current 2nd and 3rd year apprentices share the realities of balancing site work and study.' },
-      { id: 'ag-4', time: '14:30', title: 'Application & Assessment Centre Masterclass', description: 'Recruiters explain what distinguishes top candidates during group exercises and technical tests.' },
+      { id: 'ag-3', time: '13:00', title: 'Apprentice Real Talk: From High School to Engineering Degree', description: 'Current 2nd and 3rd year apprentices share the realities of balancing site work and study.' },
+      { id: 'ag-4', time: '14:30', title: 'Application & Assessment Center Masterclass', description: 'Recruiters explain what distinguishes top candidates during group exercises and technical tests.' },
     ],
     speakers: [
       {
         id: 'spk-1',
         name: 'Dr. Eleanor Vance',
         role: 'Chief Technology Officer',
-        organisation: 'National Grid Ventures',
+        organization: 'National Grid Ventures',
         bio: 'Over 20 years leading high-voltage direct current (HVDC) interconnectors and clean transmission systems across Northern Europe.',
       },
       {
         id: 'spk-2',
         name: 'Marcus Thorne',
         role: 'Head of Early Careers Talent',
-        organisation: 'Siemens Energy UK',
+        organization: 'Siemens Energy UK',
         bio: 'Oversees graduate and apprenticeship schemes supporting over 400 trainees annually.',
       },
     ],
-    participatingOrganisations: [
+    participatingOrganizations: [
       { id: 'org-p1', name: 'National Grid', type: 'employer', verified: true, hiringRoles: ['Degree Apprentice Substation Engineer', 'Cyber Security Apprentice'] },
       { id: 'org-p2', name: 'Siemens Energy', type: 'employer', verified: true, hiringRoles: ['Wind Turbine Service Apprentice', 'Electrical Systems Trainee'] },
       { id: 'org-p3', name: 'Octopus Energy', type: 'employer', verified: true, hiringRoles: ['Heat Pump Installation Apprentice', 'Smart Meter Technician'] },
@@ -381,7 +381,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     slug: 'applied-ai-engineering-hiring-summit-new-york',
     title: 'Applied AI & Systems Engineering Hiring Summit — New York',
     shortSummary: 'Connect with senior engineering leaders and talent partners from tier-1 AI labs, fintech infrastructure teams, and robotics startups hiring mid-to-principal engineers.',
-    fullDescription: 'The Applied AI & Systems Engineering Hiring Summit is an invite-focused recruitment gathering in Manhattan. We strip away superficial networking to bring genuine technical managers together with engineers seeking their next career leap.\n\nFeatured organisations are actively hiring for roles in distributed training infrastructure, LLM inference optimisation, autonomous perception, and high-throughput financial systems.\n\nThis event is designed for software engineers, ML researchers, data platform leads, and technical founders looking for high-impact roles with competitive compensation packages ($180k–$450k+ TC).',
+    fullDescription: 'The Applied AI & Systems Engineering Hiring Summit is an invite-focused recruitment gathering in Manhattan. We strip away superficial networking to bring genuine technical managers together with engineers seeking their next career leap.\n\nFeatured organizations are actively hiring for roles in distributed training infrastructure, LLM inference optimization, autonomous perception, and high-throughput financial systems.\n\nThis event is designed for software engineers, ML researchers, data platform leads, and technical founders looking for high-impact roles with competitive compensation packages ($180k–$450k+ TC).',
     categorySlug: 'recruitment-events',
     subcategory: 'AI & Systems',
     format: 'in-person',
@@ -394,7 +394,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     timezone: 'America/New_York',
     heroImageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=80',
     coverImageAlt: 'Modern Manhattan tech office with software engineers collaborating',
-    organiser: {
+    organizer: {
       id: 'org-ny-tech-talent-consortium',
       name: 'NYC Engineering Talent Alliance',
       slug: 'nyc-engineering-talent-alliance',
@@ -442,18 +442,18 @@ export const SEED_EVENTS: CareerEvent[] = [
         id: 'spk-ny1',
         name: 'Siddharth Nair',
         role: 'VP of Core Infrastructure',
-        organisation: 'Lattice AI Systems',
+        organization: 'Lattice AI Systems',
         bio: 'Former Distributed Systems Lead at Google Brain, currently scaling 100k GPU clusters.',
       },
       {
         id: 'spk-ny2',
         name: 'Claire Beauchamp',
         role: 'Director of Quantitative Research',
-        organisation: 'Hudson River Trading Labs',
+        organization: 'Hudson River Trading Labs',
         bio: 'Specialist in ultralow-latency order execution engines and FPGA acceleration.',
       },
     ],
-    participatingOrganisations: [
+    participatingOrganizations: [
       { id: 'org-ny-p1', name: 'Lattice AI Systems', type: 'employer', verified: true, hiringRoles: ['Staff Distributed Systems Engineer', 'CUDA Optimization Specialist'] },
       { id: 'org-ny-p2', name: 'Hudson River Trading Labs', type: 'employer', verified: true, hiringRoles: ['Senior C++ Low-Latency Engineer', 'ML Quantitative Researcher'] },
       { id: 'org-ny-p3', name: 'Datadog', type: 'employer', verified: true, hiringRoles: ['Principal Platform Engineer', 'Engineering Manager - Observability'] },
@@ -509,7 +509,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     timezone: 'Europe/London',
     heroImageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1400&q=80',
     coverImageAlt: 'Medical training room with doctor demonstrating simulation equipment to students',
-    organiser: {
+    organizer: {
       id: 'org-nhs-careers-hub',
       name: 'NHS Regional Healthcare Academy',
       slug: 'nhs-regional-healthcare-academy',
@@ -524,14 +524,14 @@ export const SEED_EVENTS: CareerEvent[] = [
       totalEventsHosted: 85,
     },
     venue: {
-      name: 'Manchester University Medical Education Centre',
+      name: 'Manchester University Medical Education Center',
       addressLine1: 'Oxford Road',
       city: 'Manchester',
       regionState: 'Greater Manchester',
       postalCode: 'M13 9PL',
       country: 'United Kingdom',
       transitInstructions: '10 minutes via bus from Manchester Piccadilly or Manchester Oxford Road rail stations.',
-      parkingInfo: 'Limited visitor parking at Booth Street West multi-storey.',
+      parkingInfo: 'Limited visitor parking at Booth Street West multi-story.',
     },
     sectors: ['Healthcare & Life Sciences', 'Public Sector & Education'],
     careerStages: ['high-school', 'college', 'university'],
@@ -558,19 +558,19 @@ export const SEED_EVENTS: CareerEvent[] = [
         id: 'spk-nhs1',
         name: 'Dr. Tariq Al-Mansoor',
         role: 'Consultant Acute Physician & Director of Medical Education',
-        organisation: 'Manchester University NHS Foundation Trust',
+        organization: 'Manchester University NHS Foundation Trust',
         bio: 'Clinical educator dedicated to widening access to medical education for underrepresented communities.',
       },
     ],
-    participatingOrganisations: [
+    participatingOrganizations: [
       { id: 'org-nhs-p1', name: 'Manchester University NHS Foundation Trust', type: 'government-public', verified: true },
       { id: 'org-nhs-p2', name: 'University of Manchester School of Medicine', type: 'university', verified: true },
       { id: 'org-nhs-p3', name: 'North West Ambulance Service', type: 'employer', verified: true },
     ],
     accessibilityFeatures: [
-      { id: 'acc-nhs1', label: 'Full wheelchair accessibility across all lecture theatres and simulation labs' },
+      { id: 'acc-nhs1', label: 'Full wheelchair accessibility across all lecture theaters and simulation labs' },
       { id: 'acc-nhs2', label: 'Sensory-friendly morning entry period' },
-      { id: 'acc-nhs3', label: 'Hearing loop systems active in Main Lecture Theatre' },
+      { id: 'acc-nhs3', label: 'Hearing loop systems active in Main Lecture Theater' },
     ],
     capacity: 600,
     remainingSpots: 115,
@@ -616,7 +616,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     timezone: 'Europe/London',
     heroImageUrl: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1400&q=80',
     coverImageAlt: 'Startup founder presenting slides on stage during an investor pitch night',
-    organiser: {
+    organizer: {
       id: 'org-future-ventures-uk',
       name: 'Future Ventures Accelerator',
       slug: 'future-ventures-accelerator',
@@ -638,7 +638,7 @@ export const SEED_EVENTS: CareerEvent[] = [
       postalCode: 'E14 5AB',
       country: 'United Kingdom',
       transitInstructions: 'Canary Wharf Station on Elizabeth Line or Jubilee Line.',
-      parkingInfo: 'Canary Wharf underground shopping centre car parks.',
+      parkingInfo: 'Canary Wharf underground shopping center car parks.',
     },
     virtualAccess: {
       platformName: 'CareerOS Live Investor Stream',
@@ -668,11 +668,11 @@ export const SEED_EVENTS: CareerEvent[] = [
         id: 'spk-fv1',
         name: 'Amara Chen',
         role: 'Managing Partner',
-        organisation: 'Frontier Seed Capital',
+        organization: 'Frontier Seed Capital',
         bio: 'Early backer of 4 unicorn startups in London and Berlin; specialist in B2B SaaS go-to-market.',
       },
     ],
-    participatingOrganisations: [
+    participatingOrganizations: [
       { id: 'org-fv-p1', name: 'CarbonTrace AI', type: 'startup-incubator', verified: true, hiringRoles: ['Founding Fullstack Engineer (Next.js/Rust)', 'Lead Product Designer'] },
       { id: 'org-fv-p2', name: 'HyperGrid Systems', type: 'startup-incubator', verified: true, hiringRoles: ['Senior Embedded Systems Engineer', 'VP Business Development'] },
       { id: 'org-fv-p3', name: 'OptiRoute Logistics', type: 'startup-incubator', verified: true, hiringRoles: ['ML Optimization Lead', 'Technical Growth Manager'] },
@@ -717,7 +717,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     subcategory: 'Executive Leadership',
     format: 'online',
     costType: 'paid',
-    priceDisplay: '£120 / Included for CareerOS Executive Members',
+    priceDisplay: '$120 / Included for CareerOS Executive Members',
     startDate: '2026-10-22',
     endDate: '2026-10-22',
     startTime: '18:00',
@@ -725,7 +725,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     timezone: 'Europe/London',
     heroImageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80',
     coverImageAlt: 'Executive woman speaking authoritatively at a boardroom table with senior colleagues',
-    organiser: {
+    organizer: {
       id: 'org-institute-executive-direction',
       name: 'Institute for Executive Leadership & Governance',
       slug: 'institute-for-executive-leadership',
@@ -749,9 +749,9 @@ export const SEED_EVENTS: CareerEvent[] = [
     experienceLevels: ['senior', 'executive'],
     ageSuitability: '18-plus',
     keyOutcomes: [
-      'Craft a compelling 2-page Executive Narrative CV highlighting transformational outcomes',
+      'Craft a compelling 2-page Executive Narrative resume highlighting transformational outcomes',
       'Master the 5 questions asked in every Chair & Nominations Committee interview',
-      'Optimise your confidential profile for executive search headhunters',
+      'Optimize your confidential profile for executive search headhunters',
       'Develop an effective 90-day transition blueprint for C-suite onboarding',
     ],
     prerequisites: ['Minimum 8+ years leadership, departmental management, or executive experience'],
@@ -767,11 +767,11 @@ export const SEED_EVENTS: CareerEvent[] = [
         id: 'spk-ex1',
         name: 'Sir Alistair MacIntyre',
         role: 'Senior Governance Partner & Board Advisor',
-        organisation: 'Institute for Executive Leadership',
+        organization: 'Institute for Executive Leadership',
         bio: 'Has advised over 30 FTSE 100 and Fortune 500 boards on CEO succession and governance structuring.',
       },
     ],
-    participatingOrganisations: [
+    participatingOrganizations: [
       { id: 'org-ex-p1', name: 'Institute for Executive Leadership', type: 'professional-body', verified: true },
     ],
     accessibilityFeatures: [
@@ -787,7 +787,7 @@ export const SEED_EVENTS: CareerEvent[] = [
       status: 'live',
       submittedAt: '2026-08-01T09:00:00Z',
       reviewedAt: '2026-08-02T15:00:00Z',
-      reviewedBy: 'Executive Programmes Director',
+      reviewedBy: 'Executive Programs Director',
       editorialApproved: true,
       commercialApproved: true,
       safeguardingPassed: true,
@@ -822,7 +822,7 @@ export const SEED_EVENTS: CareerEvent[] = [
     timezone: 'America/Chicago',
     heroImageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
     coverImageAlt: 'Modern construction site with electrical and building engineering technicians reviewing blueprints',
-    organiser: {
+    organizer: {
       id: 'org-midwest-trades-coalition',
       name: 'Midwest Construction Trades Alliance',
       slug: 'midwest-construction-trades-alliance',
@@ -871,11 +871,11 @@ export const SEED_EVENTS: CareerEvent[] = [
         id: 'spk-tr1',
         name: 'Ray Kowalski',
         role: 'Apprenticeship Training Director',
-        organisation: 'IBEW Local 134 Technical Institute',
+        organization: 'IBEW Local 134 Technical Institute',
         bio: '30+ years in commercial electrical infrastructure, renewable microgrids, and apprentice education.',
       },
     ],
-    participatingOrganisations: [
+    participatingOrganizations: [
       { id: 'org-tr-p1', name: 'IBEW Local 134', type: 'training-provider', verified: true, hiringRoles: ['Commercial Electrical Apprentice', 'Renewable Solar Installer Trainee'] },
       { id: 'org-tr-p2', name: 'Chicago Regional Council of Carpenters', type: 'training-provider', verified: true, hiringRoles: ['Millwright Apprentice', 'Commercial Framing Trainee'] },
       { id: 'org-tr-p3', name: 'Skender Construction', type: 'employer', verified: true, hiringRoles: ['Assistant Site Superintendent', 'Field Safety Trainee'] },
@@ -917,12 +917,12 @@ export const SEED_EVENTS: CareerEvent[] = [
  */
 export function filterEvents(events: CareerEvent[], filters: Partial<EventFilterState>): CareerEvent[] {
   return events.filter((event) => {
-    // Search query match (title, description, organiser, sectors)
+    // Search query match (title, description, organizer, sectors)
     if (filters.searchQuery && filters.searchQuery.trim() !== '') {
       const q = filters.searchQuery.toLowerCase().trim();
       const titleMatch = event.title.toLowerCase().includes(q);
       const descMatch = event.shortSummary.toLowerCase().includes(q) || event.fullDescription.toLowerCase().includes(q);
-      const orgMatch = event.organiser.name.toLowerCase().includes(q);
+      const orgMatch = event.organizer.name.toLowerCase().includes(q);
       const sectorMatch = event.sectors.some((s) => s.toLowerCase().includes(q));
       const categoryMatch = event.categorySlug.toLowerCase().includes(q);
       const venueMatch = event.venue ? (event.venue.city.toLowerCase().includes(q) || event.venue.name.toLowerCase().includes(q)) : false;
@@ -991,9 +991,9 @@ export function filterEvents(events: CareerEvent[], filters: Partial<EventFilter
       }
     }
 
-    // Organiser Type Filter
-    if (filters.organiserTypes && filters.organiserTypes.length > 0) {
-      if (!filters.organiserTypes.includes(event.organiser.type)) {
+    // Organizer Type Filter
+    if (filters.organizerTypes && filters.organizerTypes.length > 0) {
+      if (!filters.organizerTypes.includes(event.organizer.type)) {
         return false;
       }
     }

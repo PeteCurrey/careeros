@@ -1,7 +1,7 @@
 /**
  * Integration Registry — Pure Data Module
  * No server-side imports. Safe to use in both client and server components.
- * Contains: static registry, categorisation logic, and type-safe group definitions.
+ * Contains: static registry, categorization logic, and type-safe group definitions.
  */
 
 import {
@@ -42,9 +42,9 @@ export const STATIC_INTEGRATION_REGISTRY: PublicIntegrationRecord[] = [
     cached: false,
     expectedDelayHours: 0,
     transformationApplied: true,
-    transformationDescription: 'CareerOS normalises O*NET SOC codes to its internal Career Twin skill taxonomy and applies regional relevance weighting.',
+    transformationDescription: 'CareerOS normalizes O*NET SOC codes to its internal Career Twin skill taxonomy and applies regional relevance weighting.',
     derivedData: false,
-    careeroosProcessing: 'normalised',
+    careeroosProcessing: 'normalized',
     attributionRequired: true,
     attributionText: 'O*NET® is a trademark of the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). CareerOS uses O*NET information under open data terms; this does not constitute an endorsement by USDOL/ETA.',
     licenseType: 'O*NET Open Database License',
@@ -67,11 +67,11 @@ export const STATIC_INTEGRATION_REGISTRY: PublicIntegrationRecord[] = [
     category: 'occupations',
     categories: ['occupations', 'training', 'labour_market'],
     publicDisplayName: 'CareerOneStop',
-    publicDescription: 'Provides authoritative US federal occupational information, training programme lookup, and American Job Center location services.',
+    publicDescription: 'Provides authoritative US federal occupational information, training program lookup, and American Job Center location services.',
     lifecycleStatus: 'production',
     productionEnabled: true,
     dataDirection: 'inbound',
-    informationCategories: ['Occupational profiles', 'Training programmes', 'American Job Center locations', 'State licensing requirements', 'Employment trends'],
+    informationCategories: ['Occupational profiles', 'Training programs', 'American Job Center locations', 'State licensing requirements', 'Employment trends'],
     personalDataInvolved: false,
     personalDataCategories: [],
     sensitiveDataInvolved: false,
@@ -87,7 +87,7 @@ export const STATIC_INTEGRATION_REGISTRY: PublicIntegrationRecord[] = [
     cached: true,
     expectedDelayHours: 24,
     transformationApplied: true,
-    transformationDescription: 'CareerOS normalises occupational data with its internal taxonomy and enriches with regional labour-market signals.',
+    transformationDescription: 'CareerOS normalizes occupational data with its internal taxonomy and enriches with regional labor-market signals.',
     derivedData: false,
     careeroosProcessing: 'enriched',
     attributionRequired: true,
@@ -296,8 +296,8 @@ const CATEGORY_GROUP_META: {
   analytics: { label: string; description: string; personalData: boolean };
 } = {
   occupational_data: {
-    label: 'Occupational & Labour Market Data',
-    description: 'External authoritative sources CareerOS draws on for occupational information, skills taxonomies, and labour market intelligence. This data does not involve personal information.',
+    label: 'Occupational & Labor Market Data',
+    description: 'External authoritative sources CareerOS draws on for occupational information, skills taxonomies, and labor market intelligence. This data does not involve personal information.',
     personalData: false,
   },
   infrastructure: {

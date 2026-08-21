@@ -3,7 +3,7 @@
  * 
  * Scalable entity models supporting:
  * - Public discovery & multi-dimensional filtering
- * - Organiser profiles & institutional verification
+ * - Organizer profiles & institutional verification
  * - Moderation lifecycle & child safeguarding
  * - Commercial tiers (Standard, Featured, Sponsored)
  * - CareerOS ecosystem integrations (Career Twin, AI Mentor, Preparation)
@@ -46,7 +46,7 @@ export type ExperienceLevel =
   | 'no-experience-required'
   | 'student';
 
-export type OrganiserType =
+export type OrganizerType =
   | 'employer'
   | 'recruiter'
   | 'university'
@@ -56,9 +56,9 @@ export type OrganiserType =
   | 'professional-body'
   | 'government-public'
   | 'startup-incubator'
-  | 'community-organisation';
+  | 'community-organization';
 
-export type OrganiserVerificationStatus = 
+export type OrganizerVerificationStatus = 
   | 'unverified'
   | 'verified-employer'
   | 'accredited-institution'
@@ -74,7 +74,7 @@ export type ModerationStatus =
   | 'scheduled'
   | 'live'
   | 'rejected'
-  | 'cancelled'
+  | 'canceled'
   | 'expired'
   | 'suspended';
 
@@ -107,16 +107,16 @@ export interface EventSpeaker {
   id: string;
   name: string;
   role: string;
-  organisation: string;
+  organization: string;
   bio?: string;
   avatarUrl?: string;
   linkedinUrl?: string;
 }
 
-export interface ParticipatingOrganisation {
+export interface ParticipatingOrganization {
   id: string;
   name: string;
-  type: OrganiserType;
+  type: OrganizerType;
   logoUrl?: string;
   hiringRoles?: string[];
   standLocation?: string;
@@ -161,12 +161,12 @@ export interface AccessibilityFeature {
   details?: string;
 }
 
-export interface EventOrganiser {
+export interface EventOrganizer {
   id: string;
   name: string;
   slug: string;
-  type: OrganiserType;
-  verificationStatus: OrganiserVerificationStatus;
+  type: OrganizerType;
+  verificationStatus: OrganizerVerificationStatus;
   verifiedAt?: string;
   logoUrl?: string;
   website: string;
@@ -214,7 +214,7 @@ export interface CareerEvent {
   subcategory?: string;
   format: EventFormat;
   costType: EventCostType;
-  priceDisplay?: string; // e.g. "Free", "£15 General / Free for Students", "$25"
+  priceDisplay?: string; // e.g. "Free", "$15 General / Free for Students", "$25"
   
   // Dates and Schedule
   startDate: string; // ISO format e.g. "2026-09-15"
@@ -229,9 +229,9 @@ export interface CareerEvent {
   heroImageUrl: string;
   coverImageAlt: string;
 
-  // Organiser
-  organiser: EventOrganiser;
-  coOrganisers?: EventOrganiser[];
+  // Organizer
+  organizer: EventOrganizer;
+  coOrganizers?: EventOrganizer[];
 
   // Location / Access
   venue?: EventVenue;
@@ -247,13 +247,13 @@ export interface CareerEvent {
   // What you'll get & eligibility
   keyOutcomes: string[];
   prerequisites: string[];
-  entryRequirements?: string[]; // e.g. ['Valid Student ID', 'Pre-registration required', 'Updated CV recommended']
+  entryRequirements?: string[]; // e.g. ['Valid Student ID', 'Pre-registration required', 'Updated resume recommended']
   dressCode?: string;
 
   // Details
   agenda: EventAgendaItem[];
   speakers: EventSpeaker[];
-  participatingOrganisations: ParticipatingOrganisation[];
+  participatingOrganizations: ParticipatingOrganization[];
   accessibilityFeatures: AccessibilityFeature[];
   capacity?: number;
   remainingSpots?: number;
@@ -265,7 +265,7 @@ export interface CareerEvent {
   sponsoredDisclaimer?: string;
   moderation: EventModerationRecord;
 
-  // Personalisation Mock data (used when user connects Career Twin)
+  // Personalization Mock data (used when user connects Career Twin)
   mockIntelligence?: CareerMatchIntelligence;
 
   // Metadata
@@ -286,7 +286,7 @@ export interface EventFilterState {
   careerStages: CareerStage[];
   experienceLevels: ExperienceLevel[];
   costTypes: EventCostType[];
-  organiserTypes: OrganiserType[];
+  organizerTypes: OrganizerType[];
   onlyFeatured: boolean;
   under18FriendlyOnly: boolean;
   sortBy: 'date-asc' | 'date-desc' | 'recommended' | 'recently-added';

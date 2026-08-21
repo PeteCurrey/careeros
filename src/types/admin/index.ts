@@ -46,7 +46,7 @@ export interface CommandCentreStats {
   publishedEvents: number;
   pendingEventReviews: number;
   discoveredCandidates: number;
-  totalOrganisations: number;
+  totalOrganizations: number;
   totalSchools: number;
   totalEmployers: number;
   aiRequestsToday: number;

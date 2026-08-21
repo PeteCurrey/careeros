@@ -61,7 +61,7 @@ const OBJECTIVES: InstitutionalObjective[] = [
     potentialMeasures: [
       'Progression from career discovery to detailed pathway comparison and curriculum research',
       'Frequency of students bookmarking prerequisites, entry assessments, and training standards',
-      'Completion of pre-meeting advising reflections before human counselling appointments',
+      'Completion of pre-meeting advising reflections before human counseling appointments',
     ],
     whatItCanTellYou: [
       'Whether students are conducting rigorous, multi-session occupational research',
@@ -100,26 +100,26 @@ const OBJECTIVES: InstitutionalObjective[] = [
   },
   {
     id: 'human-guidance',
-    title: 'Human Guidance & Counsellor Appointment Impact',
+    title: 'Human Guidance & Counselor Appointment Impact',
     categoryTag: 'Advising Workflow',
     icon: Users,
-    overview: 'Measuring whether technology successfully equips human counsellors to conduct higher-impact 1:1 guidance appointments with pre-synthesised student context.',
+    overview: 'Measuring whether technology successfully equips human counselors to conduct higher-impact 1:1 guidance appointments with pre-synthesized student context.',
     potentialMeasures: [
       'Percentage of students arriving to guidance sessions with completed pre-conversation briefs',
       'Number of student-initiated guidance requests and flagged advising dilemmas',
-      'Post-conversation action milestone completion rates logged by student and counsellor',
+      'Post-conversation action milestone completion rates logged by student and counselor',
     ],
     whatItCanTellYou: [
-      'If counsellors spend less appointment time discovering basic facts and more time on complex decisions',
+      'If counselors spend less appointment time discovering basic facts and more time on complex decisions',
       'Which student cohorts request guidance most frequently around critical decision cycles',
       'Whether agreed action items from human advising sessions are being followed through',
     ],
     whatItCannotTellYou: [
       'A replacement for human pastoral intuition, empathy, and professional judgment',
-      'A score of counsellor &ldquo;performance&rdquo; or teacher productivity',
+      'A score of counselor &ldquo;performance&rdquo; or teacher productivity',
       'That automated AI guidance alone can resolve complex adolescent dilemmas',
     ],
-    recommendedSchoolAction: 'Allocate dedicated counselling capacity to students flagging complex multi-pathway decisions (e.g. degree vs higher apprenticeship).',
+    recommendedSchoolAction: 'Allocate dedicated counseling capacity to students flagging complex multi-pathway decisions (e.g. degree vs higher apprenticeship).',
   },
   {
     id: 'employer-exposure',
@@ -128,7 +128,7 @@ const OBJECTIVES: InstitutionalObjective[] = [
     icon: Calendar,
     overview: 'Auditing whether school-sponsored careers fairs, employer visits, and industry panels provide balanced exposure across regional growth sectors, public services, and skilled trades.',
     potentialMeasures: [
-      'Distribution of sectors represented across school-organised careers events and speakers',
+      'Distribution of sectors represented across school-organized careers events and speakers',
       'Student attendance and engagement across non-traditional vs corporate professional events',
       'Post-event student reflection notes logged into Career OS',
     ],
@@ -139,7 +139,7 @@ const OBJECTIVES: InstitutionalObjective[] = [
     ],
     whatItCannotTellYou: [
       'A guarantee of job offers or direct employment from visiting employers',
-      'The long-term cultural fit of a visiting employer organisation',
+      'The long-term cultural fit of a visiting employer organization',
       'Replacement of statutory school visitor safeguarding checks',
     ],
     recommendedSchoolAction: 'Use sector gap analysis to invite employers from under-represented industries (e.g. green energy, advanced manufacturing, allied health).',
@@ -158,7 +158,7 @@ const OBJECTIVES: InstitutionalObjective[] = [
     whatItCanTellYou: [
       'Whether students leave school with concrete next steps and portable evidence',
       'Broad trends in post-secondary pathway destinations across graduating years',
-      'How effectively the careers programme supported students through final application cycles',
+      'How effectively the careers program supported students through final application cycles',
     ],
     whatItCannotTellYou: [
       'Sole causal responsibility for a student&apos;s post-school employment or life outcomes',
@@ -248,7 +248,7 @@ export function OutcomesObjectiveBuilder() {
 
           {/* Potential Measures */}
           <div className="space-y-2.5">
-            <span className="section-label block">Potential Programme-Level Measures</span>
+            <span className="section-label block">Potential Program-Level Measures</span>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
               {activeObjective.potentialMeasures.map((measure, idx) => (
                 <div

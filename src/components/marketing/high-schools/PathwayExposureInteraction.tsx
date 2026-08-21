@@ -59,7 +59,7 @@ const COHORT_DATA: Record<string, CohortData> = {
     ],
     keyObservation: 'Application preparation divergence: Degree apprenticeship exploration intensifies in engineering and business, but application timelines (autumn) occur earlier than standard university cycles.',
     leadershipQuestions: [
-      'Do our counselling workflows support the distinct, high-intensity autumn application windows required for competitive degree apprenticeships?',
+      'Do our counseling workflows support the distinct, high-intensity autumn application windows required for competitive degree apprenticeships?',
       'Are students building tangible portfolio evidence (projects, GitHub, volunteering) to support dual university and apprenticeship applications?',
       'How are we engaging families whose students are considering earn-while-learning routes over full-time academic degrees?',
     ],
@@ -160,7 +160,7 @@ export function PathwayExposureInteraction() {
         </div>
       </div>
 
-      {/* Visualisation Area */}
+      {/* Visualization Area */}
       <div className="px-5 sm:px-7 pb-7 space-y-6">
         
         {/* Cohort Summary Card */}

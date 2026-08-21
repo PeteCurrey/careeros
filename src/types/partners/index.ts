@@ -83,9 +83,9 @@ export interface PartnershipInquiry {
   id?: string;
   name: string;
   workEmail: string;
-  organisation: string;
+  organization: string;
   website?: string;
-  organisationType:
+  organizationType:
     | 'employer'
     | 'school_college'
     | 'workforce_org'

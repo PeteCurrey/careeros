@@ -145,7 +145,7 @@ export default function ForEmployersPage() {
 
               <ScrollReveal delayMs={140}>
                 <p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
-                  Career OS is designed to help organisations understand roles through capability and evidence, discover people from a broader range of career backgrounds and build stronger connections between hiring and long-term development.
+                  Career OS is designed to help organizations understand roles through capability and evidence, discover people from a broader range of career backgrounds and build stronger connections between hiring and long-term development.
                 </p>
               </ScrollReveal>
 
@@ -250,7 +250,7 @@ export default function ForEmployersPage() {
                 Experience should not become invisible because somebody changes industry.
               </h2>
               <p className="text-body-editorial text-[var(--color-text-secondary)]">
-                When a recruiter screens only for previous identical titles, exceptional talent is routinely discarded. Career OS evaluates the transferable mechanics of work to help employers hire high-calibre career changers with confidence.
+                When a recruiter screens only for previous identical titles, exceptional talent is routinely discarded. Career OS evaluates the transferable mechanics of work to help employers hire high-caliber career changers with confidence.
               </p>
             </div>
           </ScrollReveal>
@@ -468,7 +468,7 @@ export default function ForEmployersPage() {
         <div className="container-editorial space-y-8">
           <ScrollReveal>
             <div className="max-w-3xl space-y-3">
-              <span className="section-label">Defence Transition</span>
+              <span className="section-label">Defense Transition</span>
               <h2 className="text-display-section text-[var(--color-text-primary)]">
                 Translate experience before you discount it.
               </h2>
@@ -501,7 +501,7 @@ export default function ForEmployersPage() {
             <div className="max-w-3xl space-y-3">
               <span className="section-label">Returner Talent</span>
               <h2 className="text-display-section text-[var(--color-text-primary)]">
-                A career gap is context, not an automatic capability judgement.
+                A career gap is context, not an automatic capability judgment.
               </h2>
               <p className="text-body-editorial text-[var(--color-text-secondary)]">
                 Whether stepping away for caregiving, health recovery, extended study, or relocation, Career OS helps employers distinguish time since last role from evidence of current capability — preventing unconscious bias.
@@ -685,7 +685,7 @@ export default function ForEmployersPage() {
             <div className="max-w-3xl space-y-3">
               <span className="section-label">Licensing Rigor</span>
               <h2 className="text-display-section text-[var(--color-text-primary)]">
-                Skills can transfer. Licences usually cannot.
+                Skills can transfer. Licenses usually cannot.
               </h2>
               <p className="text-body-editorial text-[var(--color-text-secondary)]">
                 Career OS strictly distinguishes transferable functional capability from mandatory regulatory licensure in healthcare, law, aviation, and statutory electrical trades.
@@ -785,7 +785,7 @@ export default function ForEmployersPage() {
 
           <ScrollReveal delayMs={100}>
             <blockquote className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)] border-l-2 border-[var(--accent-blue)] text-sm italic text-white max-w-3xl hover-lift card-interactive">
-              &ldquo;Career OS makes organisations better places to develop talent without turning the employee&apos;s career into company property.&rdquo;
+              &ldquo;Career OS makes organizations better places to develop talent without turning the employee&apos;s career into company property.&rdquo;
             </blockquote>
           </ScrollReveal>
         </div>
@@ -894,12 +894,12 @@ export default function ForEmployersPage() {
         </div>
       </section>
 
-      {/* ── SECTION 20: FOUNDING EMPLOYER PROGRAMME ─────────────────── */}
+      {/* ── SECTION 20: FOUNDING EMPLOYER PROGRAM ─────────────────── */}
       <section id="founding-employer" className="section-editorial bg-[var(--color-surface-raised)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           <ScrollReveal>
             <div className="max-w-3xl space-y-4">
-              <span className="section-label">Founding Employer Programme</span>
+              <span className="section-label">Founding Employer Program</span>
               <h2 className="text-display-section text-[var(--color-text-primary)]">
                 Help build the next model of career discovery.
               </h2>

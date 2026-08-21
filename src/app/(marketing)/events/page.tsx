@@ -25,7 +25,7 @@ const DEFAULT_FILTERS: EventFilterState = {
   careerStages: [],
   experienceLevels: [],
   costTypes: [],
-  organiserTypes: [],
+  organizerTypes: [],
   onlyFeatured: false,
   under18FriendlyOnly: false,
   sortBy: 'date-asc',
@@ -46,7 +46,7 @@ export default function EventsDiscoveryPage() {
       filters.sectors.length > 0 ||
       filters.careerStages.length > 0 ||
       filters.costTypes.length > 0 ||
-      filters.organiserTypes.length > 0 ||
+      filters.organizerTypes.length > 0 ||
       filters.onlyFeatured ||
       filters.under18FriendlyOnly
     );
@@ -190,7 +190,7 @@ export default function EventsDiscoveryPage() {
                 label="Featured Events"
                 title="Highlighted opportunities from verified partners"
                 events={featuredEvents}
-                note="Featured and Sponsored placements are clearly labelled. CareerOS retains editorial authority over all listings regardless of commercial tier."
+                note="Featured and Sponsored placements are clearly labeled. CareerOS retains editorial authority over all listings regardless of commercial tier."
               />
             )}
 
@@ -325,11 +325,11 @@ export default function EventsDiscoveryPage() {
               </div>
             </section>
 
-            {/* Organiser CTA Banner */}
+            {/* Organizer CTA Banner */}
             <section className="relative overflow-hidden rounded-[var(--radius-card)] border border-[rgba(47,143,255,0.2)] bg-gradient-to-br from-[var(--color-surface-raised)] via-[var(--color-surface-base)] to-[rgba(47,143,255,0.04)]">
               <div className="p-8 sm:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                 <div className="space-y-2 max-w-2xl">
-                  <span className="section-label text-[var(--accent-blue)]">For Event Organisers</span>
+                  <span className="section-label text-[var(--accent-blue)]">For Event Organizers</span>
                   <h2 className="text-headline-editorial text-[var(--color-text-primary)] text-[1.6rem]">
                     Put your event in front of people building their future.
                   </h2>
@@ -518,7 +518,7 @@ function EmptyStatePanel({ filters, onFilterChange, onReset }: EmptyStatePanelPr
 
       <div className="pt-4 border-t border-[var(--color-border-default)]">
         <p className="text-xs text-[var(--color-text-tertiary)]">
-          Are you an organiser with a relevant event?{' '}
+          Are you an organizer with a relevant event?{' '}
           <Link href={ROUTES.EVENTS_PROMOTE} className="text-[var(--accent-blue)] hover:underline">
             Apply to list it on CareerOS.
           </Link>

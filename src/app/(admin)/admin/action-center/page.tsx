@@ -18,7 +18,7 @@ export default async function AdminActionCentrePage() {
     <div className="space-y-8">
       <AdminSectionHeader
         category="Operations"
-        title="Action Centre"
+        title="Action Center"
         description="Unified operational triage queue aggregating moderation needs, system health alerts and real platform signals."
       />
 

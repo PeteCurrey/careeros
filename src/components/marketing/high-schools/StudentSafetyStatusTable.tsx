@@ -56,7 +56,7 @@ const SAFEGUARD_CONTROLS: SafeguardControlItem[] = [
     id: 'ctrl-4',
     category: 'Governance & Auditing',
     controlName: 'Purpose-Based Institutional Information Partitioning',
-    description: 'Staff, counsellors, guardians, and employers receive role-scoped summaries rather than universal raw conversation surveillance.',
+    description: 'Staff, counselors, guardians, and employers receive role-scoped summaries rather than universal raw conversation surveillance.',
     status: 'IMPLEMENTED',
     technicalGrounding: 'Multi-tenant database schema segments private reflections, exploratory briefs, and administrative directory records.',
   },

@@ -14,7 +14,7 @@ export function EventStructuredData({ event }: EventStructuredDataProps) {
     startDate: `${event.startDate}T${event.startTime}:00`,
     endDate: `${event.endDate}T${event.endTime}:00`,
     eventStatus:
-      event.moderation.status === 'cancelled'
+      event.moderation.status === 'canceled'
         ? 'https://schema.org/EventCancelled'
         : 'https://schema.org/EventScheduled',
     eventAttendanceMode:
@@ -25,8 +25,8 @@ export function EventStructuredData({ event }: EventStructuredDataProps) {
         : 'https://schema.org/OfflineEventAttendanceMode',
     organizer: {
       '@type': 'Organization',
-      name: event.organiser.name,
-      url: event.organiser.website,
+      name: event.organizer.name,
+      url: event.organizer.website,
     },
     image: [event.heroImageUrl],
     offers: {
@@ -66,7 +66,7 @@ export function EventStructuredData({ event }: EventStructuredDataProps) {
       jobTitle: spk.role,
       worksFor: {
         '@type': 'Organization',
-        name: spk.organisation,
+        name: spk.organization,
       },
     }));
   }

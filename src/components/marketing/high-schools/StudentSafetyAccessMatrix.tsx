@@ -58,7 +58,7 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
       },
       {
         name: 'Stated Advising Questions & Goals',
-        description: 'Explicitly flagged topics and questions prepared for human counsellor or mentor follow-up',
+        description: 'Explicitly flagged topics and questions prepared for human counselor or mentor follow-up',
         visibility: 'FULL_ACCESS',
         visibilityNote: 'Fully editable, configurable, and controllable by student',
       },
@@ -89,8 +89,8 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
     ],
   },
   {
-    id: 'counsellor',
-    roleTitle: 'School Career Counsellor',
+    id: 'counselor',
+    roleTitle: 'School Career Counselor',
     roleSubtitle: 'Academic & Pathway Advisor',
     badge: 'Purpose-Based Advising Context',
     badgeVariant: 'blue',
@@ -112,9 +112,9 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
       },
       {
         name: 'Stated Advising Questions & Goals',
-        description: 'Explicitly flagged topics and questions prepared for human counsellor or mentor follow-up',
+        description: 'Explicitly flagged topics and questions prepared for human counselor or mentor follow-up',
         visibility: 'FULL_ACCESS',
-        visibilityNote: 'Fully visible to enable counsellor to prepare tailored 1:1 sessions',
+        visibilityNote: 'Fully visible to enable counselor to prepare tailored 1:1 sessions',
       },
       {
         name: 'Career Passport Evidence Artifacts',
@@ -166,7 +166,7 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
       },
       {
         name: 'Stated Advising Questions & Goals',
-        description: 'Explicitly flagged topics and questions prepared for human counsellor or mentor follow-up',
+        description: 'Explicitly flagged topics and questions prepared for human counselor or mentor follow-up',
         visibility: 'PERMISSIONED_SUMMARY',
         visibilityNote: 'Accessible for context during formal student welfare review',
       },
@@ -220,7 +220,7 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
       },
       {
         name: 'Stated Advising Questions & Goals',
-        description: 'Explicitly flagged topics and questions prepared for human counsellor or mentor follow-up',
+        description: 'Explicitly flagged topics and questions prepared for human counselor or mentor follow-up',
         visibility: 'FULL_ACCESS',
         visibilityNote: 'Helps structure questions for student to take into human 1:1 meetings',
       },
@@ -274,7 +274,7 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
       },
       {
         name: 'Stated Advising Questions & Goals',
-        description: 'Explicitly flagged topics and questions prepared for human counsellor or mentor follow-up',
+        description: 'Explicitly flagged topics and questions prepared for human counselor or mentor follow-up',
         visibility: 'PERMISSIONED_SUMMARY',
         visibilityNote: 'Shared where student and family collaborate on career planning',
       },
@@ -312,7 +312,7 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
     badgeVariant: 'red',
     icon: Building2,
     purposeStatement: 'Strictly prohibited from browsing minor student directories, cold-soliciting students, or accessing private career data. Sits entirely outside the private core.',
-    legalContext: 'Zero recruiter search capability over minor profiles. Opportunity interaction occurs strictly through verified, student-initiated applications or approved school programmes.',
+    legalContext: 'Zero recruiter search capability over minor profiles. Opportunity interaction occurs strictly through verified, student-initiated applications or approved school programs.',
     fields: [
       {
         name: 'Private Mentor Exploratory Dialogue',
@@ -324,11 +324,11 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
         name: 'Career Pathways Explored',
         description: 'Comparative industry reviews, apprenticeship vs degree models, exploratory sector bookmarks',
         visibility: 'STRICTLY_PRIVATE',
-        visibilityNote: '100% Inaccessible — Zero behavioural advertising or tracking',
+        visibilityNote: '100% Inaccessible — Zero behavioral advertising or tracking',
       },
       {
         name: 'Stated Advising Questions & Goals',
-        description: 'Explicitly flagged topics and questions prepared for human counsellor or mentor follow-up',
+        description: 'Explicitly flagged topics and questions prepared for human counselor or mentor follow-up',
         visibility: 'STRICTLY_PRIVATE',
         visibilityNote: '100% Inaccessible to commercial employers',
       },
@@ -361,7 +361,7 @@ const SAFETY_ACCESS_ROLES: SafetyRoleAccessDefinition[] = [
 ];
 
 export function StudentSafetyAccessMatrix() {
-  const [selectedRoleId, setSelectedRoleId] = useState<string>('counsellor');
+  const [selectedRoleId, setSelectedRoleId] = useState<string>('counselor');
   const activeRole = SAFETY_ACCESS_ROLES.find((r) => r.id === selectedRoleId) ?? SAFETY_ACCESS_ROLES[1]!;
 
   const renderBadge = (vis: string) => {

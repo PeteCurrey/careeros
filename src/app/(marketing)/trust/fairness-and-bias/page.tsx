@@ -51,7 +51,7 @@ const SYSTEMIC_BIAS_FACTORS = [
   },
   {
     factor: 'Proxy Variable Discrimination',
-    desc: 'Facially neutral inputs — postcode, school type, attendance at a selective institution — can function as proxies for protected characteristics.',
+    desc: 'Facially neutral inputs — ZIP code, school type, attendance at a selective institution — can function as proxies for protected characteristics.',
     mitigation: 'Systematic proxy variable testing across all matching algorithms. Identified proxies are re-weighted or removed.',
     icon: ShieldCheck,
   },
@@ -68,9 +68,9 @@ const SYSTEMIC_BIAS_FACTORS = [
     icon: Briefcase,
   },
   {
-    factor: 'Language & Expression Normalisation',
+    factor: 'Language & Expression Normalization',
     desc: 'AI language models may assign lower confidence to non-standard English expressions, dialectal variation, or internationally structured descriptions of experience.',
-    mitigation: 'Semantic capability extraction normalises expression variation to occupational taxonomy nodes before scoring. Expression style does not reduce match confidence.',
+    mitigation: 'Semantic capability extraction normalizes expression variation to occupational taxonomy nodes before scoring. Expression style does not reduce match confidence.',
     icon: Wrench,
   },
 ];
@@ -88,7 +88,7 @@ const CAPABILITY_FIRST_EXAMPLES = [
   },
   {
     scenario: 'Self-Taught Developer Without Degree',
-    traditional: 'No UCAS tariff, no CS degree = downgraded in traditional screeners.',
+    traditional: 'No standout GPA, no CS degree = downgraded in traditional screeners.',
     capabilityFirst: 'Portfolio projects, open-source contributions, and demonstrated technical skills evaluated directly against role capability requirements.',
   },
   {
@@ -121,7 +121,7 @@ const EMPLOYMENT_AI_REGULATIONS = [
     jurisdiction: 'European Union — EU AI Act',
     framework: 'EU AI Act (High-Risk AI System Classification)',
     requirement: 'Employment, recruitment and worker management AI classified as high-risk; requires conformity assessment, risk management, and transparency obligations.',
-    careerOSStance: 'Employer Agent evaluated against EU AI Act high-risk standards. Conformity assessment programme in progress for EU expansion.',
+    careerOSStance: 'Employer Agent evaluated against EU AI Act high-risk standards. Conformity assessment program in progress for EU expansion.',
   },
 ];
 
@@ -158,7 +158,7 @@ export default function FairnessAndBiasPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {[
                     { label: '"Bias-Free"', reason: 'No AI system operating at scale on real-world data can substantiate this claim.' },
-                    { label: '"100% Fair"', reason: 'Fairness is multi-dimensional and context-dependent. Optimising one fairness metric can worsen another.' },
+                    { label: '"100% Fair"', reason: 'Fairness is multi-dimensional and context-dependent. Optimizing one fairness metric can worsen another.' },
                     { label: '"Completely Safe"', reason: 'AI systems have foreseeable failure modes. Our commitment is to test for and mitigate them — not to deny they exist.' },
                   ].map((c) => (
                     <div key={c.label} className="p-3 rounded bg-rose-950/20 border border-rose-500/20 space-y-1">

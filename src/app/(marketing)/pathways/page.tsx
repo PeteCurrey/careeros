@@ -57,7 +57,7 @@ const PATHWAYS: PathwayItem[] = [
     description: 'Undergraduate and postgraduate degrees, research programs, and professional university credentials.',
     href: ROUTES.PATHWAYS_UNIVERSITY,
     imageSrc: '/media/students/audience_students.jpg',
-    signals: ['Foundational Theory', 'Research Portfolio', 'Specialisation'],
+    signals: ['Foundational Theory', 'Research Portfolio', 'Specialization'],
   },
   {
     name: 'Community & Technical College',

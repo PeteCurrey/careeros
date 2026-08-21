@@ -49,17 +49,17 @@ const YOUTH_SAFEGUARDING_RULES = [
   },
   {
     rule: 'AI Career Mentor applies non-therapeutic boundary guardrails with minors.',
-    detail: 'The AI mentor cannot act as a therapist, crisis counsellor, or mental health advisor. Distress signals trigger human escalation to school Designated Safeguarding Leads (DSL).',
+    detail: 'The AI mentor cannot act as a therapist, crisis counselor, or mental health advisor. Distress signals trigger human escalation to school Designated Safeguarding Leads (DSL).',
     severity: 'ABSOLUTE',
   },
   {
-    rule: 'School counsellors retain pastoral authority; AI briefs are advisory only.',
+    rule: 'School counselors retain pastoral authority; AI briefs are advisory only.',
     detail: 'Pre-session synthesis briefs provided to school staff are advisory context — not diagnostic assessments, psychological profiles, or recommendatory endorsements.',
     severity: 'POLICY',
   },
   {
     rule: 'Career events attended by under-16s require school-verified operator.',
-    detail: 'Any Career OS event in the Opportunities catalogue attended by school students requires verification of the operating organisation and duty-of-care arrangements.',
+    detail: 'Any Career OS event in the Opportunities catalog attended by school students requires verification of the operating organization and duty-of-care arrangements.',
     severity: 'VERIFIED',
   },
   {
@@ -145,7 +145,7 @@ export default function HumanOversightPage() {
             {[
               { title: 'Genuine Authority', desc: 'The human decision-maker has final binding authority — not rubber-stamp authority over AI outputs they cannot realistically override.', icon: Users },
               { title: 'Adequate Information', desc: 'The human sees the AI decision factors, data inputs, and material limitations — not just the recommendation headline.', icon: CheckCircle2 },
-              { title: 'Sufficient Review Time', desc: 'No artificial time pressure that makes human review notional. School counsellors and hiring managers are not required to approve AI outputs within seconds.', icon: ShieldCheck },
+              { title: 'Sufficient Review Time', desc: 'No artificial time pressure that makes human review notional. School counselors and hiring managers are not required to approve AI outputs within seconds.', icon: ShieldCheck },
               { title: 'Practical Override Ability', desc: 'The human can reject, modify, or escalate any AI output without workflow friction, platform penalty, or loss of access to the AI tool.', icon: Lock },
             ].map((item) => {
               const Icon = item.icon;
@@ -188,7 +188,7 @@ export default function HumanOversightPage() {
               Where AI Stops
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              AI capabilities are categorised by the consequential impact of their scope. As stakes increase, human authority becomes mandatory and AI authority is architecturally constrained.
+              AI capabilities are categorized by the consequential impact of their scope. As stakes increase, human authority becomes mandatory and AI authority is architecturally constrained.
             </p>
           </div>
           <DecisionBoundariesTable />

@@ -74,7 +74,7 @@ export function TwinPrivacySimulator() {
 
   const viewModesInfo = [
     { id: 'MY_VIEW', label: 'My View', desc: 'Full personal context including private notes & salary floors.' },
-    { id: 'MENTOR_VIEW', label: 'Mentor View', desc: 'Authorised context for AI Career Mentor guidance & trajectory modeling.' },
+    { id: 'MENTOR_VIEW', label: 'Mentor View', desc: 'Authorized context for AI Career Mentor guidance & trajectory modeling.' },
     { id: 'EMPLOYER_VIEW', label: 'Employer View', desc: 'Only explicitly shared professional qualifications & evidence.' },
     { id: 'PUBLIC_VIEW', label: 'Public View', desc: 'Minimal public profile or verified credential verification link.' },
   ];

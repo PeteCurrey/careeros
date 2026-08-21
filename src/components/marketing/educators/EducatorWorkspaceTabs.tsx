@@ -55,7 +55,7 @@ export function EducatorWorkspaceTabs() {
             Educator Workspace
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
-            Purpose-built workflow organisation for careers leaders, guidance counsellors, and pastoral teams.
+            Purpose-built workflow organization for careers leaders, guidance counselors, and pastoral teams.
           </p>
         </div>
         <span className="text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/60 backdrop-blur-sm text-[var(--color-text-tertiary)] self-start sm:self-auto shrink-0">
@@ -285,7 +285,7 @@ export function EducatorWorkspaceTabs() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[var(--color-border-subtle)] pb-3">
               <div>
                 <h4 className="text-base font-serif text-white font-medium">
-                  Programme Evidence &amp; Career Passport Verification
+                  Program Evidence &amp; Career Passport Verification
                 </h4>
                 <p className="text-xs text-[var(--color-text-secondary)]">
                   Track institutional work experience completion, school project verification, and transferable skills portfolios.
@@ -303,7 +303,7 @@ export function EducatorWorkspaceTabs() {
                 </span>
                 <div className="text-2xl font-serif text-white">84 / 92</div>
                 <p className="text-xs text-[var(--color-text-secondary)]">
-                  Year 11 students have logged completed workplace journals ready for counsellor verification sign-off.
+                  Year 11 students have logged completed workplace journals ready for counselor verification sign-off.
                 </p>
               </div>
 

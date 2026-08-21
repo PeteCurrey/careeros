@@ -53,8 +53,8 @@ const FAQS: FAQ[] = [
     a: "Yes. A well-documented school engineering project can demonstrate design thinking, technical reasoning, teamwork and problem-solving. A school business project can demonstrate commercial awareness, planning and presentation. Evidence isn't only about paid employment — it's about what you can demonstrate.",
   },
   {
-    q: "Can Career OS help me write a CV or resume?",
-    a: "Career Mentor can support CV thinking and preparation. Career OS is being designed to help you organise and present your experience clearly. Current CV automation capabilities are in development — the platform currently focuses on helping you understand and record your experience first.",
+    q: "Can Career OS help me write a resume or resume?",
+    a: "Career Mentor can support resume thinking and preparation. Career OS is being designed to help you organize and present your experience clearly. Current resume automation capabilities are in development — the platform currently focuses on helping you understand and record your experience first.",
   },
   {
     q: "Can it help me prepare for interviews?",

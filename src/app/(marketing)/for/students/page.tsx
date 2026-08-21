@@ -173,7 +173,7 @@ export default function ForStudentsPage() {
                 <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
                   <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
                     <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">AI Career Mentor</span>
-                    <p className="font-semibold text-white">Personalised Guidance</p>
+                    <p className="font-semibold text-white">Personalized Guidance</p>
                   </div>
                   <div className="p-3 bg-[var(--color-surface-base)]/70 backdrop-blur-sm rounded border border-[var(--color-border-default)] space-y-1">
                     <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Career Passport</span>
@@ -251,7 +251,7 @@ export default function ForStudentsPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[var(--accent-blue)]">&bull;</span>
-                        &ldquo;What could I do with maths and design?&rdquo;
+                        &ldquo;What could I do with math and design?&rdquo;
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[var(--accent-blue)]">&bull;</span>
@@ -327,7 +327,7 @@ export default function ForStudentsPage() {
                         <div className="space-y-1 text-xs text-[var(--color-text-secondary)] pt-1 border-t border-[var(--color-border-subtle)]">
                           <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-semibold block">What we explore next:</span>
                           <p>1. Compare Degree Apprenticeship vs. University BEng routes.</p>
-                          <p>2. Review your current Maths and Physics / DT coursework projects.</p>
+                          <p>2. Review your current Math and Physics / DT coursework projects.</p>
                         </div>
                       </div>
                     </div>
@@ -634,8 +634,8 @@ export default function ForStudentsPage() {
                   <div className="space-y-2.5">
                     <div className="p-3 rounded bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] flex items-center justify-between text-xs">
                       <div>
-                        <span className="font-semibold text-white block">GCSE / High School Diploma Courses</span>
-                        <span className="text-[11px] text-[var(--color-text-secondary)]">Maths, English, Biology, Physics, Design Tech</span>
+                        <span className="font-semibold text-white block">High School Diploma Courses</span>
+                        <span className="text-[11px] text-[var(--color-text-secondary)]">Math, English, Biology, Physics, Design Tech</span>
                       </div>
                       <span className="text-[10px] font-mono text-emerald-400 font-semibold">Self-Recorded</span>
                     </div>
@@ -651,7 +651,7 @@ export default function ForStudentsPage() {
                     <div className="p-3 rounded bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] flex items-center justify-between text-xs">
                       <div>
                         <span className="font-semibold text-white block">Community Youth Group Volunteer Coordinator</span>
-                        <span className="text-[11px] text-[var(--color-text-secondary)]">Organised weekly sessions for 30 junior members</span>
+                        <span className="text-[11px] text-[var(--color-text-secondary)]">Organized weekly sessions for 30 junior members</span>
                       </div>
                       <span className="text-[10px] font-mono text-purple-400 font-semibold">Experience Record</span>
                     </div>
@@ -693,7 +693,7 @@ export default function ForStudentsPage() {
 
             <ScrollReveal delayMs={80}>
               <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2 hover-lift card-interactive h-full">
-                <span className="font-mono text-[10px] text-emerald-400 uppercase font-bold">02. CV &amp; Bio Structuring</span>
+                <span className="font-mono text-[10px] text-emerald-400 uppercase font-bold">02. Resume &amp; Bio Structuring</span>
                 <h4 className="font-semibold text-white text-sm">Honest, Evidence-Backed CVs</h4>
                 <p className="text-[var(--color-text-secondary)]">Highlight demonstrated accomplishments rather than generic buzzwords and filler text.</p>
               </div>
@@ -867,7 +867,7 @@ export default function ForStudentsPage() {
               <div className="p-5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)] space-y-2 hover-lift card-interactive h-full">
                 <span className="font-mono text-[10px] text-purple-400 uppercase font-bold">Zero Advertising Targeting</span>
                 <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                  We never monetize your student exploration by selling behavioural data to predatory marketing or data brokers.
+                  We never monetize your student exploration by selling behavioral data to predatory marketing or data brokers.
                 </p>
               </div>
             </ScrollReveal>

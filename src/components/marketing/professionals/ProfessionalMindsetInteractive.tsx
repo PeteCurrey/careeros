@@ -77,7 +77,7 @@ const OPTIONS: ProfessionalMindsetOption[] = [
       { label: 'Career Mentor', href: ROUTES.PRODUCT_AI_CAREER_MENTOR },
       { label: 'How Career OS Works', href: ROUTES.PRODUCT_HOW_IT_WORKS },
     ],
-    nextQuestion: 'Are you stuck due to organisational ceiling, lack of visible evidence, or an overly narrow specialisation?',
+    nextQuestion: 'Are you stuck due to organizational ceiling, lack of visible evidence, or an overly narrow specialization?',
   },
   {
     id: 'longer-term',

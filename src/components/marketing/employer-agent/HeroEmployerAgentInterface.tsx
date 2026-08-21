@@ -44,7 +44,7 @@ export function HeroEmployerAgentInterface() {
     },
     {
       title: 'Military Technical Engineer',
-      origin: 'Defence Logistics & Air Corps',
+      origin: 'Defense Logistics & Air Corps',
       overlap: 'Mission-critical maintenance, safety culture & team oversight',
       status: 'Potentially relevant profile',
       bridge: 'Commercial plant regulatory context',
@@ -96,7 +96,7 @@ export function HeroEmployerAgentInterface() {
                 NVQ Level 3 / City &amp; Guilds or Equivalent
               </span>
               <span className="text-[11px] text-emerald-400 flex items-center gap-1 font-mono">
-                <CheckCircle2 className="w-3 h-3" /> Mandatory Licence
+                <CheckCircle2 className="w-3 h-3" /> Mandatory License
               </span>
             </div>
             <div className="p-3 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1">

@@ -42,8 +42,8 @@ export async function getCommandCentreMetrics(): Promise<CommandCentreStats> {
       .select('*', { count: 'exact', head: true })
       .eq('status', 'pending');
 
-    // 3. Organisations metrics
-    const { count: totalOrganisations } = await supabase
+    // 3. Organizations metrics
+    const { count: totalOrganizations } = await supabase
       .from('organisations')
       .select('*', { count: 'exact', head: true });
 
@@ -96,7 +96,7 @@ export async function getCommandCentreMetrics(): Promise<CommandCentreStats> {
       publishedEvents: publishedEvents || 0,
       pendingEventReviews: pendingEventReviews || 0,
       discoveredCandidates: discoveredCandidates || 0,
-      totalOrganisations: totalOrganisations || 0,
+      totalOrganizations: totalOrganizations || 0,
       totalSchools: totalSchools || 0,
       totalEmployers: totalEmployers || 0,
       aiRequestsToday,
@@ -107,7 +107,7 @@ export async function getCommandCentreMetrics(): Promise<CommandCentreStats> {
       disconnectedIntegrationsCount: disconnectedIntegrationsCount || 0,
     };
   } catch (error) {
-    console.error('Error fetching command centre metrics from DB:', error);
+    console.error('Error fetching command center metrics from DB:', error);
     // Return genuine zero-state on connection failure (never fake data)
     return {
       totalUsers: 0,
@@ -116,7 +116,7 @@ export async function getCommandCentreMetrics(): Promise<CommandCentreStats> {
       publishedEvents: 0,
       pendingEventReviews: 0,
       discoveredCandidates: 0,
-      totalOrganisations: 0,
+      totalOrganizations: 0,
       totalSchools: 0,
       totalEmployers: 0,
       aiRequestsToday: 0,
@@ -130,7 +130,7 @@ export async function getCommandCentreMetrics(): Promise<CommandCentreStats> {
 }
 
 /**
- * Builds the real Action Centre operational queue based on genuine database state.
+ * Builds the real Action Center operational queue based on genuine database state.
  */
 export async function getActionCenterItems(): Promise<ActionCenterItem[]> {
   const items: ActionCenterItem[] = [];
@@ -149,7 +149,7 @@ export async function getActionCenterItems(): Promise<ActionCenterItem[]> {
         id: 'act-event-submissions',
         category: 'needs_review',
         title: 'Event Submissions Awaiting Moderation',
-        description: `${pendingSubmissions} new organiser event ${pendingSubmissions === 1 ? 'submission requires' : 'submissions require'} verification and editorial approval.`,
+        description: `${pendingSubmissions} new organizer event ${pendingSubmissions === 1 ? 'submission requires' : 'submissions require'} verification and editorial approval.`,
         count: pendingSubmissions,
         urgency: 'high',
         actionHref: '/admin/events/submissions',
@@ -226,7 +226,7 @@ export async function getActionCenterItems(): Promise<ActionCenterItem[]> {
       });
     }
   } catch (error) {
-    console.error('Error fetching action centre items:', error);
+    console.error('Error fetching action center items:', error);
   }
 
   return items;

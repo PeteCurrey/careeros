@@ -26,7 +26,7 @@ export default function ContactPage() {
       badge: "EDUCATION",
       badgeVariant: "blue" as const,
       title: "School & District Enquiries",
-      description: "Explore district partnerships, data protection agreements, and institutional guidance counsellor deployments.",
+      description: "Explore district partnerships, data protection agreements, and institutional guidance counselor deployments.",
       email: "schools@career-os.com",
     },
     {
@@ -144,7 +144,7 @@ export default function ContactPage() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Button href={ROUTES.LEGAL} variant="secondary" size="sm">
-              Legal Centre &rarr;
+              Legal Center &rarr;
             </Button>
             <Button href={ROUTES.TRUST_SECURITY} variant="secondary" size="sm">
               Security Architecture &rarr;

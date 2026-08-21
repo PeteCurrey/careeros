@@ -5,11 +5,11 @@ import { createAdminClient } from '@/lib/supabase/server';
 import { AdminSectionHeader, AdminEmptyState } from '@/components/admin/AdminCommonUI';
 import { Building2, Plus, ExternalLink, ShieldCheck } from 'lucide-react';
 
-export default async function AdminEventOrganisersPage() {
+export default async function AdminEventOrganizersPage() {
   await requireAdminRole('events_moderator');
   const supabase = createAdminClient();
 
-  const { data: organisers } = await supabase
+  const { data: organizers } = await supabase
     .from('event_organisers')
     .select('*')
     .order('name', { ascending: true });
@@ -18,7 +18,7 @@ export default async function AdminEventOrganisersPage() {
     <div className="space-y-6">
       <AdminSectionHeader
         category="Events Platform"
-        title="Event Organisers Directory"
+        title="Event Organizers Directory"
         description="Profiles, institutional credentials, contact relationships and verification statuses for employer and educational event promoters."
         actions={
           <button
@@ -26,16 +26,16 @@ export default async function AdminEventOrganisersPage() {
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-[#2F8FFF] text-white hover:bg-[#2F8FFF]/90 transition-colors shadow-xs"
           >
             <Plus className="w-3.5 h-3.5" />
-            <span>Add Organiser</span>
+            <span>Add Organizer</span>
           </button>
         }
       />
 
-      {!organisers || organisers.length === 0 ? (
+      {!organizers || organizers.length === 0 ? (
         <AdminEmptyState
           icon={Building2}
-          title="0 Organiser Profiles Created"
-          description="Organiser entities will be registered as employers submit events or when imported via discovery connectors."
+          title="0 Organizer Profiles Created"
+          description="Organizer entities will be registered as employers submit events or when imported via discovery connectors."
         />
       ) : (
         <div className="bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-md overflow-hidden">
@@ -43,7 +43,7 @@ export default async function AdminEventOrganisersPage() {
             <table className="w-full text-left text-xs">
               <thead className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)] text-[var(--color-text-tertiary)] font-mono uppercase text-[10px]">
                 <tr>
-                  <th className="p-3">Organiser Name</th>
+                  <th className="p-3">Organizer Name</th>
                   <th className="p-3">Type</th>
                   <th className="p-3">Contact</th>
                   <th className="p-3">Verification</th>
@@ -52,7 +52,7 @@ export default async function AdminEventOrganisersPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--color-border-subtle)]">
-                {organisers.map((org) => (
+                {organizers.map((org) => (
                   <tr key={org.id} className="hover:bg-[var(--color-surface-interactive)]">
                     <td className="p-3 font-semibold text-[var(--color-text-primary)]">
                       {org.name}

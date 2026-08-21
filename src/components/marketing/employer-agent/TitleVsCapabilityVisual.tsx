@@ -34,7 +34,7 @@ export function TitleVsCapabilityVisual() {
           </h3>
 
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-            Search queries scan CV headlines for literal title strings: <em>&ldquo;Senior Maintenance Engineer&rdquo;</em>. Candidates with identical underlying capability under different job titles are filtered out before human review.
+            Search queries scan resume headlines for literal title strings: <em>&ldquo;Senior Maintenance Engineer&rdquo;</em>. Candidates with identical underlying capability under different job titles are filtered out before human review.
           </p>
 
           {/* Workflow Representation */}

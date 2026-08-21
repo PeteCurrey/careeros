@@ -101,7 +101,7 @@ export function getPrivacyAnswers(prefs: Partial<PrivacyPreferences>, isMinor: b
       "Your personal identity and contact information",
     ],
     whatCareerOSCanUse: [
-      "Your career context to generate personalised recommendations",
+      "Your career context to generate personalized recommendations",
       "Your Career Twin to match relevant opportunities (anonymised)",
       prefs.opportunityRecommendationsEnabled
         ? "Your goals and capabilities to surface relevant roles and pathways"

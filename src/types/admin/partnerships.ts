@@ -219,7 +219,7 @@ export interface PartnerTask {
   owner_user_id?: string | null;
   due_date?: string | null;
   priority: PartnerPriorityLevel;
-  status: 'open' | 'in_progress' | 'waiting' | 'blocked' | 'complete' | 'cancelled';
+  status: 'open' | 'in_progress' | 'waiting' | 'blocked' | 'complete' | 'canceled';
   waiting_on_entity?: string | null;
   waiting_since?: string | null;
   completed_at?: string | null;

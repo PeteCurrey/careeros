@@ -57,7 +57,7 @@ export default async function AdminAIUsagePage() {
         <AdminEmptyState
           icon={DollarSign}
           title="No Usage Recorded"
-          description="Inference logs will be recorded as AI features (mentor conversations, event extraction, CV parsing) execute in production."
+          description="Inference logs will be recorded as AI features (mentor conversations, event extraction, resume parsing) execute in production."
           badge="Zero Fabricated Costs"
         />
       ) : (

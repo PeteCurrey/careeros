@@ -419,11 +419,11 @@ export default function HowItWorksPage() {
           <div className="space-y-2.5">
             {[
               { label: 'Qualifications', note: 'Formal educational and professional qualifications' },
-              { label: 'Licences', note: 'Professional, regulatory and statutory licences' },
-              { label: 'Technical training', note: 'Certified courses, bootcamps, and structured programmes' },
+              { label: 'Licenses', note: 'Professional, regulatory and statutory licenses' },
+              { label: 'Technical training', note: 'Certified courses, bootcamps, and structured programs' },
               { label: 'Projects & deliverables', note: 'Concrete work samples with described outcomes' },
               { label: 'Professional credentials', note: 'Attestations from employers, institutions, and issuers' },
-              { label: 'Achievements', note: 'Awards, publications, and recognisable accomplishments' },
+              { label: 'Achievements', note: 'Awards, publications, and recognizable accomplishments' },
               { label: 'Continuing development', note: 'CPD, ongoing learning, and professional growth records' },
             ].map((item) => (
               <div
@@ -583,7 +583,7 @@ export default function HowItWorksPage() {
               { icon: '🌱', label: 'Work experience & internships', note: 'Evidence-building for early careers' },
               { icon: '🔄', label: 'Secondments & projects', note: 'Time-limited assignments across sectors' },
               { icon: '🌍', label: 'International pathways', note: 'Cross-border careers with eligibility context' },
-              { icon: '🚀', label: 'Entrepreneurship routes', note: 'Founder programmes, accelerators, and commercial learning' },
+              { icon: '🚀', label: 'Entrepreneurship routes', note: 'Founder programs, accelerators, and commercial learning' },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-3 px-4 py-3 rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/50">
                 <span className="text-base">{item.icon}</span>
@@ -616,7 +616,7 @@ export default function HowItWorksPage() {
             </p>
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
               Employer Agent is designed to sit on the employer side of the architecture — helping
-              organisations understand capability and discover potentially relevant people — without
+              organizations understand capability and discover potentially relevant people — without
               gaining access to your private Career OS context. People decide whether to engage.
               Employers decide whether to progress. Career OS facilitates the introduction.
             </p>
@@ -705,7 +705,7 @@ export default function HowItWorksPage() {
             </h2>
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
               Career OS is not built for one career world. The same underlying system — Career Twin,
-              Mentor, Passport, Graph — is designed to apply across trades, healthcare, defence,
+              Mentor, Passport, Graph — is designed to apply across trades, healthcare, defense,
               law, and public safety in ways that respect the real evidence and progression
               structures of each sector.
             </p>
@@ -735,7 +735,7 @@ export default function HowItWorksPage() {
               },
               {
                 title: 'You choose what to share',
-                body: 'Private Career OS context does not automatically become employer-visible. You control what information is authorised for sharing.',
+                body: 'Private Career OS context does not automatically become employer-visible. You control what information is authorized for sharing.',
               },
               {
                 title: 'AI recommends — it does not determine',
@@ -829,20 +829,20 @@ export default function HowItWorksPage() {
           <FaqItem q="Is Career OS a job board?" a="No. Career OS does not list jobs or vacancies. It is designed to help you understand your professional context, build verifiable evidence, and eventually — through Opportunity Agent — have relevant opportunities surface to you without constant manual searching." />
           <FaqItem q="Is it an AI career coach?" a={<>It includes an AI Career Mentor, but Career OS is more than a coaching chatbot. The Mentor is one component of a connected system that includes <Link href={ROUTES.PRODUCT_CAREER_TWIN} className="underline underline-offset-2 hover:text-[var(--color-text-primary)] transition-colors">Career Twin</Link>, <Link href={ROUTES.PRODUCT_CAREER_PASSPORT} className="underline underline-offset-2 hover:text-[var(--color-text-primary)] transition-colors">Career Passport</Link>, <Link href={ROUTES.PRODUCT_CAREER_GRAPH} className="underline underline-offset-2 hover:text-[var(--color-text-primary)] transition-colors">Career Graph</Link>, and future discovery capabilities.</>} />
           <FaqItem q="How does the AI Career Mentor work?" a="The AI Career Mentor is designed to use your Career Twin context to provide guidance calibrated to your specific situation — not generic advice. Mentor conversations are private and are not visible to employers. The Mentor recommends actions; it does not make binding decisions about your career." />
-          <FaqItem q="What is Career Twin?" a="Career Twin is the structured context layer at the centre of Career OS. It brings together your experience, demonstrated capabilities, qualifications, development, goals, preferences, and direction. It is private to you — not a public profile or employer-visible document." />
+          <FaqItem q="What is Career Twin?" a="Career Twin is the structured context layer at the center of Career OS. It brings together your experience, demonstrated capabilities, qualifications, development, goals, preferences, and direction. It is private to you — not a public profile or employer-visible document." />
           <FaqItem q="What is Career Passport?" a="Career Passport is your structured professional evidence record. It carries qualifications, project artifacts, verified credentials, and professional outcomes. It distinguishes between self-declared information, evidence-attached records, and formally verified credentials." />
           <FaqItem q="What is Career Graph?" a="Career Graph maps how roles, capabilities, industries and directions connect. It is designed to surface adjacent pathways that traditional job title searches would miss — showing what transfers well, where bridges are required, and where your professional foundation makes progress realistic." />
           <FaqItem q="What is Opportunity Agent?" a="Opportunity Agent is a planned future Career OS capability designed to identify relevant opportunities against your career context — without requiring you to manually search job boards. It is not a currently live operational system." />
-          <FaqItem q="What is Employer Agent?" a="Employer Agent is designed to help organisations define work through capability and evidence, and discover potentially relevant candidates. It operates outside the individual's private Career OS and can only access information you have explicitly authorised for sharing." />
+          <FaqItem q="What is Employer Agent?" a="Employer Agent is designed to help organizations define work through capability and evidence, and discover potentially relevant candidates. It operates outside the individual's private Career OS and can only access information you have explicitly authorized for sharing." />
           <FaqItem q="Does Career OS find jobs automatically?" a="No. Career OS does not autonomously apply for roles on your behalf. Future Opportunity Agent capability is designed to surface relevant opportunities — but engagement, application, and identity disclosure are all decisions you make explicitly." />
           <FaqItem q="Does Career OS share my information with employers?" a="Not by default. Your private Career OS — including Mentor conversations, Career Twin context, salary ambitions, and career plans — is not automatically visible to employers. Information becomes eligible for sharing only when you review an opportunity and grant explicit permission." />
           <FaqItem q="Can my employer see my Mentor conversations?" a="No. Mentor conversations are private. Career OS is designed so that your current employer cannot access what you discuss in Mentor sessions — including any exploration of other career directions." />
           <FaqItem q="Is everything in Career Passport verified?" a="No. Career Passport distinguishes between self-declared information, records with evidence attached, and formally verified credentials. These are explicitly different categories. Career OS does not pretend self-declared information is the same as verified." />
           <FaqItem q="Can Career OS help me change careers?" a="Yes. Career Graph is specifically designed to map transferable capabilities across sector boundaries — identifying where existing skills travel well, which directions are realistic from your current foundation, and what bridges a transition may require." />
           <FaqItem q="Can Career OS help after I get a job?" a="Yes. Career OS is designed to continue after placement — helping with first-90-day navigation, performance development, salary preparation, leadership transition, and planning the next chapter while still succeeding in your current role." />
-          <FaqItem q="Can Career OS support entrepreneurship?" a="The longer-term Career OS direction includes support for entrepreneurial pathways — founder programmes, accelerators, and commercial learning. These are future product directions and are not currently fully active." />
+          <FaqItem q="Can Career OS support entrepreneurship?" a="The longer-term Career OS direction includes support for entrepreneurial pathways — founder programs, accelerators, and commercial learning. These are future product directions and are not currently fully active." />
           <FaqItem q="Can students use Career OS?" a="Yes. Career OS is designed for people from age 16 onward. For students, it helps explore educational pathways, build early evidence, and understand how subjects connect to the real world of work." />
-          <FaqItem q="Does Career OS work for trades and non-university careers?" a="Yes. Career OS is explicitly designed not to be a graduate recruitment platform. The same architecture applies across trades, healthcare, defence, public safety, law, and business — each mapped to their genuine evidence and progression frameworks." />
+          <FaqItem q="Does Career OS work for trades and non-university careers?" a="Yes. Career OS is explicitly designed not to be a graduate recruitment platform. The same architecture applies across trades, healthcare, defense, public safety, law, and business — each mapped to their genuine evidence and progression frameworks." />
           <FaqItem q="Which features are currently live?" a="The AI Career Mentor, structured profile intake, Career Passport artifact logging, and editorial pathway explorers are available today. Career Twin long-term persistence, formal credential verification, and autonomous Opportunity Agent discovery are under development or represent future product direction." />
           <FaqItem q="Is Career OS free for individuals?" a="Yes. Career OS is free for individuals." />
         </div>

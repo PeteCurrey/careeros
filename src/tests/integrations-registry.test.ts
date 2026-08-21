@@ -33,7 +33,7 @@ describe('Data Sources & Integrations Registry', () => {
     expect(stripe?.productionEnabled).toBe(false);
   });
 
-  it('categorises integrations accurately into logical groups without data duplication', () => {
+  it('categorizes integrations accurately into logical groups without data duplication', () => {
     const groups = categoriseIntegrations(STATIC_INTEGRATION_REGISTRY);
     expect(groups.length).toBeGreaterThan(0);
 
@@ -55,7 +55,7 @@ describe('Data Sources & Integrations Registry', () => {
     expect(LIFECYCLE_STATUS_LABELS.production).toBe('Live in Production');
     expect(LIFECYCLE_STATUS_LABELS.planned).toBe('Planned');
     expect(DATA_DIRECTION_LABELS.inbound).toBe('Inbound (CareerOS receives data)');
-    expect(PROCESSING_LABELS.normalised).toBe('Normalised — standardised to CareerOS taxonomy');
+    expect(PROCESSING_LABELS.normalized).toBe('Normalized — standardized to CareerOS taxonomy');
   });
 
   it('correctly tracks personal data and minor safeguards across integrations', () => {

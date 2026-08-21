@@ -45,7 +45,7 @@ const WORKFLOW_STEPS: WorkflowStep[] = [
     subtitle: 'Transforming exploration into actionable preparation',
     actor: 'Career OS System',
     icon: Cpu,
-    studentAction: 'Student flags topics or questions they want to discuss with their school counsellor (e.g. course requirements, financial aid, apprenticeship availability).',
+    studentAction: 'Student flags topics or questions they want to discuss with their school counselor (e.g. course requirements, financial aid, apprenticeship availability).',
     systemAction: 'Synthesizes permitted exploratory highlights into a concise 1-page pre-conversation brief for the educator.',
     educatorAction: 'Receives the structured context ahead of the appointment instead of spending the first 15 minutes asking basic background questions.',
     privacyBoundary: 'Raw conversational transcripts are never copied wholesale; only student-permissioned goals and questions are transferred.',
@@ -54,21 +54,21 @@ const WORKFLOW_STEPS: WorkflowStep[] = [
     stepNum: '03',
     title: 'Educator Reviews Permissioned Context',
     subtitle: 'Understanding the student before entering the room',
-    actor: 'School Counsellor / Advisor',
+    actor: 'School Counselor / Advisor',
     icon: UserCheck,
-    studentAction: 'Student knows their counsellor is prepared and that their time together will focus on substantive decisions.',
-    systemAction: 'Surfaces relevant local labour market trends, entry criteria, and institution-specific deadlines matching the student’s interest.',
-    educatorAction: 'Counsellor reviews stated interests, pathways explored, and student questions in 90 seconds before the meeting.',
+    studentAction: 'Student knows their counselor is prepared and that their time together will focus on substantive decisions.',
+    systemAction: 'Surfaces relevant local labor market trends, entry criteria, and institution-specific deadlines matching the student’s interest.',
+    educatorAction: 'Counselor reviews stated interests, pathways explored, and student questions in 90 seconds before the meeting.',
     privacyBoundary: 'Educator sees role-based context scoped strictly to educational and career planning duties.',
   },
   {
     stepNum: '04',
     title: 'High-Leverage Human Conversation',
-    subtitle: 'Where empathy, judgement, and local knowledge matter most',
+    subtitle: 'Where empathy, judgment, and local knowledge matter most',
     actor: 'Student & Educator (Together)',
     icon: Users,
     studentAction: 'Engages in an honest, grounded dialogue about realistic choices, family considerations, and emotional readiness.',
-    systemAction: 'Steps into the background. Technology does not participate in or record the human counselling session.',
+    systemAction: 'Steps into the background. Technology does not participate in or record the human counseling session.',
     educatorAction: 'Delivers mentorship, personal encouragement, reality checks, pastoral care, and nuanced institutional guidance.',
     privacyBoundary: 'The physical advising conversation is a human relationship governed by school safeguarding and ethics policies.',
   },
@@ -85,12 +85,12 @@ const WORKFLOW_STEPS: WorkflowStep[] = [
   },
 ];
 
-export function CounsellorAugmentationWorkflow() {
+export function CounselorAugmentationWorkflow() {
   const [activeStepIdx, setActiveStepIdx] = useState(0);
   const currentStep = WORKFLOW_STEPS[activeStepIdx] ?? WORKFLOW_STEPS[0]!;
 
   return (
-    <div className="w-full space-y-8" id="counsellor-workflow">
+    <div className="w-full space-y-8" id="counselor-workflow">
       
       {/* 5-Step Horizontal Indicator */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">

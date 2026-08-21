@@ -25,7 +25,7 @@ const BOUNDARY_TIERS = [
     tier: 'Tier 02 &bull; AI Recommendation',
     title: 'Advisory Guidance & Comparisons',
     aiDoes: 'Suggests transferable skill bridges, compares university vs degree apprenticeships, surfaces open days.',
-    humanDoes: 'Evaluates suggestions against personal preferences, discusses with school counsellor, decides whether to pursue.',
+    humanDoes: 'Evaluates suggestions against personal preferences, discusses with school counselor, decides whether to pursue.',
     boundary: 'Recommendation is never a binding decision; zero algorithmic lock-in.',
     badgeColor: 'text-amber-300 bg-amber-950/40 border-amber-500/30',
   },

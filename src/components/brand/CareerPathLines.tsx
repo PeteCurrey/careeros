@@ -45,7 +45,7 @@ export function CareerPathLines({
     }
   }, [animate]);
 
-  // Stroke colours — restrained, editorial on dark graphite
+  // Stroke colors — restrained, editorial on dark graphite
   const BLUE   = 'rgba(47, 143, 255, 0.35)';
   const GOLD   = 'rgba(221, 211, 109, 0.25)';
   const MAUVE  = 'rgba(205, 187, 210, 0.22)';

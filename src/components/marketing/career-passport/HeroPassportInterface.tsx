@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { FileCheck, ShieldCheck, CheckCircle2, Award, Wrench, Briefcase, Eye, Lock, ExternalLink, Calendar, ArrowRight } from 'lucide-react';
 
 export function HeroPassportInterface() {
-  const [activeTab, setActiveTab] = useState<'qualifications' | 'projects' | 'licences'>('qualifications');
+  const [activeTab, setActiveTab] = useState<'qualifications' | 'projects' | 'licenses'>('qualifications');
 
   return (
     <div className="w-full p-6 sm:p-8 bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-editorial space-y-6 text-[var(--color-text-primary)] border-beam-container border-beam-fast">
@@ -62,14 +62,14 @@ export function HeroPassportInterface() {
           Project Evidence (6)
         </button>
         <button
-          onClick={() => setActiveTab('licences')}
+          onClick={() => setActiveTab('licenses')}
           className={`px-4 py-2 rounded-[var(--radius-card)] text-xs font-mono font-semibold transition-all border ${
-            activeTab === 'licences'
+            activeTab === 'licenses'
               ? 'bg-white/15 text-[var(--color-text-primary)] border-white/15'
               : 'bg-[var(--color-surface-raised)] text-[var(--color-text-secondary)] border-[var(--color-border-default)] hover:border-white/20'
           }`}
         >
-          Licences & Safety (3)
+          Licenses & Safety (3)
         </button>
       </div>
 
@@ -177,7 +177,7 @@ export function HeroPassportInterface() {
         </div>
       )}
 
-      {activeTab === 'licences' && (
+      {activeTab === 'licenses' && (
         <div className="space-y-3">
           <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="space-y-1">

@@ -43,8 +43,8 @@ const LOOP_STEPS: LoopStep[] = [
     color: 'text-[#6BB8FF]',
     badgeColor: 'border-blue-500/30 bg-blue-950/40 text-blue-300',
     studentAction: 'Asks unlimited clarifying questions about prerequisites, workload, shifts, salaries, and lifestyle factors.',
-    mentorSupport: 'Provides patient, neutral, evidence-grounded answers without judgement or algorithmic pressure.',
-    educatorTouchpoint: 'Saves counsellors from answering repetitive basic factual questions repeatedly.',
+    mentorSupport: 'Provides patient, neutral, evidence-grounded answers without judgment or algorithmic pressure.',
+    educatorTouchpoint: 'Saves counselors from answering repetitive basic factual questions repeatedly.',
   },
   {
     number: '03',
@@ -64,7 +64,7 @@ const LOOP_STEPS: LoopStep[] = [
     badgeColor: 'border-amber-500/30 bg-amber-950/40 text-amber-300',
     studentAction: 'Logs school projects, extracurricular clubs, volunteering, part-time jobs, and work experience.',
     mentorSupport: 'Helps student articulate transferable capabilities and link achievements to Career Passport.',
-    educatorTouchpoint: 'Gives counsellors rich, multi-dimensional student evidence beyond academic grades alone.',
+    educatorTouchpoint: 'Gives counselors rich, multi-dimensional student evidence beyond academic grades alone.',
   },
   {
     number: '05',
@@ -72,7 +72,7 @@ const LOOP_STEPS: LoopStep[] = [
     icon: Zap,
     color: 'text-cyan-400',
     badgeColor: 'border-cyan-500/30 bg-cyan-950/40 text-cyan-300',
-    studentAction: 'Attends school career fair, contacts employers for work shadowing, or prepares UCAS/apprenticeship portfolios.',
+    studentAction: 'Attends school career fair, contacts employers for work shadowing, or prepares college application or apprenticeship portfolios.',
     mentorSupport: 'Assists with draft application preparation, interview question practice, and deadline reminders.',
     educatorTouchpoint: 'Action items agreeably set during 1:1 sessions are tracked and supported.',
   },
@@ -83,8 +83,8 @@ const LOOP_STEPS: LoopStep[] = [
     color: 'text-rose-400',
     badgeColor: 'border-rose-500/30 bg-rose-950/40 text-rose-300',
     studentAction: 'Requests next 1:1 guidance appointment with concrete questions, refined preferences, and portfolio items.',
-    mentorSupport: 'Synthesises student exploration into a clear session brief for the human counsellor.',
-    educatorTouchpoint: 'Human counsellor enters the meeting with full context, focusing entirely on high-judgement guidance.',
+    mentorSupport: 'Synthesizes student exploration into a clear session brief for the human counselor.',
+    educatorTouchpoint: 'Human counselor enters the meeting with full context, focusing entirely on high-judgment guidance.',
   },
 ];
 

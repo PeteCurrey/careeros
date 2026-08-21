@@ -91,7 +91,7 @@ const DOMAIN_EDITORIAL_LIBRARY: Record<string, CuratedMentorLine[]> = {
       contextReason: "Finance and corporate strategy progression based upon capital allocation evidence.",
     },
     {
-      line: "Today is not about evaluating every option. It is about recognising the highest-leverage move.",
+      line: "Today is not about evaluating every option. It is about recognizing the highest-leverage move.",
       nextMoveTitle: "Align Strategic Career Objective",
       nextMoveAction: "Review active milestones on your executive trajectory",
       nextMoveType: "OBJECTIVE",

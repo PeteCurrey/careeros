@@ -45,7 +45,7 @@ const ROLES: Role[] = [
         ],
         mandatoryToCheck: [
           'Any site-specific legal or regulatory qualifications for the role environment',
-          'Driving licence / vehicle requirements if field-based',
+          'Driving license / vehicle requirements if field-based',
         ],
         humanReviewQuestions: [
           'What was the operational environment — continuous process, discrete manufacturing or facilities?',
@@ -83,7 +83,7 @@ const ROLES: Role[] = [
       {
         id: 'military-technical',
         title: 'Military Technical Engineer',
-        category: 'Defence / Armed Forces Transition',
+        category: 'Defense / Armed Forces Transition',
         mayTransfer: [
           'Systematic fault isolation on complex multi-system platforms under operational pressure',
           'Structured technical documentation, maintenance records and serviceability reporting',
@@ -117,7 +117,7 @@ const ROLES: Role[] = [
       {
         id: 'military-logistics',
         title: 'Military Logistics Warrant Officer',
-        category: 'Defence / Armed Forces Transition',
+        category: 'Defense / Armed Forces Transition',
         mayTransfer: [
           'Multi-million-pound asset and supply chain coordination across complex logistics networks',
           'Leadership of 30–80 personnel including planning, performance and welfare',
@@ -158,7 +158,7 @@ const ROLES: Role[] = [
           'Continuous improvement or lean manufacturing participation',
         ],
         possibleBridge: [
-          'Full cross-functional P&L and budget accountability (vs. cost-centre control)',
+          'Full cross-functional P&L and budget accountability (vs. cost-center control)',
           'Strategic supplier management and commercial negotiation',
         ],
         mandatoryToCheck: [
@@ -176,7 +176,7 @@ const ROLES: Role[] = [
         category: 'Engineering / Construction / Infrastructure',
         mayTransfer: [
           'Complex multi-workstream delivery coordination with competing stakeholder priorities',
-          'Resource, schedule and budget management across long-duration programmes',
+          'Resource, schedule and budget management across long-duration programs',
           'Contractor, supplier and subcontractor relationship management',
           'Risk identification, mitigation and change-control discipline',
         ],
@@ -190,12 +190,12 @@ const ROLES: Role[] = [
           'People management of employed teams versus contractor workforces',
         ],
         mandatoryToCheck: [
-          'Whether the role requires operational (day-to-day) versus programme leadership experience',
+          'Whether the role requires operational (day-to-day) versus program leadership experience',
           'Industry-specific operational knowledge requirements',
         ],
         humanReviewQuestions: [
           'Does this person have experience managing operational functions beyond project delivery?',
-          'Is the expected operational environment closer to BAU or ongoing large programme delivery?',
+          'Is the expected operational environment closer to BAU or ongoing large program delivery?',
         ],
       },
     ],
@@ -220,7 +220,7 @@ const ROLES: Role[] = [
           'Leadership of multidisciplinary teams including less experienced staff',
         ],
         possibleBridge: [
-          'Finance and budget accountability beyond clinical cost-centre awareness',
+          'Finance and budget accountability beyond clinical cost-center awareness',
           'Commercial supplier management and procurement processes',
         ],
         mandatoryToCheck: [
@@ -248,7 +248,7 @@ const ROLES: Role[] = [
           'Leadership of clinical teams or specialty vehicles',
         ],
         possibleBridge: [
-          'Large-scale organisational operations management beyond emergency response',
+          'Large-scale organizational operations management beyond emergency response',
           'Planned elective and scheduled service delivery (versus emergency demand)',
         ],
         mandatoryToCheck: [
@@ -297,7 +297,7 @@ const ROLES: Role[] = [
       {
         id: 'armed-forces-instructor',
         title: 'Armed Forces Technical Instructor',
-        category: 'Defence / Education & Training',
+        category: 'Defense / Education & Training',
         mayTransfer: [
           'Structured technical instruction at accredited level with formal assessment',
           'Lesson planning, scheme-of-work design and progressive curriculum delivery',
@@ -310,7 +310,7 @@ const ROLES: Role[] = [
           'Any civilian teaching or training qualification (PTLLS, AET or equivalent)',
         ],
         possibleBridge: [
-          'Civilian awarding body and Ofsted-regulated qualification frameworks',
+          'Civilian credentialing body and state-accredited qualification frameworks',
           'Commercial learning management systems and civilian HR/L&D structures',
         ],
         mandatoryToCheck: [

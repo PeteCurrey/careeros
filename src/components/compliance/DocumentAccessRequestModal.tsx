@@ -19,7 +19,7 @@ export function DocumentAccessRequestModal({
 }: DocumentAccessRequestModalProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [organisation, setOrganisation] = useState('');
+  const [organization, setOrganization] = useState('');
   const [role, setRole] = useState('');
   const [orgType, setOrgType] = useState<'school_district' | 'university' | 'enterprise_employer' | 'government' | 'auditor' | 'other'>('school_district');
   const [reason, setReason] = useState('');
@@ -43,9 +43,9 @@ export function DocumentAccessRequestModal({
         body: JSON.stringify({
           requesterName: name,
           requesterEmail: email,
-          requesterOrganisation: organisation,
+          requesterOrganization: organization,
           requesterRole: role,
-          organisationType: orgType,
+          organizationType: orgType,
           requestedDocuments: [documentName],
           useCaseReason: reason,
         }),
@@ -162,13 +162,13 @@ export function DocumentAccessRequestModal({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="space-y-1.5">
                   <label className="font-mono text-[10px] uppercase text-[var(--color-text-secondary)]">
-                    Organisation / District Name *
+                    Organization / District Name *
                   </label>
                   <input
                     type="text"
                     required
-                    value={organisation}
-                    onChange={(e) => setOrganisation(e.target.value)}
+                    value={organization}
+                    onChange={(e) => setOrganization(e.target.value)}
                     placeholder="e.g. Chicago Public Schools"
                     className="w-full px-3 py-2 rounded-sm bg-[var(--color-surface-sunken)] border border-[var(--color-border-default)] focus:border-[#2F8FFF] focus:outline-hidden text-xs text-white"
                   />
@@ -176,7 +176,7 @@ export function DocumentAccessRequestModal({
 
                 <div className="space-y-1.5">
                   <label className="font-mono text-[10px] uppercase text-[var(--color-text-secondary)]">
-                    Organisation Type *
+                    Organization Type *
                   </label>
                   <select
                     value={orgType}

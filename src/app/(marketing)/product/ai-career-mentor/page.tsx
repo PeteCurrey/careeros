@@ -96,11 +96,11 @@ export default function AICareerMentorPage() {
     },
     {
       q: "Does it write CVs and applications?",
-      a: "Career OS is intended to support CV and application preparation using information you have provided and evidence available in your Career OS record, while prohibiting fabricated experience or credentials.",
+      a: "Career OS is intended to support resume and application preparation using information you have provided and evidence available in your Career OS record, while prohibiting fabricated experience or credentials.",
     },
     {
       q: "How does it decide what to recommend?",
-      a: "Career OS's recommendation architecture is being designed to combine relevant user context, evidence, selected career directions, and appropriate external labour-market intelligence, surfacing transparent decision factors where appropriate.",
+      a: "Career OS's recommendation architecture is being designed to combine relevant user context, evidence, selected career directions, and appropriate external labor-market intelligence, surfacing transparent decision factors where appropriate.",
     },
     {
       q: "Can the Mentor be wrong?",
@@ -454,7 +454,7 @@ export default function AICareerMentorPage() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Career Graph is being designed to connect roles, capabilities, pathways, and relevant labour-market information.
+                Career Graph is being designed to connect roles, capabilities, pathways, and relevant labor-market information.
               </p>
             </Link>
           </div>
@@ -552,7 +552,7 @@ export default function AICareerMentorPage() {
               Good guidance includes knowing the limits.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              Building genuine trust requires absolute clarity about what the AI Career Mentor does not do. We never make false promises or replace essential human judgements.
+              Building genuine trust requires absolute clarity about what the AI Career Mentor does not do. We never make false promises or replace essential human judgments.
             </p>
           </div>
 

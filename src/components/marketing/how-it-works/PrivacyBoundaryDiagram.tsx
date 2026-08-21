@@ -70,7 +70,7 @@ export function PrivacyBoundaryDiagram() {
             <div className="flex items-center gap-2 text-purple-400">
               <Eye className="w-4 h-4" />
               <span className="text-xs font-mono uppercase tracking-widest font-bold">
-                Authorised Sharing
+                Authorized Sharing
               </span>
             </div>
             <span className="text-[10px] font-mono text-purple-300/80 bg-purple-500/10 px-2 py-0.5 rounded">

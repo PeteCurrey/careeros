@@ -152,7 +152,7 @@ export function StudentMindsetInteractive() {
             )}
 
             <p className="text-[10px] text-[var(--color-text-tertiary)] font-mono border-t border-[var(--color-border-subtle)] pt-3">
-              Illustrative Career OS experience — not personalised without account context.
+              Illustrative Career OS experience — not personalized without account context.
             </p>
           </div>
         </div>

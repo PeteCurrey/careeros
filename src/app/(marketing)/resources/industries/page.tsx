@@ -8,8 +8,8 @@ import { TrendingUp, Network, Globe2, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industry Outlook & Labour Market Intelligence | Career OS",
-  description: "Sector-by-sector labour market research, automation risk index, emerging skill demands, and regional wage benchmarks across the United States.",
+  title: "Industry Outlook & Labor Market Intelligence | Career OS",
+  description: "Sector-by-sector labor market research, automation risk index, emerging skill demands, and regional wage benchmarks across the United States.",
   alternates: {
     canonical: "https://career-os.com/resources/industries",
   },
@@ -45,13 +45,13 @@ export default function ResourcesIndustriesPage() {
         <div className="container-editorial space-y-6 max-w-4xl">
           <div className="flex items-center gap-3">
             <TrendingUp className="w-5 h-5 text-[#2F8FFF]" />
-            <span className="section-label text-white">Macro Labour Intelligence</span>
+            <span className="section-label text-white">Macro Labor Intelligence</span>
           </div>
 
           <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">
             Sector trajectories &{" "}
             <CareerGradientText variant="blue">
-              labour market demand.
+              labor market demand.
             </CareerGradientText>
           </h1>
 

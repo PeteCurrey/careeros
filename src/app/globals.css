@@ -152,7 +152,7 @@
 
   /* Duration ladder. Anything above 'deliberate' is a set piece,
      not an interaction, and should be justified. */
-  --duration-instant: 100ms;   /* hover, focus, colour shifts   */
+  --duration-instant: 100ms;   /* hover, focus, color shifts   */
   --duration-quick: 180ms;     /* toggles, chips, small reveals */
   --duration-settled: 320ms;   /* panels, cards, step changes   */
   --duration-deliberate: 560ms; /* full-screen scene changes    */

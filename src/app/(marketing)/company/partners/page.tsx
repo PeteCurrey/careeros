@@ -21,10 +21,10 @@ import { ExternalLink, ArrowRight, ShieldCheck, Database, Sparkles, CheckCircle2
 
 export const metadata: Metadata = {
   title: 'Partnerships & Ecosystem | CareerOS',
-  description: 'CareerOS connects people with the organisations, opportunities, learning and human support needed to move careers forward. No single platform can build a career alone.',
+  description: 'CareerOS connects people with the organizations, opportunities, learning and human support needed to move careers forward. No single platform can build a career alone.',
   openGraph: {
     title: 'Partnerships & Ecosystem | CareerOS',
-    description: 'CareerOS acts as the intelligent connective layer between the individual and the organisations already excellent at particular parts of the career journey.',
+    description: 'CareerOS acts as the intelligent connective layer between the individual and the organizations already excellent at particular parts of the career journey.',
     url: 'https://careeros.com/company/partners',
     type: 'website',
   },
@@ -38,7 +38,7 @@ const ECOSYSTEM_CATEGORIES = [
   { label: 'Wellbeing Support', description: 'Licensed clinical tele-health care', imageSrc: '/media/schools/school_privacy_architecture_hero.jpg' },
   { label: 'Public Infrastructure', description: 'O*NET® and federal open data systems', imageSrc: '/media/product/opportunity_agent_hero.jpg' },
   { label: 'Specialist Pathways', description: 'Veterans, youth, and career transitioners', imageSrc: '/media/professionals/professional_hero_intersection.jpg' },
-  { label: 'Labour Intelligence', description: 'Real-time regional wage & demand metrics', imageSrc: '/media/product/career_graph_hero.jpg' },
+  { label: 'Labor Intelligence', description: 'Real-time regional wage & demand metrics', imageSrc: '/media/product/career_graph_hero.jpg' },
   { label: 'Whole-Person Care', description: '211 hyper-local family and life services', imageSrc: '/media/schools/audience_schools.jpg' },
 ];
 
@@ -63,7 +63,7 @@ export default async function PartnersPage() {
             <p className="text-xs text-amber-400 font-mono leading-relaxed flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
               <span>
-                <strong>Editor Preview:</strong> Partnership organisations shown below represent intended ecosystem relationships under active dialogue. None have approved logo use or public marketing. Pre-launch intent only.
+                <strong>Editor Preview:</strong> Partnership organizations shown below represent intended ecosystem relationships under active dialogue. None have approved logo use or public marketing. Pre-launch intent only.
               </span>
             </p>
           </div>
@@ -102,7 +102,7 @@ export default async function PartnersPage() {
                     Workforce boards, learning providers, credentialing networks, employer ecosystems, wellbeing services, and public federal infrastructure — each excels at a specific part of the journey. CareerOS connects individuals to the right node at the right moment, with their evidence-backed story already assembled.
                   </p>
                   <p className="text-xs font-mono text-[var(--color-text-tertiary)] pt-2 border-t border-[var(--color-border-subtle)]">
-                    This is not a logo page. These are the organisations that will make CareerOS meaningful in practice — governed by strict verification standards.
+                    This is not a logo page. These are the organizations that will make CareerOS meaningful in practice — governed by strict verification standards.
                   </p>
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default async function PartnersPage() {
                   Strategic <CareerGradientText variant="lilac">ecosystem relationships.</CareerGradientText>
                 </h2>
                 <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed font-normal">
-                  CareerOS is building formal partnerships with organisations that lead their respective sectors. Each relationship is governed by our five partnership principles and subject to ongoing compliance review.
+                  CareerOS is building formal partnerships with organizations that lead their respective sectors. Each relationship is governed by our five partnership principles and subject to ongoing compliance review.
                 </p>
               </div>
 

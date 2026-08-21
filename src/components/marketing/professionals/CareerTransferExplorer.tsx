@@ -109,7 +109,7 @@ const CASES: CareerTransferCase[] = [
   {
     id: 'military-logistics',
     originTitle: 'Military Logistics Warrant Officer',
-    originCategory: 'Defence & Armed Forces',
+    originCategory: 'Defense & Armed Forces',
     targetDirection: 'Global Supply Chain & Freight Operations Lead',
     transferable: [
       'Contingency supply chain routing across disrupted geographic theaters',

@@ -60,7 +60,7 @@ export function OnboardingHelpModal({ isOpen, onClose }: OnboardingHelpModalProp
           <div className="flex items-start gap-2.5 p-3 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)]">
             <Sparkles className="w-4 h-4 text-[#2F8FFF] shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-white">Personalised for you</p>
+              <p className="font-semibold text-white">Personalized for you</p>
               <p className="text-[11px] leading-snug">
                 Your answers help Career OS build your Career Twin, connect you with the right Mentor, and suggest real next steps.
               </p>

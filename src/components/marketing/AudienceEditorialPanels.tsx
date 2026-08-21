@@ -107,8 +107,8 @@ const AUDIENCES: AudienceFeature[] = [
     id: 'schools',
     num: '03',
     badge: 'High Schools & Districts',
-    headline: "Personal career guidance shouldn't depend on how much time a counsellor has.",
-    description: 'Equip counsellors with intelligent tools, support college and technical trade pathways equally, and protect minors under strict institutional data safeguarding with zero advertising.',
+    headline: "Personal career guidance shouldn't depend on how much time a counselor has.",
+    description: 'Equip counselors with intelligent tools, support college and technical trade pathways equally, and protect minors under strict institutional data safeguarding with zero advertising.',
     points: [
       'Equitable parity across university, trades & apprenticeships',
       'Institutional safeguarding, zero commercial ads, and strict privacy',
@@ -130,7 +130,7 @@ const AUDIENCES: AudienceFeature[] = [
       {
         label: 'Guidance',
         value: '1:1 AI Mentor Copilot',
-        detail: 'Scales counsellor capacity across entire student bodies',
+        detail: 'Scales counselor capacity across entire student bodies',
         category: 'skills',
         position: { top: '58%', left: '68%' },
       },

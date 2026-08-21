@@ -26,7 +26,7 @@ export default async function AdminAIOverviewPage() {
     <div className="space-y-8">
       <AdminSectionHeader
         category="Intelligence"
-        title="AI Control Centre"
+        title="AI Control Center"
         description="Unified operations for LLM providers, model registries, use-case routing policies, versioned prompts, emergency kill switches, and token costs."
       />
 
@@ -97,7 +97,7 @@ export default async function AdminAIOverviewPage() {
             Task-Based Routing
           </h3>
           <p className="text-xs text-[var(--color-text-secondary)]">
-            Decouple applications: map Mentor, CV Analysis, and Event Discovery to different primary models.
+            Decouple applications: map Mentor, Resume Analysis, and Event Discovery to different primary models.
           </p>
         </Link>
 

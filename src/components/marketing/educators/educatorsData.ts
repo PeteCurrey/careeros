@@ -84,17 +84,17 @@ export const STUDENT_PREP_SCENARIOS: StudentPrepScenario[] = [
     uncertainties: [
       'Long-term accreditation pathways via Institution of Mechanical Engineers (IMechE)',
       'Employer funding for degree top-ups after Level 4',
-      'Application timeline differences (apprenticeships hire earlier than UCAS/college deadlines)',
+      'Application timeline differences (apprenticeships hire earlier than college application deadlines)',
     ],
     educatorSummary: 'Student has exceptional practical aptitude and portfolio evidence. Needs reassurance on career progression frameworks and guidance on employer recruitment cycles.',
     suggestedPrompts: [
-      'Many engineering apprentices complete degree top-ups fully sponsored by their employer—have you reviewed the aerospace levy programmes?',
+      'Many engineering apprentices complete degree top-ups fully sponsored by their employer—have you reviewed the aerospace levy programs?',
       'Let’s look at how your robotics portfolio can be structured for technical employer interviews.',
       'Would you like to dual-track university applications as a backup while targeting top apprenticeship schemes?',
     ],
     possibleNextActions: [
       'Support student with employer aptitude test preparation resources.',
-      'Review CV/evidence format for engineering apprenticeship submission.',
+      'Review resume/evidence format for engineering apprenticeship submission.',
       'Set calendar reminder for early October employer vacancy openings.',
     ],
     privacyPreservation: 'Personal salary expectations and mobility preferences are in student control and not shared across the school.',
@@ -119,7 +119,7 @@ export const STUDENT_PREP_SCENARIOS: StudentPrepScenario[] = [
     ],
     studentQuestion: 'I enjoy creative media and outdoor environmental science—do I have to pick one sector right now, or can I keep my options open?',
     uncertainties: [
-      'Subject selection for Year 11/12 (A-Levels / IB / BTEC / T-Levels)',
+      'Course selection for grades 11 and 12 (AP / IB / dual enrollment / CTE pathways)',
       'Fear of closing doors early',
       'Understanding which core transferable skills link creative and analytical fields',
     ],
@@ -158,9 +158,9 @@ export const STUDENT_PREP_SCENARIOS: StudentPrepScenario[] = [
     uncertainties: [
       'Parental perception of vocational trades vs traditional university degrees',
       'Earning potential and career progression from apprentice to independent contractor / business owner',
-      'Maths and physics prerequisites for renewable microgeneration certifications',
+      'Math and physics prerequisites for renewable microgeneration certifications',
     ],
-    educatorSummary: 'Constructive and deliberate pivot based on real-world work shadowing. Educator can provide neutral labour market data on electrical contractor earnings and entrepreneurship routes to assist family discussions.',
+    educatorSummary: 'Constructive and deliberate pivot based on real-world work shadowing. Educator can provide neutral labor market data on electrical contractor earnings and entrepreneurship routes to assist family discussions.',
     suggestedPrompts: [
       'What specifically stood out during your electrical work shadowing compared to office environments?',
       'Did you know that commercial electrical contractors and renewable installers often build highly successful independent businesses?',
@@ -199,7 +199,7 @@ export const WORKSPACE_TODAY_ITEMS = [
     status: '1:1 Scheduled',
     statusColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
     prepSummary: 'Comparing Degree Apprenticeship with BSc Electrical Engineering. Robotics project logged in Career Passport.',
-    actionRequired: 'Clarify maths entry thresholds for degree apprenticeship partner employers.',
+    actionRequired: 'Clarify math entry thresholds for degree apprenticeship partner employers.',
   },
   {
     time: '10:30 AM',
@@ -237,11 +237,11 @@ export const MULTI_PATHWAY_ROUTES = [
     badge: 'Higher Education',
     badgeColor: 'text-purple-300 bg-purple-950/40 border-purple-500/30',
     duration: '3–4 Years Full-Time',
-    environment: 'Campus lecture theatres, research laboratories, independent academic study.',
+    environment: 'Campus lecture theaters, research laboratories, independent academic study.',
     costStructure: 'Standard tuition fee loans + living maintenance loans.',
     evidenceProduced: 'Academic degree transcript, dissertation research, student society leadership.',
-    typicalDestination: 'Graduate engineering rotational programmes, research & design consultancies.',
-    educatorRole: 'Support UCAS personal statement, review academic grade predictions, explore university bursaries.',
+    typicalDestination: 'Graduate engineering rotational programs, research & design consultancies.',
+    educatorRole: 'Support the college essay, review GPA projections, explore scholarships and financial aid.',
   },
   {
     id: 'apprentice',
@@ -253,7 +253,7 @@ export const MULTI_PATHWAY_ROUTES = [
     costStructure: 'Zero tuition fees (employer levy funded) + full competitive apprentice salary from Day 1.',
     evidenceProduced: 'Commercial engineering project portfolios, workplace safety logs, BEng degree.',
     typicalDestination: 'Immediate progression into substantive senior technician or project engineer role at host employer.',
-    educatorRole: 'Assist with employer assessment centre prep, technical portfolio presentation, early application timelines.',
+    educatorRole: 'Assist with employer assessment center prep, technical portfolio presentation, early application timelines.',
   },
   {
     id: 'college',
@@ -273,7 +273,7 @@ export const MULTI_PATHWAY_ROUTES = [
     badge: 'Practical Craft & Licensure',
     badgeColor: 'text-amber-300 bg-amber-950/40 border-amber-500/30',
     duration: '3–4 Years Indentured',
-    environment: 'Job site construction, commercial maintenance plants, technical training centres.',
+    environment: 'Job site construction, commercial maintenance plants, technical training centers.',
     costStructure: 'Employed wage from start; employer covers college block-release training costs.',
     evidenceProduced: 'NVQ Level 3 portfolio, statutory electrical / gas safety certification, site logbook.',
     typicalDestination: 'Fully licensed qualified tradesperson, site supervisor, or independent contracting business owner.',
@@ -285,11 +285,11 @@ export const MULTI_PATHWAY_ROUTES = [
     badge: 'Technical Service',
     badgeColor: 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30',
     duration: 'Structured Career Trajectory',
-    environment: 'Defence engineering facilities, military logistics bases, civil aerospace maintenance depots.',
-    costStructure: 'Fully paid military / defence salary + free accommodation and world-class certified technical training.',
+    environment: 'Defense engineering facilities, military logistics bases, civil aerospace maintenance depots.',
+    costStructure: 'Fully paid military / defense salary + free accommodation and world-class certified technical training.',
     evidenceProduced: 'Military technical trade qualifications, security clearances, leadership accreditation.',
-    typicalDestination: 'Chartered military technical officer, commercial defence contractor, aviation engineer.',
-    educatorRole: 'Review defence bursary schemes, physical/academic entry criteria, return of service obligations.',
+    typicalDestination: 'Chartered military technical officer, commercial defense contractor, aviation engineer.',
+    educatorRole: 'Review defense bursary schemes, physical/academic entry criteria, return of service obligations.',
   },
 ];
 
@@ -316,7 +316,7 @@ export const PRIVACY_ACCESS_FIELDS = [
     mentor: 'Context for Feedback',
     educator: 'Institutional Access (School Context)',
     employer: 'Only if Student Consents to Share',
-    note: 'Academic and vocational evidence logged within school programmes is visible to school careers staff.',
+    note: 'Academic and vocational evidence logged within school programs is visible to school careers staff.',
   },
   {
     field: '1:1 Guidance Meeting Requests & Topics',
@@ -324,7 +324,7 @@ export const PRIVACY_ACCESS_FIELDS = [
     mentor: 'Can Suggest Meeting',
     educator: 'Direct Guidance Workflow',
     employer: 'Zero Access',
-    note: 'When a student asks to speak with their school counsellor, the stated topic and question are routed directly.',
+    note: 'When a student asks to speak with their school counselor, the stated topic and question are routed directly.',
   },
   {
     field: 'Formal Qualifications & Predicated Grades',
@@ -332,7 +332,7 @@ export const PRIVACY_ACCESS_FIELDS = [
     mentor: 'Prerequisite Check Context',
     educator: 'School Academic System Record',
     employer: 'Only upon Verified Application',
-    note: 'Qualifications are governed under school records and only shared externally with explicit student authorisation.',
+    note: 'Qualifications are governed under school records and only shared externally with explicit student authorization.',
   },
   {
     field: 'Employer Shared Applications & Messages',
@@ -349,7 +349,7 @@ export const COHORT_PATHWAY_STATS = [
   { label: 'Degree & Advanced Apprenticeships', percentage: 31, count: '46 students', color: 'bg-[#2F8FFF]' },
   { label: 'Technical Colleges & HNDs', percentage: 14, count: '21 students', color: 'bg-emerald-500' },
   { label: 'Skilled Trades & Practical Licensure', percentage: 8, count: '12 students', color: 'bg-amber-500' },
-  { label: 'Public Service, Defence & Direct Entry', percentage: 5, count: '7 students', color: 'bg-cyan-500' },
+  { label: 'Public Service, Defense & Direct Entry', percentage: 5, count: '7 students', color: 'bg-cyan-500' },
 ];
 
 export const COHORT_SECTOR_STATS = [
@@ -364,7 +364,7 @@ export const IMPLEMENTATION_STEPS = [
   {
     number: '01',
     title: 'Listen & Understand',
-    description: 'We meet with your careers leader, counsellors, and leadership to understand your school’s current career programme, Gatsby Benchmark / framework commitments, and specific student demographics.',
+    description: 'We meet with your careers leader, counselors, and leadership to understand your school’s current career program, Gatsby Benchmark / framework commitments, and specific student demographics.',
   },
   {
     number: '02',
@@ -374,7 +374,7 @@ export const IMPLEMENTATION_STEPS = [
   {
     number: '03',
     title: 'Educator Familiarisation',
-    description: 'Walk through both student and educator surfaces with your team so every counsellor understands what students experience, what context is shared, and how privacy boundaries operate.',
+    description: 'Walk through both student and educator surfaces with your team so every counselor understands what students experience, what context is shared, and how privacy boundaries operate.',
   },
   {
     number: '04',
@@ -384,12 +384,12 @@ export const IMPLEMENTATION_STEPS = [
   {
     number: '05',
     title: 'Review & Student Feedback',
-    description: 'Gather qualitative feedback from counsellors on session preparation quality and from students on pathway clarity. Identify any unique institutional needs.',
+    description: 'Gather qualitative feedback from counselors on session preparation quality and from students on pathway clarity. Identify any unique institutional needs.',
   },
   {
     number: '06',
     title: 'Refine Guidance Workflows',
-    description: 'Customise meeting request categories, integrate local employer and college opportunities, and tune follow-up queues to match counselling department capacity.',
+    description: 'Customize meeting request categories, integrate local employer and college opportunities, and tune follow-up queues to match counseling department capacity.',
   },
   {
     number: '07',
@@ -400,12 +400,12 @@ export const IMPLEMENTATION_STEPS = [
 
 export const EDUCATORS_FAQ = [
   {
-    q: 'Does Career OS replace career counsellors or guidance advisers?',
-    a: 'No. Career OS is explicitly built to augment educators, not replace them. The platform handles exploratory heavy-lifting between appointments—helping students research pathways, understand entry criteria, and log evidence—so human counsellors can spend their limited 1:1 time having nuanced, high-judgement conversations rather than rediscovering basic context.',
+    q: 'Does Career OS replace career counselors or guidance advisers?',
+    a: 'No. Career OS is explicitly built to augment educators, not replace them. The platform handles exploratory heavy-lifting between appointments—helping students research pathways, understand entry criteria, and log evidence—so human counselors can spend their limited 1:1 time having nuanced, high-judgment conversations rather than rediscovering basic context.',
   },
   {
     q: 'What does the AI Career Mentor do between educator meetings?',
-    a: 'The Career Mentor acts as an always-available, patient exploration partner for students. It answers clarifying questions about industries, compares university and vocational routes, suggests evidence-building activities (like school clubs or work shadowing), and helps students formulate clear questions for their next conversation with a human counsellor.',
+    a: 'The Career Mentor acts as an always-available, patient exploration partner for students. It answers clarifying questions about industries, compares university and vocational routes, suggests evidence-building activities (like school clubs or work shadowing), and helps students formulate clear questions for their next conversation with a human counselor.',
   },
   {
     q: 'Can educators read private student conversations with the AI Mentor?',
@@ -420,12 +420,12 @@ export const EDUCATORS_FAQ = [
     a: 'Educators see the educational and career guidance context appropriate to their institutional role. They do not have unrestrained access to private personal notes or non-school-related career reflections that the student has kept private.',
   },
   {
-    q: 'How do students request human counsellor support inside Career OS?',
+    q: 'How do students request human counselor support inside Career OS?',
     a: 'At any point during exploration, a student can tap "Request 1:1 Guidance" inside their mentor interface. They are prompted to state what specific question or pathway decision they would like to discuss. This populates the educator’s follow-up queue with context.',
   },
   {
-    q: 'How does Career OS prioritise follow-up requests without scoring students?',
-    a: 'Prioritisation is strictly event-based and workflow-based, never person-based. Requests are ordered by explicit criteria such as: student requested a meeting, upcoming application deadlines, or an agreed follow-up date set by the counsellor. There is zero algorithmic ranking or risk scoring of children.',
+    q: 'How does Career OS prioritize follow-up requests without scoring students?',
+    a: 'Prioritization is strictly event-based and workflow-based, never person-based. Requests are ordered by explicit criteria such as: student requested a meeting, upcoming application deadlines, or an agreed follow-up date set by the counselor. There is zero algorithmic ranking or risk scoring of children.',
   },
   {
     q: 'Does Career OS calculate student employability or "career-readiness" scores?',
@@ -445,7 +445,7 @@ export const EDUCATORS_FAQ = [
   },
   {
     q: 'What evidence can students add to their Career Passport?',
-    a: 'Students can document school coursework projects, STEM competitions, arts portfolios, work experience journals, volunteering hours, part-time jobs, and extracurricular achievements. Career OS helps students recognise the transferable capability inside everyday school activities.',
+    a: 'Students can document school coursework projects, STEM competitions, arts portfolios, work experience journals, volunteering hours, part-time jobs, and extracurricular achievements. Career OS helps students recognize the transferable capability inside everyday school activities.',
   },
   {
     q: 'Is all Career Passport evidence verified?',
@@ -489,10 +489,10 @@ export const EDUCATORS_FAQ = [
   },
   {
     q: 'How are educators onboarded and trained?',
-    a: 'We provide structured onboarding sessions for careers leaders, counsellor briefing guides, and classroom launch materials. Our team ensures all staff understand the interface, privacy boundaries, and guidance augmentation workflows.',
+    a: 'We provide structured onboarding sessions for careers leaders, counselor briefing guides, and classroom launch materials. Our team ensures all staff understand the interface, privacy boundaries, and guidance augmentation workflows.',
   },
   {
-    q: 'How can our school or district join the Launch School programme?',
+    q: 'How can our school or district join the Launch School program?',
     a: 'Schools can apply directly through the Launch School form on this page or by contacting our schools team. We work closely with founding partner schools to refine workflows and support careers education excellence.',
   },
 ];

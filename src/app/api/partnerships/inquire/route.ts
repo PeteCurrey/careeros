@@ -8,9 +8,9 @@ export async function POST(req: NextRequest) {
     const {
       name,
       workEmail,
-      organisation,
+      organization,
       website,
-      organisationType,
+      organizationType,
       partnershipType,
       approximateReach,
       message,
@@ -18,9 +18,9 @@ export async function POST(req: NextRequest) {
     } = body;
 
     // Validate required fields
-    if (!name || !workEmail || !organisation || !organisationType || !partnershipType || !message) {
+    if (!name || !workEmail || !organization || !organizationType || !partnershipType || !message) {
       return NextResponse.json(
-        { error: 'Please provide all mandatory fields (name, work email, organisation, organisation type, partnership type, message).' },
+        { error: 'Please provide all mandatory fields (name, work email, organization, organization type, partnership type, message).' },
         { status: 400 }
       );
     }
@@ -48,9 +48,9 @@ export async function POST(req: NextRequest) {
       .insert({
         name,
         work_email: workEmail,
-        organisation,
+        organization,
         website: website || null,
-        organisation_type: organisationType,
+        organisation_type: organizationType,
         partnership_type: partnershipType,
         approximate_reach: approximateReach || null,
         message,
@@ -77,9 +77,9 @@ export async function POST(req: NextRequest) {
         subjectId: data?.id || workEmail,
         payload: {
           name,
-          organisation,
+          organization,
           workEmail,
-          organisationType,
+          organizationType,
           partnershipType,
           approximateReach,
         },

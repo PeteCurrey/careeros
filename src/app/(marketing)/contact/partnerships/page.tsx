@@ -19,7 +19,7 @@ export default function ContactPartnershipsPage() {
   const partnerTypes = [
     {
       title: "School Districts & High Schools",
-      desc: "FERPA-compliant student career discovery, counsellor capacity scaling, and career readiness portfolios.",
+      desc: "FERPA-compliant student career discovery, counselor capacity scaling, and career readiness portfolios.",
       email: "schools@career-os.com",
     },
     {

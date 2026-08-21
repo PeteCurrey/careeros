@@ -91,10 +91,10 @@ export function Step02Location({
               />
             </div>
 
-            {/* ZIP / Postcode */}
+            {/* ZIP code */}
             <div className="sm:col-span-3 space-y-1.5">
               <label htmlFor="zip-input" className="text-xs font-semibold text-white">
-                ZIP / Postcode (Optional)
+                ZIP code (optional)
               </label>
               <input
                 id="zip-input"

@@ -29,7 +29,7 @@ const TARGET_ROLES: TargetRole[] = [
       'Mentoring mid-level specialists into senior contributors',
     ],
     contextNeeded: [
-      'Does your organisation recognize a formal technical ladder equivalent to management?',
+      'Does your organization recognize a formal technical ladder equivalent to management?',
       'Have you led technical strategy on multi-quarter initiatives?',
     ],
   },
@@ -65,12 +65,12 @@ const TARGET_ROLES: TargetRole[] = [
     ],
     toStrengthen: [
       'Direct P&L ownership and commercial risk forecasting',
-      'Enterprise-wide organisational redesign and change management',
+      'Enterprise-wide organizational redesign and change management',
       'Managing external regulatory, board, and investor relations',
     ],
     contextNeeded: [
       'Can you articulate how your department strategy directly expands corporate EBITDA or margins?',
-      'Have you successfully navigated a corporate reorganisation?',
+      'Have you successfully navigated a corporate reorganization?',
     ],
   },
   {

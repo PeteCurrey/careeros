@@ -68,7 +68,7 @@ export default function CareerPassportPage() {
     },
     {
       q: 'What can I put in my Career Passport?',
-      a: 'You can store formal qualifications, professional licences, technical certifications, project documentation, verified employment records, continuing professional development (CPD) logs, work samples, awards, and assessment results.',
+      a: 'You can store formal qualifications, professional licenses, technical certifications, project documentation, verified employment records, continuing professional development (CPD) logs, work samples, awards, and assessment results.',
     },
     {
       q: 'Is everything in a Career Passport independently verified?',
@@ -91,7 +91,7 @@ export default function CareerPassportPage() {
       a: 'Yes. When an employer has an authorized organizational relationship with Career OS, they can verify role titles, dates of employment, and specific project delivery milestones for former or current team members.',
     },
     {
-      q: 'What happens when a qualification or licence expires?',
+      q: 'What happens when a qualification or license expires?',
       a: 'Career OS automatically flags time-bounded credentials as "Expired" or "Renewal Due" once their validity period ends. The historical achievement remains on your record, but reviewers can see that active accreditation is no longer current.',
     },
     {
@@ -246,7 +246,7 @@ export default function CareerPassportPage() {
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
               A traditional résumé is intentionally concise—designed to be scanned in seconds by a recruiter.
               However, modern professional careers generate authentic evidence: certifications, technical project
-              sign-offs, reports, code samples, and licences that cannot fit onto two static pages.
+              sign-offs, reports, code samples, and licenses that cannot fit onto two static pages.
             </p>
           </div>
 
@@ -308,7 +308,7 @@ export default function CareerPassportPage() {
             </div>
             <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1 text-xs">
               <strong className="text-[var(--color-text-primary)] block">Expired / Revoked</strong>
-              <span className="text-[var(--color-text-secondary)]">Time-bounded licences automatically update when renewal windows expire.</span>
+              <span className="text-[var(--color-text-secondary)]">Time-bounded licenses automatically update when renewal windows expire.</span>
             </div>
           </div>
         </div>
@@ -544,7 +544,7 @@ export default function CareerPassportPage() {
 
               <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-1.5 text-xs">
                 <span className="font-mono font-bold text-xs text-blue-400 block">AGE 24</span>
-                <strong className="text-[var(--color-text-primary)] block">High-Voltage EV Licence</strong>
+                <strong className="text-[var(--color-text-primary)] block">High-Voltage EV License</strong>
                 <p className="text-[11px] text-[var(--color-text-secondary)]">Specialist certification added.</p>
               </div>
 

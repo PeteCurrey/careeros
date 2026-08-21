@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 export default function EventPromoteLandingPage() {
-  const organiserTypes = [
+  const organizerTypes = [
     {
       title: 'Employers & Enterprise',
       description: 'Host graduate recruitment days, engineering open houses, insight sessions, and hiring days.',
@@ -80,7 +80,7 @@ export default function EventPromoteLandingPage() {
         'Distinct "Featured" editorial badge',
         'Priority placement in search and filter results',
         'Weekly email summary inclusion to matched users',
-        'Organiser verification badge included upon audit',
+        'Organizer verification badge included upon audit',
       ],
       highlight: true,
       ctaText: 'Promote as Featured',
@@ -92,7 +92,7 @@ export default function EventPromoteLandingPage() {
       description: 'Top-tier branded promotion with targeted audience alignment and employer profile integration.',
       features: [
         'Everything in Featured Placement',
-        'Prominent blue architectural badge clearly labelled as "Sponsored"',
+        'Prominent blue architectural badge clearly labeled as "Sponsored"',
         'Integration with Employer Agent & Career Twin matching',
         'Detailed non-PII performance analytics report',
         'Direct connection to your CareerOS Employer profile',
@@ -144,10 +144,10 @@ export default function EventPromoteLandingPage() {
               View Promotion Options
             </a>
             <Link
-              href={ROUTES.EVENTS_ORGANISERS_DASHBOARD}
+              href={ROUTES.EVENTS_ORGANIZERS_DASHBOARD}
               className="text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--accent-blue)] transition-colors pl-2"
             >
-              Already registered? Organiser Portal →
+              Already registered? Organizer Portal →
             </Link>
           </div>
         </div>
@@ -194,21 +194,21 @@ export default function EventPromoteLandingPage() {
         </div>
       </section>
 
-      {/* ── SUITABLE ORGANISERS ──────────────────────────────────── */}
+      {/* ── SUITABLE ORGANIZERS ──────────────────────────────────── */}
       <section className="py-14 border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-8">
           <div className="max-w-2xl space-y-2">
-            <span className="section-label">Organiser Profiles</span>
+            <span className="section-label">Organizer Profiles</span>
             <h2 className="text-headline-editorial text-[var(--color-text-primary)]">
               Who can promote on CareerOS?
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              We welcome verified organisations delivering genuine career advancement, hiring opportunities, and educational value.
+              We welcome verified organizations delivering genuine career advancement, hiring opportunities, and educational value.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {organiserTypes.map((org) => {
+            {organizerTypes.map((org) => {
               const Icon = org.icon;
               return (
                 <div
@@ -351,7 +351,7 @@ export default function EventPromoteLandingPage() {
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-2">
               <div className="text-xs font-bold text-[var(--color-text-primary)]">Do you provide registration tracking analytics?</div>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Yes. Through the Organiser Portal, you can monitor page views, user saves, calendar exports, and outbound registration click-throughs in real time without compromising attendee PII.
+                Yes. Through the Organizer Portal, you can monitor page views, user saves, calendar exports, and outbound registration click-throughs in real time without compromising attendee PII.
               </p>
             </div>
           </div>

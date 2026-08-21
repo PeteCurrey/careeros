@@ -271,7 +271,7 @@ export function Header() {
 
             <div className="pt-2 border-t border-[var(--color-border-default)] space-y-2 text-sm font-medium text-[var(--color-text-secondary)]">
               <Link href={ROUTES.TRUST} className="block py-1 hover:text-[var(--color-text-primary)]">
-                Trust Centre & Responsible AI
+                Trust Center & Responsible AI
               </Link>
               <Link href={ROUTES.PATHWAYS} className="block py-1 hover:text-[var(--color-text-primary)]">
                 Pathways Directory

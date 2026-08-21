@@ -34,7 +34,7 @@ export default async function AdminComplianceRequestsPage() {
             <thead className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)] text-[var(--color-text-tertiary)] font-mono uppercase text-[10px]">
               <tr>
                 <th className="p-3">Requester</th>
-                <th className="p-3">Organisation & Type</th>
+                <th className="p-3">Organization & Type</th>
                 <th className="p-3">Requested Document</th>
                 <th className="p-3">NDA Status</th>
                 <th className="p-3">Request State</th>

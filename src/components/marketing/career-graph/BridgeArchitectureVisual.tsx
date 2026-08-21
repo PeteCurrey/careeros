@@ -104,7 +104,7 @@ export function BridgeArchitectureVisual() {
         </span>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs">
           <div className="p-2 rounded bg-white/5 border border-white/10 text-center space-y-1">
-            <span className="font-semibold text-[var(--color-text-primary)] block">Statutory Licence</span>
+            <span className="font-semibold text-[var(--color-text-primary)] block">Statutory License</span>
             <span className="text-[10px] text-[var(--color-text-tertiary)] block">Regulated authority</span>
           </div>
           <div className="p-2 rounded bg-white/5 border border-white/10 text-center space-y-1">

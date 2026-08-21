@@ -91,7 +91,7 @@ const WHAT_WE_WILL_NOT_BUILD = [
   'An AI that cold-contacts minor students on behalf of recruiters or commercial entities',
   'A psychological profiling or personality inference tool used to gatekeep career access',
   'An AI that sells, brokers, or discloses student career data to advertising or insurance markets',
-  'An AI therapist, crisis counsellor, or mental health intervention tool without qualified oversight',
+  'An AI therapist, crisis counselor, or mental health intervention tool without qualified oversight',
   'A biometric surveillance, voice analysis, or facial recognition capability for any purpose',
   'An AI recommendation system that accepts payment to alter algorithmic relevance rankings',
 ];
@@ -208,7 +208,7 @@ export default function ResponsibleAIPage() {
               Three Tiers of Risk. One Iterative Governance Lifecycle.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
-              AI capabilities are categorised by the consequential impact of their outputs. Every capability travels through a 12-stage governance lifecycle — from purpose definition through deployment, monitoring, and continuous review.
+              AI capabilities are categorized by the consequential impact of their outputs. Every capability travels through a 12-stage governance lifecycle — from purpose definition through deployment, monitoring, and continuous review.
             </p>
           </div>
           <TrustRiskFramework />

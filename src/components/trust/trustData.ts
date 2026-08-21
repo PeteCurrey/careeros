@@ -88,7 +88,7 @@ export const CAPABILITY_GOVERNANCE_MATRIX: CapabilityGovernanceItem[] = [
     capability: 'AI Career Mentor',
     description: '24/7 conversational career advisory, exploration, and self-reflection coaching.',
     aiRole: 'Generative conversation & pathway synthesis',
-    humanReview: 'User self-curated; pre-session briefs for school counsellors upon request',
+    humanReview: 'User self-curated; pre-session briefs for school counselors upon request',
     personalizationLevel: 'High (Career Twin context)',
     consequentialImpact: 'MODERATE',
     safeguards: [
@@ -127,7 +127,7 @@ export const CAPABILITY_GOVERNANCE_MATRIX: CapabilityGovernanceItem[] = [
     capability: 'Skill Gap Analysis',
     description: 'Identifies transferable skills and modular learning steps for role transitions.',
     aiRole: 'Taxonomy gap identification',
-    humanReview: 'Self-guided; counsellor advisory integration',
+    humanReview: 'Self-guided; counselor advisory integration',
     personalizationLevel: 'Role-specific',
     consequentialImpact: 'MODERATE',
     safeguards: [
@@ -137,7 +137,7 @@ export const CAPABILITY_GOVERNANCE_MATRIX: CapabilityGovernanceItem[] = [
     ],
   },
   {
-    capability: 'CV & Portfolio Assistance',
+    capability: 'Resume & Portfolio Assistance',
     description: 'Helps articulate achievements, capstone projects, and vocational experiences.',
     aiRole: 'Drafting & phrasing assistance',
     humanReview: 'User reviews and approves every word before export',
@@ -207,7 +207,7 @@ export interface AIUseCaseRecord {
   purpose: string;
   aiRole: string;
   outputType: 'ADVISORY' | 'DRAFT' | 'MATCH_SIGNAL' | 'SYNTHESIS';
-  humanInvolvement: 'DIRECT_USER_CONTROL' | 'MANDATORY_HUMAN_DECISION' | 'COUNSELLOR_PARTNERED';
+  humanInvolvement: 'DIRECT_USER_CONTROL' | 'MANDATORY_HUMAN_DECISION' | 'COUNSELOR_PARTNERED';
   dataUsed: string[];
   limitations: string[];
   riskTier: 'LOW' | 'MODERATE' | 'HEIGHTENED';
@@ -267,7 +267,7 @@ export const AI_USE_CASE_REGISTER: AIUseCaseRecord[] = [
   },
   {
     id: 'cv-assist',
-    capability: 'CV & Evidence Articulation',
+    capability: 'Resume & Evidence Articulation',
     purpose: 'Assist users in drafting bullet points and structuring career portfolios.',
     aiRole: 'Text drafting, grammar enhancement, action-verb structuring',
     outputType: 'DRAFT',

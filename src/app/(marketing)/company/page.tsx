@@ -54,7 +54,7 @@ export default function CompanyHubPage() {
       badge: "Ecosystem Network",
     },
     {
-      title: "Press & Media Centre",
+      title: "Press & Media Center",
       desc: "Official brand assets, company boilerplate, media contacts, and factual platform announcements.",
       href: ROUTES.COMPANY_PRESS,
       icon: Newspaper,

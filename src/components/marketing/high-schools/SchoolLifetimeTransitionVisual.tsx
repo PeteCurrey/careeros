@@ -21,7 +21,7 @@ export function SchoolLifetimeTransitionVisual() {
       duration: 'Ages 14–18',
       role: 'High School / District',
       icon: GraduationCap,
-      context: 'Initial career curiosities, broad pathway exploration, project evidence logging, structured counselling touchpoints.',
+      context: 'Initial career curiosities, broad pathway exploration, project evidence logging, structured counseling touchpoints.',
       dataGovernance: 'Institutional Workspace & Parental Oversight',
       isSchoolPhase: true,
     },

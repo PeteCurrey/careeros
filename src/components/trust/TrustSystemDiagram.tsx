@@ -39,7 +39,7 @@ export function TrustSystemDiagram() {
             Operating Model &bull; Seven-Pillar Trust Architecture
           </span>
           <h3 className="text-lg sm:text-xl font-serif text-white font-normal">
-            Governance Centred on Human Agency
+            Governance Centered on Human Agency
           </h3>
         </div>
         <span className="text-[10px] font-mono uppercase px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[var(--color-taupe-300)] self-start sm:self-auto shrink-0">
@@ -50,7 +50,7 @@ export function TrustSystemDiagram() {
       {/* Central Core & Surrounding Ring */}
       <div className="space-y-6">
         
-        {/* Centre Core Hub */}
+        {/* Center Core Hub */}
         <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)]/80 backdrop-blur-md border border-[rgba(47,143,255,0.3)] shadow-inner text-center max-w-xl mx-auto space-y-2">
           <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-[#2F8FFF] flex items-center justify-center text-[#2F8FFF] mx-auto shadow-[0_0_10px_rgba(47,143,255,0.3)]">
             <UserCheck className="w-5 h-5" />

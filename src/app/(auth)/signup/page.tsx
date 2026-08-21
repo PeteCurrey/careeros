@@ -183,7 +183,7 @@ export default function SignupPage() {
             </div>
             <div className="text-[11px] text-[var(--color-text-tertiary)] bg-[var(--color-surface-base)] p-3 rounded border border-[var(--color-border-default)] text-left space-y-1">
               <p className="font-semibold text-[var(--color-text-primary)]">School Arrangement:</p>
-              <p>Please ask your school teacher or administrator to invite you through the Career OS for Schools programme.</p>
+              <p>Please ask your school teacher or administrator to invite you through the Career OS for Schools program.</p>
             </div>
             <Link
               href={ROUTES.FOR_HIGH_SCHOOLS}

@@ -31,7 +31,7 @@ const REPORT_REASONS = [
   {
     value: 'inaccurate-employer-representation',
     label: 'Inaccurate Employer Representation',
-    description: 'Organisation misrepresenting itself, impersonating another employer.',
+    description: 'Organization misrepresenting itself, impersonating another employer.',
   },
   {
     value: 'inappropriate-for-minors',
@@ -187,7 +187,7 @@ export function EventReportModal({ eventId, eventTitle, isOpen, onClose }: Event
 
               <div className="p-3 bg-[var(--color-surface-sunken)] border border-[var(--color-border-subtle)] rounded-[var(--radius-sm)]">
                 <p className="text-[11px] text-[var(--color-text-tertiary)]">
-                  Reports are reviewed by CareerOS editorial staff. We do not expose reporter identity to event organisers. Events that violate our standards are suspended pending investigation regardless of payment status.
+                  Reports are reviewed by CareerOS editorial staff. We do not expose reporter identity to event organizers. Events that violate our standards are suspended pending investigation regardless of payment status.
                 </p>
               </div>
 

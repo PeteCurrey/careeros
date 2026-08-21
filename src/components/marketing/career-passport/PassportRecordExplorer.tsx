@@ -22,22 +22,22 @@ export function PassportRecordExplorer() {
       icon: Award,
       description: 'Formal degrees, diplomas, vocational credentials, trade certifications, and apprenticeship completions.',
       sampleItems: [
-        { name: 'BSc Fire Safety Engineering (Honours)', verification: 'Issuer Verified', verificationClass: 'bg-emerald-100 text-emerald-900 border-emerald-300', detail: 'University Registry confirmation (#FSE-2021)' },
+        { name: 'BSc Fire Safety Engineering (Honors)', verification: 'Issuer Verified', verificationClass: 'bg-emerald-100 text-emerald-900 border-emerald-300', detail: 'University Registry confirmation (#FSE-2021)' },
         { name: 'NVQ Level 3 Electrical Installation', verification: 'Issuer Verified', verificationClass: 'bg-emerald-100 text-emerald-900 border-emerald-300', detail: 'City & Guilds verification token linked' },
       ],
       storageType: 'Structured Credential Node',
     },
     {
-      id: 'licences',
-      title: 'Licences & Certifications',
+      id: 'licenses',
+      title: 'Licenses & Certifications',
       count: '4 Accreditations',
       icon: ShieldCheck,
-      description: 'Professional operating licences, safety passports, and mandatory industry regulatory accreditations.',
+      description: 'Professional operating licenses, safety passports, and mandatory industry regulatory accreditations.',
       sampleItems: [
         { name: 'IFE Registered Fire Risk Assessor (Tier 3)', verification: 'Issuer Verified', verificationClass: 'bg-emerald-100 text-emerald-900 border-emerald-300', detail: 'Institution of Fire Engineers Active Roll' },
         { name: 'OSHA 30-Hour Construction Safety', verification: 'Evidence Attached', verificationClass: 'bg-blue-100 text-blue-900 border-blue-300', detail: 'Scanned credential card in Vault' },
       ],
-      storageType: 'Time-Bounded Licence with Expiry Watch',
+      storageType: 'Time-Bounded License with Expiry Watch',
     },
     {
       id: 'projects',
@@ -104,7 +104,7 @@ export function PassportRecordExplorer() {
       title: 'Achievements & Awards',
       count: '2 Industry Recognitions',
       icon: Trophy,
-      description: 'Industry awards, client commendations, academic honours, and notable safety performance records.',
+      description: 'Industry awards, client commendations, academic honors, and notable safety performance records.',
       sampleItems: [
         { name: 'Young Engineer of the Year Finalist (2023)', verification: 'Evidence Attached', verificationClass: 'bg-blue-100 text-blue-900 border-blue-300', detail: 'National Safety Council Certificate' },
         { name: 'Zero-Harm Site Leadership Commendation', verification: 'Employer Verified', verificationClass: 'bg-emerald-100 text-emerald-900 border-emerald-300', detail: 'Client site audit commendation letter' },

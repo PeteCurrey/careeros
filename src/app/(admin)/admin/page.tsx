@@ -35,7 +35,7 @@ export default async function AdminCommandCentrePage() {
 
   return (
     <div className="space-y-8">
-      {/* Executive Command Centre Header */}
+      {/* Executive Command Center Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-[var(--color-border-default)]">
         <div>
           <div className="flex items-center gap-2 text-xs font-mono text-[var(--color-text-tertiary)] uppercase tracking-wider mb-1">
@@ -44,7 +44,7 @@ export default async function AdminCommandCentrePage() {
             <span className="text-[#2F8FFF] font-semibold">Active Node</span>
           </div>
           <h1 className="text-2xl lg:text-3xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            Command Centre
+            Command Center
           </h1>
           <p className="text-xs text-[var(--color-text-secondary)] mt-1">
             Real-time infrastructure, operations, discovery queues and platform integrity.
@@ -110,9 +110,9 @@ export default async function AdminCommandCentrePage() {
           </div>
 
           <div className="p-3 bg-[var(--color-surface-sunken)] rounded-sm border border-[var(--color-border-subtle)]">
-            <p className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Organisations</p>
+            <p className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">Organizations</p>
             <p className="text-lg font-bold text-[var(--color-text-primary)] mt-0.5">
-              {metrics.totalOrganisations.toLocaleString()}
+              {metrics.totalOrganizations.toLocaleString()}
             </p>
             <p className="text-[10px] text-[var(--color-text-secondary)] mt-0.5">
               {metrics.totalEmployers} emp / {metrics.totalSchools} sch
@@ -144,20 +144,20 @@ export default async function AdminCommandCentrePage() {
         </div>
       </div>
 
-      {/* Action Centre Section (Spec §7) */}
+      {/* Action Center Section (Spec §7) */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-[#DDD36D]" />
             <h2 className="text-sm font-bold text-[var(--color-text-primary)]">
-              Action Centre
+              Action Center
             </h2>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[var(--color-surface-sunken)] text-[var(--color-text-secondary)] border border-[var(--color-border-default)]">
               {actionItems.length} active {actionItems.length === 1 ? 'signal' : 'signals'}
             </span>
           </div>
           <Link
-            href={ROUTES.ADMIN_ACTION_CENTRE}
+            href={ROUTES.ADMIN_ACTION_CENTER}
             className="text-xs text-[#2F8FFF] hover:underline flex items-center gap-1 font-medium"
           >
             <span>View All Operational Queues</span>
@@ -261,7 +261,7 @@ export default async function AdminCommandCentrePage() {
             </div>
             <div>
               <h3 className="text-sm font-bold text-[var(--color-text-primary)] group-hover:text-[#CDBBD2] transition-colors">
-                AI Control Centre
+                AI Control Center
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
                 Model registry, prompt versions, routing policies & cost tracking.

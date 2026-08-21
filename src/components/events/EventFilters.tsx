@@ -6,7 +6,7 @@ import {
   CareerStage,
   ExperienceLevel,
   EventCostType,
-  OrganiserType,
+  OrganizerType,
 } from '@/types/events/platform';
 import { EVENT_CATEGORIES, EVENT_SECTORS } from '@/lib/events/data';
 import {
@@ -64,7 +64,7 @@ export function EventFilters({
   // Career stages list
   const careerStageOptions: { value: CareerStage; label: string }[] = [
     { value: 'high-school', label: 'High School (14-18)' },
-    { value: 'college', label: 'College & Sixth Form' },
+    { value: 'college', label: 'College & High School' },
     { value: 'university', label: 'Undergraduate' },
     { value: 'graduate', label: 'New Graduate' },
     { value: 'early-career', label: 'Early Career (1-3 yrs)' },
@@ -74,8 +74,8 @@ export function EventFilters({
     { value: 'entrepreneur-founder', label: 'Entrepreneurs & Founders' },
   ];
 
-  // Organiser types
-  const organiserTypeOptions: { value: OrganiserType; label: string }[] = [
+  // Organizer types
+  const organizerTypeOptions: { value: OrganizerType; label: string }[] = [
     { value: 'employer', label: 'Direct Employers' },
     { value: 'university', label: 'Universities' },
     { value: 'college', label: 'Colleges & Institutes' },
@@ -122,7 +122,7 @@ export function EventFilters({
     filters.sectors.length +
     filters.careerStages.length +
     filters.costTypes.length +
-    filters.organiserTypes.length +
+    filters.organizerTypes.length +
     (filters.onlyFeatured ? 1 : 0) +
     (filters.under18FriendlyOnly ? 1 : 0);
 
@@ -503,21 +503,21 @@ export function EventFilters({
                 </div>
               </div>
 
-              {/* Organiser Types */}
+              {/* Organizer Types */}
               <div className="space-y-2">
-                <label className="section-label">Organiser Type</label>
+                <label className="section-label">Organizer Type</label>
                 <div className="grid grid-cols-1 gap-1.5">
-                  {organiserTypeOptions.map((org) => {
-                    const isSelected = filters.organiserTypes.includes(org.value);
+                  {organizerTypeOptions.map((org) => {
+                    const isSelected = filters.organizerTypes.includes(org.value);
                     return (
                       <button
                         key={org.value}
                         type="button"
                         onClick={() => {
                           const updated = isSelected
-                            ? filters.organiserTypes.filter((o) => o !== org.value)
-                            : [...filters.organiserTypes, org.value];
-                          onFilterChange({ organiserTypes: updated });
+                            ? filters.organizerTypes.filter((o) => o !== org.value)
+                            : [...filters.organizerTypes, org.value];
+                          onFilterChange({ organizerTypes: updated });
                         }}
                         className={cn(
                           'p-2.5 rounded-[var(--radius-sm)] text-xs text-left border flex items-center justify-between transition-colors',

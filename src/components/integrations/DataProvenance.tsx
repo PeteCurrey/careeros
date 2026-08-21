@@ -14,7 +14,7 @@ export type ProvenanceStatus =
 
 export type ProvenanceProcessing =
   | 'none'
-  | 'normalised'
+  | 'normalized'
   | 'enriched'
   | 'derived';
 
@@ -79,13 +79,13 @@ const PROCESSING_LABELS: Record<ProvenanceProcessing, { label: string; desc: str
     label: 'Unmodified',
     desc: 'Displayed directly as provided by the original source.',
   },
-  normalised: {
-    label: 'Normalised',
-    desc: 'Standardised to CareerOS taxonomy structure without altering factual values.',
+  normalized: {
+    label: 'Normalized',
+    desc: 'Standardized to CareerOS taxonomy structure without altering factual values.',
   },
   enriched: {
     label: 'Enriched',
-    desc: 'Augmented with complementary labour-market or contextual signals.',
+    desc: 'Augmented with complementary labor-market or contextual signals.',
   },
   derived: {
     label: 'CareerOS Derived',
@@ -311,7 +311,7 @@ export function DataProvenance({
             {/* Processing Breakdown */}
             <div className="space-y-2 p-3 rounded bg-[var(--color-surface-raised)] border border-[var(--color-border-default)]">
               <span className="text-[9px] font-mono uppercase tracking-widest text-[var(--color-accent-primary)] block">
-                CareerOS Processing & Normalisation
+                CareerOS Processing & Normalization
               </span>
               <p className="text-xs font-semibold text-[var(--color-text-primary)]">{processingMeta.label}</p>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">

@@ -19,19 +19,19 @@ const SCHOOL_FAQS: FAQItem[] = [
     id: 'faq-1',
     category: 'Core Proposition & Scope',
     question: 'What is Career OS for High Schools?',
-    answer: 'Career OS for High Schools is an institutional guidance platform designed to give every student an individual AI Career Mentor, multi-pathway exploration tools, and a compounding Career Passport evidence record, while providing school counselling teams with structured context, preparatory briefs, and aggregate cohort insights without increasing administrative burden.',
+    answer: 'Career OS for High Schools is an institutional guidance platform designed to give every student an individual AI Career Mentor, multi-pathway exploration tools, and a compounding Career Passport evidence record, while providing school counseling teams with structured context, preparatory briefs, and aggregate cohort insights without increasing administrative burden.',
   },
   {
     id: 'faq-2',
     category: 'Core Proposition & Scope',
-    question: 'Does Career OS replace school career counsellors or advisors?',
-    answer: 'No. Career OS is explicitly built to augment human educators, not replace them. Career guidance involves nuanced empathy, local knowledge, emotional reassurance, family alignment, and pastoral care that algorithms cannot provide. Career OS helps students explore continuously between appointments so human counselling conversations are deeper, better prepared, and higher leverage.',
+    question: 'Does Career OS replace school career counselors or advisors?',
+    answer: 'No. Career OS is explicitly built to augment human educators, not replace them. Career guidance involves nuanced empathy, local knowledge, emotional reassurance, family alignment, and pastoral care that algorithms cannot provide. Career OS helps students explore continuously between appointments so human counseling conversations are deeper, better prepared, and higher leverage.',
   },
   {
     id: 'faq-3',
     category: 'AI & Educational Guardrails',
     question: 'What does the AI Career Mentor do in a school context?',
-    answer: 'The AI Career Mentor serves as a 24/7 exploratory dialogue partner. It helps students clarify their curiosities, deconstruct unfamiliar careers into required capabilities, compare academic and vocational routes with equal parity, and identify questions to bring to their human counsellor. It does not issue psychological diagnoses, make definitive career fate predictions, or assign numerical employability scores.',
+    answer: 'The AI Career Mentor serves as a 24/7 exploratory dialogue partner. It helps students clarify their curiosities, deconstruct unfamiliar careers into required capabilities, compare academic and vocational routes with equal parity, and identify questions to bring to their human counselor. It does not issue psychological diagnoses, make definitive career fate predictions, or assign numerical employability scores.',
   },
   {
     id: 'faq-4',
@@ -42,8 +42,8 @@ const SCHOOL_FAQS: FAQItem[] = [
   {
     id: 'faq-5',
     category: 'Student Privacy & Boundaries',
-    question: 'What information can school counsellors and administrators access?',
-    answer: 'School personnel have role-based access to permissioned educational context: cohort onboarding status, aggregate pathway interest distributions, student-submitted advising requests, scheduled counselling sessions, and student Career Passport evidence linked to school programmes. Surveillance-style behavioural tracking or secret student profiling is strictly prohibited.',
+    question: 'What information can school counselors and administrators access?',
+    answer: 'School personnel have role-based access to permissioned educational context: cohort onboarding status, aggregate pathway interest distributions, student-submitted advising requests, scheduled counseling sessions, and student Career Passport evidence linked to school programs. Surveillance-style behavioral tracking or secret student profiling is strictly prohibited.',
   },
   {
     id: 'faq-6',
@@ -146,13 +146,13 @@ const SCHOOL_FAQS: FAQItem[] = [
   },
   {
     id: 'faq-19',
-    category: 'Launch School Programme',
-    question: 'What is the Career OS Launch School Programme?',
-    answer: 'The Launch School Programme is an early-adopter initiative for forward-thinking high schools, academy trusts, and school districts. Launch Schools receive dedicated onboarding support, priority counsellor training, and direct input into upcoming institutional capabilities.',
+    category: 'Launch School Program',
+    question: 'What is the Career OS Launch School Program?',
+    answer: 'The Launch School Program is an early-adopter initiative for forward-thinking high schools, academy trusts, and school districts. Launch Schools receive dedicated onboarding support, priority counselor training, and direct input into upcoming institutional capabilities.',
   },
   {
     id: 'faq-20',
-    category: 'Launch School Programme',
+    category: 'Launch School Program',
     question: 'How does a school or district apply to become a Launch School?',
     answer: 'School leaders, career directors, or district administrators can submit the institutional application form on this page. Our education partnerships team will review your cohort size, current setup, and goals, and schedule a tailored institutional demonstration within 1–2 business days.',
   },
@@ -162,7 +162,7 @@ export function HighSchoolsFAQ() {
   const [openId, setOpenId] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const categories = ['All', 'Core Proposition & Scope', 'Student Privacy & Boundaries', 'Youth Safeguarding & Age Tiers', 'Equal Pathway Parity', 'Career Passport & Evidence', 'Launch School Programme'];
+  const categories = ['All', 'Core Proposition & Scope', 'Student Privacy & Boundaries', 'Youth Safeguarding & Age Tiers', 'Equal Pathway Parity', 'Career Passport & Evidence', 'Launch School Program'];
 
   const filteredFaqs = selectedCategory === 'All' 
     ? SCHOOL_FAQS 

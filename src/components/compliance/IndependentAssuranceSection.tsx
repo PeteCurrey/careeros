@@ -32,7 +32,7 @@ export function IndependentAssuranceSection({
           <span>INDEPENDENT VERIFICATION & ACCREDITED REGISTRATION</span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-text-primary)]">
-          Independent assurance & recognised standards
+          Independent assurance & recognized standards
         </h2>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
           CareerOS subjects its technical infrastructure, data privacy controls, and AI operational lifecycles to rigorous external examination. We maintain continuous controls aligned with international standards and provide verified evidence to institutional partners.

@@ -34,7 +34,7 @@ import {
 } from 'lucide-react';
 
 import { HeroEducatorComposition } from '@/components/marketing/educators/HeroEducatorComposition';
-import { CounsellorSessionPrep } from '@/components/marketing/educators/CounsellorSessionPrep';
+import { CounselorSessionPrep } from '@/components/marketing/educators/CounselorSessionPrep';
 import { StudentActivityLoop } from '@/components/marketing/educators/StudentActivityLoop';
 import { MultiPathwayComparison } from '@/components/marketing/educators/MultiPathwayComparison';
 import { EducatorWorkspaceTabs } from '@/components/marketing/educators/EducatorWorkspaceTabs';
@@ -46,14 +46,14 @@ import { LaunchSchoolForm } from '@/components/marketing/high-schools/LaunchScho
 import { IMPLEMENTATION_STEPS } from '@/components/marketing/educators/educatorsData';
 
 export const metadata: Metadata = {
-  title: 'Career Guidance Tools for Educators & School Counsellors | Career OS',
+  title: 'Career Guidance Tools for Educators & School Counselors | Career OS',
   description:
-    'See how Career OS is designed to help school counsellors and educators support student career exploration, pathways, evidence and follow-up without replacing human guidance.',
+    'See how Career OS is designed to help school counselors and educators support student career exploration, pathways, evidence and follow-up without replacing human guidance.',
   alternates: {
     canonical: 'https://career-os.com/schools/educators',
   },
   openGraph: {
-    title: 'Career Guidance Tools for Educators & School Counsellors | Career OS',
+    title: 'Career Guidance Tools for Educators & School Counselors | Career OS',
     description:
       'More context before the conversation. More time for the part only a human can do. Discover Career OS for school careers teams.',
     url: 'https://career-os.com/schools/educators',
@@ -65,9 +65,9 @@ export default function SchoolsEducatorsPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOccupationalProgram',
-    name: 'Career OS for Educators & School Counsellors',
+    name: 'Career OS for Educators & School Counselors',
     description:
-      'Career guidance infrastructure designed to augment school counsellors, career leaders, and teachers with pre-session exploration synthesis, multi-pathway parity, and structured student evidence.',
+      'Career guidance infrastructure designed to augment school counselors, career leaders, and teachers with pre-session exploration synthesis, multi-pathway parity, and structured student evidence.',
     provider: {
       '@type': 'Organization',
       name: 'Career OS',
@@ -113,7 +113,7 @@ export default function SchoolsEducatorsPage() {
             <div className="flex items-center gap-2">
               <span className="accent-blue-dot accent-blue-dot-pulse" />
               <span className="section-label">
-                Career Counsellors, Advisers &amp; School Careers Teams
+                Career Counselors, Advisers &amp; School Careers Teams
               </span>
             </div>
 
@@ -126,7 +126,7 @@ export default function SchoolsEducatorsPage() {
             </h1>
 
             <p className="text-lead text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
-              Career OS is being built to help students explore careers continuously while giving educators appropriate context, structured follow-up, and clearer pathways for high-judgement human guidance.
+              Career OS is being built to help students explore careers continuously while giving educators appropriate context, structured follow-up, and clearer pathways for high-judgment human guidance.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
@@ -222,7 +222,7 @@ export default function SchoolsEducatorsPage() {
               </div>
 
               <div className="p-3.5 rounded bg-[rgba(47,143,255,0.08)] border border-[rgba(47,143,255,0.2)] text-xs text-[#6BB8FF] font-medium">
-                Result: 100% of the meeting is spent on high-judgement mentoring, realistic challenge, and actionable next steps.
+                Result: 100% of the meeting is spent on high-judgment mentoring, realistic challenge, and actionable next steps.
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function SchoolsEducatorsPage() {
       </section>
 
       {/* ============================================================
-          SECTION 03: INTERACTION 01 — COUNSELLOR SESSION PREP
+          SECTION 03: INTERACTION 01 — COUNSELOR SESSION PREP
           ============================================================ */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)]">
         <div className="container-editorial space-y-12">
@@ -253,12 +253,12 @@ export default function SchoolsEducatorsPage() {
             </p>
           </div>
 
-          <CounsellorSessionPrep />
+          <CounselorSessionPrep />
         </div>
       </section>
 
       {/* ============================================================
-          SECTION 04: AI PREPARATION / HUMAN JUDGEMENT
+          SECTION 04: AI PREPARATION / HUMAN JUDGMENT
           Career guidance is not just an information problem.
           ============================================================ */}
       <section className="section-editorial border-b border-[var(--color-border-default)]">
@@ -305,7 +305,7 @@ export default function SchoolsEducatorsPage() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Pre-Session Synthesis:</strong> Organising student exploration history into clear, concise briefs for counsellor review.</span>
+                  <span><strong className="text-white">Pre-Session Synthesis:</strong> Organizing student exploration history into clear, concise briefs for counselor review.</span>
                 </li>
               </ul>
             </div>
@@ -337,7 +337,7 @@ export default function SchoolsEducatorsPage() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Professional Career Judgement:</strong> Knowing when a student needs encouragement, when they need realistic boundary setting, and when to escalate safeguarding.</span>
+                  <span><strong className="text-white">Professional Career Judgment:</strong> Knowing when a student needs encouragement, when they need realistic boundary setting, and when to escalate safeguarding.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
@@ -361,7 +361,7 @@ export default function SchoolsEducatorsPage() {
               Career development shouldn’t stop when the appointment ends.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Career decision-making is not a single annual transaction. Inside Career OS, students follow an active exploratory loop between guidance sessions—researching, comparing, building evidence, and returning to their counsellor with sharper, more mature questions.
+              Career decision-making is not a single annual transaction. Inside Career OS, students follow an active exploratory loop between guidance sessions—researching, comparing, building evidence, and returning to their counselor with sharper, more mature questions.
             </p>
           </div>
 
@@ -390,18 +390,18 @@ export default function SchoolsEducatorsPage() {
       </section>
 
       {/* ============================================================
-          SECTION 07: HELP STUDENTS RECOGNISE EVIDENCE
-          Students often have more evidence than they realise.
+          SECTION 07: HELP STUDENTS RECOGNIZE EVIDENCE
+          Students often have more evidence than they realize.
           ============================================================ */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)]">
         <div className="container-editorial space-y-16">
           <div className="max-w-3xl space-y-4">
             <span className="section-label">Transferable Evidence &bull; Career Passport</span>
             <h2 className="text-headline-editorial text-white">
-              Students often have more evidence than they realise.
+              Students often have more evidence than they realize.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Young people frequently assume they have &ldquo;no experience&rdquo; because they have not held a full-time corporate job. Educators play a vital role in helping students recognise the rigorous, transferable capability demonstrated through school projects, part-time jobs, and volunteering.
+              Young people frequently assume they have &ldquo;no experience&rdquo; because they have not held a full-time corporate job. Educators play a vital role in helping students recognize the rigorous, transferable capability demonstrated through school projects, part-time jobs, and volunteering.
             </p>
           </div>
 
@@ -494,17 +494,17 @@ export default function SchoolsEducatorsPage() {
 
       {/* ============================================================
           SECTION 09: WHO NEEDS HUMAN ATTENTION?
-          Prioritise requests, not people.
+          Prioritize requests, not people.
           ============================================================ */}
       <section className="section-editorial border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)]">
         <div className="container-editorial space-y-16">
           <div className="max-w-3xl space-y-4">
-            <span className="section-label">Ethical Workflow Prioritisation</span>
+            <span className="section-label">Ethical Workflow Prioritization</span>
             <h2 className="text-headline-editorial text-white">
-              Prioritise requests, not people.
+              Prioritize requests, not people.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              This distinction is foundational to our philosophy. Career OS must never assign algorithmic &ldquo;worth&rdquo; scores to students or rank who is &ldquo;most deserving&rdquo; of human counsellor time. Workflow queues are strictly organized by transparent event milestones.
+              This distinction is foundational to our philosophy. Career OS must never assign algorithmic &ldquo;worth&rdquo; scores to students or rank who is &ldquo;most deserving&rdquo; of human counselor time. Workflow queues are strictly organized by transparent event milestones.
             </p>
           </div>
 
@@ -514,7 +514,7 @@ export default function SchoolsEducatorsPage() {
                 Valid Event-Based Triggers
               </span>
               <h3 className="text-lg font-serif text-white font-normal">
-                How Requests are Prioritised
+                How Requests are Prioritized
               </h3>
               <ul className="space-y-2.5 text-xs text-[var(--color-text-secondary)]">
                 <li className="flex items-start gap-2">
@@ -523,15 +523,15 @@ export default function SchoolsEducatorsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Agreed Follow-Up Date:</strong> An agreed milestone date set by the counsellor during a prior 1:1 session.</span>
+                  <span><strong className="text-white">Agreed Follow-Up Date:</strong> An agreed milestone date set by the counselor during a prior 1:1 session.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Application Deadlines:</strong> UCAS, apprenticeship levy intakes, or college option confirmation dates.</span>
+                  <span><strong className="text-white">Application Deadlines:</strong> Common App and rolling deadlines, apprenticeship intakes, or dual-enrollment confirmation dates.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Evidence Review:</strong> Student requests teacher/counsellor verification of a completed work placement.</span>
+                  <span><strong className="text-white">Evidence Review:</strong> Student requests teacher/counselor verification of a completed work placement.</span>
                 </li>
               </ul>
             </div>
@@ -565,7 +565,7 @@ export default function SchoolsEducatorsPage() {
           </div>
 
           <div className="p-5 rounded-lg bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] text-center text-xs text-[var(--color-text-secondary)]">
-            <strong className="text-white">Core Ethical Rule:</strong> Workflow prioritisation is about managing logistics and calendar commitments—never evaluating the human worth or potential of children.
+            <strong className="text-white">Core Ethical Rule:</strong> Workflow prioritization is about managing logistics and calendar commitments—never evaluating the human worth or potential of children.
           </div>
         </div>
       </section>
@@ -635,7 +635,7 @@ export default function SchoolsEducatorsPage() {
                 Transparent AI Identification
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Students are always reminded that the Career Mentor is an automated software tool, not a therapist, clinical counsellor, or legal guardian.
+                Students are always reminded that the Career Mentor is an automated software tool, not a therapist, clinical counselor, or legal guardian.
               </p>
             </div>
 
@@ -691,7 +691,7 @@ export default function SchoolsEducatorsPage() {
               Better student guidance can also create better family conversations.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Many difficult career guidance dilemmas arise when a student’s emerging interests conflict with family expectations. Educators spend significant energy bridging these gaps. Career OS provides objective, neutral labour market data that students and families can review together constructively.
+              Many difficult career guidance dilemmas arise when a student’s emerging interests conflict with family expectations. Educators spend significant energy bridging these gaps. Career OS provides objective, neutral labor market data that students and families can review together constructively.
             </p>
           </div>
 
@@ -760,7 +760,7 @@ export default function SchoolsEducatorsPage() {
                 Pre-Event Synthesis
               </span>
               <h4 className="text-base font-serif text-white font-medium">
-                Personalised Fair Briefings
+                Personalized Fair Briefings
               </h4>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                 Before attending an event, students receive a curated briefing of attending employers aligned with their Career Passport interests and 3 suggested questions to ask booth representatives.
@@ -848,7 +848,7 @@ export default function SchoolsEducatorsPage() {
               <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
                 <span className="text-[10px] font-mono text-[#6BB8FF] uppercase font-bold block">Stage 01</span>
                 <h4 className="font-semibold text-white text-sm">School Exploration</h4>
-                <p className="text-[var(--color-text-secondary)]">Counsellor guidance, multi-pathway research, school project verification.</p>
+                <p className="text-[var(--color-text-secondary)]">Counselor guidance, multi-pathway research, school project verification.</p>
               </div>
 
               <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
@@ -933,7 +933,7 @@ export default function SchoolsEducatorsPage() {
               Technology should reduce ambiguity, not add another administrative burden.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              School counsellors are already overburdened with paperwork. Career OS is explicitly engineered around what we refuse to ask educators to do.
+              School counselors are already overburdened with paperwork. Career OS is explicitly engineered around what we refuse to ask educators to do.
             </p>
           </div>
 
@@ -980,7 +980,7 @@ export default function SchoolsEducatorsPage() {
           <div className="max-w-3xl space-y-4">
             <span className="section-label">Questions &amp; Answers</span>
             <h2 className="text-headline-editorial text-white">
-              Frequently Asked Questions by Careers Leaders &amp; Counsellors
+              Frequently Asked Questions by Careers Leaders &amp; Counselors
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
               Detailed explanations of how Career OS supports guidance teams, protects student privacy, maintains pathway parity, and coordinates with existing school policies.
@@ -1002,7 +1002,7 @@ export default function SchoolsEducatorsPage() {
               Give educators more context—not more administration.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              Career OS is partnering with high schools, academy trusts, and school districts to build the future of continuous, dignified career guidance. Apply below to join the Launch School programme.
+              Career OS is partnering with high schools, academy trusts, and school districts to build the future of continuous, dignified career guidance. Apply below to join the Launch School program.
             </p>
           </div>
 

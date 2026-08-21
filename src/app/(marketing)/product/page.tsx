@@ -290,7 +290,7 @@ export default function ProductOverviewPage() {
                   Permanent Data Portability
                 </h4>
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Your Career Passport and Twin remain your property across educational transitions, corporate reorganisations, and international relocations.
+                  Your Career Passport and Twin remain your property across educational transitions, corporate reorganizations, and international relocations.
                 </p>
               </div>
             </ScrollReveal>

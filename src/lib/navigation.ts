@@ -63,7 +63,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
           { label: 'Employer Open Days', href: ROUTES.EVENTS_EMPLOYER_OPEN_DAYS, description: 'On-site facility tours and studio walk-throughs.' },
           { label: 'Recruitment Events', href: ROUTES.EVENTS_RECRUITMENT, description: 'Direct hiring pipelines and candidate screenings.' },
           { label: 'Hiring Days', href: ROUTES.EVENTS_HIRING_DAYS, description: 'Fast-track interviews and on-the-spot assessments.' },
-          { label: 'Graduate Recruitment', href: ROUTES.EVENTS_GRADUATE_RECRUITMENT, description: 'Rotational programmes for university leavers.' },
+          { label: 'Graduate Recruitment', href: ROUTES.EVENTS_GRADUATE_RECRUITMENT, description: 'Rotational programs for university leavers.' },
           { label: 'Apprenticeship Events', href: ROUTES.EVENTS_APPRENTICESHIPS, description: 'Degree & Advanced apprenticeships across industries.' },
         ],
       },
@@ -75,7 +75,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
           { label: 'Webinars', href: ROUTES.EVENTS_WEBINARS, description: 'Expert industry briefings and market forecasts.' },
           { label: 'Masterclasses', href: ROUTES.EVENTS_MASTERCLASSES, description: 'Advanced strategies led by distinguished practitioners.' },
           { label: 'Career Talks', href: ROUTES.EVENTS_CAREER_TALKS, description: 'Candid stories of non-linear professional journeys.' },
-          { label: 'CV & Interview Clinics', href: ROUTES.EVENTS_CV_CLINICS, description: 'Resume audits and simulated behavioral interviews.' },
+          { label: 'Resume & Interview Clinics', href: ROUTES.EVENTS_CV_CLINICS, description: 'Resume audits and simulated behavioral interviews.' },
           { label: 'Networking Events', href: ROUTES.EVENTS_NETWORKING, description: 'Meaningful sector mixers and community meetups.' },
         ],
       },
@@ -154,7 +154,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
       {
         label: 'Institutions',
         items: [
-          { label: 'High Schools', href: ROUTES.FOR_HIGH_SCHOOLS, description: 'Personalised career development for every student.' },
+          { label: 'High Schools', href: ROUTES.FOR_HIGH_SCHOOLS, description: 'Personalized career development for every student.' },
           { label: 'Employers', href: ROUTES.FOR_EMPLOYERS, description: 'Intelligent talent discovery — not a vacancy board.' },
         ],
       },
@@ -204,7 +204,7 @@ export const megaMenuContent: Record<string, MegaMenuSection> = {
         label: 'Privacy & Safeguarding',
         items: [
           { label: 'Compliance & Assurance', href: ROUTES.TRUST_COMPLIANCE, description: 'Verified compliance frameworks and assurance documentation.' },
-          { label: 'Data Ethics', href: ROUTES.TRUST_DATA_ETHICS, description: 'Zero data sales, no behavioural ad tracking, and data minimisation.' },
+          { label: 'Data Ethics', href: ROUTES.TRUST_DATA_ETHICS, description: 'Zero data sales, no behavioral ad tracking, and data minimisation.' },
           { label: 'Safeguarding', href: ROUTES.TRUST_SAFEGUARDING, description: 'Student protection, minor access gating, and school safety.' },
           { label: 'Security', href: ROUTES.TRUST_SECURITY, description: 'Encryption, tenant isolation, and PostgreSQL RLS security.' },
           { label: 'Verification', href: ROUTES.TRUST_VERIFICATION, description: 'Evidence verification and credential provenance.' },
@@ -251,7 +251,7 @@ export const footerNav: NavGroup[] = [
       { label: 'Meet Employers', href: ROUTES.EVENTS_MEET_THE_EMPLOYER },
       { label: 'Founder & Startup Events', href: ROUTES.EVENTS_FOUNDERS },
       { label: 'Promote an Event', href: ROUTES.EVENTS_PROMOTE },
-      { label: 'Organiser Portal', href: ROUTES.EVENTS_ORGANISERS_DASHBOARD },
+      { label: 'Organizer Portal', href: ROUTES.EVENTS_ORGANIZERS_DASHBOARD },
     ],
   },
   {
@@ -303,7 +303,7 @@ export const footerNav: NavGroup[] = [
   {
     label: 'Trust',
     items: [
-      { label: 'Trust Centre', href: ROUTES.TRUST },
+      { label: 'Trust Center', href: ROUTES.TRUST },
       { label: 'Compliance & Assurance', href: ROUTES.TRUST_COMPLIANCE },
       { label: 'Responsible AI', href: ROUTES.TRUST_RESPONSIBLE_AI },
       { label: 'Safeguarding', href: ROUTES.TRUST_SAFEGUARDING },
@@ -315,7 +315,7 @@ export const footerNav: NavGroup[] = [
   {
     label: 'Standards',
     items: [
-      { label: 'Standards Centre', href: ROUTES.STANDARDS },
+      { label: 'Standards Center', href: ROUTES.STANDARDS },
       { label: 'Community Code', href: ROUTES.STANDARDS_COMMUNITY_CODE },
       { label: 'Employer Code', href: ROUTES.STANDARDS_EMPLOYER_CODE },
       { label: 'Anti-Discrimination', href: ROUTES.STANDARDS_ANTI_DISCRIMINATION },
@@ -357,7 +357,7 @@ export const footerNav: NavGroup[] = [
   {
     label: 'Legal',
     items: [
-      { label: 'Legal Centre', href: ROUTES.LEGAL },
+      { label: 'Legal Center', href: ROUTES.LEGAL },
       { label: 'Terms of Service', href: ROUTES.LEGAL_TERMS },
       { label: 'Privacy Policy', href: ROUTES.LEGAL_PRIVACY },
       { label: 'Cookie Policy', href: ROUTES.LEGAL_COOKIES },

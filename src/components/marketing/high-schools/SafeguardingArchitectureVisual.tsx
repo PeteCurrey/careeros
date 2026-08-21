@@ -39,16 +39,16 @@ export function SafeguardingArchitectureVisual() {
       guardrails: [
         'Strict zero-recruiter visibility: no commercial employer access to profile or exploration data',
         'Exploratory Career Mentor operates under heightened content moderation guardrails',
-        'School counselling teams receive structured pre-conversation briefs with zero transcript surveillance',
+        'School counseling teams receive structured pre-conversation briefs with zero transcript surveillance',
       ],
-      legalNote: 'Requires institutional authorisation or guardian verification in compliance with applicable youth privacy standards.',
+      legalNote: 'Requires institutional authorization or guardian verification in compliance with applicable youth privacy standards.',
     },
     {
       tier: 'Under 13',
       badge: 'Strict Institutional Authorization Only',
       badgeStyle: 'bg-amber-500/10 text-amber-300 border-amber-500/30',
       headline: 'No Open Consumer Registration',
-      description: 'Zero direct consumer registration. Supported strictly through permitted institutional arrangements where authorised under educational data privacy laws.',
+      description: 'Zero direct consumer registration. Supported strictly through permitted institutional arrangements where authorized under educational data privacy laws.',
       guardrails: [
         'Strict data minimisation: zero third-party data transmission or persistent commercial tracking',
         'Direct parent/school administrative consent and oversight mechanisms',

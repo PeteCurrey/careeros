@@ -36,7 +36,7 @@ export function PartnershipPrinciplesSection() {
               </h2>
 
               <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed font-normal">
-                CareerOS does not accept partnerships simply because an organisation will pay. Every relationship must pass five strict governing principles before integration.
+                CareerOS does not accept partnerships simply because an organization will pay. Every relationship must pass five strict governing principles before integration.
               </p>
             </div>
 

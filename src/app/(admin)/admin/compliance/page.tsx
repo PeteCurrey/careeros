@@ -52,7 +52,7 @@ export default async function AdminCompliancePage() {
     <div className="space-y-8">
       <AdminSectionHeader
         category="Assurance & Governance"
-        title="Compliance & Assurance Control Centre"
+        title="Compliance & Assurance Control Center"
         description="Operational management of verified security certifications, AI decision governance, evidence vault dossiers, statutory renewal calendars, and institutional NDA access requests."
         actions={
           <div className="flex items-center gap-2">

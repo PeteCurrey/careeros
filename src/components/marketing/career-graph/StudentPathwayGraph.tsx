@@ -40,7 +40,7 @@ export function StudentPathwayGraph() {
     },
     engineering: {
       title: 'Physical Systems, Physics & Building',
-      interests: ['Physics & Maths', 'Mechanical Fabrication', 'Robotics & Hardware', 'Electronics'],
+      interests: ['Physics & Math', 'Mechanical Fabrication', 'Robotics & Hardware', 'Electronics'],
       routes: [
         {
           name: 'University Degree (BEng / MEng)',

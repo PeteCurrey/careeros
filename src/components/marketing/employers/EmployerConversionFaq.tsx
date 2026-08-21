@@ -50,7 +50,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: 'How does Career OS support career changers?',
-    a: "Rather than screening out candidates who lack the exact target title on their CV, Career OS highlights transferable competencies and explicitly identifies the specific bridges needed to facilitate a successful industry transition.",
+    a: "Rather than screening out candidates who lack the exact target title on their resume, Career OS highlights transferable competencies and explicitly identifies the specific bridges needed to facilitate a successful industry transition.",
   },
   {
     q: 'Can Career OS help recruit military veterans and service leavers?',
@@ -61,7 +61,7 @@ const FAQS: FAQ[] = [
     a: "Career OS treats apprenticeships as a lifelong capability-building journey. It helps candidates document project evidence and vocational milestones in their Career Passport, which remains active and portable throughout their subsequent career.",
   },
   {
-    q: 'How does Career OS support early-career talent without long CV histories?',
+    q: 'How does Career OS support early-career talent without long resume histories?',
     a: "Career OS evaluates school coursework projects, technical competitions, volunteering, extracurricular leadership, and part-time work as legitimate early evidence of applied technical and interpersonal capability.",
   },
   {
@@ -105,8 +105,8 @@ const FAQS: FAQ[] = [
     a: "Yes. Career OS supports localized capability mapping, cross-border qualification translation, and region-specific regulatory configurations.",
   },
   {
-    q: 'What is the Founding Employer programme?',
-    a: "The Founding Employer programme is an exclusive early-adopter partnership giving forward-thinking employers priority access to Employer Agent pilots, role-definition workshops, adjacent talent discovery, and direct influence over our product roadmap.",
+    q: 'What is the Founding Employer program?',
+    a: "The Founding Employer program is an exclusive early-adopter partnership giving forward-thinking employers priority access to Employer Agent pilots, role-definition workshops, adjacent talent discovery, and direct influence over our product roadmap.",
   },
   {
     q: 'How does an organization begin a Founding Employer pilot?',

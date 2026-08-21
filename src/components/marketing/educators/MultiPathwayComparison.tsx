@@ -184,7 +184,7 @@ export function MultiPathwayComparison() {
           &ldquo;Career OS should help educators compare pathways rather than encode a hierarchy of pathways.&rdquo;
         </span>
         <span className="font-mono text-[11px] text-[var(--color-taupe-300)]">
-          Architectural Parity &bull; Non-Biased Career Modelling
+          Architectural Parity &bull; Non-Biased Career Modeling
         </span>
       </div>
     </div>

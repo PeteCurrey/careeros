@@ -14,9 +14,9 @@ const PARTNER_TRACKS = [
     id: 'employer',
     icon: Building2,
     title: 'Employer Partnership',
-    description: 'Connect your organisation with motivated, career-ready candidates. Engage talent based on demonstrated evidence before it reaches traditional job boards.',
+    description: 'Connect your organization with motivated, career-ready candidates. Engage talent based on demonstrated evidence before it reaches traditional job boards.',
     audience: 'Private, public and social-sector employers',
-    examples: 'Early careers programmes, internship pipelines, verified talent discovery',
+    examples: 'Early careers programs, internship pipelines, verified talent discovery',
     link: ROUTES.FOR_EMPLOYERS,
     ctaText: 'Explore for Employers',
     imageSrc: '/media/employers/audience_employers.jpg',
@@ -28,7 +28,7 @@ const PARTNER_TRACKS = [
     title: 'School & College Integration',
     description: 'Equip students with structured lifelong career navigation, supporting vocational trades and university pathways equally under FERPA-compliant privacy.',
     audience: 'US high schools, community colleges, universities',
-    examples: 'Student accounts, counsellor copilot tools, longitudinal outcome reporting',
+    examples: 'Student accounts, counselor copilot tools, longitudinal outcome reporting',
     link: ROUTES.FOR_HIGH_SCHOOLS,
     ctaText: 'Explore for Schools',
     imageSrc: '/media/schools/audience_schools.jpg',
@@ -38,8 +38,8 @@ const PARTNER_TRACKS = [
     id: 'workforce',
     icon: Briefcase,
     title: 'Workforce Development',
-    description: 'Extend your regional services digitally. Connect job-seekers, training programmes, and local employers through sovereign CareerOS infrastructure.',
-    audience: 'Workforce development boards, nonprofits, government programmes',
+    description: 'Extend your regional services digitally. Connect job-seekers, training programs, and local employers through sovereign CareerOS infrastructure.',
+    audience: 'Workforce development boards, nonprofits, government programs',
     examples: 'American Job Center tools, participant tracking, WIOA training referrals',
     link: ROUTES.SCHOOLS_PARTNERSHIPS,
     ctaText: 'Explore for Workforce',
@@ -50,7 +50,7 @@ const PARTNER_TRACKS = [
     id: 'strategic',
     icon: Globe,
     title: 'Strategic Alliances',
-    description: 'For organisations whose platforms are foundational to career progression and who want to build alongside CareerOS at the ecosystem level.',
+    description: 'For organizations whose platforms are foundational to career progression and who want to build alongside CareerOS at the ecosystem level.',
     audience: 'Learning providers, credentialing bodies, data providers',
     examples: 'API integration, W3C credential exchange, co-developed pathway taxonomies',
     link: ROUTES.CONTACT_PARTNERSHIPS,
@@ -89,7 +89,7 @@ export function PartnerWithUsSection() {
               </h2>
 
               <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed font-normal">
-                We work with employers, schools, colleges, workforce development boards, training providers, and ecosystem partners who share our commitment to building careers that are evidence-based, transparent, and human-centred.
+                We work with employers, schools, colleges, workforce development boards, training providers, and ecosystem partners who share our commitment to building careers that are evidence-based, transparent, and human-centered.
               </p>
             </div>
 

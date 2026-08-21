@@ -41,7 +41,7 @@ export default async function AdminEventPromotionsPage() {
         <AdminEmptyState
           icon={DollarSign}
           title="0 Active Promoted Placements"
-          description="Commercial event placements booked by employers and conference organisers will appear here with real impression and click metrics."
+          description="Commercial event placements booked by employers and conference organizers will appear here with real impression and click metrics."
           badge="Commercial Inventory"
         />
       ) : (

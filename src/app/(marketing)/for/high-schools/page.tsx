@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 import { HeroSchoolExperience } from '@/components/marketing/high-schools/HeroSchoolExperience';
-import { CounsellorAugmentationWorkflow } from '@/components/marketing/high-schools/CounsellorAugmentationWorkflow';
+import { CounselorAugmentationWorkflow } from '@/components/marketing/high-schools/CounselorAugmentationWorkflow';
 import { InteractiveSchoolPathwayExplorer } from '@/components/marketing/high-schools/InteractiveSchoolPathwayExplorer';
 import { StudentPassportPreview } from '@/components/marketing/high-schools/StudentPassportPreview';
 import { InteractiveEducatorView } from '@/components/marketing/high-schools/InteractiveEducatorView';
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Career Guidance for High Schools & Students | Career OS',
     description:
-      'Extend counselling capacity with individual student career mentors, multi-pathway parity, early evidence compounding, and strict institutional safeguarding.',
+      'Extend counseling capacity with individual student career mentors, multi-pathway parity, early evidence compounding, and strict institutional safeguarding.',
     url: 'https://career-os.com/for/high-schools',
     type: 'website',
   },
@@ -66,7 +66,7 @@ export default function HighSchoolsPage() {
     '@type': 'EducationalOccupationalProgram',
     name: 'Career OS for High Schools & Districts',
     description:
-      'Institutional career guidance infrastructure providing AI Career Mentors, multi-pathway parity, student evidence records, and counsellor workflow augmentation.',
+      'Institutional career guidance infrastructure providing AI Career Mentors, multi-pathway parity, student evidence records, and counselor workflow augmentation.',
     provider: {
       '@type': 'Organization',
       name: 'Career OS',
@@ -174,7 +174,7 @@ export default function HighSchoolsPage() {
 
               <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-[var(--color-text-tertiary)] font-medium">
                 <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" /> Augments Counsellors (Not Replaces)
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" /> Augments Counselors (Not Replaces)
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#2F8FFF]" /> Equal Multi-Pathway Parity
@@ -225,7 +225,7 @@ export default function HighSchoolsPage() {
                     Exponential Pathway Complexity
                   </h3>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                    Students must navigate 4-year universities, community colleges, degree apprenticeships, vocational trades, emerging technical specialisms, and direct employment routes. No single counsellor can manually track every changing entry requirement and regional employer opening in real time.
+                    Students must navigate 4-year universities, community colleges, degree apprenticeships, vocational trades, emerging technical specialisms, and direct employment routes. No single counselor can manually track every changing entry requirement and regional employer opening in real time.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
@@ -244,7 +244,7 @@ export default function HighSchoolsPage() {
                     The Once-a-Year Advising Bottleneck
                   </h3>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                    Because counsellor time is constrained, many students receive only 15–30 minutes of dedicated 1:1 career advising per academic year. Students often arrive unprepared, spending valuable time answering basic background questions rather than evaluating strategic decisions.
+                    Because counselor time is constrained, many students receive only 15–30 minutes of dedicated 1:1 career advising per academic year. Students often arrive unprepared, spending valuable time answering basic background questions rather than evaluating strategic decisions.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-[var(--color-border-subtle)] text-[11px] text-[var(--color-taupe-300)] font-mono">
@@ -288,8 +288,8 @@ export default function HighSchoolsPage() {
 
 
       {/* ============================================================
-          SECTION 03: COUNSELLOR AUGMENTATION WORKFLOW
-          Give counsellors more context before the conversation starts.
+          SECTION 03: COUNSELOR AUGMENTATION WORKFLOW
+          Give counselors more context before the conversation starts.
           ============================================================ */}
       <section className="section-editorial bg-[var(--color-surface-base)] border-b border-[var(--color-border-default)]" id="how-it-works">
         <div className="container-editorial space-y-12">
@@ -299,15 +299,15 @@ export default function HighSchoolsPage() {
                 The Operating Model
               </span>
               <h2 className="text-display-section text-white">
-                Give counsellors more context before the conversation starts.
+                Give counselors more context before the conversation starts.
               </h2>
               <p className="text-lead text-[var(--color-text-secondary)]">
-                AI helps prepare the context. Educators provide the human judgement, empathy, pastoral care, and understanding that technology cannot replace.
+                AI helps prepare the context. Educators provide the human judgment, empathy, pastoral care, and understanding that technology cannot replace.
               </p>
             </div>
           </ScrollReveal>
 
-          <CounsellorAugmentationWorkflow />
+          <CounselorAugmentationWorkflow />
         </div>
       </section>
 
@@ -368,7 +368,7 @@ export default function HighSchoolsPage() {
               {
                 step: '06',
                 title: 'Prepare',
-                desc: 'Enter human counselling sessions and post-school applications with grounded confidence, formed questions, and structured evidence.',
+                desc: 'Enter human counseling sessions and post-school applications with grounded confidence, formed questions, and structured evidence.',
               },
             ].map((st, i) => (
               <ScrollReveal key={i} delayMs={i * 60}>
@@ -453,13 +453,13 @@ export default function HighSchoolsPage() {
           <ScrollReveal>
             <div className="max-w-3xl space-y-4">
               <span className="section-label">
-                Educator &amp; Counsellor Experience
+                Educator &amp; Counselor Experience
               </span>
               <h2 className="text-display-section text-white">
                 See where your attention may matter most.
               </h2>
               <p className="text-lead text-[var(--color-text-secondary)]">
-                Career OS provides structured cohort context, advising queues, and student questions without producing invasive behavioural tracking, hidden risk scores, or automated employability rankings.
+                Career OS provides structured cohort context, advising queues, and student questions without producing invasive behavioral tracking, hidden risk scores, or automated employability rankings.
               </p>
             </div>
           </ScrollReveal>
@@ -579,7 +579,7 @@ export default function HighSchoolsPage() {
                     Supporting Informed Family Conversations
                   </h3>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                    Career choices often create family tension when parents are unfamiliar with modern degree apprenticeships or technical salaries. Career OS provides grounded, factual labour market context so families can discuss options based on real data rather than outdated generational stereotypes.
+                    Career choices often create family tension when parents are unfamiliar with modern degree apprenticeships or technical salaries. Career OS provides grounded, factual labor market context so families can discuss options based on real data rather than outdated generational stereotypes.
                   </p>
                   <div className="p-4 bg-[var(--color-surface-warm)] border border-[var(--color-border-subtle)] rounded text-xs text-[var(--color-text-tertiary)] italic">
                     &ldquo;Parental oversight is aligned with student age thresholds and statutory requirements—fostering confidence without over-monitoring early career curiosities.&rdquo;
@@ -779,7 +779,7 @@ export default function HighSchoolsPage() {
                       Oakridge Comprehensive High School
                     </h3>
                     <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                      1,200 students (Ages 14–18). Team: 2 full-time certified career counsellors supported by form tutors.
+                      1,200 students (Ages 14–18). Team: 2 full-time certified career counselors supported by form tutors.
                     </p>
                     <div className="space-y-1.5 pt-2 font-mono text-[11px] text-[var(--color-text-tertiary)]">
                       <div>&bull; Cohort: 280 Year 11 students</div>
@@ -816,7 +816,7 @@ export default function HighSchoolsPage() {
                     </div>
 
                     <div className="p-4 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded space-y-1.5">
-                      <span className="font-bold text-white block">Counsellor Efficiency</span>
+                      <span className="font-bold text-white block">Counselor Efficiency</span>
                       <p className="text-[var(--color-text-secondary)] leading-relaxed">
                         Advisors review 1-page pre-conversation briefs ahead of appointments, diving straight into critical decisions rather than initial discovery.
                       </p>
@@ -845,7 +845,7 @@ export default function HighSchoolsPage() {
 
 
       {/* ============================================================
-          SECTION 16: LAUNCH SCHOOL PROGRAMME & FORM
+          SECTION 16: LAUNCH SCHOOL PROGRAM & FORM
           Help shape Career OS with us.
           ============================================================ */}
       <section className="section-editorial-lg bg-[var(--background-dark-deep)] border-b border-[var(--color-border-default)]" id="launch-school-section">
@@ -854,7 +854,7 @@ export default function HighSchoolsPage() {
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <span className="section-label flex items-center justify-center gap-2">
                 <span className="accent-blue-dot accent-blue-dot-pulse" />
-                Launch School Early Adopter Programme
+                Launch School Early Adopter Program
               </span>
               <h2 className="text-display-section text-white">
                 Help shape Career OS with us.

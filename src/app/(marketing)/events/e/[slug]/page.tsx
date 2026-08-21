@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { getEventBySlug, formatEventDate, formatEventTime, SEED_EVENTS } from '@/lib/events/data';
 import { isEventSaved, toggleSaveEvent, getAttendanceIntent, setAttendanceIntent, AttendanceIntent } from '@/lib/events/store';
 import { VerificationBadge } from '@/components/ui/VerificationBadge';
-import { PersonalisedEventMatch } from '@/components/events/PersonalisedEventMatch';
+import { PersonalizedEventMatch } from '@/components/events/PersonalizedEventMatch';
 import { EventPreparationModal } from '@/components/events/EventPreparationModal';
 import { EventReportModal } from '@/components/events/EventReportModal';
 import { EventStructuredData } from '@/components/events/EventStructuredData';
@@ -175,9 +175,9 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
             <span className="text-[var(--color-text-secondary)] truncate">{event.title}</span>
           </div>
 
-          {/* Test simulation toggle for Career Twin personalised match */}
+          {/* Test simulation toggle for Career Twin personalized match */}
           <div className="hidden sm:flex items-center gap-2 shrink-0">
-            <span className="text-[11px] text-[var(--color-text-tertiary)]">Personalisation Preview:</span>
+            <span className="text-[11px] text-[var(--color-text-tertiary)]">Personalization Preview:</span>
             <button
               type="button"
               onClick={() => setSimulateLoggedIn(!simulateLoggedIn)}
@@ -235,18 +235,18 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
                 {event.title}
               </h1>
 
-              {/* Organiser Profile Link */}
+              {/* Organizer Profile Link */}
               <div className="flex items-center gap-3 pt-1">
                 <div className="w-9 h-9 rounded-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] flex items-center justify-center text-[var(--color-text-primary)] font-bold text-xs">
-                  {event.organiser.name.charAt(0)}
+                  {event.organizer.name.charAt(0)}
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-bold text-[var(--color-text-primary)]">{event.organiser.name}</span>
-                    {event.organiser.verificationStatus !== 'unverified' && (
+                    <span className="text-xs font-bold text-[var(--color-text-primary)]">{event.organizer.name}</span>
+                    {event.organizer.verificationStatus !== 'unverified' && (
                       <span
                         className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium"
-                        title={`Verified ${event.organiser.type.replace('-', ' ')} on CareerOS`}
+                        title={`Verified ${event.organizer.type.replace('-', ' ')} on CareerOS`}
                       >
                         <ShieldCheck className="w-2.5 h-2.5 text-emerald-400" />
                         <span>Verified</span>
@@ -254,7 +254,7 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
                     )}
                   </div>
                   <div className="text-[11px] text-[var(--color-text-tertiary)] capitalize">
-                    {event.organiser.type.replace('-', ' ')} · {event.organiser.headquartersCity || 'Verified Organiser'}
+                    {event.organizer.type.replace('-', ' ')} · {event.organizer.headquartersCity || 'Verified Organizer'}
                   </div>
                 </div>
               </div>
@@ -304,7 +304,7 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-white text-zinc-900 text-xs font-bold rounded-[var(--radius-button)] hover:bg-zinc-100 transition-colors shadow-sm inline-flex items-center gap-2"
                 >
-                  <span>Register on Organiser Site</span>
+                  <span>Register on Organizer Site</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
 
@@ -393,7 +393,7 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
 
             </div>
 
-            {/* Right: Event Banner Image & Quick Personalised Match */}
+            {/* Right: Event Banner Image & Quick Personalized Match */}
             <div className="lg:col-span-5 space-y-4">
               <div className="relative aspect-video w-full rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] shadow-lg bg-zinc-900">
                 <img
@@ -403,8 +403,8 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
                 />
               </div>
 
-              {/* Personalised Match Card */}
-              <PersonalisedEventMatch
+              {/* Personalized Match Card */}
+              <PersonalizedEventMatch
                 event={event}
                 isLoggedIn={simulateLoggedIn}
               />
@@ -477,16 +477,16 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
               </section>
             )}
 
-            {/* 4. Participating Organisations / Employers */}
-            {event.participatingOrganisations.length > 0 && (
+            {/* 4. Participating Organizations / Employers */}
+            {event.participatingOrganizations.length > 0 && (
               <section className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="section-label">Participating Employers &amp; Organisations</span>
-                  <span className="text-xs text-[var(--color-text-tertiary)]">{event.participatingOrganisations.length} organisations</span>
+                  <span className="section-label">Participating Employers &amp; Organizations</span>
+                  <span className="text-xs text-[var(--color-text-tertiary)]">{event.participatingOrganizations.length} organizations</span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {event.participatingOrganisations.map((org) => (
+                  {event.participatingOrganizations.map((org) => (
                     <div
                       key={org.id}
                       className="p-3.5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] space-y-2"
@@ -546,7 +546,7 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
                       <div className="space-y-1">
                         <div className="text-xs font-bold text-[var(--color-text-primary)]">{spk.name}</div>
                         <div className="text-[11px] text-[var(--color-text-tertiary)] font-medium">
-                          {spk.role} · {spk.organisation}
+                          {spk.role} · {spk.organization}
                         </div>
                         {spk.bio && (
                           <div className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed pt-1">
@@ -671,23 +671,23 @@ function EventDetailContent({ event }: { event: ReturnType<typeof getEventBySlug
               </div>
             )}
 
-            {/* About the Organiser */}
+            {/* About the Organizer */}
             <div className="p-5 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-3">
-              <span className="section-label">About the Organiser</span>
+              <span className="section-label">About the Organizer</span>
               
               <div className="space-y-1.5">
-                <div className="text-xs font-bold text-[var(--color-text-primary)]">{event.organiser.name}</div>
+                <div className="text-xs font-bold text-[var(--color-text-primary)]">{event.organizer.name}</div>
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  {event.organiser.about}
+                  {event.organizer.about}
                 </p>
               </div>
 
               <div className="pt-2 border-t border-[var(--color-border-subtle)] flex items-center justify-between text-xs">
                 <span className="text-[var(--color-text-tertiary)]">
-                  Verified since {event.organiser.verifiedAt?.split('-')[0] || '2025'}
+                  Verified since {event.organizer.verifiedAt?.split('-')[0] || '2025'}
                 </span>
                 <a
-                  href={event.organiser.website}
+                  href={event.organizer.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--accent-blue)] hover:underline inline-flex items-center gap-1"

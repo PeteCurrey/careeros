@@ -35,18 +35,18 @@ const STEPS: Step[] = [
       { label: 'People leadership: direction, performance, feedback and team development', status: 'required' },
       { label: 'Problem solving: structured analysis (RCA/FMEA or equivalent) under operational pressure', status: 'required' },
       { label: 'Stakeholder communication: engaging engineering, operations and commercial teams clearly', status: 'required' },
-      { label: 'Budget control: maintenance expenditure tracking, variance and cost optimisation', status: 'required' },
+      { label: 'Budget control: maintenance expenditure tracking, variance and cost optimization', status: 'required' },
     ],
   },
   {
     id: 'evidence',
     label: '03. Relevant Evidence',
-    description: 'What evidence would meaningfully support this application? Be specific — not a CV summary.',
+    description: 'What evidence would meaningfully support this application? Be specific — not a resume summary.',
     items: [
       { label: 'Demonstrated ownership of a plant/site maintenance function with measurable outcomes', status: 'evidence' },
       { label: 'Evidence of improving reliability KPIs: MTBF, MTTR, OEE or equivalent', status: 'evidence' },
       { label: 'Leadership of a maintenance team — directly, not simply as a senior technician', status: 'evidence' },
-      { label: 'Technical project work: overhauls, shutdowns, retrofits or improvement programmes', status: 'evidence' },
+      { label: 'Technical project work: overhauls, shutdowns, retrofits or improvement programs', status: 'evidence' },
       { label: 'Professional development: relevant certifications, qualifications or structured training', status: 'evidence' },
     ],
   },
@@ -74,10 +74,10 @@ const STEPS: Step[] = [
 ];
 
 const STATUS_CONFIG = {
-  required: { colour: 'text-[var(--color-text-primary)]', dot: 'bg-[var(--accent-blue)]', label: 'Outcome / Required' },
-  evidence: { colour: 'text-emerald-300', dot: 'bg-emerald-400', label: 'Evidence Requested' },
-  developmental: { colour: 'text-amber-300', dot: 'bg-amber-400', label: 'Developable' },
-  note: { colour: 'text-[var(--color-text-secondary)]', dot: 'bg-[var(--color-taupe-300)]', label: 'Note' },
+  required: { color: 'text-[var(--color-text-primary)]', dot: 'bg-[var(--accent-blue)]', label: 'Outcome / Required' },
+  evidence: { color: 'text-emerald-300', dot: 'bg-emerald-400', label: 'Evidence Requested' },
+  developmental: { color: 'text-amber-300', dot: 'bg-amber-400', label: 'Developable' },
+  note: { color: 'text-[var(--color-text-secondary)]', dot: 'bg-[var(--color-taupe-300)]', label: 'Note' },
 };
 
 export function CapabilityBriefInteractive() {
@@ -124,7 +124,7 @@ export function CapabilityBriefInteractive() {
               <li key={idx} className="flex items-start gap-3 text-sm">
                 <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot} shrink-0 mt-[6px]`} aria-hidden="true" />
                 <div className="space-y-0.5">
-                  <span className={`${cfg.colour} leading-relaxed`}>{item.label}</span>
+                  <span className={`${cfg.color} leading-relaxed`}>{item.label}</span>
                   {item.note && (
                     <p className="text-[11px] text-[var(--color-text-tertiary)] font-mono flex items-start gap-1">
                       <Lightbulb className="w-3 h-3 shrink-0 mt-0.5 text-amber-400" />

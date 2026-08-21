@@ -33,7 +33,7 @@ export function Step12MentorReveal({
           We've found the Mentor that best fits where you are right now.
         </h1>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
-          {mentorAssignment.mentorName} is your dedicated AI Career Mentor, specialising in {mentorAssignment.mentorDomain.toLowerCase()}.
+          {mentorAssignment.mentorName} is your dedicated AI Career Mentor, specializing in {mentorAssignment.mentorDomain.toLowerCase()}.
         </p>
       </div>
 

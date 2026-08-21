@@ -8,7 +8,7 @@ import { Newspaper, Download, Mail, CheckCircle2, ArrowRight } from "lucide-reac
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Press & Media Centre | Career OS",
+  title: "Press & Media Center | Career OS",
   description: "Official media resources, company boilerplate, approved brand asset specifications, and media inquiry contacts for Career OS.",
   alternates: {
     canonical: "https://career-os.com/company/press",
@@ -22,7 +22,7 @@ export default function CompanyPressPage() {
         <div className="container-editorial space-y-6 max-w-4xl">
           <div className="flex items-center gap-3">
             <Newspaper className="w-5 h-5 text-[#2F8FFF]" />
-            <span className="section-label text-white">Press & Media Centre</span>
+            <span className="section-label text-white">Press & Media Center</span>
           </div>
 
           <h1 className="text-display-hero font-serif font-normal tracking-tight text-white leading-[1.08]">

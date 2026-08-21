@@ -40,7 +40,7 @@ export function HeroInstitutionalOutcomesView() {
     {
       category: 'Human Guidance Direct',
       metric: '92% Prepared',
-      subtext: 'Students arriving to 1:1 counsellor appointments with structured briefs and questions',
+      subtext: 'Students arriving to 1:1 counselor appointments with structured briefs and questions',
       icon: Users,
       status: 'High-impact 1:1 sessions',
     },
@@ -131,7 +131,7 @@ export function HeroInstitutionalOutcomesView() {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <span className="section-label">
-              Four Dimensions of Programme Health
+              Four Dimensions of Program Health
             </span>
             <span className="text-[11px] font-mono text-[var(--color-text-tertiary)]">
               Activity &amp; Evidence Indicators

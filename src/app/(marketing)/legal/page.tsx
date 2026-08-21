@@ -7,7 +7,7 @@ import { FileText, Shield, User, GraduationCap, Briefcase, Server, ArrowRight, L
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Legal & Governance Centre | Career OS",
+  title: "Legal & Governance Center | Career OS",
   description: "Official operative legal agreements, privacy notices, school terms, employer codes, and AI system usage terms for Career OS.",
   alternates: {
     canonical: "https://career-os.com/legal",
@@ -78,7 +78,7 @@ export default function LegalHubPage() {
           </div>
 
           <h1 className="text-display-section text-[var(--color-text-primary)] font-serif font-normal tracking-tight">
-            Career OS Legal &amp; Compliance Centre
+            Career OS Legal &amp; Compliance Center
           </h1>
 
           <p className="text-lead text-[var(--color-text-secondary)]">
@@ -91,7 +91,7 @@ export default function LegalHubPage() {
               <span>Contractual Precision &amp; Document Versioning:</span>
             </div>
             <p>
-              All documents in this Centre are active pre-launch governance specifications. Changes are tracked with semantic versioning and published to the <Link href="/legal/version-history" className="text-[var(--color-text-primary)] font-semibold underline">Version History Archive</Link>. Superseded versions remain permanently accessible.
+              All documents in this Center are active pre-launch governance specifications. Changes are tracked with semantic versioning and published to the <Link href="/legal/version-history" className="text-[var(--color-text-primary)] font-semibold underline">Version History Archive</Link>. Superseded versions remain permanently accessible.
             </p>
           </div>
         </div>

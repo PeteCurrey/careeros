@@ -87,7 +87,7 @@ export function AgentArchitectureVisual() {
             </div>
           </div>
 
-          {/* Centre exchange indicator */}
+          {/* Center exchange indicator */}
           <div className="hidden lg:flex flex-col items-center justify-center gap-2 pt-24 px-2">
             <div className="w-px h-16 bg-gradient-to-b from-[var(--color-brand-500)] to-[var(--color-border-default)]" />
             <div className="rounded border border-[var(--color-border-strong)] bg-[var(--color-surface-raised)] px-3 py-2 text-center">

@@ -4,7 +4,7 @@
  * Contains illustrative professional profiles and example opportunity connections
  * to demonstrate the Opportunity Agent product concept.
  *
- * IMPORTANT: All organisations named are fictional. All opportunities are illustrative.
+ * IMPORTANT: All organizations named are fictional. All opportunities are illustrative.
  * This data does not represent live vacancies, a production matching engine,
  * or a real employer network. No real employer brands are used.
  *
@@ -43,7 +43,7 @@ export interface OpportunityWhySurfaced {
 export interface IllustrativeOpportunity {
   id: string;
   title: string;
-  organisation: string;            // fictional
+  organization: string;            // fictional
   category: OpportunityCategory;
   relevance: OpportunityRelevance;
   summary: string;
@@ -85,11 +85,11 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'field-service-engineer',
         title: 'Field Service Engineer',
-        organisation: 'Northstar Industrial Systems',
+        organization: 'Northstar Industrial Systems',
         category: 'Employment',
         relevance: 'Strong existing overlap',
         summary:
-          'Technical site-based role supporting industrial equipment installation, fault diagnosis, and customer maintenance programmes.',
+          'Technical site-based role supporting industrial equipment installation, fault diagnosis, and customer maintenance programs.',
         whySurfaced: {
           existingContext: [
             'Diagnostics and fault-finding background',
@@ -104,7 +104,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
             'Health & safety certification for industrial site entry',
           ],
           unknowns: [
-            'Specific equipment types used by this organisation',
+            'Specific equipment types used by this organization',
             'Travel requirements and territory coverage',
             'Whether automotive-to-industrial transition is considered for this role',
           ],
@@ -114,7 +114,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'ev-technical-trainer',
         title: 'EV Technical Trainer',
-        organisation: 'Meridian Technical Education',
+        organization: 'Meridian Technical Education',
         category: 'Employment',
         relevance: 'Adjacent career direction',
         summary:
@@ -144,7 +144,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'maintenance-technician-industrial',
         title: 'Maintenance Technician',
-        organisation: 'Civic Infrastructure Group',
+        organization: 'Civic Infrastructure Group',
         category: 'Employment',
         relevance: 'Adjacent career direction',
         summary:
@@ -194,7 +194,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'clinical-services-manager',
         title: 'Clinical Services Manager',
-        organisation: 'Harbour Health Group',
+        organization: 'Harbour Health Group',
         category: 'Leadership',
         relevance: 'Leadership bridge',
         summary:
@@ -211,11 +211,11 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
           bridge: [
             'Formal management qualification (e.g. Level 5 CMI, NHS Leadership Academy) may be required',
             'Budget and financial oversight experience often expected',
-            'Moving from clinical to operational management is a recognised bridge step',
+            'Moving from clinical to operational management is a recognized bridge step',
           ],
           unknowns: [
             'Whether clinical registration is required in this role',
-            "Organisation's expectations around management vs clinical mix",
+            "Organization's expectations around management vs clinical mix",
             'Whether internal or external candidates are preferred',
           ],
         },
@@ -224,11 +224,11 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'healthcare-quality-lead',
         title: 'Healthcare Quality & Safety Lead',
-        organisation: 'Meridian Health Systems',
+        organization: 'Meridian Health Systems',
         category: 'Employment',
         relevance: 'Strong existing overlap',
         summary:
-          'Lead quality improvement, clinical audit, and patient safety programmes across a healthcare network.',
+          'Lead quality improvement, clinical audit, and patient safety programs across a healthcare network.',
         whySurfaced: {
           existingContext: [
             'Clinical risk awareness and documentation practice',
@@ -241,7 +241,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
           bridge: [
             'Formal quality improvement methodology training (e.g. IHI, LEAN) likely beneficial',
             'Audit design and data analysis skills may need development',
-            'Broader organisational scope than ward/department level',
+            'Broader organizational scope than ward/department level',
           ],
           unknowns: [
             'Whether this role requires active clinical registration',
@@ -254,7 +254,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'health-operations-coordinator',
         title: 'Health Operations Coordinator',
-        organisation: 'Civic Resilience Partnership',
+        organization: 'Civic Resilience Partnership',
         category: 'Employment',
         relevance: 'Adjacent career direction',
         summary:
@@ -264,7 +264,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
             'Operational coordination in clinical settings',
             'Multi-agency awareness through NHS environment',
             'Patient flow and capacity management experience',
-            'Communication across teams and organisations',
+            'Communication across teams and organizations',
           ],
           careerDirection: 'Broadens into public sector operations while leveraging clinical background.',
           bridge: [
@@ -288,7 +288,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
     id: 'military-logistics',
     title: 'Military Logistics Specialist',
     shortTitle: 'Military Logistics',
-    sector: 'Defence & Logistics',
+    sector: 'Defense & Logistics',
     context: [
       'End-to-end supply chain coordination',
       'Resource planning under operational pressure',
@@ -303,7 +303,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'operations-manager-industrial',
         title: 'Operations Manager',
-        organisation: 'Northstar Industrial Systems',
+        organization: 'Northstar Industrial Systems',
         category: 'Employment',
         relevance: 'Strong existing overlap',
         summary:
@@ -333,7 +333,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'supply-chain-coordinator',
         title: 'Supply Chain Coordinator',
-        organisation: 'Meridian Global Logistics',
+        organization: 'Meridian Global Logistics',
         category: 'Employment',
         relevance: 'Strong existing overlap',
         summary:
@@ -362,11 +362,11 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'emergency-planning-advisor',
         title: 'Emergency Planning Advisor',
-        organisation: 'Civic Resilience Partnership',
+        organization: 'Civic Resilience Partnership',
         category: 'Employment',
         relevance: 'Adjacent career direction',
         summary:
-          'Develop, test, and advise on emergency response plans for public sector organisations and critical infrastructure.',
+          'Develop, test, and advise on emergency response plans for public sector organizations and critical infrastructure.',
         whySurfaced: {
           existingContext: [
             'Operational coordination during complex and high-pressure events',
@@ -412,7 +412,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'head-of-legal-risk',
         title: 'Head of Legal & Risk',
-        organisation: 'Northstar Industrial Systems',
+        organization: 'Northstar Industrial Systems',
         category: 'Employment',
         relevance: 'Strong existing overlap',
         summary:
@@ -442,7 +442,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'commercial-director-strategy',
         title: 'Commercial Director',
-        organisation: 'Meridian Operations',
+        organization: 'Meridian Operations',
         category: 'Employment',
         relevance: 'Leadership bridge',
         summary:
@@ -458,7 +458,7 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
             'Directly targets strategy and commercial leadership — an increasingly common destination for senior commercial lawyers.',
           bridge: [
             'P&L ownership and financial management experience typically required',
-            'Moving from legal to commercial leadership is a recognised but significant bridge',
+            'Moving from legal to commercial leadership is a recognized but significant bridge',
             'Sales, partnerships, and revenue operations are distinct from legal advisory',
           ],
           unknowns: [
@@ -472,21 +472,21 @@ export const OPPORTUNITY_PROFILES: OpportunityProfile[] = [
       {
         id: 'compliance-ethics-lead',
         title: 'Compliance & Ethics Lead',
-        organisation: 'Civic Standards Institute',
+        organization: 'Civic Standards Institute',
         category: 'Employment',
         relevance: 'Strong existing overlap',
         summary:
-          'Design and operate compliance and ethics programmes for a public interest standards body, covering governance, policy, and professional conduct.',
+          'Design and operate compliance and ethics programs for a public interest standards body, covering governance, policy, and professional conduct.',
         whySurfaced: {
           existingContext: [
             'Regulatory compliance and governance practice',
             'Legal interpretation and policy application',
             'Professional conduct frameworks awareness',
-            'Stakeholder communication across complex organisations',
+            'Stakeholder communication across complex organizations',
           ],
           careerDirection: 'Moves legal expertise into an operational compliance leadership context.',
           bridge: [
-            'Operational compliance programme management (vs legal advisory) is a distinct practice',
+            'Operational compliance program management (vs legal advisory) is a distinct practice',
             'Public interest and standards body environment differs from commercial context',
             'ICA or equivalent compliance qualification may be beneficial',
           ],
@@ -514,7 +514,7 @@ export interface OpportunityTypeItem {
 
 export const OPPORTUNITY_TYPES: OpportunityTypeItem[] = [
   { id: 'employment', label: 'Employment', description: 'Full-time, part-time or contract roles matching your capabilities and direction.', icon: '💼', track: 'core' },
-  { id: 'internal-move', label: 'Internal Move', description: 'Lateral or upward opportunities within your current organisation.', icon: '🔄', track: 'core' },
+  { id: 'internal-move', label: 'Internal Move', description: 'Lateral or upward opportunities within your current organization.', icon: '🔄', track: 'core' },
   { id: 'secondment', label: 'Secondment', description: 'Temporary placement to build evidence in a target area.', icon: '📌', track: 'development' },
   { id: 'leadership', label: 'Leadership', description: 'Stretch responsibility, step-up roles, or senior development tracks.', icon: '📈', track: 'development' },
   { id: 'apprenticeship', label: 'Apprenticeship', description: 'Formal training with employment in a new sector or discipline.', icon: '🎓', track: 'alternative' },
@@ -522,6 +522,6 @@ export const OPPORTUNITY_TYPES: OpportunityTypeItem[] = [
   { id: 'training', label: 'Training & Qualification', description: 'A qualification or certification that unlocks a bridge requirement.', icon: '📚', track: 'development' },
   { id: 'mentorship', label: 'Mentorship', description: 'Development opportunity with an experienced professional in a target area.', icon: '🤝', track: 'development' },
   { id: 'project', label: 'Project', description: 'A specific piece of work that builds missing evidence.', icon: '⚡', track: 'development' },
-  { id: 'entrepreneurship', label: 'Entrepreneurship', description: 'Founder programmes, accelerators, or commercial learning pathways.', icon: '🚀', track: 'alternative' },
+  { id: 'entrepreneurship', label: 'Entrepreneurship', description: 'Founder programs, accelerators, or commercial learning pathways.', icon: '🚀', track: 'alternative' },
   { id: 'international', label: 'International', description: 'Roles or opportunities in other jurisdictions where eligibility is understood.', icon: '🌍', track: 'alternative' },
 ];

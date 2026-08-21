@@ -31,7 +31,7 @@ import { CareerAtmosphere } from "@/components/brand/CareerAtmosphere";
 export default function UniversityPathwayPage() {
   const routes = [
     {
-      title: "Undergraduate Major Specialisation",
+      title: "Undergraduate Major Specialization",
       desc: "Transform foundational academic coursework, laboratory research, and honors dissertations into verifiable competency records in your Career Passport.",
     },
     {

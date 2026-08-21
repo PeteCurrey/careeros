@@ -77,7 +77,7 @@ export function Step04StageSelect({
     },
     {
       id: 'LEADER_EXECUTIVE',
-      title: "I lead a team or organisation",
+      title: "I lead a team or organization",
       description: "Managing people, departments, or high-level direction.",
       icon: Users,
       image: '/media/professionals/professional_pathways_collective.jpg',

@@ -46,7 +46,7 @@ export function Step06PrimaryGoal({
       return [
         { id: 'Moving into leadership', desc: 'Target senior leadership or board opportunities.' },
         { id: 'Building my track record', desc: 'Document my leadership results and achievements.' },
-        { id: 'Progressing where I am', desc: 'Grow my scope and responsibility in my current organisation.' },
+        { id: 'Progressing where I am', desc: 'Grow my scope and responsibility in my current organization.' },
         { id: 'Starting or advising a business', desc: 'Use my experience in a new venture.' },
       ];
     }

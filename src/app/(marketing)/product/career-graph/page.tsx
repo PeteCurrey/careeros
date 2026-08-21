@@ -204,7 +204,7 @@ export default function CareerGraphPage() {
               Career platforms often make irresponsible claims: <em>&ldquo;You have an 88% skill overlap, so you can do this job today!&rdquo;</em> Career OS rejects this fake precision. Having transferable skills does not mean you can legally, practically, or safely step into a new role on Monday morning.
             </p>
             <p className="text-sm text-[var(--color-text-tertiary)] leading-relaxed">
-              A credible career progression model must always distinguish between <strong>Transferable Capability</strong> (the strengths you already demonstrate) and the <strong>Bridge Requirement</strong> (the specific certification, statutory licence, leadership track, or domain conversion you must complete).
+              A credible career progression model must always distinguish between <strong>Transferable Capability</strong> (the strengths you already demonstrate) and the <strong>Bridge Requirement</strong> (the specific certification, statutory license, leadership track, or domain conversion you must complete).
             </p>
           </div>
 
@@ -275,7 +275,7 @@ export default function CareerGraphPage() {
         </div>
       </section>
 
-      {/* ── SECTION 10: LABOUR MARKET CONTEXT ────────────────────────── */}
+      {/* ── SECTION 10: LABOR MARKET CONTEXT ────────────────────────── */}
       <section className="section-editorial border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-12">
           <div className="max-w-3xl space-y-4">
@@ -283,10 +283,10 @@ export default function CareerGraphPage() {
               Market Intelligence
             </span>
             <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
-              Career pathways exist in a real labour market.
+              Career pathways exist in a real labor market.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)] leading-relaxed">
-              A theoretical pathway is only useful if it reflects real-world economic conditions. Career OS is being designed to connect Graph pathways with verified labour market intelligence as external data feeds and taxonomy integrations are deployed.
+              A theoretical pathway is only useful if it reflects real-world economic conditions. Career OS is being designed to connect Graph pathways with verified labor market intelligence as external data feeds and taxonomy integrations are deployed.
             </p>
           </div>
 
@@ -367,7 +367,7 @@ export default function CareerGraphPage() {
               Connections are not guarantees.
             </h2>
             <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              Career Graph identifies conceptual and capability relationships between disciplines. It does not constitute legal qualification, statutory licence equivalence, automated hiring approval, or an employment guarantee.
+              Career Graph identifies conceptual and capability relationships between disciplines. It does not constitute legal qualification, statutory license equivalence, automated hiring approval, or an employment guarantee.
             </p>
           </div>
 
@@ -508,10 +508,10 @@ export default function CareerGraphPage() {
 
             <Card className="p-6 sm:p-7 space-y-2 bg-[var(--color-surface-raised)] border-[var(--color-border-default)]">
               <h3 className="text-sm font-bold text-[var(--color-text-primary)]">
-                11. Does Career Graph currently use live labour-market feeds?
+                11. Does Career Graph currently use live labor-market feeds?
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                Career Graph is being designed to incorporate verified labour-market intelligence, occupational taxonomies, and credential standards as external verified feeds are connected. We do not display manufactured vacancy counts or fake demand scores.
+                Career Graph is being designed to incorporate verified labor-market intelligence, occupational taxonomies, and credential standards as external verified feeds are connected. We do not display manufactured vacancy counts or fake demand scores.
               </p>
             </Card>
 

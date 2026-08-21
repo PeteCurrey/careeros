@@ -62,7 +62,7 @@ export default function SecuritySetupPage() {
           publicKey: credentialCreationOptions,
         })) as PublicKeyCredential;
       } catch (webAuthnErr: unknown) {
-        console.warn('WebAuthn prompt cancelled or unavailable:', webAuthnErr);
+        console.warn('WebAuthn prompt canceled or unavailable:', webAuthnErr);
         // Fallback simulation for local/unsupported environments
         credential = {
           id: 'passkey_' + Math.random().toString(36).substring(2, 15),
@@ -74,7 +74,7 @@ export default function SecuritySetupPage() {
       }
 
       if (!credential) {
-        throw new Error('Passkey creation was cancelled.');
+        throw new Error('Passkey creation was canceled.');
       }
 
       // 3. Verify and store passkey on server

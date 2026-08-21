@@ -41,7 +41,7 @@ const FAIRNESS_TESTING_STEPS = [
     step: '04',
     title: 'Identify Proxy Variables',
     icon: Search,
-    desc: 'Test whether facially neutral inputs—postcode, school name, grade attainment thresholds—function as discriminatory proxies for protected characteristics.',
+    desc: 'Test whether facially neutral inputs—ZIP code, school name, grade attainment thresholds—function as discriminatory proxies for protected characteristics.',
     ref: 'Proxy discrimination doctrine (EEOC, ICO guidance)',
   },
   {

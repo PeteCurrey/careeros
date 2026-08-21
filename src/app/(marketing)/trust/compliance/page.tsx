@@ -82,7 +82,7 @@ export default function ComplianceAndAssurancePage() {
 
       {/* Main Assurance Content Stream */}
       <div className="container-editorial py-16 md:py-24 space-y-24">
-        {/* 1. Independent Assurance & Recognised Standards (SOC 2, ISO 27001, ISO 27701, ISO 42001) */}
+        {/* 1. Independent Assurance & Recognized Standards (SOC 2, ISO 27001, ISO 27701, ISO 42001) */}
         <IndependentAssuranceSection
           frameworks={COMPLIANCE_FRAMEWORKS_REGISTRY}
         />

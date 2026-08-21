@@ -10,7 +10,7 @@ export default async function AdminTrustSafetyPage() {
     <div className="space-y-6">
       <AdminSectionHeader
         category="Safety & Compliance"
-        title="Trust & Safety Escalation Centre"
+        title="Trust & Safety Escalation Center"
         description="Operational workflows for reviewing user-reported content, fraudulent employer registrations, AI safety boundary flags and account abuse."
       />
 

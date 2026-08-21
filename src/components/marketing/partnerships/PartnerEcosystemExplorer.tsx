@@ -59,7 +59,7 @@ export function PartnerEcosystemExplorer() {
             How do you want to contribute to the student journey?
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
-            Select your organisation type below to inspect your specific role, the Career OS platform contribution, and data boundaries.
+            Select your organization type below to inspect your specific role, the Career OS platform contribution, and data boundaries.
           </p>
         </div>
         <span className="text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/60 backdrop-blur-sm text-[var(--color-text-tertiary)] self-start sm:self-auto shrink-0">
@@ -70,7 +70,7 @@ export function PartnerEcosystemExplorer() {
       {/* Partner Type Selector Grid */}
       <div className="p-4 sm:p-6 bg-[var(--color-surface-base)]/60 backdrop-blur-sm border-b border-[var(--color-border-default)]">
         <div className="text-[10px] font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
-          Select Organisation Category:
+          Select Organization Category:
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5" role="tablist" aria-label="Partner Categories">
           {PARTNER_TYPES.map((partner) => {
@@ -128,7 +128,7 @@ export function PartnerEcosystemExplorer() {
           <div className="space-y-2.5">
             <span className="text-[10px] font-mono uppercase tracking-wider text-[#6BB8FF] font-semibold flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#2F8FFF]" />
-              What Your Organisation Contributes
+              What Your Organization Contributes
             </span>
             <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2 text-xs">
               {activePartner.contributes.map((item) => (

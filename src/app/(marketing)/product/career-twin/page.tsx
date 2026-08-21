@@ -706,7 +706,7 @@ export default function CareerTwinPage() {
                 desc: 'Career Twin provides structured clarity; it does not guarantee job placement or promotion.',
               },
               {
-                title: 'Not a Permanent Judgement',
+                title: 'Not a Permanent Judgment',
                 desc: 'Past skill gaps can be closed with new evidence; old data does not permanently penalize you.',
               },
               {

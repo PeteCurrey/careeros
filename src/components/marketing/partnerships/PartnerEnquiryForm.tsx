@@ -25,7 +25,7 @@ export function PartnerEnquiryForm() {
   const [loading, setLoading] = useState(false);
   const [orgType, setOrgType] = useState('Employer / Enterprise');
   const [formData, setFormData] = useState({
-    organisationName: '',
+    organizationName: '',
     website: '',
     orgType: 'Employer / Enterprise',
     country: 'United Kingdom',
@@ -71,7 +71,7 @@ export function PartnerEnquiryForm() {
           Become a Career OS Partner
         </h3>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] max-w-2xl leading-relaxed">
-          Submit your organisation&apos;s credentials and proposed contribution. Our partnerships and safeguarding team will review your application and coordinate a tailored pilot framework.
+          Submit your organization&apos;s credentials and proposed contribution. Our partnerships and safeguarding team will review your application and coordinate a tailored pilot framework.
         </p>
       </div>
 
@@ -101,10 +101,10 @@ export function PartnerEnquiryForm() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6 text-left">
           
-          {/* STEP 1: ORGANISATION TYPE SELECTOR */}
+          {/* STEP 1: ORGANIZATION TYPE SELECTOR */}
           <div className="space-y-2">
             <label className="text-xs font-mono uppercase tracking-wider text-[var(--color-taupe-300)] font-semibold block">
-              1. What Type of Organisation Are You? *
+              1. What Type of Organization Are You? *
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 text-xs">
               {[
@@ -117,8 +117,8 @@ export function PartnerEnquiryForm() {
                 'Credential Issuer',
                 'Public / Workforce Body',
                 'Nonprofit / Charity',
-                'Event Organiser',
-                'Other Organisation',
+                'Event Organizer',
+                'Other Organization',
               ].map((type) => {
                 const isSelected = orgType === type;
                 return (
@@ -142,22 +142,22 @@ export function PartnerEnquiryForm() {
             </div>
           </div>
 
-          {/* STEP 2: CORE ORGANISATION DETAILS */}
+          {/* STEP 2: CORE ORGANIZATION DETAILS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div className="space-y-1.5">
-              <label className="text-white font-medium block">Organisation Name *</label>
+              <label className="text-white font-medium block">Organization Name *</label>
               <input
                 type="text"
                 required
                 placeholder="e.g. Apex Precision Engineering Ltd / Oakridge Academy Trust"
-                value={formData.organisationName}
-                onChange={(e) => setFormData({ ...formData, organisationName: e.target.value })}
+                value={formData.organizationName}
+                onChange={(e) => setFormData({ ...formData, organizationName: e.target.value })}
                 className="w-full p-2.5 rounded-lg bg-[var(--color-surface-base)]/80 border border-[var(--color-border-default)] text-white placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[#2F8FFF]"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-white font-medium block">Organisation Website *</label>
+              <label className="text-white font-medium block">Organization Website *</label>
               <input
                 type="url"
                 required
@@ -232,7 +232,7 @@ export function PartnerEnquiryForm() {
                 <input
                   type="email"
                   required
-                  placeholder="name@organisation.com"
+                  placeholder="name@organization.com"
                   value={formData.professionalEmail}
                   onChange={(e) => setFormData({ ...formData, professionalEmail: e.target.value })}
                   className="w-full p-2.5 rounded-lg bg-[var(--color-surface-base)]/80 border border-[var(--color-border-default)] text-white placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[#2F8FFF]"
@@ -255,7 +255,7 @@ export function PartnerEnquiryForm() {
                   className="w-full p-2.5 rounded-lg bg-[var(--color-surface-base)]/80 border border-[var(--color-border-default)] text-white focus:outline-none focus:border-[#2F8FFF]"
                 >
                   <option>Apprenticeships &amp; Early Careers</option>
-                  <option>School Careers Programme &amp; Student Guidance</option>
+                  <option>School Careers Program &amp; Student Guidance</option>
                   <option>Higher &amp; Further Education Pathways</option>
                   <option>Vocational &amp; Technical Skills Training</option>
                   <option>Career Fairs &amp; Employer Insight Events</option>
@@ -280,7 +280,7 @@ export function PartnerEnquiryForm() {
 
             <div className="space-y-1.5 text-xs">
               <label className="text-white font-medium block">
-                Overview of Proposed Contribution / Programme Details
+                Overview of Proposed Contribution / Program Details
               </label>
               <textarea
                 rows={3}

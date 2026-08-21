@@ -104,8 +104,8 @@ export function AdminTopBar({
 
           {/* Action Center Attention Badge */}
           <Link
-            href={ROUTES.ADMIN_ACTION_CENTRE}
-            title={urgentItemsCount > 0 ? `${urgentItemsCount} items need attention` : 'Action Centre'}
+            href={ROUTES.ADMIN_ACTION_CENTER}
+            title={urgentItemsCount > 0 ? `${urgentItemsCount} items need attention` : 'Action Center'}
             className="relative p-2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-interactive)] rounded transition-colors"
           >
             <Bell className="w-4 h-4" />

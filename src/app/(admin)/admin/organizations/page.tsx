@@ -4,7 +4,7 @@ import { createAdminClient } from '@/lib/supabase/server';
 import { AdminSectionHeader, AdminEmptyState } from '@/components/admin/AdminCommonUI';
 import { Building2, Plus, ShieldCheck } from 'lucide-react';
 
-export default async function AdminOrganisationsPage() {
+export default async function AdminOrganizationsPage() {
   await requireAdminRole('support');
   const supabase = createAdminClient();
 
@@ -16,16 +16,16 @@ export default async function AdminOrganisationsPage() {
   return (
     <div className="space-y-6">
       <AdminSectionHeader
-        category="Organisations"
-        title="Organisations Directory"
-        description="Unified management for Employers, High Schools, Colleges, Universities, Event Organisers and Educational Partners."
+        category="Organizations"
+        title="Organizations Directory"
+        description="Unified management for Employers, High Schools, Colleges, Universities, Event Organizers and Educational Partners."
       />
 
       {!orgs || orgs.length === 0 ? (
         <AdminEmptyState
           icon={Building2}
-          title="0 Organisations in Database"
-          description="Organisational entities will appear here as schools and employers create enterprise workspaces or establish institutional partnerships."
+          title="0 Organizations in Database"
+          description="Organizational entities will appear here as schools and employers create enterprise workspaces or establish institutional partnerships."
         />
       ) : (
         <div className="bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-md overflow-hidden">
@@ -33,7 +33,7 @@ export default async function AdminOrganisationsPage() {
             <table className="w-full text-left text-xs">
               <thead className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)] text-[var(--color-text-tertiary)] font-mono uppercase text-[10px]">
                 <tr>
-                  <th className="p-3">Organisation Name</th>
+                  <th className="p-3">Organization Name</th>
                   <th className="p-3">Type</th>
                   <th className="p-3">Domain</th>
                   <th className="p-3">Verification</th>

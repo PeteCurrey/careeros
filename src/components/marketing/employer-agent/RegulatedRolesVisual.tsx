@@ -18,7 +18,7 @@ export function RegulatedRolesVisual() {
       profession: 'Regulated Healthcare (Doctor / Nurse)',
       icon: Stethoscope,
       capabilitySignal: 'Clinical triage, patient diagnosis, pharmacological knowledge',
-      statutoryRequirement: 'Statutory Medical Board Licence (e.g. GMC, NMC, State Board)',
+      statutoryRequirement: 'Statutory Medical Board License (e.g. GMC, NMC, State Board)',
       rule: 'Transferable diagnostics cannot substitute for legal practice authority.',
     },
     {
@@ -39,7 +39,7 @@ export function RegulatedRolesVisual() {
       profession: 'Commercial Transport (Heavy Goods / Aviation)',
       icon: Truck,
       capabilitySignal: 'Defensive navigation, logistics compliance, route planning',
-      statutoryRequirement: 'Mandatory Commercial Licence (e.g. HGV Class 1, ATPL)',
+      statutoryRequirement: 'Mandatory Commercial License (e.g. HGV Class 1, ATPL)',
       rule: 'Aptitude cannot replace mandatory legal driving/flight certifications.',
     },
     {
@@ -59,10 +59,10 @@ export function RegulatedRolesVisual() {
           Statutory &amp; Regulatory Safeguards
         </span>
         <h3 className="text-xl sm:text-2xl font-serif font-normal text-white">
-          Capability Signals Cannot Replace Mandatory Licences
+          Capability Signals Cannot Replace Mandatory Licenses
         </h3>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          In regulated fields, soft skill overlap is legally insufficient. Employer Agent explicitly separates functional capability indicators from non-negotiable statutory licences.
+          In regulated fields, soft skill overlap is legally insufficient. Employer Agent explicitly separates functional capability indicators from non-negotiable statutory licenses.
         </p>
       </div>
 

@@ -38,7 +38,7 @@ export default async function AdminPublishedEventsPage() {
           <Search className="w-4 h-4 text-[var(--color-text-tertiary)]" />
           <input
             type="text"
-            placeholder="Filter published events by title, organiser, city, or category..."
+            placeholder="Filter published events by title, organizer, city, or category..."
             className="w-full bg-transparent text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] outline-none"
           />
         </div>
@@ -64,7 +64,7 @@ export default async function AdminPublishedEventsPage() {
               <thead className="border-b border-[var(--color-border-default)] bg-[var(--color-surface-sunken)] text-[var(--color-text-tertiary)] font-mono uppercase text-[10px]">
                 <tr>
                   <th className="p-3">Event Title</th>
-                  <th className="p-3">Organiser</th>
+                  <th className="p-3">Organizer</th>
                   <th className="p-3">Category</th>
                   <th className="p-3">Date & Time</th>
                   <th className="p-3">Location</th>

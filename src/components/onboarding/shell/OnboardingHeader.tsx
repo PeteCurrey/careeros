@@ -59,7 +59,7 @@ export function OnboardingHeader({
             </Link>
           </div>
 
-          {/* CENTRE / DESKTOP: 3 Simple Milestones */}
+          {/* CENTER / DESKTOP: 3 Simple Milestones */}
           <nav
             aria-label="Setup progress"
             className="hidden md:flex items-center gap-2 p-1 rounded-full bg-[var(--color-surface-raised)] border border-[var(--color-border-default)]"

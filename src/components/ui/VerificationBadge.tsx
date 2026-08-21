@@ -52,7 +52,7 @@ const stateConfig: Record<
   EMPLOYER_VERIFIED: {
     label: 'Employer Verified',
     variant: 'success',
-    description: 'Confirmed by verifiable organisation or manager',
+    description: 'Confirmed by verifiable organization or manager',
   },
   EXPIRED: {
     label: 'Expired',

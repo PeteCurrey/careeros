@@ -349,7 +349,7 @@ export default function OpportunityAgentPage() {
                   Traditional title-based search may surface
                 </span>
                 <div className="mt-2 flex flex-wrap gap-1.5">
-                  {['Military Logistics Manager', 'Supply Chain Officer', 'Defence Procurement'].map(
+                  {['Military Logistics Manager', 'Supply Chain Officer', 'Defense Procurement'].map(
                     (t) => (
                       <span
                         key={t}
@@ -471,7 +471,7 @@ export default function OpportunityAgentPage() {
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
               Private Mentor conversations, salary ambitions, career-change plans, and personal
               uncertainties should not be included in any employer-facing profile without your
-              explicit authorisation. This is a trust proposition, not just a feature.
+              explicit authorization. This is a trust proposition, not just a feature.
             </p>
           </div>
           <PrivacyRevealFlow />
@@ -489,7 +489,7 @@ export default function OpportunityAgentPage() {
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
               Career OS is designed around a two-sided architecture. Opportunity Agent works on behalf
               of the individual. Employer Agent — currently in development — would work on behalf of
-              organisations. Both agents can potentially identify meaningful overlap. Neither makes a
+              organizations. Both agents can potentially identify meaningful overlap. Neither makes a
               final decision on behalf of the person or the employer.
             </p>
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
@@ -603,8 +603,8 @@ export default function OpportunityAgentPage() {
             </h2>
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
               For students and early-career individuals, Opportunity Agent may eventually surface work
-              experience, internships, apprenticeships, employer programmes, relevant competitions,
-              and industry events — before a CV is needed, and before a career direction is fixed.
+              experience, internships, apprenticeships, employer programs, relevant competitions,
+              and industry events — before a resume is needed, and before a career direction is fixed.
             </p>
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
               Age safeguards remain consistent with Career OS policy. Under-18 interactions with
@@ -628,7 +628,7 @@ export default function OpportunityAgentPage() {
               { icon: '🌱', label: 'Work experience', note: 'Early evidence-building in a relevant environment' },
               { icon: '📋', label: 'Internships', note: 'Structured experience with a defined scope and outcome' },
               { icon: '🎓', label: 'Apprenticeships', note: 'Entry into a new sector with formal training and employment' },
-              { icon: '🏢', label: 'Employer programmes', note: 'Graduate schemes, insight days, and early talent pipelines' },
+              { icon: '🏢', label: 'Employer programs', note: 'Graduate schemes, insight days, and early talent pipelines' },
               { icon: '⚡', label: 'Competitions & projects', note: 'Evidence-building through external challenge or contribution' },
               { icon: '📚', label: 'Education routes', note: 'Pathways and qualifications relevant to stated direction' },
             ].map((item) => (
@@ -685,7 +685,7 @@ export default function OpportunityAgentPage() {
             <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
               Career OS is designed to support the full range of career directions — including
               entrepreneurship. The longer-term Opportunity Agent direction includes the potential to
-              surface founder programmes, accelerators, commercial training, relevant professional
+              surface founder programs, accelerators, commercial training, relevant professional
               networks, and business resources relevant to a person's stated interests and context.
             </p>
             <p className="text-xs text-[var(--color-text-tertiary)]">
@@ -698,8 +698,8 @@ export default function OpportunityAgentPage() {
           </div>
           <div className="space-y-3">
             {[
-              { label: 'Founder programmes', note: 'Structured support for early-stage company building' },
-              { label: 'Accelerators', note: 'Intensive development programmes for founders' },
+              { label: 'Founder programs', note: 'Structured support for early-stage company building' },
+              { label: 'Accelerators', note: 'Intensive development programs for founders' },
               { label: 'Commercial training', note: 'Skills relevant to running a business' },
               { label: 'Professional networks', note: 'Connections relevant to a target sector or idea' },
               { label: 'Grants & support', note: 'Funding and support relevant to stage and sector' },
@@ -724,10 +724,10 @@ export default function OpportunityAgentPage() {
             Careers increasingly cross borders. Eligibility still matters.
           </h2>
           <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
-            Career OS is designed to recognise that international opportunities exist and are relevant
+            Career OS is designed to recognize that international opportunities exist and are relevant
             to many users. The longer-term Opportunity Agent direction includes the ability to surface
             opportunities in other jurisdictions — with appropriate awareness of factors including
-            work authorisation, professional licensing, qualification recognition, language, and
+            work authorization, professional licensing, qualification recognition, language, and
             relocation requirements.
           </p>
           <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
@@ -736,7 +736,7 @@ export default function OpportunityAgentPage() {
             is actually eligible to pursue. These are not the same thing.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {['Work authorisation', 'Professional licensing', 'Qualification recognition', 'Language requirements', 'Relocation', 'Visa / sponsorship'].map(
+            {['Work authorization', 'Professional licensing', 'Qualification recognition', 'Language requirements', 'Relocation', 'Visa / sponsorship'].map(
               (item) => (
                 <div key={item} className="px-4 py-3 rounded border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/50 text-center">
                   <p className="text-xs font-medium text-[var(--color-text-secondary)]">{item}</p>
@@ -829,7 +829,7 @@ export default function OpportunityAgentPage() {
           />
           <FaqItem
             q="What information would an employer receive?"
-            a="In the designed future architecture, employers would receive only information you have authorised for sharing — agreed professional evidence and identity, not your full Career Twin or private context."
+            a="In the designed future architecture, employers would receive only information you have authorized for sharing — agreed professional evidence and identity, not your full Career Twin or private context."
           />
           <FaqItem
             q="How will Career OS decide what's relevant?"
@@ -865,7 +865,7 @@ export default function OpportunityAgentPage() {
           />
           <FaqItem
             q="Does it work for students?"
-            a="Yes, the intended student-facing Opportunity Agent direction includes work experience, internships, apprenticeships, employer programmes, and education routes. Under-18 interactions with employers are subject to appropriate safeguarding controls."
+            a="Yes, the intended student-facing Opportunity Agent direction includes work experience, internships, apprenticeships, employer programs, and education routes. Under-18 interactions with employers are subject to appropriate safeguarding controls."
           />
           <FaqItem
             q="Can it surface apprenticeships?"
@@ -877,11 +877,11 @@ export default function OpportunityAgentPage() {
           />
           <FaqItem
             q="Can it support international careers?"
-            a="International opportunity discovery is a future direction. Where opportunities in other jurisdictions are surfaced, the relevant eligibility factors — work authorisation, professional licensing, qualification recognition — are intended to be clearly indicated. Career OS does not provide immigration or legal advice."
+            a="International opportunity discovery is a future direction. Where opportunities in other jurisdictions are surfaced, the relevant eligibility factors — work authorization, professional licensing, qualification recognition — are intended to be clearly indicated. Career OS does not provide immigration or legal advice."
           />
           <FaqItem
             q="Can it support entrepreneurship?"
-            a="The longer-term Opportunity Agent direction includes founder programmes, accelerators, and commercial learning relevant to entrepreneurship. These are not currently active."
+            a="The longer-term Opportunity Agent direction includes founder programs, accelerators, and commercial learning relevant to entrepreneurship. These are not currently active."
           />
           <FaqItem
             q="Does it guarantee I am qualified for a role?"

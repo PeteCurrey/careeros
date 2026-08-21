@@ -92,7 +92,7 @@ export default function SchoolsPrivacyPage() {
             <div className="lg:col-span-6 space-y-6 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)] text-xs font-mono text-[var(--accent-blue)]">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>School &amp; Student Privacy Centre</span>
+                <span>School &amp; Student Privacy Center</span>
               </div>
 
               <div className="space-y-3">
@@ -132,7 +132,7 @@ export default function SchoolsPrivacyPage() {
               <div className="relative rounded-[var(--radius-card)] overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md shadow-2xl group">
                 <Image
                   src="/media/schools/school_privacy_architecture_hero.jpg"
-                  alt="Education technology governance briefing with school data protection officers examining structured data boundaries between Student, AI Mentor, Counsellor, Administrator, Guardian, and Employer layers."
+                  alt="Education technology governance briefing with school data protection officers examining structured data boundaries between Student, AI Mentor, Counselor, Administrator, Guardian, and Employer layers."
                   width={1920}
                   height={1080}
                   priority
@@ -145,7 +145,7 @@ export default function SchoolsPrivacyPage() {
                       Multi-Layer Access Governance Architecture
                     </span>
                     <p className="text-xs text-[var(--color-text-secondary)]">
-                      Student Self &bull; AI Mentor &bull; Counsellor &bull; Admin &bull; Guardian &bull; Employer
+                      Student Self &bull; AI Mentor &bull; Counselor &bull; Admin &bull; Guardian &bull; Employer
                     </p>
                   </div>
                   <span className="text-[10px] font-mono text-[var(--color-taupe-300)]">Illustrative</span>
@@ -215,7 +215,7 @@ export default function SchoolsPrivacyPage() {
 
             <div className="p-5 rounded bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
               <span className="font-mono text-[10px] text-blue-400 uppercase font-bold">Category 05</span>
-              <h4 className="font-semibold text-white text-sm">School Programme Activity</h4>
+              <h4 className="font-semibold text-white text-sm">School Program Activity</h4>
               <p className="text-[var(--color-text-secondary)]">Classroom career modules, guidance appointment bookings, and agreed school advisory action plans.</p>
             </div>
 
@@ -260,7 +260,7 @@ export default function SchoolsPrivacyPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
             <div className="p-5 rounded bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
-              <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-bold">Career Counsellor</span>
+              <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-bold">Career Counselor</span>
               <h4 className="font-semibold text-white text-sm">Guidance &amp; Action Plans</h4>
               <p className="text-[var(--color-text-secondary)]">Views agreed career pathways, verified academic entry grades, and guidance appointment notes to assist student planning.</p>
             </div>
@@ -433,7 +433,7 @@ export default function SchoolsPrivacyPage() {
           </div>
 
           <blockquote className="p-4 rounded bg-[var(--color-surface-base)] border-l-2 border-purple-400 text-xs italic text-white max-w-2xl">
-            &ldquo;More personal data is not automatically better personalisation.&rdquo;
+            &ldquo;More personal data is not automatically better personalization.&rdquo;
           </blockquote>
         </div>
       </section>
@@ -462,7 +462,7 @@ export default function SchoolsPrivacyPage() {
         </div>
       </section>
 
-      {/* ── SECTION 14: CONSENT & AUTHORISATION ──────────────────────── */}
+      {/* ── SECTION 14: CONSENT & AUTHORIZATION ──────────────────────── */}
       <section className="section-editorial bg-[var(--color-surface-raised)] border-b border-[var(--color-border-default)]">
         <div className="container-editorial space-y-8">
           <div className="max-w-3xl space-y-3">
@@ -537,7 +537,7 @@ export default function SchoolsPrivacyPage() {
               Schools should be able to understand where data goes.
             </h2>
             <p className="text-body-editorial text-[var(--color-text-secondary)]">
-              District procurement and IT security teams can inspect our full Data Processing Addenda (DPA), subprocessor registers, and infrastructure controls in our Trust Centre.
+              District procurement and IT security teams can inspect our full Data Processing Addenda (DPA), subprocessor registers, and infrastructure controls in our Trust Center.
             </p>
           </div>
 
@@ -591,7 +591,7 @@ export default function SchoolsPrivacyPage() {
               <span className="font-mono text-[10px] text-[var(--accent-blue)] uppercase font-bold">In Progress</span>
               <h4 className="font-semibold text-white text-sm">Enhanced School Portals</h4>
               <ul className="space-y-1 text-[var(--color-text-secondary)]">
-                <li>&bull; Counsellor cohort appointment dashboard</li>
+                <li>&bull; Counselor cohort appointment dashboard</li>
                 <li>&bull; Dynamic consent history audit ledger</li>
                 <li>&bull; School-to-alumni graduation transition flow</li>
               </ul>

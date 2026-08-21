@@ -67,7 +67,7 @@ const AI_DISCLOSURE_LABELS = [
   { label: 'AI-Assisted', desc: 'Output generated or materially influenced by an AI model.', color: 'text-[#6BB8FF] bg-blue-950/40 border-blue-500/30' },
   { label: 'AI-Drafted', desc: 'Text, bullets, or structure produced by AI for user review and editing.', color: 'text-purple-300 bg-purple-950/40 border-purple-500/30' },
   { label: 'AI-Matched', desc: 'Opportunity or candidate surfaced via algorithmic relevance scoring.', color: 'text-amber-300 bg-amber-950/40 border-amber-500/30' },
-  { label: 'AI-Synthesised', desc: 'Cross-dataset analysis or multi-source summary produced by AI.', color: 'text-emerald-300 bg-emerald-950/40 border-emerald-500/30' },
+  { label: 'AI-Synthesized', desc: 'Cross-dataset analysis or multi-source summary produced by AI.', color: 'text-emerald-300 bg-emerald-950/40 border-emerald-500/30' },
   { label: 'Human Curated', desc: 'Content reviewed, edited, or produced by Career OS staff.', color: 'text-white bg-white/10 border-white/20' },
   { label: 'Verified Source', desc: 'Data sourced from statutory or officially published records (e.g. O*NET, UCAS).', color: 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30' },
 ];
@@ -124,7 +124,7 @@ export default function AITransparencyPage() {
           <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs flex items-start gap-3">
             <BadgeInfo className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
             <p className="text-[var(--color-text-secondary)] leading-relaxed">
-              <strong className="text-white">Paid promotions:</strong> Employers can purchase enhanced visibility for verified opportunities. When this applies, the opportunity card is explicitly labelled{' '}
+              <strong className="text-white">Paid promotions:</strong> Employers can purchase enhanced visibility for verified opportunities. When this applies, the opportunity card is explicitly labeled{' '}
               <span className="font-mono text-amber-300">Promoted Opportunity</span>. Paid promotion does not alter the underlying AI relevance score for a candidate — it increases discovery frequency, not match accuracy.
             </p>
           </div>

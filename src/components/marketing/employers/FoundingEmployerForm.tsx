@@ -27,7 +27,7 @@ const USE_CASES = [
   'Hard-to-fill technical roles',
   'Skills-based hiring pilots',
   'Early careers & graduate hiring',
-  'Apprenticeships & trade programmes',
+  'Apprenticeships & trade programs',
   'Career changers & non-linear talent',
   'Internal mobility & succession planning',
   'Workforce development & upskilling',
@@ -85,7 +85,7 @@ export function FoundingEmployerForm() {
         </div>
         <h3 className="text-2xl font-serif text-white">Application Received</h3>
         <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          Thank you for applying to the Career OS Founding Employer programme. Our commercial partnerships and governance team will review your organization&apos;s use case and be in touch within two business days.
+          Thank you for applying to the Career OS Founding Employer program. Our commercial partnerships and governance team will review your organization&apos;s use case and be in touch within two business days.
         </p>
         <div className="p-4 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)] text-xs text-[var(--color-text-tertiary)] font-mono">
           Organization: {formData.organizationName || 'Submitted'} &bull; Contact: {formData.workEmail || 'Recorded'}
@@ -98,7 +98,7 @@ export function FoundingEmployerForm() {
     <form onSubmit={handleSubmit} className="p-6 sm:p-10 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-8" id="founding-employer-form">
       <div className="space-y-1 pb-4 border-b border-[var(--color-border-default)]">
         <span className="text-xs font-mono uppercase tracking-wider text-[var(--accent-blue)] font-semibold flex items-center gap-1.5">
-          <Building2 className="w-4 h-4" /> Founding Employer Programme Application
+          <Building2 className="w-4 h-4" /> Founding Employer Program Application
         </span>
         <h3 className="text-xl sm:text-2xl font-serif text-white">
           Partner with Career OS on skills-based talent discovery
@@ -155,7 +155,7 @@ export function FoundingEmployerForm() {
             <input
               type="text"
               required
-              placeholder="e.g. Advanced Manufacturing, Healthcare, Defence"
+              placeholder="e.g. Advanced Manufacturing, Healthcare, Defense"
               value={formData.industry}
               onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
               className="w-full p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)] text-white focus:outline-none focus:border-[var(--accent-blue)]"
@@ -251,17 +251,17 @@ export function FoundingEmployerForm() {
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[var(--color-text-secondary)] font-medium block">Active Apprenticeship / Early-Careers Programme?</label>
+            <label className="text-[var(--color-text-secondary)] font-medium block">Active Apprenticeship / Early-Careers Program?</label>
             <select
               value={formData.hasApprenticeshipEarlyCareers}
               onChange={(e) => setFormData({ ...formData, hasApprenticeshipEarlyCareers: e.target.value })}
               className="w-full p-2.5 rounded bg-[var(--color-surface-base)] border border-[var(--color-border-default)] text-white focus:outline-none focus:border-[var(--accent-blue)]"
             >
               <option value="">Select option</option>
-              <option value="yes-established">Yes — established programmes</option>
+              <option value="yes-established">Yes — established programs</option>
               <option value="yes-growing">Yes — currently expanding</option>
               <option value="planning">Currently planning / launching soon</option>
-              <option value="no">No active programme</option>
+              <option value="no">No active program</option>
             </select>
           </div>
 

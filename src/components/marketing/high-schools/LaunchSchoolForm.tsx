@@ -27,7 +27,7 @@ export function LaunchSchoolForm() {
     schoolType: 'Public / State High School',
     studentPopulation: '1,000–2,500 students',
     yearGroups: 'Whole High School (Grades 9–12 / Ages 14–18)',
-    teamSize: '3–5 counselling & careers team',
+    teamSize: '3–5 counseling & careers team',
     currentPlatform: '',
     primaryChallenge: 'Expanding apprenticeships & equal-parity technical pathways',
     keyPathways: 'All pathways with equal editorial parity',
@@ -83,14 +83,14 @@ export function LaunchSchoolForm() {
           <div className="flex items-center gap-2">
             <span className="accent-blue-dot" />
             <span className="text-xs font-mono uppercase tracking-wider text-[#2F8FFF] font-bold">
-              Career OS Launch School Programme
+              Career OS Launch School Program
             </span>
           </div>
           <h3 className="text-xl sm:text-2xl font-serif font-normal text-white">
             Become a Launch School or District
           </h3>
           <p className="text-xs text-[var(--color-text-secondary)]">
-            Explore an early institutional deployment tailored to your counselling capacity and student cohorts.
+            Explore an early institutional deployment tailored to your counseling capacity and student cohorts.
           </p>
         </div>
 
@@ -183,7 +183,7 @@ export function LaunchSchoolForm() {
                 <option value="Academy Trust / Multi-School Group">Academy Trust / Multi-School Group</option>
                 <option value="Vocational / Technical High School">Vocational / Technical High School</option>
                 <option value="Public School District Authority">Public School District Authority</option>
-                <option value="Charter / Specialised Academy">Charter / Specialised Academy</option>
+                <option value="Charter / Specialized Academy">Charter / Specialized Academy</option>
               </select>
             </div>
           </div>
@@ -224,15 +224,15 @@ export function LaunchSchoolForm() {
 
             <div className="space-y-1.5">
               <label className="text-xs font-semibold text-white block">
-                Careers / Counselling Team Size
+                Careers / Counseling Team Size
               </label>
               <select
                 value={formData.teamSize}
                 onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
                 className="w-full px-3.5 py-2.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] text-xs text-white focus:border-[#2F8FFF] focus:outline-none transition-colors"
               >
-                <option value="1–2 counsellors">1–2 counsellors</option>
-                <option value="3–5 counselling & careers team">3–5 counselling & careers team</option>
+                <option value="1–2 counselors">1–2 counselors</option>
+                <option value="3–5 counseling & careers team">3–5 counseling & careers team</option>
                 <option value="6+ full department">6+ full department</option>
                 <option value="Solo careers lead + teachers">Solo careers lead + teachers</option>
               </select>
@@ -270,7 +270,7 @@ export function LaunchSchoolForm() {
                 className="w-full px-3.5 py-2.5 bg-[var(--color-surface-base)] border border-[var(--color-border-default)] rounded-[var(--radius-sm)] text-xs text-white focus:border-[#2F8FFF] focus:outline-none transition-colors"
               >
                 <option value="Expanding apprenticeships & equal-parity technical pathways">Expanding apprenticeships & equal-parity technical pathways</option>
-                <option value="Counsellor workload & finite 1:1 advising time">Counsellor workload & finite 1:1 advising time</option>
+                <option value="Counselor workload & finite 1:1 advising time">Counselor workload & finite 1:1 advising time</option>
                 <option value="Student engagement between annual appointments">Student engagement between annual appointments</option>
                 <option value="Building tangible student capability evidence">Building tangible student capability evidence</option>
                 <option value="Post-graduation destination tracking">Post-graduation destination tracking</option>
@@ -386,7 +386,7 @@ export function LaunchSchoolForm() {
             disabled={loading}
             className="inline-flex items-center justify-center px-8 py-3 bg-[#F4F3EF] text-[#202020] font-semibold text-sm rounded-[var(--radius-button)] hover:bg-white hover:shadow-[0_0_16px_rgba(244,243,239,0.15)] active:scale-[0.98] transition-all cursor-pointer disabled:opacity-50"
           >
-            {loading ? 'Submitting Application...' : 'Apply for Launch School Programme'}
+            {loading ? 'Submitting Application...' : 'Apply for Launch School Program'}
             <ArrowRight className="w-4 h-4 ml-2" />
           </button>
         </div>

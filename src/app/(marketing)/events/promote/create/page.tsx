@@ -7,7 +7,7 @@ import { submitEventToQueue } from '@/lib/events/store';
 import { EVENT_CATEGORIES, EVENT_SECTORS } from '@/lib/events/data';
 import {
   CareerEvent,
-  OrganiserType,
+  OrganizerType,
   CareerStage,
   ExperienceLevel,
   EventFormat,
@@ -42,9 +42,9 @@ export default function EventCreateWizardPage() {
 
   // Form State
   const [formData, setFormData] = useState({
-    // 1. Organiser
+    // 1. Organizer
     orgName: 'Octopus Energy Green Academy',
-    orgType: 'employer' as OrganiserType,
+    orgType: 'employer' as OrganizerType,
     orgWebsite: 'https://octopus.energy/careers',
     orgContactEmail: 'earlycareers@octopus.energy',
     orgAbout: 'Pioneering renewable energy technology, smart grid infrastructure, and inclusive apprenticeships.',
@@ -54,7 +54,7 @@ export default function EventCreateWizardPage() {
     // 2. Event Basics
     title: 'Clean Energy & Smart Grid Degree Apprenticeship Open Day',
     categorySlug: 'apprenticeships',
-    shortSummary: 'Meet the engineering and software teams driving the net-zero energy transition. Explore paid degree apprenticeships with starting salaries of £28k.',
+    shortSummary: 'Meet the engineering and software teams driving the net-zero energy transition. Explore paid degree apprenticeships with starting salaries of $52k.',
     fullDescription: 'Join Octopus Energy at our flagship London technical hub to discover our 2026/2027 Apprenticeship Schemes. You will meet hiring managers across Smart Grid Engineering, Heat Pump Technology, and Cloud Energy Platforms.\n\nLearn how our apprentices study for fully funded degrees while working on production systems that power over 7 million homes.\n\nParents, guardians, and careers advisors are warmly invited to attend with prospective candidates.',
     heroImageUrl: 'https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1400&q=80',
     coverImageAlt: 'Solar panels and clean technology engineer on a modern industrial site',
@@ -96,7 +96,7 @@ export default function EventCreateWizardPage() {
     keyOutcomes: [
       'Understand Level 6 Degree Apprenticeship requirements and application deadlines',
       'Meet current 2nd and 3rd year apprentices working on live grid projects',
-      'Receive direct feedback on your CV and technical portfolio from recruiters',
+      'Receive direct feedback on your resume and technical portfolio from recruiters',
     ],
     prerequisites: ['Passionate about clean tech and engineering problem solving'],
     entryRequirements: ['Advance registration ticket', 'Parent/guardian welcome for attendees aged 14-17'],
@@ -146,7 +146,7 @@ export default function EventCreateWizardPage() {
       timezone: formData.timezone,
       heroImageUrl: formData.heroImageUrl,
       coverImageAlt: formData.coverImageAlt,
-      organiser: {
+      organizer: {
         id: `org-${Date.now()}`,
         name: formData.orgName,
         slug: formData.orgName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
@@ -192,7 +192,7 @@ export default function EventCreateWizardPage() {
         { id: 'ag-3', time: '13:30', title: 'Application Process & Assessment Clinic' },
       ],
       speakers: [],
-      participatingOrganisations: [
+      participatingOrganizations: [
         {
           id: `p-org-${Date.now()}`,
           name: formData.orgName,
@@ -260,7 +260,7 @@ export default function EventCreateWizardPage() {
           <div className="mb-8 space-y-2">
             <div className="flex items-center justify-between text-xs">
               <span className="font-bold text-[var(--color-text-primary)]">
-                {step === 1 && '1. Organiser Information'}
+                {step === 1 && '1. Organizer Information'}
                 {step === 2 && '2. Event Basics & Media'}
                 {step === 3 && '3. Schedule, Date & Timezone'}
                 {step === 4 && '4. Location & Virtual Access'}
@@ -285,19 +285,19 @@ export default function EventCreateWizardPage() {
         {/* ── FORM CONTAINER ───────────────────────────────────────── */}
         <div className="p-6 sm:p-8 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] shadow-lg space-y-6">
 
-          {/* STEP 1: ORGANISER */}
+          {/* STEP 1: ORGANIZER */}
           {step === 1 && (
             <div className="space-y-5 animate-in fade-in duration-200">
               <div className="space-y-1">
-                <h2 className="text-lg font-bold text-[var(--color-text-primary)]">Organiser Profile</h2>
+                <h2 className="text-lg font-bold text-[var(--color-text-primary)]">Organizer Profile</h2>
                 <p className="text-xs text-[var(--color-text-secondary)]">
-                  Provide details about your organisation. We verify all organisations prior to granting Verified badges.
+                  Provide details about your organization. We verify all organizations prior to granting Verified badges.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1 sm:col-span-2">
-                  <label className="section-label">Organisation Name</label>
+                  <label className="section-label">Organization Name</label>
                   <input
                     type="text"
                     value={formData.orgName}
@@ -308,7 +308,7 @@ export default function EventCreateWizardPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="section-label">Organiser Type</label>
+                  <label className="section-label">Organizer Type</label>
                   <select
                     value={formData.orgType}
                     onChange={(e) => setFormData({ ...formData, orgType: e.target.value as any })}
@@ -337,7 +337,7 @@ export default function EventCreateWizardPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="section-label">Contact / Organiser Email</label>
+                  <label className="section-label">Contact / Organizer Email</label>
                   <input
                     type="email"
                     value={formData.orgContactEmail}
@@ -358,7 +358,7 @@ export default function EventCreateWizardPage() {
                 </div>
 
                 <div className="space-y-1 sm:col-span-2">
-                  <label className="section-label">About the Organisation</label>
+                  <label className="section-label">About the Organization</label>
                   <textarea
                     value={formData.orgAbout}
                     onChange={(e) => setFormData({ ...formData, orgAbout: e.target.value })}
@@ -833,7 +833,7 @@ export default function EventCreateWizardPage() {
                   <span>Submission goes into Editorial Moderation Queue</span>
                 </div>
                 <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-                  Upon submission, CareerOS moderators will verify organiser legitimacy, safety disclosures, and accurate representation. Listings typically go live within 24 hours.
+                  Upon submission, CareerOS moderators will verify organizer legitimacy, safety disclosures, and accurate representation. Listings typically go live within 24 hours.
                 </p>
               </div>
             </div>
@@ -857,10 +857,10 @@ export default function EventCreateWizardPage() {
 
               <div className="flex flex-wrap justify-center gap-3 pt-2">
                 <Link
-                  href={ROUTES.EVENTS_ORGANISERS_DASHBOARD}
+                  href={ROUTES.EVENTS_ORGANIZERS_DASHBOARD}
                   className="px-5 py-2.5 bg-white text-zinc-900 text-xs font-bold rounded-[var(--radius-button)] hover:bg-zinc-100 transition-colors"
                 >
-                  Go to Organiser Portal
+                  Go to Organizer Portal
                 </Link>
                 <Link
                   href={ROUTES.EVENTS}
