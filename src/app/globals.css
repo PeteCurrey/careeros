@@ -134,6 +134,95 @@
   --shadow-card: 0 2px 8px -2px rgba(0, 0, 0, 0.20);
   --shadow-editorial: 0 16px 36px -12px rgba(0, 0, 0, 0.35);
   --shadow-floating: 0 24px 50px -16px rgba(0, 0, 0, 0.50);
+
+  /* ------------------------------------------------------------
+     MOTION SYSTEM
+     One easing curve and one duration ladder for the whole
+     product. Every transition and entrance draws from these —
+     never a bespoke cubic-bezier at the call site.
+     ------------------------------------------------------------ */
+
+  /* Signature curve: decisive start, long settle. Used for
+     anything the user perceives as the interface responding. */
+  --ease-career: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Symmetrical curve for state that toggles rather than arrives. */
+  --ease-career-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  /* Exits are faster and flatter than entrances. */
+  --ease-career-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Duration ladder. Anything above 'deliberate' is a set piece,
+     not an interaction, and should be justified. */
+  --duration-instant: 100ms;   /* hover, focus, colour shifts   */
+  --duration-quick: 180ms;     /* toggles, chips, small reveals */
+  --duration-settled: 320ms;   /* panels, cards, step changes   */
+  --duration-deliberate: 560ms; /* full-screen scene changes    */
+
+  /* Default entrance timing when no duration-* utility is set. */
+  --enter-duration: var(--duration-settled);
+
+  /* Named animations resolved by Tailwind's animate-* utilities. */
+  --animate-fade-in: career-fade-in var(--duration-settled) var(--ease-career) both;
+  --animate-spin-slow: spin 14s linear infinite;
+}
+
+/* ============================================================
+   COMPATIBILITY TOKENS
+
+   These names are referenced ~380 times across the codebase but
+   were never defined — a leftover from the original light "ivory"
+   palette before the canvas was flipped to charcoal. Undefined
+   custom properties resolve to nothing, so every one of these
+   call sites was rendering a transparent background, an invisible
+   border, or unstyled text, silently and with no build error.
+
+   They are defined here as aliases onto the live charcoal + blue
+   system rather than as a second palette. Two rules held:
+     - anything used as text is light enough to clear WCAG AA on
+       both --color-surface-base and --color-surface-raised;
+     - anything used as a surface or border is a translucent tint
+       of the accent, so it composites over charcoal instead of
+       introducing a competing navy.
+
+   This block is a bridge, not a system. New work should use the
+   primary tokens above; these should be migrated out call site by
+   call site. `npm run check:tokens` fails the build if any new
+   undefined token appears.
+   ============================================================ */
+:root {
+  /* --- Brand blue scale ---
+     Used on a dark canvas: low numbers read as light accent text,
+     high numbers as tinted surfaces. */
+  --color-brand-50: rgba(47, 143, 255, 0.06);   /* subtle tinted panel   */
+  --color-brand-200: rgba(47, 143, 255, 0.18);  /* hairline accent rule  */
+  --color-brand-300: #8FC4FF;                   /* lightest accent text  */
+  --color-brand-400: #6BB8FF;                   /* accent text (default) */
+  --color-brand-500: rgba(47, 143, 255, 0.35);  /* interactive border    */
+  --color-brand-600: #4A9BFF;                   /* emphasis accent text  */
+  --color-brand-700: #2F8FFF;                   /* accent, large text    */
+  --color-brand-800: rgba(47, 143, 255, 0.22);  /* raised panel border   */
+  --color-brand-950: rgba(47, 143, 255, 0.10);  /* deep tinted panel     */
+
+  /* --- Taupe scale extensions ---
+     The existing ramp runs dark-to-light as the number rises;
+     these continue it upward into emphasis text. */
+  --color-taupe-200: #9E9D98;
+  --color-taupe-700: #D8D3CC;
+  --color-taupe-800: #E9E5DF;
+
+  /* --- Misc aliases --- */
+  --color-accent-primary: #4A9BFF;
+  --color-background: #222222;
+  --color-border-interactive: rgba(47, 143, 255, 0.35);
+
+  /* --- Admin console (src/app/(admin)/admin/integrations) --- */
+  --admin-surface: #181818;
+  --admin-surface-raised: #2a2a2a;
+  --admin-border: rgba(255, 255, 255, 0.08);
+  --admin-border-interactive: rgba(47, 143, 255, 0.28);
+  --admin-accent: #4A9BFF;
+  --admin-text-primary: #F4F3EF;
+  --admin-text-secondary: #C9C8C3;
+  --admin-text-muted: #9E9D98;
 }
 
 /* ============================================================
@@ -201,6 +290,78 @@ body {
 .skip-link:focus {
   top: 0;
 }
+
+/* ============================================================
+   ENTRANCE UTILITIES
+
+   `animate-in` plus a set of composable modifiers describing
+   where an element enters FROM. Each modifier sets a custom
+   property that the shared `career-enter` keyframe reads, so
+   modifiers combine without fighting each other:
+
+     animate-in fade-in                      → fades up from nothing
+     animate-in fade-in zoom-in-95           → fades and scales in
+     animate-in fade-in slide-in-from-top-1  → fades and drops in
+
+   Duration and easing are inherited from Tailwind's own
+   `duration-*` and `ease-*` utilities via --tw-duration /
+   --tw-ease, so `animate-in fade-in duration-150` behaves the
+   way it reads. With no duration utility present, entrances
+   fall back to the motion ladder above.
+
+   All of this is disabled wholesale by the prefers-reduced-motion
+   block in BASE & RESET.
+   ============================================================ */
+
+@keyframes career-enter {
+  from {
+    opacity: var(--enter-opacity, 1);
+    transform:
+      translate3d(
+        var(--enter-translate-x, 0),
+        var(--enter-translate-y, 0),
+        0
+      )
+      scale3d(
+        var(--enter-scale, 1),
+        var(--enter-scale, 1),
+        1
+      );
+  }
+}
+
+@keyframes career-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-in {
+  animation-name: career-enter;
+  animation-duration: var(--tw-duration, var(--enter-duration));
+  animation-timing-function: var(--tw-ease, var(--ease-career));
+  animation-fill-mode: both;
+}
+
+/* --- Entrance modifiers: opacity --- */
+.fade-in { --enter-opacity: 0; }
+
+/* --- Entrance modifiers: scale --- */
+.zoom-in-90 { --enter-scale: 0.90; }
+.zoom-in-95 { --enter-scale: 0.95; }
+.zoom-in-98 { --enter-scale: 0.98; }
+
+/* --- Entrance modifiers: translation ---
+   Suffix matches Tailwind's spacing scale (1 = 0.25rem). */
+.slide-in-from-top-1    { --enter-translate-y: -0.25rem; }
+.slide-in-from-top-2    { --enter-translate-y: -0.5rem; }
+.slide-in-from-top-4    { --enter-translate-y: -1rem; }
+.slide-in-from-bottom-1 { --enter-translate-y: 0.25rem; }
+.slide-in-from-bottom-2 { --enter-translate-y: 0.5rem; }
+.slide-in-from-bottom-4 { --enter-translate-y: 1rem; }
+.slide-in-from-left-2   { --enter-translate-x: -0.5rem; }
+.slide-in-from-left-4   { --enter-translate-x: -1rem; }
+.slide-in-from-right-2  { --enter-translate-x: 0.5rem; }
+.slide-in-from-right-4  { --enter-translate-x: 1rem; }
 
 /* ============================================================
    EDITORIAL TYPOGRAPHY UTILITIES

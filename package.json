@@ -8,6 +8,8 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
+    "check:tokens": "node scripts/check_design_tokens.mjs",
+    "check": "npm run typecheck && npm run check:tokens && npm run test",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
