@@ -37,53 +37,94 @@ export function Step15SystemLaunch({
   activationError,
   onActivate,
 }: Step15SystemLaunchProps) {
+  /**
+   * Every row reports what was actually built.
+   *
+   * This summary previously hardcoded a fallback for each count and a fixed
+   * 'READY' / 'CONNECTED' / 'ACTIVE' status, so a user whose synthesis had
+   * returned nothing was still shown "3 skills and strengths", "1 verified
+   * record", "2 possible directions" and a mentor by name. The screen that
+   * tells someone their Career OS is assembled has to be the one screen that
+   * cannot overstate it.
+   */
+  const plural = (n: number, one: string, many: string) =>
+    `${n} ${n === 1 ? one : many}`;
+
+  const capabilityCount = careerTwin?.capabilities?.length ?? 0;
+  const passportCount = passport?.entries?.length ?? 0;
+  const pathwayCount = graphSeed?.nodes?.length ?? 0;
+
   const systems = [
     {
       name: 'Career Twin',
-      status: 'READY',
-      detail: `${careerTwin?.capabilities?.length || 3} skills and strengths`,
+      ready: capabilityCount > 0,
+      detail: capabilityCount
+        ? plural(capabilityCount, 'skill and strength', 'skills and strengths')
+        : 'Nothing added yet',
       icon: Sparkles,
     },
     {
       name: 'Career Passport',
-      status: 'READY',
-      detail: `${passport?.entries?.length || 1} verified records`,
+      ready: passportCount > 0,
+      detail: passportCount
+        ? plural(passportCount, 'record', 'records')
+        : 'No records yet',
       icon: Award,
     },
     {
       name: 'Career Map',
-      status: 'READY',
-      detail: `${graphSeed?.nodes?.length || 2} possible directions`,
+      ready: pathwayCount > 0,
+      detail: pathwayCount
+        ? plural(pathwayCount, 'possible direction', 'possible directions')
+        : 'Not mapped yet',
       icon: Compass,
     },
     {
       name: 'AI Career Mentor',
-      status: 'CONNECTED',
-      detail: mentorAssignment?.mentorName || 'Marcus Thorne',
+      ready: Boolean(mentorAssignment?.mentorName),
+      detail: mentorAssignment
+        ? `${mentorAssignment.mentorName} \u00b7 AI mentor`
+        : 'Not assigned yet',
       icon: Bot,
     },
     {
       name: 'Your Plan',
-      status: 'ACTIVE',
-      detail: `${careerObjective?.horizonDays || 90}-day next steps`,
+      ready: Boolean(careerObjective?.horizonDays),
+      detail: careerObjective?.horizonDays
+        ? `${careerObjective.horizonDays}-day next steps`
+        : 'No plan yet',
       icon: Target,
     },
-  ];
+  ].map((system) => ({
+    ...system,
+    status: system.ready ? 'READY' : 'PENDING',
+  }));
+
+  const readyCount = systems.filter((s) => s.ready).length;
+  const allReady = readyCount === systems.length;
 
   return (
     <div className="w-full max-w-4xl mx-auto py-10 px-4 sm:px-6 space-y-10 animate-in fade-in duration-500">
       {/* Header Signpost */}
       <div className="text-center space-y-3 max-w-xl mx-auto">
         <div className="flex items-center justify-center gap-2">
-          <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">
-            All ready
+          <span
+            className={`text-[10px] font-mono uppercase px-2.5 py-0.5 rounded font-bold ${
+              allReady
+                ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
+                : 'bg-[var(--accent-blue-subtle)] text-[var(--accent-blue)] border border-[var(--accent-blue-border)]'
+            }`}
+          >
+            {allReady ? 'All ready' : `${readyCount} of ${systems.length} ready`}
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-normal leading-tight">
-          Your Career OS is ready.
+          {allReady ? 'Your Career OS is ready.' : 'Your Career OS is set up.'}
         </h1>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          We've created your Career Twin, prepared your map, and connected your Mentor.
+          {allReady
+            ? "We've created your Career Twin, prepared your map, and connected your Mentor."
+            : 'You can start now and fill in the rest as you go \u2014 nothing here is fixed.'}
         </p>
       </div>
 
@@ -95,11 +136,19 @@ export function Step15SystemLaunch({
           return (
             <Card
               key={sys.name}
-              className="p-4 sm:p-5 bg-gradient-to-br from-[var(--color-surface-raised)] to-[var(--color-surface-base)] border border-emerald-500/30 space-y-2 shadow-md hover:border-emerald-500/50 transition-colors"
+              className={`p-4 sm:p-5 bg-gradient-to-br from-[var(--color-surface-raised)] to-[var(--color-surface-base)] space-y-2 shadow-md transition-colors ${
+                sys.ready
+                  ? 'border border-emerald-500/30 hover:border-emerald-500/50'
+                  : 'border border-[var(--color-border-default)]'
+              }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 font-bold text-white text-xs">
-                  <Icon className="w-4 h-4 text-emerald-400" />
+                  <Icon
+                    className={`w-4 h-4 ${
+                      sys.ready ? 'text-emerald-400' : 'text-[var(--color-text-tertiary)]'
+                    }`}
+                  />
                   <span>{sys.name}</span>
                 </div>
                 <span className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">

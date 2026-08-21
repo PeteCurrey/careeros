@@ -4,18 +4,32 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { OnboardingChapter } from '@/types/platform/onboarding';
 import { OnboardingHelpModal } from './OnboardingHelpModal';
-import { HelpCircle, LogOut, CheckCircle2 } from 'lucide-react';
+import { HelpCircle, LogOut, CheckCircle2, Loader2, AlertTriangle } from 'lucide-react';
 import { ROUTES } from '@/lib/routes';
+
+/**
+ * Real save state, rather than a permanent green tick.
+ *
+ * This indicator previously rendered "Saved" with a green dot from the first
+ * frame onward — before anything had been sent, and regardless of whether the
+ * request later failed. In a product whose pitch is that the user's record is
+ * trustworthy, the one piece of chrome that reports on their data has to be
+ * accurate.
+ */
+export type OnboardingSaveState = 'idle' | 'saving' | 'saved' | 'error';
 
 interface OnboardingHeaderProps {
   currentChapter: OnboardingChapter;
-  saveStatus?: string | null;
+  saveState?: OnboardingSaveState;
+  /** Optional detail, e.g. "Passkey secured". Only shown alongside 'saved'. */
+  saveDetail?: string | null;
   onSaveAndExit?: () => void;
 }
 
 export function OnboardingHeader({
   currentChapter,
-  saveStatus,
+  saveState = 'idle',
+  saveDetail,
   onSaveAndExit,
 }: OnboardingHeaderProps) {
   const [isHelpOpen, setIsHelpOpen] = useState(false);
@@ -92,13 +106,39 @@ export function OnboardingHeader({
 
           {/* RIGHT: Status, Help & Save & Exit */}
           <div className="flex items-center gap-3 text-xs font-mono">
-            {/* Auto-save confirmation indicator */}
-            <div className="flex items-center gap-1.5 text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span className="hidden sm:inline">{saveStatus || 'Saved'}</span>
-            </div>
+            {/* Save state — renders nothing until there is something to report. */}
+            {saveState !== 'idle' && (
+              <div
+                role="status"
+                aria-live="polite"
+                className={`flex items-center gap-1.5 ${
+                  saveState === 'error'
+                    ? 'text-[var(--color-warning)]'
+                    : saveState === 'saving'
+                      ? 'text-[var(--color-text-tertiary)]'
+                      : 'text-emerald-400'
+                }`}
+              >
+                {saveState === 'saving' && (
+                  <Loader2 className="w-3 h-3 animate-spin" aria-hidden="true" />
+                )}
+                {saveState === 'saved' && (
+                  <CheckCircle2 className="w-3 h-3" aria-hidden="true" />
+                )}
+                {saveState === 'error' && (
+                  <AlertTriangle className="w-3 h-3" aria-hidden="true" />
+                )}
+                <span className="hidden sm:inline">
+                  {saveState === 'saving' && 'Saving'}
+                  {saveState === 'saved' && (saveDetail || 'Progress saved')}
+                  {saveState === 'error' && "Couldn't save"}
+                </span>
+              </div>
+            )}
 
-            <div className="h-3.5 w-px bg-[var(--color-border-default)] hidden sm:block" />
+            {saveState !== 'idle' && (
+              <div className="h-3.5 w-px bg-[var(--color-border-default)] hidden sm:block" />
+            )}
 
             {/* Help modal trigger */}
             <button

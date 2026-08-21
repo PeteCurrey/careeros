@@ -49,7 +49,7 @@ export class CareerBriefService {
       forceRegenerate = false,
     } = params;
 
-    const firstName = userDisplayName.trim().split(" ")[0] || "there";
+    const firstName = userDisplayName.trim().split(" ")[0] || "";
 
     // 1. Calculate Input Hash for Stale Detection & Caching
     const inputPayload = JSON.stringify({

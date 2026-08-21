@@ -7,7 +7,7 @@ import { createAdminClient } from '@/lib/supabase/server';
 import { MENTOR_LIST } from '@/content/mentors/mentorRegistry';
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-  let displayName = 'Pete Currey';
+  let displayName = '';
   let mentorName = 'Marcus Thorne';
   let mentorPortraitSrc = '/media/mentors/mentor_marcus.jpg';
   let mentorDomain = 'Technology & Systems Architecture';

@@ -19,6 +19,7 @@ import {
   Search,
   ChevronDown,
   ExternalLink,
+  User,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -30,7 +31,7 @@ interface AppHeaderProps {
 }
 
 export function AppHeader({
-  userDisplayName = 'Pete Currey',
+  userDisplayName = '',
   mentorName = 'Marcus Thorne',
   mentorPortraitSrc = '/media/mentors/mentor_marcus.jpg',
   mentorDomain = 'Technology & Systems Architecture',
@@ -55,7 +56,7 @@ export function AppHeader({
     return pathname.startsWith(href);
   };
 
-  const firstName = userDisplayName.split(' ')[0] || 'User';
+  const firstName = userDisplayName.trim().split(' ')[0] || '';
 
   return (
     <header className="sticky top-0 z-40 w-full bg-[var(--color-surface-raised)]/90 backdrop-blur-md border-b border-[var(--color-border-default)]">
@@ -140,9 +141,11 @@ export function AppHeader({
               aria-expanded={profileOpen}
               aria-label="User menu"
             >
-              <span className="font-mono text-[11px] text-white font-medium">{firstName}</span>
+              <span className="font-mono text-[11px] text-white font-medium">
+                {firstName || 'Account'}
+              </span>
               <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#2F8FFF] to-purple-500 flex items-center justify-center text-white text-[10px] font-bold">
-                {firstName.charAt(0)}
+                {firstName ? firstName.charAt(0) : <User className="w-3 h-3" />}
               </div>
               <ChevronDown className="w-3 h-3 text-[var(--color-text-tertiary)]" />
             </button>
@@ -155,7 +158,9 @@ export function AppHeader({
                 />
                 <div className="absolute right-0 mt-2 w-56 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] shadow-2xl z-50 p-2 text-xs space-y-1">
                   <div className="px-3 py-2 border-b border-[var(--color-border-default)]">
-                    <p className="font-semibold text-white truncate">{userDisplayName}</p>
+                    <p className="font-semibold text-white truncate">
+                      {userDisplayName || 'Your Career OS account'}
+                    </p>
                     <p className="text-[10px] font-mono text-[var(--color-taupe-300)]">Career OS Account</p>
                   </div>
 

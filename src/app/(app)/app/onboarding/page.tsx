@@ -9,7 +9,10 @@ import { MentorAssignment, CareerObjective } from '@/types/platform/mentors';
 import { startRegistration } from '@simplewebauthn/browser';
 
 // Shell & Navigation
-import { OnboardingHeader } from '@/components/onboarding/shell/OnboardingHeader';
+import {
+  OnboardingHeader,
+  type OnboardingSaveState,
+} from '@/components/onboarding/shell/OnboardingHeader';
 
 // Chapter 01: Protect Steps
 import { Step01Name } from '@/components/onboarding/chapters/Chapter01Protect/Step01Name';
@@ -38,7 +41,8 @@ export default function RedesignedOnboardingMaster() {
   // Navigation & Step Sequence
   const [currentChapter, setCurrentChapter] = useState<OnboardingChapter>('01_PROTECT');
   const [currentStep, setCurrentStep] = useState<number>(1);
-  const [saveStatus, setSaveStatus] = useState<string | null>(null);
+  const [saveState, setSaveState] = useState<OnboardingSaveState>('idle');
+  const [saveDetail, setSaveDetail] = useState<string | null>(null);
 
   // Chapter 01 State
   const [displayName, setDisplayName] = useState('');
@@ -52,15 +56,14 @@ export default function RedesignedOnboardingMaster() {
   const [securityError, setSecurityError] = useState('');
 
   // Chapter 02 State
-  const [careerStage, setCareerStage] = useState<CareerStage>('EARLY_CAREER');
-  const [primaryGoal, setPrimaryGoal] = useState('Find a better job');
+  const [careerStage, setCareerStage] = useState<CareerStage | null>(null);
+  const [primaryGoal, setPrimaryGoal] = useState('');
   const [extractedResume, setExtractedResume] = useState<ExtractedResumeData | null>(null);
   const [isUploadingResume, setIsUploadingResume] = useState(false);
-  const [skills, setSkills] = useState<string[]>([
-    'Problem Solving',
-    'Communication',
-    'Strategic Thinking',
-  ]);
+  // Seeded empty on purpose. Anything in here is presented back to the user
+  // as a capability they declared and is fed into Career Twin synthesis as
+  // evidence, so it must come from them.
+  const [skills, setSkills] = useState<string[]>([]);
 
   // Chapter 03 State
   const [isSynthesizing, setIsSynthesizing] = useState(false);
@@ -88,16 +91,19 @@ export default function RedesignedOnboardingMaster() {
   const [isActivating, setIsActivating] = useState(false);
   const [activationError, setActivationError] = useState<string | null>(null);
 
-  // Feedback indicator helper
-  const triggerSaveNotification = (msg: string = 'Saved') => {
-    setSaveStatus(msg);
-    setTimeout(() => setSaveStatus(null), 2500);
+  // Reports a completed save. The indicator keeps the 'saved' state after the
+  // detail message fades, because at that point the claim is true.
+  const triggerSaveNotification = (msg: string = 'Progress saved') => {
+    setSaveState('saved');
+    setSaveDetail(msg);
+    setTimeout(() => setSaveDetail(null), 2500);
   };
 
   // Auto-persist step progress to backend
   const persistSessionProgress = async (chapter: OnboardingChapter, section: string) => {
+    setSaveState('saving');
     try {
-      await fetch('/api/app/onboarding/save', {
+      const res = await fetch('/api/app/onboarding/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -116,9 +122,17 @@ export default function RedesignedOnboardingMaster() {
           },
         }),
       });
-      triggerSaveNotification('Saved');
+
+      // A failed save used to be swallowed here, so the header went on
+      // claiming the user's answers were stored when they were not.
+      if (!res.ok) {
+        setSaveState('error');
+        return;
+      }
+
+      triggerSaveNotification();
     } catch {
-      // Non-fatal background save failure
+      setSaveState('error');
     }
   };
 
@@ -226,9 +240,9 @@ export default function RedesignedOnboardingMaster() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           context: {
-            displayName: displayName || 'Pete Currey',
-            city: city || 'San Francisco',
-            state: stateCode || 'CA',
+            displayName: displayName.trim(),
+            city: city.trim(),
+            state: stateCode.trim(),
             zipCode,
             careerStage,
             primaryGoal,
@@ -418,7 +432,8 @@ export default function RedesignedOnboardingMaster() {
       {/* Dedicated Minimal Onboarding Header */}
       <OnboardingHeader
         currentChapter={currentChapter}
-        saveStatus={saveStatus}
+        saveState={saveState}
+        saveDetail={saveDetail}
         onSaveAndExit={() => {
           persistSessionProgress(currentChapter, `step_${currentStep}`);
           router.push(ROUTES.HOME);
@@ -491,7 +506,7 @@ export default function RedesignedOnboardingMaster() {
           />
         )}
 
-        {currentStep === 5 && (
+        {currentStep === 5 && careerStage && (
           <Step05StageTransition
             careerStage={careerStage}
             onNext={() => {
@@ -502,7 +517,7 @@ export default function RedesignedOnboardingMaster() {
           />
         )}
 
-        {currentStep === 6 && (
+        {currentStep === 6 && careerStage && (
           <Step06PrimaryGoal
             careerStage={careerStage}
             primaryGoal={primaryGoal}
@@ -528,7 +543,7 @@ export default function RedesignedOnboardingMaster() {
           />
         )}
 
-        {currentStep === 8 && (
+        {currentStep === 8 && careerStage && (
           <Step08Capabilities
             careerStage={careerStage}
             skills={skills}

@@ -20,7 +20,8 @@ import {
 } from 'lucide-react';
 
 interface Step04StageSelectProps {
-  careerStage: CareerStage;
+  /** Null until the user picks. No stage is assumed on their behalf. */
+  careerStage: CareerStage | null;
   onSelectStage: (stage: CareerStage) => void;
   onNext: () => void;
   onBack: () => void;
@@ -160,6 +161,7 @@ export function Step04StageSelect({
             variant="primary"
             size="md"
             onClick={onNext}
+            disabled={!careerStage}
             className="text-xs font-mono"
           >
             <span>Continue</span>

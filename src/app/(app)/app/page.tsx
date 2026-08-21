@@ -36,7 +36,7 @@ export default async function AppTodayPage() {
     .eq("auth_user_id", userId)
     .maybeSingle();
 
-  const displayName = profile?.display_name || "Pete Currey";
+  const displayName = profile?.display_name?.trim() || "";
 
   // Fetch assigned mentor
   const { data: mentorRow } = await adminDb
