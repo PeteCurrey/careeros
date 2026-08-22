@@ -44,12 +44,12 @@ export function TrustSubnav() {
                 className={cn(
                   'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-button)] text-xs font-medium transition-colors shrink-0',
                   isActive
-                    ? 'bg-white/10 text-white font-semibold shadow-xs ring-1 ring-white/20'
-                    : 'text-[var(--color-text-secondary)] hover:text-white hover:bg-white/5'
+                    ? 'bg-[var(--overlay-lift-strong)] text-[var(--color-text-primary)] font-semibold shadow-xs ring-1 ring-[var(--color-border-strong)]'
+                    : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--overlay-lift)]'
                 )}
                 aria-current={isActive ? 'page' : undefined}
               >
-                <Icon className={cn('w-3.5 h-3.5', isActive ? 'text-[#6BB8FF]' : 'text-[var(--color-text-tertiary)]')} />
+                <Icon className={cn('w-3.5 h-3.5', isActive ? 'text-[var(--color-brand-300)]' : 'text-[var(--color-text-tertiary)]')} />
                 <span>{item.label}</span>
               </Link>
             );
@@ -59,16 +59,16 @@ export function TrustSubnav() {
         {/* Quick Links to Related Legal & Privacy Resources */}
         <div className="hidden lg:flex items-center gap-3 text-[11px] font-mono text-[var(--color-text-tertiary)] shrink-0">
           <span className="text-[var(--color-border-subtle)]">|</span>
-          <Link href={ROUTES.LEGAL_PRIVACY} className="hover:text-white transition-colors">
+          <Link href={ROUTES.LEGAL_PRIVACY} className="hover:text-[var(--color-text-primary)] transition-colors">
             Privacy Policy
           </Link>
-          <Link href={ROUTES.TRUST_SECURITY} className="hover:text-white transition-colors">
+          <Link href={ROUTES.TRUST_SECURITY} className="hover:text-[var(--color-text-primary)] transition-colors">
             Security Controls
           </Link>
-          <Link href={ROUTES.TRUST_SAFEGUARDING} className="hover:text-white transition-colors">
+          <Link href={ROUTES.TRUST_SAFEGUARDING} className="hover:text-[var(--color-text-primary)] transition-colors">
             Safeguarding
           </Link>
-          <Link href={ROUTES.LEGAL_AI_TERMS} className="hover:text-white transition-colors">
+          <Link href={ROUTES.LEGAL_AI_TERMS} className="hover:text-[var(--color-text-primary)] transition-colors">
             AI Terms
           </Link>
         </div>

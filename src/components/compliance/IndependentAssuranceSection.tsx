@@ -27,7 +27,7 @@ export function IndependentAssuranceSection({
   return (
     <section id="independent-assurance" className="space-y-8">
       <div className="space-y-2">
-        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
           <Award className="w-3.5 h-3.5" />
           <span>INDEPENDENT VERIFICATION & ACCREDITED REGISTRATION</span>
         </div>
@@ -52,15 +52,15 @@ export function IndependentAssuranceSection({
 
       {/* ISO 42001 Spotlight Callout Banner */}
       <div className="p-6 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-strong)] relative overflow-hidden space-y-4">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#2F8FFF]/5 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--accent-blue)]/5 rounded-full blur-2xl pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-sm bg-[#6BB8FF]/10 border border-[#6BB8FF]/30 flex items-center justify-center text-[#6BB8FF] shrink-0">
+            <div className="w-10 h-10 rounded-sm bg-[var(--color-brand-300)]/10 border border-[var(--color-brand-300)]/30 flex items-center justify-center text-[var(--color-brand-300)] shrink-0">
               <Bot className="w-5 h-5" />
             </div>
             <div>
-              <span className="font-mono text-[10px] uppercase text-[#6BB8FF] font-semibold tracking-wider">
+              <span className="font-mono text-[10px] uppercase text-[var(--color-brand-300)] font-semibold tracking-wider">
                 Enterprise AI Differentiator
               </span>
               <h3 className="text-sm sm:text-base font-bold text-[var(--color-text-primary)]">
@@ -72,7 +72,7 @@ export function IndependentAssuranceSection({
           <div className="flex flex-wrap items-center gap-2">
             <Link
               href={ROUTES.TRUST_RESPONSIBLE_AI}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-white text-neutral-900 hover:bg-neutral-100 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-[var(--color-surface-raised)] text-neutral-900 hover:bg-neutral-100 transition-colors"
             >
               <span>Responsible AI Architecture</span>
               <ArrowRight className="w-3 h-3" />
@@ -85,16 +85,16 @@ export function IndependentAssuranceSection({
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 border-t border-[var(--color-border-subtle)] text-[11px] font-mono text-[var(--color-text-secondary)]">
-          <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="hover:text-white transition-colors">
+          <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="hover:text-[var(--color-text-primary)] transition-colors">
             &rarr; Responsible AI Policy
           </Link>
-          <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="hover:text-white transition-colors">
+          <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="hover:text-[var(--color-text-primary)] transition-colors">
             &rarr; AI Transparency Register
           </Link>
-          <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="hover:text-white transition-colors">
+          <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="hover:text-[var(--color-text-primary)] transition-colors">
             &rarr; Human Oversight Matrix
           </Link>
-          <Link href={ROUTES.TRUST_FAIRNESS_BIAS} className="hover:text-white transition-colors">
+          <Link href={ROUTES.TRUST_FAIRNESS_BIAS} className="hover:text-[var(--color-text-primary)] transition-colors">
             &rarr; Fairness & Bias Protocol
           </Link>
         </div>

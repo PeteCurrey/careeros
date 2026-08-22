@@ -32,7 +32,7 @@ export function FrameworkCard({
       <div className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-[var(--color-text-tertiary)] bg-white/5 px-2 py-0.5 rounded-xs border border-white/5">
+            <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-[var(--color-text-tertiary)] bg-[var(--overlay-lift)] px-2 py-0.5 rounded-xs border border-[var(--color-border-subtle)]">
               {framework.category.replace('_', ' ')}
             </span>
             {framework.standardVersion && (
@@ -67,7 +67,7 @@ export function FrameworkCard({
                   key={item}
                   className="inline-flex items-center gap-1 px-2 py-0.5 rounded-xs bg-[var(--color-surface-sunken)] border border-[var(--color-border-subtle)] font-mono text-[10px] text-[var(--color-text-secondary)]"
                 >
-                  <span className="w-1 h-1 rounded-full bg-[#6BB8FF]" />
+                  <span className="w-1 h-1 rounded-full bg-[var(--color-brand-300)]" />
                   <span>{item}</span>
                 </span>
               ))}
@@ -102,7 +102,7 @@ export function FrameworkCard({
         {framework.publicEvidenceUrl ? (
           <Link
             href={framework.publicEvidenceUrl}
-            className="inline-flex items-center gap-1 text-[#6BB8FF] hover:underline font-medium"
+            className="inline-flex items-center gap-1 text-[var(--color-brand-300)] hover:underline font-medium"
           >
             <span>Public documentation</span>
             <ArrowRight className="w-3 h-3" />
@@ -111,7 +111,7 @@ export function FrameworkCard({
           <button
             type="button"
             onClick={() => onRequestAccess?.(framework)}
-            className="inline-flex items-center gap-1.5 text-xs text-[#2F8FFF] hover:text-[#6BB8FF] font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-[var(--accent-blue)] hover:text-[var(--color-brand-300)] font-medium transition-colors"
           >
             <Lock className="w-3 h-3" />
             <span>Request Auditor Report (NDA)</span>

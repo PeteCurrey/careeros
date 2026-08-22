@@ -20,13 +20,13 @@ export function RegulatoryReferencesPanel() {
       aria-label="Official Regulatory Standards and Frameworks Referenced"
     >
       {/* Header */}
-      <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-6 sm:p-8 bg-[var(--overlay-inset)] backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-            <Globe className="w-3.5 h-3.5 text-[#2F8FFF]" />
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+            <Globe className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
             Official Reference Library
           </span>
-          <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
+          <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)] font-normal">
             Regulatory &amp; Standards References
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
@@ -34,7 +34,7 @@ export function RegulatoryReferencesPanel() {
           </p>
         </div>
         {/* Disclaimer Badge */}
-        <div className="flex items-start gap-2 p-3 rounded-lg bg-amber-950/30 border border-amber-500/20 text-amber-300 text-[11px] max-w-xs self-start sm:self-auto">
+        <div className="flex items-start gap-2 p-3 rounded-lg bg-[var(--color-warning-light)] border border-[var(--color-warning)]/25 text-[var(--color-warning)] text-[11px] max-w-xs self-start sm:self-auto">
           <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-0.5" />
           <span>References do not imply formal certification unless explicitly stated.</span>
         </div>
@@ -43,13 +43,13 @@ export function RegulatoryReferencesPanel() {
       {/* Reference Entries */}
       <div className="divide-y divide-[var(--color-border-subtle)]">
         {REGULATORY_REFERENCES.map((ref) => (
-          <div key={ref.framework} className="p-5 sm:p-6 hover:bg-white/5 transition-colors space-y-3 text-xs">
+          <div key={ref.framework} className="p-5 sm:p-6 hover:bg-[var(--overlay-lift)] transition-colors space-y-3 text-xs">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
               <div className="space-y-1">
                 <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] font-semibold block">
                   {ref.category}
                 </span>
-                <h4 className="font-semibold text-white text-sm leading-snug">
+                <h4 className="font-semibold text-[var(--color-text-primary)] text-sm leading-snug">
                   {ref.framework}
                 </h4>
                 <p className="text-[11px] text-[var(--color-text-tertiary)]">
@@ -60,7 +60,7 @@ export function RegulatoryReferencesPanel() {
                 href={ref.officialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[#6BB8FF] hover:text-white transition-colors shrink-0 px-3 py-1.5 rounded border border-[var(--color-border-default)] hover:border-[#2F8FFF] bg-white/5"
+                className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[var(--color-brand-300)] hover:text-[var(--color-text-primary)] transition-colors shrink-0 px-3 py-1.5 rounded border border-[var(--color-border-default)] hover:border-[var(--accent-blue)] bg-[var(--overlay-lift)]"
                 aria-label={`View official ${ref.framework} documentation`}
               >
                 <ExternalLink className="w-3 h-3" />
@@ -78,10 +78,10 @@ export function RegulatoryReferencesPanel() {
                 </p>
               </div>
               <div className="space-y-0.5">
-                <span className="text-[10px] font-mono text-emerald-400 uppercase block">
+                <span className="text-[10px] font-mono text-[var(--color-success)] uppercase block">
                   Governance Alignment:
                 </span>
-                <p className="text-white font-medium leading-relaxed">
+                <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">
                   {ref.governanceAlignment}
                 </p>
               </div>
@@ -91,7 +91,7 @@ export function RegulatoryReferencesPanel() {
       </div>
 
       {/* Footer */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm border-t border-[var(--color-border-default)] text-xs text-[var(--color-text-tertiary)] italic">
+      <div className="p-4 bg-[var(--overlay-inset)] backdrop-blur-sm border-t border-[var(--color-border-default)] text-xs text-[var(--color-text-tertiary)] italic">
         External references are provided for transparency. Career OS does not claim formal certification under any of these frameworks unless separately verified.
       </div>
     </div>

@@ -32,7 +32,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
   return (
     <section id="employment-ai" className="space-y-8">
       <div className="space-y-2">
-        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
           <Briefcase className="w-3.5 h-3.5" />
           <span>STATUTORY AI REGULATION & CONSEQUENTIAL DECISIONS</span>
         </div>
@@ -40,7 +40,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
           AI in employment and consequential decisions
         </h2>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
-          CareerOS is engineered from the ground up for jurisdiction-specific regulation of AI and automated decision-making. We maintain a public <span className="text-white font-semibold">AI Decision Governance Registry</span> ensuring full compliance with NYC Local Law 144, Illinois AIVA, and Colorado SB 24-205 consequential decision-making regimes.
+          CareerOS is engineered from the ground up for jurisdiction-specific regulation of AI and automated decision-making. We maintain a public <span className="text-[var(--color-text-primary)] font-semibold">AI Decision Governance Registry</span> ensuring full compliance with NYC Local Law 144, Illinois AIVA, and Colorado SB 24-205 consequential decision-making regimes.
         </p>
       </div>
 
@@ -48,8 +48,8 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="p-4 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-xs font-bold text-[#6BB8FF]">NYC Local Law 144</span>
-            <span className="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded bg-[#34D399]/10 text-[#34D399] border border-[#34D399]/30">
+            <span className="font-mono text-xs font-bold text-[var(--color-brand-300)]">NYC Local Law 144</span>
+            <span className="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded bg-[var(--color-success)]/10 text-[var(--color-success)] border border-[var(--color-success)]/30">
               AEDT Audited
             </span>
           </div>
@@ -60,8 +60,8 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
 
         <div className="p-4 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-xs font-bold text-[#6BB8FF]">Illinois AIVA (820 ILCS 42/)</span>
-            <span className="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded bg-[#34D399]/10 text-[#34D399] border border-[#34D399]/30">
+            <span className="font-mono text-xs font-bold text-[var(--color-brand-300)]">Illinois AIVA (820 ILCS 42/)</span>
+            <span className="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded bg-[var(--color-success)]/10 text-[var(--color-success)] border border-[var(--color-success)]/30">
               Compliant
             </span>
           </div>
@@ -72,8 +72,8 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
 
         <div className="p-4 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-xs font-bold text-[#6BB8FF]">Colorado SB 24-205</span>
-            <span className="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded bg-[#34D399]/10 text-[#34D399] border border-[#34D399]/30">
+            <span className="font-mono text-xs font-bold text-[var(--color-brand-300)]">Colorado SB 24-205</span>
+            <span className="font-mono text-[10px] uppercase px-1.5 py-0.5 rounded bg-[var(--color-success)]/10 text-[var(--color-success)] border border-[var(--color-success)]/30">
               ADM Ready
             </span>
           </div>
@@ -95,7 +95,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
             </p>
           </div>
 
-          <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase px-2 py-1 rounded bg-white/5 border border-white/5">
+          <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase px-2 py-1 rounded bg-[var(--overlay-lift)] border border-[var(--color-border-subtle)]">
             ISO/IEC 42001 &bull; AIMS Registry
           </span>
         </div>
@@ -125,15 +125,15 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
                       onClick={() => setSelectedSystemId(system.id)}
                       className={`cursor-pointer transition-colors ${
                         isSelected
-                          ? 'bg-white/5 border-l-2 border-l-[#2F8FFF]'
+                          ? 'bg-[var(--overlay-lift)] border-l-2 border-l-[#2F8FFF]'
                           : 'hover:bg-[var(--color-surface-interactive)]'
                       }`}
                     >
                       <td className="p-3">
-                        <div className="font-mono text-[11px] text-[#6BB8FF] font-bold">
+                        <div className="font-mono text-[11px] text-[var(--color-brand-300)] font-bold">
                           {system.systemId}
                         </div>
-                        <div className="font-semibold text-white mt-0.5">
+                        <div className="font-semibold text-[var(--color-text-primary)] mt-0.5">
                           {system.systemName}
                         </div>
                       </td>
@@ -151,7 +151,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
                         <span
                           className={`font-mono text-[10px] uppercase px-1.5 py-0.5 rounded border ${
                             isConsequential
-                              ? 'bg-[#FBBF24]/10 text-[#FBBF24] border-[#FBBF24]/30'
+                              ? 'bg-[var(--color-warning)]/10 text-[var(--color-warning)] border-[var(--color-warning)]/30'
                               : 'bg-[var(--color-surface-sunken)] text-[var(--color-text-secondary)] border-[var(--color-border-subtle)]'
                           }`}
                         >
@@ -164,7 +164,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
                       </td>
 
                       <td className="p-3">
-                        <span className="inline-flex items-center gap-1 font-mono text-[10px] text-[#34D399]">
+                        <span className="inline-flex items-center gap-1 font-mono text-[10px] text-[var(--color-success)]">
                           <CheckCircle2 className="w-3 h-3" />
                           <span>{system.humanReviewRequired ? 'Mandatory' : 'Optional'}</span>
                         </span>
@@ -172,7 +172,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
 
                       <td className="p-3">
                         {system.biasAuditRequired ? (
-                          <span className="font-mono text-[10px] text-[#34D399] uppercase bg-[#34D399]/10 px-1.5 py-0.5 rounded border border-[#34D399]/30">
+                          <span className="font-mono text-[10px] text-[var(--color-success)] uppercase bg-[var(--color-success)]/10 px-1.5 py-0.5 rounded border border-[var(--color-success)]/30">
                             Audited ({system.biasAuditDate ? new Date(system.biasAuditDate).getFullYear() : 'Annual'})
                           </span>
                         ) : (
@@ -190,7 +190,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
                             setSelectedSystemId(system.id);
                             setExpandedRow(expandedRow === system.id ? null : system.id);
                           }}
-                          className="text-[#6BB8FF] hover:underline font-mono text-[11px]"
+                          className="text-[var(--color-brand-300)] hover:underline font-mono text-[11px]"
                         >
                           {expandedRow === system.id ? 'Hide' : 'Inspect'}
                         </button>
@@ -219,7 +219,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
                                 {system.jurisdictions.map((j) => (
                                   <span
                                     key={j}
-                                    className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-white"
+                                    className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-[var(--overlay-lift)] border border-[var(--color-border-default)] text-[var(--color-text-primary)]"
                                   >
                                     {j}
                                   </span>
@@ -240,7 +240,7 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
                           {system.knownLimitations && system.knownLimitations.length > 0 && (
                             <div className="space-y-1 pt-2 border-t border-[var(--color-border-subtle)]">
                               <span className="font-mono text-[10px] uppercase text-[var(--color-text-tertiary)] flex items-center gap-1">
-                                <AlertTriangle className="w-3 h-3 text-[#FBBF24]" />
+                                <AlertTriangle className="w-3 h-3 text-[var(--color-warning)]" />
                                 <span>Known Technical Boundaries & Limitations:</span>
                               </span>
                               <ul className="space-y-1 pl-4 list-disc text-xs text-[var(--color-text-secondary)]">
@@ -252,8 +252,8 @@ export function AIDecisionGovernanceRegistryView({ systems }: AIDecisionGovernan
                           )}
 
                           {system.noticeTemplate && (
-                            <div className="p-3 rounded-md bg-black/30 border border-[var(--color-border-subtle)] font-mono text-[11px] text-[var(--color-text-secondary)] space-y-1">
-                              <span className="text-[10px] uppercase text-[#6BB8FF] block">
+                            <div className="p-3 rounded-md bg-[var(--overlay-inset)] border border-[var(--color-border-subtle)] font-mono text-[11px] text-[var(--color-text-secondary)] space-y-1">
+                              <span className="text-[10px] uppercase text-[var(--color-brand-300)] block">
                                 Consumer & Candidate Notice Disclosure Template:
                               </span>
                               <p className="italic">"{system.noticeTemplate}"</p>

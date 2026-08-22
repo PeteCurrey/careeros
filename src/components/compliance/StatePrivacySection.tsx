@@ -25,7 +25,7 @@ export function StatePrivacySection({ framework }: StatePrivacySectionProps) {
     <section id="privacy-rights" className="space-y-8">
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+          <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
             <Lock className="w-3.5 h-3.5" />
             <span>US STATE OMNIBUS PRIVACY REGIMES (CCPA / CPRA / CPA / VCDPA)</span>
           </div>
@@ -35,16 +35,16 @@ export function StatePrivacySection({ framework }: StatePrivacySectionProps) {
           Privacy rights & US state law readiness
         </h2>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
-          Rather than fragmenting compliance across fifty jurisdictions, CareerOS operates a unified <span className="text-white font-semibold">US State Privacy Law Ready</span> framework satisfying California (CCPA/CPRA), Colorado (CPA), Virginia (VCDPA), and modern state consumer data protections.
+          Rather than fragmenting compliance across fifty jurisdictions, CareerOS operates a unified <span className="text-[var(--color-text-primary)] font-semibold">US State Privacy Law Ready</span> framework satisfying California (CCPA/CPRA), Colorado (CPA), Virginia (VCDPA), and modern state consumer data protections.
         </p>
       </div>
 
       {/* Strict Anti-Commercialization Banner */}
-      <div className="p-5 rounded-md bg-[var(--color-surface-raised)] border border-[#34D399]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-5 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-success)]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#34D399]" />
-            <h3 className="text-sm font-bold text-white">
+            <ShieldCheck className="w-4 h-4 text-[var(--color-success)]" />
+            <h3 className="text-sm font-bold text-[var(--color-text-primary)]">
               Strict Non-Commercialization Guarantee
             </h3>
           </div>
@@ -55,7 +55,7 @@ export function StatePrivacySection({ framework }: StatePrivacySectionProps) {
 
         <Link
           href={ROUTES.TRUST_DATA_ETHICS}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-white text-neutral-900 hover:bg-neutral-100 transition-colors shrink-0"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-[var(--color-surface-raised)] text-neutral-900 hover:bg-neutral-100 transition-colors shrink-0"
         >
           <span>Data Ethics Principles</span>
           <ArrowRight className="w-3 h-3" />
@@ -70,7 +70,7 @@ export function StatePrivacySection({ framework }: StatePrivacySectionProps) {
             className="p-5 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-2"
           >
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#34D399] shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[var(--color-success)] shrink-0" />
               <h4 className="text-sm font-bold text-[var(--color-text-primary)]">
                 {right.title}
               </h4>
@@ -87,10 +87,10 @@ export function StatePrivacySection({ framework }: StatePrivacySectionProps) {
           Manage your account privacy preferences or submit a formal data request:
         </span>
         <div className="flex items-center gap-4">
-          <Link href={ROUTES.LEGAL_PRIVACY} className="text-[#6BB8FF] hover:underline font-medium">
+          <Link href={ROUTES.LEGAL_PRIVACY} className="text-[var(--color-brand-300)] hover:underline font-medium">
             Privacy Policy &rarr;
           </Link>
-          <Link href={ROUTES.LEGAL_DATA_PROCESSING} className="text-[#6BB8FF] hover:underline font-medium">
+          <Link href={ROUTES.LEGAL_DATA_PROCESSING} className="text-[var(--color-brand-300)] hover:underline font-medium">
             Data Processing Terms &rarr;
           </Link>
         </div>

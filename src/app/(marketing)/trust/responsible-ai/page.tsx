@@ -98,7 +98,7 @@ const WHAT_WE_WILL_NOT_BUILD = [
 
 export default function ResponsibleAIPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+    <div className="register-document flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <TrustSubnav />
 
       {/* Hero */}
@@ -123,7 +123,7 @@ export default function ResponsibleAIPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">GOVERNING PRINCIPLES</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Eight Principles. Each With an Architectural Enforcement Rule.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -135,20 +135,20 @@ export default function ResponsibleAIPage() {
             {RESPONSIBLE_AI_PRINCIPLES.map((principle) => (
               <div
                 key={principle.id}
-                className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-3"
+                className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-all flex flex-col justify-between space-y-3"
               >
                 <div className="space-y-2">
-                  <span className="text-[10px] font-mono font-bold text-[#6BB8FF] px-1.5 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">
+                  <span className="text-[10px] font-mono font-bold text-[var(--color-brand-300)] px-1.5 py-0.5 rounded bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)]">
                     {principle.number}
                   </span>
-                  <h3 className="font-semibold text-white text-sm leading-snug">
+                  <h3 className="font-semibold text-[var(--color-text-primary)] text-sm leading-snug">
                     {principle.title}
                   </h3>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                     {principle.desc}
                   </p>
                 </div>
-                <div className="pt-2 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-emerald-400 flex items-center gap-1">
+                <div className="pt-2 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-[var(--color-success)] flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3" />
                   Enforced Operationally
                 </div>
@@ -163,7 +163,7 @@ export default function ResponsibleAIPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">EXPLICIT LIMITATIONS</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               What Career OS Will Not Build or Enable
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -177,7 +177,7 @@ export default function ResponsibleAIPage() {
                 key={idx}
                 className="p-4 rounded-lg bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] flex items-start gap-3 text-xs"
               >
-                <div className="w-6 h-6 rounded flex items-center justify-center bg-rose-950/40 border border-rose-500/20 text-rose-300 shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded flex items-center justify-center bg-[var(--color-danger-light)] border border-[var(--color-danger)]/25 text-[var(--color-danger)] shrink-0 mt-0.5">
                   <Ban className="w-3.5 h-3.5" />
                 </div>
                 <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -189,9 +189,9 @@ export default function ResponsibleAIPage() {
 
           <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+              <AlertCircle className="w-4 h-4 text-[var(--color-warning)] shrink-0 mt-0.5" />
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                <strong className="text-white">A note on honesty:</strong> We do not claim Career OS is{' '}
+                <strong className="text-[var(--color-text-primary)]">A note on honesty:</strong> We do not claim Career OS is{' '}
                 <em>bias-free</em>, <em>completely safe</em>, or <em>100% fair</em>. These claims are impossible to substantiate for any AI system. We commit instead to designing for responsible use, testing for foreseeable risks, being transparent about limitations, and being accountable when things go wrong.
               </p>
             </div>
@@ -204,7 +204,7 @@ export default function ResponsibleAIPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">RISK-BASED GOVERNANCE</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Three Tiers of Risk. One Iterative Governance Lifecycle.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -220,7 +220,7 @@ export default function ResponsibleAIPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">OFFICIAL STANDARDS</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Voluntary Frameworks &amp; Regulatory Guidance Referenced
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -236,8 +236,8 @@ export default function ResponsibleAIPage() {
         <div className="container-editorial flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[var(--color-text-tertiary)]">
           <span>{LEGAL_CONFIG.legalEntityName} &bull; Responsible AI Framework &bull; v2.4.1</span>
           <div className="flex items-center gap-4">
-            <Link href={ROUTES.TRUST} className="hover:text-white transition-colors">← Trust Overview</Link>
-            <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="hover:text-white transition-colors flex items-center gap-1">
+            <Link href={ROUTES.TRUST} className="hover:text-[var(--color-text-primary)] transition-colors">← Trust Overview</Link>
+            <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="hover:text-[var(--color-text-primary)] transition-colors flex items-center gap-1">
               AI Transparency <ArrowRight className="w-3 h-3" />
             </Link>
           </div>

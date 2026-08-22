@@ -27,13 +27,13 @@ export function ModelProviderDisclosures() {
       aria-label="Foundation Model and Provider Transparency Disclosures"
     >
       {/* Top Header */}
-      <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-6 sm:p-8 bg-[var(--overlay-inset)] backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-            <Lock className="w-3.5 h-3.5 text-[#2F8FFF]" />
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+            <Lock className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
             Enterprise Model Infrastructure
           </span>
-          <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
+          <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)] font-normal">
             Foundation Model &amp; Provider Disclosures
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
@@ -57,17 +57,17 @@ export function ModelProviderDisclosures() {
                 aria-selected={isSelected}
                 onClick={() => setSelectedProviderIndex(idx)}
                 className={cn(
-                  'p-3.5 rounded-lg border text-left transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F8FFF] flex flex-col justify-between space-y-1.5',
+                  'p-3.5 rounded-lg border text-left transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blue)] flex flex-col justify-between space-y-1.5',
                   isSelected
-                    ? 'bg-white/10 border-white/40 shadow-md ring-1 ring-white/20'
-                    : 'bg-[var(--color-surface-raised)]/60 border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] text-[var(--color-text-secondary)] hover:text-white'
+                    ? 'bg-[var(--overlay-lift-strong)] border-[var(--color-border-strong)] shadow-md ring-1 ring-[var(--color-border-strong)]'
+                    : 'bg-[var(--color-surface-raised)]/60 border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
                 )}
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-semibold text-xs text-white">
+                  <span className="font-semibold text-xs text-[var(--color-text-primary)]">
                     {prov.providerDisplayName.split(' (')[0]}
                   </span>
-                  <span className="text-[9px] font-mono text-emerald-400 font-bold px-1.5 py-0.5 rounded bg-emerald-950/30 border border-emerald-500/20">
+                  <span className="text-[9px] font-mono text-[var(--color-success)] font-bold px-1.5 py-0.5 rounded bg-[var(--color-success-light)] border border-[var(--color-success)]/25">
                     {prov.status}
                   </span>
                 </div>
@@ -86,17 +86,17 @@ export function ModelProviderDisclosures() {
           
           <div className="space-y-4">
             <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
-              <span className="text-[10px] font-mono uppercase text-[#6BB8FF] font-semibold block">
+              <span className="text-[10px] font-mono uppercase text-[var(--color-brand-300)] font-semibold block">
                 Primary Purpose in Career OS
               </span>
-              <p className="text-white font-medium leading-relaxed">
+              <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">
                 {activeProvider.purpose}
               </p>
               <div className="pt-2">
                 <span className="text-[10px] font-mono text-[var(--color-taupe-300)] block mb-1">Capabilities Utilized:</span>
                 <div className="flex flex-wrap gap-1.5">
                   {activeProvider.capabilitiesUsed.map((cap) => (
-                    <span key={cap} className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-white">
+                    <span key={cap} className="px-2 py-0.5 rounded bg-[var(--overlay-lift)] border border-[var(--color-border-default)] text-[10px] text-[var(--color-text-primary)]">
                       {cap}
                     </span>
                   ))}
@@ -105,13 +105,13 @@ export function ModelProviderDisclosures() {
             </div>
 
             <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
-              <span className="text-[10px] font-mono uppercase text-emerald-300 font-semibold block">
+              <span className="text-[10px] font-mono uppercase text-[var(--color-success)] font-semibold block">
                 Enterprise PII &amp; Data Residency
               </span>
-              <p className="text-white font-medium leading-relaxed">
+              <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">
                 {activeProvider.piiHandling}
               </p>
-              <div className="pt-2 text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+              <div className="pt-2 text-[11px] font-mono text-[var(--color-success)] flex items-center gap-1.5">
                 <Globe className="w-3.5 h-3.5" />
                 <span>Residency: {activeProvider.processingRegion}</span>
               </div>
@@ -120,7 +120,7 @@ export function ModelProviderDisclosures() {
 
           <div className="space-y-4">
             <div className="p-4 rounded-lg bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-subtle)] space-y-2">
-              <span className="text-[10px] font-mono uppercase text-amber-300 font-semibold block">
+              <span className="text-[10px] font-mono uppercase text-[var(--color-warning)] font-semibold block">
                 Material Model Limitations
               </span>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -128,13 +128,13 @@ export function ModelProviderDisclosures() {
               </p>
             </div>
 
-            <div className="p-4 rounded-lg bg-black/40 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
+            <div className="p-4 rounded-lg bg-[var(--overlay-inset)] backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
               <span className="text-[10px] font-mono uppercase text-[var(--color-taupe-300)] font-semibold block">
                 Governance Review &amp; Security Boundary
               </span>
               <div className="flex items-center justify-between text-[11px] font-mono text-[var(--color-text-secondary)]">
                 <span>Last Comprehensive Review:</span>
-                <span className="text-white font-bold">{activeProvider.lastReview}</span>
+                <span className="text-[var(--color-text-primary)] font-bold">{activeProvider.lastReview}</span>
               </div>
               <p className="text-[11px] text-[var(--color-text-tertiary)] pt-1">
                 * Zero exposure of sensitive environment variables, internal prompt templates, or system API keys.
@@ -146,7 +146,7 @@ export function ModelProviderDisclosures() {
       </div>
 
       {/* Footer Statement */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+      <div className="p-4 bg-[var(--overlay-inset)] backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
         <span className="italic">
           &ldquo;Enterprise terms guarantee that vendor foundation models never train on user conversation or profile data.&rdquo;
         </span>

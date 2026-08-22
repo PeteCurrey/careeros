@@ -86,8 +86,8 @@ export function FairnessTestingMethodology() {
       <div className="space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-              <FlaskConical className="w-3.5 h-3.5 text-[#2F8FFF]" />
+            <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+              <FlaskConical className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
               Seven-Stage Fairness Testing Protocol
             </span>
             <p className="text-xs text-[var(--color-text-secondary)]">
@@ -106,18 +106,18 @@ export function FairnessTestingMethodology() {
               <div
                 key={st.step}
                 className={cn(
-                  'p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-3',
+                  'p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-all flex flex-col justify-between space-y-3',
                   idx === 6 ? 'sm:col-span-2 lg:col-span-2' : ''
                 )}
               >
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono font-bold text-[#6BB8FF] px-1.5 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">
+                    <span className="text-[10px] font-mono font-bold text-[var(--color-brand-300)] px-1.5 py-0.5 rounded bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue-border)]">
                       Step {st.step}
                     </span>
                     <Icon className="w-4 h-4 text-[var(--color-text-tertiary)]" />
                   </div>
-                  <h4 className="font-semibold text-white text-xs">{st.title}</h4>
+                  <h4 className="font-semibold text-[var(--color-text-primary)] text-xs">{st.title}</h4>
                   <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
                     {st.desc}
                   </p>
@@ -137,11 +137,11 @@ export function FairnessTestingMethodology() {
         role="region"
         aria-label="Protected Characteristics Jurisdiction Reference Table"
       >
-        <div className="p-5 sm:p-6 bg-black/30 border-b border-[var(--color-border-default)]">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold block mb-1">
+        <div className="p-5 sm:p-6 bg-[var(--overlay-inset)] border-b border-[var(--color-border-default)]">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold block mb-1">
             Jurisdiction-Aware Protected Characteristics
           </span>
-          <h4 className="text-base font-serif text-white font-normal">
+          <h4 className="text-base font-serif text-[var(--color-text-primary)] font-normal">
             Characteristics Tested Across All Matching Algorithms
           </h4>
         </div>
@@ -150,23 +150,23 @@ export function FairnessTestingMethodology() {
             <thead>
               <tr className="border-b border-[var(--color-border-default)] text-[10px] font-mono uppercase text-[var(--color-taupe-300)]">
                 <th className="pb-3 text-left pr-4 font-semibold">Protected Characteristic</th>
-                <th className="pb-3 text-center px-3 font-semibold text-white">UK (EA 2010)</th>
-                <th className="pb-3 text-center pl-3 font-semibold text-[#6BB8FF]">US (Federal)</th>
+                <th className="pb-3 text-center px-3 font-semibold text-[var(--color-text-primary)]">UK (EA 2010)</th>
+                <th className="pb-3 text-center pl-3 font-semibold text-[var(--color-brand-300)]">US (Federal)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[var(--color-border-subtle)]">
               {PROTECTED_CHARACTERISTICS.map((pc) => (
-                <tr key={pc.char} className="hover:bg-white/5 transition-colors">
-                  <td className="py-2.5 pr-4 font-medium text-white">{pc.char}</td>
+                <tr key={pc.char} className="hover:bg-[var(--overlay-lift)] transition-colors">
+                  <td className="py-2.5 pr-4 font-medium text-[var(--color-text-primary)]">{pc.char}</td>
                   <td className={cn(
                     'py-2.5 px-3 text-center font-mono text-xs',
-                    pc.uk.startsWith('✓') ? 'text-emerald-400' : 'text-amber-400'
+                    pc.uk.startsWith('✓') ? 'text-[var(--color-success)]' : 'text-[var(--color-warning)]'
                   )}>
                     {pc.uk}
                   </td>
                   <td className={cn(
                     'py-2.5 pl-3 text-center font-mono text-xs',
-                    pc.us.startsWith('✓') ? 'text-emerald-400' : 'text-amber-400'
+                    pc.us.startsWith('✓') ? 'text-[var(--color-success)]' : 'text-[var(--color-warning)]'
                   )}>
                     {pc.us}
                   </td>

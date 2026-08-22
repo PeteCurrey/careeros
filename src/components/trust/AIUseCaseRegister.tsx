@@ -39,13 +39,13 @@ export function AIUseCaseRegister() {
       aria-label="Public AI Use-Case Register"
     >
       {/* Top Search & Filter Bar */}
-      <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="p-6 sm:p-8 bg-[var(--overlay-inset)] backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-            <Eye className="w-3.5 h-3.5 text-[#2F8FFF]" />
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+            <Eye className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
             Public Disclosure Register &bull; ISO / NIST AI RMF Aligned
           </span>
-          <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
+          <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)] font-normal">
             Public AI Use-Case Register
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
@@ -62,7 +62,7 @@ export function AIUseCaseRegister() {
               placeholder="Search use cases..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-8 pr-3 py-1.5 rounded-lg bg-[var(--color-surface-base)] border border-[var(--color-border-default)] text-xs text-white placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[#2F8FFF]"
+              className="pl-8 pr-3 py-1.5 rounded-lg bg-[var(--color-surface-base)] border border-[var(--color-border-default)] text-xs text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[var(--accent-blue)]"
             />
           </div>
 
@@ -75,8 +75,8 @@ export function AIUseCaseRegister() {
                 className={cn(
                   'px-2 py-1 rounded text-[10px] border transition-colors',
                   selectedRisk === risk
-                    ? 'bg-white/15 border-white/40 text-white font-bold'
-                    : 'bg-white/5 border-white/10 text-[var(--color-text-secondary)] hover:text-white'
+                    ? 'bg-[var(--overlay-lift-strong)] border-[var(--color-border-strong)] text-[var(--color-text-primary)] font-bold'
+                    : 'bg-[var(--overlay-lift)] border-[var(--color-border-default)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
                 )}
               >
                 {risk}
@@ -96,7 +96,7 @@ export function AIUseCaseRegister() {
                 setSearchQuery('');
                 setSelectedRisk('ALL');
               }}
-              className="text-[#6BB8FF] underline"
+              className="text-[var(--color-brand-300)] underline"
             >
               Reset filters
             </button>
@@ -105,31 +105,31 @@ export function AIUseCaseRegister() {
           filteredUseCases.map((uc) => {
             const isExpanded = expandedId === uc.id;
             return (
-              <div key={uc.id} className="p-5 sm:p-6 transition-colors hover:bg-white/5">
+              <div key={uc.id} className="p-5 sm:p-6 transition-colors hover:bg-[var(--overlay-lift)]">
                 <button
                   type="button"
                   onClick={() => setExpandedId(isExpanded ? null : uc.id)}
                   aria-expanded={isExpanded}
-                  className="w-full text-left flex flex-col md:flex-row md:items-center justify-between gap-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F8FFF]"
+                  className="w-full text-left flex flex-col md:flex-row md:items-center justify-between gap-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blue)]"
                 >
                   <div className="space-y-1 max-w-2xl">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-semibold text-white text-base group-hover:text-[#6BB8FF] transition-colors">
+                      <span className="font-semibold text-[var(--color-text-primary)] text-base group-hover:text-[var(--color-brand-300)] transition-colors">
                         {uc.capability}
                       </span>
                       <span
                         className={cn(
                           'px-2 py-0.5 rounded text-[9px] font-mono font-bold border uppercase',
                           uc.riskTier === 'LOW'
-                            ? 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30'
+                            ? 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]'
                             : uc.riskTier === 'MODERATE'
-                            ? 'text-amber-300 bg-amber-950/40 border-amber-500/30'
-                            : 'text-rose-300 bg-rose-950/40 border-rose-500/30'
+                            ? 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30'
+                            : 'text-[var(--color-danger)] bg-[var(--color-danger-light)] border-[var(--color-danger)]/30'
                         )}
                       >
                         {uc.riskTier} RISK
                       </span>
-                      <span className="text-[9px] font-mono text-emerald-400 px-1.5 py-0.5 rounded bg-emerald-950/30 border border-emerald-500/20">
+                      <span className="text-[9px] font-mono text-[var(--color-success)] px-1.5 py-0.5 rounded bg-[var(--color-success-light)] border border-[var(--color-success)]/25">
                         {uc.governanceStatus}
                       </span>
                     </div>
@@ -140,7 +140,7 @@ export function AIUseCaseRegister() {
 
                   <div className="flex items-center gap-4 text-xs font-mono text-[var(--color-text-tertiary)] self-end md:self-auto shrink-0">
                     <span className="hidden sm:inline">Reviewed: {uc.lastReviewed}</span>
-                    <div className="p-1 rounded bg-white/5 border border-white/10 group-hover:text-white transition-colors">
+                    <div className="p-1 rounded bg-[var(--overlay-lift)] border border-[var(--color-border-default)] group-hover:text-[var(--color-text-primary)] transition-colors">
                       <ChevronDown
                         className={cn('w-4 h-4 transition-transform duration-200', isExpanded && 'rotate-180')}
                       />
@@ -152,20 +152,20 @@ export function AIUseCaseRegister() {
                 {isExpanded && (
                   <div className="mt-5 pt-5 border-t border-[var(--color-border-subtle)] grid grid-cols-1 md:grid-cols-3 gap-4 text-xs animate-fadeIn">
                     <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
-                      <span className="text-[10px] font-mono uppercase text-[#6BB8FF] font-semibold block">
+                      <span className="text-[10px] font-mono uppercase text-[var(--color-brand-300)] font-semibold block">
                         AI Role &amp; Output Type
                       </span>
-                      <p className="text-white font-medium">{uc.aiRole}</p>
+                      <p className="text-[var(--color-text-primary)] font-medium">{uc.aiRole}</p>
                       <div className="pt-2 text-[11px] text-[var(--color-text-tertiary)]">
                         <strong>Output Classification:</strong> {uc.outputType} (Advisory / Non-Binding)
                       </div>
                     </div>
 
                     <div className="p-4 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] space-y-2">
-                      <span className="text-[10px] font-mono uppercase text-purple-300 font-semibold block">
+                      <span className="text-[10px] font-mono uppercase text-[var(--color-text-mauve)] font-semibold block">
                         Human Involvement &amp; Data Used
                       </span>
-                      <p className="text-white font-medium">{uc.humanInvolvement.replace(/_/g, ' ')}</p>
+                      <p className="text-[var(--color-text-primary)] font-medium">{uc.humanInvolvement.replace(/_/g, ' ')}</p>
                       <div className="pt-2 space-y-1">
                         <span className="text-[10px] font-mono text-[var(--color-taupe-300)] block">Data Ingested:</span>
                         <ul className="list-disc pl-4 text-[11px] text-[var(--color-text-secondary)] space-y-0.5">
@@ -177,7 +177,7 @@ export function AIUseCaseRegister() {
                     </div>
 
                     <div className="p-4 rounded-lg bg-[var(--color-surface-warm)]/60 backdrop-blur-sm border border-[var(--color-border-subtle)] space-y-2">
-                      <span className="text-[10px] font-mono uppercase text-amber-300 font-semibold block">
+                      <span className="text-[10px] font-mono uppercase text-[var(--color-warning)] font-semibold block">
                         Material Limitations &amp; Boundaries
                       </span>
                       <ul className="list-disc pl-4 text-[11px] text-[var(--color-text-secondary)] space-y-1">
@@ -195,7 +195,7 @@ export function AIUseCaseRegister() {
       </div>
 
       {/* Footer Statement */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+      <div className="p-4 bg-[var(--overlay-inset)] backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
         <span className="italic">
           &ldquo;Meaningful transparency means knowing what AI is doing and what data influences it.&rdquo;
         </span>

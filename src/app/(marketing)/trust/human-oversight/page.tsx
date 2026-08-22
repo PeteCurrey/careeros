@@ -70,10 +70,10 @@ const YOUTH_SAFEGUARDING_RULES = [
 ];
 
 const SEVERITY_STYLES: Record<string, string> = {
-  ABSOLUTE: 'text-rose-300 bg-rose-950/40 border-rose-500/30',
-  DEFAULT: 'text-amber-300 bg-amber-950/40 border-amber-500/30',
-  POLICY: 'text-[#6BB8FF] bg-blue-950/40 border-blue-500/30',
-  VERIFIED: 'text-emerald-300 bg-emerald-950/40 border-emerald-500/30',
+  ABSOLUTE: 'text-[var(--color-danger)] bg-[var(--color-danger-light)] border-[var(--color-danger)]/30',
+  DEFAULT: 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30',
+  POLICY: 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]',
+  VERIFIED: 'text-[var(--color-success)] bg-[var(--color-success-light)] border-[var(--color-success)]/30',
 };
 
 const RECOURSE_OPTIONS = [
@@ -108,7 +108,7 @@ const RECOURSE_OPTIONS = [
 
 export default function HumanOversightPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+    <div className="register-document flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <TrustSubnav />
 
       {/* Hero */}
@@ -133,7 +133,7 @@ export default function HumanOversightPage() {
         <div className="container-editorial space-y-8 max-w-4xl">
           <div className="space-y-2">
             <span className="section-label">DEFINING MEANINGFUL OVERSIGHT</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               What &ldquo;Human Oversight&rdquo; Actually Requires
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -151,9 +151,9 @@ export default function HumanOversightPage() {
               const Icon = item.icon;
               return (
                 <div key={item.title} className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] space-y-2.5 flex items-start gap-3">
-                  <Icon className="w-4 h-4 text-[#6BB8FF] shrink-0 mt-0.5" />
+                  <Icon className="w-4 h-4 text-[var(--color-brand-300)] shrink-0 mt-0.5" />
                   <div className="space-y-1">
-                    <h4 className="font-semibold text-white text-sm">{item.title}</h4>
+                    <h4 className="font-semibold text-[var(--color-text-primary)] text-sm">{item.title}</h4>
                     <p className="text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ export default function HumanOversightPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">OVERSIGHT ARCHITECTURE</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Who Is Responsible for What
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -184,7 +184,7 @@ export default function HumanOversightPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">DECISION BOUNDARIES</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Where AI Stops
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -200,7 +200,7 @@ export default function HumanOversightPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">INCIDENT RESPONSE</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Escalation &amp; Incident Response Framework
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -216,7 +216,7 @@ export default function HumanOversightPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">MINOR PROTECTION</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               School-Age Safeguarding Rules
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -237,7 +237,7 @@ export default function HumanOversightPage() {
                     </span>
                     <GraduationCap className="w-4 h-4 text-[var(--color-text-tertiary)]" />
                   </div>
-                  <h4 className="font-semibold text-white leading-snug">{rule.rule}</h4>
+                  <h4 className="font-semibold text-[var(--color-text-primary)] leading-snug">{rule.rule}</h4>
                   <p className="text-[var(--color-text-secondary)] leading-relaxed">{rule.detail}</p>
                 </div>
                 <div className="pt-2 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-[var(--color-text-tertiary)]">
@@ -248,10 +248,10 @@ export default function HumanOversightPage() {
           </div>
 
           <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs flex items-start gap-3">
-            <AlertCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+            <AlertCircle className="w-4 h-4 text-[var(--color-warning)] shrink-0 mt-0.5" />
             <p className="text-[var(--color-text-secondary)] leading-relaxed">
               For statutory safeguarding enquiries, to report a concern about a student&apos;s welfare related to Career OS, or to request expedited account suspension, contact{' '}
-              <a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`} className="font-mono text-white underline hover:text-[#6BB8FF] transition-colors">
+              <a href={`mailto:${LEGAL_CONFIG.safeguardingEmail}`} className="font-mono text-[var(--color-text-primary)] underline hover:text-[var(--color-brand-300)] transition-colors">
                 {LEGAL_CONFIG.safeguardingEmail}
               </a>
               . School DSLs are responded to as a priority.
@@ -265,7 +265,7 @@ export default function HumanOversightPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">YOUR RIGHTS &amp; RECOURSE</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Think the AI Got It Wrong? Here&apos;s What You Can Do.
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -279,18 +279,18 @@ export default function HumanOversightPage() {
               return (
                 <div
                   key={option.title}
-                  className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-4 text-xs"
+                  className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-all flex flex-col justify-between space-y-4 text-xs"
                 >
                   <div className="space-y-2.5">
-                    <Icon className="w-5 h-5 text-[#6BB8FF]" />
-                    <h4 className="font-semibold text-white text-base font-serif font-normal">{option.title}</h4>
+                    <Icon className="w-5 h-5 text-[var(--color-brand-300)]" />
+                    <h4 className="font-semibold text-[var(--color-text-primary)] text-base font-serif font-normal">{option.title}</h4>
                     <p className="text-[var(--color-text-secondary)] leading-relaxed">{option.desc}</p>
                   </div>
                   <div className="pt-3 border-t border-[var(--color-border-subtle)]">
                     {option.href ? (
                       <a
                         href={option.href}
-                        className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[#6BB8FF] hover:text-white transition-colors"
+                        className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[var(--color-brand-300)] hover:text-[var(--color-text-primary)] transition-colors"
                       >
                         <Mail className="w-3 h-3" />
                         {option.cta}
@@ -311,8 +311,8 @@ export default function HumanOversightPage() {
         <div className="container-editorial flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[var(--color-text-tertiary)]">
           <span>{LEGAL_CONFIG.legalEntityName} &bull; Human Oversight Framework &bull; v2.4.1</span>
           <div className="flex items-center gap-4">
-            <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="hover:text-white transition-colors">← AI Transparency</Link>
-            <Link href={ROUTES.TRUST_FAIRNESS_BIAS} className="hover:text-white transition-colors flex items-center gap-1">
+            <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="hover:text-[var(--color-text-primary)] transition-colors">← AI Transparency</Link>
+            <Link href={ROUTES.TRUST_FAIRNESS_BIAS} className="hover:text-[var(--color-text-primary)] transition-colors flex items-center gap-1">
               Fairness &amp; Bias <ArrowRight className="w-3 h-3" />
             </Link>
           </div>

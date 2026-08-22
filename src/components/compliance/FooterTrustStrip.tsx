@@ -29,7 +29,7 @@ export function FooterTrustStrip() {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         {/* Label on left */}
         <div className="space-y-0.5 shrink-0">
-          <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+          <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Assurance & Standards Baseline</span>
           </div>
@@ -47,14 +47,14 @@ export function FooterTrustStrip() {
                 key={item.name}
                 href={ROUTES.TRUST_COMPLIANCE}
                 title={`${item.name} (${item.category}) — Status: ${item.status} (v${item.version})`}
-                className="group inline-flex items-center gap-2 px-2.5 py-1.5 rounded-sm bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/10 text-[var(--color-text-secondary)] hover:text-white transition-all shadow-2xs"
+                className="group inline-flex items-center gap-2 px-2.5 py-1.5 rounded-sm bg-[var(--overlay-lift)] border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] hover:bg-[var(--overlay-lift-strong)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-all shadow-2xs"
               >
-                <Icon className="w-3.5 h-3.5 text-[var(--color-text-tertiary)] group-hover:text-[#6BB8FF] transition-colors shrink-0" />
+                <Icon className="w-3.5 h-3.5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-brand-300)] transition-colors shrink-0" />
                 <div className="flex items-center gap-1.5">
-                  <span className="font-mono text-xs font-semibold text-white tracking-tight">
+                  <span className="font-mono text-xs font-semibold text-[var(--color-text-primary)] tracking-tight">
                     {item.name}
                   </span>
-                  <span className="font-mono text-[9px] uppercase px-1 py-0.2 rounded-xs bg-white/5 text-[#34D399] border border-white/5">
+                  <span className="font-mono text-[9px] uppercase px-1 py-0.2 rounded-xs bg-[var(--overlay-lift)] text-[var(--color-success)] border border-[var(--color-border-subtle)]">
                     {item.status}
                   </span>
                 </div>

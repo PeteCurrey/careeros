@@ -21,7 +21,7 @@ export function HumanOversightRoles() {
       oversight: 'Sovereign authority to accept, edit, dispute, or ignore any AI recommendation. Full control over Career Passport sharing.',
       boundaries: 'Zero algorithmic lock-in; user decides what evidence is attached to applications.',
       icon: User,
-      badgeColor: 'text-purple-300 bg-purple-950/40 border-purple-500/30',
+      badgeColor: 'text-[var(--color-text-mauve)] bg-[var(--color-lavender-subtle)] border-[var(--color-lavender-base)]/30',
     },
     {
       role: 'Schools & Educators',
@@ -29,7 +29,7 @@ export function HumanOversightRoles() {
       oversight: 'Access pre-session synthesis briefs before 1:1 meetings. Statutory safeguarding leads maintain immediate escalation channels.',
       boundaries: 'Zero access to unconsented private student reflections or raw conversational memory.',
       icon: GraduationCap,
-      badgeColor: 'text-emerald-300 bg-emerald-950/40 border-emerald-500/30',
+      badgeColor: 'text-[var(--color-success)] bg-[var(--color-success-light)] border-[var(--color-success)]/30',
     },
     {
       role: 'Employers & Hiring Teams',
@@ -37,7 +37,7 @@ export function HumanOversightRoles() {
       oversight: 'Review candidate capability profiles manually. Make 100% of final interview, hiring, and rejection decisions.',
       boundaries: 'Strictly prohibited from cold-messaging minors or using autonomous candidate rejection algorithms.',
       icon: Building2,
-      badgeColor: 'text-[#6BB8FF] bg-blue-950/40 border-blue-500/30',
+      badgeColor: 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]',
     },
     {
       role: 'CareerOS Trust & Safety',
@@ -45,7 +45,7 @@ export function HumanOversightRoles() {
       oversight: 'Continuously monitors model latency, error telemetry, and adverse impact metrics. Manages emergency kill-switches.',
       boundaries: 'Subject to external regulatory audits and published transparency registers.',
       icon: ShieldCheck,
-      badgeColor: 'text-amber-300 bg-amber-950/40 border-amber-500/30',
+      badgeColor: 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30',
     },
   ];
 
@@ -57,7 +57,7 @@ export function HumanOversightRoles() {
           return (
             <div
               key={r.role}
-              className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-4 text-xs"
+              className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-all flex flex-col justify-between space-y-4 text-xs"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -66,11 +66,11 @@ export function HumanOversightRoles() {
                   </span>
                   <Icon className="w-4 h-4 text-[var(--color-text-tertiary)]" />
                 </div>
-                <h4 className="text-base font-serif text-white font-normal">
+                <h4 className="text-base font-serif text-[var(--color-text-primary)] font-normal">
                   {r.role}
                 </h4>
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono uppercase text-[#6BB8FF] font-semibold block">
+                  <span className="text-[10px] font-mono uppercase text-[var(--color-brand-300)] font-semibold block">
                     Oversight Responsibilities:
                   </span>
                   <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -80,10 +80,10 @@ export function HumanOversightRoles() {
               </div>
 
               <div className="pt-3 border-t border-[var(--color-border-subtle)] space-y-1">
-                <span className="text-[10px] font-mono uppercase text-rose-300 font-semibold block">
+                <span className="text-[10px] font-mono uppercase text-[var(--color-danger)] font-semibold block">
                   Strict Governance Perimeter:
                 </span>
-                <p className="text-white/80 font-medium">
+                <p className="text-[var(--color-text-secondary)] font-medium">
                   {r.boundaries}
                 </p>
               </div>

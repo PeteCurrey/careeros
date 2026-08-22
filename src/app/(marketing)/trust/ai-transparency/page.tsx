@@ -64,17 +64,17 @@ const AI_LIMITATIONS = [
 ];
 
 const AI_DISCLOSURE_LABELS = [
-  { label: 'AI-Assisted', desc: 'Output generated or materially influenced by an AI model.', color: 'text-[#6BB8FF] bg-blue-950/40 border-blue-500/30' },
-  { label: 'AI-Drafted', desc: 'Text, bullets, or structure produced by AI for user review and editing.', color: 'text-purple-300 bg-purple-950/40 border-purple-500/30' },
-  { label: 'AI-Matched', desc: 'Opportunity or candidate surfaced via algorithmic relevance scoring.', color: 'text-amber-300 bg-amber-950/40 border-amber-500/30' },
-  { label: 'AI-Synthesized', desc: 'Cross-dataset analysis or multi-source summary produced by AI.', color: 'text-emerald-300 bg-emerald-950/40 border-emerald-500/30' },
-  { label: 'Human Curated', desc: 'Content reviewed, edited, or produced by Career OS staff.', color: 'text-white bg-white/10 border-white/20' },
-  { label: 'Verified Source', desc: 'Data sourced from statutory or officially published records (e.g. O*NET, UCAS).', color: 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30' },
+  { label: 'AI-Assisted', desc: 'Output generated or materially influenced by an AI model.', color: 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]' },
+  { label: 'AI-Drafted', desc: 'Text, bullets, or structure produced by AI for user review and editing.', color: 'text-[var(--color-text-mauve)] bg-[var(--color-lavender-subtle)] border-[var(--color-lavender-base)]/30' },
+  { label: 'AI-Matched', desc: 'Opportunity or candidate surfaced via algorithmic relevance scoring.', color: 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30' },
+  { label: 'AI-Synthesized', desc: 'Cross-dataset analysis or multi-source summary produced by AI.', color: 'text-[var(--color-success)] bg-[var(--color-success-light)] border-[var(--color-success)]/30' },
+  { label: 'Human Curated', desc: 'Content reviewed, edited, or produced by Career OS staff.', color: 'text-[var(--color-text-primary)] bg-[var(--overlay-lift-strong)] border-[var(--color-border-strong)]' },
+  { label: 'Verified Source', desc: 'Data sourced from statutory or officially published records (e.g. O*NET, UCAS).', color: 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]' },
 ];
 
 export default function AITransparencyPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+    <div className="register-document flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <TrustSubnav />
 
       {/* Hero */}
@@ -99,7 +99,7 @@ export default function AITransparencyPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">DISCLOSURE STANDARD</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               When AI Is Being Used, We Always Tell You
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -122,10 +122,10 @@ export default function AITransparencyPage() {
           </div>
 
           <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-warm)] border border-[var(--color-border-default)] text-xs flex items-start gap-3">
-            <BadgeInfo className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+            <BadgeInfo className="w-4 h-4 text-[var(--color-warning)] shrink-0 mt-0.5" />
             <p className="text-[var(--color-text-secondary)] leading-relaxed">
-              <strong className="text-white">Paid promotions:</strong> Employers can purchase enhanced visibility for verified opportunities. When this applies, the opportunity card is explicitly labeled{' '}
-              <span className="font-mono text-amber-300">Promoted Opportunity</span>. Paid promotion does not alter the underlying AI relevance score for a candidate — it increases discovery frequency, not match accuracy.
+              <strong className="text-[var(--color-text-primary)]">Paid promotions:</strong> Employers can purchase enhanced visibility for verified opportunities. When this applies, the opportunity card is explicitly labeled{' '}
+              <span className="font-mono text-[var(--color-warning)]">Promoted Opportunity</span>. Paid promotion does not alter the underlying AI relevance score for a candidate — it increases discovery frequency, not match accuracy.
             </p>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function AITransparencyPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">PUBLIC AI REGISTER</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Every Active AI Capability — Publicly Disclosed
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -152,7 +152,7 @@ export default function AITransparencyPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">HOW RECOMMENDATIONS WORK</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Recommendation ≠ Decision
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -168,7 +168,7 @@ export default function AITransparencyPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">MODEL INFRASTRUCTURE</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Foundation Model &amp; Provider Disclosures
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -184,7 +184,7 @@ export default function AITransparencyPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">MATERIAL LIMITATIONS</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               What AI Cannot Know: Documented Limitations
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -200,8 +200,8 @@ export default function AITransparencyPage() {
               >
                 <div className="space-y-2">
                   <div className="flex items-start gap-2">
-                    <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <h4 className="font-semibold text-white leading-snug">{lim.title}</h4>
+                    <ShieldAlert className="w-4 h-4 text-[var(--color-warning)] shrink-0 mt-0.5" />
+                    <h4 className="font-semibold text-[var(--color-text-primary)] leading-snug">{lim.title}</h4>
                   </div>
                   <p className="text-[var(--color-text-secondary)] leading-relaxed pl-6">{lim.detail}</p>
                 </div>
@@ -219,7 +219,7 @@ export default function AITransparencyPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">AUDITABILITY</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Public AI Change Log
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -235,8 +235,8 @@ export default function AITransparencyPage() {
         <div className="container-editorial flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[var(--color-text-tertiary)]">
           <span>{LEGAL_CONFIG.legalEntityName} &bull; AI Transparency Register &bull; v2.4.1</span>
           <div className="flex items-center gap-4">
-            <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="hover:text-white transition-colors">← Responsible AI</Link>
-            <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="hover:text-white transition-colors flex items-center gap-1">
+            <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="hover:text-[var(--color-text-primary)] transition-colors">← Responsible AI</Link>
+            <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="hover:text-[var(--color-text-primary)] transition-colors flex items-center gap-1">
               Human Oversight <ArrowRight className="w-3 h-3" />
             </Link>
           </div>

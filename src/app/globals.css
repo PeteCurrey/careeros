@@ -117,6 +117,14 @@
   --color-border-charcoal: rgba(255, 255, 255, 0.08);
   --color-border-taupe: rgba(255, 255, 255, 0.12);
 
+  /* --- Ground-relative washes ---
+     Named for what they do, not what colour they are: a white wash lifts a
+     surface on charcoal and is invisible on paper, so each register supplies
+     its own. */
+  --overlay-lift: rgba(255, 255, 255, 0.05);
+  --overlay-lift-strong: rgba(255, 255, 255, 0.10);
+  --overlay-inset: rgba(0, 0, 0, 0.30);
+
   /* --- Accessibility Focus --- */
   --color-focus: #F4F3EF;
 
@@ -405,7 +413,7 @@ body {
   /* Ink */
   --color-text-primary: #1D1C1A;
   --color-text-secondary: #4A4741;
-  --color-text-tertiary: #625E57;
+  --color-text-tertiary: #5D5952;
   --color-text-disabled: #8C877F;
   --color-text-inverse: #F9F8F5;
 
@@ -455,8 +463,44 @@ body {
   --color-verified-light: rgba(30, 122, 82, 0.10);
   --color-warning: #7A4F00;
   --color-warning-light: rgba(138, 90, 0, 0.10);
-  --color-danger: #B3261E;
+  --color-danger: #9C201A;
   --color-danger-light: rgba(179, 38, 30, 0.10);
+
+  /* Accent and lilac ink. Values solved against the worst case in this
+     register -- an 11px label on a 12% tint of its own colour over the page
+     ground -- not against the page ground alone. */
+  --color-brand-300: #1F55AC;
+  --color-text-mauve: #6B5273;
+  --color-mauve-base: #6B5273;
+  --color-mauve-strong: #5E4765;
+  --color-mauve-light: #7A5F82;
+  --color-lavender-base: #6B5273;
+  --color-lavender-deep: #523E58;
+  --color-lavender-light: #7A5F82;
+  --color-lavender-subtle: rgba(107, 82, 115, 0.10);
+  --color-text-accent: #5E540D;
+  --color-gold-base: #5E540D;
+  --color-gold-deep: #544B0C;
+  --color-gold-light: #6A5F0F;
+  --color-gold-subtle: rgba(94, 84, 13, 0.10);
+
+  /* Gradient text ramps. The dark ramps run light at the end, which on paper
+     fades the last third of a headline into the page. These stay in the same
+     hue family but descend rather than ascend in lightness. */
+  --career-blue-start: #17509F;
+  --career-blue-mid: #1F55AC;
+  --career-blue-end: #2F6FD8;
+  --career-lilac-start: #523E58;
+  --career-lilac-mid: #5E4765;
+  --career-lilac-end: #6B5273;
+  --career-gold-start: #544B0C;
+  --career-gold-mid: #5E540D;
+  --career-gold-end: #6A5F0F;
+
+  /* On paper a lift is a faint ink wash, not a white one. */
+  --overlay-lift: rgba(29, 28, 26, 0.035);
+  --overlay-lift-strong: rgba(29, 28, 26, 0.06);
+  --overlay-inset: rgba(29, 28, 26, 0.05);
 
   --color-focus: #1D1C1A;
 

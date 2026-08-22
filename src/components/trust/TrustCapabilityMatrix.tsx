@@ -29,13 +29,13 @@ export function TrustCapabilityMatrix() {
       aria-label="Career OS Capability Governance Matrix"
     >
       {/* Top Filter Header */}
-      <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="p-6 sm:p-8 bg-[var(--overlay-inset)] backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-            <Layers className="w-3.5 h-3.5 text-[#2F8FFF]" />
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+            <Layers className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
             Feature-Level Governance Architecture
           </span>
-          <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
+          <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)] font-normal">
             Where Governance Applies Across Career OS
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
@@ -54,8 +54,8 @@ export function TrustCapabilityMatrix() {
               className={cn(
                 'px-2.5 py-1 rounded text-[11px] border transition-colors',
                 filterImpact === tier
-                  ? 'bg-white/15 border-white/40 text-white font-semibold'
-                  : 'bg-white/5 border-white/10 text-[var(--color-text-secondary)] hover:text-white'
+                  ? 'bg-[var(--overlay-lift-strong)] border-[var(--color-border-strong)] text-[var(--color-text-primary)] font-semibold'
+                  : 'bg-[var(--overlay-lift)] border-[var(--color-border-default)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
               )}
             >
               {tier}
@@ -70,17 +70,17 @@ export function TrustCapabilityMatrix() {
           <thead>
             <tr className="border-b border-[var(--color-border-default)] text-[10px] font-mono uppercase text-[var(--color-taupe-300)]">
               <th className="pb-3 pr-4 font-semibold">Capability</th>
-              <th className="pb-3 px-3 font-semibold text-white">AI Involvement</th>
-              <th className="pb-3 px-3 font-semibold text-purple-300">Human Review &amp; Agency</th>
-              <th className="pb-3 px-3 font-semibold text-amber-300">Impact Tier</th>
-              <th className="pb-3 pl-3 font-semibold text-emerald-300">Safeguards</th>
+              <th className="pb-3 px-3 font-semibold text-[var(--color-text-primary)]">AI Involvement</th>
+              <th className="pb-3 px-3 font-semibold text-[var(--color-text-mauve)]">Human Review &amp; Agency</th>
+              <th className="pb-3 px-3 font-semibold text-[var(--color-warning)]">Impact Tier</th>
+              <th className="pb-3 pl-3 font-semibold text-[var(--color-success)]">Safeguards</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[var(--color-border-subtle)]">
             {filteredItems.map((item) => (
-              <tr key={item.capability} className="hover:bg-white/5 transition-colors">
+              <tr key={item.capability} className="hover:bg-[var(--overlay-lift)] transition-colors">
                 <td className="py-4 pr-4 align-top max-w-xs space-y-1">
-                  <span className="font-semibold text-white block text-xs">{item.capability}</span>
+                  <span className="font-semibold text-[var(--color-text-primary)] block text-xs">{item.capability}</span>
                   <span className="text-[11px] text-[var(--color-text-tertiary)] block leading-relaxed">{item.description}</span>
                 </td>
 
@@ -88,7 +88,7 @@ export function TrustCapabilityMatrix() {
                   {item.aiRole}
                 </td>
 
-                <td className="py-4 px-3 align-top text-[11px] text-white max-w-xs">
+                <td className="py-4 px-3 align-top text-[11px] text-[var(--color-text-primary)] max-w-xs">
                   {item.humanReview}
                 </td>
 
@@ -97,10 +97,10 @@ export function TrustCapabilityMatrix() {
                     className={cn(
                       'inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold border uppercase',
                       item.consequentialImpact === 'LOW'
-                        ? 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30'
+                        ? 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]'
                         : item.consequentialImpact === 'MODERATE'
-                        ? 'text-amber-300 bg-amber-950/40 border-amber-500/30'
-                        : 'text-rose-300 bg-rose-950/40 border-rose-500/30'
+                        ? 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30'
+                        : 'text-[var(--color-danger)] bg-[var(--color-danger-light)] border-[var(--color-danger)]/30'
                     )}
                   >
                     {item.consequentialImpact}
@@ -109,8 +109,8 @@ export function TrustCapabilityMatrix() {
 
                 <td className="py-4 pl-3 align-top text-[11px] text-[var(--color-text-secondary)] space-y-1">
                   {item.safeguards.map((sg) => (
-                    <div key={sg} className="flex items-center gap-1.5 text-white/80">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                    <div key={sg} className="flex items-center gap-1.5 text-[var(--color-text-secondary)]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-success)] shrink-0" />
                       <span>{sg}</span>
                     </div>
                   ))}
@@ -130,17 +130,17 @@ export function TrustCapabilityMatrix() {
           >
             <div className="flex items-start justify-between gap-2">
               <div>
-                <h4 className="font-semibold text-white text-sm">{item.capability}</h4>
+                <h4 className="font-semibold text-[var(--color-text-primary)] text-sm">{item.capability}</h4>
                 <p className="text-[11px] text-[var(--color-text-secondary)] mt-0.5">{item.description}</p>
               </div>
               <span
                 className={cn(
                   'px-2 py-0.5 rounded text-[9px] font-mono font-bold border uppercase shrink-0',
                   item.consequentialImpact === 'LOW'
-                    ? 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30'
+                    ? 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]'
                     : item.consequentialImpact === 'MODERATE'
-                    ? 'text-amber-300 bg-amber-950/40 border-amber-500/30'
-                    : 'text-rose-300 bg-rose-950/40 border-rose-500/30'
+                    ? 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30'
+                    : 'text-[var(--color-danger)] bg-[var(--color-danger-light)] border-[var(--color-danger)]/30'
                 )}
               >
                 {item.consequentialImpact}
@@ -150,19 +150,19 @@ export function TrustCapabilityMatrix() {
             <div className="space-y-1.5 pt-2 border-t border-[var(--color-border-subtle)]">
               <div>
                 <span className="text-[10px] font-mono text-[var(--color-taupe-300)] uppercase block">AI Role:</span>
-                <span className="text-white">{item.aiRole}</span>
+                <span className="text-[var(--color-text-primary)]">{item.aiRole}</span>
               </div>
               <div>
                 <span className="text-[10px] font-mono text-[var(--color-taupe-300)] uppercase block">Human Oversight:</span>
-                <span className="text-purple-300">{item.humanReview}</span>
+                <span className="text-[var(--color-text-mauve)]">{item.humanReview}</span>
               </div>
             </div>
 
             <div className="pt-2 border-t border-[var(--color-border-subtle)] space-y-1">
-              <span className="text-[10px] font-mono text-emerald-400 uppercase block">Safeguards:</span>
+              <span className="text-[10px] font-mono text-[var(--color-success)] uppercase block">Safeguards:</span>
               <div className="flex flex-wrap gap-1.5">
                 {item.safeguards.map((sg) => (
-                  <span key={sg} className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-white">
+                  <span key={sg} className="px-2 py-0.5 rounded bg-[var(--overlay-lift)] border border-[var(--color-border-default)] text-[10px] text-[var(--color-text-primary)]">
                     {sg}
                   </span>
                 ))}
@@ -173,7 +173,7 @@ export function TrustCapabilityMatrix() {
       </div>
 
       {/* Footer Statement */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+      <div className="p-4 bg-[var(--overlay-inset)] backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
         <span className="italic">
           &ldquo;AI recommendations can be challenged, corrected, or disregarded.&rdquo;
         </span>

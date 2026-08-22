@@ -47,7 +47,7 @@ export function ResponsibleAIRiskSection({ framework }: ResponsibleAIRiskSection
     <section id="responsible-ai" className="space-y-8">
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+          <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
             <Bot className="w-3.5 h-3.5" />
             <span>RESPONSIBLE AI RISK MANAGEMENT (NIST AI RMF 1.0)</span>
           </div>
@@ -57,7 +57,7 @@ export function ResponsibleAIRiskSection({ framework }: ResponsibleAIRiskSection
           Responsible AI framework & risk controls
         </h2>
         <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] max-w-3xl leading-relaxed">
-          CareerOS manages artificial intelligence under the <span className="text-white font-semibold">NIST AI Risk Management Framework</span>. AI must open doors rather than quietly rank individuals or make consequential career choices on their behalf.
+          CareerOS manages artificial intelligence under the <span className="text-[var(--color-text-primary)] font-semibold">NIST AI Risk Management Framework</span>. AI must open doors rather than quietly rank individuals or make consequential career choices on their behalf.
         </p>
       </div>
 
@@ -69,7 +69,7 @@ export function ResponsibleAIRiskSection({ framework }: ResponsibleAIRiskSection
             className="p-5 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-colors space-y-3"
           >
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs font-bold text-[#6BB8FF] uppercase px-2 py-0.5 rounded-xs bg-white/5 border border-white/10">
+              <span className="font-mono text-xs font-bold text-[var(--color-brand-300)] uppercase px-2 py-0.5 rounded-xs bg-[var(--overlay-lift)] border border-[var(--color-border-default)]">
                 NIST AI &bull; {func.name}
               </span>
               <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase">
@@ -87,7 +87,7 @@ export function ResponsibleAIRiskSection({ framework }: ResponsibleAIRiskSection
             </div>
 
             <div className="pt-2 border-t border-[var(--color-border-subtle)] text-[11px] font-mono text-[var(--color-text-tertiary)] flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#34D399]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-success)]" />
               <span>{func.appliedTo}</span>
             </div>
           </div>
@@ -100,16 +100,16 @@ export function ResponsibleAIRiskSection({ framework }: ResponsibleAIRiskSection
           Explore our complete AI governance architecture:
         </span>
         <div className="flex flex-wrap items-center gap-4">
-          <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="text-[#6BB8FF] hover:underline font-medium">
+          <Link href={ROUTES.TRUST_RESPONSIBLE_AI} className="text-[var(--color-brand-300)] hover:underline font-medium">
             Responsible AI &rarr;
           </Link>
-          <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="text-[#6BB8FF] hover:underline font-medium">
+          <Link href={ROUTES.TRUST_AI_TRANSPARENCY} className="text-[var(--color-brand-300)] hover:underline font-medium">
             AI Transparency &rarr;
           </Link>
-          <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="text-[#6BB8FF] hover:underline font-medium">
+          <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="text-[var(--color-brand-300)] hover:underline font-medium">
             Human Oversight &rarr;
           </Link>
-          <Link href={ROUTES.TRUST_FAIRNESS_BIAS} className="text-[#6BB8FF] hover:underline font-medium">
+          <Link href={ROUTES.TRUST_FAIRNESS_BIAS} className="text-[var(--color-brand-300)] hover:underline font-medium">
             Fairness & Bias Testing &rarr;
           </Link>
         </div>

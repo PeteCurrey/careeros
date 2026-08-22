@@ -65,8 +65,8 @@ export function ComplianceHero() {
       <div className="container-editorial relative z-10 space-y-12">
         {/* Eyebrow and Headline */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-white/5 border border-white/10 text-[11px] font-mono uppercase tracking-widest text-[#6BB8FF]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#34D399]" />
+          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[var(--overlay-lift)] border border-[var(--color-border-default)] text-[11px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-success)]" />
             <span>TRUST CENTER / COMPLIANCE & ASSURANCE</span>
           </div>
 
@@ -82,7 +82,7 @@ export function ComplianceHero() {
           <div className="pt-2 flex flex-wrap items-center gap-3">
             <a
               href="#frameworks-registry"
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-[var(--radius-button)] bg-white text-neutral-900 hover:bg-neutral-100 transition-colors shadow-xs"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-[var(--radius-button)] bg-[var(--color-surface-raised)] text-neutral-900 hover:bg-neutral-100 transition-colors shadow-xs"
             >
               <span>Explore Framework Registry</span>
               <ArrowDown className="w-3.5 h-3.5" />
@@ -91,7 +91,7 @@ export function ComplianceHero() {
               href="#compliance-documents"
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-[var(--radius-button)] bg-[var(--color-surface-raised)] text-[var(--color-text-primary)] border border-[var(--color-border-default)] hover:bg-[var(--color-surface-interactive)] transition-colors"
             >
-              <FileText className="w-3.5 h-3.5 text-[#6BB8FF]" />
+              <FileText className="w-3.5 h-3.5 text-[var(--color-brand-300)]" />
               <span>Compliance Documents & Reports</span>
             </a>
           </div>
@@ -109,10 +109,10 @@ export function ComplianceHero() {
                 className="group p-5 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-interactive)] transition-all flex flex-col justify-between space-y-3"
               >
                 <div className="space-y-2">
-                  <div className="w-8 h-8 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center text-[#6BB8FF] group-hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-sm bg-[var(--overlay-lift)] border border-[var(--color-border-default)] flex items-center justify-center text-[var(--color-brand-300)] group-hover:scale-105 transition-transform">
                     <Icon className="w-4 h-4" />
                   </div>
-                  <h3 className="text-sm font-bold text-[var(--color-text-primary)] group-hover:text-white transition-colors">
+                  <h3 className="text-sm font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-text-primary)] transition-colors">
                     {pillar.title}
                   </h3>
                   <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -120,7 +120,7 @@ export function ComplianceHero() {
                   </p>
                 </div>
 
-                <div className="pt-2 flex items-center gap-1 text-[11px] font-mono text-[var(--color-text-tertiary)] group-hover:text-[#6BB8FF] transition-colors">
+                <div className="pt-2 flex items-center gap-1 text-[11px] font-mono text-[var(--color-text-tertiary)] group-hover:text-[var(--color-brand-300)] transition-colors">
                   <span>{isInternalAnchor ? 'View assurance details' : 'Learn more'}</span>
                   <span className="text-xs">&rarr;</span>
                 </div>

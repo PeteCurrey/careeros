@@ -16,13 +16,13 @@ import { cn } from '@/lib/utils';
 
 export function TrustSystemDiagram() {
   const pillars = [
-    { title: 'Human Agency', icon: UserCheck, role: 'Individual sovereignty & decision primacy', color: 'text-purple-300', bg: 'bg-purple-950/40', border: 'border-purple-500/30' },
-    { title: 'Transparency', icon: Eye, role: 'Explicit rationale & data provenance', color: 'text-[#6BB8FF]', bg: 'bg-blue-950/40', border: 'border-blue-500/30' },
-    { title: 'Fairness & Parity', icon: Scale, role: 'Multi-pathway dignity & continuous testing', color: 'text-emerald-300', bg: 'bg-emerald-950/40', border: 'border-emerald-500/30' },
-    { title: 'Architectural Privacy', icon: Lock, role: 'Zero data sales & strict perimeter segregation', color: 'text-amber-300', bg: 'bg-amber-950/40', border: 'border-amber-500/30' },
-    { title: 'Safety & Safeguards', icon: ShieldCheck, role: 'Youth protection & non-therapeutic guardrails', color: 'text-rose-300', bg: 'bg-rose-950/40', border: 'border-rose-500/30' },
-    { title: 'Human Oversight', icon: Users, role: 'Human hiring & education decision gates', color: 'text-cyan-300', bg: 'bg-cyan-950/40', border: 'border-cyan-500/30' },
-    { title: 'Accountability', icon: FileCheck, role: 'Auditable use-case register & user recourse', color: 'text-indigo-300', bg: 'bg-indigo-950/40', border: 'border-indigo-500/30' },
+    { title: 'Human Agency', icon: UserCheck, role: 'Individual sovereignty & decision primacy', color: 'text-[var(--color-text-mauve)]', bg: 'bg-[var(--color-lavender-subtle)]', border: 'border-[var(--color-lavender-base)]/30' },
+    { title: 'Transparency', icon: Eye, role: 'Explicit rationale & data provenance', color: 'text-[var(--color-brand-300)]', bg: 'bg-[var(--accent-blue-subtle)]', border: 'border-[var(--accent-blue-border)]' },
+    { title: 'Fairness & Parity', icon: Scale, role: 'Multi-pathway dignity & continuous testing', color: 'text-[var(--color-success)]', bg: 'bg-[var(--color-success-light)]', border: 'border-[var(--color-success)]/30' },
+    { title: 'Architectural Privacy', icon: Lock, role: 'Zero data sales & strict perimeter segregation', color: 'text-[var(--color-warning)]', bg: 'bg-[var(--color-warning-light)]', border: 'border-[var(--color-warning)]/30' },
+    { title: 'Safety & Safeguards', icon: ShieldCheck, role: 'Youth protection & non-therapeutic guardrails', color: 'text-[var(--color-danger)]', bg: 'bg-[var(--color-danger-light)]', border: 'border-[var(--color-danger)]/30' },
+    { title: 'Human Oversight', icon: Users, role: 'Human hiring & education decision gates', color: 'text-[var(--color-brand-300)]', bg: 'bg-[var(--accent-blue-subtle)]', border: 'border-[var(--accent-blue-border)]' },
+    { title: 'Accountability', icon: FileCheck, role: 'Auditable use-case register & user recourse', color: 'text-[var(--color-text-mauve)]', bg: 'bg-[var(--color-lavender-subtle)]', border: 'border-[var(--color-lavender-base)]/30' },
   ];
 
   return (
@@ -34,15 +34,15 @@ export function TrustSystemDiagram() {
       {/* Top Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[var(--color-border-default)]">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-[#2F8FFF]" />
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
             Operating Model &bull; Seven-Pillar Trust Architecture
           </span>
-          <h3 className="text-lg sm:text-xl font-serif text-white font-normal">
+          <h3 className="text-lg sm:text-xl font-serif text-[var(--color-text-primary)] font-normal">
             Governance Centered on Human Agency
           </h3>
         </div>
-        <span className="text-[10px] font-mono uppercase px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[var(--color-taupe-300)] self-start sm:self-auto shrink-0">
+        <span className="text-[10px] font-mono uppercase px-2.5 py-1 rounded bg-[var(--overlay-lift)] border border-[var(--color-border-default)] text-[var(--color-taupe-300)] self-start sm:self-auto shrink-0">
           Architectural Blueprint
         </span>
       </div>
@@ -52,13 +52,13 @@ export function TrustSystemDiagram() {
         
         {/* Center Core Hub */}
         <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)]/80 backdrop-blur-md border border-[rgba(47,143,255,0.3)] shadow-inner text-center max-w-xl mx-auto space-y-2">
-          <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-[#2F8FFF] flex items-center justify-center text-[#2F8FFF] mx-auto shadow-[0_0_10px_rgba(47,143,255,0.3)]">
+          <div className="w-10 h-10 rounded-full bg-[var(--accent-blue-subtle)] border border-[var(--accent-blue)] flex items-center justify-center text-[var(--accent-blue)] mx-auto shadow-[0_0_10px_rgba(47,143,255,0.3)]">
             <UserCheck className="w-5 h-5" />
           </div>
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-bold block">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-bold block">
             CENTRAL SOVEREIGN INDIVIDUAL
           </span>
-          <h4 className="text-base font-serif text-white font-medium">
+          <h4 className="text-base font-serif text-[var(--color-text-primary)] font-medium">
             The User Retains Final Authority Over Their Career
           </h4>
           <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -88,14 +88,14 @@ export function TrustSystemDiagram() {
                       0{idx + 1}
                     </span>
                   </div>
-                  <h5 className="font-semibold text-white text-sm">
+                  <h5 className="font-semibold text-[var(--color-text-primary)] text-sm">
                     {p.title}
                   </h5>
                   <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
                     {p.role}
                   </p>
                 </div>
-                <div className="pt-2 text-[10px] font-mono text-emerald-400">
+                <div className="pt-2 text-[10px] font-mono text-[var(--color-success)]">
                   &bull; Enforced via System Boundary
                 </div>
               </div>
@@ -106,7 +106,7 @@ export function TrustSystemDiagram() {
       </div>
 
       {/* Footer Statement */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+      <div className="p-4 bg-[var(--overlay-inset)] backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
         <span className="italic">
           &ldquo;Designed for responsible use. Tested for foreseeable risks. Transparent about limitations. Accountable when things go wrong.&rdquo;
         </span>

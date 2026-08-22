@@ -23,15 +23,15 @@ export function ComplianceStatusBadge({
       case 'certified':
       case 'attested':
         return isVerifiedClaim
-          ? 'bg-[#34D399]/10 text-[#34D399] border-[#34D399]/30'
-          : 'bg-[#6BB8FF]/10 text-[#6BB8FF] border-[#6BB8FF]/30';
+          ? 'bg-[var(--color-success)]/10 text-[var(--color-success)] border-[var(--color-success)]/30'
+          : 'bg-[var(--color-brand-300)]/10 text-[var(--color-brand-300)] border-[var(--color-brand-300)]/30';
       case 'compliant':
       case 'verified':
-        return 'bg-[#34D399]/10 text-[#34D399] border-[#34D399]/30';
+        return 'bg-[var(--color-success)]/10 text-[var(--color-success)] border-[var(--color-success)]/30';
       case 'aligned':
-        return 'bg-[#2F8FFF]/10 text-[#2F8FFF] border-[#2F8FFF]/30';
+        return 'bg-[var(--accent-blue)]/10 text-[var(--accent-blue)] border-[var(--accent-blue)]/30';
       case 'in_progress':
-        return 'bg-[#FBBF24]/10 text-[#FBBF24] border-[#FBBF24]/30';
+        return 'bg-[var(--color-warning)]/10 text-[var(--color-warning)] border-[var(--color-warning)]/30';
       case 'not_applicable':
         return 'bg-[var(--color-surface-sunken)] text-[var(--color-text-tertiary)] border-[var(--color-border-subtle)]';
       default:

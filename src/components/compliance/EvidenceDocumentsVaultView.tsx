@@ -22,7 +22,7 @@ export function EvidenceDocumentsVaultView({ documents }: EvidenceDocumentsVault
   return (
     <section id="compliance-documents" className="space-y-8">
       <div className="space-y-2">
-        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
           <FileText className="w-3.5 h-3.5" />
           <span>EVIDENCE VAULT & INSTITUTIONAL DOSSIERS</span>
         </div>
@@ -46,15 +46,15 @@ export function EvidenceDocumentsVaultView({ documents }: EvidenceDocumentsVault
             >
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] uppercase font-bold text-[var(--color-text-tertiary)] bg-white/5 px-2 py-0.5 rounded-xs border border-white/5">
+                  <span className="font-mono text-[10px] uppercase font-bold text-[var(--color-text-tertiary)] bg-[var(--overlay-lift)] px-2 py-0.5 rounded-xs border border-[var(--color-border-subtle)]">
                     {doc.documentType.replace('_', ' ')}
                   </span>
 
                   <span
                     className={`font-mono text-[10px] uppercase px-2 py-0.5 rounded-xs border ${
                       isRestricted
-                        ? 'bg-[#FBBF24]/10 text-[#FBBF24] border-[#FBBF24]/30'
-                        : 'bg-[#34D399]/10 text-[#34D399] border-[#34D399]/30'
+                        ? 'bg-[var(--color-warning)]/10 text-[var(--color-warning)] border-[var(--color-warning)]/30'
+                        : 'bg-[var(--color-success)]/10 text-[var(--color-success)] border-[var(--color-success)]/30'
                     }`}
                   >
                     {isRestricted ? 'NDA Required' : 'Public Document'}
@@ -80,7 +80,7 @@ export function EvidenceDocumentsVaultView({ documents }: EvidenceDocumentsVault
                   <button
                     type="button"
                     onClick={() => handleRequestDoc(doc)}
-                    className="inline-flex items-center gap-1.5 text-xs text-[#2F8FFF] hover:text-[#6BB8FF] font-semibold transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs text-[var(--accent-blue)] hover:text-[var(--color-brand-300)] font-semibold transition-colors"
                   >
                     <Lock className="w-3 h-3" />
                     <span>Request Access (NDA)</span>
@@ -88,7 +88,7 @@ export function EvidenceDocumentsVaultView({ documents }: EvidenceDocumentsVault
                 ) : doc.fileUrl ? (
                   <Link
                     href={doc.fileUrl}
-                    className="inline-flex items-center gap-1 text-xs text-[#6BB8FF] hover:underline font-semibold"
+                    className="inline-flex items-center gap-1 text-xs text-[var(--color-brand-300)] hover:underline font-semibold"
                   >
                     <span>View Document</span>
                     <ArrowRight className="w-3 h-3" />

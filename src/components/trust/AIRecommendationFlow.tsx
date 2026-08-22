@@ -36,17 +36,17 @@ export function AIRecommendationFlow() {
               key={st.step}
               className={cn(
                 'p-4 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border transition-all flex flex-col justify-between space-y-2.5',
-                idx === 6 ? 'border-emerald-500/40 bg-emerald-950/20' : 'border-[var(--color-border-default)]'
+                idx === 6 ? 'border-[var(--color-success)]/40 bg-[var(--color-success-light)]' : 'border-[var(--color-border-default)]'
               )}
             >
               <div className="space-y-1.5">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold text-[#6BB8FF]">
+                  <span className="text-[10px] font-mono font-bold text-[var(--color-brand-300)]">
                     Step {st.step}
                   </span>
-                  <Icon className={cn('w-4 h-4', idx === 6 ? 'text-emerald-400' : 'text-[var(--color-text-tertiary)]')} />
+                  <Icon className={cn('w-4 h-4', idx === 6 ? 'text-[var(--color-success)]' : 'text-[var(--color-text-tertiary)]')} />
                 </div>
-                <h4 className="font-semibold text-white text-xs">
+                <h4 className="font-semibold text-[var(--color-text-primary)] text-xs">
                   {st.title}
                 </h4>
                 <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
@@ -56,7 +56,7 @@ export function AIRecommendationFlow() {
 
               <div className="pt-2 border-t border-[var(--color-border-subtle)] text-[10px] font-mono text-[var(--color-text-tertiary)] flex items-center justify-between">
                 <span>{idx === 6 ? 'Final Authority' : 'Flow Gate'}</span>
-                {idx < 6 && <ArrowRight className="w-3 h-3 text-white/20 hidden lg:inline" />}
+                {idx < 6 && <ArrowRight className="w-3 h-3 text-[var(--color-text-tertiary)] hidden lg:inline" />}
               </div>
             </div>
           );
@@ -66,10 +66,10 @@ export function AIRecommendationFlow() {
       {/* Core Axiom Banner */}
       <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)]/80 backdrop-blur-md border border-[var(--color-border-default)] flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs">
         <div className="space-y-1 max-w-2xl">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-300 font-bold block">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-success)] font-bold block">
             Core Distinction &bull; Recommendation &ne; Decision
           </span>
-          <h4 className="text-base font-serif text-white font-normal">
+          <h4 className="text-base font-serif text-[var(--color-text-primary)] font-normal">
             Career OS provides evidence, comparisons, and suggestions. Humans make decisions.
           </h4>
           <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -77,9 +77,9 @@ export function AIRecommendationFlow() {
           </p>
         </div>
 
-        <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-center font-mono text-xs text-white shrink-0 self-start md:self-auto">
+        <div className="p-3 rounded-lg bg-[var(--overlay-lift)] border border-[var(--color-border-default)] text-center font-mono text-xs text-[var(--color-text-primary)] shrink-0 self-start md:self-auto">
           <span className="block text-[10px] text-[var(--color-taupe-300)] uppercase">Sovereignty Standard</span>
-          <span className="font-bold text-emerald-400">100% Contestable Advice</span>
+          <span className="font-bold text-[var(--color-success)]">100% Contestable Advice</span>
         </div>
       </div>
     </div>

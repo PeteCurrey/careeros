@@ -7,17 +7,17 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-[#F4F3EF] text-[#202020] hover:bg-white active:bg-[#E5E4DE] border border-transparent shadow-xs font-semibold hover:shadow-[0_0_14px_rgba(244,243,239,0.12)]',
+    'bg-[var(--color-text-primary)] text-[var(--color-text-inverse)] hover:opacity-95 active:opacity-90 border border-transparent shadow-xs font-semibold hover:shadow-[0_0_14px_color-mix(in_srgb,var(--color-text-primary)_12%,transparent)]',
   secondary:
-    'bg-transparent text-[#F4F3EF] hover:bg-white/10 active:bg-white/15 border border-white/20 hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_12px_rgba(47,143,255,0.06)] font-medium',
+    'bg-transparent text-[var(--color-text-primary)] hover:bg-[var(--overlay-lift-strong)] active:bg-[var(--overlay-lift-strong)] border border-[var(--color-border-strong)] hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_12px_rgba(47,143,255,0.06)] font-medium',
   dark:
-    'bg-[var(--color-surface-sunken)] text-[#F4F3EF] hover:bg-[var(--color-surface-raised)] active:bg-[var(--color-surface-interactive)] border border-white/10 shadow-xs font-semibold',
+    'bg-[var(--color-surface-sunken)] text-[var(--color-text-primary)] hover:bg-[var(--color-surface-raised)] active:bg-[var(--color-surface-interactive)] border border-[var(--color-border-default)] shadow-xs font-semibold',
   ghost:
-    'bg-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5 border border-transparent',
+    'bg-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--overlay-lift)] border border-transparent',
   outline:
-    'bg-transparent text-[var(--color-text-primary)] hover:bg-white/5 border border-white/20 hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_12px_rgba(47,143,255,0.06)]',
+    'bg-transparent text-[var(--color-text-primary)] hover:bg-[var(--overlay-lift)] border border-[var(--color-border-strong)] hover:border-[rgba(47,143,255,0.35)] hover:shadow-[0_0_12px_rgba(47,143,255,0.06)]',
   destructive:
-    'bg-[var(--color-danger)] text-white hover:opacity-90 border border-transparent',
+    'bg-[var(--color-danger)] text-[var(--color-text-inverse)] hover:opacity-90 border border-transparent',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

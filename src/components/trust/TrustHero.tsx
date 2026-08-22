@@ -47,18 +47,18 @@ export function TrustHero({
           <div className="flex flex-wrap items-center gap-3">
             <div className="flex items-center gap-2">
               <span className="accent-blue-dot accent-blue-dot-pulse" />
-              <span className="section-label uppercase tracking-widest text-[#6BB8FF]">
+              <span className="section-label uppercase tracking-widest text-[var(--color-brand-300)]">
                 {eyebrow}
               </span>
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-mono text-emerald-400 bg-emerald-950/30 px-2.5 py-0.5 rounded border border-emerald-500/20">
+            <div className="flex items-center gap-2 text-[10px] font-mono text-[var(--color-success)] bg-[var(--color-success-light)] px-2.5 py-0.5 rounded border border-[var(--color-success)]/25">
               <CheckCircle2 className="w-3 h-3" />
               <span>Active Governance &bull; Last Reviewed {lastReviewed}</span>
             </div>
           </div>
 
           {/* Headline */}
-          <h1 className="text-display-hero text-white leading-tight font-serif font-normal">
+          <h1 className="text-display-hero text-[var(--color-text-primary)] leading-tight font-serif font-normal">
             {headline}
           </h1>
 
@@ -83,10 +83,10 @@ export function TrustHero({
               {tertiaryCta && (
                 <Link
                   href={tertiaryCta.href}
-                  className="text-xs font-semibold text-[var(--color-text-secondary)] hover:text-white transition-colors inline-flex items-center gap-1.5 px-2 py-1"
+                  className="text-xs font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors inline-flex items-center gap-1.5 px-2 py-1"
                 >
                   <span>{tertiaryCta.label}</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#2F8FFF]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
                 </Link>
               )}
             </div>

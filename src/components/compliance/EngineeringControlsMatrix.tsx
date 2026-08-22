@@ -42,7 +42,7 @@ export function EngineeringControlsMatrix({ pillars }: EngineeringControlsMatrix
   return (
     <section id="engineering-controls" className="space-y-8">
       <div className="space-y-2">
-        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
           <ShieldCheck className="w-3.5 h-3.5" />
           <span>PRODUCTION-GRADE TECHNICAL SAFEGUARDS</span>
         </div>
@@ -69,15 +69,15 @@ export function EngineeringControlsMatrix({ pillars }: EngineeringControlsMatrix
                 className={cn(
                   'w-full text-left p-4 rounded-md border transition-all flex items-center justify-between gap-3',
                   isActive
-                    ? 'bg-[var(--color-surface-raised)] border-[#2F8FFF] text-white shadow-xs'
-                    : 'bg-[var(--color-surface-sunken)] border-[var(--color-border-subtle)] text-[var(--color-text-secondary)] hover:text-white hover:bg-[var(--color-surface-interactive)]'
+                    ? 'bg-[var(--color-surface-raised)] border-[var(--accent-blue)] text-[var(--color-text-primary)] shadow-xs'
+                    : 'bg-[var(--color-surface-sunken)] border-[var(--color-border-subtle)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-interactive)]'
                 )}
               >
                 <div className="flex items-center gap-3">
                   <div
                     className={cn(
                       'w-7 h-7 rounded-sm flex items-center justify-center transition-colors',
-                      isActive ? 'bg-[#2F8FFF]/20 text-[#6BB8FF]' : 'bg-white/5 text-[var(--color-text-tertiary)]'
+                      isActive ? 'bg-[var(--accent-blue)]/20 text-[var(--color-brand-300)]' : 'bg-[var(--overlay-lift)] text-[var(--color-text-tertiary)]'
                     )}
                   >
                     <Icon className="w-4 h-4" />
@@ -93,7 +93,7 @@ export function EngineeringControlsMatrix({ pillars }: EngineeringControlsMatrix
                 <ChevronRight
                   className={cn(
                     'w-4 h-4 transition-transform',
-                    isActive ? 'text-[#6BB8FF] translate-x-0.5' : 'text-[var(--color-text-tertiary)]'
+                    isActive ? 'text-[var(--color-brand-300)] translate-x-0.5' : 'text-[var(--color-text-tertiary)]'
                   )}
                 />
               </button>
@@ -105,7 +105,7 @@ export function EngineeringControlsMatrix({ pillars }: EngineeringControlsMatrix
         <div className="lg:col-span-8 p-6 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] space-y-6">
           <div className="space-y-2 border-b border-[var(--color-border-subtle)] pb-4">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-[10px] uppercase text-[#6BB8FF] font-semibold tracking-wider">
+              <span className="font-mono text-[10px] uppercase text-[var(--color-brand-300)] font-semibold tracking-wider">
                 {activePillar.subtitle}
               </span>
             </div>
@@ -125,11 +125,11 @@ export function EngineeringControlsMatrix({ pillars }: EngineeringControlsMatrix
                 className="p-4 rounded-sm bg-[var(--color-surface-sunken)] border border-[var(--color-border-subtle)] space-y-2"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h4 className="text-xs font-bold text-white flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#34D399] shrink-0" />
+                  <h4 className="text-xs font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--color-success)] shrink-0" />
                     <span>{cap.name}</span>
                   </h4>
-                  <span className="font-mono text-[10px] text-[#6BB8FF] bg-white/5 px-2 py-0.5 rounded-xs border border-white/5 self-start sm:self-auto">
+                  <span className="font-mono text-[10px] text-[var(--color-brand-300)] bg-[var(--overlay-lift)] px-2 py-0.5 rounded-xs border border-[var(--color-border-subtle)] self-start sm:self-auto">
                     {cap.evidence}
                   </span>
                 </div>

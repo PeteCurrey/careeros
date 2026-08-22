@@ -127,7 +127,7 @@ const EMPLOYMENT_AI_REGULATIONS = [
 
 export default function FairnessAndBiasPage() {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+    <div className="register-document flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       <TrustSubnav />
 
       {/* Hero */}
@@ -152,24 +152,24 @@ export default function FairnessAndBiasPage() {
         <div className="container-editorial max-w-4xl space-y-6">
           <div className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-base)]/80 backdrop-blur-md border border-[var(--color-border-default)] space-y-4 text-xs">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-[var(--color-warning)] shrink-0 mt-0.5" />
               <div className="space-y-3">
-                <h3 className="font-semibold text-white text-base font-serif font-normal">What We Will Not Claim</h3>
+                <h3 className="font-semibold text-[var(--color-text-primary)] text-base font-serif font-normal">What We Will Not Claim</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {[
                     { label: '"Bias-Free"', reason: 'No AI system operating at scale on real-world data can substantiate this claim.' },
                     { label: '"100% Fair"', reason: 'Fairness is multi-dimensional and context-dependent. Optimizing one fairness metric can worsen another.' },
                     { label: '"Completely Safe"', reason: 'AI systems have foreseeable failure modes. Our commitment is to test for and mitigate them — not to deny they exist.' },
                   ].map((c) => (
-                    <div key={c.label} className="p-3 rounded bg-rose-950/20 border border-rose-500/20 space-y-1">
-                      <span className="font-mono font-bold text-rose-300 text-[11px]">{c.label}</span>
+                    <div key={c.label} className="p-3 rounded bg-[var(--color-danger-light)] border border-[var(--color-danger)]/25 space-y-1">
+                      <span className="font-mono font-bold text-[var(--color-danger)] text-[11px]">{c.label}</span>
                       <p className="text-[var(--color-text-secondary)] leading-relaxed text-[11px]">{c.reason}</p>
                     </div>
                   ))}
                 </div>
                 <p className="text-[var(--color-text-secondary)] leading-relaxed pt-2">
                   Instead we commit to:{' '}
-                  <strong className="text-white">Designed for responsible use. Tested for foreseeable risks. Transparent about limitations. Accountable when things go wrong.</strong>
+                  <strong className="text-[var(--color-text-primary)]">Designed for responsible use. Tested for foreseeable risks. Transparent about limitations. Accountable when things go wrong.</strong>
                 </p>
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function FairnessAndBiasPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">WHERE BIAS ENTERS</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Understanding Where AI Bias in Career Technology Comes From
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -196,20 +196,20 @@ export default function FairnessAndBiasPage() {
               return (
                 <div
                   key={factor.factor}
-                  className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-4 text-xs"
+                  className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-all flex flex-col justify-between space-y-4 text-xs"
                 >
                   <div className="space-y-2.5">
                     <div className="flex items-center gap-2">
-                      <Icon className="w-4 h-4 text-amber-400" />
-                      <h4 className="font-semibold text-white text-sm leading-snug">{factor.factor}</h4>
+                      <Icon className="w-4 h-4 text-[var(--color-warning)]" />
+                      <h4 className="font-semibold text-[var(--color-text-primary)] text-sm leading-snug">{factor.factor}</h4>
                     </div>
                     <p className="text-[var(--color-text-secondary)] leading-relaxed">{factor.desc}</p>
                   </div>
                   <div className="pt-3 border-t border-[var(--color-border-subtle)] space-y-1">
-                    <span className="text-[10px] font-mono uppercase text-emerald-400 font-semibold block">
+                    <span className="text-[10px] font-mono uppercase text-[var(--color-success)] font-semibold block">
                       Career OS Mitigation:
                     </span>
-                    <p className="text-white font-medium leading-relaxed">{factor.mitigation}</p>
+                    <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">{factor.mitigation}</p>
                   </div>
                 </div>
               );
@@ -223,7 +223,7 @@ export default function FairnessAndBiasPage() {
         <div className="container-editorial space-y-8">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">TESTING METHODOLOGY</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               How We Test for Fairness
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -239,7 +239,7 @@ export default function FairnessAndBiasPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">CAPABILITY-FIRST MATCHING</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Non-Traditional Backgrounds Deserve First-Class Career Technology
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -253,15 +253,15 @@ export default function FairnessAndBiasPage() {
                 key={ex.scenario}
                 className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] space-y-4 text-xs"
               >
-                <h4 className="font-semibold text-white text-sm">{ex.scenario}</h4>
+                <h4 className="font-semibold text-[var(--color-text-primary)] text-sm">{ex.scenario}</h4>
                 <div className="space-y-2">
-                  <div className="p-3 rounded bg-rose-950/20 border border-rose-500/20 space-y-1">
-                    <span className="text-[10px] font-mono text-rose-300 font-bold uppercase block">Traditional Approach:</span>
+                  <div className="p-3 rounded bg-[var(--color-danger-light)] border border-[var(--color-danger)]/25 space-y-1">
+                    <span className="text-[10px] font-mono text-[var(--color-danger)] font-bold uppercase block">Traditional Approach:</span>
                     <p className="text-[var(--color-text-secondary)] leading-relaxed">{ex.traditional}</p>
                   </div>
-                  <div className="p-3 rounded bg-emerald-950/20 border border-emerald-500/20 space-y-1">
-                    <span className="text-[10px] font-mono text-emerald-400 font-bold uppercase block">Career OS Capability-First:</span>
-                    <p className="text-white font-medium leading-relaxed">{ex.capabilityFirst}</p>
+                  <div className="p-3 rounded bg-[var(--color-success-light)] border border-[var(--color-success)]/25 space-y-1">
+                    <span className="text-[10px] font-mono text-[var(--color-success)] font-bold uppercase block">Career OS Capability-First:</span>
+                    <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">{ex.capabilityFirst}</p>
                   </div>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function FairnessAndBiasPage() {
         <div className="container-editorial space-y-10">
           <div className="space-y-2 max-w-3xl">
             <span className="section-label">REGULATORY READINESS</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Employment AI Regulatory Readiness
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -291,16 +291,16 @@ export default function FairnessAndBiasPage() {
               >
                 <div className="space-y-0.5">
                   <span className="text-[10px] font-mono text-[var(--color-taupe-300)] uppercase block">Jurisdiction:</span>
-                  <span className="font-semibold text-white text-sm">{reg.jurisdiction}</span>
-                  <p className="text-[11px] font-mono text-[#6BB8FF]">{reg.framework}</p>
+                  <span className="font-semibold text-[var(--color-text-primary)] text-sm">{reg.jurisdiction}</span>
+                  <p className="text-[11px] font-mono text-[var(--color-brand-300)]">{reg.framework}</p>
                 </div>
                 <div className="md:col-span-2 space-y-0.5">
                   <span className="text-[10px] font-mono text-[var(--color-taupe-300)] uppercase block">Requirement:</span>
                   <p className="text-[var(--color-text-secondary)] leading-relaxed">{reg.requirement}</p>
                 </div>
                 <div className="space-y-0.5">
-                  <span className="text-[10px] font-mono text-emerald-400 uppercase block">Career OS Position:</span>
-                  <p className="text-white font-medium leading-relaxed">{reg.careerOSStance}</p>
+                  <span className="text-[10px] font-mono text-[var(--color-success)] uppercase block">Career OS Position:</span>
+                  <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">{reg.careerOSStance}</p>
                 </div>
               </div>
             ))}
@@ -313,7 +313,7 @@ export default function FairnessAndBiasPage() {
         <div className="container-editorial max-w-4xl space-y-8">
           <div className="space-y-2">
             <span className="section-label">BIAS REPORTING</span>
-            <h2 className="text-display-section font-serif font-normal text-white">
+            <h2 className="text-display-section font-serif font-normal text-[var(--color-text-primary)]">
               Report a Bias Concern
             </h2>
             <p className="text-lead text-[var(--color-text-secondary)]">
@@ -323,8 +323,8 @@ export default function FairnessAndBiasPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
             <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] space-y-3">
-              <Scale className="w-5 h-5 text-[#6BB8FF]" />
-              <h4 className="font-semibold text-white text-sm">What to Include</h4>
+              <Scale className="w-5 h-5 text-[var(--color-brand-300)]" />
+              <h4 className="font-semibold text-[var(--color-text-primary)] text-sm">What to Include</h4>
               <ul className="list-disc pl-4 space-y-1 text-[var(--color-text-secondary)]">
                 <li>Which capability produced the concern</li>
                 <li>A description of the output you believe is biased</li>
@@ -334,8 +334,8 @@ export default function FairnessAndBiasPage() {
             </div>
 
             <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] space-y-3">
-              <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-              <h4 className="font-semibold text-white text-sm">What Happens Next</h4>
+              <CheckCircle2 className="w-5 h-5 text-[var(--color-success)]" />
+              <h4 className="font-semibold text-[var(--color-text-primary)] text-sm">What Happens Next</h4>
               <ul className="list-disc pl-4 space-y-1 text-[var(--color-text-secondary)]">
                 <li>Human review within 5 working days</li>
                 <li>Report logged in internal bias register</li>
@@ -345,14 +345,14 @@ export default function FairnessAndBiasPage() {
             </div>
 
             <div className="p-5 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] space-y-3">
-              <Mail className="w-5 h-5 text-purple-400" />
-              <h4 className="font-semibold text-white text-sm">Submit a Report</h4>
+              <Mail className="w-5 h-5 text-[var(--color-text-mauve)]" />
+              <h4 className="font-semibold text-[var(--color-text-primary)] text-sm">Submit a Report</h4>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
                 Email the Trust & Safety team directly:
               </p>
               <a
                 href="mailto:trust@career-os.com"
-                className="inline-flex items-center gap-1.5 font-mono text-[#6BB8FF] hover:text-white transition-colors text-[11px]"
+                className="inline-flex items-center gap-1.5 font-mono text-[var(--color-brand-300)] hover:text-[var(--color-text-primary)] transition-colors text-[11px]"
               >
                 <Mail className="w-3 h-3" />
                 trust@career-os.com
@@ -370,8 +370,8 @@ export default function FairnessAndBiasPage() {
         <div className="container-editorial flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[var(--color-text-tertiary)]">
           <span>{LEGAL_CONFIG.legalEntityName} &bull; Fairness & Bias Framework &bull; v2.4.1</span>
           <div className="flex items-center gap-4">
-            <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="hover:text-white transition-colors">← Human Oversight</Link>
-            <Link href={ROUTES.TRUST} className="hover:text-white transition-colors flex items-center gap-1">
+            <Link href={ROUTES.TRUST_HUMAN_OVERSIGHT} className="hover:text-[var(--color-text-primary)] transition-colors">← Human Oversight</Link>
+            <Link href={ROUTES.TRUST} className="hover:text-[var(--color-text-primary)] transition-colors flex items-center gap-1">
               Trust Overview <ArrowRight className="w-3 h-3" />
             </Link>
           </div>

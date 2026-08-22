@@ -57,7 +57,7 @@ export function ComplianceContactSection() {
   return (
     <section id="compliance-contact" className="space-y-8">
       <div className="space-y-2">
-        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF]">
+        <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)]">
           <Mail className="w-3.5 h-3.5" />
           <span>DIRECT ASSURANCE & COMPLIANCE CHANNELS</span>
         </div>
@@ -78,7 +78,7 @@ export function ComplianceContactSection() {
               className="p-5 rounded-md bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-colors flex flex-col justify-between space-y-4"
             >
               <div className="space-y-2">
-                <div className="w-8 h-8 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center text-[#6BB8FF]">
+                <div className="w-8 h-8 rounded-sm bg-[var(--overlay-lift)] border border-[var(--color-border-default)] flex items-center justify-center text-[var(--color-brand-300)]">
                   <Icon className="w-4 h-4" />
                 </div>
                 <h3 className="text-sm font-bold text-[var(--color-text-primary)]">
@@ -92,7 +92,7 @@ export function ComplianceContactSection() {
               <div className="pt-3 border-t border-[var(--color-border-subtle)]">
                 <a
                   href={`mailto:${channel.email}`}
-                  className="inline-flex items-center gap-1.5 font-mono text-xs text-[#2F8FFF] hover:text-[#6BB8FF] font-medium transition-colors"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--accent-blue)] hover:text-[var(--color-brand-300)] font-medium transition-colors"
                 >
                   <Mail className="w-3 h-3" />
                   <span>{channel.email}</span>

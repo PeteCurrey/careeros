@@ -14,13 +14,13 @@ export function AIChangeLog() {
       aria-label="Public AI Transparency and Change Log"
     >
       {/* Top Header */}
-      <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-6 sm:p-8 bg-[var(--overlay-inset)] backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-            <History className="w-3.5 h-3.5 text-[#2F8FFF]" />
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+            <History className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
             Auditability &bull; Public Model Change Register
           </span>
-          <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
+          <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)] font-normal">
             Public AI Change Log
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
@@ -38,18 +38,18 @@ export function AIChangeLog() {
           <div key={log.version + log.capability} className="pt-4 first:pt-0 space-y-2 text-xs">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span className="font-mono font-bold text-white text-xs bg-white/10 px-2 py-0.5 rounded">
+                <span className="font-mono font-bold text-[var(--color-text-primary)] text-xs bg-[var(--overlay-lift-strong)] px-2 py-0.5 rounded">
                   {log.version}
                 </span>
-                <span className="font-semibold text-white text-sm">{log.capability}</span>
+                <span className="font-semibold text-[var(--color-text-primary)] text-sm">{log.capability}</span>
                 <span
                   className={cn(
                     'px-2 py-0.5 rounded text-[9px] font-mono font-bold border uppercase',
                     log.impactTier === 'LOW'
-                      ? 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30'
+                      ? 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]'
                       : log.impactTier === 'MODERATE'
-                      ? 'text-amber-300 bg-amber-950/40 border-amber-500/30'
-                      : 'text-rose-300 bg-rose-950/40 border-rose-500/30'
+                      ? 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30'
+                      : 'text-[var(--color-danger)] bg-[var(--color-danger-light)] border-[var(--color-danger)]/30'
                   )}
                 >
                   {log.impactTier} IMPACT
@@ -62,19 +62,19 @@ export function AIChangeLog() {
             </div>
 
             <p className="text-[var(--color-text-secondary)] leading-relaxed pl-1">
-              <strong className="text-white">Change:</strong> {log.change}
+              <strong className="text-[var(--color-text-primary)]">Change:</strong> {log.change}
             </p>
 
             <div className="flex flex-wrap items-center justify-between gap-2 pt-1 text-[11px] font-mono text-[var(--color-text-tertiary)] pl-1">
               <span><strong>Reason:</strong> {log.reason}</span>
-              <span className="text-emerald-400">Reviewed by: {log.governanceReviewer}</span>
+              <span className="text-[var(--color-success)]">Reviewed by: {log.governanceReviewer}</span>
             </div>
           </div>
         ))}
       </div>
 
       {/* Footer Statement */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+      <div className="p-4 bg-[var(--overlay-inset)] backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
         <span className="italic">
           &ldquo;Every material AI capability change is logged with rationale and governance approval.&rdquo;
         </span>

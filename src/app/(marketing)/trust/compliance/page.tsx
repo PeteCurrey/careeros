@@ -68,7 +68,7 @@ export default function ComplianceAndAssurancePage() {
   const pciFramework = COMPLIANCE_FRAMEWORKS_REGISTRY.find((f) => f.id === 'pci-dss');
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)] min-h-screen">
+    <div className="register-document flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)] min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -21,7 +21,7 @@ export function TrustRiskFramework() {
       title: 'Formative Assistance & Exploration',
       examples: 'Resume phrasing assistance, job title terminology lookups, drafting practice interview questions.',
       controls: 'Standard safety guardrails, prompt boundary checks, user editability before export.',
-      badgeColor: 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30',
+      badgeColor: 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]',
       icon: Eye,
     },
     {
@@ -29,7 +29,7 @@ export function TrustRiskFramework() {
       title: 'Pathway Guidance & Skill Gap Advisory',
       examples: 'AI Career Mentor dialogue, skill gap comparisons, vocational vs academic route comparisons.',
       controls: 'Surfaced decision factors, contestable skill vectors, labor market grounding, counselor pre-session briefs.',
-      badgeColor: 'text-amber-300 bg-amber-950/40 border-amber-500/30',
+      badgeColor: 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30',
       icon: Sparkles,
     },
     {
@@ -37,7 +37,7 @@ export function TrustRiskFramework() {
       title: 'Employment & Consequential Decision Support',
       examples: 'Employer Agent candidate discovery, apprentice application routing, employer matching.',
       controls: 'Mandatory human hiring manager decision, zero minor sourcing, proxy variable audits, candidate notice.',
-      badgeColor: 'text-rose-300 bg-rose-950/40 border-rose-500/30',
+      badgeColor: 'text-[var(--color-danger)] bg-[var(--color-danger-light)] border-[var(--color-danger)]/30',
       icon: Users,
     },
   ];
@@ -66,7 +66,7 @@ export function TrustRiskFramework() {
           return (
             <div
               key={t.title}
-              className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-white/20 transition-all flex flex-col justify-between space-y-4 shadow-lg"
+              className="p-6 rounded-[var(--radius-card)] bg-[var(--color-surface-raised)]/75 backdrop-blur-md border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-all flex flex-col justify-between space-y-4 shadow-lg"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -79,7 +79,7 @@ export function TrustRiskFramework() {
                   />
                   <Icon className="w-4 h-4 text-[var(--color-text-tertiary)]" />
                 </div>
-                <h4 className="text-base font-serif text-white font-normal">
+                <h4 className="text-base font-serif text-[var(--color-text-primary)] font-normal">
                   {t.title}
                 </h4>
                 <div className="space-y-1 text-xs">
@@ -93,10 +93,10 @@ export function TrustRiskFramework() {
               </div>
 
               <div className="pt-3 border-t border-[var(--color-border-subtle)] space-y-1 text-xs">
-                <span className="text-[10px] font-mono uppercase text-emerald-400 font-semibold block">
+                <span className="text-[10px] font-mono uppercase text-[var(--color-success)] font-semibold block">
                   Mandatory Controls:
                 </span>
-                <p className="text-white font-medium leading-relaxed">
+                <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">
                   {t.controls}
                 </p>
               </div>
@@ -109,17 +109,17 @@ export function TrustRiskFramework() {
       <div className="p-6 sm:p-8 rounded-[var(--radius-card)] bg-[var(--background-dark-deep)]/75 backdrop-blur-md border border-[var(--color-border-default)] space-y-6 shadow-2xl">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[var(--color-border-default)]">
           <div className="space-y-1">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold">
               Iterative Operating Framework
             </span>
-            <h3 className="text-lg sm:text-xl font-serif text-white font-normal">
+            <h3 className="text-lg sm:text-xl font-serif text-[var(--color-text-primary)] font-normal">
               12-Stage AI Governance Lifecycle
             </h3>
             <p className="text-xs text-[var(--color-text-secondary)]">
               Responsible AI is treated as a continuous lifecycle rather than a one-time checklist.
             </p>
           </div>
-          <span className="text-[10px] font-mono uppercase px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[var(--color-taupe-300)] self-start sm:self-auto shrink-0">
+          <span className="text-[10px] font-mono uppercase px-2.5 py-1 rounded bg-[var(--overlay-lift)] border border-[var(--color-border-default)] text-[var(--color-taupe-300)] self-start sm:self-auto shrink-0">
             NIST AI RMF Aligned
           </span>
         </div>
@@ -133,10 +133,10 @@ export function TrustRiskFramework() {
             >
               <div>
                 <div className="flex items-center justify-between text-[10px] font-mono text-[var(--color-text-tertiary)] mb-1">
-                  <span className="font-bold text-[#6BB8FF]">Stage {st.step}</span>
-                  {idx < 11 ? <ArrowRight className="w-3 h-3 text-white/20" /> : <RotateCcw className="w-3 h-3 text-emerald-400" />}
+                  <span className="font-bold text-[var(--color-brand-300)]">Stage {st.step}</span>
+                  {idx < 11 ? <ArrowRight className="w-3 h-3 text-[var(--color-text-tertiary)]" /> : <RotateCcw className="w-3 h-3 text-[var(--color-success)]" />}
                 </div>
-                <h5 className="font-semibold text-white text-xs">{st.title}</h5>
+                <h5 className="font-semibold text-[var(--color-text-primary)] text-xs">{st.title}</h5>
                 <p className="text-[11px] text-[var(--color-text-secondary)] leading-tight mt-0.5">{st.desc}</p>
               </div>
             </div>

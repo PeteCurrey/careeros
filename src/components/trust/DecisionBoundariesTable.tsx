@@ -19,7 +19,7 @@ const BOUNDARY_TIERS = [
     aiDoes: 'Drafts bullet points, explains industry terminology, simulates interview practice prompts.',
     humanDoes: 'Directs the session, reviews drafts, edits or discards content before export.',
     boundary: 'Zero external transmission without explicit user confirmation.',
-    badgeColor: 'text-cyan-300 bg-cyan-950/40 border-cyan-500/30',
+    badgeColor: 'text-[var(--color-brand-300)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]',
   },
   {
     tier: 'Tier 02 &bull; AI Recommendation',
@@ -27,7 +27,7 @@ const BOUNDARY_TIERS = [
     aiDoes: 'Suggests transferable skill bridges, compares university vs degree apprenticeships, surfaces open days.',
     humanDoes: 'Evaluates suggestions against personal preferences, discusses with school counselor, decides whether to pursue.',
     boundary: 'Recommendation is never a binding decision; zero algorithmic lock-in.',
-    badgeColor: 'text-amber-300 bg-amber-950/40 border-amber-500/30',
+    badgeColor: 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/30',
   },
   {
     tier: 'Tier 03 &bull; AI-Assisted Higher-Impact',
@@ -35,7 +35,7 @@ const BOUNDARY_TIERS = [
     aiDoes: 'Matches candidate-consented skill portfolios to employer role requirements.',
     humanDoes: 'Hiring managers review profiles, conduct interviews, and evaluate human context.',
     boundary: 'Strictly prohibited on minors (under 18); zero automated applicant rejections.',
-    badgeColor: 'text-purple-300 bg-purple-950/40 border-purple-500/30',
+    badgeColor: 'text-[var(--color-text-mauve)] bg-[var(--color-lavender-subtle)] border-[var(--color-lavender-base)]/30',
   },
   {
     tier: 'Tier 04 &bull; Consequential Human Decision',
@@ -43,7 +43,7 @@ const BOUNDARY_TIERS = [
     aiDoes: 'STRICTLY PROHIBITED. AI has zero authority to make consequential determinations.',
     humanDoes: 'Sole domain of authorized human decision-makers (hiring managers, admissions deans, educators).',
     boundary: 'Non-negotiable architectural rule: AI never hires, fires, admits, or grades.',
-    badgeColor: 'text-emerald-300 bg-emerald-950/40 border-emerald-500/30',
+    badgeColor: 'text-[var(--color-success)] bg-[var(--color-success-light)] border-[var(--color-success)]/30',
   },
 ];
 
@@ -56,13 +56,13 @@ export function DecisionBoundariesTable() {
       aria-label="Decision Boundaries: Where AI Stops Table"
     >
       {/* Header */}
-      <div className="p-6 sm:p-8 bg-black/30 backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-6 sm:p-8 bg-[var(--overlay-inset)] backdrop-blur-sm border-b border-[var(--color-border-default)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[#6BB8FF] font-semibold flex items-center gap-1.5">
-            <Lock className="w-3.5 h-3.5 text-[#2F8FFF]" />
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-300)] font-semibold flex items-center gap-1.5">
+            <Lock className="w-3.5 h-3.5 text-[var(--accent-blue)]" />
             Governance Boundary &bull; Consequential Decision Isolation
           </span>
-          <h3 className="text-xl sm:text-2xl font-serif text-white font-normal">
+          <h3 className="text-xl sm:text-2xl font-serif text-[var(--color-text-primary)] font-normal">
             Where AI Stops: Decision Boundaries
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)]">
@@ -80,7 +80,7 @@ export function DecisionBoundariesTable() {
           {BOUNDARY_TIERS.map((b) => (
             <div
               key={b.title}
-              className="p-5 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] hover:border-white/20 transition-all space-y-3 flex flex-col justify-between"
+              className="p-5 rounded-lg bg-[var(--color-surface-base)]/60 backdrop-blur-sm border border-[var(--color-border-default)] hover:border-[var(--color-border-strong)] transition-all space-y-3 flex flex-col justify-between"
             >
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
@@ -92,12 +92,12 @@ export function DecisionBoundariesTable() {
                     dangerouslySetInnerHTML={{ __html: b.tier }}
                   />
                 </div>
-                <h4 className="text-base font-serif text-white font-normal">
+                <h4 className="text-base font-serif text-[var(--color-text-primary)] font-normal">
                   {b.title}
                 </h4>
 
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono uppercase text-[#6BB8FF] font-semibold block">
+                  <span className="text-[10px] font-mono uppercase text-[var(--color-brand-300)] font-semibold block">
                     AI Capability:
                   </span>
                   <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -106,17 +106,17 @@ export function DecisionBoundariesTable() {
                 </div>
 
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono uppercase text-purple-300 font-semibold block">
+                  <span className="text-[10px] font-mono uppercase text-[var(--color-text-mauve)] font-semibold block">
                     Human Authority:
                   </span>
-                  <p className="text-white font-medium leading-relaxed">
+                  <p className="text-[var(--color-text-primary)] font-medium leading-relaxed">
                     {b.humanDoes}
                   </p>
                 </div>
               </div>
 
               <div className="pt-2 border-t border-[var(--color-border-subtle)] space-y-0.5">
-                <span className="text-[10px] font-mono uppercase text-emerald-400 font-semibold block">
+                <span className="text-[10px] font-mono uppercase text-[var(--color-success)] font-semibold block">
                   Hard Boundary:
                 </span>
                 <p className="text-[11px] text-[var(--color-taupe-300)]">
@@ -129,7 +129,7 @@ export function DecisionBoundariesTable() {
       </div>
 
       {/* Footer Statement */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+      <div className="p-4 bg-[var(--overlay-inset)] backdrop-blur-sm border-t border-[var(--color-border-default)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
         <span className="italic">
           &ldquo;AI should expand human opportunity — not quietly make decisions about people&apos;s futures.&rdquo;
         </span>
