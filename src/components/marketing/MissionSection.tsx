@@ -27,7 +27,7 @@ export function MissionSection() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(34,34,34,0.80) 0%, rgba(24,24,24,0.94) 75%, var(--color-surface-warm) 100%)',
+            background: 'radial-gradient(ellipse at 50% 50%, color-mix(in srgb, var(--color-surface-base) 80%, transparent) 0%, color-mix(in srgb, var(--color-surface-sunken) 94%, transparent) 75%, var(--color-surface-warm) 100%)',
           }}
         />
         <div

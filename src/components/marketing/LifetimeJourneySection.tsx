@@ -107,7 +107,7 @@ export function LifetimeJourneySection() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, rgba(34,34,34,0.92) 18%, rgba(24,24,24,0.85) 50%, rgba(34,34,34,0.92) 82%, var(--color-surface-warm) 100%)',
+            background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, color-mix(in srgb, var(--color-surface-base) 92%, transparent) 18%, color-mix(in srgb, var(--color-surface-sunken) 85%, transparent) 50%, color-mix(in srgb, var(--color-surface-base) 92%, transparent) 82%, var(--color-surface-warm) 100%)',
           }}
         />
         {/* Subtle ambient lighting */}

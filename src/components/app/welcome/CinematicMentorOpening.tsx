@@ -192,7 +192,7 @@ export function CinematicMentorOpening({
       aria-label="Career OS Daily Mentor Welcome"
       aria-modal="true"
       className={cn(
-        'fixed inset-0 z-[100] flex flex-col justify-between bg-[#121212] text-white overflow-hidden select-none transition-opacity duration-1000 ease-out',
+        'fixed inset-0 z-[100] flex flex-col justify-between bg-[var(--color-surface-dark-deep)] text-white overflow-hidden select-none transition-opacity duration-1000 ease-out',
         stage === 'TRANSITIONING_OUT' ? 'opacity-0 pointer-events-none scale-105' : 'opacity-100'
       )}
     >
@@ -217,14 +217,14 @@ export function CinematicMentorOpening({
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse at 50% 40%, rgba(24, 24, 27, 0.72) 0%, rgba(18, 18, 18, 0.94) 70%, #121212 100%)',
+              'radial-gradient(ellipse at 50% 40%, rgba(24, 24, 27, 0.72) 0%, color-mix(in srgb, var(--color-surface-dark-deep) 94%, transparent) 70%, var(--color-surface-dark-deep) 100%)',
           }}
         />
 
         {/* Subtle Horizon Vignette */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-[#121212]/80 opacity-90"
+          className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface-dark-deep)] via-transparent to-[var(--color-surface-dark-deep)]/80 opacity-90"
         />
       </div>
 

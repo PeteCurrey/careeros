@@ -101,11 +101,11 @@ export default function SchoolsEducatorsPage() {
             className="object-cover object-center"
           />
           {/* Left charcoal dissolve */}
-          <div aria-hidden="true" className="absolute inset-0" style={{ background: `linear-gradient(to right, #222222 0%, rgba(34, 34, 34,0.96) 38%, rgba(34, 34, 34,0.88) 55%, rgba(34, 34, 34,0.42) 78%, rgba(34, 34, 34,0.18) 100%)` }} />
+          <div aria-hidden="true" className="absolute inset-0" style={{ background: `linear-gradient(to right, var(--color-surface-base) 0%, color-mix(in srgb, var(--color-surface-base) 96%, transparent) 38%, color-mix(in srgb, var(--color-surface-base) 88%, transparent) 55%, color-mix(in srgb, var(--color-surface-base) 42%, transparent) 78%, color-mix(in srgb, var(--color-surface-base) 18%, transparent) 100%)` }} />
           {/* Top dissolve */}
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to bottom, #222222 0%, transparent 100%)` }} />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to bottom, var(--color-surface-base) 0%, transparent 100%)` }} />
           {/* Bottom dissolve */}
-          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to top, #222222 0%, transparent 100%)` }} />
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 pointer-events-none" style={{ background: `linear-gradient(to top, var(--color-surface-base) 0%, transparent 100%)` }} />
         </div>
 
         <div className="container-editorial relative z-10 space-y-16 py-20 lg:py-0">

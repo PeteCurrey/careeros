@@ -58,7 +58,7 @@ export function OpportunityIntelligenceSection() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, rgba(34,34,34,0.90) 15%, rgba(24,24,24,0.85) 50%, rgba(34,34,34,0.90) 85%, var(--color-surface-warm) 100%)',
+            background: 'linear-gradient(to bottom, var(--color-surface-warm) 0%, color-mix(in srgb, var(--color-surface-base) 90%, transparent) 15%, color-mix(in srgb, var(--color-surface-sunken) 85%, transparent) 50%, color-mix(in srgb, var(--color-surface-base) 90%, transparent) 85%, var(--color-surface-warm) 100%)',
           }}
         />
         {/* Subtle ambient lighting */}

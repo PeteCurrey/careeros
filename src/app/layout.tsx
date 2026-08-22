@@ -19,9 +19,12 @@ const serifFont = Newsreader({
 });
 
 export const viewport: Viewport = {
+  // The app renders on the same warm charcoal ground whatever the OS
+  // preference is, so both entries report the real page colour. They
+  // previously disagreed with each other and with the page.
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#222222' },
-    { media: '(prefers-color-scheme: dark)', color: '#303030' },
+    { media: '(prefers-color-scheme: light)', color: '#232120' },
+    { media: '(prefers-color-scheme: dark)', color: '#232120' },
   ],
 };
 

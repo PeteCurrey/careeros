@@ -39,7 +39,7 @@ export function TheProblemSection() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to right, var(--color-surface-warm) 0%, var(--color-surface-warm) 15%, rgba(34,34,34,0.92) 40%, rgba(34,34,34,0.6) 75%, rgba(34,34,34,0.3) 100%)',
+              background: 'linear-gradient(to right, var(--color-surface-warm) 0%, var(--color-surface-warm) 15%, color-mix(in srgb, var(--color-surface-base) 92%, transparent) 40%, color-mix(in srgb, var(--color-surface-base) 60%, transparent) 75%, color-mix(in srgb, var(--color-surface-base) 30%, transparent) 100%)',
             }}
           />
         </div>

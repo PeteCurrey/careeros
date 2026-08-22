@@ -10,7 +10,7 @@ import { CareerPathLines } from '@/components/brand/CareerPathLines';
 import { TechnicalBadge } from '@/components/brand/TechnicalBadge';
 
 // The exact hex of --background-dark used in the CSS dissolve overlay
-const CHARCOAL = '#222222';
+const CHARCOAL = 'var(--color-surface-base)';
 
 export function HeroMentorSection() {
   const [mounted, setMounted] = useState(false);
@@ -127,7 +127,7 @@ export function HeroMentorSection() {
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.65) 45%, ${CHARCOAL} 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, color-mix(in srgb, var(--color-surface-base) 65%, transparent) 45%, ${CHARCOAL} 100%)`,
           }}
         />
       </div>
@@ -157,7 +157,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-y-0 left-0 z-10 w-[45%] pointer-events-none"
           style={{
-            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 12%, rgba(34,34,34,0.92) 28%, rgba(34,34,34,0.55) 55%, rgba(34,34,34,0.12) 78%, transparent 100%)`,
+            background: `linear-gradient(to right, ${CHARCOAL} 0%, ${CHARCOAL} 12%, color-mix(in srgb, var(--color-surface-base) 92%, transparent) 28%, color-mix(in srgb, var(--color-surface-base) 55%, transparent) 55%, color-mix(in srgb, var(--color-surface-base) 12%, transparent) 78%, transparent 100%)`,
           }}
         />
 
@@ -166,7 +166,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-x-0 top-0 z-10 h-[14%] pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, rgba(34,34,34,0.4) 50%, transparent 100%)`,
+            background: `linear-gradient(to bottom, ${CHARCOAL} 0%, color-mix(in srgb, var(--color-surface-base) 40%, transparent) 50%, transparent 100%)`,
           }}
         />
 
@@ -175,7 +175,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-x-0 bottom-0 z-10 h-[14%] pointer-events-none"
           style={{
-            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.4) 50%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, color-mix(in srgb, var(--color-surface-base) 40%, transparent) 50%, transparent 100%)`,
           }}
         />
       </div>
@@ -186,7 +186,7 @@ export function HeroMentorSection() {
         className="hidden lg:block absolute inset-y-0 left-0 z-[4] pointer-events-none"
         style={{
           width: '45%',
-          background: `radial-gradient(ellipse at 0% 50%, rgba(34,34,34,0.70) 0%, transparent 80%)`,
+          background: `radial-gradient(ellipse at 0% 50%, color-mix(in srgb, var(--color-surface-base) 70%, transparent) 0%, transparent 80%)`,
         }}
       />
 
@@ -353,7 +353,7 @@ export function HeroMentorSection() {
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: `linear-gradient(to top, ${CHARCOAL} 0%, rgba(34,34,34,0.3) 35%, transparent 100%)`,
+            background: `linear-gradient(to top, ${CHARCOAL} 0%, color-mix(in srgb, var(--color-surface-base) 30%, transparent) 35%, transparent 100%)`,
           }}
         />
       </div>

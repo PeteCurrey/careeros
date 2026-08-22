@@ -40,18 +40,18 @@ export default function AboutPage() {
             aria-hidden="true"
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(to right, #222222 0%, #222222 28%, rgba(34, 34, 34, 0.96) 45%, rgba(34, 34, 34, 0.70) 62%, rgba(34, 34, 34, 0.20) 82%, rgba(34, 34, 34, 0.05) 100%)`,
+              background: `linear-gradient(to right, var(--color-surface-base) 0%, var(--color-surface-base) 28%, color-mix(in srgb, var(--color-surface-base) 96%, transparent) 45%, color-mix(in srgb, var(--color-surface-base) 70%, transparent) 62%, color-mix(in srgb, var(--color-surface-base) 20%, transparent) 82%, color-mix(in srgb, var(--color-surface-base) 5%, transparent) 100%)`,
             }}
           />
           <div
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-28 pointer-events-none"
-            style={{ background: `linear-gradient(to bottom, #222222 0%, transparent 100%)` }}
+            style={{ background: `linear-gradient(to bottom, var(--color-surface-base) 0%, transparent 100%)` }}
           />
           <div
             aria-hidden="true"
             className="absolute inset-x-0 bottom-0 h-28 pointer-events-none"
-            style={{ background: `linear-gradient(to top, #222222 0%, transparent 100%)` }}
+            style={{ background: `linear-gradient(to top, var(--color-surface-base) 0%, transparent 100%)` }}
           />
         </div>
 

@@ -89,7 +89,7 @@ export function PrivacyViewerSection() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(34,34,34,0.72) 0%, rgba(24,24,24,0.92) 75%, var(--color-surface-warm) 100%)',
+            background: 'radial-gradient(ellipse at 50% 50%, color-mix(in srgb, var(--color-surface-base) 72%, transparent) 0%, color-mix(in srgb, var(--color-surface-sunken) 92%, transparent) 75%, var(--color-surface-warm) 100%)',
           }}
         />
         <div

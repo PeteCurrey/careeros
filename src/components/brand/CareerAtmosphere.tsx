@@ -36,7 +36,7 @@ export function CareerAtmosphere({
       {/* Dark charcoal base — full fill */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: '#222222' }}
+        style={{ backgroundColor: 'var(--color-surface-base)' }}
       />
 
       {/* Soft lavender atmosphere — upper-right, behind where image sits */}
