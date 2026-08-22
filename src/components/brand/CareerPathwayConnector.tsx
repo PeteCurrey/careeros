@@ -19,7 +19,7 @@ export function CareerPathwayConnector({
     <div
       aria-hidden="true"
       className={cn(
-        'pointer-events-none select-none overflow-hidden absolute inset-0 z-0',
+        'career-pathway-connector pointer-events-none select-none overflow-hidden absolute inset-0 z-0',
         className
       )}
     >

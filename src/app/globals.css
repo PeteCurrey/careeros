@@ -364,6 +364,128 @@ body {
 .slide-in-from-right-4  { --enter-translate-x: 1rem; }
 
 /* ============================================================
+   DOCUMENT REGISTER
+
+   The estate has two jobs and they want different grounds.
+
+   Dark is the PERSUASION register: home, product, pathways, the
+   audience pages. Photography carries those, and the dark ground is
+   why the photography lands.
+
+   Light is the DOCUMENT register: legal, trust, regulatory and
+   standards -- 52 pages of long-form reading that districts print for
+   procurement. Dark does not print, and it is measurably harder to
+   read at length. It is also on-thesis: a product whose pitch is
+   verifiable records should make its records look like records.
+
+   The rule is that the ground flips when the JOB flips, never for
+   variety. Applied by putting `register-document` on a page root;
+   everything inside reads the same token names and needs no changes.
+
+   Values are warm to stay in the same family as the dark ground, and
+   every one clears WCAG AA against the surface it sits on.
+   ============================================================ */
+.register-document {
+  /* Surfaces: the sheet lifts off the page the way paper does. */
+  --color-surface-base: #EFEDE7;      /* page ground        */
+  --color-surface-raised: #F9F8F5;    /* the document sheet */
+  --color-surface-warm: #F4F2EC;
+  --color-surface-sunken: #E7E4DC;
+  --color-surface-taupe: #F4F2EC;
+  --color-surface-interactive: #E7E4DC;
+  --color-surface-dark: #E7E4DC;
+  --color-surface-dark-deep: #E7E4DC;
+
+  /* Legacy aliases some governance components still reach for. */
+  --background-dark-deep: #E7E4DC;
+  --background-dark: #EFEDE7;
+  --background-dark-soft: #F4F2EC;
+  --background-dark-elevated: #F9F8F5;
+
+  /* Ink */
+  --color-text-primary: #1D1C1A;
+  --color-text-secondary: #4A4741;
+  --color-text-tertiary: #625E57;
+  --color-text-disabled: #8C877F;
+  --color-text-inverse: #F9F8F5;
+
+  /* The taupe ramp carries section labels; invert it so labels stay
+     legible without touching a single call site. */
+  --color-taupe-300: #625E57;
+  --color-taupe-400: #625E57;
+  --color-taupe-500: #57534C;
+  --color-taupe-600: #57534C;
+  --color-taupe-700: #35322D;
+  --color-taupe-800: #1D1C1A;
+
+  /* Rules read as hairlines on paper, not as glowing edges. */
+  --color-border-default: rgba(29, 28, 26, 0.14);
+  --color-border-subtle: rgba(29, 28, 26, 0.09);
+  --color-border-strong: rgba(29, 28, 26, 0.26);
+  --color-border-charcoal: rgba(29, 28, 26, 0.14);
+  --color-border-taupe: rgba(29, 28, 26, 0.18);
+
+  /* Accent and status, darkened to hold against a light ground. */
+  --accent-blue: #1A56B8;
+  --accent-blue-subtle: rgba(29, 100, 216, 0.09);
+  --accent-blue-border: rgba(29, 100, 216, 0.22);
+  --color-blue-accent: #1A56B8;
+  --color-brand-600: #1A56B8;
+  --color-brand-400: #1A56B8;
+  --color-brand-300: #2F6FD8;
+  --color-accent-primary: #1A56B8;
+
+  /* Compatibility aliases used as surfaces. Missing these left sections
+     painted on the dark ground while their ink flipped to dark -- the
+     data-sources register page rendered near-black text on near-black. */
+  --color-background: #EFEDE7;
+  --color-brand-50: rgba(29, 100, 216, 0.05);
+  --color-brand-950: rgba(29, 100, 216, 0.07);
+  --color-brand-200: rgba(29, 100, 216, 0.20);
+  --color-brand-500: rgba(29, 100, 216, 0.34);
+  --color-brand-700: #1B5CC4;
+  --color-brand-800: rgba(29, 100, 216, 0.28);
+  --color-taupe-100: #E7E4DC;
+  --color-taupe-50: #EFEDE7;
+  --color-border-interactive: rgba(29, 100, 216, 0.34);
+
+  --color-success: #186641;
+  --color-success-light: rgba(30, 122, 82, 0.10);
+  --color-verified: #186641;
+  --color-verified-light: rgba(30, 122, 82, 0.10);
+  --color-warning: #7A4F00;
+  --color-warning-light: rgba(138, 90, 0, 0.10);
+  --color-danger: #B3261E;
+  --color-danger-light: rgba(179, 38, 30, 0.10);
+
+  --color-focus: #1D1C1A;
+
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-base);
+}
+
+/* Ambient washes and beam effects are tuned for a dark ground and read
+   as smudges on paper. */
+.register-document .career-atmosphere,
+.register-document .career-pathway-connector,
+.register-document .atmosphere-field,
+.register-document .ambient-glow-blue,
+.register-document .ambient-glow-lilac,
+.register-document .ambient-glow-champagne,
+.register-document .border-beam-container::before,
+.register-document .glow-blue-subtle {
+  display: none;
+}
+
+.register-document .glass-surface,
+.register-document .glass-surface-blue {
+  background: var(--color-surface-raised);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-color: var(--color-border-default);
+}
+
+/* ============================================================
    EDITORIAL TYPOGRAPHY UTILITIES
    ============================================================ */
 .text-display-hero {

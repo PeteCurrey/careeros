@@ -23,6 +23,13 @@ export interface EditorialSubpageProps {
   sidebar?: React.ReactNode;
   hideCta?: boolean;
   fullScreenHero?: boolean;
+  /**
+   * Which ground the page sits on. Documents -- policies, regulatory
+   * notices, anything read at length or printed -- default to the light
+   * document register. Section index pages are wayfinding and persuasion,
+   * so they opt back into the dark ground.
+   */
+  register?: 'document' | 'persuasion';
 }
 
 export function EditorialSubpage({
@@ -37,9 +44,12 @@ export function EditorialSubpage({
   sidebar,
   hideCta = false,
   fullScreenHero = false,
+  register = 'document',
 }: EditorialSubpageProps) {
   return (
-    <div className="flex flex-col w-full bg-[var(--color-surface-base)]">
+    <div
+      className={`${register === 'document' ? 'register-document ' : ''}flex flex-col w-full bg-[var(--color-surface-base)]`}
+    >
       {/* Header */}
       <section
         className={`relative overflow-hidden border-b border-[var(--color-border-default)] ${

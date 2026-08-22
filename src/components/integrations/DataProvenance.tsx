@@ -49,17 +49,17 @@ export interface DataProvenanceProps {
 const STATUS_LABELS: Record<ProvenanceStatus, { label: string; color: string; desc: string }> = {
   live: {
     label: 'Live Data',
-    color: 'text-emerald-600 bg-emerald-500/10 border-emerald-500/20',
+    color: 'text-[var(--color-success)] bg-[var(--color-success-light)] border-[var(--color-success)]/25',
     desc: 'Retrieved directly or updated continuously from the source.',
   },
   periodically_updated: {
     label: 'Periodically Updated',
-    color: 'text-blue-600 bg-blue-500/10 border-blue-500/20',
+    color: 'text-[var(--accent-blue)] bg-[var(--accent-blue-subtle)] border-[var(--accent-blue-border)]',
     desc: 'Synchronised at scheduled recurring intervals.',
   },
   cached: {
     label: 'Cached Copy',
-    color: 'text-amber-600 bg-amber-500/10 border-amber-500/20',
+    color: 'text-[var(--color-warning)] bg-[var(--color-warning-light)] border-[var(--color-warning)]/25',
     desc: 'A recent copy is displayed while preserving freshness timestamps.',
   },
   reference_dataset: {
@@ -69,7 +69,7 @@ const STATUS_LABELS: Record<ProvenanceStatus, { label: string; color: string; de
   },
   temporarily_unavailable: {
     label: 'Unavailable',
-    color: 'text-red-600 bg-red-500/10 border-red-500/20',
+    color: 'text-[var(--color-danger)] bg-[var(--color-danger-light)] border-[var(--color-danger)]/25',
     desc: 'External upstream service is temporarily unreachable.',
   },
 };

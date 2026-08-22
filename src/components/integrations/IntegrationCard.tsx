@@ -17,18 +17,18 @@ interface IntegrationCardProps {
 
 function StatusPill({ status }: { status: PublicIntegrationRecord['lifecycleStatus'] }) {
   const styles: Record<string, string> = {
-    production: 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20',
-    planned: 'bg-amber-500/10 text-amber-600 border-amber-500/20',
-    development: 'bg-blue-500/10 text-blue-600 border-blue-500/20',
+    production: 'bg-[var(--color-success-light)] text-[var(--color-success)] border-[var(--color-success)]/25',
+    planned: 'bg-[var(--color-warning-light)] text-[var(--color-warning)] border-[var(--color-warning)]/25',
+    development: 'bg-[var(--accent-blue-subtle)] text-[var(--accent-blue)] border-[var(--accent-blue-border)]',
     testing: 'bg-purple-500/10 text-purple-600 border-purple-500/20',
     paused: 'bg-[var(--color-border-default)] text-[var(--color-text-tertiary)] border-[var(--color-border-default)]',
-    degraded: 'bg-red-500/10 text-red-600 border-red-500/20',
+    degraded: 'bg-[var(--color-danger-light)] text-[var(--color-danger)] border-[var(--color-danger)]/25',
     retired: 'bg-[var(--color-surface-sunken)] text-[var(--color-text-tertiary)] border-[var(--color-border-subtle)]',
     researching: 'bg-[var(--color-surface-raised)] text-[var(--color-text-tertiary)] border-[var(--color-border-subtle)]',
   };
   return (
     <span className={`inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-sm border ${styles[status] ?? styles.researching}`}>
-      <span className={`w-1.5 h-1.5 rounded-full ${status === 'production' ? 'bg-emerald-500' : status === 'planned' ? 'bg-amber-400' : 'bg-[var(--color-border-default)]'}`} />
+      <span className={`w-1.5 h-1.5 rounded-full ${status === 'production' ? 'bg-[var(--color-success)]' : status === 'planned' ? 'bg-[var(--color-warning)]' : 'bg-[var(--color-border-default)]'}`} />
       {LIFECYCLE_STATUS_LABELS[status]}
     </span>
   );
@@ -37,7 +37,7 @@ function StatusPill({ status }: { status: PublicIntegrationRecord['lifecycleStat
 function PersonalDataBadge({ involved, sensitive }: { involved: boolean; sensitive: boolean }) {
   if (!involved) {
     return (
-      <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-emerald-500/8 text-emerald-600 border border-emerald-500/15">
+      <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[var(--color-success)]/8 text-[var(--color-success)] border border-emerald-500/15">
         <CheckCircle2 className="w-3 h-3" />
         No personal data
       </span>
@@ -45,14 +45,14 @@ function PersonalDataBadge({ involved, sensitive }: { involved: boolean; sensiti
   }
   if (sensitive) {
     return (
-      <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-red-500/8 text-red-600 border border-red-500/15">
+      <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[var(--color-danger)]/8 text-[var(--color-danger)] border border-red-500/15">
         <AlertTriangle className="w-3 h-3" />
         Sensitive personal data
       </span>
     );
   }
   return (
-    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-amber-500/8 text-amber-600 border border-amber-500/15">
+    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[var(--color-warning)]/8 text-[var(--color-warning)] border border-[var(--color-warning)]/25">
       <Shield className="w-3 h-3" />
       Personal data involved
     </span>
@@ -75,7 +75,7 @@ export function IntegrationCard({ integration: i }: IntegrationCardProps) {
                 {i.publicDisplayName ?? i.providerName}
               </h3>
               {isPlanned && (
-                <span className="text-[9px] font-mono uppercase tracking-widest px-1.5 py-0.5 rounded-sm bg-amber-500/8 text-amber-500 border border-amber-500/15">
+                <span className="text-[9px] font-mono uppercase tracking-widest px-1.5 py-0.5 rounded-sm bg-[var(--color-warning)]/8 text-[var(--color-warning)] border border-[var(--color-warning)]/25">
                   Intended — Not Live
                 </span>
               )}
@@ -83,7 +83,7 @@ export function IntegrationCard({ integration: i }: IntegrationCardProps) {
             <p className="text-[10px] font-mono text-[var(--color-text-tertiary)]">
               {PROVIDER_TYPE_LABELS[i.providerType]}
               {i.serviceName && i.serviceName !== i.providerName && (
-                <span className="ml-2 text-[var(--color-border-default)]">·</span>
+                <span className="ml-2 text-[var(--color-text-tertiary)]">·</span>
               )}
               {i.serviceName && i.serviceName !== i.providerName && (
                 <span className="ml-2">{i.serviceName}</span>
@@ -139,7 +139,7 @@ export function IntegrationCard({ integration: i }: IntegrationCardProps) {
           {i.minorsDataPossible && (
             <div className="space-y-0.5">
               <p className="text-[9px] font-mono uppercase tracking-widest text-[var(--color-text-tertiary)]">Minors</p>
-              <p className="text-[10px] font-mono text-amber-600">Data possible</p>
+              <p className="text-[10px] font-mono text-[var(--color-warning)]">Data possible</p>
             </div>
           )}
         </div>
@@ -182,7 +182,7 @@ export function IntegrationCard({ integration: i }: IntegrationCardProps) {
               <p className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-text-tertiary)] mb-2">Personal data categories</p>
               <div className="flex flex-wrap gap-1.5">
                 {i.personalDataCategories.map((cat) => (
-                  <span key={cat} className="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-amber-500/5 text-amber-600 border border-amber-500/15">
+                  <span key={cat} className="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[var(--color-warning)]/5 text-[var(--color-warning)] border border-[var(--color-warning)]/25">
                     {cat}
                   </span>
                 ))}

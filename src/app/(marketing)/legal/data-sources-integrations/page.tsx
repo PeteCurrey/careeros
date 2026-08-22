@@ -27,7 +27,7 @@ function SectionHeader({ group }: { group: IntegrationRegistryGroup }) {
             {group.groupLabel}
           </h2>
           {group.personalDataInvolved && (
-            <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-amber-500/8 text-amber-600 border border-amber-500/15">
+            <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-sm bg-[var(--color-warning-light)] text-[var(--color-warning)] border border-[var(--color-warning)]/25">
               <Shield className="w-2.5 h-2.5" />
               Involves personal data
             </span>
@@ -50,7 +50,7 @@ export default async function DataSourcesIntegrationsPage() {
   const personalDataGroups = groups.filter(g => g.personalDataInvolved).length;
 
   return (
-    <main id="main-content">
+    <main id="main-content" className="register-document">
       {/* Hero */}
       <section className="py-20 border-b border-[var(--color-border-default)] bg-[var(--color-background)]">
         <div className="container-editorial">
@@ -130,7 +130,7 @@ export default async function DataSourcesIntegrationsPage() {
                         href={`#${group.groupId}`}
                         className="text-xs text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] transition-colors flex items-center gap-1.5"
                       >
-                        {group.personalDataInvolved && <Shield className="w-2.5 h-2.5 text-amber-500" />}
+                        {group.personalDataInvolved && <Shield className="w-2.5 h-2.5 text-[var(--color-warning)]" />}
                         {group.groupLabel}
                       </a>
                     </li>
@@ -216,7 +216,7 @@ export default async function DataSourcesIntegrationsPage() {
               ].map((item, i) => (
                 <div key={i} className="py-6 grid grid-cols-1 sm:grid-cols-12 gap-4">
                   <div className="sm:col-span-1">
-                    <span className="text-sm font-mono font-bold text-[var(--color-border-default)]">
+                    <span className="text-sm font-mono font-bold text-[var(--color-text-tertiary)]">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>

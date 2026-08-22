@@ -3,8 +3,6 @@ import Link from "next/link";
 import { LEGAL_CONFIG } from "@/lib/config/legal-config";
 import type { GovernanceDocumentMeta } from "@/types/platform/governance";
 import { ArrowLeft, Shield, FileText, Scale, ExternalLink, Mail, CheckCircle2, Info } from "lucide-react";
-import { CareerPathwayConnector } from "@/components/brand/CareerPathwayConnector";
-import { CareerAtmosphere } from "@/components/brand/CareerAtmosphere";
 
 export interface GovernancePageLayoutProps {
   meta: GovernanceDocumentMeta;
@@ -34,14 +32,15 @@ export function GovernancePageLayout({
   };
 
   return (
-    <div className="flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
+    <div className="register-document flex flex-col w-full bg-[var(--color-surface-base)] text-[var(--color-text-primary)]">
       {/* Header & Metadata Banner */}
       <header className="relative overflow-hidden pt-16 pb-12 border-b border-[var(--color-border-default)] bg-[var(--color-surface-base)]">
-        {/* Subtle ambient atmosphere layer */}
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-          <CareerAtmosphere className="absolute inset-0" intensity={0.35} animate={false} />
-        </div>
-        <CareerPathwayConnector variant="cross-section" className="opacity-10" />
+        {/*
+          No ambient atmosphere or pathway connector here. Both paint dark
+          radial washes from hardcoded rgba values, which read as smudges on
+          the document register's light ground -- and a governance document
+          should look like a document, not a marketing surface.
+        */}
 
         <div className="container-editorial relative z-10 space-y-6">
           
@@ -120,7 +119,7 @@ export function GovernancePageLayout({
                       <a
                         key={item.id}
                         href={`#${item.id}`}
-                        className="block text-xs text-[var(--color-text-secondary)] hover:text-white hover:text-[#6BB8FF] font-normal transition-colors line-clamp-2 py-0.5"
+                        className="block text-xs text-[var(--color-text-secondary)] hover:text-[var(--accent-blue)] font-normal transition-colors line-clamp-2 py-0.5"
                       >
                         {item.title}
                       </a>
@@ -132,7 +131,7 @@ export function GovernancePageLayout({
 
             {/* Substantive Document Reading Column (760-860px wide) */}
             <main className={toc && toc.length > 0 ? "lg:col-span-9 order-1 lg:order-2 max-w-4xl" : "lg:col-span-12 max-w-4xl mx-auto"}>
-              <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 prose prose-invert max-w-none text-[var(--color-text-secondary)] leading-relaxed font-sans text-base [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-normal [&_h2]:text-[var(--color-text-primary)] [&_h2]:pt-6 [&_h2]:border-t [&_h2]:border-[var(--color-border-subtle)] [&_h3]:font-semibold [&_h3]:text-lg [&_h3]:text-[var(--color-text-primary)] [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_strong]:text-[var(--color-text-primary)]">
+              <div className="p-8 sm:p-12 bg-[var(--color-surface-raised)] border border-[var(--color-border-default)] rounded-[var(--radius-card)] space-y-8 max-w-none text-[var(--color-text-secondary)] leading-relaxed font-sans text-base [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-normal [&_h2]:text-[var(--color-text-primary)] [&_h2]:pt-6 [&_h2]:border-t [&_h2]:border-[var(--color-border-subtle)] [&_h3]:font-semibold [&_h3]:text-lg [&_h3]:text-[var(--color-text-primary)] [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_strong]:text-[var(--color-text-primary)]">
                 {children}
               </div>
 
@@ -150,7 +149,7 @@ export function GovernancePageLayout({
       </div>
 
       {/* Governance Footer (Strictly NO Sales CTAs per Requirement 17) */}
-      <footer className="py-12 bg-[var(--background-dark-deep)] border-t border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)]">
+      <footer className="py-12 bg-[var(--color-surface-sunken)] border-t border-[var(--color-border-default)] text-xs text-[var(--color-text-secondary)]">
         <div className="container-editorial space-y-10">
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

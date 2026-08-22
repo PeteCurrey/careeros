@@ -30,7 +30,10 @@ export function CareerAtmosphere({
 
   return (
     <div
-      className={`pointer-events-none select-none ${className}`}
+      // `career-atmosphere` is a stable styling hook. The per-field
+      // classes below are only applied when animating, which left the
+      // static variant unreachable from CSS.
+      className={`career-atmosphere pointer-events-none select-none ${className}`}
       aria-hidden="true"
     >
       {/* Dark charcoal base — full fill */}

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 export default function RegulatoryHubPage() {
   return (
     <EditorialSubpage
+      register="persuasion"
       badge="GOVERNANCE &bull; COMPLIANCE"
       title="Regulatory Alignment & Jurisdictional Frameworks"
       description="Career OS is engineered from the ground up to comply with global student privacy regulations, youth labor protections, anti-discrimination statutes, and automated hiring accountability standards."
