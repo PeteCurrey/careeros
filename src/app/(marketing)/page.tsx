@@ -8,7 +8,7 @@ import { CareerTwinSection } from '@/components/marketing/CareerTwinSection';
 import { CareerPassportSection } from '@/components/marketing/CareerPassportSection';
 import { CareerGraphVisualSection } from '@/components/marketing/CareerGraphVisualSection';
 import { OpportunityIntelligenceSection } from '@/components/marketing/OpportunityIntelligenceSection';
-import { AudienceEditorialPanels } from '@/components/marketing/AudienceEditorialPanels';
+import { AudienceDoors } from '@/components/marketing/AudienceDoors';
 import { PrivacyViewerSection } from '@/components/marketing/PrivacyViewerSection';
 import { ComparisonTableSection } from '@/components/marketing/ComparisonTableSection';
 import { MissionSection } from '@/components/marketing/MissionSection';
@@ -30,7 +30,10 @@ export default function HomePage() {
       {/* 01. Hero — Multidisciplinary Mentor Team + Career Transition Panorama */}
       <HeroMentorSection />
 
-      {/* 02. The Problem — Editorial Statement & Whitespace */}
+      {/* 02. Four ways in — the routing moment */}
+      <AudienceDoors />
+
+      {/* 03. The Problem — Editorial Statement & Whitespace */}
       <div id="how-it-works">
         <TheProblemSection />
       </div>
@@ -55,9 +58,6 @@ export default function HomePage() {
 
       {/* 09. Opportunity Intelligence — Autonomous Agent Discovery */}
       <OpportunityIntelligenceSection />
-
-      {/* 10. Who Career OS is For — 4 Bespoke Editorial Compositions */}
-      <AudienceEditorialPanels />
 
       {/* 11. Privacy & Trust — Interactive Permission & Redaction Simulator */}
       <PrivacyViewerSection />
